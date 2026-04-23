@@ -54,7 +54,7 @@ function IconTile({ className, children }: { className: string; children: ReactN
 
 function NavPanel({ label, items, footer }: { label: string; items: MenuEntry[]; footer?: MenuEntry }) {
   return (
-    <div className="w-[320px] p-3">
+    <div className="w-[320px] rounded-2xl border border-border bg-popover p-3 text-popover-foreground shadow-xl">
       <div className="px-3 pb-3 text-xs font-bold tracking-[0.18em] text-muted-foreground">{label}</div>
       <div className="space-y-1">
         {items.map((item) => {
@@ -189,7 +189,7 @@ export function Navbar() {
             <NavigationMenuList className="gap-1">
               <NavigationMenuItem className="relative">
                 <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.products")}</NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="md:left-0 md:-translate-x-0">
                   <NavPanel
                     label={t("nav.productsLabel")}
                     items={productEntries}
@@ -206,7 +206,7 @@ export function Navbar() {
 
               <NavigationMenuItem className="relative">
                 <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.solutions")}</NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="md:left-0 md:-translate-x-0">
                   <NavPanel label={t("nav.solutionsLabel")} items={solutionEntries} />
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -221,7 +221,7 @@ export function Navbar() {
 
               <NavigationMenuItem className="relative">
                 <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.resources")}</NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent className="md:left-0 md:-translate-x-0">
                   <NavPanel
                     label={t("nav.resourcesLabel")}
                     items={resourceEntries}
