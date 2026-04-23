@@ -80,6 +80,9 @@
   --color-usecase-warning-soft: var(--usecase-warning-soft);
   --color-usecase-good: var(--usecase-good);
   --color-usecase-good-soft: var(--usecase-good-soft);
+  --color-about-dark: var(--about-dark);
+  --color-about-dark-muted: var(--about-dark-muted);
+  --color-about-card-border: var(--about-card-border);
 }
 
 :root {
@@ -152,6 +155,9 @@
   --usecase-warning-soft: oklch(0.96 0.04 80);
   --usecase-good: oklch(0.42 0.1 170);
   --usecase-good-soft: oklch(0.95 0.04 170);
+  --about-dark: oklch(0.21 0.01 85);
+  --about-dark-muted: oklch(0.68 0.01 85);
+  --about-card-border: oklch(0.92 0.004 85);
 }
 
 .dark {
