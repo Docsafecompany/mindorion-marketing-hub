@@ -9,8 +9,23 @@ import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { createStaticMeta } from "@/lib/site";
-import { redirectToCheckout, type PlanId, type ProductId } from "@/lib/stripe";
 import { cn } from "@/lib/utils";
+
+type PlanId = "starter" | "pro" | "business";
+type ProductId = "qualion" | "prospectiq";
+
+const PAYMENT_LINKS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> = {
+  qualion: {
+    starter:  { monthly: "https://buy.stripe.com/3cI4g8c8u29Capw4w7bAs02", annual: "https://buy.stripe.com/dRm8wRegCbKceFM1jVbAs03" },
+    pro:      { monthly: "https://buy.stripe.com/14AeVf5K6cOgcxEaUvbAs00", annual: "https://buy.stripe.com/4gMfZjc8u6pSgNU5AbbAs01" },
+    business: { monthly: "https://buy.stripe.com/eVq28tgoK29C55c1jVbAs04", annual: "https://buy.stripe.com/00w14p4G2g0sdBI6EfbAs05" },
+  },
+  prospectiq: {
+    starter:  { monthly: "https://buy.stripe.com/eVqdRb5K629CcxE8MnbAs0a", annual: "https://buy.stripe.com/28E4gB4G25l069g0fRbAs0b" },
+    pro:      { monthly: "https://buy.stripe.com/cNi6oJegCaG87dk9QrbAs08", annual: "https://buy.stripe.com/7sYcN7dcyc0gcxE5AbbAs09" },
+    business: { monthly: "https://buy.stripe.com/fZufZj4G29C455c0fRbAs06", annual: "https://buy.stripe.com/7sYdRb8WiaG8dBI3s3bAs07" },
+  },
+};
 
 type BillingMode = "monthly" | "annual";
 type PlanColumn = "starter" | "pro" | "business" | "enterprise";
@@ -700,6 +715,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
 
   const planIdMap: Record<string, PlanId> = { Starter: "starter", Pro: "pro", Business: "business" };
   const stripePlanId = planIdMap[plan.name];
+  const paymentHref = stripePlanId ? PAYMENT_LINKS[productKey][stripePlanId][billing] : undefined;
 
   return (
     <article
@@ -730,18 +746,17 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-          ) : (
-            <Button
-              variant="outline"
-              className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
-              onClick={() => {
-                if (stripePlanId) void redirectToCheckout(productKey, stripePlanId, billing);
-              }}
-            >
-              {plan.cta}
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-          )}
+          ) : paymentHref ? (
+            <a href={paymentHref} target="_blank" rel="noopener noreferrer" className="block">
+              <Button
+                variant="outline"
+                className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
+              >
+                {plan.cta}
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </a>
+          ) : null}
         </div>
       </div>
 
