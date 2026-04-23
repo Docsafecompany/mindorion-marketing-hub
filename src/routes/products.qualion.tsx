@@ -1,90 +1,111 @@
-import { Link, createFileRoute } from "@tanstack/react-router";
-import { Eye, FileCheck, MessageSquare, Shield, SpellCheck, UserRoundX } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { createFileRoute } from "@tanstack/react-router";
 
-import { FadeSection } from "@/components/FadeSection";
-import { FinalCTA } from "@/components/FinalCTA";
+import { ProductPageTemplate, type ProductPageData } from "@/components/ProductPageTemplate";
 import { SEOHead } from "@/components/SEOHead";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { SIGNUP_URL } from "@/lib/site";
 import { createStaticMeta } from "@/lib/site";
+
+const qualionPage: ProductPageData = {
+  eyebrow: "🛡 QUALION · RÉPUTATION DOCUMENTAIRE",
+  title: "Votre document est-il vraiment prêt à être envoyé ?",
+  subtitle:
+    "Qualion analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant que votre client ne l'ouvre.",
+  theme: {
+    heroBg: "#1a1a18",
+    heroCardBg: "#111110",
+    accent: "#534AB7",
+    accentSoft: "#EEEDFE",
+    accentText: "#7F77DD",
+    accentStrong: "#534AB7",
+    darkMuted: "#A5A49B",
+    ctaBg: "#534AB7",
+  },
+  heroPanel: {
+    type: "analysis",
+    label: "RAPPORT D'ANALYSE · QUALION",
+    score: "34/100",
+    scoreTone: "danger",
+    items: [
+      { text: "Auteur interne dans les propriétés", tone: "danger" },
+      { text: "3 commentaires de révision cachés", tone: "danger" },
+      { text: "Placeholder [NOM CLIENT] non remplacé", tone: "warning" },
+      { text: "✓ Document nettoyé — Télécharger", tone: "success" },
+    ],
+  },
+  howItWorks: [
+    { title: "Uploadez", text: "Glissez votre document — Word, PDF, PPT ou Excel — directement dans Qualion." },
+    { title: "Analysez", text: "Qualion scanne 14 catégories de risques en moins de 30 secondes et génère un rapport complet." },
+    { title: "Envoyez", text: "Téléchargez la version nettoyée et envoyez avec confiance. Score qualité garanti." },
+  ],
+  featureColumns: [
+    {
+      title: "14 catégories de risques détectées",
+      items: [
+        { icon: "🔴", title: "Métadonnées cachées", text: "Auteur, entreprise, historique de révision, chemin de fichier." },
+        { icon: "🔴", title: "Commentaires & track changes", text: "Commentaires de révision, modifications suivies encore actives." },
+        { icon: "🔴", title: "Données personnelles", text: "Noms, emails, numéros dans les propriétés ou le contenu." },
+        { icon: "🟡", title: "Placeholders oubliés", text: "[NOM CLIENT], TODO, INSÉRER ICI." },
+        { icon: "🟡", title: "Ton IA détectable", text: "Formulations trop génériques ou typiquement générées par IA." },
+        { icon: "🟡", title: "Fautes d'orthographe", text: "Correction orthographique et grammaticale avant envoi." },
+      ],
+    },
+    {
+      title: "Formats supportés & fonctionnalités",
+      items: [
+        { icon: "📄", title: "Word (.docx)", text: "Analyse complète contenu, propriétés, révisions." },
+        { icon: "📊", title: "Excel & PowerPoint", text: "Métadonnées, commentaires, données cachées." },
+        { icon: "📋", title: "PDF (Business+)", text: "Propriétés et contenu embarqué dans les PDFs." },
+        { icon: "⚡", title: "Résultats en 30 secondes", text: "Rapport complet, sans installation." },
+        { icon: "🔒", title: "0 donnée stockée", text: "Fichiers supprimés après analyse. RGPD by design." },
+        { icon: "📥", title: "Nettoyage en un clic", text: "Téléchargez la version propre depuis le rapport." },
+      ],
+    },
+  ],
+  scenarioLabel: "ILS UTILISENT QUALION",
+  scenarios: [
+    {
+      tag: "CONSULTANT",
+      title: "Proposition client avec métadonnées internes",
+      text: "Qualion détecte l'auteur interne et 3 commentaires de révision avant envoi.",
+      result: "Réputation protégée",
+    },
+    {
+      tag: "COMMERCIAL",
+      title: "Offre RFP avec prix de revient visible",
+      text: "Le suivi des modifications révélait la marge. Qualion le détecte avant soumission.",
+      result: "Marge protégée",
+    },
+    {
+      tag: "RECRUTEUR",
+      title: "CV candidat avec notes de disqualification",
+      text: "Les commentaires internes étaient encore visibles. Qualion nettoie avant transmission.",
+      result: "RGPD conforme",
+    },
+  ],
+  ctaTitle: "Prêt à envoyer avec confiance ?",
+  ctaSubtitle: "Analysez votre prochain document — résultat en 30 secondes.",
+  primaryCta: "Essayer Qualion",
+};
 
 export const Route = createFileRoute("/products/qualion")({
   head: () =>
     createStaticMeta({
-      title: "Qualion — Document reputation before send",
-      description: "Qualion detects metadata, comments, personal data and writing issues before you send Word, PDF and PowerPoint documents.",
+      title: "Qualion | Réputation documentaire avant envoi | Mindorion",
+      description:
+        "Qualion analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
       path: "/products/qualion",
     }),
   component: QualionPage,
 });
 
 function QualionPage() {
-  const { t } = useTranslation();
-  const features = t("products.qualion.features", { returnObjects: true }) as Array<{ title: string; text: string }>;
-  const steps = t("products.qualion.steps", { returnObjects: true }) as string[];
-  const audiences = t("products.qualion.audiences", { returnObjects: true }) as string[];
-  const icons = [Shield, MessageSquare, UserRoundX, SpellCheck, Eye, FileCheck] as const;
-
   return (
-    <div className="section-shell section-space">
-      <SEOHead title={t("products.qualion.seoTitle")} description={t("products.qualion.seoDescription")} path="/products/qualion" />
-      <FadeSection className="hero-wash max-w-4xl rounded-[28px] px-6 py-12">
-        <div className="eyebrow">{t("products.qualion.eyebrow")}</div>
-        <div className="mt-4 flex items-start gap-5">
-          <div className="brand-gradient flex h-20 w-20 shrink-0 items-center justify-center rounded-full text-primary-foreground shadow-[0_12px_32px_rgba(124,111,240,0.24)]">
-            <Shield className="h-9 w-9" />
-          </div>
-          <div>
-            <h1 className="text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">{t("products.qualion.title").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 0 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("products.qualion.title").split(" ").length - 1 ? " " : ""}</span>)}</h1>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground">{t("products.qualion.subtitle")}</p>
-          </div>
-        </div>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href={SIGNUP_URL} target="_blank" rel="noreferrer"><Button size="lg">{t("nav.start")}</Button></a>
-          <Link to="/contact"><Button variant="outline" size="lg">{t("common.requestDemo")}</Button></Link>
-        </div>
-      </FadeSection>
-
-      <FadeSection className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3" delay={0.1}>
-        {features.map((feature, index) => {
-          const Icon = icons[index];
-          return (
-            <Card key={feature.title}>
-              <CardContent className="p-6">
-                <div className="brand-icon mb-4 flex h-10 w-10 items-center justify-center rounded-xl text-primary"><Icon className="h-5 w-5" /></div>
-                <h2 className="text-lg font-semibold text-foreground">{feature.title}</h2>
-                <p className="mt-3 text-sm leading-6 text-muted-foreground">{feature.text}</p>
-              </CardContent>
-            </Card>
-          );
-        })}
-      </FadeSection>
-
-      <FadeSection className="mt-14 grid gap-6 lg:grid-cols-2" delay={0.15}>
-        <Card>
-          <CardHeader><CardTitle>Comment ça marche</CardTitle></CardHeader>
-          <CardContent className="space-y-4">
-            {steps.map((step, index) => (
-              <div key={step} className="flex items-center gap-4 rounded-2xl border border-border bg-muted/40 px-4 py-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{index + 1}</div>
-                <div className="font-medium text-foreground">{step}</div>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader><CardTitle>Pour qui</CardTitle></CardHeader>
-          <CardContent className="space-y-3">
-            {audiences.map((audience) => (
-              <div key={audience} className="brand-badge rounded-full px-4 py-2 text-sm font-medium text-primary">{audience}</div>
-            ))}
-            <div className="pt-4"><a href={SIGNUP_URL} target="_blank" rel="noreferrer"><Button>{t("common.startFree")}</Button></a></div>
-          </CardContent>
-        </Card>
-      </FadeSection>
-      <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8"><FinalCTA /></div>
-    </div>
+    <>
+      <SEOHead
+        title="Qualion | Réputation documentaire avant envoi | Mindorion"
+        description="Qualion analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA."
+        path="/products/qualion"
+      />
+      <ProductPageTemplate data={qualionPage} />
+    </>
   );
 }

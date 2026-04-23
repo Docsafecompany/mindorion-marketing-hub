@@ -1,69 +1,117 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Bell, ChartColumn, ClipboardCheck, LayoutDashboard, ScrollText } from "lucide-react";
-import { useTranslation } from "react-i18next";
 
-import { FadeSection } from "@/components/FadeSection";
-import { FinalCTA } from "@/components/FinalCTA";
+import { ProductPageTemplate, type ProductPageData } from "@/components/ProductPageTemplate";
 import { SEOHead } from "@/components/SEOHead";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { SIGNUP_URL } from "@/lib/site";
 import { createStaticMeta } from "@/lib/site";
+
+const governanceiqPage: ProductPageData = {
+  eyebrow: "📋 GOVERNANCEIQ · CONFORMITÉ DOCUMENTAIRE",
+  title: "La conformité documentaire sans la complexité.",
+  subtitle:
+    "GovernanceIQ centralise les politiques documentaires de votre organisation, automatise les audits et garantit que chaque équipe opère selon les mêmes standards — sans effort de supervision.",
+  theme: {
+    heroBg: "#1a1400",
+    heroCardBg: "#0d0a00",
+    accent: "#BA7517",
+    accentSoft: "#FAEEDA",
+    accentText: "#EF9F27",
+    accentStrong: "#BA7517",
+    darkMuted: "#B7AE94",
+    ctaBg: "#BA7517",
+  },
+  heroPanel: {
+    type: "dashboard",
+    label: "TABLEAU DE BORD · GOVERNANCEIQ",
+    stats: [
+      { value: "97%", label: "Conformité équipe" },
+      { value: "24", label: "Docs audités ce mois" },
+    ],
+    policies: [
+      { text: "Métadonnées — Obligatoire avant envoi", tone: "success" },
+      { text: "RGPD — Données personnelles vérifiées", tone: "success" },
+      { text: "Contrats — 2 docs en attente de révision", tone: "warning" },
+    ],
+  },
+  howItWorks: [
+    {
+      title: "Définissez",
+      text: "Créez vos politiques documentaires — standards requis, règles RGPD, niveaux de conformité par type de document.",
+    },
+    {
+      title: "Déployez",
+      text: "GovernanceIQ applique automatiquement vos politiques à toutes les équipes — sans formation ni supervision manuelle.",
+    },
+    {
+      title: "Pilotez",
+      text: "Suivez la conformité en temps réel via le tableau de bord et générez des rapports d'audit à la demande.",
+    },
+  ],
+  featureColumns: [
+    {
+      title: "Gouvernance & politiques",
+      items: [
+        { icon: "📋", title: "Politiques centralisées", text: "Définissez une fois, appliquez à toute l'organisation automatiquement." },
+        { icon: "🔍", title: "Audits automatisés", text: "Chaque document audité selon vos politiques — rapport généré automatiquement." },
+        { icon: "⚠️", title: "Alertes de conformité", text: "Notification immédiate quand un document ne respecte pas les standards." },
+        { icon: "📊", title: "Tableau de bord équipe", text: "Taux de conformité par équipe et par type de document, en temps réel." },
+      ],
+    },
+    {
+      title: "Conformité & sécurité",
+      items: [
+        { icon: "🔒", title: "RGPD by design", text: "Vérification automatique des données personnelles selon les réglementations en vigueur." },
+        { icon: "📁", title: "Audit trail complet", text: "Historique de toutes les actions documentaires — traçabilité totale." },
+        { icon: "👥", title: "Gestion des accès", text: "Rôles et permissions par équipe, département ou projet." },
+        { icon: "🔗", title: "SSO & intégrations", text: "Connexion SSO, Google Workspace & Microsoft 365." },
+      ],
+    },
+  ],
+  scenarioLabel: "CAS D'USAGE",
+  scenarios: [
+    {
+      tag: "RH",
+      title: "Conformité RGPD des dossiers candidats",
+      text: "GovernanceIQ garantit que tous les CVs transmis respectent les politiques RGPD de l'entreprise.",
+      result: "Conformité garantie",
+    },
+    {
+      tag: "ESN",
+      title: "Standards documentaires inter-équipes",
+      text: "Chefs de projet, consultants et développeurs suivent les mêmes politiques documentaires.",
+      result: "Équipes alignées",
+    },
+    {
+      tag: "ENTERPRISE",
+      title: "Audit interne simplifié",
+      text: "Rapports d'audit générés automatiquement — plus de collecte manuelle de preuves.",
+      result: "Audit en 1 clic",
+    },
+  ],
+  ctaTitle: "Prêt à garantir la conformité de votre équipe ?",
+  ctaSubtitle: "Centralisez vos politiques documentaires dès aujourd'hui.",
+  primaryCta: "Essayer GovernanceIQ",
+};
 
 export const Route = createFileRoute("/products/governanceiq")({
   head: () =>
     createStaticMeta({
-      title: "GovernanceIQ — Team document compliance",
-      description: "GovernanceIQ gives managers the indicators, alerts and reporting they need to run team document compliance.",
+      title: "GovernanceIQ | Conformité documentaire équipe | Mindorion",
+      description:
+        "GovernanceIQ centralise les politiques documentaires de votre organisation, automatise les audits et garantit que chaque équipe opère selon les mêmes standards.",
       path: "/products/governanceiq",
     }),
   component: GovernanceIQPage,
 });
 
 function GovernanceIQPage() {
-  const { t } = useTranslation();
-  const features = t("products.governanceiq.features", { returnObjects: true }) as string[];
-  const audiences = t("products.governanceiq.audiences", { returnObjects: true }) as string[];
-  const icons = [LayoutDashboard, ChartColumn, Bell, ClipboardCheck, ScrollText] as const;
-
   return (
-    <div className="section-shell section-space">
-      <SEOHead title={t("products.governanceiq.seoTitle")} description={t("products.governanceiq.seoDescription")} path="/products/governanceiq" />
-      <FadeSection className="hero-wash max-w-4xl rounded-[28px] px-6 py-12">
-        <div className="eyebrow">{t("products.governanceiq.eyebrow")}</div>
-        <div className="mt-4 flex items-start gap-5">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-surface-amber text-surface-amber-foreground shadow-[0_12px_32px_rgba(245,158,11,0.24)]">
-            <LayoutDashboard className="h-9 w-9" />
-          </div>
-          <div>
-            <h1 className="text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">{t("products.governanceiq.title").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 0 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("products.governanceiq.title").split(" ").length - 1 ? " " : ""}</span>)}</h1>
-            <p className="mt-5 text-lg leading-8 text-muted-foreground">{t("products.governanceiq.subtitle")}</p>
-          </div>
-        </div>
-      </FadeSection>
-      <FadeSection className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5" delay={0.1}>
-        {features.map((feature, index) => {
-          const Icon = icons[index];
-          return (
-            <Card key={feature}>
-              <CardContent className="p-6">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-surface-amber text-surface-amber-foreground"><Icon className="h-4 w-4" /></div>
-                <h2 className="font-semibold text-foreground">{feature}</h2>
-              </CardContent>
-            </Card>
-          );
-        })}
-      </FadeSection>
-      <FadeSection className="mt-14 rounded-2xl border border-border bg-card p-8" delay={0.15}>
-        <div className="eyebrow">Pour qui</div>
-        <div className="mt-5 flex flex-wrap gap-3">
-          {audiences.map((audience) => (
-            <span key={audience} className="rounded-full bg-surface-amber px-4 py-2 text-sm font-medium text-surface-amber-foreground">{audience}</span>
-          ))}
-        </div>
-        <div className="mt-8"><a href={SIGNUP_URL} target="_blank" rel="noreferrer"><Button>{t("nav.start")}</Button></a></div>
-      </FadeSection>
-      <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8"><FinalCTA /></div>
-    </div>
+    <>
+      <SEOHead
+        title="GovernanceIQ | Conformité documentaire équipe | Mindorion"
+        description="GovernanceIQ centralise les politiques documentaires de votre organisation, automatise les audits et garantit que chaque équipe opère selon les mêmes standards."
+        path="/products/governanceiq"
+      />
+      <ProductPageTemplate data={governanceiqPage} />
+    </>
   );
 }
