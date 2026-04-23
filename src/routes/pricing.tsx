@@ -8,8 +8,8 @@ import { ProductLogo } from "@/components/ProductLogo";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SIGNUP_URL } from "@/lib/site";
 import { createStaticMeta } from "@/lib/site";
+import { redirectToCheckout, type PlanId, type ProductId } from "@/lib/stripe";
 import { cn } from "@/lib/utils";
 
 type BillingMode = "monthly" | "annual";
