@@ -419,6 +419,8 @@ function PlanCard({ billing, plan }: { billing: BillingMode; plan: Plan }) {
   const isEnterprise = Boolean(plan.enterprise);
   const isFeatured = Boolean(plan.featured);
   const isStandardPlan = !isEnterprise;
+  const priceNote = isEnterprise ? plan.fixedNote : billing === "annual" ? plan.annualNote : undefined;
+  const priceValue = isEnterprise ? "Sur devis" : billing === "monthly" ? plan.monthlyPrice : plan.annualPrice;
 
   return (
     <article
@@ -429,52 +431,43 @@ function PlanCard({ billing, plan }: { billing: BillingMode; plan: Plan }) {
         !isEnterprise && !isFeatured && "border-border",
       )}
     >
-      {isFeatured ? <div className="-mx-5 -mt-5 mb-4 rounded-t-xl bg-[var(--color-pricing-primary)] px-4 py-2 text-center text-xs font-semibold text-white lg:-mx-4 lg:-mt-4 xl:-mx-5 xl:-mt-5">Le plus populaire</div> : null}
+      <div className="flex min-h-[20rem] flex-col">
+        <div className="flex h-8 items-start">
+          {isFeatured ? <div className="inline-flex rounded-full bg-[var(--color-pricing-primary)] px-3 py-1 text-xs font-semibold text-white">Le plus populaire</div> : null}
+        </div>
 
-      <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-primary)]")}>{plan.label}</div>
-      <div className={cn("mt-3 text-2xl font-extrabold text-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.name}</div>
-      <p className={cn("mt-2 min-h-12 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
+        <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-primary)]")}>{plan.label}</div>
+        <div className={cn("mt-3 text-2xl font-extrabold text-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.name}</div>
+        <p className={cn("mt-2 min-h-16 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
 
-      <div className="mt-5">
-        {isEnterprise ? (
-          <>
-            <div className="text-3xl font-extrabold text-[var(--color-pricing-enterprise)]">Sur devis</div>
-            <div className="mt-2 text-sm font-medium text-[var(--color-pricing-enterprise)]">{plan.fixedNote}</div>
-          </>
-        ) : billing === "monthly" ? (
-          <div className="text-3xl font-extrabold text-foreground">{plan.monthlyPrice}</div>
-        ) : (
-          <>
-            <div className="text-3xl font-extrabold text-foreground">{plan.annualPrice}</div>
-            <div className="mt-2 text-sm font-semibold text-[var(--color-pricing-success)]">{plan.annualNote}</div>
-          </>
-        )}
-      </div>
+        <div className="mt-5 min-h-[5.5rem]">
+          <div className={cn("text-3xl font-extrabold", isEnterprise ? "text-[var(--color-pricing-enterprise)]" : "text-foreground")}>{priceValue}</div>
+          {priceNote ? (
+            <div className={cn("mt-2 text-sm font-medium", isEnterprise ? "text-[var(--color-pricing-enterprise)]" : "text-[var(--color-pricing-success)]")}>{priceNote}</div>
+          ) : null}
+        </div>
 
-      <div className="mt-5">
-        {isEnterprise ? (
-          <a href={plan.href}>
-            <Button className="w-full rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
-              {plan.cta}
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-          </a>
-        ) : (
-          <Button
-            asChild
-            className={cn(
-              "w-full rounded-xl shadow-none",
-              isFeatured
-                ? "bg-[var(--color-pricing-primary)] text-white hover:bg-[var(--color-pricing-primary)]/95"
-                : "border border-transparent bg-[var(--color-pricing-dash-soft)] text-foreground hover:bg-[var(--color-pricing-dash-soft)]/80",
-            )}
-          >
+        <div className="mt-5">
+          {isEnterprise ? (
             <Link to={plan.href}>
-              {plan.cta}
-              <ArrowRight className="h-4 w-4" />
+              <Button className="w-full rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
+                {plan.cta}
+                <ArrowRight className="h-4 w-4" />
+              </Button>
             </Link>
-          </Button>
-        )}
+          ) : (
+            <Button
+              asChild
+              variant="outline"
+              className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
+            >
+              <Link to={plan.href}>
+                {plan.cta}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          )}
+        </div>
       </div>
 
       {isEnterprise && plan.suiteCards ? (
