@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -7,6 +7,7 @@
 
 @theme inline {
   --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-pricing: "Plus Jakarta Sans", system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,6 +63,16 @@
   --color-surface-blue-foreground: var(--surface-blue-foreground);
   --color-surface-neutral: var(--surface-neutral);
   --color-surface-neutral-foreground: var(--surface-neutral-foreground);
+  --color-pricing-primary: var(--pricing-primary);
+  --color-pricing-primary-soft: var(--pricing-primary-soft);
+  --color-pricing-primary-border: var(--pricing-primary-border);
+  --color-pricing-success: var(--pricing-success);
+  --color-pricing-success-soft: var(--pricing-success-soft);
+  --color-pricing-dash: var(--pricing-dash);
+  --color-pricing-dash-soft: var(--pricing-dash-soft);
+  --color-pricing-enterprise: var(--pricing-enterprise);
+  --color-pricing-enterprise-soft: var(--pricing-enterprise-soft);
+  --color-pricing-enterprise-border: var(--pricing-enterprise-border);
 }
 
 :root {
@@ -117,6 +128,16 @@
   --surface-blue-foreground: oklch(0.45 0.12 235);
   --surface-neutral: oklch(0.96 0.01 255);
   --surface-neutral-foreground: oklch(0.43 0.03 255);
+  --pricing-primary: oklch(0.51 0.19 295);
+  --pricing-primary-soft: oklch(0.95 0.02 295);
+  --pricing-primary-border: oklch(0.86 0.05 295);
+  --pricing-success: oklch(0.5 0.1 170);
+  --pricing-success-soft: oklch(0.95 0.04 170);
+  --pricing-dash: oklch(0.77 0.01 95);
+  --pricing-dash-soft: oklch(0.96 0.01 95);
+  --pricing-enterprise: oklch(0.41 0.14 295);
+  --pricing-enterprise-soft: oklch(0.96 0.02 295);
+  --pricing-enterprise-border: oklch(0.86 0.04 295);
 }
 
 .dark {
