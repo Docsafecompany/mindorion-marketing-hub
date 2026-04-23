@@ -1,69 +1,104 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { BarChart3, Mail, Network, PlugZap, Radar } from "lucide-react";
-import { useTranslation } from "react-i18next";
 
-import { FadeSection } from "@/components/FadeSection";
-import { FinalCTA } from "@/components/FinalCTA";
+import { ProductPageTemplate, type ProductPageData } from "@/components/ProductPageTemplate";
 import { SEOHead } from "@/components/SEOHead";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { SIGNUP_URL } from "@/lib/site";
 import { createStaticMeta } from "@/lib/site";
+
+const prospectiqPage: ProductPageData = {
+  eyebrow: "🎯 PROSPECTIQ · OUTREACH B2B INTELLIGENT",
+  title: "Trouvez les bons prospects. Au bon moment.",
+  subtitle:
+    "ProspectIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
+  theme: {
+    heroBg: "#0a1f16",
+    heroCardBg: "#061410",
+    accent: "#1D9E75",
+    accentSoft: "#E1F5EE",
+    accentText: "#5DCAA5",
+    accentStrong: "#1D9E75",
+    darkMuted: "#A6B7B0",
+    ctaBg: "#0F6E56",
+  },
+  heroPanel: {
+    type: "pipeline",
+    label: "PIPELINE · PROSPECTIQ",
+    rows: [
+      { initials: "DL", title: "Dir. Commercial · Pharma", city: "Lyon", score: "94%" },
+      { initials: "VP", title: "VP Achats · Aérospatial", city: "Toulouse", score: "88%" },
+      { initials: "DG", title: "DG · Cabinet conseil", city: "Paris", score: "81%" },
+    ],
+  },
+  howItWorks: [
+    { title: "Définissez", text: "Décrivez votre cible idéale — secteur, taille, fonction, zone géographique." },
+    { title: "Qualifiez", text: "L'IA identifie et score vos meilleurs prospects. Strategy Hub analyse les opportunités." },
+    { title: "Contactez", text: "Lancez des séquences multi-canal personnalisées et laissez ProspectIQ gérer le suivi." },
+  ],
+  featureColumns: [
+    {
+      title: "Prospection & qualification",
+      items: [
+        { icon: "🎯", title: "Qualification IA", text: "Score de pertinence sur chaque prospect." },
+        { icon: "🏢", title: "Intelligence Flags", text: "Signaux d'affaires : croissance, recrutements, levées de fonds, actualités." },
+        { icon: "🧠", title: "Strategy Hub", text: "Analyse approfondie des comptes cibles et recommandations d'approche." },
+        { icon: "📅", title: "Meeting Intelligence", text: "Préparation automatisée de vos réunions commerciales avec contexte prospect." },
+      ],
+    },
+    {
+      title: "Outreach & suivi",
+      items: [
+        { icon: "✉️", title: "Séquences multi-canal", text: "Email, LinkedIn, appel — séquences personnalisées par profil et secteur." },
+        { icon: "🔄", title: "Suivi automatisé", text: "Relances intelligentes selon les comportements : ouverture, clic, réponse." },
+        { icon: "📊", title: "Tableaux de bord équipe", text: "Performances d'outreach, taux de réponse et pipeline en temps réel." },
+        { icon: "🔗", title: "Intégrations CRM", text: "Salesforce, HubSpot (Enterprise)." },
+      ],
+    },
+  ],
+  scenarioLabel: "CAS D'USAGE",
+  scenarios: [
+    {
+      tag: "CONSULTANT",
+      title: "Développement portefeuille clients",
+      text: "ProspectIQ identifie les décideurs dans le secteur cible et génère les séquences d'approche.",
+      result: "Pipeline alimenté",
+    },
+    {
+      tag: "SALES B2B",
+      title: "Qualification grands comptes",
+      text: "Strategy Hub analyse les comptes cibles et recommande les meilleurs angles d'approche.",
+      result: "Bons prospects ciblés",
+    },
+    {
+      tag: "ESN",
+      title: "Approche DSI & CTO",
+      text: "ProspectIQ construit des séquences adaptées aux cycles longs de l'industrie tech.",
+      result: "Cycle raccourci",
+    },
+  ],
+  ctaTitle: "Prêt à trouver vos prochains clients ?",
+  ctaSubtitle: "Qualifiez vos prospects et lancez vos séquences aujourd'hui.",
+  primaryCta: "Essayer ProspectIQ",
+};
 
 export const Route = createFileRoute("/products/prospectiq")({
   head: () =>
     createStaticMeta({
-      title: "ProspectIQ — Intelligent B2B outreach",
-      description: "ProspectIQ helps sales teams target the right accounts, orchestrate sequences and track commercial performance.",
+      title: "ProspectIQ | Outreach B2B intelligent | Mindorion",
+      description:
+        "ProspectIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
       path: "/products/prospectiq",
     }),
   component: ProspectIQPage,
 });
 
 function ProspectIQPage() {
-  const { t } = useTranslation();
-  const features = t("products.prospectiq.features", { returnObjects: true }) as string[];
-  const audiences = t("products.prospectiq.audiences", { returnObjects: true }) as string[];
-  const icons = [Radar, Mail, Network, BarChart3, PlugZap] as const;
-
   return (
-    <div className="section-shell section-space">
-      <SEOHead title={t("products.prospectiq.seoTitle")} description={t("products.prospectiq.seoDescription")} path="/products/prospectiq" />
-      <FadeSection className="hero-wash max-w-4xl rounded-[28px] px-6 py-12">
-        <div className="eyebrow">{t("products.prospectiq.eyebrow")}</div>
-        <div className="mt-4 flex items-start gap-5">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground shadow-[0_12px_32px_rgba(16,185,129,0.24)]">
-            <Radar className="h-9 w-9" />
-          </div>
-          <div>
-            <h1 className="text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">{t("products.prospectiq.title").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 0 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("products.prospectiq.title").split(" ").length - 1 ? " " : ""}</span>)}</h1>
-            <p className="mt-5 text-lg leading-8 text-muted-foreground">{t("products.prospectiq.subtitle")}</p>
-          </div>
-        </div>
-      </FadeSection>
-      <FadeSection className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5" delay={0.1}>
-        {features.map((feature, index) => {
-          const Icon = icons[index];
-          return (
-            <Card key={feature}>
-              <CardContent className="p-6">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/15 text-secondary"><Icon className="h-4 w-4" /></div>
-                <h2 className="font-semibold text-foreground">{feature}</h2>
-              </CardContent>
-            </Card>
-          );
-        })}
-      </FadeSection>
-      <FadeSection className="mt-14 rounded-2xl border border-border bg-card p-8" delay={0.15}>
-        <div className="eyebrow">Pour qui</div>
-        <div className="mt-5 flex flex-wrap gap-3">
-          {audiences.map((audience) => (
-            <span key={audience} className="rounded-full bg-secondary/15 px-4 py-2 text-sm font-medium text-secondary">{audience}</span>
-          ))}
-        </div>
-        <div className="mt-8"><a href={SIGNUP_URL} target="_blank" rel="noreferrer"><Button>{t("nav.start")}</Button></a></div>
-      </FadeSection>
-      <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8"><FinalCTA /></div>
-    </div>
+    <>
+      <SEOHead
+        title="ProspectIQ | Outreach B2B intelligent | Mindorion"
+        description="ProspectIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse."
+        path="/products/prospectiq"
+      />
+      <ProductPageTemplate data={prospectiqPage} />
+    </>
   );
 }
