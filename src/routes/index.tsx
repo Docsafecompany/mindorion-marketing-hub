@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BriefcaseBusiness, CheckCircle2, FileText, Shield, Sparkles, Target, Users } from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, CheckCircle2, FileText, Sparkles, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { FadeSection } from "@/components/FadeSection";
@@ -37,16 +37,25 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   const { t } = useTranslation();
   const stats = t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>;
-  const productCards = t("home.productCards", { returnObjects: true }) as Array<{ title: string; text: string }>;
+  const heroTitleWords = t("home.heroTitleWords", { returnObjects: true }) as string[];
+  const heroProducts = t("home.heroProducts", { returnObjects: true }) as Array<{
+    icon: string;
+    title: string;
+    text: string;
+    cta: string;
+  }>;
   const useCases = t("home.useCases", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const whyItems = t("home.whyItems", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const testimonials = t("home.testimonials", { returnObjects: true }) as Array<{ role: string; quote: string }>;
   const personas = t("home.personas", { returnObjects: true }) as string[];
   const qualionDocItems = t("home.qualionDocItems", { returnObjects: true }) as string[];
   const qualionProposalItems = t("home.qualionProposalItems", { returnObjects: true }) as string[];
-  const productLinks = ["/products/qualion", "/products/prospectiq", "/products/governanceiq"] as const;
-  const productIcons = [Shield, Target, FileText] as const;
   const useCaseIcons = [BriefcaseBusiness, Users, Sparkles, FileText] as const;
+  const heroProductSurfaces = [
+    "bg-surface-brand text-surface-brand-foreground",
+    "bg-surface-secondary text-surface-secondary-foreground",
+    "bg-surface-amber text-surface-amber-foreground",
+  ] as const;
 
   return (
     <>
@@ -58,12 +67,11 @@ function HomePage() {
               {t("home.badge")}
             </Badge>
             <h1 className="headline-balance mt-8 text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">
-              {t("home.title").split(" ").map((word, index, words) => {
-                const isHighlight = index === 1 || index === words.length - 1;
+              {heroTitleWords.map((word, index) => {
                 return (
                   <span key={`${word}-${index}`}>
-                    {isHighlight ? <span className="brand-gradient-text">{word}</span> : word}
-                    {index < words.length - 1 ? " " : ""}
+                    <span className="brand-gradient-text">{word}</span>
+                    {index < heroTitleWords.length - 1 ? " " : ""}
                   </span>
                 );
               })}
@@ -74,44 +82,48 @@ function HomePage() {
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link to="/pricing">
                 <Button size="lg" className="min-w-44 gap-1">
-                  {t("common.viewPricing")}
+                  {t("home.primaryCta")}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
-              <Link to="/contact">
+              <a href="mailto:contact@mindorion.com">
                 <Button size="lg" variant="outline" className="min-w-44">
-                  {t("common.requestDemo")}
+                  {t("home.secondaryCta")}
                 </Button>
-              </Link>
-            </div>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-              {personas.map((persona) => (
-                <span key={persona} className="brand-badge rounded-full px-3 py-1 text-sm font-medium text-primary">
-                  {persona}
-                </span>
-              ))}
+              </a>
             </div>
           </FadeSection>
 
           <FadeSection className="mt-14 grid gap-5 lg:grid-cols-3" delay={0.1}>
-            {productCards.map((card, index) => {
-              const Icon = productIcons[index];
+            {heroProducts.map((card, index) => {
               return (
-                <Link key={card.title} to={productLinks[index]}>
-                  <Card className="h-full">
-                    <CardHeader>
-                      <div className="brand-icon mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-primary">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <CardTitle className="text-xl">{card.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{card.text}</p>
-                    </CardContent>
-                  </Card>
-                </Link>
+                <Card key={card.title} className="h-full">
+                  <CardHeader>
+                    <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-xl ${heroProductSurfaces[index]}`}>
+                      <span aria-hidden="true">{card.icon}</span>
+                    </div>
+                    <CardTitle className="text-xl">{card.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{card.text}</p>
+                    <div className="mt-6">
+                      <Link to="/pricing" className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80">
+                        {card.cta}
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
               );
             })}
+          </FadeSection>
+
+          <FadeSection className="mt-8 flex flex-wrap items-center justify-center gap-2" delay={0.15}>
+            {personas.map((persona) => (
+              <span key={persona} className="brand-badge rounded-full px-3 py-1 text-sm font-medium text-primary">
+                {persona}
+              </span>
+            ))}
           </FadeSection>
         </section>
       </div>
