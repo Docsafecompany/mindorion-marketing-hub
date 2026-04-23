@@ -39,11 +39,11 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border/80 bg-muted/30">
+    <footer className="border-t border-border bg-background">
       <div className="section-shell py-14">
         <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
           <div className="space-y-5">
-            <BrandMark />
+            <BrandMark className="h-8" />
             <p className="max-w-sm text-sm leading-6 text-muted-foreground">{t("footer.brandText")}</p>
             <div className="flex flex-wrap gap-3">
               <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
@@ -97,7 +97,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-border/80 pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <span>{t("site.copyright")}</span>
           <button className="font-semibold hover:text-foreground" onClick={() => void setLanguage(nextLanguage)}>
             {t("site.switchLanguage")}

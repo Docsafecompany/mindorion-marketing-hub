@@ -15,7 +15,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   }, [i18n.language]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <main>{children}</main>
       <Footer />
