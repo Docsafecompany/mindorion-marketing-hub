@@ -83,6 +83,8 @@
   --color-about-dark: var(--about-dark);
   --color-about-dark-muted: var(--about-dark-muted);
   --color-about-card-border: var(--about-card-border);
+  --color-product-page: var(--product-page);
+  --color-product-card-border: var(--product-card-border);
 }
 
 :root {
@@ -158,6 +160,8 @@
   --about-dark: oklch(0.21 0.01 85);
   --about-dark-muted: oklch(0.68 0.01 85);
   --about-card-border: oklch(0.92 0.004 85);
+  --product-page: oklch(0.97 0.006 85);
+  --product-card-border: oklch(0.92 0.004 85);
 }
 
 .dark {
