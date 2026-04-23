@@ -1,6 +1,7 @@
 import { Link, createFileRoute, notFound, useRouter } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
+import { FinalCTA } from "@/components/FinalCTA";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -72,7 +73,7 @@ function BlogArticlePage() {
       <SEOHead title={t(post.titleKey)} description={post.description} path={`/blog/${post.slug}`} />
       <div className="grid gap-10 lg:grid-cols-[280px_minmax(0,1fr)]">
         <aside className="lg:sticky lg:top-24 lg:self-start">
-          <div className="rounded-lg border border-border/80 bg-card p-6">
+          <div className="rounded-2xl border border-border bg-card p-6">
             <Link to="/blog" className="text-sm font-semibold text-primary">← {t("blog.back")}</Link>
             <h1 className="mt-5 text-2xl font-bold text-foreground">{t(post.titleKey)}</h1>
             <div className="mt-6 text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("blog.toc")}</div>
@@ -97,6 +98,7 @@ function BlogArticlePage() {
           </div>
         </article>
       </div>
+      <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8"><FinalCTA /></div>
     </div>
   );
 }
