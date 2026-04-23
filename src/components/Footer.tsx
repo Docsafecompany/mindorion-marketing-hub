@@ -18,7 +18,7 @@ export function Footer() {
     { label: t("nav.pricing"), to: "/pricing" },
   ];
 
-  const solutionLinks = [
+  const solutionLinks: Array<{ label: string; to: string; hash?: `#${string}` }> = [
     { label: t("footer.solutionItems.0"), to: "/use-cases", hash: "#consultants" },
     { label: t("footer.solutionItems.1"), to: "/use-cases", hash: "#sales" },
     { label: t("footer.solutionItems.2"), to: "/use-cases", hash: "#rh" },
