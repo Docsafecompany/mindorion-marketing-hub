@@ -5,6 +5,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { createStaticMeta } from "@/lib/site";
 
 const prospectiqPage: ProductPageData = {
+  product: "prospectiq",
   eyebrow: "🎯 PROSPECTIQ · OUTREACH B2B INTELLIGENT",
   title: "Trouvez les bons prospects. Au bon moment.",
   subtitle:

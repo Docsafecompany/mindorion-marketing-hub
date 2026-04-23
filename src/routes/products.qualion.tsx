@@ -5,6 +5,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { createStaticMeta } from "@/lib/site";
 
 const qualionPage: ProductPageData = {
+  product: "qualion",
   eyebrow: "🛡 QUALION · RÉPUTATION DOCUMENTAIRE",
   title: "Votre document est-il vraiment prêt à être envoyé ?",
   subtitle:

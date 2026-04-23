@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { ProductLogo } from "@/components/ProductLogo";
 import { cn } from "@/lib/utils";
 
 type Theme = {
@@ -47,6 +48,7 @@ type FeatureColumn = { title: string; items: Feature[] };
 type Scenario = { tag: string; title: string; text: string; result: string };
 
 export type ProductPageData = {
+  product: "qualion" | "prospectiq" | "governanceiq";
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -78,6 +80,9 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
       <div className="section-shell section-space space-y-8">
         <section className="grid gap-6 rounded-xl bg-[var(--product-hero-bg)] p-6 lg:grid-cols-[1.38fr_1fr] lg:p-8">
           <div>
+            <div className="mb-6 h-16 w-44">
+              <ProductLogo product={data.product} className="object-left" />
+            </div>
             <div className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--product-accent-text)]">{data.eyebrow}</div>
             <h1 className="headline-balance mt-5 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
               {data.title}
