@@ -101,7 +101,7 @@
   --sidebar-accent-foreground: oklch(0.27 0.032 259);
   --sidebar-border: oklch(0.9 0.012 255);
   --sidebar-ring: hsl(244 80% 62%);
-  --surface-brand: linear-gradient(135deg, rgba(124, 111, 240, 0.08) 0%, rgba(79, 195, 247, 0.08) 100%);
+  --surface-brand: oklch(0.95 0.04 291);
   --surface-brand-foreground: hsl(244 80% 62%);
   --gradient-brand: linear-gradient(135deg, #7c6ff0 0%, #4fc3f7 100%);
   --gradient-brand-text: linear-gradient(90deg, #7c6ff0 0%, #4fc3f7 100%);
@@ -196,6 +196,10 @@
     @apply border border-border/80 bg-card/88 shadow-[0_18px_50px_-28px_color-mix(in_oklab,var(--color-primary)_28%,transparent)] backdrop-blur;
   }
 
+  .brand-subtle {
+    background-image: var(--gradient-brand-subtle);
+  }
+
   .surface-subtle {
     @apply border border-border/70 bg-muted/45;
   }
@@ -221,7 +225,26 @@
   }
 
   .brand-gradient {
-    background-image: linear-gradient(135deg, var(--color-primary), color-mix(in oklab, var(--color-accent) 72%, white));
+    background-image: var(--gradient-brand);
+  }
+
+  .brand-gradient-text {
+    background-image: var(--gradient-brand-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .brand-icon {
+    background-image: linear-gradient(135deg, rgba(124, 111, 240, 0.12) 0%, rgba(79, 195, 247, 0.12) 100%);
+  }
+
+  .brand-badge {
+    background-image: linear-gradient(90deg, rgba(124, 111, 240, 0.1) 0%, rgba(79, 195, 247, 0.1) 100%);
+  }
+
+  .hero-wash {
+    background-image: var(--gradient-brand-subtle);
   }
 
   .hero-grid {
