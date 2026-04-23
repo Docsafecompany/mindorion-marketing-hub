@@ -8,8 +8,8 @@ import { ProductLogo } from "@/components/ProductLogo";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SIGNUP_URL } from "@/lib/site";
 import { createStaticMeta } from "@/lib/site";
+import { redirectToCheckout, type PlanId, type ProductId } from "@/lib/stripe";
 import { cn } from "@/lib/utils";
 
 type BillingMode = "monthly" | "annual";
@@ -680,7 +680,7 @@ function PricingPage() {
           <TabsContent key={product.key} value={product.key} className="mt-8 space-y-10">
             <div className="grid gap-4 lg:grid-cols-4 xl:gap-6">
               {product.plans.map((plan) => (
-                <PlanCard key={`${product.key}-${plan.name}`} billing={billing} plan={plan} popularLabel={copy.popular} customLabel={copy.custom} suiteLabel={copy.includedInSuite} />
+                <PlanCard key={`${product.key}-${plan.name}`} productKey={product.key} billing={billing} plan={plan} popularLabel={copy.popular} customLabel={copy.custom} suiteLabel={copy.includedInSuite} />
               ))}
             </div>
             <ComparisonTable product={product} featureLabel={copy.comparisonFeature} />
@@ -691,12 +691,15 @@ function PricingPage() {
   );
 }
 
-function PlanCard({ billing, plan, popularLabel, customLabel, suiteLabel }: { billing: BillingMode; plan: LocalizedPlan; popularLabel: string; customLabel: string; suiteLabel: string }) {
+function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteLabel }: { productKey: ProductId; billing: BillingMode; plan: LocalizedPlan; popularLabel: string; customLabel: string; suiteLabel: string }) {
   const isEnterprise = Boolean(plan.enterprise);
   const isFeatured = Boolean(plan.featured);
   const isStandardPlan = !isEnterprise;
   const priceNote = isEnterprise ? plan.fixedNote : billing === "annual" ? plan.annualNote : undefined;
   const priceValue = isEnterprise ? customLabel : billing === "monthly" ? plan.monthlyPrice : plan.annualPrice;
+
+  const planIdMap: Record<string, PlanId> = { Starter: "starter", Pro: "pro", Business: "business" };
+  const stripePlanId = planIdMap[plan.name];
 
   return (
     <article
@@ -728,11 +731,15 @@ function PlanCard({ billing, plan, popularLabel, customLabel, suiteLabel }: { bi
               </Button>
             </Link>
           ) : (
-            <Button asChild variant="outline" className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40">
-              <a href={SIGNUP_URL}>
-                {plan.cta}
-                <ArrowRight className="h-4 w-4" />
-              </a>
+            <Button
+              variant="outline"
+              className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
+              onClick={() => {
+                if (stripePlanId) void redirectToCheckout(productKey, stripePlanId, billing);
+              }}
+            >
+              {plan.cta}
+              <ArrowRight className="h-4 w-4" />
             </Button>
           )}
         </div>
