@@ -19,39 +19,38 @@ export function Footer() {
   ];
 
   const solutionLinks = [
-    { label: t("nav.solutionItems.0.title"), to: "/use-cases", hash: "consultants" },
-    { label: t("nav.solutionItems.1.title"), to: "/use-cases", hash: "sales" },
-    { label: t("nav.solutionItems.2.title"), to: "/use-cases", hash: "rh" },
-    { label: t("nav.solutionItems.3.title"), to: "/use-cases", hash: "esn" },
+    { label: t("footer.solutionItems.0"), to: "/use-cases" },
+    { label: t("footer.solutionItems.1"), to: "/use-cases" },
+    { label: t("footer.solutionItems.2"), to: "/use-cases" },
+    { label: t("footer.solutionItems.3"), to: "/use-cases" },
   ];
 
   const resourceLinks = [
     { label: "Blog", to: "/blog" },
-    { label: t("nav.solutions"), to: "/use-cases" },
+    { label: t("footer.useCases"), to: "/use-cases" },
     { label: t("footer.about"), to: "/about" },
-    { label: t("footer.contact"), to: "/contact" },
   ];
 
   const legalLinks = [
-    { label: t("footer.privacy"), to: "/privacy" },
-    { label: t("footer.terms"), to: "/terms" },
+    { label: t("footer.privacy"), to: "/legal/privacy" },
+    { label: t("footer.terms"), to: "/legal/terms" },
     { label: t("footer.security"), to: "/security" },
   ];
 
   return (
     <footer className="border-t border-border/80 bg-background">
       <div className="section-shell py-14">
-        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-[1.35fr_repeat(3,1fr)]">
           <div className="space-y-5">
-            <BrandMark className="h-8" />
+            <BrandMark className="h-8 brightness-0 invert" />
             <p className="max-w-sm text-sm leading-6 text-muted-foreground">{t("footer.brandText")}</p>
             <div className="flex flex-wrap gap-3">
               <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
                 <Button variant="outline" className="border-border/80 bg-card/90">{t("footer.linkedin")}</Button>
               </a>
-              <Link to="/contact">
-                <Button variant="outline" className="border-border/80 bg-card/90">{t("footer.contact")}</Button>
-              </Link>
+              <a href={`mailto:${t("site.contactEmail")}`}>
+                <Button variant="outline" className="border-border/80 bg-card/90">{t("site.contactEmail")}</Button>
+              </a>
             </div>
           </div>
 
@@ -70,7 +69,7 @@ export function Footer() {
             <div className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("footer.solutions")}</div>
             <div className="space-y-3 text-sm">
               {solutionLinks.map((item) => (
-                <Link key={item.label} to={item.to} hash={item.hash} className="block text-muted-foreground transition-colors hover:text-foreground">
+                <Link key={item.label} to={item.to} className="block text-muted-foreground transition-colors hover:text-foreground">
                   {item.label}
                 </Link>
               ))}
@@ -85,6 +84,9 @@ export function Footer() {
                   {item.label}
                 </Link>
               ))}
+              <a href={`mailto:${t("site.contactEmail")}`} className="block text-muted-foreground transition-colors hover:text-foreground">
+                {t("footer.contact")}
+              </a>
             </div>
             <div className="my-5 h-px bg-border/80" />
             <div className="space-y-3 text-sm">

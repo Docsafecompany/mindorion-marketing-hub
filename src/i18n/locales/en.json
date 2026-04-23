@@ -4,7 +4,7 @@
     "tagline": "Professional intelligence for B2B teams.",
     "description": "Documents, outreach and governance, one platform.",
     "language": "EN",
-    "switchLanguage": "EN / FR",
+    "switchLanguage": "FR / EN",
     "copyright": "© 2026 Mindorion OÜ. All rights reserved.",
     "contactEmail": "contact@mindorion.com"
   },
@@ -18,7 +18,7 @@
     "productsLabel": "MINDORION PRODUCTS",
     "solutionsLabel": "BY FUNCTION",
     "resourcesLabel": "RESOURCES",
-    "pricingCta": "View pricing",
+    "pricingCta": "Voir les tarifs →",
     "demoCta": "Request a demo",
     "productItems": [
       {
@@ -58,8 +58,16 @@
         "subtitle": "Articles, guides and professional advice"
       },
       {
-        "title": "About",
+        "title": "Use Cases",
+        "subtitle": "Role-based use cases and applications"
+      },
+      {
+        "title": "À propos",
         "subtitle": "Our mission, team and values"
+      },
+      {
+        "title": "Contact",
+        "subtitle": "contact@mindorion.com"
       }
     ],
     "pricingSubtitle": "Starter · Pro · Business · Enterprise",
@@ -78,7 +86,14 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "security": "Security",
-    "about": "About"
+    "about": "À propos",
+    "useCases": "Use Cases",
+    "solutionItems": [
+      "Consultants",
+      "Sales Teams",
+      "HR & Recruiting",
+      "IT Services & Engineering"
+    ]
   },
   "common": {
     "viewPricing": "View pricing",
