@@ -36,7 +36,7 @@ type MenuEntry = {
 };
 
 function IconTile({ className, children }: { className: string; children: React.ReactNode }) {
-  return <div className={cn("flex h-10 w-10 items-center justify-center rounded-lg", className)}>{children}</div>;
+  return <div className={cn("brand-icon flex h-10 w-10 items-center justify-center rounded-xl text-primary", className)}>{children}</div>;
 }
 
 function NavPanel({ label, items, footer }: { label: string; items: MenuEntry[]; footer?: MenuEntry }) {
@@ -151,8 +151,8 @@ export function Navbar() {
   ];
 
   return (
-      <header className="sticky top-0 z-40 border-b border-border bg-background/92 backdrop-blur-xl">
-      <div className="section-shell flex h-16 items-center justify-between gap-6">
+      <header className="sticky top-0 z-40 border-b border-border/80 bg-background/94 backdrop-blur-xl">
+      <div className="section-shell flex h-16 items-center justify-between gap-6 lg:h-[72px]">
         <Link to="/" className="shrink-0">
             <BrandMark className="h-9" />
         </Link>
@@ -185,7 +185,7 @@ export function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/pricing" className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-brand-subtle hover:text-primary">
+                     <Link to="/pricing" className="inline-flex h-9 items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/70 hover:text-primary">
                     {t("nav.pricing")}
                   </Link>
                 </NavigationMenuLink>
@@ -220,7 +220,7 @@ export function Navbar() {
               <ArrowRight className="h-3.5 w-3.5" />
             </Button>
           </a>
-          <button className="text-xs font-semibold text-muted-foreground transition-colors hover:text-foreground" onClick={() => void setLanguage(nextLanguage)}>
+          <button className="text-xs font-semibold text-muted-foreground transition-colors hover:text-primary" onClick={() => void setLanguage(nextLanguage)}>
             {t("site.switchLanguage")}
           </button>
         </div>
@@ -228,7 +228,7 @@ export function Navbar() {
         <div className="lg:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" aria-label="Open navigation" className="rounded-xl">
+              <Button variant="outline" size="icon" aria-label="Open navigation" className="rounded-xl border-border/80 bg-card/90">
                 <Menu className="h-4 w-4" />
               </Button>
             </SheetTrigger>
