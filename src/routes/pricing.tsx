@@ -74,7 +74,7 @@ function PricingPage() {
                     <Button variant="outline" className="w-full">{plan.cta}</Button>
                   </a>
                 ) : (
-                  <a href={SIGNUP_URL}>
+                  <a href={SIGNUP_URL} target="_blank" rel="noreferrer">
                     <Button className="w-full">{plan.cta}</Button>
                   </a>
                 )}

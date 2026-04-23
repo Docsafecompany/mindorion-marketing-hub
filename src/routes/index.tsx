@@ -255,7 +255,7 @@ function HomePage() {
           <h2 className="text-[32px] font-bold text-foreground">{t("home.finalTitle").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === t("home.finalTitle").split(" ").length - 1 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("home.finalTitle").split(" ").length - 1 ? " " : ""}</span>)}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">{t("home.finalText")}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a href={SIGNUP_URL}>
+            <a href={SIGNUP_URL} target="_blank" rel="noreferrer">
               <Button size="lg" className="h-[52px] px-8">{t("common.startFree")}</Button>
             </a>
             <Link to="/contact">
