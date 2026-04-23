@@ -31,19 +31,19 @@ function UseCasesPage() {
   return (
     <div className="section-shell section-space">
       <SEOHead title={t("useCases.seoTitle")} description={t("useCases.seoDescription")} path="/use-cases" />
-      <FadeSection className="max-w-4xl">
-        <h1 className="text-4xl font-extrabold text-foreground sm:text-5xl">{t("useCases.title")}</h1>
-        <p className="mt-5 text-lg leading-8 text-muted-foreground">{t("useCases.subtitle")}</p>
+      <FadeSection className="hero-wash max-w-4xl rounded-[28px] px-6 py-12 text-center">
+        <h1 className="text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">{t("useCases.title").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 1 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("useCases.title").split(" ").length - 1 ? " " : ""}</span>)}</h1>
+        <p className="mx-auto mt-5 max-w-[600px] text-lg leading-8 text-muted-foreground">{t("useCases.subtitle")}</p>
       </FadeSection>
 
       <div className="mt-14 space-y-10">
         {sections.map((section, index) => (
           <FadeSection key={section.id} className="scroll-mt-28" delay={index * 0.05}>
-            <section id={section.id} className="rounded-lg border border-border/80 bg-card p-8 lg:p-10">
+            <section id={section.id} className="rounded-2xl border border-border bg-card p-8 lg:p-10">
               <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
                 <div>
                   <div className="eyebrow">Use case</div>
-                  <h2 className="mt-3 text-3xl font-bold text-foreground">{section.title}</h2>
+                  <h2 className="mt-3 text-[32px] font-bold text-foreground md:text-[38px]">{section.title}</h2>
                   <p className="mt-4 max-w-2xl text-lg leading-8 text-muted-foreground">{section.text}</p>
                   <div className="mt-8">
                     <Link to={ctas[index]}>
@@ -54,7 +54,7 @@ function UseCasesPage() {
                     </Link>
                   </div>
                 </div>
-                <Card className="rounded-lg bg-muted/25 shadow-none">
+                 <Card className="bg-muted/25 shadow-none hover:shadow-none">
                   <CardContent className="p-6">
                     <div className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">Top challenges</div>
                     <ul className="mt-5 space-y-3">

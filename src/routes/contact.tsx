@@ -28,12 +28,12 @@ function ContactPage() {
   return (
     <div className="section-shell section-space">
       <SEOHead title={t("contact.seoTitle")} description={t("contact.seoDescription")} path="/contact" />
-      <FadeSection className="max-w-4xl">
-        <h1 className="text-4xl font-extrabold text-foreground sm:text-5xl">{t("contact.title")}</h1>
-        <p className="mt-5 text-lg leading-8 text-muted-foreground">{t("contact.subtitle")}</p>
+      <FadeSection className="hero-wash max-w-4xl rounded-[28px] px-6 py-12 text-center">
+        <h1 className="text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">{t("contact.title").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 0 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("contact.title").split(" ").length - 1 ? " " : ""}</span>)}</h1>
+        <p className="mx-auto mt-5 max-w-[600px] text-lg leading-8 text-muted-foreground">{t("contact.subtitle")}</p>
       </FadeSection>
       <FadeSection className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]" delay={0.1}>
-        <Card className="rounded-lg">
+        <Card>
           <CardContent className="p-6 sm:p-8">
             <form
               className="space-y-4"
@@ -54,7 +54,7 @@ function ContactPage() {
             </form>
           </CardContent>
         </Card>
-        <Card className="rounded-lg bg-muted/35">
+        <Card className="bg-muted/35">
           <CardContent className="flex h-full flex-col justify-between gap-6 p-6 sm:p-8">
             <div>
               <div className="eyebrow">Contact</div>

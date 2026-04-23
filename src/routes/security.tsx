@@ -25,7 +25,7 @@ function SecurityPage() {
   return (
     <div className="section-shell section-space">
       <SEOHead title={t("security.seoTitle")} description={t("security.seoDescription")} path="/security" />
-      <FadeSection className="max-w-4xl">
+      <FadeSection className="mx-auto max-w-4xl text-center">
         <h1 className="text-4xl font-extrabold text-foreground sm:text-5xl">{t("security.title")}</h1>
         <p className="mt-5 text-lg leading-8 text-muted-foreground">{t("security.subtitle")}</p>
       </FadeSection>
@@ -33,9 +33,9 @@ function SecurityPage() {
         {cards.map((card, index) => {
           const Icon = icons[index];
           return (
-            <Card key={card.title} className="rounded-lg">
+            <Card key={card.title}>
               <CardContent className="p-6">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-muted text-primary"><Icon className="h-5 w-5" /></div>
+                <div className="brand-icon mb-4 flex h-10 w-10 items-center justify-center rounded-xl text-primary"><Icon className="h-5 w-5" /></div>
                 <h2 className="text-lg font-semibold text-foreground">{card.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{card.text}</p>
               </CardContent>
