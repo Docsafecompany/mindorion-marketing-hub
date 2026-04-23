@@ -54,13 +54,21 @@ function HomePage() {
       <div className="hero-grid overflow-hidden">
         <section className="section-shell section-space pb-12 pt-16 sm:pt-20 lg:pt-24">
           <FadeSection className="mx-auto max-w-4xl text-center">
-            <Badge variant="outline" className="rounded-full border-primary/15 bg-card px-4 py-1 text-xs font-semibold text-muted-foreground">
+            <Badge variant="outline" className="brand-badge rounded-full border-border bg-transparent px-4 py-1 text-xs font-medium text-primary">
               {t("home.badge")}
             </Badge>
-            <h1 className="headline-balance mt-8 text-4xl font-extrabold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-              {t("home.title")}
+            <h1 className="headline-balance mt-8 text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">
+              {t("home.title").split(" ").map((word, index, words) => {
+                const isHighlight = index === 1 || index === words.length - 1;
+                return (
+                  <span key={`${word}-${index}`}>
+                    {isHighlight ? <span className="brand-gradient-text">{word}</span> : word}
+                    {index < words.length - 1 ? " " : ""}
+                  </span>
+                );
+              })}
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-balance text-lg leading-8 text-muted-foreground">
+            <p className="mx-auto mt-6 max-w-[600px] text-balance text-lg leading-8 text-muted-foreground">
               {t("home.subtitle")}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -78,7 +86,7 @@ function HomePage() {
             </div>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
               {personas.map((persona) => (
-                <span key={persona} className="rounded-full border border-border/80 bg-card px-3 py-1 text-sm text-muted-foreground">
+                <span key={persona} className="brand-badge rounded-full px-3 py-1 text-sm font-medium text-primary">
                   {persona}
                 </span>
               ))}
@@ -90,9 +98,9 @@ function HomePage() {
               const Icon = productIcons[index];
               return (
                 <Link key={card.title} to={productLinks[index]}>
-                  <Card className="h-full rounded-lg border-border/80 transition-transform duration-200 hover:-translate-y-1">
+                  <Card className="h-full">
                     <CardHeader>
-                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-muted text-primary">
+                      <div className="brand-icon mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-primary">
                         <Icon className="h-5 w-5" />
                       </div>
                       <CardTitle className="text-xl">{card.title}</CardTitle>
@@ -111,9 +119,9 @@ function HomePage() {
       <section className="section-shell pb-8">
         <FadeSection className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {stats.map((stat) => (
-            <Card key={stat.label} className="rounded-lg bg-card/78">
+            <Card key={stat.label} className="bg-card/78">
               <CardContent className="p-6">
-                <div className="text-3xl font-extrabold text-foreground">{stat.value}</div>
+                <div className="brand-gradient-text text-3xl font-extrabold">{stat.value}</div>
                 <div className="mt-2 text-sm text-muted-foreground">{stat.label}</div>
               </CardContent>
             </Card>
@@ -125,12 +133,12 @@ function HomePage() {
         <FadeSection>
           <div className="eyebrow">{t("home.productsIntro")}</div>
           <div className="mt-3 flex max-w-3xl flex-col gap-4">
-            <h2 className="headline-balance text-3xl font-bold text-foreground sm:text-4xl">{t("home.productsTitle")}</h2>
-            <p className="text-lg leading-8 text-muted-foreground">{t("home.productsSubtitle")}</p>
+            <h2 className="headline-balance text-[32px] font-bold text-foreground md:text-[38px]">{t("home.productsTitle").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 2 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("home.productsTitle").split(" ").length - 1 ? " " : ""}</span>)}</h2>
+            <p className="max-w-[540px] text-lg leading-8 text-muted-foreground">{t("home.productsSubtitle")}</p>
           </div>
         </FadeSection>
         <FadeSection className="mt-10 grid gap-6 lg:grid-cols-2" delay={0.1}>
-          <Card className="rounded-lg">
+          <Card>
             <CardHeader>
               <CardTitle className="text-2xl">{t("home.qualionDocTitle")}</CardTitle>
             </CardHeader>
@@ -150,7 +158,7 @@ function HomePage() {
               </div>
             </CardContent>
           </Card>
-          <Card className="rounded-lg">
+          <Card>
             <CardHeader>
               <CardTitle className="text-2xl">{t("home.qualionProposalTitle")}</CardTitle>
             </CardHeader>
@@ -176,15 +184,15 @@ function HomePage() {
       <section className="section-shell section-space pt-0">
         <FadeSection>
           <div className="eyebrow">{t("home.useCasesIntro")}</div>
-          <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">{t("home.useCasesTitle")}</h2>
+          <h2 className="mt-3 text-[32px] font-bold text-foreground md:text-[38px]">{t("home.useCasesTitle").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === t("home.useCasesTitle").split(" ").length - 1 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("home.useCasesTitle").split(" ").length - 1 ? " " : ""}</span>)}</h2>
         </FadeSection>
         <FadeSection className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4" delay={0.1}>
           {useCases.map((item, index) => {
             const Icon = useCaseIcons[index];
             return (
-              <Card key={item.title} className="rounded-lg">
+              <Card key={item.title}>
                 <CardContent className="p-6">
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-muted text-primary">
+                  <div className="brand-icon mb-4 flex h-10 w-10 items-center justify-center rounded-xl text-primary">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
@@ -199,11 +207,11 @@ function HomePage() {
       <section className="section-shell section-space pt-0">
         <FadeSection>
           <div className="eyebrow">{t("home.whyIntro")}</div>
-          <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">{t("home.whyTitle")}</h2>
+          <h2 className="mt-3 text-[32px] font-bold text-foreground md:text-[38px]">{t("home.whyTitle").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 0 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("home.whyTitle").split(" ").length - 1 ? " " : ""}</span>)}</h2>
         </FadeSection>
         <FadeSection className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4" delay={0.1}>
           {whyItems.map((item) => (
-            <Card key={item.title} className="rounded-lg">
+            <Card key={item.title}>
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.text}</p>
@@ -216,13 +224,13 @@ function HomePage() {
       <section className="section-shell section-space pt-0">
         <FadeSection>
           <div className="eyebrow">{t("home.proofIntro")}</div>
-          <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">{t("home.proofTitle")}</h2>
+          <h2 className="mt-3 text-[32px] font-bold text-foreground md:text-[38px]">{t("home.proofTitle").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 0 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("home.proofTitle").split(" ").length - 1 ? " " : ""}</span>)}</h2>
         </FadeSection>
         <FadeSection className="mt-10 grid gap-5 lg:grid-cols-3" delay={0.1}>
           {testimonials.map((item) => (
-            <Card key={item.role} className="rounded-lg">
+            <Card key={item.role}>
               <CardContent className="p-6">
-                <div className="mb-4 inline-flex rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground">{item.role}</div>
+                <div className="brand-badge mb-4 inline-flex rounded-full px-3 py-1 text-xs font-semibold text-primary">{item.role}</div>
                 <p className="text-base leading-7 text-foreground">“{item.quote}”</p>
               </CardContent>
             </Card>
@@ -230,13 +238,13 @@ function HomePage() {
         </FadeSection>
       </section>
 
-      <section className="section-shell pb-20">
-        <FadeSection className="rounded-lg border border-border/80 bg-card px-6 py-10 text-center shadow-[0_24px_64px_-40px_color-mix(in_oklab,var(--color-primary)_30%,transparent)] sm:px-10">
-          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">{t("home.finalTitle")}</h2>
+      <section className="hero-wash py-20">
+        <FadeSection className="section-shell mx-auto max-w-[600px] px-6 text-center">
+          <h2 className="text-[32px] font-bold text-foreground">{t("home.finalTitle").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === t("home.finalTitle").split(" ").length - 1 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("home.finalTitle").split(" ").length - 1 ? " " : ""}</span>)}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">{t("home.finalText")}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a href={SIGNUP_URL}>
-              <Button size="lg">{t("common.startFree")}</Button>
+              <Button size="lg" className="h-[52px] px-8">{t("common.startFree")}</Button>
             </a>
             <Link to="/contact">
               <Button variant="outline" size="lg">{t("home.ctaSecondary")}</Button>
