@@ -73,6 +73,13 @@
   --color-pricing-enterprise: var(--pricing-enterprise);
   --color-pricing-enterprise-soft: var(--pricing-enterprise-soft);
   --color-pricing-enterprise-border: var(--pricing-enterprise-border);
+  --color-usecase-page: var(--usecase-page);
+  --color-usecase-critical: var(--usecase-critical);
+  --color-usecase-critical-soft: var(--usecase-critical-soft);
+  --color-usecase-warning: var(--usecase-warning);
+  --color-usecase-warning-soft: var(--usecase-warning-soft);
+  --color-usecase-good: var(--usecase-good);
+  --color-usecase-good-soft: var(--usecase-good-soft);
 }
 
 :root {
@@ -138,6 +145,13 @@
   --pricing-enterprise: oklch(0.41 0.14 295);
   --pricing-enterprise-soft: oklch(0.96 0.02 295);
   --pricing-enterprise-border: oklch(0.86 0.04 295);
+  --usecase-page: oklch(0.97 0.006 85);
+  --usecase-critical: oklch(0.5 0.18 25);
+  --usecase-critical-soft: oklch(0.95 0.03 25);
+  --usecase-warning: oklch(0.5 0.09 75);
+  --usecase-warning-soft: oklch(0.96 0.04 80);
+  --usecase-good: oklch(0.42 0.1 170);
+  --usecase-good-soft: oklch(0.95 0.04 170);
 }
 
 .dark {
