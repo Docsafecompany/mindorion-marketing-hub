@@ -1,0 +1,724 @@
+{
+  "site": {
+    "name": "Mindorion",
+    "tagline": "Professional intelligence for B2B teams.",
+    "description": "Documents, outreach and governance, one platform.",
+    "language": "EN",
+    "switchLanguage": "EN / FR",
+    "copyright": "© 2026 Mindorion OÜ. All rights reserved.",
+    "contactEmail": "contact@mindorion.com"
+  },
+  "nav": {
+    "products": "Products",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "login": "Login",
+    "start": "Get started",
+    "productsLabel": "MINDORION PRODUCTS",
+    "solutionsLabel": "BY FUNCTION",
+    "resourcesLabel": "RESOURCES",
+    "pricingCta": "View pricing",
+    "demoCta": "Request a demo",
+    "productItems": [
+      {
+        "title": "Qualion",
+        "subtitle": "Document reputation, before send"
+      },
+      {
+        "title": "ProspectIQ",
+        "subtitle": "Intelligent B2B outreach"
+      },
+      {
+        "title": "GovernanceIQ",
+        "subtitle": "Team document compliance"
+      }
+    ],
+    "solutionItems": [
+      {
+        "title": "Consultants & Freelancers",
+        "subtitle": "Proposals, deliverables, commercial offers"
+      },
+      {
+        "title": "Sales & Pre-sales Teams",
+        "subtitle": "RFQ, RFP, offers and outreach"
+      },
+      {
+        "title": "HR & Recruiting",
+        "subtitle": "CVs, contracts, NDAs, candidate files"
+      },
+      {
+        "title": "IT Services & Engineering",
+        "subtitle": "SOWs, technical specs, project files"
+      }
+    ],
+    "resourceItems": [
+      {
+        "title": "Blog",
+        "subtitle": "Articles, guides and professional advice"
+      },
+      {
+        "title": "About",
+        "subtitle": "Our mission, team and values"
+      }
+    ],
+    "pricingSubtitle": "Starter · Pro · Business · Enterprise",
+    "demoSubtitle": "Talk to a Mindorion expert",
+    "mobileTitle": "Navigation",
+    "mobileDescription": "Explore Mindorion products, use cases and resources."
+  },
+  "footer": {
+    "brandText": "Professional intelligence for B2B teams. Documents, outreach and governance, one platform.",
+    "linkedin": "LinkedIn",
+    "contact": "Contact",
+    "products": "PRODUCTS",
+    "solutions": "SOLUTIONS",
+    "resources": "RESOURCES",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "security": "Security",
+    "about": "About"
+  },
+  "common": {
+    "viewPricing": "View pricing",
+    "requestDemo": "Request a demo",
+    "learnMore": "Learn more",
+    "readArticle": "Read article",
+    "contactUs": "Contact us",
+    "startFree": "Start free",
+    "backHome": "Back to home",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save": "-20%",
+    "or": "Or",
+    "send": "Send",
+    "retry": "Retry",
+    "goHome": "Go home"
+  },
+  "home": {
+    "seoTitle": "Mindorion — Protect your professional reputation",
+    "seoDescription": "Mindorion helps B2B teams control documents, structure outreach and manage compliance before every external send.",
+    "badge": "B2B platform · GDPR compliant · EU hosted",
+    "title": "Protect your professional reputation before you send",
+    "subtitle": "Qualion detects hidden metadata, comments, sensitive data and writing issues in Word, PDF and PowerPoint documents.",
+    "personas": [
+      "Consultants",
+      "Sales teams",
+      "HR",
+      "IT services & engineering",
+      "Freelancers"
+    ],
+    "stats": [
+      {
+        "value": "14",
+        "label": "detected categories"
+      },
+      {
+        "value": "30s",
+        "label": "results in 30 seconds"
+      },
+      {
+        "value": "100%",
+        "label": "GDPR compliant"
+      },
+      {
+        "value": "0",
+        "label": "stored data"
+      }
+    ],
+    "productsIntro": "Flagship products",
+    "productsTitle": "Three building blocks for stronger B2B operations",
+    "productsSubtitle": "From document quality to team governance, Mindorion structures the workflows that shape your brand.",
+    "productCards": [
+      {
+        "title": "Qualion",
+        "text": "Check the real quality of a document before every external send."
+      },
+      {
+        "title": "ProspectIQ",
+        "text": "Run smarter B2B outreach powered by signal and context."
+      },
+      {
+        "title": "GovernanceIQ",
+        "text": "Measure team document compliance and trigger the right alerts."
+      }
+    ],
+    "qualionDocTitle": "Qualion Doc",
+    "qualionDocItems": [
+      "Hidden metadata",
+      "Comments & annotations",
+      "Personal data",
+      "Spelling & consistency",
+      "Client-ready export"
+    ],
+    "qualionProposalTitle": "Qualion Proposal",
+    "qualionProposalItems": [
+      "Business risks",
+      "Margin risks",
+      "Shared dashboards",
+      "Pre-sales compliance",
+      "Team standardization"
+    ],
+    "useCasesIntro": "Use cases",
+    "useCasesTitle": "Built for teams sending critical documents",
+    "useCases": [
+      {
+        "title": "Consultant",
+        "text": "Before a proposal or deliverable goes out, remove the signals that weaken credibility."
+      },
+      {
+        "title": "Sales lead",
+        "text": "Secure offers, responses and attachments before every external share."
+      },
+      {
+        "title": "HR",
+        "text": "Clean CVs, contracts and candidate files before distribution while reducing GDPR risk."
+      },
+      {
+        "title": "Engineer",
+        "text": "Standardize technical documents, SOWs and project files before client review."
+      }
+    ],
+    "whyIntro": "Why Mindorion",
+    "whyTitle": "Designed for demanding B2B teams",
+    "whyItems": [
+      {
+        "title": "Speed",
+        "text": "A ready-to-use control in under 30 seconds without a complex pipeline."
+      },
+      {
+        "title": "Security",
+        "text": "Processing is designed to minimize exposure and avoid unnecessary data retention."
+      },
+      {
+        "title": "Integration",
+        "text": "Fits naturally into existing document, sales and ops routines."
+      },
+      {
+        "title": "Compliance",
+        "text": "Helps teams reinforce GDPR and quality habits before every send."
+      }
+    ],
+    "proofIntro": "Social proof",
+    "proofTitle": "Impact teams see from the first sends",
+    "testimonials": [
+      {
+        "role": "Consultant",
+        "quote": "Qualion removes the final doubts before we send a proposal. Client trust shifts immediately."
+      },
+      {
+        "role": "Sales Manager",
+        "quote": "We standardized offer quality control without slowing down the commercial cycle."
+      },
+      {
+        "role": "HR Director",
+        "quote": "The value is double: lower document risk and a stronger perception of candidate files."
+      }
+    ],
+    "finalTitle": "Ready to protect your reputation?",
+    "finalText": "Centralize document quality, outreach and governance in one B2B platform.",
+    "ctaSecondary": "Request a demo"
+  },
+  "pricing": {
+    "seoTitle": "Mindorion Pricing — Simple, transparent plans",
+    "seoDescription": "Compare Mindorion Starter, Pro, Business and Enterprise plans for document quality, sales execution and compliance needs.",
+    "title": "Simple and transparent pricing",
+    "subtitle": "Choose the level of support that matches your operational maturity.",
+    "plans": [
+      {
+        "name": "Starter",
+        "priceMonthly": "Free",
+        "priceAnnual": "Free",
+        "cta": "Get started",
+        "description": "To discover Mindorion with limited volumes.",
+        "features": [
+          "1 user",
+          "Essential checks",
+          "Standard report",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "priceMonthly": "€29 / month",
+        "priceAnnual": "€23 / month",
+        "cta": "Try Pro",
+        "description": "For consultants and freelancers who want flawless quality.",
+        "features": [
+          "5 users",
+          "Advanced rules",
+          "Client-ready exports",
+          "Check history"
+        ]
+      },
+      {
+        "name": "Business",
+        "priceMonthly": "€79 / month",
+        "priceAnnual": "€63 / month",
+        "cta": "Try Business",
+        "description": "For sales, HR and delivery teams collaborating every day.",
+        "features": [
+          "20 users",
+          "Team workspaces",
+          "Shared reporting",
+          "Compliance alerts"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "priceMonthly": "Custom",
+        "priceAnnual": "Custom",
+        "cta": "Contact us",
+        "description": "For multi-team organizations with stronger governance needs.",
+        "features": [
+          "SSO & governance",
+          "Priority support",
+          "Custom rules",
+          "Deployment support"
+        ]
+      }
+    ],
+    "tableTitle": "Compare key capabilities",
+    "tableRows": [
+      {
+        "feature": "Metadata control",
+        "starter": "Yes",
+        "pro": "Yes",
+        "business": "Yes",
+        "enterprise": "Yes"
+      },
+      {
+        "feature": "Comments & track changes",
+        "starter": "Yes",
+        "pro": "Yes",
+        "business": "Yes",
+        "enterprise": "Yes"
+      },
+      {
+        "feature": "Clean exports",
+        "starter": "-",
+        "pro": "Yes",
+        "business": "Yes",
+        "enterprise": "Yes"
+      },
+      {
+        "feature": "Team workspaces",
+        "starter": "-",
+        "pro": "-",
+        "business": "Yes",
+        "enterprise": "Yes"
+      },
+      {
+        "feature": "Compliance reporting",
+        "starter": "-",
+        "pro": "-",
+        "business": "Yes",
+        "enterprise": "Yes"
+      },
+      {
+        "feature": "Priority support",
+        "starter": "-",
+        "pro": "-",
+        "business": "Yes",
+        "enterprise": "Yes"
+      }
+    ]
+  },
+  "products": {
+    "qualion": {
+      "seoTitle": "Qualion — Document reputation before send",
+      "seoDescription": "Qualion detects metadata, comments, personal data and writing issues before you send Word, PDF and PowerPoint documents.",
+      "eyebrow": "Product · Qualion",
+      "title": "Qualion — Document reputation, before send",
+      "subtitle": "Before a document reaches a client, candidate or partner, Qualion checks the invisible signals that can damage credibility.",
+      "features": [
+        {
+          "title": "Hidden metadata",
+          "text": "Detect invisible information revealing the real history of a document."
+        },
+        {
+          "title": "Comments & annotations",
+          "text": "Catch forgotten internal remarks before an external share."
+        },
+        {
+          "title": "Personal data",
+          "text": "Reduce GDPR risk in CVs, contracts and candidate files."
+        },
+        {
+          "title": "Spelling & writing issues",
+          "text": "Fix the signals of carelessness that weaken perception."
+        },
+        {
+          "title": "Tracked changes",
+          "text": "Remove traces of negotiation or internal iteration."
+        },
+        {
+          "title": "Clean export",
+          "text": "Generate a send-ready version aligned with your standards."
+        }
+      ],
+      "steps": [
+        "Upload the document",
+        "Automatic analysis",
+        "Report + cleaned file"
+      ],
+      "audiences": [
+        "Consultants",
+        "Sales teams",
+        "HR & Recruiting"
+      ]
+    },
+    "prospectiq": {
+      "seoTitle": "ProspectIQ — Intelligent B2B outreach",
+      "seoDescription": "ProspectIQ helps sales teams target the right accounts, orchestrate sequences and track commercial performance.",
+      "eyebrow": "Product · ProspectIQ",
+      "title": "ProspectIQ — Intelligent B2B outreach",
+      "subtitle": "ProspectIQ structures your prospecting campaigns with better prioritization, stronger sequencing and actionable analytics.",
+      "features": [
+        "Targeted prospecting",
+        "Email sequences",
+        "CRM tracking",
+        "Analytics",
+        "Integrations"
+      ],
+      "audiences": [
+        "Sales teams",
+        "BDRs",
+        "Account Executives"
+      ]
+    },
+    "governanceiq": {
+      "seoTitle": "GovernanceIQ — Team document compliance",
+      "seoDescription": "GovernanceIQ gives managers the indicators, alerts and reporting they need to run team document compliance.",
+      "eyebrow": "Product · GovernanceIQ",
+      "title": "GovernanceIQ — Team document compliance",
+      "subtitle": "Manage document compliance at team level with clear KPIs, focused alerts and an audit trail that stays easy to use.",
+      "features": [
+        "Team dashboard",
+        "Compliance KPIs",
+        "Alerts",
+        "Reporting",
+        "Audit trail"
+      ],
+      "audiences": [
+        "Managers",
+        "Ops",
+        "Leadership"
+      ]
+    }
+  },
+  "useCases": {
+    "seoTitle": "Mindorion Solutions — Use cases by role",
+    "seoDescription": "Discover how Mindorion supports consultants, sales teams, HR and IT services across document and outreach workflows.",
+    "title": "Solutions adapted to your role",
+    "subtitle": "Every B2B team faces different friction points. Mindorion brings a simple framework to reduce visible and invisible mistakes.",
+    "sections": [
+      {
+        "id": "consultants",
+        "title": "Consultants & Freelancers",
+        "text": "Secure proposals, deliverables and decks before every client send.",
+        "problems": [
+          "Forgotten comments in proposals",
+          "Inconsistent versions across projects",
+          "Lost trust caused by avoidable details"
+        ]
+      },
+      {
+        "id": "sales",
+        "title": "Sales & Pre-sales Teams",
+        "text": "Make offers, RFQs and outreach more reliable throughout the commercial cycle.",
+        "problems": [
+          "Track changes exposed in offers",
+          "Sequences lacking context",
+          "Limited visibility on outgoing quality"
+        ]
+      },
+      {
+        "id": "rh",
+        "title": "HR & Recruiting",
+        "text": "Clean sensitive files before distribution and harmonize document standards.",
+        "problems": [
+          "Personal data shared by mistake",
+          "Candidate files that lack consistency",
+          "Too much manual review work"
+        ]
+      },
+      {
+        "id": "esn",
+        "title": "IT Services & Engineering",
+        "text": "Frame SOWs, specs and project documents to better protect team reputation with clients.",
+        "problems": [
+          "Technical documents hard to standardize",
+          "Multiple versions of the same file",
+          "Reputation risk during pre-sales"
+        ]
+      }
+    ]
+  },
+  "blog": {
+    "seoTitle": "Mindorion Blog — Guides and professional advice",
+    "seoDescription": "Mindorion articles on document quality, compliance, B2B outreach and operational best practices.",
+    "title": "Blog",
+    "subtitle": "Short, useful articles to reinforce operational quality before every external interaction.",
+    "categories": {
+      "compliance": "Compliance",
+      "consulting": "Consulting",
+      "product": "Product",
+      "operations": "Operations",
+      "sales": "Sales"
+    },
+    "toc": "Table of contents",
+    "back": "Back to blog",
+    "posts": {
+      "hiddenRisks": {
+        "title": "The hidden risks inside your Word documents",
+        "excerpt": "Comments, metadata and history can reveal far more than expected in a file sent to a client.",
+        "sections": {
+          "metadata": {
+            "heading": "Metadata tells the story behind the scenes",
+            "body": "Real author, edit history, internal filenames or previous versions can all create noise around your professional message. Mature teams build a systematic control before any external send."
+          },
+          "comments": {
+            "heading": "Comments and annotations remain one of the most common misses",
+            "body": "In fast editing cycles, internal remarks sometimes survive into the final version. The risk is not only awkwardness: it can expose pricing logic, critiques or sensitive discussions."
+          },
+          "workflow": {
+            "heading": "Create a final checkpoint in the workflow",
+            "body": "The right practice is not to rely on memory, but to industrialize the last check. A document quality gate reduces variance, reassures teams and protects the commercial relationship."
+          }
+        }
+      },
+      "consultingQualityGate": {
+        "title": "Qualion: a quality gate for consultants",
+        "excerpt": "For a consultancy or freelancer, a visible mistake in a document can cost more than a few minutes: it can weaken trust.",
+        "sections": {
+          "trust": {
+            "heading": "Trust is built in the details",
+            "body": "Clients read a document as a signal of method, rigor and reliability. A typo, comment or track change can challenge the perceived level of professionalism behind the work."
+          },
+          "operations": {
+            "heading": "A simple quality gate lifts the whole operation",
+            "body": "Consultants save time, standardize quality and reduce the mental load of last-minute checks. That keeps attention on business value rather than avoidable risk."
+          },
+          "rollout": {
+            "heading": "Deploy it without slowing production",
+            "body": "A good quality gate should live at the key moment: right before send. It should not create heavy validation, but provide a fast and clear safety net."
+          }
+        }
+      },
+      "whatGetsCleaned": {
+        "title": "What Qualion cleans inside your files",
+        "excerpt": "Cleaning a document is not just about spelling. It is mainly about removing the invisible signals that expose your team.",
+        "sections": {
+          "signal": {
+            "heading": "Remove weak signals that still cost a lot",
+            "body": "Details that look minor can still damage an offer or a file. Cleaning aims to remove the internal traces that distract the recipient and weaken perception."
+          },
+          "personalData": {
+            "heading": "Identify sensitive elements",
+            "body": "Names, contact details, comments, personal information or confidential content require specific attention. Automated checks help reduce repetitive omissions."
+          },
+          "finalExport": {
+            "heading": "Prepare a clean send-ready version",
+            "body": "The final objective is a coherent, readable document aligned with your standards. The exported version should be ready to leave without new risky manipulation."
+          }
+        }
+      },
+      "roiCleanup": {
+        "title": "The ROI of document cleanup",
+        "excerpt": "Return on investment is not limited to time saved. It also includes lower risk, less rework and fewer commercial frictions.",
+        "sections": {
+          "rework": {
+            "heading": "Less downstream rework",
+            "body": "Every flawed send often creates corrections, a new version and unnecessary explanations. Reducing those loops protects valuable team time."
+          },
+          "risk": {
+            "heading": "Avoided risk has real value",
+            "body": "A weak proposal, a poorly cleaned contract or an incomplete candidate file can cost image, time or compliance exposure. ROI also lives in the incidents that stop happening."
+          },
+          "metrics": {
+            "heading": "Measure the right indicators",
+            "body": "Correction time, number of incidents, time-to-send and internal satisfaction all help quantify the impact of a standardized document control layer."
+          }
+        }
+      },
+      "removeMetadata": {
+        "title": "How to remove metadata before sending",
+        "excerpt": "Word document metadata can expose invisible information at first glance. It is better to build a simple, repeatable method.",
+        "sections": {
+          "sources": {
+            "heading": "Understand where metadata comes from",
+            "body": "Creation history, author, previous titles and document properties build up naturally as files are edited and moved across systems."
+          },
+          "controls": {
+            "heading": "Put the right controls in place",
+            "body": "A human checklist helps but stays fragile. An automated control at the end of the workflow is far more reliable for checking document properties before send."
+          },
+          "governance": {
+            "heading": "Turn the practice into a team standard",
+            "body": "The real difference comes when metadata removal becomes a shared rule embedded in production and document validation routines."
+          }
+        }
+      },
+      "trackChanges": {
+        "title": "Track changes inside proposals",
+        "excerpt": "In a commercial proposal, tracked changes can expose your internal trade-offs and blur the message shown to the client.",
+        "sections": {
+          "exposure": {
+            "heading": "Tracked changes reveal internal negotiation",
+            "body": "Pricing, margins, reservations or multiple rewrites can appear at the wrong moment. That creates an unfavorable imbalance in the commercial exchange."
+          },
+          "prevention": {
+            "heading": "Prevent instead of fixing in a rush",
+            "body": "A final control removes the need for urgent correction after the fact. It secures the send while making final-version prep smoother for pre-sales teams."
+          },
+          "teamHabits": {
+            "heading": "Build stronger team habits",
+            "body": "When teams know a quality gate exists, they collaborate with more confidence and normalize offer preparation much faster."
+          }
+        }
+      }
+    }
+  },
+  "about": {
+    "seoTitle": "About Mindorion",
+    "seoDescription": "Discover Mindorion's mission, team and values for protecting the professional reputation of B2B teams.",
+    "title": "Our mission: protect professional reputation",
+    "missionTitle": "Mission",
+    "missionText": "Mindorion helps B2B teams send stronger documents, offers and messages. We believe perceived quality is a strategic lever, not a cosmetic detail.",
+    "teamTitle": "Team",
+    "team": [
+      {
+        "name": "Claire Morel",
+        "role": "CEO & Co-founder",
+        "bio": "A former consultant who saw how a small document detail could weaken an entire client relationship."
+      },
+      {
+        "name": "Julien Armand",
+        "role": "Product & Operations",
+        "bio": "He designs focused workflows that help teams gain rigor without losing speed."
+      },
+      {
+        "name": "Mélanie Roussel",
+        "role": "Go-to-market",
+        "bio": "She supports B2B organizations adopting better habits in sales and document workflows."
+      }
+    ],
+    "valuesTitle": "Values",
+    "values": [
+      {
+        "title": "Clarity",
+        "text": "Readable products, simple signals and fast decisions."
+      },
+      {
+        "title": "High standards",
+        "text": "Every detail matters once it shapes the image of a team or brand."
+      },
+      {
+        "title": "Pragmatism",
+        "text": "We favor useful workflows that are easy to integrate and immediately actionable."
+      }
+    ],
+    "locationTitle": "Location",
+    "locationText": "Mindorion is an Estonian company (OÜ) with a team operating mainly from France. This setup helps us support European teams with strong product and operational culture."
+  },
+  "contact": {
+    "seoTitle": "Contact Mindorion — Demo and conversations",
+    "seoDescription": "Talk to the Mindorion team about document quality, B2B outreach or operational governance needs.",
+    "title": "Let's talk about your needs",
+    "subtitle": "Share your context and we'll come back with a clear and relevant answer.",
+    "direct": "Or contact us directly",
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "company": "Company",
+      "message": "Message"
+    },
+    "successTitle": "Message sent",
+    "successText": "Thanks, your request has been received."
+  },
+  "privacy": {
+    "seoTitle": "Privacy — Mindorion",
+    "seoDescription": "Read the Mindorion privacy policy: collected data, usage, retention and GDPR rights.",
+    "title": "Privacy",
+    "sections": [
+      {
+        "title": "Collected data",
+        "body": "We only collect the information needed to run the marketing site, handle contact requests and improve user experience. This may include form data, aggregated browsing events and limited technical information."
+      },
+      {
+        "title": "Data usage",
+        "body": "This data is used to answer requests, improve content, measure interest in our offers and maintain site security. It is never resold."
+      },
+      {
+        "title": "Retention",
+        "body": "Data is kept only for the time strictly necessary for the stated purposes, according to internal retention-limitation and minimization policies."
+      },
+      {
+        "title": "GDPR rights",
+        "body": "You have rights of access, rectification, deletion, objection and restriction. You can exercise those rights by contacting us by email."
+      },
+      {
+        "title": "DPO contact",
+        "body": "For any privacy question or data-rights request, contact us at contact@mindorion.com."
+      }
+    ]
+  },
+  "terms": {
+    "seoTitle": "Terms — Mindorion",
+    "seoDescription": "Read the terms of use for the Mindorion marketing website.",
+    "title": "Terms of use",
+    "sections": [
+      {
+        "title": "Purpose",
+        "body": "These terms govern the use of the Mindorion marketing site and access to its informational content. They clarify the responsibilities of both the publisher and the user."
+      },
+      {
+        "title": "Site access",
+        "body": "The site is available continuously except during maintenance, technical incidents or force majeure. Mindorion aims for reasonable availability but does not guarantee zero interruption."
+      },
+      {
+        "title": "Intellectual property",
+        "body": "Content, marks, text, interfaces and visual elements on the site are protected. Any unauthorized reproduction is prohibited."
+      },
+      {
+        "title": "Responsibilities",
+        "body": "Users remain responsible for how they use the information available on the site. Mindorion cannot be held liable for an improper interpretation or use of published content."
+      },
+      {
+        "title": "Contact",
+        "body": "For any request regarding these terms, you can write to contact@mindorion.com."
+      }
+    ]
+  },
+  "security": {
+    "seoTitle": "Security & Compliance — Mindorion",
+    "seoDescription": "Mindorion commitments on EU hosting, encryption, GDPR and zero unnecessary data retention.",
+    "title": "Security & Compliance",
+    "subtitle": "Clear principles to limit exposure, raise standards and protect B2B document flows.",
+    "cards": [
+      {
+        "title": "EU hosting",
+        "text": "Infrastructure designed to support European localization and governance expectations."
+      },
+      {
+        "title": "Encryption",
+        "text": "Exchanges and processing are protected with security mechanisms suited to professional workflows."
+      },
+      {
+        "title": "GDPR",
+        "text": "The product encourages data minimization and stronger operational habits around sensitive documents."
+      },
+      {
+        "title": "No retention",
+        "text": "The platform is designed to avoid unnecessary data retention beyond operational needs."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The requested page does not exist or has been moved."
+  }
+}
