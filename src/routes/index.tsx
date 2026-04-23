@@ -3,6 +3,7 @@ import { ArrowRight, BriefcaseBusiness, CheckCircle2, FileText, Sparkles, Users 
 import { useTranslation } from "react-i18next";
 
 import { FadeSection } from "@/components/FadeSection";
+import { ProductLogo } from "@/components/ProductLogo";
 import { SEOHead } from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -51,11 +52,7 @@ function HomePage() {
   const qualionDocItems = t("home.qualionDocItems", { returnObjects: true }) as string[];
   const qualionProposalItems = t("home.qualionProposalItems", { returnObjects: true }) as string[];
   const useCaseIcons = [BriefcaseBusiness, Users, Sparkles, FileText] as const;
-  const heroProductSurfaces = [
-    "bg-surface-brand text-surface-brand-foreground",
-    "bg-surface-secondary text-surface-secondary-foreground",
-    "bg-surface-amber text-surface-amber-foreground",
-  ] as const;
+  const heroProductLogos = ["qualion", "prospectiq", "governanceiq"] as const;
 
   return (
     <>
@@ -99,8 +96,8 @@ function HomePage() {
               return (
                 <Card key={card.title} className="h-full">
                   <CardHeader>
-                    <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl text-xl ${heroProductSurfaces[index]}`}>
-                      <span aria-hidden="true">{card.icon}</span>
+                    <div className="mb-4 flex h-16 w-40 items-center justify-start rounded-xl">
+                      <ProductLogo product={heroProductLogos[index]} className="object-left" />
                     </div>
                     <CardTitle className="text-xl">{card.title}</CardTitle>
                   </CardHeader>

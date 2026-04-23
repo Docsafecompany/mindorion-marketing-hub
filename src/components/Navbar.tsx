@@ -36,6 +36,7 @@ import {
 import { setLanguage, type SiteLanguage } from "@/i18n";
 import { cn } from "@/lib/utils";
 import { BrandMark } from "./BrandMark";
+import { ProductLogo } from "./ProductLogo";
 
 type MenuEntry = {
   title: string;
@@ -124,19 +125,19 @@ export function Navbar() {
       title: t("nav.productItems.0.title"),
       subtitle: t("nav.productItems.0.subtitle"),
       to: "/products/qualion",
-      icon: <IconTile className="bg-surface-brand text-surface-brand-foreground"><Shield className="h-4 w-4" /></IconTile>,
+      icon: <IconTile className="bg-white p-1.5"><ProductLogo product="qualion" /></IconTile>,
     },
     {
       title: t("nav.productItems.1.title"),
       subtitle: t("nav.productItems.1.subtitle"),
       to: "/products/prospectiq",
-      icon: <IconTile className="bg-surface-secondary text-surface-secondary-foreground"><Target className="h-4 w-4" /></IconTile>,
+      icon: <IconTile className="bg-white p-1.5"><ProductLogo product="prospectiq" /></IconTile>,
     },
     {
       title: t("nav.productItems.2.title"),
       subtitle: t("nav.productItems.2.subtitle"),
       to: "/products/governanceiq",
-      icon: <IconTile className="bg-surface-amber text-surface-amber-foreground"><FileText className="h-4 w-4" /></IconTile>,
+      icon: <IconTile className="bg-white p-1.5"><ProductLogo product="governanceiq" /></IconTile>,
     },
   ];
 
@@ -180,10 +181,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/94 backdrop-blur-xl">
       <div className="section-shell flex h-16 items-center justify-between gap-6 lg:h-[72px]">
         <Link to="/" className="shrink-0">
-          <span className="relative inline-flex items-start">
-            <BrandMark className="h-9" />
-            <span aria-hidden="true" className="absolute -right-1 top-0 h-2.5 w-2.5 rounded-full bg-primary" />
-          </span>
+          <BrandMark className="h-14 sm:h-16" />
         </Link>
 
         <div className="hidden flex-1 justify-center lg:flex">

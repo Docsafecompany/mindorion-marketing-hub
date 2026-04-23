@@ -1,11 +1,12 @@
+import mindorionLogo from "@/assets/mindorion-logo.png";
 import { cn } from "@/lib/utils";
 
 export function BrandMark({ className }: { className?: string }) {
   return (
     <img
-      src="/logo-mindorion.png"
+      src={mindorionLogo}
       alt="Mindorion"
-      className={cn("h-9 w-auto", className)}
+      className={cn("h-12 w-auto object-contain", className)}
       width={1584}
       height={672}
     />

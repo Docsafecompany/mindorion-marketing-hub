@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BriefcaseBusiness, Check, Cog, FileText, Shield, Target, TrendingUp, Users } from "lucide-react";
 
 import { SEOHead } from "@/components/SEOHead";
+import { ProductLogo } from "@/components/ProductLogo";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { createStaticMeta } from "@/lib/site";
@@ -13,7 +14,6 @@ type RiskTone = "critical" | "warning" | "good";
 type PersonaKey = "consultants" | "sales" | "rh" | "esn";
 
 type ToolRow = {
-  icon: typeof Shield;
   tone: ToolTone;
   name: string;
   text: string;
@@ -65,8 +65,8 @@ const personas: Persona[] = [
     text:
       "En tant que consultant, vous n'avez pas de service qualité derrière vous. Une proposition avec des métadonnées internes, un commentaire oublié ou un placeholder non remplacé — et votre crédibilité prend un coup. Mindorion vous couvre à chaque étape.",
     tools: [
-      { icon: Shield, tone: "qualion", name: "Qualion", text: "Vérifie chaque proposition avant envoi client" },
-      { icon: Target, tone: "prospectiq", name: "ProspectIQ", text: "Identifie vos prochains clients dans votre secteur" },
+      { tone: "qualion", name: "Qualion", text: "Vérifie chaque proposition avant envoi client" },
+      { tone: "prospectiq", name: "ProspectIQ", text: "Identifie vos prochains clients dans votre secteur" },
     ],
     heroVariant: "document",
     mocks: [
@@ -124,8 +124,8 @@ const personas: Persona[] = [
     text:
       "En avant-vente, une offre avec un prix de revient visible dans le suivi des modifications peut vous coûter un deal. Un prospect mal qualifié vous coûte des semaines. Mindorion élimine ces deux risques.",
     tools: [
-      { icon: Shield, tone: "qualion", name: "Qualion", text: "Vérifie RFP, offres et proposals avant soumission" },
-      { icon: Target, tone: "prospectiq", name: "ProspectIQ", text: "Qualifie et contacte les bons décideurs" },
+      { tone: "qualion", name: "Qualion", text: "Vérifie RFP, offres et proposals avant soumission" },
+      { tone: "prospectiq", name: "ProspectIQ", text: "Qualifie et contacte les bons décideurs" },
     ],
     heroVariant: "pipeline",
     leads: [
@@ -170,8 +170,8 @@ const personas: Persona[] = [
     text:
       "En recrutement, envoyer un CV avec les notes de disqualification d'un candidat précédent, ou un contrat avec des données personnelles non supprimées, peut avoir des conséquences légales. Qualion et GovernanceIQ vous protègent.",
     tools: [
-      { icon: Shield, tone: "qualion", name: "Qualion", text: "Vérifie CVs, contrats et NDAs avant envoi" },
-      { icon: FileText, tone: "governance", name: "GovernanceIQ", text: "Conformité RGPD des dossiers candidats" },
+      { tone: "qualion", name: "Qualion", text: "Vérifie CVs, contrats et NDAs avant envoi" },
+      { tone: "governance", name: "GovernanceIQ", text: "Conformité RGPD des dossiers candidats" },
     ],
     heroVariant: "document",
     mocks: [
@@ -229,9 +229,9 @@ const personas: Persona[] = [
     text:
       "En ESN, chaque SOW, cahier des charges ou spécification technique engage votre société. Un document distribué à 12 clients avec l'historique interne encore actif peut vous coûter un contrat. Mindorion couvre toute la chaîne.",
     tools: [
-      { icon: Shield, tone: "qualion", name: "Qualion", text: "SOW, specs techniques, dossiers projets" },
-      { icon: Target, tone: "prospectiq", name: "ProspectIQ", text: "Développement commercial grands comptes" },
-      { icon: FileText, tone: "governance", name: "GovernanceIQ", text: "Conformité documentaire inter-équipes" },
+      { tone: "qualion", name: "Qualion", text: "SOW, specs techniques, dossiers projets" },
+      { tone: "prospectiq", name: "ProspectIQ", text: "Développement commercial grands comptes" },
+      { tone: "governance", name: "GovernanceIQ", text: "Conformité documentaire inter-équipes" },
     ],
     heroVariant: "document",
     mocks: [
@@ -435,13 +435,10 @@ function Badge({ tone, children }: { tone: Persona["badgeTone"]; children: strin
 }
 
 function ToolCard({ tool }: { tool: ToolRow }) {
-  const Icon = tool.icon;
   return (
     <div className="rounded-xl bg-[var(--color-pricing-dash-soft)] px-4 py-4">
       <div className="flex items-start gap-3">
-        <ToolIcon tone={tool.tone}>
-          <Icon className="h-4 w-4" />
-        </ToolIcon>
+        <ToolIcon tone={tool.tone} label={tool.name} />
         <div>
           <div className="text-sm font-bold text-foreground">{tool.name}</div>
           <div className="mt-1 text-sm leading-6 text-muted-foreground">{tool.text}</div>
@@ -454,13 +451,13 @@ function ToolCard({ tool }: { tool: ToolRow }) {
 function ToolPill({ tone, label }: { tone: ToolTone; label: string }) {
   return (
     <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-usecase-page)] px-3 py-2 text-sm font-semibold text-foreground">
-      <ToolIcon tone={tone}>{label === "Qualion" ? <Shield className="h-4 w-4" /> : label === "ProspectIQ" ? <Target className="h-4 w-4" /> : <FileText className="h-4 w-4" />}</ToolIcon>
+      <ToolIcon tone={tone} label={label} />
       <span>{label}</span>
     </div>
   );
 }
 
-function ToolIcon({ tone, children }: { tone: ToolTone; children: React.ReactNode }) {
+function ToolIcon({ tone, label }: { tone: ToolTone; label: string }) {
   const className =
     tone === "qualion"
       ? "bg-[var(--color-pricing-primary-soft)] text-[var(--color-pricing-primary)]"
@@ -468,7 +465,13 @@ function ToolIcon({ tone, children }: { tone: ToolTone; children: React.ReactNod
         ? "bg-[var(--color-pricing-success-soft)] text-[var(--color-pricing-success)]"
         : "bg-[var(--color-usecase-warning-soft)] text-[var(--color-usecase-warning)]";
 
-  return <span className={cn("flex h-9 w-9 items-center justify-center rounded-xl", className)}>{children}</span>;
+  const product = label === "Qualion" ? "qualion" : label === "ProspectIQ" ? "prospectiq" : "governanceiq";
+
+  return (
+    <span className={cn("flex h-10 w-10 items-center justify-center rounded-xl overflow-hidden p-1", className)}>
+      <ProductLogo product={product} />
+    </span>
+  );
 }
 
 function DocumentMock({ cards }: { cards: MockCard[] }) {
@@ -495,8 +498,11 @@ function PipelineCard({ leads }: { leads: Persona["leads"] }) {
   return (
     <div className="rounded-xl bg-[var(--color-pricing-dash-soft)] p-4">
       <div className="rounded-xl border border-border bg-card overflow-hidden">
-        <div className="bg-[var(--color-pricing-success-soft)] px-4 py-3 text-sm font-bold text-[var(--color-pricing-success)]">
-          🎯 ProspectIQ — Prospects qualifiés
+        <div className="flex items-center gap-3 bg-[var(--color-pricing-success-soft)] px-4 py-3 text-sm font-bold text-[var(--color-pricing-success)]">
+          <div className="h-9 w-24 overflow-hidden rounded-md bg-white/80 p-1">
+            <ProductLogo product="prospectiq" />
+          </div>
+          <span>Prospects qualifiés</span>
         </div>
         <div className="space-y-3 p-4">
           {leads?.map((lead) => (

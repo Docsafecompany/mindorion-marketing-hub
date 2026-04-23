@@ -5,6 +5,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { createStaticMeta } from "@/lib/site";
 
 const governanceiqPage: ProductPageData = {
+  product: "governanceiq",
   eyebrow: "📋 GOVERNANCEIQ · CONFORMITÉ DOCUMENTAIRE",
   title: "La conformité documentaire sans la complexité.",
   subtitle:
