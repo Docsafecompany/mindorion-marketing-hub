@@ -1,12 +1,10 @@
-import { HeadContent, Link, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
+import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
 
 import "@/i18n";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Button } from "@/components/ui/button";
 import { Toaster } from "@/components/ui/sonner";
-import appCss from "../styles.css?url";
-
 function NotFoundComponent() {
   return (
     <div className="section-shell flex min-h-[70vh] items-center justify-center py-20">
@@ -27,37 +25,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Mindorion" },
-      { name: "description", content: "Professional intelligence for B2B teams." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return (
