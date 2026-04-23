@@ -8,6 +8,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { getBlogPost } from "@/lib/site-data";
 import { createStaticMeta } from "@/lib/site";
 
+type BlogSection = {
+  id: string;
+  headingKey: string;
+  bodyKey: string;
+};
+
 function BlogArticleError({ error, reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
   return (
@@ -78,7 +84,7 @@ function BlogArticlePage() {
             <h1 className="mt-5 text-2xl font-bold text-foreground">{t(post.titleKey)}</h1>
             <div className="mt-6 text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("blog.toc")}</div>
             <nav className="mt-4 space-y-3 text-sm">
-              {post.sections.map((section) => (
+              {post.sections.map((section: BlogSection) => (
                 <a key={section.id} href={`#${section.id}`} className="block text-muted-foreground transition-colors hover:text-foreground">
                   {t(section.headingKey)}
                 </a>
@@ -89,7 +95,7 @@ function BlogArticlePage() {
         <article className="max-w-3xl">
           <p className="text-lg leading-8 text-muted-foreground">{t(post.excerptKey)}</p>
           <div className="mt-10 space-y-10">
-            {post.sections.map((section) => (
+            {post.sections.map((section: BlogSection) => (
               <section key={section.id} id={section.id} className="scroll-mt-28">
                 <h2 className="text-3xl font-bold text-foreground">{t(section.headingKey)}</h2>
                 <p className="mt-4 text-lg leading-8 text-muted-foreground">{t(section.bodyKey)}</p>

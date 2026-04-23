@@ -8,6 +8,7 @@ import { ProductLogo } from "@/components/ProductLogo";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SIGNUP_URL } from "@/lib/site";
 import { createStaticMeta } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -728,10 +729,10 @@ function PlanCard({ billing, plan, popularLabel, customLabel, suiteLabel }: { bi
             </Link>
           ) : (
             <Button asChild variant="outline" className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40">
-              <Link to={plan.href}>
+              <a href={SIGNUP_URL}>
                 {plan.cta}
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           )}
         </div>

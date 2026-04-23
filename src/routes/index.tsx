@@ -75,12 +75,12 @@ function HomePage() {
               {t("home.subtitle")}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link to="/pricing">
+              <a href={SIGNUP_URL}>
                 <Button size="lg" className="min-w-44 gap-1">
                   {t("home.primaryCta")}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
-              </Link>
+              </a>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="min-w-44">
                   {t("home.secondaryCta")}
@@ -101,10 +101,10 @@ function HomePage() {
                   <CardContent>
                     <p className="text-muted-foreground">{card.text}</p>
                     <div className="mt-6">
-                      <Link to="/pricing" className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80">
+                      <a href={SIGNUP_URL} className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80">
                         {card.cta}
                         <ArrowRight className="h-4 w-4" />
-                      </Link>
+                      </a>
                     </div>
                   </CardContent>
                 </Card>

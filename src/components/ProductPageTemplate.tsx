@@ -1,9 +1,9 @@
 import type { CSSProperties } from "react";
-import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { ProductLogo } from "@/components/ProductLogo";
+import { SIGNUP_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type Theme = {
@@ -90,17 +90,17 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
             <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--product-dark-muted)]">{data.subtitle}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild className="rounded-xl bg-[var(--product-accent-strong)] text-white shadow-none hover:bg-[var(--product-accent-strong)]/95">
-                <Link to="/pricing">
+                <a href={SIGNUP_URL}>
                   {data.primaryCta}
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 className="rounded-xl border-white/12 bg-transparent text-white shadow-none hover:bg-white/5 hover:text-white"
               >
-                <Link to="/pricing">Voir les tarifs</Link>
+                <a href="/pricing">Voir les tarifs</a>
               </Button>
             </div>
           </div>
@@ -165,10 +165,10 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
             <p className="mt-2 text-sm leading-7 text-white/78">{data.ctaSubtitle}</p>
           </div>
           <Button asChild className="rounded-xl bg-white text-[var(--product-cta-bg)] shadow-none hover:bg-white/95">
-            <Link to="/pricing">
+            <a href={SIGNUP_URL}>
               Voir les tarifs
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </Button>
         </section>
       </div>
