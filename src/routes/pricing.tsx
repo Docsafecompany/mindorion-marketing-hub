@@ -715,6 +715,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
 
   const planIdMap: Record<string, PlanId> = { Starter: "starter", Pro: "pro", Business: "business" };
   const stripePlanId = planIdMap[plan.name];
+  const paymentHref = stripePlanId ? PAYMENT_LINKS[productKey][stripePlanId][billing] : undefined;
 
   return (
     <article
@@ -745,18 +746,17 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-          ) : (
-            <Button
-              variant="outline"
-              className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
-              onClick={() => {
-                if (stripePlanId) void redirectToCheckout(productKey, stripePlanId, billing);
-              }}
-            >
-              {plan.cta}
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-          )}
+          ) : paymentHref ? (
+            <a href={paymentHref} target="_blank" rel="noopener noreferrer" className="block">
+              <Button
+                variant="outline"
+                className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
+              >
+                {plan.cta}
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </a>
+          ) : null}
         </div>
       </div>
 
