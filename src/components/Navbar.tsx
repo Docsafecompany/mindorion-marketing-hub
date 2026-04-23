@@ -187,7 +187,7 @@ export function Navbar() {
         <div className="hidden flex-1 justify-center lg:flex">
           <NavigationMenu>
             <NavigationMenuList className="gap-1">
-              <NavigationMenuItem>
+              <NavigationMenuItem className="relative">
                 <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.products")}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <NavPanel
@@ -204,7 +204,7 @@ export function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              <NavigationMenuItem className="relative">
                 <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.solutions")}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <NavPanel label={t("nav.solutionsLabel")} items={solutionEntries} />
@@ -219,7 +219,7 @@ export function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              <NavigationMenuItem className="relative">
                 <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.resources")}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <NavPanel
