@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BriefcaseBusiness, CheckCircle2, FileText, Sparkles, Users } from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, FileText, Sparkles, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { FadeSection } from "@/components/FadeSection";
@@ -49,8 +49,6 @@ function HomePage() {
   const whyItems = t("home.whyItems", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const testimonials = t("home.testimonials", { returnObjects: true }) as Array<{ role: string; quote: string }>;
   const personas = t("home.personas", { returnObjects: true }) as string[];
-  const qualionDocItems = t("home.qualionDocItems", { returnObjects: true }) as string[];
-  const qualionProposalItems = t("home.qualionProposalItems", { returnObjects: true }) as string[];
   const useCaseIcons = [BriefcaseBusiness, Users, Sparkles, FileText] as const;
   const heroProductLogos = ["qualion", "prospectiq", "governanceiq"] as const;
 
@@ -134,58 +132,6 @@ function HomePage() {
               </CardContent>
             </Card>
           ))}
-        </FadeSection>
-      </section>
-
-      <section className="section-shell section-space">
-        <FadeSection>
-          <div className="eyebrow">{t("home.productsIntro")}</div>
-          <div className="mt-3 flex max-w-3xl flex-col gap-4">
-            <h2 className="headline-balance text-[32px] font-bold text-foreground md:text-[38px]">{t("home.productsTitle").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 2 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("home.productsTitle").split(" ").length - 1 ? " " : ""}</span>)}</h2>
-            <p className="max-w-[540px] text-lg leading-8 text-muted-foreground">{t("home.productsSubtitle")}</p>
-          </div>
-        </FadeSection>
-        <FadeSection className="mt-10 grid gap-6 lg:grid-cols-2" delay={0.1}>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">{t("home.qualionDocTitle")}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                {qualionDocItems.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle2 className="h-4 w-4 text-secondary" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8">
-                <Link to="/products/qualion">
-                  <Button variant="outline">{t("common.learnMore")}</Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">{t("home.qualionProposalTitle")}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                {qualionProposalItems.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle2 className="h-4 w-4 text-secondary" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8">
-                <Link to="/products/qualion">
-                  <Button variant="outline">{t("common.learnMore")}</Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
         </FadeSection>
       </section>
 
