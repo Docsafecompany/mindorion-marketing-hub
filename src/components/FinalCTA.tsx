@@ -21,7 +21,7 @@ export function FinalCTA() {
           </h2>
           <p className="mt-4 text-muted-foreground">{t("home.finalText")}</p>
           <div className="mt-8 flex justify-center">
-            <a href={SIGNUP_URL}>
+            <a href={SIGNUP_URL} target="_blank" rel="noreferrer">
               <Button size="lg" className="h-[52px] px-8">
                 {t("common.startFree")} →
               </Button>

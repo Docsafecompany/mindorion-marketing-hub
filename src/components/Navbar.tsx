@@ -211,10 +211,10 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href={LOGIN_URL} className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+          <a href={LOGIN_URL} target="_blank" rel="noreferrer" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
             {t("nav.login")}
           </a>
-          <a href={SIGNUP_URL}>
+          <a href={SIGNUP_URL} target="_blank" rel="noreferrer">
             <Button className="gap-1 rounded-xl px-5">
               {t("nav.start")}
               <ArrowRight className="h-3.5 w-3.5" />
@@ -299,10 +299,10 @@ export function Navbar() {
                   <SheetClose asChild>
                     <Link to="/pricing" className="block rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted/60">{t("nav.pricing")}</Link>
                   </SheetClose>
-                  <a href={LOGIN_URL} className="block rounded-lg px-3 py-3 text-sm font-semibold text-muted-foreground hover:bg-muted/60 hover:text-foreground">
+                  <a href={LOGIN_URL} target="_blank" rel="noreferrer" className="block rounded-lg px-3 py-3 text-sm font-semibold text-muted-foreground hover:bg-muted/60 hover:text-foreground">
                     {t("nav.login")}
                   </a>
-                  <a href={SIGNUP_URL} className="block px-3 py-1">
+                  <a href={SIGNUP_URL} target="_blank" rel="noreferrer" className="block px-3 py-1">
                     <Button className="w-full justify-center rounded-xl">{t("nav.start")}</Button>
                   </a>
                   <button className="px-3 pt-2 text-left text-xs font-semibold text-muted-foreground" onClick={() => void setLanguage(nextLanguage)}>
