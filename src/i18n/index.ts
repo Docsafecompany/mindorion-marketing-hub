@@ -25,7 +25,8 @@ export function getPreferredLanguage(): SiteLanguage {
     return normalizeLanguage(stored);
   }
 
-  return normalizeLanguage(window.navigator.language);
+  const browserLanguages = window.navigator.languages?.map((value) => normalizeLanguage(value)) ?? [];
+  return browserLanguages.find((value) => value === "fr") ?? normalizeLanguage(window.navigator.language);
 }
 
 export async function setLanguage(language: SiteLanguage) {
@@ -41,7 +42,7 @@ void i18n.use(initReactI18next).init({
     en: { translation: en },
     fr: { translation: fr },
   },
-  lng: DEFAULT_LANGUAGE,
+  lng: typeof window !== "undefined" ? getPreferredLanguage() : DEFAULT_LANGUAGE,
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,
