@@ -338,16 +338,21 @@ export function Navbar() {
                   <SheetClose asChild>
                     <Link to="/pricing" className="block rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted/60">{t("nav.pricing")}</Link>
                   </SheetClose>
-                  <a href={LOGIN_URL} className="block rounded-lg px-3 py-3 text-sm font-semibold text-muted-foreground hover:bg-muted/60 hover:text-foreground">
+                  <a
+                    href={LOGIN_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-lg px-3 py-3 text-sm font-semibold text-muted-foreground hover:bg-muted/60 hover:text-foreground"
+                  >
                     {t("nav.login")}
                   </a>
                   <SheetClose asChild>
-                    <a href={SIGNUP_URL} className="block px-3 py-1">
+                    <Link to="/pricing" className="block px-3 py-1">
                       <Button className="w-full justify-center rounded-xl gap-1">
                         {t("nav.start")}
                         <ArrowRight className="h-3.5 w-3.5" />
                       </Button>
-                    </a>
+                    </Link>
                   </SheetClose>
                   <button className="px-3 pt-2 text-left text-xs font-semibold text-muted-foreground" onClick={() => void setLanguage(nextLanguage)}>
                     {t("site.switchLanguage")}
