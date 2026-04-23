@@ -26,7 +26,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { setLanguage, type SiteLanguage } from "@/i18n";
-import { LOGIN_URL, SIGNUP_URL } from "@/lib/site";
+import { LOGIN_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { BrandMark } from "./BrandMark";
 import { ProductLogo } from "./ProductLogo";
