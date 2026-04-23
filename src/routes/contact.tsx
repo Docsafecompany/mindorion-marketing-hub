@@ -72,13 +72,11 @@ function ContactPage() {
               ))}
             </div>
 
-            <div className="editorial-gray-soft mt-8 rounded-[10px] p-5">
-              <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">CONTACT DIRECT</div>
-              <a href="mailto:contact@mindorion.com" className="mt-3 inline-block text-lg font-semibold editorial-purple-text">
-                contact@mindorion.com
-              </a>
-              <p className="mt-3 text-sm leading-6 text-muted-foreground">Pour toute question sur les tarifs Enterprise ou les intégrations.</p>
-            </div>
+             <div className="editorial-gray-soft mt-8 rounded-[10px] p-5">
+               <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">CONTACT DIRECT</div>
+               <div className="mt-3 text-lg font-semibold editorial-purple-text">contact@mindorion.com</div>
+               <p className="mt-3 text-sm leading-6 text-muted-foreground">Pour toute question sur les tarifs Enterprise ou les intégrations.</p>
+             </div>
           </section>
 
           <section className="editorial-card p-5 sm:p-6">
@@ -95,7 +93,6 @@ function ContactPage() {
 
                 setProductError(false);
                 setSubmitted(true);
-                window.location.href = `mailto:contact@mindorion.com?subject=${encodeURIComponent("Demande de démo Mindorion")}&body=${encodeURIComponent(mailtoBody)}`;
                 setForm({ firstName: "", lastName: "", email: "", company: "", teamSize: "", message: "" });
                 setSelectedProducts([]);
               }}
