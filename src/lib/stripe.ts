@@ -54,6 +54,5 @@ export async function redirectToCheckout(
     mode: "subscription",
     successUrl: "https://app.mindorion.com/dashboard?checkout=success",
     cancelUrl: "https://mindorion.com/pricing?checkout=cancelled",
-    allowPromotionCodes: true,
   });
 }
