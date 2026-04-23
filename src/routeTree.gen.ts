@@ -9,38 +9,253 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UseCasesRouteImport } from './routes/use-cases'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SecurityRouteImport } from './routes/security'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProductsQualionRouteImport } from './routes/products.qualion'
+import { Route as ProductsProspectiqRouteImport } from './routes/products.prospectiq'
+import { Route as ProductsGovernanceiqRouteImport } from './routes/products.governanceiq'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const UseCasesRoute = UseCasesRouteImport.update({
+  id: '/use-cases',
+  path: '/use-cases',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductsQualionRoute = ProductsQualionRouteImport.update({
+  id: '/products/qualion',
+  path: '/products/qualion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsProspectiqRoute = ProductsProspectiqRouteImport.update({
+  id: '/products/prospectiq',
+  path: '/products/prospectiq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsGovernanceiqRoute = ProductsGovernanceiqRouteImport.update({
+  id: '/products/governanceiq',
+  path: '/products/governanceiq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/pricing': typeof PricingRoute
+  '/privacy': typeof PrivacyRoute
+  '/security': typeof SecurityRoute
+  '/terms': typeof TermsRoute
+  '/use-cases': typeof UseCasesRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/products/governanceiq': typeof ProductsGovernanceiqRoute
+  '/products/prospectiq': typeof ProductsProspectiqRoute
+  '/products/qualion': typeof ProductsQualionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/pricing': typeof PricingRoute
+  '/privacy': typeof PrivacyRoute
+  '/security': typeof SecurityRoute
+  '/terms': typeof TermsRoute
+  '/use-cases': typeof UseCasesRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/products/governanceiq': typeof ProductsGovernanceiqRoute
+  '/products/prospectiq': typeof ProductsProspectiqRoute
+  '/products/qualion': typeof ProductsQualionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/contact': typeof ContactRoute
+  '/pricing': typeof PricingRoute
+  '/privacy': typeof PrivacyRoute
+  '/security': typeof SecurityRoute
+  '/terms': typeof TermsRoute
+  '/use-cases': typeof UseCasesRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/products/governanceiq': typeof ProductsGovernanceiqRoute
+  '/products/prospectiq': typeof ProductsProspectiqRoute
+  '/products/qualion': typeof ProductsQualionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/pricing'
+    | '/privacy'
+    | '/security'
+    | '/terms'
+    | '/use-cases'
+    | '/blog/$slug'
+    | '/products/governanceiq'
+    | '/products/prospectiq'
+    | '/products/qualion'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/pricing'
+    | '/privacy'
+    | '/security'
+    | '/terms'
+    | '/use-cases'
+    | '/blog/$slug'
+    | '/products/governanceiq'
+    | '/products/prospectiq'
+    | '/products/qualion'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/pricing'
+    | '/privacy'
+    | '/security'
+    | '/terms'
+    | '/use-cases'
+    | '/blog/$slug'
+    | '/products/governanceiq'
+    | '/products/prospectiq'
+    | '/products/qualion'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRouteWithChildren
+  ContactRoute: typeof ContactRoute
+  PricingRoute: typeof PricingRoute
+  PrivacyRoute: typeof PrivacyRoute
+  SecurityRoute: typeof SecurityRoute
+  TermsRoute: typeof TermsRoute
+  UseCasesRoute: typeof UseCasesRoute
+  ProductsGovernanceiqRoute: typeof ProductsGovernanceiqRoute
+  ProductsProspectiqRoute: typeof ProductsProspectiqRoute
+  ProductsQualionRoute: typeof ProductsQualionRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/use-cases': {
+      id: '/use-cases'
+      path: '/use-cases'
+      fullPath: '/use-cases'
+      preLoaderRoute: typeof UseCasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,12 +263,70 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/products/qualion': {
+      id: '/products/qualion'
+      path: '/products/qualion'
+      fullPath: '/products/qualion'
+      preLoaderRoute: typeof ProductsQualionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/prospectiq': {
+      id: '/products/prospectiq'
+      path: '/products/prospectiq'
+      fullPath: '/products/prospectiq'
+      preLoaderRoute: typeof ProductsProspectiqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/governanceiq': {
+      id: '/products/governanceiq'
+      path: '/products/governanceiq'
+      fullPath: '/products/governanceiq'
+      preLoaderRoute: typeof ProductsGovernanceiqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
 
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BlogRoute: BlogRouteWithChildren,
+  ContactRoute: ContactRoute,
+  PricingRoute: PricingRoute,
+  PrivacyRoute: PrivacyRoute,
+  SecurityRoute: SecurityRoute,
+  TermsRoute: TermsRoute,
+  UseCasesRoute: UseCasesRoute,
+  ProductsGovernanceiqRoute: ProductsGovernanceiqRoute,
+  ProductsProspectiqRoute: ProductsProspectiqRoute,
+  ProductsQualionRoute: ProductsQualionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
