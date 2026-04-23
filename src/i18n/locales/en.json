@@ -99,15 +99,42 @@
   "home": {
     "seoTitle": "Mindorion — Protect your professional reputation",
     "seoDescription": "Mindorion helps B2B teams control documents, structure outreach and manage compliance before every external send.",
-    "badge": "B2B platform · GDPR compliant · EU hosted",
-    "title": "Protect your professional reputation before you send",
-    "subtitle": "Qualion detects hidden metadata, comments, sensitive data and writing issues in Word, PDF and PowerPoint documents.",
+    "badge": "Used by consulting, sales and HR teams",
+    "heroTitleWords": [
+      "Send.",
+      "Prospect.",
+      "Govern."
+    ],
+    "title": "Send. Prospect. Govern.",
+    "subtitle": "Mindorion gives B2B professionals the confidence to operate at the highest level. Every document flawless, every prospect qualified, every process compliant.",
+    "primaryCta": "Discover",
+    "secondaryCta": "Request a demo",
     "personas": [
       "Consultants",
       "Sales teams",
-      "HR",
+      "Recruiters",
       "IT services & engineering",
-      "Freelancers"
+      "Pharma & aerospace"
+    ],
+    "heroProducts": [
+      {
+        "icon": "🛡",
+        "title": "Qualion",
+        "text": "Every document sent is flawless. Reputation protected, credibility intact, client reassured.",
+        "cta": "Try Qualion"
+      },
+      {
+        "icon": "🎯",
+        "title": "ProspectIQ",
+        "text": "Every prospect is the right one. AI-powered B2B pipeline, precise outreach, higher conversion rates.",
+        "cta": "Try ProspectIQ"
+      },
+      {
+        "icon": "📋",
+        "title": "GovernanceIQ",
+        "text": "Every process is compliant. Team-scale document governance, without friction.",
+        "cta": "Try GovernanceIQ"
+      }
     ],
     "stats": [
       {

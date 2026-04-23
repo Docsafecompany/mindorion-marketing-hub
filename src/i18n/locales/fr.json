@@ -99,15 +99,42 @@
   "home": {
     "seoTitle": "Mindorion — Protégez votre réputation professionnelle",
     "seoDescription": "Mindorion aide les équipes B2B à contrôler les documents, structurer la prospection et piloter la conformité avant chaque envoi.",
-    "badge": "Plateforme B2B · RGPD Compliant · EU Hosted",
-    "title": "Protégez votre réputation professionnelle avant d'envoyer",
-    "subtitle": "Qualion détecte les métadonnées cachées, les commentaires, les données sensibles et les fautes dans vos documents Word, PDF et PowerPoint.",
+    "badge": "Utilisé par des équipes consulting, sales et RH",
+    "heroTitleWords": [
+      "Envoyez.",
+      "Prospectez.",
+      "Gouvernez."
+    ],
+    "title": "Envoyez. Prospectez. Gouvernez.",
+    "subtitle": "Mindorion donne aux professionnels B2B la certitude d'opérer au plus haut niveau. Chaque document impeccable, chaque prospect qualifié, chaque processus conforme.",
+    "primaryCta": "Découvrir",
+    "secondaryCta": "Demander une démo",
     "personas": [
       "Consultants",
       "Équipes Sales",
-      "RH",
+      "Recruteurs",
       "ESN & Ingénierie",
-      "Freelances"
+      "Pharma & Aérospatial"
+    ],
+    "heroProducts": [
+      {
+        "icon": "🛡",
+        "title": "Qualion",
+        "text": "Chaque document envoyé est impeccable. Réputation protégée, crédibilité intacte, client rassuré.",
+        "cta": "Essayer Qualion"
+      },
+      {
+        "icon": "🎯",
+        "title": "ProspectIQ",
+        "text": "Chaque prospect est le bon. Pipeline B2B alimenté par l'IA, outreach précis, taux de conversion en hausse.",
+        "cta": "Essayer ProspectIQ"
+      },
+      {
+        "icon": "📋",
+        "title": "GovernanceIQ",
+        "text": "Chaque processus est conforme. Gouvernance documentaire à l'échelle de l'équipe, sans effort.",
+        "cta": "Essayer GovernanceIQ"
+      }
     ],
     "stats": [
       {
