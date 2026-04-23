@@ -24,16 +24,16 @@ function BlogPage() {
   return (
     <div className="section-shell section-space">
       <SEOHead title={t("blog.seoTitle")} description={t("blog.seoDescription")} path="/blog" />
-      <FadeSection className="max-w-4xl">
-        <h1 className="text-4xl font-extrabold text-foreground sm:text-5xl">{t("blog.title")}</h1>
-        <p className="mt-5 text-lg leading-8 text-muted-foreground">{t("blog.subtitle")}</p>
+      <FadeSection className="hero-wash max-w-4xl rounded-[28px] px-6 py-12 text-center">
+        <h1 className="text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">{t("blog.title").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 0 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("blog.title").split(" ").length - 1 ? " " : ""}</span>)}</h1>
+        <p className="mx-auto mt-5 max-w-[600px] text-lg leading-8 text-muted-foreground">{t("blog.subtitle")}</p>
       </FadeSection>
       <FadeSection className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3" delay={0.1}>
         {blogPosts.map((post) => (
           <Link key={post.slug} to="/blog/$slug" params={{ slug: post.slug }}>
-            <Card className="h-full rounded-lg transition-transform duration-200 hover:-translate-y-1">
+            <Card className="h-full transition-transform duration-200 hover:-translate-y-1">
               <CardContent className="p-6">
-                <Badge variant="outline" className="rounded-full">{t(post.categoryKey)}</Badge>
+                <Badge variant="outline" className="brand-badge rounded-full border-border bg-transparent text-primary">{t(post.categoryKey)}</Badge>
                 <div className="mt-4 text-sm text-muted-foreground">{new Date(post.date).toLocaleDateString()}</div>
                 <h2 className="mt-4 text-xl font-bold text-foreground">{t(post.titleKey)}</h2>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{t(post.excerptKey)}</p>

@@ -151,17 +151,17 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/80 bg-background/88 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/92 backdrop-blur-xl">
       <div className="section-shell flex h-16 items-center justify-between gap-6">
         <Link to="/" className="shrink-0">
-          <BrandMark className="scale-[0.92] origin-left" />
+            <BrandMark className="h-9" />
         </Link>
 
         <div className="hidden flex-1 justify-center lg:flex">
           <NavigationMenu>
             <NavigationMenuList className="gap-1">
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">{t("nav.products")}</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.products")}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <NavPanel
                     label={t("nav.productsLabel")}
@@ -177,7 +177,7 @@ export function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">{t("nav.solutions")}</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.solutions")}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <NavPanel label={t("nav.solutionsLabel")} items={solutionEntries} />
                 </NavigationMenuContent>
@@ -185,14 +185,14 @@ export function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/pricing" className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/70">
+                  <Link to="/pricing" className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-brand-subtle hover:text-primary">
                     {t("nav.pricing")}
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">{t("nav.resources")}</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.resources")}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <NavPanel
                     label={t("nav.resourcesLabel")}
@@ -215,7 +215,7 @@ export function Navbar() {
             {t("nav.login")}
           </a>
           <a href={SIGNUP_URL}>
-            <Button className="gap-1 rounded-xl">
+            <Button className="gap-1 rounded-xl px-5">
               {t("nav.start")}
               <ArrowRight className="h-3.5 w-3.5" />
             </Button>
@@ -228,7 +228,7 @@ export function Navbar() {
         <div className="lg:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" aria-label="Open navigation">
+              <Button variant="outline" size="icon" aria-label="Open navigation" className="rounded-xl">
                 <Menu className="h-4 w-4" />
               </Button>
             </SheetTrigger>

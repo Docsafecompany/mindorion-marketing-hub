@@ -37,10 +37,10 @@ function PricingPage() {
   return (
     <div className="section-shell section-space">
       <SEOHead title={t("pricing.seoTitle")} description={t("pricing.seoDescription")} path="/pricing" />
-      <FadeSection className="mx-auto max-w-3xl text-center">
-        <h1 className="text-4xl font-extrabold text-foreground sm:text-5xl">{t("pricing.title")}</h1>
-        <p className="mt-4 text-lg text-muted-foreground">{t("pricing.subtitle")}</p>
-        <div className="mt-8 inline-flex rounded-full border border-border/80 bg-card p-1">
+      <FadeSection className="hero-wash mx-auto max-w-4xl rounded-[28px] px-6 py-12 text-center">
+        <h1 className="text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">{t("pricing.title").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 3 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("pricing.title").split(" ").length - 1 ? " " : ""}</span>)}</h1>
+        <p className="mx-auto mt-4 max-w-[600px] text-lg text-muted-foreground">{t("pricing.subtitle")}</p>
+        <div className="mt-8 inline-flex rounded-full border border-border bg-card p-1">
           <button className={`rounded-full px-4 py-2 text-sm font-semibold ${!annual ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`} onClick={() => setAnnual(false)}>
             {t("common.monthly")}
           </button>
@@ -52,8 +52,9 @@ function PricingPage() {
 
       <FadeSection className="mt-12 grid gap-6 xl:grid-cols-4" delay={0.1}>
         {planValues.map((plan) => (
-          <Card key={plan.name} className="rounded-lg">
+          <Card key={plan.name} className={plan.name === "Pro" ? "relative border-2 border-transparent bg-[linear-gradient(var(--color-card),var(--color-card)),var(--gradient-brand)] bg-[padding-box,border-box]" : undefined}>
             <CardHeader>
+              {plan.name === "Pro" ? <div className="brand-badge mb-3 inline-flex w-fit rounded-full px-3 py-1 text-xs font-semibold text-primary">Populaire</div> : null}
               <CardTitle className="text-2xl">{plan.name}</CardTitle>
               <p className="text-sm text-muted-foreground">{plan.description}</p>
             </CardHeader>
@@ -84,7 +85,7 @@ function PricingPage() {
       </FadeSection>
 
       <FadeSection className="mt-14" delay={0.15}>
-        <Card className="overflow-hidden rounded-lg">
+        <Card className="overflow-hidden">
           <CardHeader>
             <CardTitle className="text-2xl">{t("pricing.tableTitle")}</CardTitle>
           </CardHeader>
