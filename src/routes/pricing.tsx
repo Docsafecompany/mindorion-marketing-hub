@@ -418,27 +418,24 @@ function PricingPage() {
 function PlanCard({ billing, plan }: { billing: BillingMode; plan: Plan }) {
   const isEnterprise = Boolean(plan.enterprise);
   const isFeatured = Boolean(plan.featured);
+  const isStandardPlan = !isEnterprise;
 
   return (
     <article
       className={cn(
-        "flex min-h-full flex-col rounded-xl border bg-card p-6",
+        "flex min-h-full flex-col rounded-xl border bg-card p-5 lg:p-4 xl:p-5",
         isEnterprise && "border-[var(--color-pricing-enterprise-border)] bg-[var(--color-pricing-enterprise-soft)]",
         isFeatured && "border-2 border-[var(--color-pricing-primary)]",
         !isEnterprise && !isFeatured && "border-border",
       )}
     >
-      {isFeatured ? (
-        <div className="mb-4 inline-flex w-fit rounded-full bg-[var(--color-pricing-primary-soft)] px-3 py-1 text-xs font-semibold text-[var(--color-pricing-primary)]">
-          Le plus populaire
-        </div>
-      ) : null}
+      {isFeatured ? <div className="-mx-5 -mt-5 mb-4 rounded-t-xl bg-[var(--color-pricing-primary)] px-4 py-2 text-center text-xs font-semibold text-white lg:-mx-4 lg:-mt-4 xl:-mx-5 xl:-mt-5">Le plus populaire</div> : null}
 
       <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-primary)]")}>{plan.label}</div>
       <div className={cn("mt-3 text-2xl font-extrabold text-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.name}</div>
       <p className={cn("mt-2 min-h-12 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
 
-      <div className="mt-6">
+      <div className="mt-5">
         {isEnterprise ? (
           <>
             <div className="text-3xl font-extrabold text-[var(--color-pricing-enterprise)]">Sur devis</div>
@@ -454,7 +451,7 @@ function PlanCard({ billing, plan }: { billing: BillingMode; plan: Plan }) {
         )}
       </div>
 
-      <div className="mt-6">
+      <div className="mt-5">
         {isEnterprise ? (
           <a href={plan.href}>
             <Button className="w-full rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
@@ -497,7 +494,7 @@ function PlanCard({ billing, plan }: { billing: BillingMode; plan: Plan }) {
         </>
       ) : null}
 
-      <div className="mt-8 flex flex-1 flex-col gap-6">
+      <div className={cn("mt-7 flex flex-1 flex-col gap-6", isStandardPlan && "border-t border-border pt-6")}>
         {plan.sections?.map((section) => (
           <div key={section.title}>
             <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>
