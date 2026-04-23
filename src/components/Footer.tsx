@@ -58,7 +58,7 @@ export function Footer() {
             <div className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("footer.products")}</div>
             <div className="space-y-3 text-sm">
               {productLinks.map((item) => (
-                <Link key={item.label} to={item.to} hash={item.hash} className="block text-muted-foreground transition-colors hover:text-foreground">
+                <Link key={item.label} to={item.to} className="block text-muted-foreground transition-colors hover:text-foreground">
                   {item.label}
                 </Link>
               ))}
