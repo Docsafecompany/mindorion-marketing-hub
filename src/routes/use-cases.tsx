@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BriefcaseBusiness, Check, Cog, FileText, Shield, Target, TrendingUp, Users } from "lucide-react";
 
@@ -292,6 +293,37 @@ export const Route = createFileRoute("/use-cases")({
 });
 
 function UseCasesPage() {
+  const [activeTab, setActiveTab] = useState<PersonaKey>("consultants");
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const hashToTab: Record<string, PersonaKey> = {
+      "#consultants": "consultants",
+      "#sales": "sales",
+      "#rh": "rh",
+      "#esn": "esn",
+    };
+
+    const applyHash = () => {
+      const nextTab = hashToTab[window.location.hash] ?? "consultants";
+      setActiveTab(nextTab);
+
+      if (hashToTab[window.location.hash]) {
+        window.requestAnimationFrame(() => {
+          document.querySelector(".persona-tabs")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
+    };
+
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+
+    return () => {
+      window.removeEventListener("hashchange", applyHash);
+    };
+  }, []);
+
   return (
     <div className="use-cases-page section-space">
       <SEOHead
@@ -311,15 +343,15 @@ function UseCasesPage() {
           </p>
         </section>
 
-        <Tabs defaultValue="consultants" className="mt-12">
-          <TabsList className="mx-auto grid h-auto w-full max-w-5xl grid-cols-1 gap-3 rounded-none bg-transparent p-0 md:grid-cols-2 xl:grid-cols-4">
+        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as PersonaKey)} className="mt-12">
+          <TabsList className="persona-tabs mx-auto grid h-auto w-full max-w-5xl grid-cols-1 gap-3 rounded-none bg-transparent p-0 md:grid-cols-2 xl:grid-cols-4">
             {personas.map((persona) => {
               const Icon = persona.tabIcon;
               return (
                 <TabsTrigger
                   key={persona.key}
                   value={persona.key}
-                  className="h-auto rounded-xl border border-border bg-card px-5 py-4 text-left data-[state=active]:border-[var(--color-pricing-primary)] data-[state=active]:border-2 data-[state=active]:bg-[var(--color-pricing-primary-soft)] data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                  className="persona-tab h-auto rounded-xl border border-border bg-card px-5 py-4 text-left data-[state=active]:border-[var(--color-pricing-primary)] data-[state=active]:border-2 data-[state=active]:bg-[var(--color-pricing-primary-soft)] data-[state=active]:text-foreground data-[state=active]:shadow-none"
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-muted text-foreground">
@@ -333,7 +365,7 @@ function UseCasesPage() {
           </TabsList>
 
           {personas.map((persona) => (
-            <TabsContent key={persona.key} value={persona.key} className="mt-8 space-y-8">
+            <TabsContent key={persona.key} value={persona.key} className="persona-panel mt-8 space-y-8">
               <section className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
                 <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
                   <Badge tone={persona.badgeTone}>{persona.badge}</Badge>
