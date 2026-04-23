@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, FileText, Minus, Shield, Target } from "lucide-react";
 
+import { ProductLogo } from "@/components/ProductLogo";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -337,17 +338,17 @@ function PricingPage() {
         path="/pricing"
       />
 
-      <section className="mx-auto max-w-6xl">
-        <div className="max-w-3xl space-y-4">
+      <section className="mx-auto max-w-6xl text-center">
+        <div className="mx-auto max-w-4xl space-y-4">
           <h1 className="headline-balance text-4xl font-extrabold text-foreground sm:text-5xl">
             Un prix par utilisateur. Zéro frais cachés.
           </h1>
-          <p className="max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Commencez avec un outil. Passez à Enterprise pour la suite complète avec intégrations CRM.
           </p>
         </div>
 
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <div className="mt-8 flex flex-col items-center gap-4">
           <div className="inline-flex rounded-xl border border-border bg-card p-1">
             <button
               className={cn(
@@ -377,9 +378,8 @@ function PricingPage() {
       </section>
 
       <Tabs defaultValue="qualion" className="mt-12">
-        <TabsList className="grid h-auto w-full max-w-3xl grid-cols-1 gap-4 rounded-none bg-transparent p-0 md:grid-cols-2">
+        <TabsList className="mx-auto grid h-auto w-full max-w-3xl grid-cols-1 gap-4 rounded-none bg-transparent p-0 md:grid-cols-2">
           {PRODUCTS.map((product) => {
-            const Icon = product.icon;
             return (
               <TabsTrigger
                 key={product.key}
@@ -387,8 +387,8 @@ function PricingPage() {
                 className="h-auto rounded-xl border border-border bg-card px-5 py-4 text-left data-[state=active]:border-[var(--color-pricing-primary)] data-[state=active]:border-2 data-[state=active]:bg-card data-[state=active]:shadow-none"
               >
                 <div className="flex w-full items-center gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--color-pricing-primary-soft)] text-[var(--color-pricing-primary)]">
-                    <Icon className="h-5 w-5" />
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white p-1.5">
+                    <ProductLogo product={product.key} />
                   </div>
                   <div>
                     <div className="text-base font-bold text-foreground">{product.title}</div>
@@ -402,7 +402,7 @@ function PricingPage() {
 
         {PRODUCTS.map((product) => (
           <TabsContent key={product.key} value={product.key} className="mt-8 space-y-10">
-            <div className="grid gap-6 xl:grid-cols-4">
+            <div className="grid gap-4 lg:grid-cols-4 xl:gap-6">
               {product.plans.map((plan) => (
                 <PlanCard key={`${product.key}-${plan.name}`} billing={billing} plan={plan} />
               ))}
@@ -418,27 +418,24 @@ function PricingPage() {
 function PlanCard({ billing, plan }: { billing: BillingMode; plan: Plan }) {
   const isEnterprise = Boolean(plan.enterprise);
   const isFeatured = Boolean(plan.featured);
+  const isStandardPlan = !isEnterprise;
 
   return (
     <article
       className={cn(
-        "flex min-h-full flex-col rounded-xl border bg-card p-6",
+        "flex min-h-full flex-col rounded-xl border bg-card p-5 lg:p-4 xl:p-5",
         isEnterprise && "border-[var(--color-pricing-enterprise-border)] bg-[var(--color-pricing-enterprise-soft)]",
         isFeatured && "border-2 border-[var(--color-pricing-primary)]",
         !isEnterprise && !isFeatured && "border-border",
       )}
     >
-      {isFeatured ? (
-        <div className="mb-4 inline-flex w-fit rounded-full bg-[var(--color-pricing-primary-soft)] px-3 py-1 text-xs font-semibold text-[var(--color-pricing-primary)]">
-          Le plus populaire
-        </div>
-      ) : null}
+      {isFeatured ? <div className="-mx-5 -mt-5 mb-4 rounded-t-xl bg-[var(--color-pricing-primary)] px-4 py-2 text-center text-xs font-semibold text-white lg:-mx-4 lg:-mt-4 xl:-mx-5 xl:-mt-5">Le plus populaire</div> : null}
 
       <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-primary)]")}>{plan.label}</div>
       <div className={cn("mt-3 text-2xl font-extrabold text-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.name}</div>
       <p className={cn("mt-2 min-h-12 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
 
-      <div className="mt-6">
+      <div className="mt-5">
         {isEnterprise ? (
           <>
             <div className="text-3xl font-extrabold text-[var(--color-pricing-enterprise)]">Sur devis</div>
@@ -454,7 +451,7 @@ function PlanCard({ billing, plan }: { billing: BillingMode; plan: Plan }) {
         )}
       </div>
 
-      <div className="mt-6">
+      <div className="mt-5">
         {isEnterprise ? (
           <a href={plan.href}>
             <Button className="w-full rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
@@ -497,7 +494,7 @@ function PlanCard({ billing, plan }: { billing: BillingMode; plan: Plan }) {
         </>
       ) : null}
 
-      <div className="mt-8 flex flex-1 flex-col gap-6">
+      <div className={cn("mt-7 flex flex-1 flex-col gap-6", isStandardPlan && "border-t border-border pt-6")}>
         {plan.sections?.map((section) => (
           <div key={section.title}>
             <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>
