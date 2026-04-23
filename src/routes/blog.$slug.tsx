@@ -43,12 +43,21 @@ export const Route = createFileRoute("/blog/$slug")({
     }
     return { post };
   },
-  head: ({ loaderData }) =>
-    createStaticMeta({
+  head: ({ loaderData }) => {
+    if (!loaderData) {
+      return createStaticMeta({
+        title: "Mindorion Blog",
+        description: "Mindorion articles on document quality, compliance and B2B workflows.",
+        path: "/blog",
+      });
+    }
+
+    return createStaticMeta({
       title: loaderData.post.slug.replaceAll("-", " "),
       description: loaderData.post.description,
       path: `/blog/${loaderData.post.slug}`,
-    }),
+    });
+  },
   component: BlogArticlePage,
   errorComponent: BlogArticleError,
   notFoundComponent: BlogArticleNotFound,
