@@ -96,10 +96,9 @@ function HomePage() {
               return (
                 <Card key={card.title} className="h-full">
                   <CardHeader>
-                    <div className="mb-4 flex h-16 w-40 items-center justify-start rounded-xl">
+                    <div className="mb-2 flex h-16 w-40 items-center justify-start rounded-xl">
                       <ProductLogo product={heroProductLogos[index]} className="object-left" />
                     </div>
-                    <CardTitle className="text-xl">{card.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">{card.text}</p>
