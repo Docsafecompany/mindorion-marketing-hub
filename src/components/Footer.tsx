@@ -48,9 +48,9 @@ export function Footer() {
               <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
                 <Button variant="outline" className="border-border/80 bg-card/90">{t("footer.linkedin")}</Button>
               </a>
-              <a href={`mailto:${t("site.contactEmail")}`}>
+              <Link to="/contact">
                 <Button variant="outline" className="border-border/80 bg-card/90">{t("site.contactEmail")}</Button>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -69,7 +69,7 @@ export function Footer() {
             <div className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("footer.solutions")}</div>
             <div className="space-y-3 text-sm">
               {solutionLinks.map((item) => (
-                <Link key={item.label} to={item.to} className="block text-muted-foreground transition-colors hover:text-foreground">
+                <Link key={item.label} to={item.to} hash={item.hash} className="block text-muted-foreground transition-colors hover:text-foreground">
                   {item.label}
                 </Link>
               ))}
@@ -84,9 +84,9 @@ export function Footer() {
                   {item.label}
                 </Link>
               ))}
-              <a href={`mailto:${t("site.contactEmail")}`} className="block text-muted-foreground transition-colors hover:text-foreground">
+              <Link to="/contact" className="block text-muted-foreground transition-colors hover:text-foreground">
                 {t("footer.contact")}
-              </a>
+              </Link>
             </div>
             <div className="my-5 h-px bg-border/80" />
             <div className="space-y-3 text-sm">

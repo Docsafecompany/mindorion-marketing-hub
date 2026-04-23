@@ -83,11 +83,11 @@ function HomePage() {
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
-              <a href="mailto:contact@mindorion.com">
+              <Link to="/contact">
                 <Button size="lg" variant="outline" className="min-w-44">
                   {t("home.secondaryCta")}
                 </Button>
-              </a>
+              </Link>
             </div>
           </FadeSection>
 
