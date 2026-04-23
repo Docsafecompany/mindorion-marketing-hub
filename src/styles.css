@@ -104,6 +104,7 @@
   --surface-brand: oklch(0.95 0.04 291);
   --surface-brand-foreground: hsl(244 80% 62%);
   --gradient-brand: linear-gradient(135deg, #7c6ff0 0%, #4fc3f7 100%);
+  --gradient-brand-strong: linear-gradient(135deg, hsl(244 80% 56%) 0%, hsl(199 90% 54%) 100%);
   --gradient-brand-text: linear-gradient(90deg, #7c6ff0 0%, #4fc3f7 100%);
   --gradient-brand-subtle: linear-gradient(135deg, rgba(124, 111, 240, 0.08) 0%, rgba(79, 195, 247, 0.08) 100%);
   --surface-secondary: oklch(0.95 0.04 165);
@@ -228,6 +229,10 @@
     background-image: var(--gradient-brand);
   }
 
+  .brand-gradient-strong {
+    background-image: var(--gradient-brand-strong);
+  }
+
   .brand-gradient-text {
     background-image: var(--gradient-brand-text);
     -webkit-background-clip: text;
@@ -243,6 +248,14 @@
   .brand-badge {
     background-image: linear-gradient(90deg, rgba(124, 111, 240, 0.1) 0%, rgba(79, 195, 247, 0.1) 100%);
     box-shadow: inset 0 0 0 1px rgba(124, 111, 240, 0.08);
+  }
+
+  .shadow-brand-button {
+    box-shadow: 0 8px 24px rgba(88, 82, 220, 0.34);
+  }
+
+  .shadow-brand-button-hover {
+    box-shadow: 0 10px 28px rgba(88, 82, 220, 0.4);
   }
 
   .hero-wash {
