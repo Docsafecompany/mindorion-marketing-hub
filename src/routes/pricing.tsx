@@ -680,7 +680,7 @@ function PricingPage() {
           <TabsContent key={product.key} value={product.key} className="mt-8 space-y-10">
             <div className="grid gap-4 lg:grid-cols-4 xl:gap-6">
               {product.plans.map((plan) => (
-                <PlanCard key={`${product.key}-${plan.name}`} billing={billing} plan={plan} popularLabel={copy.popular} customLabel={copy.custom} suiteLabel={copy.includedInSuite} />
+                <PlanCard key={`${product.key}-${plan.name}`} productKey={product.key} billing={billing} plan={plan} popularLabel={copy.popular} customLabel={copy.custom} suiteLabel={copy.includedInSuite} />
               ))}
             </div>
             <ComparisonTable product={product} featureLabel={copy.comparisonFeature} />
