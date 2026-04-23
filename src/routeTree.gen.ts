@@ -21,6 +21,8 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductsQualionRouteImport } from './routes/products.qualion'
 import { Route as ProductsProspectiqRouteImport } from './routes/products.prospectiq'
 import { Route as ProductsGovernanceiqRouteImport } from './routes/products.governanceiq'
+import { Route as LegalTermsRouteImport } from './routes/legal.terms'
+import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const UseCasesRoute = UseCasesRouteImport.update({
@@ -83,6 +85,16 @@ const ProductsGovernanceiqRoute = ProductsGovernanceiqRouteImport.update({
   path: '/products/governanceiq',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LegalTermsRoute = LegalTermsRouteImport.update({
+  id: '/legal/terms',
+  path: '/legal/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalPrivacyRoute = LegalPrivacyRouteImport.update({
+  id: '/legal/privacy',
+  path: '/legal/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -100,6 +112,8 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/terms': typeof LegalTermsRoute
   '/products/governanceiq': typeof ProductsGovernanceiqRoute
   '/products/prospectiq': typeof ProductsProspectiqRoute
   '/products/qualion': typeof ProductsQualionRoute
@@ -115,6 +129,8 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/terms': typeof LegalTermsRoute
   '/products/governanceiq': typeof ProductsGovernanceiqRoute
   '/products/prospectiq': typeof ProductsProspectiqRoute
   '/products/qualion': typeof ProductsQualionRoute
@@ -131,6 +147,8 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/terms': typeof LegalTermsRoute
   '/products/governanceiq': typeof ProductsGovernanceiqRoute
   '/products/prospectiq': typeof ProductsProspectiqRoute
   '/products/qualion': typeof ProductsQualionRoute
@@ -148,6 +166,8 @@ export interface FileRouteTypes {
     | '/terms'
     | '/use-cases'
     | '/blog/$slug'
+    | '/legal/privacy'
+    | '/legal/terms'
     | '/products/governanceiq'
     | '/products/prospectiq'
     | '/products/qualion'
@@ -163,6 +183,8 @@ export interface FileRouteTypes {
     | '/terms'
     | '/use-cases'
     | '/blog/$slug'
+    | '/legal/privacy'
+    | '/legal/terms'
     | '/products/governanceiq'
     | '/products/prospectiq'
     | '/products/qualion'
@@ -178,6 +200,8 @@ export interface FileRouteTypes {
     | '/terms'
     | '/use-cases'
     | '/blog/$slug'
+    | '/legal/privacy'
+    | '/legal/terms'
     | '/products/governanceiq'
     | '/products/prospectiq'
     | '/products/qualion'
@@ -193,6 +217,8 @@ export interface RootRouteChildren {
   SecurityRoute: typeof SecurityRoute
   TermsRoute: typeof TermsRoute
   UseCasesRoute: typeof UseCasesRoute
+  LegalPrivacyRoute: typeof LegalPrivacyRoute
+  LegalTermsRoute: typeof LegalTermsRoute
   ProductsGovernanceiqRoute: typeof ProductsGovernanceiqRoute
   ProductsProspectiqRoute: typeof ProductsProspectiqRoute
   ProductsQualionRoute: typeof ProductsQualionRoute
@@ -284,6 +310,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsGovernanceiqRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/legal/terms': {
+      id: '/legal/terms'
+      path: '/legal/terms'
+      fullPath: '/legal/terms'
+      preLoaderRoute: typeof LegalTermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/privacy': {
+      id: '/legal/privacy'
+      path: '/legal/privacy'
+      fullPath: '/legal/privacy'
+      preLoaderRoute: typeof LegalPrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -314,6 +354,8 @@ const rootRouteChildren: RootRouteChildren = {
   SecurityRoute: SecurityRoute,
   TermsRoute: TermsRoute,
   UseCasesRoute: UseCasesRoute,
+  LegalPrivacyRoute: LegalPrivacyRoute,
+  LegalTermsRoute: LegalTermsRoute,
   ProductsGovernanceiqRoute: ProductsGovernanceiqRoute,
   ProductsProspectiqRoute: ProductsProspectiqRoute,
   ProductsQualionRoute: ProductsQualionRoute,
