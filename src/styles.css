@@ -335,4 +335,92 @@
   .legal-copy ul {
     @apply ml-5 list-disc space-y-2;
   }
+
+  .editorial-page {
+    background-color: #f8f7f3;
+  }
+
+  .editorial-card {
+    background-color: #ffffff;
+    border: 0.5px solid #e8e6e0;
+    border-radius: 12px;
+  }
+
+  .editorial-card-tight {
+    background-color: #ffffff;
+    border: 0.5px solid #e8e6e0;
+    border-radius: 10px;
+  }
+
+  .editorial-input {
+    background-color: #f8f7f3;
+    border: 0.5px solid #e8e6e0;
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+
+  .editorial-dark-surface {
+    background-color: #1a1a18;
+  }
+
+  .editorial-dark-panel {
+    background-color: #111110;
+  }
+
+  .editorial-purple-text {
+    color: #534ab7;
+  }
+
+  .editorial-purple-bg {
+    background-color: #534ab7;
+  }
+
+  .editorial-purple-bg-deep {
+    background-color: #3c3489;
+  }
+
+  .editorial-purple-soft {
+    background-color: #eeedfe;
+    color: #534ab7;
+  }
+
+  .editorial-green-soft {
+    background-color: #e1f5ee;
+    color: #085041;
+  }
+
+  .editorial-amber-soft {
+    background-color: #faeeda;
+    color: #854f0b;
+  }
+
+  .editorial-gray-soft {
+    background-color: #f5f4f0;
+    color: #5f5b52;
+  }
+
+  .editorial-dark-soft {
+    background-color: #2b2b28;
+    color: #e8e6e0;
+  }
+
+  .editorial-on-dark {
+    color: #ffffff;
+  }
+
+  .editorial-on-dark-muted {
+    color: #b9b5ad;
+  }
+
+  .editorial-danger {
+    color: #b42318;
+  }
+
+  .editorial-warning {
+    color: #b54708;
+  }
+
+  .editorial-success {
+    color: #085041;
+  }
 }
