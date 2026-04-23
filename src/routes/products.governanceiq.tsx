@@ -61,7 +61,7 @@ function GovernanceIQPage() {
             <span key={audience} className="rounded-full bg-surface-amber px-4 py-2 text-sm font-medium text-surface-amber-foreground">{audience}</span>
           ))}
         </div>
-        <div className="mt-8"><a href={SIGNUP_URL}><Button>{t("nav.start")}</Button></a></div>
+        <div className="mt-8"><a href={SIGNUP_URL} target="_blank" rel="noreferrer"><Button>{t("nav.start")}</Button></a></div>
       </FadeSection>
       <div className="mt-16 -mx-4 sm:-mx-6 lg:-mx-8"><FinalCTA /></div>
     </div>

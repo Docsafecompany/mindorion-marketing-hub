@@ -42,7 +42,7 @@ function QualionPage() {
           </div>
         </div>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href={SIGNUP_URL}><Button size="lg">{t("nav.start")}</Button></a>
+          <a href={SIGNUP_URL} target="_blank" rel="noreferrer"><Button size="lg">{t("nav.start")}</Button></a>
           <Link to="/contact"><Button variant="outline" size="lg">{t("common.requestDemo")}</Button></Link>
         </div>
       </FadeSection>
@@ -80,7 +80,7 @@ function QualionPage() {
             {audiences.map((audience) => (
               <div key={audience} className="brand-badge rounded-full px-4 py-2 text-sm font-medium text-primary">{audience}</div>
             ))}
-            <div className="pt-4"><a href={SIGNUP_URL}><Button>{t("common.startFree")}</Button></a></div>
+            <div className="pt-4"><a href={SIGNUP_URL} target="_blank" rel="noreferrer"><Button>{t("common.startFree")}</Button></a></div>
           </CardContent>
         </Card>
       </FadeSection>
