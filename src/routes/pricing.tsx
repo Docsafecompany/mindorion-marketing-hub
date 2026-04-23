@@ -48,7 +48,7 @@ const enterprisePlan: Plan = {
   name: "Enterprise",
   description: "Suite complète — CRM, gouvernance et sécurité avancée inclus.",
   cta: "Demander une démo",
-  href: "mailto:contact@mindorion.com",
+  href: "/contact",
   enterprise: true,
   fixedNote: "Contrat annuel · Onboarding inclus",
   suiteCards: [
