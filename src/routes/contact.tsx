@@ -26,8 +26,9 @@ function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [productError, setProductError] = useState(false);
 
-  const mailtoBody = useMemo(
-    () => [
+  const mailtoHref = useMemo(() => {
+    const subject = `Demande de démo Mindorion — ${form.company || "Nouvelle entreprise"}`;
+    const body = [
       `Prénom: ${form.firstName}`,
       `Nom: ${form.lastName}`,
       `Email professionnel: ${form.email}`,
@@ -35,9 +36,10 @@ function ContactPage() {
       `Produits: ${selectedProducts.join(", ")}`,
       `Taille de l'équipe: ${form.teamSize || "Non précisée"}`,
       `Message: ${form.message || "Aucun message"}`,
-    ].join("\n"),
-    [form, selectedProducts],
-  );
+    ].join("\n");
+
+    return `mailto:contact@mindorion.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }, [form, selectedProducts]);
 
   return (
     <div className="editorial-page font-pricing">
@@ -92,9 +94,8 @@ function ContactPage() {
                 }
 
                 setProductError(false);
-                setSubmitted(true);
-                setForm({ firstName: "", lastName: "", email: "", company: "", teamSize: "", message: "" });
-                setSelectedProducts([]);
+                setSubmitted(false);
+                window.location.href = mailtoHref;
               }}
             >
               <div className="grid gap-4 sm:grid-cols-2">
