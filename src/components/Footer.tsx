@@ -39,7 +39,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="border-t border-border/80 bg-background">
       <div className="section-shell py-14">
         <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
           <div className="space-y-5">
@@ -47,10 +47,10 @@ export function Footer() {
             <p className="max-w-sm text-sm leading-6 text-muted-foreground">{t("footer.brandText")}</p>
             <div className="flex flex-wrap gap-3">
               <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
-                <Button variant="outline">{t("footer.linkedin")}</Button>
+                <Button variant="outline" className="border-border/80 bg-card/90">{t("footer.linkedin")}</Button>
               </a>
               <Link to="/contact">
-                <Button variant="outline">{t("footer.contact")}</Button>
+                <Button variant="outline" className="border-border/80 bg-card/90">{t("footer.contact")}</Button>
               </Link>
             </div>
           </div>
