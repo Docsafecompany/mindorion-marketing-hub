@@ -1,12 +1,8 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { useTranslation } from "react-i18next";
-import { toast } from "sonner";
 
-import { FadeSection } from "@/components/FadeSection";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { createStaticMeta } from "@/lib/site";
@@ -14,59 +10,201 @@ import { createStaticMeta } from "@/lib/site";
 export const Route = createFileRoute("/contact")({
   head: () =>
     createStaticMeta({
-      title: "Contact Mindorion — Demo and conversations",
-      description: "Talk to the Mindorion team about document quality, B2B outreach or operational governance needs.",
+      title: "Demander une démo | Mindorion",
+      description: "Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes — Qualion, ProspectIQ, GovernanceIQ. Sans engagement.",
       path: "/contact",
     }),
   component: ContactPage,
 });
 
+const productOptions = ["🛡 Qualion", "🎯 ProspectIQ", "📋 GovernanceIQ", "Suite complète"] as const;
+const teamSizes = ["1-5 personnes", "6-20 personnes", "21-100 personnes", "100+ personnes"] as const;
+
 function ContactPage() {
-  const { t } = useTranslation();
-  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", company: "", message: "" });
+  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", company: "", teamSize: "", message: "" });
+  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
+  const [submitted, setSubmitted] = useState(false);
+  const [productError, setProductError] = useState(false);
+
+  const mailtoBody = useMemo(
+    () => [
+      `Prénom: ${form.firstName}`,
+      `Nom: ${form.lastName}`,
+      `Email professionnel: ${form.email}`,
+      `Entreprise: ${form.company}`,
+      `Produits: ${selectedProducts.join(", ")}`,
+      `Taille de l'équipe: ${form.teamSize || "Non précisée"}`,
+      `Message: ${form.message || "Aucun message"}`,
+    ].join("\n"),
+    [form, selectedProducts],
+  );
 
   return (
-    <div className="section-shell section-space">
-      <SEOHead title={t("contact.seoTitle")} description={t("contact.seoDescription")} path="/contact" />
-      <FadeSection className="hero-wash max-w-4xl rounded-[28px] px-6 py-12 text-center">
-        <h1 className="text-[32px] font-bold leading-tight text-foreground md:text-[48px] lg:text-[56px]">{t("contact.title").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 0 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("contact.title").split(" ").length - 1 ? " " : ""}</span>)}</h1>
-        <p className="mx-auto mt-5 max-w-[600px] text-lg leading-8 text-muted-foreground">{t("contact.subtitle")}</p>
-      </FadeSection>
-      <FadeSection className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]" delay={0.1}>
-        <Card>
-          <CardContent className="p-6 sm:p-8">
+    <div className="editorial-page font-pricing">
+      <div className="section-shell section-space">
+        <SEOHead
+          title="Demander une démo | Mindorion"
+          description="Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes — Qualion, ProspectIQ, GovernanceIQ. Sans engagement."
+          path="/contact"
+        />
+
+        <div className="grid gap-10 lg:grid-cols-[0.45fr_0.55fr] lg:items-start">
+          <section>
+            <div className="text-xs font-bold uppercase tracking-[0.22em] editorial-purple-text">DEMANDER UNE DÉMO</div>
+            <h1 className="mt-4 text-balance text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">Parlons de votre projet.</h1>
+            <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
+              Nos experts vous présentent Mindorion en 30 minutes et répondent à toutes vos questions — produits, tarifs, intégrations.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              {[
+                ["⏱", "30 minutes", "Démo personnalisée selon votre métier"],
+                ["🎯", "Sans engagement", "Pas de pression commerciale"],
+                ["💬", "Réponse sous 24h", "Nous vous recontactons rapidement"],
+              ].map(([icon, title, text]) => (
+                <div key={title} className="flex items-start gap-4">
+                  <div className="editorial-purple-soft flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-semibold">{icon}</div>
+                  <div>
+                    <div className="text-base font-semibold text-foreground">{title}</div>
+                    <div className="text-sm leading-6 text-muted-foreground">{text}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="editorial-gray-soft mt-8 rounded-[10px] p-5">
+              <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">CONTACT DIRECT</div>
+              <a href="mailto:contact@mindorion.com" className="mt-3 inline-block text-lg font-semibold editorial-purple-text">
+                contact@mindorion.com
+              </a>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">Pour toute question sur les tarifs Enterprise ou les intégrations.</p>
+            </div>
+          </section>
+
+          <section className="editorial-card p-5 sm:p-6">
+            <h2 className="text-xl font-bold text-foreground">Vos informations</h2>
+
             <form
-              className="space-y-4"
+              className="mt-6 space-y-5"
               onSubmit={(event) => {
                 event.preventDefault();
-                toast.success(t("contact.successTitle"), { description: t("contact.successText") });
-                setForm({ firstName: "", lastName: "", email: "", company: "", message: "" });
+                if (selectedProducts.length === 0) {
+                  setProductError(true);
+                  return;
+                }
+
+                setProductError(false);
+                setSubmitted(true);
+                window.location.href = `mailto:contact@mindorion.com?subject=${encodeURIComponent("Demande de démo Mindorion")}&body=${encodeURIComponent(mailtoBody)}`;
+                setForm({ firstName: "", lastName: "", email: "", company: "", teamSize: "", message: "" });
+                setSelectedProducts([]);
               }}
             >
               <div className="grid gap-4 sm:grid-cols-2">
-                <Input placeholder={t("contact.fields.firstName")} value={form.firstName} onChange={(event) => setForm((prev) => ({ ...prev, firstName: event.target.value }))} required />
-                <Input placeholder={t("contact.fields.lastName")} value={form.lastName} onChange={(event) => setForm((prev) => ({ ...prev, lastName: event.target.value }))} required />
+                <label className="block text-sm font-medium text-foreground">
+                  Prénom *
+                  <Input
+                    value={form.firstName}
+                    onChange={(event) => setForm((prev) => ({ ...prev, firstName: event.target.value }))}
+                    placeholder="Votre prénom"
+                    className="editorial-input mt-2 h-10 border-0 shadow-none"
+                    required
+                  />
+                </label>
+                <label className="block text-sm font-medium text-foreground">
+                  Nom *
+                  <Input
+                    value={form.lastName}
+                    onChange={(event) => setForm((prev) => ({ ...prev, lastName: event.target.value }))}
+                    placeholder="Votre nom"
+                    className="editorial-input mt-2 h-10 border-0 shadow-none"
+                    required
+                  />
+                </label>
               </div>
-              <Input type="email" placeholder={t("contact.fields.email")} value={form.email} onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))} required />
-              <Input placeholder={t("contact.fields.company")} value={form.company} onChange={(event) => setForm((prev) => ({ ...prev, company: event.target.value }))} required />
-              <Textarea placeholder={t("contact.fields.message")} className="min-h-40" value={form.message} onChange={(event) => setForm((prev) => ({ ...prev, message: event.target.value }))} required />
-              <Button type="submit">{t("common.send")}</Button>
+
+              <label className="block text-sm font-medium text-foreground">
+                Email professionnel *
+                <Input
+                  type="email"
+                  value={form.email}
+                  onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
+                  placeholder="votre@entreprise.com"
+                  className="editorial-input mt-2 h-10 border-0 shadow-none"
+                  required
+                />
+              </label>
+
+              <label className="block text-sm font-medium text-foreground">
+                Entreprise *
+                <Input
+                  value={form.company}
+                  onChange={(event) => setForm((prev) => ({ ...prev, company: event.target.value }))}
+                  placeholder="Nom de votre entreprise"
+                  className="editorial-input mt-2 h-10 border-0 shadow-none"
+                  required
+                />
+              </label>
+
+              <div>
+                <div className="text-sm font-medium text-foreground">Produit(s) qui vous intéresse(nt) *</div>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {productOptions.map((product) => {
+                    const active = selectedProducts.includes(product);
+                    return (
+                      <button
+                        key={product}
+                        type="button"
+                        onClick={() => {
+                          setProductError(false);
+                          setSelectedProducts((prev) => (prev.includes(product) ? prev.filter((item) => item !== product) : [...prev, product]));
+                        }}
+                        className={active ? "rounded-full border border-[#534ab7] bg-[#eeedfe] px-4 py-2 text-sm font-semibold editorial-purple-text" : "rounded-full border border-[#e8e6e0] bg-white px-4 py-2 text-sm font-semibold text-muted-foreground"}
+                      >
+                        {product}
+                      </button>
+                    );
+                  })}
+                </div>
+                {productError ? <p className="mt-2 text-sm editorial-danger">Sélectionnez au moins un produit.</p> : null}
+              </div>
+
+              <label className="block text-sm font-medium text-foreground">
+                Taille de l'équipe
+                <select
+                  value={form.teamSize}
+                  onChange={(event) => setForm((prev) => ({ ...prev, teamSize: event.target.value }))}
+                  className="editorial-input mt-2 h-10 w-full text-sm text-foreground"
+                >
+                  <option value="">Sélectionner</option>
+                  {teamSizes.map((size) => (
+                    <option key={size} value={size}>
+                      {size}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="block text-sm font-medium text-foreground">
+                Votre message (optionnel)
+                <Textarea
+                  value={form.message}
+                  onChange={(event) => setForm((prev) => ({ ...prev, message: event.target.value }))}
+                  placeholder="Décrivez votre besoin..."
+                  className="editorial-input mt-2 min-h-[60px] border-0 shadow-none"
+                />
+              </label>
+
+              <Button type="submit" className="editorial-purple-bg h-11 w-full rounded-lg text-sm font-semibold text-white hover:opacity-95">
+                Envoyer ma demande →
+              </Button>
+
+              <p className="text-center text-sm text-muted-foreground">Nous vous recontactons sous 24h · Aucun engagement</p>
+              {submitted ? <p className="text-center text-sm editorial-success">Merci ! Nous vous recontactons sous 24 heures.</p> : null}
             </form>
-          </CardContent>
-        </Card>
-        <Card className="bg-muted/35">
-          <CardContent className="flex h-full flex-col justify-between gap-6 p-6 sm:p-8">
-            <div>
-              <div className="eyebrow">Contact</div>
-              <h2 className="mt-3 text-2xl font-bold text-foreground">{t("contact.direct")}</h2>
-              <a href="mailto:contact@mindorion.com" className="mt-4 inline-block text-lg font-semibold text-primary">contact@mindorion.com</a>
-            </div>
-            <p className="text-sm leading-6 text-muted-foreground">
-              Mindorion supports B2B teams that want stronger document quality, better outreach execution and operational governance without added complexity.
-            </p>
-          </CardContent>
-        </Card>
-      </FadeSection>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }

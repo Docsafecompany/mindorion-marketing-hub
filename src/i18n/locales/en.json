@@ -58,16 +58,12 @@
         "subtitle": "Articles, guides and professional advice"
       },
       {
-        "title": "Use Cases",
-        "subtitle": "Role-based use cases and applications"
-      },
-      {
-        "title": "À propos",
+        "title": "About",
         "subtitle": "Our mission, team and values"
       },
       {
-        "title": "Contact",
-        "subtitle": "contact@mindorion.com"
+        "title": "Request a demo →",
+        "subtitle": "Talk to a Mindorion expert"
       }
     ],
     "pricingSubtitle": "Starter · Pro · Business · Enterprise",

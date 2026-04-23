@@ -172,10 +172,8 @@ export function Navbar() {
   ];
 
   const resourceEntries: MenuEntry[] = [
-    { title: t("nav.resourceItems.0.title"), to: "/blog" },
-    { title: t("nav.resourceItems.1.title"), to: "/use-cases" },
-    { title: t("nav.resourceItems.2.title"), to: "/about" },
-    { title: t("nav.resourceItems.3.title"), href: `mailto:${t("site.contactEmail")}` },
+    { title: t("nav.resourceItems.0.title"), subtitle: t("nav.resourceItems.0.subtitle"), to: "/blog" },
+    { title: t("nav.resourceItems.1.title"), subtitle: t("nav.resourceItems.1.subtitle"), to: "/about" },
   ];
 
   return (
@@ -226,7 +224,16 @@ export function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.resources")}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <NavPanel label={t("nav.resourcesLabel")} items={resourceEntries} />
+                  <NavPanel
+                    label={t("nav.resourcesLabel")}
+                    items={resourceEntries}
+                    footer={{
+                      title: t("nav.resourceItems.2.title"),
+                      subtitle: t("nav.resourceItems.2.subtitle"),
+                      to: "/contact",
+                      accentTitle: true,
+                    }}
+                  />
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -311,19 +318,22 @@ export function Navbar() {
                     <AccordionTrigger>{t("nav.resources")}</AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-2">
-                        {resourceEntries.map((item) =>
-                          item.href ? (
-                            <a key={item.title} href={item.href} className="block rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted/60">
-                              {item.title}
-                            </a>
-                          ) : (
-                            <SheetClose asChild key={item.title}>
-                              <Link to={item.to!} className="block rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted/60">
-                                {item.title}
-                              </Link>
-                            </SheetClose>
-                          ),
-                        )}
+                        {resourceEntries.map((item) => (
+                          <SheetClose asChild key={item.title}>
+                            <Link to={item.to!} className="block rounded-lg px-3 py-3 hover:bg-muted/60">
+                              <div className="text-sm font-semibold">{item.title}</div>
+                              {item.subtitle ? <div className="text-sm text-muted-foreground">{item.subtitle}</div> : null}
+                            </Link>
+                          </SheetClose>
+                        ))}
+                        <div className="border-t border-border/80 pt-2">
+                          <SheetClose asChild>
+                            <Link to="/contact" className="block rounded-lg px-3 py-3 hover:bg-muted/60">
+                              <div className="text-sm font-semibold text-primary">{t("nav.resourceItems.2.title")}</div>
+                              <div className="text-sm text-muted-foreground">{t("nav.resourceItems.2.subtitle")}</div>
+                            </Link>
+                          </SheetClose>
+                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
