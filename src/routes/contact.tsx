@@ -204,7 +204,6 @@ function ContactPage() {
             </form>
           </section>
         </div>
-      </FadeSection>
       </div>
     </div>
   );
