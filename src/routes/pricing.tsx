@@ -16,13 +16,13 @@ type ProductId = "qualion" | "prospectiq";
 
 const PAYMENT_LINKS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> = {
   qualion: {
-    starter:  { monthly: "https://buy.stripe.com/3cI4g8c8u29Capw4w7bAs02", annual: "https://buy.stripe.com/dRm8wRegCbKceFM1jVbAs03" },
+    starter:  { monthly: "https://buy.stripe.com/3cI4gBc8u29Capw4w7bAs02", annual: "https://buy.stripe.com/dRm8wRegCbKceFM1jVbAs03" },
     pro:      { monthly: "https://buy.stripe.com/14AeVf5K6cOgcxEaUvbAs00", annual: "https://buy.stripe.com/4gMfZjc8u6pSgNU5AbbAs01" },
     business: { monthly: "https://buy.stripe.com/eVq28tgoK29C55c1jVbAs04", annual: "https://buy.stripe.com/00w14p4G2g0sdBI6EfbAs05" },
   },
   prospectiq: {
-    starter:  { monthly: "https://buy.stripe.com/eVqdRb5K629CcxE8MnbAs0a", annual: "https://buy.stripe.com/28E4gB4G25l069g0fRbAs0b" },
-    pro:      { monthly: "https://buy.stripe.com/cNi6oJegCaG87dk9QrbAs08", annual: "https://buy.stripe.com/7sYcN7dcyc0gcxE5AbbAs09" },
+    starter:  { monthly: "https://buy.stripe.com/eVqdRb5K629CcxE8MnbAs0a", annual: "https://buy.stripe.com/28E4gB4G25lO69g0fRbAs0b" },
+    pro:      { monthly: "https://buy.stripe.com/cNi6oJegCaG87dk9QrbAs08", annual: "https://buy.stripe.com/7sYcN7dcycOgcxE5AbbAs09" },
     business: { monthly: "https://buy.stripe.com/fZufZj4G29C455c0fRbAs06", annual: "https://buy.stripe.com/7sYdRb8WiaG8dBI3s3bAs07" },
   },
 };
