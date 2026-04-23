@@ -17,14 +17,6 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import {
   Sheet,
   SheetClose,
   SheetContent,
@@ -70,7 +62,7 @@ function NavPanel({ label, items, footer }: { label: string; items: MenuEntry[];
           );
 
           return (
-            <NavigationMenuLink asChild key={item.title}>
+            <div key={item.title}>
               {item.href ? (
                 <a href={item.href} className="flex items-start gap-3 rounded-lg px-3 py-3 transition-colors hover:bg-muted/70">
                   {content}
@@ -84,31 +76,29 @@ function NavPanel({ label, items, footer }: { label: string; items: MenuEntry[];
                   {content}
                 </Link>
               )}
-            </NavigationMenuLink>
+            </div>
           );
         })}
       </div>
       {footer ? (
         <div className="mt-3 border-t border-border/80 pt-3">
-          <NavigationMenuLink asChild>
-            {footer.href ? (
-              <a href={footer.href} className="flex items-start gap-3 rounded-lg px-3 py-3 transition-colors hover:bg-muted/70">
-                {footer.icon}
-                <div className="space-y-1">
-                  <div className={cn("text-sm font-semibold text-foreground", footer.accentTitle && "text-primary")}>{footer.title}</div>
-                  {footer.subtitle ? <div className="text-sm text-muted-foreground">{footer.subtitle}</div> : null}
-                </div>
-              </a>
-            ) : (
-               <Link to={footer.to!} hash={footer.hash ? `#${footer.hash}` : undefined} className="flex items-start gap-3 rounded-lg px-3 py-3 transition-colors hover:bg-muted/70">
-                {footer.icon}
-                <div className="space-y-1">
-                  <div className={cn("text-sm font-semibold text-foreground", footer.accentTitle && "text-primary")}>{footer.title}</div>
-                  {footer.subtitle ? <div className="text-sm text-muted-foreground">{footer.subtitle}</div> : null}
-                </div>
-              </Link>
-            )}
-          </NavigationMenuLink>
+          {footer.href ? (
+            <a href={footer.href} className="flex items-start gap-3 rounded-lg px-3 py-3 transition-colors hover:bg-muted/70">
+              {footer.icon}
+              <div className="space-y-1">
+                <div className={cn("text-sm font-semibold text-foreground", footer.accentTitle && "text-primary")}>{footer.title}</div>
+                {footer.subtitle ? <div className="text-sm text-muted-foreground">{footer.subtitle}</div> : null}
+              </div>
+            </a>
+          ) : (
+             <Link to={footer.to!} hash={footer.hash ? `#${footer.hash}` : undefined} className="flex items-start gap-3 rounded-lg px-3 py-3 transition-colors hover:bg-muted/70">
+              {footer.icon}
+              <div className="space-y-1">
+                <div className={cn("text-sm font-semibold text-foreground", footer.accentTitle && "text-primary")}>{footer.title}</div>
+                {footer.subtitle ? <div className="text-sm text-muted-foreground">{footer.subtitle}</div> : null}
+              </div>
+            </Link>
+          )}
         </div>
       ) : null}
     </div>
@@ -118,6 +108,7 @@ function NavPanel({ label, items, footer }: { label: string; items: MenuEntry[];
 export function Navbar() {
   const { t, i18n } = useTranslation();
   const [open, setOpen] = useState(false);
+  const [activeDesktopMenu, setActiveDesktopMenu] = useState<"products" | "solutions" | "resources" | null>(null);
   const current = (i18n.language?.slice(0, 2) === "fr" ? "fr" : "en") as SiteLanguage;
   const nextLanguage: SiteLanguage = current === "fr" ? "en" : "fr";
 
@@ -186,11 +177,11 @@ export function Navbar() {
         </Link>
 
         <div className="hidden flex-1 justify-center lg:flex">
-          <NavigationMenu>
-            <NavigationMenuList className="gap-1">
-              <NavigationMenuItem className="relative">
-                <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.products")}</NavigationMenuTrigger>
-                <NavigationMenuContent className="md:left-0 md:-translate-x-0">
+          <div className="flex items-center gap-1" onMouseLeave={() => setActiveDesktopMenu(null)}>
+            <div className="relative">
+              <button className="inline-flex h-9 items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/70 hover:text-primary" onFocus={() => setActiveDesktopMenu("products")} onMouseEnter={() => setActiveDesktopMenu("products")}>{t("nav.products")}</button>
+              {activeDesktopMenu === "products" ? (
+                <div className="absolute left-0 top-full pt-2">
                   <NavPanel
                     label={t("nav.productsLabel")}
                     items={productEntries}
@@ -202,27 +193,27 @@ export function Navbar() {
                       icon: <IconTile className="bg-surface-neutral text-surface-neutral-foreground"><CreditCard className="h-4 w-4" /></IconTile>,
                     }}
                   />
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+                </div>
+              ) : null}
+            </div>
 
-              <NavigationMenuItem className="relative">
-                <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.solutions")}</NavigationMenuTrigger>
-                <NavigationMenuContent className="md:left-0 md:-translate-x-0">
+            <div className="relative">
+              <button className="inline-flex h-9 items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/70 hover:text-primary" onFocus={() => setActiveDesktopMenu("solutions")} onMouseEnter={() => setActiveDesktopMenu("solutions")}>{t("nav.solutions")}</button>
+              {activeDesktopMenu === "solutions" ? (
+                <div className="absolute left-0 top-full pt-2">
                   <NavPanel label={t("nav.solutionsLabel")} items={solutionEntries} />
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+                </div>
+              ) : null}
+            </div>
 
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link to="/pricing" className="inline-flex h-9 items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/70 hover:text-primary">
-                    {t("nav.pricing")}
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
+            <Link to="/pricing" className="inline-flex h-9 items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/70 hover:text-primary">
+              {t("nav.pricing")}
+            </Link>
 
-              <NavigationMenuItem className="relative">
-                <NavigationMenuTrigger className="bg-transparent hover:text-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">{t("nav.resources")}</NavigationMenuTrigger>
-                <NavigationMenuContent className="md:left-0 md:-translate-x-0">
+            <div className="relative">
+              <button className="inline-flex h-9 items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/70 hover:text-primary" onFocus={() => setActiveDesktopMenu("resources")} onMouseEnter={() => setActiveDesktopMenu("resources")}>{t("nav.resources")}</button>
+              {activeDesktopMenu === "resources" ? (
+                <div className="absolute left-0 top-full pt-2">
                   <NavPanel
                     label={t("nav.resourcesLabel")}
                     items={resourceEntries}
@@ -233,10 +224,10 @@ export function Navbar() {
                       accentTitle: true,
                     }}
                   />
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+                </div>
+              ) : null}
+            </div>
+          </div>
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
