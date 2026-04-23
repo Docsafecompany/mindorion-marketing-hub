@@ -100,7 +100,7 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
                 variant="outline"
                 className="rounded-xl border-white/12 bg-transparent text-white shadow-none hover:bg-white/5 hover:text-white"
               >
-                <Link to="/pricing">Voir les tarifs</Link>
+                <a href="/pricing">Voir les tarifs</a>
               </Button>
             </div>
           </div>
