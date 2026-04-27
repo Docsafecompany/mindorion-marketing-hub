@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 
 type PlanId = "starter" | "pro" | "business";
 type ProductId = "qualion" | "prospectiq";
+type BillingMode = "monthly" | "annual";
 
 const PAYMENT_LINKS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> = {
   qualion: {
