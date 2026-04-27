@@ -4,6 +4,8 @@ import { ArrowRight, Check, Minus } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import i18n from "@/i18n";
+import { GovernanceIQChip } from "@/components/pricing/GovernanceIQChip";
+import { type GovernancePlan } from "@/components/pricing/GovernanceIQModal";
 import { ProductLogo } from "@/components/ProductLogo";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
