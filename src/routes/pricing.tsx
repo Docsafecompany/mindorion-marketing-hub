@@ -28,7 +28,6 @@ const PAYMENT_LINKS: Record<ProductId, Record<PlanId, Record<BillingMode, string
   },
 };
 
-type BillingMode = "monthly" | "annual";
 type PlanColumn = "starter" | "pro" | "business" | "enterprise";
 type LocalizedPlan = {
   label: string;
