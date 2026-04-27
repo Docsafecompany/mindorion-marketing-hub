@@ -718,8 +718,20 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
   const isEnterprise = Boolean(plan.enterprise);
   const isFeatured = Boolean(plan.featured);
   const isStandardPlan = !isEnterprise;
-  const priceNote = isEnterprise ? plan.fixedNote : billing === "annual" ? plan.annualNote : undefined;
+  const priceNote = isEnterprise
+    ? plan.fixedNote
+    : billing === "annual"
+      ? plan.annualNote
+      : plan.fixedNote;
   const priceValue = isEnterprise ? customLabel : billing === "monthly" ? plan.monthlyPrice : plan.annualPrice;
+
+  const governancePlanMap: Record<string, GovernancePlan> = {
+    Starter: "starter",
+    Pro: "pro",
+    Business: "business",
+    Enterprise: "enterprise",
+  };
+  const governancePlan = governancePlanMap[plan.name];
 
   const planIdMap: Record<string, PlanId> = { Starter: "starter", Pro: "pro", Business: "business" };
   const stripePlanId = planIdMap[plan.name];
@@ -765,6 +777,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
               </Button>
             </a>
           ) : null}
+          {governancePlan ? <GovernanceIQChip plan={governancePlan} /> : null}
         </div>
       </div>
 
