@@ -4,6 +4,8 @@ import { ArrowRight, Check, Minus } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import i18n from "@/i18n";
+import { GovernanceIQChip } from "@/components/pricing/GovernanceIQChip";
+import { type GovernancePlan } from "@/components/pricing/GovernanceIQModal";
 import { ProductLogo } from "@/components/ProductLogo";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
@@ -13,6 +15,7 @@ import { cn } from "@/lib/utils";
 
 type PlanId = "starter" | "pro" | "business";
 type ProductId = "qualion" | "prospectiq";
+type BillingMode = "monthly" | "annual";
 
 const PAYMENT_LINKS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> = {
   qualion: {
@@ -27,7 +30,6 @@ const PAYMENT_LINKS: Record<ProductId, Record<PlanId, Record<BillingMode, string
   },
 };
 
-type BillingMode = "monthly" | "annual";
 type PlanColumn = "starter" | "pro" | "business" | "enterprise";
 type LocalizedPlan = {
   label: string;
@@ -90,9 +92,10 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             label: "POINT D'ENTRÉE",
             name: "Starter",
             description: "Pour les indépendants qui démarrent.",
-            monthlyPrice: "19€/user/mois",
-            annualPrice: "228€/user/an",
-            annualNote: "soit 15€/mois · −20%",
+            monthlyPrice: "19€/mois",
+            annualPrice: "228€/an",
+            annualNote: "1 utilisateur · soit 15€/mois · −20%",
+            fixedNote: "1 utilisateur · facturation mensuelle",
             cta: "Choisir Starter",
             href: "/pricing",
             sections: [
@@ -115,9 +118,10 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             label: "ÉQUIPES SALES",
             name: "Pro",
             description: "Pour les consultants et équipes actifs.",
-            monthlyPrice: "39€/user/mois",
-            annualPrice: "468€/user/an",
-            annualNote: "soit 31€/mois · −20%",
+            monthlyPrice: "39€/mois",
+            annualPrice: "468€/an",
+            annualNote: "1 utilisateur · soit 31€/mois · −20%",
+            fixedNote: "1 utilisateur · facturation mensuelle",
             cta: "Choisir Pro",
             href: "/pricing",
             featured: true,
@@ -141,7 +145,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             description: "Pour les équipes structurées.",
             monthlyPrice: "59€/user/mois",
             annualPrice: "708€/user/an",
-            annualNote: "soit 47€/mois · −20%",
+            annualNote: "Jusqu'à 5 utilisateurs · soit 47€/mois · −20%",
+            fixedNote: "Jusqu'à 5 utilisateurs · facturation mensuelle",
             cta: "Choisir Business",
             href: "/pricing",
             sections: [
@@ -366,9 +371,10 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             label: "ENTRY PLAN",
             name: "Starter",
             description: "For independent professionals getting started.",
-            monthlyPrice: "€19/user/month",
-            annualPrice: "€228/user/year",
-            annualNote: "or €15/month · −20%",
+            monthlyPrice: "€19/month",
+            annualPrice: "€228/year",
+            annualNote: "1 user · or €15/month · −20%",
+            fixedNote: "1 user · billed monthly",
             cta: "Choose Starter",
             href: "/pricing",
             sections: [
@@ -391,9 +397,10 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             label: "SALES TEAMS",
             name: "Pro",
             description: "For consultants and active teams.",
-            monthlyPrice: "€39/user/month",
-            annualPrice: "€468/user/year",
-            annualNote: "or €31/month · −20%",
+            monthlyPrice: "€39/month",
+            annualPrice: "€468/year",
+            annualNote: "1 user · or €31/month · −20%",
+            fixedNote: "1 user · billed monthly",
             cta: "Choose Pro",
             href: "/pricing",
             featured: true,
@@ -417,7 +424,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             description: "For structured teams.",
             monthlyPrice: "€59/user/month",
             annualPrice: "€708/user/year",
-            annualNote: "or €47/month · −20%",
+            annualNote: "Up to 5 users · or €47/month · −20%",
+            fixedNote: "Up to 5 users · billed monthly",
             cta: "Choose Business",
             href: "/pricing",
             sections: [
@@ -710,8 +718,20 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
   const isEnterprise = Boolean(plan.enterprise);
   const isFeatured = Boolean(plan.featured);
   const isStandardPlan = !isEnterprise;
-  const priceNote = isEnterprise ? plan.fixedNote : billing === "annual" ? plan.annualNote : undefined;
+  const priceNote = isEnterprise
+    ? plan.fixedNote
+    : billing === "annual"
+      ? plan.annualNote
+      : plan.fixedNote;
   const priceValue = isEnterprise ? customLabel : billing === "monthly" ? plan.monthlyPrice : plan.annualPrice;
+
+  const governancePlanMap: Record<string, GovernancePlan> = {
+    Starter: "starter",
+    Pro: "pro",
+    Business: "business",
+    Enterprise: "enterprise",
+  };
+  const governancePlan = governancePlanMap[plan.name];
 
   const planIdMap: Record<string, PlanId> = { Starter: "starter", Pro: "pro", Business: "business" };
   const stripePlanId = planIdMap[plan.name];
@@ -757,6 +777,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
               </Button>
             </a>
           ) : null}
+          {governancePlan ? <GovernanceIQChip plan={governancePlan} /> : null}
         </div>
       </div>
 
