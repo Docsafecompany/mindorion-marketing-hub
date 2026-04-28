@@ -44,7 +44,7 @@ type LocalizedPlan = {
   enterprise?: boolean;
   fixedNote?: string;
   suiteCards?: Array<{ icon: string; title: string; description: string }>;
-  sections?: Array<{ title: string; items: Array<{ label: string; included: boolean }> }>;
+  sections?: Array<{ title: string; items: Array<{ label: string; included: boolean | "partial"; note?: string }> }>;
 };
 type LocalizedProduct = {
   key: "qualion" | "prospectiq";
@@ -236,7 +236,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               {
                 title: "INCLUS",
                 items: [
-                  { label: "Prospects illimités", included: true },
+                  { label: "Prospects qualifiés illimités", included: true },
                   { label: "Qualification IA", included: true },
                   { label: "Intelligence Flags", included: true },
                   { label: "Séquences simples", included: true },
@@ -287,7 +287,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
                   { label: "API + webhooks", included: true },
                   { label: "Accès multi-équipes", included: true },
                   { label: "Support prioritaire dédié", included: true },
-                  { label: "Intégrations CRM", included: false },
+                  { label: "Intégrations CRM", included: "partial", note: "Lecture / push sans sync" },
                 ],
               },
             ],
@@ -515,7 +515,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               {
                 title: "INCLUDED",
                 items: [
-                  { label: "Unlimited prospects", included: true },
+                  { label: "Unlimited qualified prospects", included: true },
                   { label: "AI qualification", included: true },
                   { label: "Intelligence Flags", included: true },
                   { label: "Basic sequences", included: true },
@@ -566,7 +566,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
                   { label: "API + webhooks", included: true },
                   { label: "Multi-team access", included: true },
                   { label: "Dedicated priority support", included: true },
-                  { label: "CRM integrations", included: false },
+                  { label: "CRM integrations", included: "partial", note: "Read / push without sync" },
                 ],
               },
             ],
@@ -804,7 +804,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
             <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{section.title}</div>
             <ul className="mt-3 space-y-2.5 text-sm text-foreground">
               {section.items.map((item) => (
-                <FeaturePill key={item.label} enterprise={isEnterprise} included={item.included} label={item.label} />
+                <FeaturePill key={item.label} enterprise={isEnterprise} included={item.included} label={item.label} note={item.note} />
               ))}
             </ul>
           </div>
@@ -814,19 +814,29 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
   );
 }
 
-function FeaturePill({ enterprise, included, label }: { enterprise?: boolean; included: boolean; label: string }) {
+function FeaturePill({ enterprise, included, label, note }: { enterprise?: boolean; included: boolean | "partial"; label: string; note?: string }) {
+  const isPartial = included === "partial";
+  const isIncluded = included === true;
+
   const iconWrapper = enterprise
     ? "bg-[var(--color-pricing-primary-soft)] text-[var(--color-pricing-primary)]"
-    : included
-      ? "bg-[var(--color-pricing-success-soft)] text-[var(--color-pricing-success)]"
-      : "bg-[var(--color-pricing-dash-soft)] text-[var(--color-pricing-dash)]";
+    : isPartial
+      ? "bg-amber-100 text-amber-600"
+      : isIncluded
+        ? "bg-[var(--color-pricing-success-soft)] text-[var(--color-pricing-success)]"
+        : "bg-[var(--color-pricing-dash-soft)] text-[var(--color-pricing-dash)]";
+
+  const Icon = isPartial ? Minus : isIncluded ? Check : Minus;
 
   return (
-    <li className={cn("flex items-start gap-3", !included && !enterprise && "text-muted-foreground")}>
+    <li className={cn("flex items-start gap-3", !isIncluded && !isPartial && !enterprise && "text-muted-foreground")}>
       <span className={cn("mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full", iconWrapper)}>
-        {included ? <Check className="h-3.5 w-3.5" /> : <Minus className="h-3.5 w-3.5" />}
+        <Icon className="h-3.5 w-3.5" />
       </span>
-      <span>{label}</span>
+      <span className="flex-1">
+        {label}
+        {note ? <span className="block text-xs text-muted-foreground mt-0.5">{note}</span> : null}
+      </span>
     </li>
   );
 }
