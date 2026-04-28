@@ -515,7 +515,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               {
                 title: "INCLUDED",
                 items: [
-                  { label: "Unlimited prospects", included: true },
+                  { label: "Unlimited qualified prospects", included: true },
                   { label: "AI qualification", included: true },
                   { label: "Intelligence Flags", included: true },
                   { label: "Basic sequences", included: true },
