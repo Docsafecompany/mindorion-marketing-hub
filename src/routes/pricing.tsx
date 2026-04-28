@@ -566,7 +566,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
                   { label: "API + webhooks", included: true },
                   { label: "Multi-team access", included: true },
                   { label: "Dedicated priority support", included: true },
-                  { label: "CRM integrations", included: false },
+                  { label: "CRM integrations", included: "partial", note: "Read / push without sync" },
                 ],
               },
             ],
