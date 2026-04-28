@@ -287,7 +287,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
                   { label: "API + webhooks", included: true },
                   { label: "Accès multi-équipes", included: true },
                   { label: "Support prioritaire dédié", included: true },
-                  { label: "Intégrations CRM", included: false },
+                  { label: "Intégrations CRM", included: "partial", note: "Lecture / push sans sync" },
                 ],
               },
             ],
