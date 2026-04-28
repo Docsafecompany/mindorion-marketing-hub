@@ -44,7 +44,7 @@ type LocalizedPlan = {
   enterprise?: boolean;
   fixedNote?: string;
   suiteCards?: Array<{ icon: string; title: string; description: string }>;
-  sections?: Array<{ title: string; items: Array<{ label: string; included: boolean }> }>;
+  sections?: Array<{ title: string; items: Array<{ label: string; included: boolean | "partial"; note?: string }> }>;
 };
 type LocalizedProduct = {
   key: "qualion" | "prospectiq";
