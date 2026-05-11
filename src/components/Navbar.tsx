@@ -70,7 +70,7 @@ function NavPanel({ label, items, footer }: { label: string; items: MenuEntry[];
               ) : (
                  <Link
                    to={item.to!}
-                   hash={item.hash ? `#${item.hash}` : undefined}
+                   hash={item.hash}
                    className="flex items-start gap-3 rounded-lg px-3 py-3 transition-colors hover:bg-muted/70"
                  >
                   {content}
@@ -91,7 +91,7 @@ function NavPanel({ label, items, footer }: { label: string; items: MenuEntry[];
               </div>
             </a>
           ) : (
-             <Link to={footer.to!} hash={footer.hash ? `#${footer.hash}` : undefined} className="flex items-start gap-3 rounded-lg px-3 py-3 transition-colors hover:bg-muted/70">
+             <Link to={footer.to!} hash={footer.hash} className="flex items-start gap-3 rounded-lg px-3 py-3 transition-colors hover:bg-muted/70">
               {footer.icon}
               <div className="space-y-1">
                 <div className={cn("text-sm font-semibold text-foreground", footer.accentTitle && "text-primary")}>{footer.title}</div>
