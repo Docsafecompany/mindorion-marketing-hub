@@ -758,5 +758,192 @@
   "notFound": {
     "title": "Page introuvable",
     "text": "La page demandée n'existe pas ou a été déplacée."
+  },
+  "usecasesPage": {
+    "eyebrow": "CAS D'USAGE",
+    "title": "Comment les professionnels B2B utilisent Mindorion",
+    "subtitle": "Que vous soyez consultant, commercial, recruteur ou ingénieur — Mindorion détecte ce que vous ne voyez pas, trouve vos prochains clients et garantit votre conformité.",
+    "ctaTitle": "Prêt à opérer au plus haut niveau ?",
+    "ctaText": "Commencez avec Qualion. Ajoutez ProspectIQ. Gouvernez avec GovernanceIQ.",
+    "ctaButton": "Voir les tarifs",
+    "tabs": {
+      "consultants": "Consultants & Indépendants",
+      "sales": "Équipes Sales & Avant-vente",
+      "rh": "RH & Recrutement",
+      "esn": "ESN & Ingénierie"
+    },
+    "personas": {
+      "consultants": {
+        "badge": "💼 CONSULTANT & INDÉPENDANT",
+        "title": "Votre réputation professionnelle est en jeu à chaque document envoyé.",
+        "text": "En tant que consultant, vous n'avez pas de service qualité derrière vous. Une proposition avec des métadonnées internes, un commentaire oublié ou un placeholder non remplacé — et votre crédibilité prend un coup. Mindorion vous couvre à chaque étape.",
+        "tools": [
+          { "name": "Qualion", "text": "Vérifie chaque proposition avant envoi client" },
+          { "name": "ProspectIQ", "text": "Identifie vos prochains clients dans votre secteur" }
+        ],
+        "mocks": [
+          {
+            "title": "Proposal_ClientABC_v3.docx",
+            "badge": "34/100",
+            "items": [
+              "Auteur interne visible dans les propriétés",
+              "3 commentaires de révision cachés",
+              "Placeholder [NOM CLIENT] non remplacé"
+            ]
+          },
+          {
+            "title": "Proposal_ClientABC_final.docx",
+            "badge": "98/100",
+            "items": ["Document nettoyé · Prêt à envoyer"]
+          }
+        ],
+        "scenarios": [
+          {
+            "tool": "Qualion",
+            "title": "Proposition commerciale avant envoi",
+            "text": "Qualion analyse votre proposition en 30 secondes. Métadonnées, commentaires, données sensibles, ton IA — tout est détecté avant que votre client ouvre le fichier.",
+            "result": "Réputation protégée · Crédibilité intacte"
+          },
+          {
+            "tool": "Qualion",
+            "title": "Livrables et rapports de mission",
+            "text": "Chaque livrable envoyé en fin de mission est vérifié. Plus de risque de laisser traîner des commentaires internes ou l'historique de révision visible par le client final.",
+            "result": "Livrables professionnels · Client rassuré"
+          },
+          {
+            "tool": "ProspectIQ",
+            "title": "Développement de votre réseau clients",
+            "text": "ProspectIQ identifie les décideurs dans votre secteur cible, qualifie les opportunités et génère des séquences d'outreach personnalisées pour développer votre portefeuille.",
+            "result": "Pipeline alimenté · Moins de prospection manuelle"
+          }
+        ]
+      },
+      "sales": {
+        "badge": "📈 ÉQUIPES SALES & AVANT-VENTE",
+        "title": "Chaque offre envoyée doit être parfaite. Chaque prospect doit être le bon.",
+        "text": "En avant-vente, une offre avec un prix de revient visible dans le suivi des modifications peut vous coûter un deal. Un prospect mal qualifié vous coûte des semaines. Mindorion élimine ces deux risques.",
+        "tools": [
+          { "name": "Qualion", "text": "Vérifie RFP, offres et proposals avant soumission" },
+          { "name": "ProspectIQ", "text": "Qualifie et contacte les bons décideurs" }
+        ],
+        "pipelineLabel": "Prospects qualifiés",
+        "leads": [
+          { "initials": "DL", "role": "Directeur Commercial · Pharma", "city": "Lyon", "score": "94%" },
+          { "initials": "VP", "role": "VP Achats · Aérospatial", "city": "Toulouse", "score": "88%" },
+          { "initials": "DG", "role": "DG · Cabinet conseil", "city": "Paris", "score": "81%" }
+        ],
+        "scenarios": [
+          {
+            "tool": "Qualion",
+            "title": "Réponse à appel d'offres (RFP/RFQ)",
+            "text": "Avant de soumettre une réponse à appel d'offres, Qualion vérifie que votre marge n'est pas visible dans le suivi des modifications et qu'aucun commentaire interne ne traîne dans le document.",
+            "result": "Marge protégée · Offre professionnelle"
+          },
+          {
+            "tool": "ProspectIQ",
+            "title": "Identification des décideurs clés",
+            "text": "ProspectIQ identifie les bons interlocuteurs dans vos comptes cibles — DAF, DSI, DG, Directeurs achats — et génère des séquences d'approche adaptées à chaque profil.",
+            "result": "Bon contact · Bon moment · Bon message"
+          },
+          {
+            "tool": "ProspectIQ",
+            "title": "Outreach multi-canal automatisé",
+            "text": "Créez des séquences d'outreach personnalisées — email, LinkedIn, appel — et laissez ProspectIQ gérer le suivi automatiquement pour maximiser vos taux de réponse.",
+            "result": "Taux de réponse en hausse · Moins de relances manuelles"
+          }
+        ]
+      },
+      "rh": {
+        "badge": "👥 RH & RECRUTEMENT",
+        "title": "Chaque dossier envoyé engage votre responsabilité professionnelle.",
+        "text": "En recrutement, envoyer un CV avec les notes de disqualification d'un candidat précédent, ou un contrat avec des données personnelles non supprimées, peut avoir des conséquences légales. Qualion et GovernanceIQ vous protègent.",
+        "tools": [
+          { "name": "Qualion", "text": "Vérifie CVs, contrats et NDAs avant envoi" },
+          { "name": "GovernanceIQ", "text": "Conformité RGPD des dossiers candidats" }
+        ],
+        "mocks": [
+          {
+            "title": "CV_Candidat_Martin.docx",
+            "badge": "Risque RGPD",
+            "items": [
+              "Notes de disqualification visibles",
+              "Données personnelles précédent candidat",
+              "Historique de modifications actif"
+            ]
+          },
+          {
+            "title": "CV_Candidat_Martin_final.docx",
+            "badge": "Conforme RGPD",
+            "items": ["Document nettoyé · Données vérifiées"]
+          }
+        ],
+        "scenarios": [
+          {
+            "tool": "Qualion",
+            "title": "CVs et dossiers candidats",
+            "text": "Qualion détecte les données personnelles résiduelles, les commentaires de traitement et les notes internes avant qu'un CV ou un dossier candidat ne soit transmis à un client ou un manager.",
+            "result": "Conformité RGPD · Candidat protégé"
+          },
+          {
+            "tool": "Qualion",
+            "title": "Contrats et NDAs",
+            "text": "Avant signature, Qualion vérifie que les contrats de travail et NDAs ne contiennent pas de données résiduelles d'un précédent contrat — un risque juridique souvent sous-estimé.",
+            "result": "Risque juridique éliminé · Contrat propre"
+          },
+          {
+            "tool": "GovernanceIQ",
+            "title": "Conformité RGPD à l'échelle équipe",
+            "text": "GovernanceIQ garantit que toute l'équipe RH applique les mêmes politiques documentaires — rétention des données, anonymisation, audit trail — sans effort de supervision.",
+            "result": "Équipe conforme · Audit simplifié"
+          }
+        ]
+      },
+      "esn": {
+        "badge": "⚙️ ESN & INGÉNIERIE",
+        "title": "Des documents techniques à enjeux élevés. Zéro droit à l'erreur.",
+        "text": "En ESN, chaque SOW, cahier des charges ou spécification technique engage votre société. Un document distribué à 12 clients avec l'historique interne encore actif peut vous coûter un contrat. Mindorion couvre toute la chaîne.",
+        "tools": [
+          { "name": "Qualion", "text": "SOW, specs techniques, dossiers projets" },
+          { "name": "ProspectIQ", "text": "Développement commercial grands comptes" },
+          { "name": "GovernanceIQ", "text": "Conformité documentaire inter-équipes" }
+        ],
+        "mocks": [
+          {
+            "title": "SOW_Projet_Technique_v2.docx",
+            "badge": "41/100",
+            "items": [
+              "Historique : 9 versions avec feedback interne",
+              "Données tarifaires dans le suivi",
+              "Auteur de l'entreprise précédente"
+            ]
+          },
+          {
+            "title": "SOW_Projet_Technique_final.docx",
+            "badge": "97/100",
+            "items": ["Prêt à distribuer aux 12 clients"]
+          }
+        ],
+        "scenarios": [
+          {
+            "tool": "Qualion",
+            "title": "Distribution de documents techniques",
+            "text": "Avant de distribuer un SOW ou des specs à plusieurs clients, Qualion supprime l'historique interne, les commentaires et les données tarifaires confidentielles en une passe.",
+            "result": "Fuite de données évitée · Document propre"
+          },
+          {
+            "tool": "ProspectIQ",
+            "title": "Développement grands comptes",
+            "text": "ProspectIQ identifie les DSI, CTO et directeurs techniques dans vos secteurs cibles (industrie, défense, pharma) et construit des séquences d'approche adaptées aux cycles longs.",
+            "result": "Grands comptes ciblés · Cycle raccourci"
+          },
+          {
+            "tool": "GovernanceIQ",
+            "title": "Conformité documentaire multi-équipes",
+            "text": "GovernanceIQ centralise les politiques documentaires pour toutes vos équipes projet — chefs de projet, consultants, développeurs — et garantit l'uniformité des standards.",
+            "result": "Équipes alignées · Audits simplifiés"
+          }
+        ]
+      }
+    }
   }
 }
