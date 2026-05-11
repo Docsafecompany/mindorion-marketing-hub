@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
+import FoundersSection from "@/components/FoundersSection";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { LINKEDIN_URL } from "@/lib/site";
@@ -100,47 +101,7 @@ function AboutPage() {
         </p>
       </section>
 
-      <section className="grid gap-6 lg:grid-cols-2">
-        <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-pricing-primary-soft)] text-lg font-bold text-[var(--color-pricing-primary)]">
-              CB
-            </div>
-            <div>
-              <div className="text-xl font-bold text-foreground">Camille Baltazo</div>
-              <div className="mt-1 text-sm text-muted-foreground">Founder & CEO · Mindorion OÜ</div>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <a href="https://linkedin.com/in/camille-baltazo" target="_blank" rel="noreferrer" className="rounded-full border border-[var(--color-about-card-border)] px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-[var(--color-pricing-primary-soft)]">
-                  LinkedIn →
-                </a>
-                <a href="mailto:contact@mindorion.com" className="rounded-full border border-[var(--color-about-card-border)] px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-[var(--color-pricing-primary-soft)]">
-                  contact@mindorion.com
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <blockquote className="mt-6 border-l-2 border-[var(--color-pricing-primary)] pl-4 text-sm italic leading-7 text-muted-foreground">
-            "J'ai passé des années dans le conseil et le développement commercial. J'ai vu trop de professionnels perdre des deals à cause de documents mal préparés ou de prospects mal qualifiés. Mindorion existe pour éliminer ces erreurs évitables."
-          </blockquote>
-        </article>
-
-        <article className="rounded-xl bg-[var(--color-pricing-primary)] p-6 text-white">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-pricing-primary-soft)]">BUILD IN PUBLIC</div>
-          <h2 className="mt-4 text-3xl font-extrabold leading-tight">On construit Mindorion en transparence, avec vous.</h2>
-          <p className="mt-4 text-sm leading-7 text-[var(--color-pricing-primary-soft)]">
-            Chaque décision produit, chaque apprentissage, chaque étape — partagés publiquement sur LinkedIn. Parce que les meilleurs outils se construisent avec ceux qui les utilisent.
-          </p>
-          <ul className="mt-6 space-y-3 text-sm text-[var(--color-pricing-primary-soft)]">
-            {buildInPublicItems.map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-[var(--color-pricing-primary-soft)]" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </article>
-      </section>
+      <FoundersSection />
 
       <section className="grid gap-6 md:grid-cols-3">
         {values.map((value) => (

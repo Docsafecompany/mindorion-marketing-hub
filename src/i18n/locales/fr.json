@@ -945,5 +945,45 @@
         ]
       }
     }
+  },
+  "founders": {
+    "badge": "Les fondateurs",
+    "titlePrefix": "Deux profils, une obsession :",
+    "titleHighlight": "outiller les équipes commerciales",
+    "subtitle": "L'opérationnel et le stratégique, le terrain France et la structuration US. Mindorion est construit par ceux qui ont vécu les problèmes qu'il résout.",
+    "educationLabel": "Formation",
+    "camille": {
+      "role": "Co-Founder & CEO",
+      "location": "Paris, France",
+      "quote": "Manager d'équipes de vente pendant 5 ans dans l'automotive, j'ai vu trop de deals perdus à cause de documents mal préparés ou de prospects mal qualifiés. Mindorion existe pour éliminer ces erreurs évitables.",
+      "education": "SKEMA Business School · INSEEC Grande École"
+    },
+    "romain": {
+      "role": "Co-Founder & Executive Chairman",
+      "location": "United States",
+      "quote": "6 ans à structurer des équipes tech-consulting B2B aux États-Unis. J'ai vu ce qui fait la différence entre une équipe qui scale et une qui stagne : les bons outils, les bonnes données, au bon moment. C'est exactement ce qu'on construit chez Mindorion.",
+      "education": "SKEMA Business School · North Carolina State University (GPA 3.9)"
+    },
+    "pillars": {
+      "roadmap": {
+        "title": "Roadmap publique",
+        "body": "Chaque feature, chaque release, partagée en amont sur LinkedIn."
+      },
+      "pricing": {
+        "title": "Pricing transparent",
+        "body": "On explique chaque décision tarifaire, sans jargon ni surprise."
+      },
+      "feedback": {
+        "title": "Feedback intégré",
+        "body": "Les retours utilisateurs entrent directement dans chaque sprint."
+      }
+    },
+    "buildInPublic": {
+      "badge": "Build in Public",
+      "title": "On construit Mindorion en transparence, avec vous.",
+      "body": "Chaque décision produit, chaque apprentissage, chaque étape — partagés publiquement sur LinkedIn. Parce que les meilleurs outils se construisent avec ceux qui les utilisent.",
+      "ctaFollow": "Suivre Mindorion",
+      "ctaRoadmap": "Voir la roadmap"
+    }
   }
 }
