@@ -297,7 +297,7 @@ export function Navbar() {
                       <div className="space-y-2">
                         {solutionEntries.map((item) => (
                           <SheetClose asChild key={item.title}>
-                             <Link to={item.to!} hash={item.hash ? `#${item.hash}` : undefined} className="flex items-start gap-3 rounded-lg px-3 py-3 hover:bg-muted/60">
+                             <Link to={item.to!} hash={item.hash} className="flex items-start gap-3 rounded-lg px-3 py-3 hover:bg-muted/60">
                               {item.icon}
                               <div>
                                 <div className="text-sm font-semibold">{item.title}</div>
