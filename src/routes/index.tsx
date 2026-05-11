@@ -75,12 +75,12 @@ function HomePage() {
               {t("home.subtitle")}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a href={SIGNUP_URL}>
+              <Link to="/use-cases">
                 <Button size="lg" className="min-w-44 gap-1">
                   {t("home.primaryCta")}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
-              </a>
+              </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="min-w-44">
                   {t("home.secondaryCta")}
