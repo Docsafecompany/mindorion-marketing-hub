@@ -945,5 +945,45 @@
         ]
       }
     }
+  },
+  "founders": {
+    "badge": "The founders",
+    "titlePrefix": "Two profiles, one obsession:",
+    "titleHighlight": "equipping sales teams",
+    "subtitle": "Operations and strategy. France on the ground, US at scale. Mindorion is built by people who have lived the problems it solves.",
+    "educationLabel": "Education",
+    "camille": {
+      "role": "Co-Founder & CEO",
+      "location": "Paris, France",
+      "quote": "After 5 years managing sales teams in the automotive industry, I saw too many deals lost to poorly prepared documents or unqualified prospects. Mindorion exists to eliminate these avoidable mistakes.",
+      "education": "SKEMA Business School · INSEEC Grande École"
+    },
+    "romain": {
+      "role": "Co-Founder & Executive Chairman",
+      "location": "United States",
+      "quote": "6 years structuring B2B tech-consulting teams in the United States. I've seen what makes the difference between a team that scales and one that stagnates: the right tools, the right data, at the right moment. That's exactly what we're building at Mindorion.",
+      "education": "SKEMA Business School · North Carolina State University (GPA 3.9)"
+    },
+    "pillars": {
+      "roadmap": {
+        "title": "Public roadmap",
+        "body": "Every feature, every release, shared on LinkedIn ahead of time."
+      },
+      "pricing": {
+        "title": "Transparent pricing",
+        "body": "We explain every pricing decision. No jargon, no surprises."
+      },
+      "feedback": {
+        "title": "Built-in feedback",
+        "body": "User feedback feeds directly into every sprint we ship."
+      }
+    },
+    "buildInPublic": {
+      "badge": "Build in Public",
+      "title": "We're building Mindorion in the open, with you.",
+      "body": "Every product decision, every learning, every milestone — shared publicly on LinkedIn. Because the best tools are built with the people who use them.",
+      "ctaFollow": "Follow Mindorion",
+      "ctaRoadmap": "View the roadmap"
+    }
   }
 }
