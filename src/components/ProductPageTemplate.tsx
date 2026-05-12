@@ -65,6 +65,7 @@ export type ProductPageData = {
 };
 
 export function ProductPageTemplate({ data }: { data: ProductPageData }) {
+  const { t } = useTranslation();
   const style = {
     "--product-hero-bg": data.theme.heroBg,
     "--product-hero-card": data.theme.heroCardBg,
