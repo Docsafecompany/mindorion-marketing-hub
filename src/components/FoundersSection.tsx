@@ -52,12 +52,14 @@ function FounderCard({ founder }: { founder: Founder }) {
   return (
     <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
       <div className="flex items-start gap-4">
-        <img
-          src={founder.photo}
-          alt={founder.name}
-          className={`h-16 w-16 shrink-0 rounded-full object-cover ${founder.photoClassName ?? ""}`}
-          loading="lazy"
-        />
+        <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full">
+          <img
+            src={founder.photo}
+            alt={founder.name}
+            className={`h-full w-full object-cover ${founder.photoClassName ?? ""}`}
+            loading="lazy"
+          />
+        </div>
         <div className="min-w-0">
           <div className="text-xl font-bold text-foreground">{founder.name}</div>
           <div className="mt-1 text-sm text-muted-foreground">{t(founder.roleKey)}</div>
@@ -83,10 +85,12 @@ function FounderCard({ founder }: { founder: Founder }) {
         “{t(founder.quoteKey)}”
       </blockquote>
 
-      <div className="mt-5 text-xs text-muted-foreground">
-        <span className="font-semibold text-foreground">{t("founders.educationLabel")} :</span>{" "}
-        {t(founder.educationKey)}
-      </div>
+      {founder.educationKey ? (
+        <div className="mt-5 text-xs text-muted-foreground">
+          <span className="font-semibold text-foreground">{t("founders.educationLabel")} :</span>{" "}
+          {t(founder.educationKey)}
+        </div>
+      ) : null}
     </article>
   );
 }
