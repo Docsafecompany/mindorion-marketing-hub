@@ -168,7 +168,7 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
           </div>
           <Button asChild className="rounded-xl bg-white text-[var(--product-cta-bg)] shadow-none hover:bg-white/95">
             <a href={SIGNUP_URL}>
-              Voir les tarifs
+              {t("productsTemplate.viewPricing")}
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
