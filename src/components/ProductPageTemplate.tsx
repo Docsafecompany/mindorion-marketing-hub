@@ -102,7 +102,7 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
                 variant="outline"
                 className="rounded-xl border-white/12 bg-transparent text-white shadow-none hover:bg-white/5 hover:text-white"
               >
-                <a href="/pricing">Voir les tarifs</a>
+                <a href="/pricing">{t("productsTemplate.viewPricing")}</a>
               </Button>
             </div>
           </div>
