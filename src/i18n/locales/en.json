@@ -620,62 +620,79 @@
     }
   },
   "about": {
-    "seoTitle": "About Mindorion",
-    "seoDescription": "Discover Mindorion's mission, team and values for protecting the professional reputation of B2B teams.",
-    "title": "Our mission: protect professional reputation",
-    "missionTitle": "Mission",
-    "missionText": "Mindorion helps B2B teams send stronger documents, offers and messages. We believe perceived quality is a strategic lever, not a cosmetic detail.",
-    "teamTitle": "Team",
-    "team": [
-      {
-        "name": "Claire Morel",
-        "role": "CEO & Co-founder",
-        "bio": "A former consultant who saw how a small document detail could weaken an entire client relationship."
-      },
-      {
-        "name": "Julien Armand",
-        "role": "Product & Operations",
-        "bio": "He designs focused workflows that help teams gain rigor without losing speed."
-      },
-      {
-        "name": "Mélanie Roussel",
-        "role": "Go-to-market",
-        "bio": "She supports B2B organizations adopting better habits in sales and document workflows."
-      }
+    "seoTitle": "About | Mindorion — B2B Professional Intelligence",
+    "seoDescription": "Mindorion is a B2B SaaS company founded in Estonia. Discover our mission, team and build-in-public approach. Qualion, ProspectIQ, GovernanceIQ.",
+    "eyebrow": "ABOUT MINDORION",
+    "heroTitle1": "Building the tools B2B professionals ",
+    "heroTitle2": "actually deserve.",
+    "heroText": "Mindorion is a B2B software company founded in Estonia, building a suite of professional intelligence tools for teams operating at high stakes — consultants, sales, recruiters and engineers.",
+    "tags": ["Mindorion OÜ · Estonia", "Founded in 2024", "B2B SaaS", "Build in public"],
+    "stats": [
+      { "value": "3", "label": "PRODUCTS IN DEVELOPMENT" },
+      { "value": "14", "label": "RISK CATEGORIES DETECTED" },
+      { "value": "0", "label": "DATA STORED · GDPR BY DESIGN" }
     ],
-    "valuesTitle": "Values",
+    "missionEyebrow": "OUR MISSION",
+    "missionTitle1": "Give B2B professionals the certainty ",
+    "missionTitle2": "of operating at the highest level.",
+    "missionText": "Every document sent must be flawless. Every prospect must be the right one. Every process must be compliant. Mindorion makes that possible — without friction, without compromise.",
     "values": [
-      {
-        "title": "Clarity",
-        "text": "Readable products, simple signals and fast decisions."
-      },
-      {
-        "title": "High standards",
-        "text": "Every detail matters once it shapes the image of a team or brand."
-      },
-      {
-        "title": "Pragmatism",
-        "text": "We favor useful workflows that are easy to integrate and immediately actionable."
-      }
+      { "icon": "🎯", "title": "Outcomes first", "text": "Every feature we build must solve a real professional problem. No gimmick features — only what creates measurable value." },
+      { "icon": "🔒", "title": "Private by design", "text": "Your documents are never stored. Analysis happens in real time and files are deleted immediately. Privacy isn't an option — it's the architecture." },
+      { "icon": "⚡", "title": "Radical simplicity", "text": "The best professional tools are invisible. You upload, Mindorion analyzes. No 3-hour onboarding, no training required." }
     ],
-    "locationTitle": "Location",
-    "locationText": "Mindorion is an Estonian company (OÜ) with a team operating mainly from France. This setup helps us support European teams with strong product and operational culture."
+    "ctaTitle": "Want to follow the Mindorion journey?",
+    "ctaText": "We share everything on LinkedIn — decisions, learnings, new products.",
+    "ctaButton": "Follow on LinkedIn"
   },
   "contact": {
-    "seoTitle": "Contact Mindorion — Demo and conversations",
-    "seoDescription": "Talk to the Mindorion team about document quality, B2B outreach or operational governance needs.",
-    "title": "Let's talk about your needs",
-    "subtitle": "Share your context and we'll come back with a clear and relevant answer.",
-    "direct": "Or contact us directly",
+    "seoTitle": "Request a demo | Mindorion",
+    "seoDescription": "Book a meeting with a Mindorion expert. Personalized 30-minute demo — Qualion, ProspectIQ, GovernanceIQ. No commitment.",
+    "eyebrow": "REQUEST A DEMO",
+    "title": "Let's talk about your project.",
+    "subtitle": "Our experts walk you through Mindorion in 30 minutes and answer all your questions — products, pricing, integrations.",
+    "perks": [
+      { "icon": "⏱", "title": "30 minutes", "text": "Personalized demo for your role" },
+      { "icon": "🎯", "title": "No commitment", "text": "No sales pressure" },
+      { "icon": "💬", "title": "Reply within 24h", "text": "We get back to you quickly" }
+    ],
+    "directLabel": "DIRECT CONTACT",
+    "directText": "For any question about Enterprise pricing or integrations.",
+    "formTitle": "Your information",
     "fields": {
       "firstName": "First name",
+      "firstNamePlaceholder": "Your first name",
       "lastName": "Last name",
-      "email": "Email",
+      "lastNamePlaceholder": "Your last name",
+      "email": "Work email",
+      "emailPlaceholder": "you@company.com",
       "company": "Company",
-      "message": "Message"
+      "companyPlaceholder": "Your company name",
+      "products": "Product(s) you're interested in",
+      "teamSize": "Team size",
+      "teamSizePlaceholder": "Select",
+      "message": "Your message (optional)",
+      "messagePlaceholder": "Describe your needs..."
     },
-    "successTitle": "Message sent",
-    "successText": "Thanks, your request has been received."
+    "productOptions": ["🛡 Qualion", "🎯 ProspectIQ", "📋 GovernanceIQ", "Full suite"],
+    "teamSizes": ["1-5 people", "6-20 people", "21-100 people", "100+ people"],
+    "productError": "Select at least one product.",
+    "submit": "Send my request →",
+    "footer": "We get back to you within 24h · No commitment",
+    "subjectPrefix": "Mindorion demo request —",
+    "subjectFallback": "New company",
+    "mailLabels": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Work email",
+      "company": "Company",
+      "products": "Products",
+      "teamSize": "Team size",
+      "teamSizeFallback": "Not specified",
+      "message": "Message",
+      "messageFallback": "No message"
+    },
+    "successText": "Thanks! We'll get back to you within 24 hours."
   },
   "privacy": {
     "seoTitle": "Privacy — Mindorion",
