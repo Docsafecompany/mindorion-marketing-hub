@@ -845,6 +845,58 @@
       }
     ]
   },
+  "governanceiq": {
+    "seeDetails": "voir le détail",
+    "plans": {
+      "starter": {
+        "badge": "Starter · 19€/mois",
+        "subtitle": "Vue personnelle — suivez votre propre qualité documentaire.",
+        "features": [
+          { "title": "Score qualité personnel", "desc": "Score /100 basé sur vos 30 derniers documents analysés." },
+          { "title": "Répartition des risques", "desc": "Métadonnées, placeholders, données sensibles — visualisés par catégorie." },
+          { "title": "Historique 30 jours", "desc": "Vos 30 derniers documents avec score et date." },
+          { "title": "Vue solo uniquement", "desc": "Pas de vue équipe ni de gestion de rôles." }
+        ],
+        "upgrade": "Passez en Pro pour l'historique 6 mois et les conseils IA personnalisés."
+      },
+      "pro": {
+        "badge": "Pro · 39€/mois",
+        "subtitle": "Vue personnelle enrichie — analytics avancés et recommandations IA.",
+        "features": [
+          { "title": "Score qualité + évolution", "desc": "Graphique sur 6 mois, tendances et dérives détectées." },
+          { "title": "Conseil IA personnalisé", "desc": "Recommandations basées sur vos patterns de risques récurrents." },
+          { "title": "Historique 6 mois", "desc": "Tous vos documents avec score, date et catégorie de risque." },
+          { "title": "Export PDF rapport", "desc": "Rapport GovernanceIQ personnel téléchargeable." },
+          { "title": "Vue solo uniquement", "desc": "Pas de vue équipe ni de gestion de rôles." }
+        ],
+        "upgrade": "Passez en Business pour la vue équipe et la gestion des rôles (jusqu'à 5 membres)."
+      },
+      "business": {
+        "badge": "Business · 59€/user/mois",
+        "subtitle": "Vue équipe — pilotez la qualité documentaire de toute votre structure.",
+        "features": [
+          { "title": "Vue équipe complète", "desc": "Score agrégé + score individuel par membre (jusqu'à 5 users)." },
+          { "title": "Gestion des rôles", "desc": "Admin, Manager, Membre. Chaque rôle voit son périmètre." },
+          { "title": "Alertes cross-membres", "desc": "Docs à risque envoyés, scores en chute, membres inactifs depuis 14j." },
+          { "title": "Invitation par lien sécurisé", "desc": "Ajoutez vos membres via un lien d'invitation (token 48h)." },
+          { "title": "Dashboard manager", "desc": "Tableau de bord équipe + leaderboard qualité documentaire." }
+        ],
+        "upgrade": "Passez en Enterprise pour la hiérarchie complète (CEO → N+2 → Manager) et les membres illimités."
+      },
+      "enterprise": {
+        "badge": "Enterprise · Sur devis",
+        "subtitle": "Gouvernance complète — hiérarchie sur-mesure, configuration IT, rapports dirigeants.",
+        "features": [
+          { "title": "Hiérarchie en cascade", "desc": "CEO → N+2 → N+1 → Manager → Membre. Chaque niveau voit l'agrégat du niveau en dessous." },
+          { "title": "Configuration IT tête par tête", "desc": "Rôles, périmètres et accès configurés par votre équipe IT interne." },
+          { "title": "SSO / SAML", "desc": "Connexion via votre Identity Provider (Okta, Azure AD, Google Workspace...)." },
+          { "title": "Rapports dirigeants automatisés", "desc": "Rapports PDF hebdomadaires / mensuels pour le board et le COMEX." },
+          { "title": "Membres illimités", "desc": "Pas de limite de slots. Toute l'organisation couverte." },
+          { "title": "CSM dédié", "desc": "Accompagnement onboarding + suivi trimestriel inclus." }
+        ]
+      }
+    }
+  },
   "notFound": {
     "title": "Page introuvable",
     "text": "La page demandée n'existe pas ou a été déplacée."
