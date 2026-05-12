@@ -845,6 +845,58 @@
       }
     ]
   },
+  "governanceiq": {
+    "seeDetails": "view details",
+    "plans": {
+      "starter": {
+        "badge": "Starter · €19/month",
+        "subtitle": "Personal view — track your own document quality.",
+        "features": [
+          { "title": "Personal quality score", "desc": "Score /100 based on your last 30 analyzed documents." },
+          { "title": "Risk breakdown", "desc": "Metadata, placeholders, sensitive data — visualized by category." },
+          { "title": "30-day history", "desc": "Your last 30 documents with score and date." },
+          { "title": "Solo view only", "desc": "No team view or role management." }
+        ],
+        "upgrade": "Upgrade to Pro for 6-month history and personalized AI advice."
+      },
+      "pro": {
+        "badge": "Pro · €39/month",
+        "subtitle": "Enriched personal view — advanced analytics and AI recommendations.",
+        "features": [
+          { "title": "Quality score + trend", "desc": "6-month chart, trends and detected drift." },
+          { "title": "Personalized AI advice", "desc": "Recommendations based on your recurring risk patterns." },
+          { "title": "6-month history", "desc": "All your documents with score, date and risk category." },
+          { "title": "PDF report export", "desc": "Personal GovernanceIQ report, downloadable." },
+          { "title": "Solo view only", "desc": "No team view or role management." }
+        ],
+        "upgrade": "Upgrade to Business for team view and role management (up to 5 members)."
+      },
+      "business": {
+        "badge": "Business · €59/user/month",
+        "subtitle": "Team view — manage document quality across your whole organization.",
+        "features": [
+          { "title": "Full team view", "desc": "Aggregated score + individual score per member (up to 5 users)." },
+          { "title": "Role management", "desc": "Admin, Manager, Member. Each role sees its scope." },
+          { "title": "Cross-member alerts", "desc": "Risky docs sent, falling scores, members inactive for 14d." },
+          { "title": "Secure invite link", "desc": "Add members via an invite link (48h token)." },
+          { "title": "Manager dashboard", "desc": "Team dashboard + document quality leaderboard." }
+        ],
+        "upgrade": "Upgrade to Enterprise for full hierarchy (CEO → N+2 → Manager) and unlimited members."
+      },
+      "enterprise": {
+        "badge": "Enterprise · Custom",
+        "subtitle": "Full governance — custom hierarchy, IT configuration, executive reports.",
+        "features": [
+          { "title": "Cascading hierarchy", "desc": "CEO → N+2 → N+1 → Manager → Member. Each level sees the aggregate below." },
+          { "title": "IT-managed configuration", "desc": "Roles, scopes and access configured by your internal IT team." },
+          { "title": "SSO / SAML", "desc": "Login via your Identity Provider (Okta, Azure AD, Google Workspace...)." },
+          { "title": "Automated executive reports", "desc": "Weekly / monthly PDF reports for the board and ExCo." },
+          { "title": "Unlimited members", "desc": "No slot limit. Whole organization covered." },
+          { "title": "Dedicated CSM", "desc": "Onboarding support + quarterly reviews included." }
+        ]
+      }
+    }
+  },
   "notFound": {
     "title": "Page not found",
     "text": "The requested page does not exist or has been moved."

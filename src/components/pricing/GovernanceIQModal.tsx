@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
@@ -17,62 +19,36 @@ interface PlanContent {
   upgrade?: string;
 }
 
-const PLAN_CONTENT: Record<GovernancePlan, PlanContent> = {
-  starter: {
-    badge: "Starter · €19/month",
-    badgeClass: "bg-gray-100 text-gray-600",
-    subtitle: "Vue personnelle — suivez votre propre qualité documentaire.",
-    features: [
-      { icon: "📊", title: "Score qualité personnel", desc: "Score /100 basé sur vos 30 derniers documents analysés." },
-      { icon: "⚠️", title: "Répartition des risques", desc: "Métadonnées, placeholders, données sensibles — visualisés par catégorie." },
-      { icon: "📄", title: "Historique 30 jours", desc: "Vos 30 derniers documents avec score et date." },
-      { icon: "🔒", title: "Vue solo uniquement", desc: "Pas de vue équipe ni de gestion de rôles." },
-    ],
-    upgrade: "Passez en Pro pour l'historique 6 mois et les conseils IA personnalisés.",
-  },
-  pro: {
-    badge: "Pro · €39/month",
-    badgeClass: "bg-violet-100 text-violet-700",
-    subtitle: "Vue personnelle enrichie — analytics avancés et recommandations IA.",
-    features: [
-      { icon: "📊", title: "Score qualité + évolution", desc: "Graphique sur 6 mois, tendances et dérives détectées." },
-      { icon: "🤖", title: "Conseil IA personnalisé", desc: "Recommandations basées sur vos patterns de risques récurrents." },
-      { icon: "📄", title: "Historique 6 mois", desc: "Tous vos documents avec score, date et catégorie de risque." },
-      { icon: "📥", title: "Export PDF rapport", desc: "Rapport GovernanceIQ personnel téléchargeable." },
-      { icon: "🔒", title: "Vue solo uniquement", desc: "Pas de vue équipe ni de gestion de rôles." },
-    ],
-    upgrade: "Passez en Business pour la vue équipe et la gestion des rôles (jusqu'à 5 membres).",
-  },
-  business: {
-    badge: "Business · €59/user/month",
-    badgeClass: "bg-emerald-100 text-emerald-700",
-    subtitle: "Vue équipe — pilotez la qualité documentaire de toute votre structure.",
-    features: [
-      { icon: "👥", title: "Vue équipe complète", desc: "Score agrégé + score individuel par membre (jusqu'à 5 users)." },
-      { icon: "🎭", title: "Gestion des rôles", desc: "Admin, Manager, Membre. Chaque rôle voit son périmètre." },
-      { icon: "🔔", title: "Alertes cross-membres", desc: "Docs à risque envoyés, scores en chute, membres inactifs depuis 14j." },
-      { icon: "✉️", title: "Invitation par lien sécurisé", desc: "Ajoutez vos membres via un lien d'invitation (token 48h)." },
-      { icon: "📊", title: "Dashboard manager", desc: "Tableau de bord équipe + leaderboard qualité documentaire." },
-    ],
-    upgrade: "Passez en Enterprise pour la hiérarchie complète (CEO → N+2 → Manager) et les membres illimités.",
-  },
-  enterprise: {
-    badge: "Enterprise · Custom",
-    badgeClass: "bg-amber-100 text-amber-700",
-    subtitle: "Gouvernance complète — hiérarchie sur-mesure, configuration IT, rapports dirigeants.",
-    features: [
-      { icon: "🏛️", title: "Hiérarchie en cascade", desc: "CEO → N+2 → N+1 → Manager → Membre. Chaque niveau voit l'agrégat du niveau en dessous." },
-      { icon: "⚙️", title: "Configuration IT tête par tête", desc: "Rôles, périmètres et accès configurés par votre équipe IT interne." },
-      { icon: "🔐", title: "SSO / SAML", desc: "Connexion via votre Identity Provider (Okta, Azure AD, Google Workspace...)." },
-      { icon: "📈", title: "Rapports dirigeants automatisés", desc: "Rapports PDF hebdomadaires / mensuels pour le board et le COMEX." },
-      { icon: "♾️", title: "Membres illimités", desc: "Pas de limite de slots. Toute l'organisation couverte." },
-      { icon: "👨‍💼", title: "CSM dédié", desc: "Accompagnement onboarding + suivi trimestriel inclus." },
-    ],
-  },
+const BADGE_CLASS: Record<GovernancePlan, string> = {
+  starter: "bg-gray-100 text-gray-600",
+  pro: "bg-violet-100 text-violet-700",
+  business: "bg-emerald-100 text-emerald-700",
+  enterprise: "bg-amber-100 text-amber-700",
+};
+
+const FEATURE_ICONS: Record<GovernancePlan, string[]> = {
+  starter: ["📊", "⚠️", "📄", "🔒"],
+  pro: ["📊", "🤖", "📄", "📥", "🔒"],
+  business: ["👥", "🎭", "🔔", "✉️", "📊"],
+  enterprise: ["🏛️", "⚙️", "🔐", "📈", "♾️", "👨‍💼"],
 };
 
 export function GovernanceIQModal({ plan, open, onClose }: GovernanceIQModalProps) {
-  const content = PLAN_CONTENT[plan];
+  const { t } = useTranslation();
+  const raw = t(`governanceiq.plans.${plan}`, { returnObjects: true }) as {
+    badge: string;
+    subtitle: string;
+    features: Array<{ title: string; desc: string }>;
+    upgrade?: string;
+  };
+  const icons = FEATURE_ICONS[plan];
+  const content: PlanContent = {
+    badge: raw.badge,
+    badgeClass: BADGE_CLASS[plan],
+    subtitle: raw.subtitle,
+    features: raw.features.map((f, i) => ({ ...f, icon: icons[i] })),
+    upgrade: raw.upgrade,
+  };
 
   return (
     <Dialog open={open} onOpenChange={(o) => { if (!o) onClose(); }}>
