@@ -7,6 +7,7 @@ import romainImg from "@/assets/founder-romain.png";
 
 type Founder = {
   photo: string;
+  photoClassName?: string;
   name: string;
   roleKey: string;
   locationKey: string;
@@ -17,7 +18,8 @@ type Founder = {
 
 const founders: Founder[] = [
   {
-    photo: camilleImg,
+    photo: romainImg,
+    photoClassName: "object-top",
     name: "Camille-Aurélien Baltaze",
     roleKey: "founders.camille.role",
     locationKey: "founders.camille.location",
@@ -26,7 +28,7 @@ const founders: Founder[] = [
     educationKey: "founders.camille.education",
   },
   {
-    photo: romainImg,
+    photo: camilleImg,
     name: "Romain Ortis",
     roleKey: "founders.romain.role",
     locationKey: "founders.romain.location",
@@ -53,14 +55,14 @@ function FounderCard({ founder }: { founder: Founder }) {
         <img
           src={founder.photo}
           alt={founder.name}
-          className="h-16 w-16 shrink-0 rounded-full object-cover"
+          className={`h-16 w-16 shrink-0 rounded-full object-cover ${founder.photoClassName ?? ""}`}
           loading="lazy"
         />
         <div className="min-w-0">
           <div className="text-xl font-bold text-foreground">{founder.name}</div>
           <div className="mt-1 text-sm text-muted-foreground">{t(founder.roleKey)}</div>
           <div className="mt-1 text-xs text-muted-foreground">
-            {t(founder.locationKey)} · Mindorion OÜ
+            {t(founder.locationKey)} · Mindorion
           </div>
         </div>
       </div>
