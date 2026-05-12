@@ -1,37 +1,36 @@
 import { useTranslation } from "react-i18next";
-import { Linkedin, Mail, Sparkles, Target, Lock, Zap, type LucideIcon } from "lucide-react";
+import { Linkedin, Sparkles, Target, Lock, Zap, type LucideIcon } from "lucide-react";
 
 import { LINKEDIN_URL } from "@/lib/site";
+import camilleImg from "@/assets/founder-camille.jpg";
+import romainImg from "@/assets/founder-romain.png";
 
 type Founder = {
-  initials: string;
+  photo: string;
   name: string;
   roleKey: string;
   locationKey: string;
   linkedinUrl: string;
-  email: string;
   quoteKey: string;
   educationKey: string;
 };
 
 const founders: Founder[] = [
   {
-    initials: "CB",
+    photo: camilleImg,
     name: "Camille-Aurélien Baltaze",
     roleKey: "founders.camille.role",
     locationKey: "founders.camille.location",
     linkedinUrl: "https://www.linkedin.com/in/camille-aur%C3%A9lien-baltaze",
-    email: "camille@mindorion.com",
     quoteKey: "founders.camille.quote",
     educationKey: "founders.camille.education",
   },
   {
-    initials: "RO",
+    photo: romainImg,
     name: "Romain Ortis",
     roleKey: "founders.romain.role",
     locationKey: "founders.romain.location",
     linkedinUrl: "https://www.linkedin.com/in/romain-ortis-a97423113",
-    email: "romain@mindorion.com",
     quoteKey: "founders.romain.quote",
     educationKey: "founders.romain.education",
   },
@@ -51,9 +50,12 @@ function FounderCard({ founder }: { founder: Founder }) {
   return (
     <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
       <div className="flex items-start gap-4">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[var(--color-pricing-primary-soft)] text-lg font-bold text-[var(--color-pricing-primary)]">
-          {founder.initials}
-        </div>
+        <img
+          src={founder.photo}
+          alt={founder.name}
+          className="h-16 w-16 shrink-0 rounded-full object-cover"
+          loading="lazy"
+        />
         <div className="min-w-0">
           <div className="text-xl font-bold text-foreground">{founder.name}</div>
           <div className="mt-1 text-sm text-muted-foreground">{t(founder.roleKey)}</div>
@@ -72,13 +74,6 @@ function FounderCard({ founder }: { founder: Founder }) {
         >
           <Linkedin className="h-4 w-4" />
           LinkedIn
-        </a>
-        <a
-          href={`mailto:${founder.email}`}
-          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-about-card-border)] px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-[var(--color-pricing-primary-soft)]"
-        >
-          <Mail className="h-4 w-4" />
-          {founder.email}
         </a>
       </div>
 
@@ -113,7 +108,7 @@ export default function FoundersSection() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {founders.map((f) => (
-          <FounderCard key={f.initials} founder={f} />
+          <FounderCard key={f.name} founder={f} />
         ))}
       </div>
 
