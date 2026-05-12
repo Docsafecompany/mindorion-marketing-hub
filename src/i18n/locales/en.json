@@ -581,6 +581,63 @@
     },
     "toc": "Table of contents",
     "back": "Back to blog",
+    "page": {
+      "seoTitle": "Blog | B2B professional tips and guides | Mindorion",
+      "seoDescription": "Articles, guides and resources for B2B professionals — document reputation, intelligent prospecting and compliance.",
+      "eyebrow": "MINDORION BLOG",
+      "title": "Tips, guides and professional resources.",
+      "subtitle": "Everything B2B professionals need to know about document reputation, prospecting and compliance.",
+      "filterAll": "All",
+      "filterGuides": "Guides",
+      "read": "Read →",
+      "readArticle": "Read the article →",
+      "featured": {
+        "tagGuide": "GUIDE",
+        "title": "5 document mistakes that cost consultants deals",
+        "excerpt": "Revealing metadata, forgotten comments, unfilled placeholders — here are the 5 most common mistakes and how to avoid them before sending your next document.",
+        "meta": "April 15, 2026 · 8 min read",
+        "topErrorsTitle": "TOP 5 MISTAKES",
+        "topErrors": [
+          "Internal author in metadata",
+          "Forgotten review comments",
+          "Unfilled placeholders",
+          "Detectable AI tone for the client",
+          "Cost price in tracked changes"
+        ]
+      },
+      "categories": {
+        "qualion": "QUALION",
+        "prospectiq": "PROSPECTIQ",
+        "governance": "GOVERNANCE",
+        "guide": "GUIDE"
+      },
+      "cards": [
+        { "title": "How to remove metadata from a Word document before sending", "excerpt": "Step-by-step guide to clean Word documents of all their hidden data.", "meta": "Apr 10 · 5 min" },
+        { "title": "B2B prospecting: why 80% of your emails go unanswered", "excerpt": "The targeting and personalization mistakes that kill your reply rates.", "meta": "Apr 5 · 7 min" },
+        { "title": "GDPR and HR documents: what your team must check before every send", "excerpt": "GDPR obligations often ignored in everyday HR processes.", "meta": "Apr 1 · 6 min" },
+        { "title": "How to respond to an RFP without exposing your internal data", "excerpt": "Best practices to secure your RFPs before submission.", "meta": "Mar 25 · 9 min" },
+        { "title": "Why AI tone in your documents hurts your professional credibility", "excerpt": "How to detect and fix overly generic wording before sending.", "meta": "Mar 20 · 5 min" },
+        { "title": "The 7 buying signals to watch to prospect at the right time", "excerpt": "Hires, fundraising, new leadership — the signals that flag an opportunity.", "meta": "Mar 15 · 6 min" }
+      ],
+      "newsletter": {
+        "title": "Get our best articles every week.",
+        "subtitle": "Tips, guides and resources for B2B professionals.",
+        "placeholder": "you@email.com",
+        "submit": "Subscribe →",
+        "success": "Your subscription request is ready to send.",
+        "mailSubject": "Mindorion newsletter subscription",
+        "mailBody": "Please add this address to the newsletter:"
+      },
+      "article": {
+        "unavailable": "Article unavailable",
+        "notFound": "Article not found",
+        "notFoundText": "The requested article does not exist.",
+        "retry": "Retry",
+        "back": "Back to blog",
+        "fallbackTitle": "Mindorion Blog",
+        "fallbackDescription": "Mindorion articles on document quality, compliance and B2B workflows."
+      }
+    },
     "posts": {
       "hiddenRisks": {
         "title": "The hidden risks inside your Word documents",

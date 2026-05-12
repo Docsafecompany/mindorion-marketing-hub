@@ -581,6 +581,63 @@
     },
     "toc": "Sommaire",
     "back": "Retour au blog",
+    "page": {
+      "seoTitle": "Blog | Conseils et guides professionnels B2B | Mindorion",
+      "seoDescription": "Articles, guides et ressources pour les professionnels B2B — réputation documentaire, prospection intelligente et conformité.",
+      "eyebrow": "BLOG MINDORION",
+      "title": "Conseils, guides et ressources professionnelles.",
+      "subtitle": "Tout ce que les professionnels B2B doivent savoir sur la réputation documentaire, la prospection et la conformité.",
+      "filterAll": "Tous",
+      "filterGuides": "Guides",
+      "read": "Lire →",
+      "readArticle": "Lire l'article →",
+      "featured": {
+        "tagGuide": "GUIDE",
+        "title": "5 erreurs documentaires qui coûtent des deals aux consultants",
+        "excerpt": "Les métadonnées révélatrices, les commentaires oubliés, les placeholders non remplacés — voici les 5 erreurs les plus courantes et comment les éviter avant d'envoyer votre prochain document.",
+        "meta": "15 avril 2026 · 8 min de lecture",
+        "topErrorsTitle": "TOP 5 ERREURS",
+        "topErrors": [
+          "Auteur interne dans les métadonnées",
+          "Commentaires de révision oubliés",
+          "Placeholders non remplacés",
+          "Ton IA détectable par le client",
+          "Prix de revient dans le suivi"
+        ]
+      },
+      "categories": {
+        "qualion": "QUALION",
+        "prospectiq": "PROSPECTIQ",
+        "governance": "GOUVERNANCE",
+        "guide": "GUIDE"
+      },
+      "cards": [
+        { "title": "Comment supprimer les métadonnées d'un document Word avant envoi", "excerpt": "Guide pas à pas pour nettoyer vos documents Word de toutes leurs données cachées.", "meta": "10 avril · 5 min" },
+        { "title": "Prospection B2B : pourquoi 80% de vos emails restent sans réponse", "excerpt": "Les erreurs de ciblage et de personnalisation qui tuent vos taux de réponse.", "meta": "5 avril · 7 min" },
+        { "title": "RGPD et documents RH : ce que votre équipe doit vérifier avant chaque envoi", "excerpt": "Les obligations RGPD souvent ignorées dans les processus RH quotidiens.", "meta": "1 avril · 6 min" },
+        { "title": "Comment répondre à un appel d'offres sans exposer vos données internes", "excerpt": "Les bonnes pratiques pour sécuriser vos RFP avant soumission.", "meta": "25 mars · 9 min" },
+        { "title": "Pourquoi le ton IA dans vos documents nuit à votre crédibilité professionnelle", "excerpt": "Comment détecter et corriger les formulations trop génériques avant envoi.", "meta": "20 mars · 5 min" },
+        { "title": "Les 7 signaux d'affaires à surveiller pour prospecter au bon moment", "excerpt": "Recrutements, levées de fonds, nouvelles directions — les signaux qui indiquent une opportunité.", "meta": "15 mars · 6 min" }
+      ],
+      "newsletter": {
+        "title": "Recevez nos meilleurs articles chaque semaine.",
+        "subtitle": "Conseils, guides et ressources pour les professionnels B2B.",
+        "placeholder": "votre@email.com",
+        "submit": "S'abonner →",
+        "success": "Votre demande d'abonnement est prête à être envoyée.",
+        "mailSubject": "Abonnement newsletter Mindorion",
+        "mailBody": "Merci d'ajouter cette adresse à la newsletter :"
+      },
+      "article": {
+        "unavailable": "Article indisponible",
+        "notFound": "Article introuvable",
+        "notFoundText": "L'article demandé n'existe pas.",
+        "retry": "Réessayer",
+        "back": "Retour au blog",
+        "fallbackTitle": "Blog Mindorion",
+        "fallbackDescription": "Articles Mindorion sur la qualité documentaire, la conformité et les workflows B2B."
+      }
+    },
     "posts": {
       "hiddenRisks": {
         "title": "Les risques cachés dans vos documents Word",
