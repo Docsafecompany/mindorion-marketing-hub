@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { ArrowRight, Check } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 import { ProductLogo } from "@/components/ProductLogo";
@@ -64,6 +65,7 @@ export type ProductPageData = {
 };
 
 export function ProductPageTemplate({ data }: { data: ProductPageData }) {
+  const { t } = useTranslation();
   const style = {
     "--product-hero-bg": data.theme.heroBg,
     "--product-hero-card": data.theme.heroCardBg,
@@ -100,7 +102,7 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
                 variant="outline"
                 className="rounded-xl border-white/12 bg-transparent text-white shadow-none hover:bg-white/5 hover:text-white"
               >
-                <a href="/pricing">Voir les tarifs</a>
+                <a href="/pricing">{t("productsTemplate.viewPricing")}</a>
               </Button>
             </div>
           </div>
@@ -111,7 +113,7 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
         </section>
 
         <section className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-6 sm:p-8">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">COMMENT ÇA MARCHE</div>
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("productsTemplate.howItWorks")}</div>
           <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-center">
             {data.howItWorks.map((step, index) => (
               <StepCard key={step.title} accent={index + 1} step={step} showArrow={index < data.howItWorks.length - 1} />
@@ -166,7 +168,7 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
           </div>
           <Button asChild className="rounded-xl bg-white text-[var(--product-cta-bg)] shadow-none hover:bg-white/95">
             <a href={SIGNUP_URL}>
-              Voir les tarifs
+              {t("productsTemplate.viewPricing")}
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
