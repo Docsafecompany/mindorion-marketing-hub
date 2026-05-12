@@ -113,7 +113,7 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
         </section>
 
         <section className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-6 sm:p-8">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">COMMENT ÇA MARCHE</div>
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("productsTemplate.howItWorks")}</div>
           <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-center">
             {data.howItWorks.map((step, index) => (
               <StepCard key={step.title} accent={index + 1} step={step} showArrow={index < data.howItWorks.length - 1} />
