@@ -363,87 +363,160 @@
       }
     ]
   },
+  "productsTemplate": {
+    "howItWorks": "HOW IT WORKS",
+    "viewPricing": "View pricing"
+  },
   "products": {
     "qualion": {
-      "seoTitle": "Qualion — Document reputation before send",
-      "seoDescription": "Qualion detects metadata, comments, personal data and writing issues before you send Word, PDF and PowerPoint documents.",
-      "eyebrow": "Product · Qualion",
-      "title": "Qualion — Document reputation, before send",
-      "subtitle": "Before a document reaches a client, candidate or partner, Qualion checks the invisible signals that can damage credibility.",
-      "features": [
+      "seoTitle": "Qualion | Document reputation before send | Mindorion",
+      "seoDescription": "Qualion analyzes every document in 30 seconds and detects anything that could harm your professional reputation before sending — metadata, comments, sensitive data, AI tone.",
+      "eyebrow": "🛡 QUALION · DOCUMENT REPUTATION",
+      "title": "Is your document really ready to send?",
+      "subtitle": "Qualion analyzes every document in 30 seconds and detects anything that could harm your professional reputation before your client opens it.",
+      "heroLabel": "ANALYSIS REPORT · QUALION",
+      "heroItems": [
+        "Internal author in properties",
+        "3 hidden review comments",
+        "Placeholder [CLIENT NAME] not replaced",
+        "✓ Document cleaned — Download"
+      ],
+      "howItWorks": [
+        { "title": "Upload", "text": "Drop your document — Word, PDF, PPT or Excel — directly into Qualion." },
+        { "title": "Analyze", "text": "Qualion scans 14 risk categories in under 30 seconds and produces a complete report." },
+        { "title": "Send", "text": "Download the cleaned version and send with confidence. Quality score guaranteed." }
+      ],
+      "featureColumns": [
         {
-          "title": "Hidden metadata",
-          "text": "Detect invisible information revealing the real history of a document."
+          "title": "14 risk categories detected",
+          "items": [
+            { "title": "Hidden metadata", "text": "Author, company, revision history, file path." },
+            { "title": "Comments & track changes", "text": "Review comments, tracked changes still active." },
+            { "title": "Personal data", "text": "Names, emails, numbers in properties or content." },
+            { "title": "Forgotten placeholders", "text": "[CLIENT NAME], TODO, INSERT HERE." },
+            { "title": "Detectable AI tone", "text": "Wording that's too generic or typically AI-generated." },
+            { "title": "Spelling errors", "text": "Spelling and grammar correction before sending." }
+          ]
         },
         {
-          "title": "Comments & annotations",
-          "text": "Catch forgotten internal remarks before an external share."
-        },
-        {
-          "title": "Personal data",
-          "text": "Reduce GDPR risk in CVs, contracts and candidate files."
-        },
-        {
-          "title": "Spelling & writing issues",
-          "text": "Fix the signals of carelessness that weaken perception."
-        },
-        {
-          "title": "Tracked changes",
-          "text": "Remove traces of negotiation or internal iteration."
-        },
-        {
-          "title": "Clean export",
-          "text": "Generate a send-ready version aligned with your standards."
+          "title": "Supported formats & features",
+          "items": [
+            { "title": "Word (.docx)", "text": "Full analysis of content, properties, revisions." },
+            { "title": "Excel & PowerPoint", "text": "Metadata, comments, hidden data." },
+            { "title": "PDF (Business+)", "text": "Properties and embedded content in PDFs." },
+            { "title": "Results in 30 seconds", "text": "Full report, no install required." },
+            { "title": "0 data stored", "text": "Files deleted after analysis. GDPR by design." },
+            { "title": "One-click cleanup", "text": "Download the clean version straight from the report." }
+          ]
         }
       ],
-      "steps": [
-        "Upload the document",
-        "Automatic analysis",
-        "Report + cleaned file"
+      "scenarioLabel": "THEY USE QUALION",
+      "scenarios": [
+        { "tag": "CONSULTANT", "title": "Client proposal with internal metadata", "text": "Qualion catches the internal author and 3 review comments before sending.", "result": "Reputation protected" },
+        { "tag": "SALES", "title": "RFP offer with cost price visible", "text": "Tracked changes were exposing the margin. Qualion catches it before submission.", "result": "Margin protected" },
+        { "tag": "RECRUITER", "title": "Candidate CV with disqualification notes", "text": "Internal comments were still visible. Qualion cleans before forwarding.", "result": "GDPR compliant" }
       ],
-      "audiences": [
-        "Consultants",
-        "Sales teams",
-        "HR & Recruiting"
-      ]
+      "ctaTitle": "Ready to send with confidence?",
+      "ctaSubtitle": "Analyze your next document — result in 30 seconds.",
+      "primaryCta": "Try Qualion"
     },
     "prospectiq": {
-      "seoTitle": "ProspectIQ — Intelligent B2B outreach",
-      "seoDescription": "ProspectIQ helps sales teams target the right accounts, orchestrate sequences and track commercial performance.",
-      "eyebrow": "Product · ProspectIQ",
-      "title": "ProspectIQ — Intelligent B2B outreach",
-      "subtitle": "ProspectIQ structures your prospecting campaigns with better prioritization, stronger sequencing and actionable analytics.",
-      "features": [
-        "Targeted prospecting",
-        "Email sequences",
-        "CRM tracking",
-        "Analytics",
-        "Integrations"
+      "seoTitle": "ProspectIQ | Intelligent B2B outreach | Mindorion",
+      "seoDescription": "ProspectIQ identifies your best B2B prospects, qualifies opportunities with AI and generates personalized outreach sequences to maximize reply rates.",
+      "eyebrow": "🎯 PROSPECTIQ · INTELLIGENT B2B OUTREACH",
+      "title": "Find the right prospects. At the right time.",
+      "subtitle": "ProspectIQ identifies your best B2B prospects, qualifies opportunities with AI and generates personalized outreach sequences to maximize reply rates.",
+      "heroLabel": "PIPELINE · PROSPECTIQ",
+      "heroRows": [
+        { "initials": "DL", "title": "Sales Director · Pharma", "city": "Lyon", "score": "94%" },
+        { "initials": "VP", "title": "VP Procurement · Aerospace", "city": "Toulouse", "score": "88%" },
+        { "initials": "DG", "title": "MD · Consulting firm", "city": "Paris", "score": "81%" }
       ],
-      "audiences": [
-        "Sales teams",
-        "BDRs",
-        "Account Executives"
-      ]
+      "howItWorks": [
+        { "title": "Define", "text": "Describe your ideal target — industry, size, role, geography." },
+        { "title": "Qualify", "text": "AI identifies and scores your best prospects. Strategy Hub analyzes opportunities." },
+        { "title": "Reach out", "text": "Launch personalized multi-channel sequences and let ProspectIQ handle follow-ups." }
+      ],
+      "featureColumns": [
+        {
+          "title": "Prospecting & qualification",
+          "items": [
+            { "title": "AI qualification", "text": "Relevance score on every prospect." },
+            { "title": "Intelligence Flags", "text": "Buying signals: growth, hiring, fundraising, news." },
+            { "title": "Strategy Hub", "text": "In-depth account analysis and approach recommendations." },
+            { "title": "Meeting Intelligence", "text": "Automated prep for your sales meetings with prospect context." }
+          ]
+        },
+        {
+          "title": "Outreach & follow-up",
+          "items": [
+            { "title": "Multi-channel sequences", "text": "Email, LinkedIn, call — sequences personalized per profile and industry." },
+            { "title": "Automated follow-up", "text": "Smart follow-ups based on behavior: open, click, reply." },
+            { "title": "Team dashboards", "text": "Outreach performance, reply rates and pipeline in real time." },
+            { "title": "CRM integrations", "text": "Salesforce, HubSpot (Enterprise)." }
+          ]
+        }
+      ],
+      "scenarioLabel": "USE CASES",
+      "scenarios": [
+        { "tag": "CONSULTANT", "title": "Client portfolio growth", "text": "ProspectIQ identifies decision-makers in the target sector and generates the approach sequences.", "result": "Pipeline filled" },
+        { "tag": "B2B SALES", "title": "Key account qualification", "text": "Strategy Hub analyzes target accounts and recommends the best angles of approach.", "result": "Right prospects targeted" },
+        { "tag": "ESN", "title": "CIO & CTO outreach", "text": "ProspectIQ builds sequences tailored to the long cycles of the tech industry.", "result": "Cycle shortened" }
+      ],
+      "ctaTitle": "Ready to find your next clients?",
+      "ctaSubtitle": "Qualify your prospects and launch your sequences today.",
+      "primaryCta": "Try ProspectIQ"
     },
     "governanceiq": {
-      "seoTitle": "GovernanceIQ — Team document compliance",
-      "seoDescription": "GovernanceIQ gives managers the indicators, alerts and reporting they need to run team document compliance.",
-      "eyebrow": "Product · GovernanceIQ",
-      "title": "GovernanceIQ — Team document compliance",
-      "subtitle": "Manage document compliance at team level with clear KPIs, focused alerts and an audit trail that stays easy to use.",
-      "features": [
-        "Team dashboard",
-        "Compliance KPIs",
-        "Alerts",
-        "Reporting",
-        "Audit trail"
+      "seoTitle": "GovernanceIQ | Team document compliance | Mindorion",
+      "seoDescription": "GovernanceIQ centralizes your organization's document policies, automates audits and ensures every team operates by the same standards.",
+      "eyebrow": "📋 GOVERNANCEIQ · DOCUMENT COMPLIANCE",
+      "title": "Document compliance, without the complexity.",
+      "subtitle": "GovernanceIQ centralizes your organization's document policies, automates audits and ensures every team operates by the same standards — without supervision overhead.",
+      "heroLabel": "DASHBOARD · GOVERNANCEIQ",
+      "heroStats": [
+        { "value": "97%", "label": "Team compliance" },
+        { "value": "24", "label": "Docs audited this month" }
       ],
-      "audiences": [
-        "Managers",
-        "Ops",
-        "Leadership"
-      ]
+      "heroPolicies": [
+        "Metadata — Required before sending",
+        "GDPR — Personal data verified",
+        "Contracts — 2 docs awaiting review"
+      ],
+      "howItWorks": [
+        { "title": "Define", "text": "Create your document policies — required standards, GDPR rules, compliance levels by document type." },
+        { "title": "Deploy", "text": "GovernanceIQ automatically applies your policies across all teams — no training, no manual oversight." },
+        { "title": "Steer", "text": "Track compliance in real time via the dashboard and generate audit reports on demand." }
+      ],
+      "featureColumns": [
+        {
+          "title": "Governance & policies",
+          "items": [
+            { "title": "Centralized policies", "text": "Define once, apply across the whole organization automatically." },
+            { "title": "Automated audits", "text": "Every document audited against your policies — report generated automatically." },
+            { "title": "Compliance alerts", "text": "Immediate notification when a document doesn't meet standards." },
+            { "title": "Team dashboard", "text": "Compliance rate per team and per document type, in real time." }
+          ]
+        },
+        {
+          "title": "Compliance & security",
+          "items": [
+            { "title": "GDPR by design", "text": "Automatic verification of personal data against current regulations." },
+            { "title": "Full audit trail", "text": "History of every document action — full traceability." },
+            { "title": "Access management", "text": "Roles and permissions per team, department or project." },
+            { "title": "SSO & integrations", "text": "SSO connection, Google Workspace & Microsoft 365." }
+          ]
+        }
+      ],
+      "scenarioLabel": "USE CASES",
+      "scenarios": [
+        { "tag": "HR", "title": "GDPR compliance for candidate files", "text": "GovernanceIQ ensures every CV transmitted respects the company's GDPR policies.", "result": "Compliance guaranteed" },
+        { "tag": "ESN", "title": "Cross-team document standards", "text": "Project managers, consultants and developers follow the same document policies.", "result": "Teams aligned" },
+        { "tag": "ENTERPRISE", "title": "Simplified internal audit", "text": "Audit reports generated automatically — no more manual evidence collection.", "result": "Audit in 1 click" }
+      ],
+      "ctaTitle": "Ready to guarantee your team's compliance?",
+      "ctaSubtitle": "Centralize your document policies today.",
+      "primaryCta": "Try GovernanceIQ"
     }
   },
   "useCases": {
