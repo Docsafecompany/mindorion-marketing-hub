@@ -1,42 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import FoundersSection from "@/components/FoundersSection";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
-import { LINKEDIN_URL } from "@/lib/site";
-import { createStaticMeta } from "@/lib/site";
-
-const stats = [
-  { value: "3", label: "PRODUITS EN DÉVELOPPEMENT" },
-  { value: "14", label: "CATÉGORIES DE RISQUES DÉTECTÉES" },
-  { value: "0", label: "DONNÉE STOCKÉE · RGPD BY DESIGN" },
-];
-
-const buildInPublicItems = [
-  "Roadmap publique et mise à jour régulièrement",
-  "Retours utilisateurs intégrés à chaque sprint",
-  "Transparence sur les décisions de pricing",
-  "Suivi de la croissance partagé publiquement",
-];
-
-const values = [
-  {
-    icon: "🎯",
-    title: "Résultats avant tout",
-    text: "Chaque fonctionnalité que nous construisons doit résoudre un vrai problème professionnel. Pas de features gadgets — uniquement ce qui crée de la valeur mesurable.",
-  },
-  {
-    icon: "🔒",
-    title: "Privé par conception",
-    text: "Vos documents ne sont jamais stockés. L'analyse se fait en temps réel et les fichiers sont supprimés immédiatement. La confidentialité n'est pas une option — c'est l'architecture.",
-  },
-  {
-    icon: "⚡",
-    title: "Simplicité radicale",
-    text: "Les meilleurs outils professionnels sont invisibles. Vous uploadez, Mindorion analyse. Pas d'onboarding de 3 heures, pas de formation requise.",
-  },
-];
+import { LINKEDIN_URL, createStaticMeta } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () =>
@@ -50,30 +19,26 @@ export const Route = createFileRoute("/about")({
 });
 
 function AboutPage() {
+  const { t } = useTranslation();
+  const tags = t("about.tags", { returnObjects: true }) as string[];
+  const stats = t("about.stats", { returnObjects: true }) as Array<{ value: string; label: string }>;
+  const values = t("about.values", { returnObjects: true }) as Array<{ icon: string; title: string; text: string }>;
+
   return (
     <div className="section-shell section-space space-y-8">
-      <SEOHead
-        title="À propos | Mindorion — Intelligence professionnelle B2B"
-        description="Mindorion est un éditeur SaaS B2B fondé en Estonie. Découvrez notre mission, notre équipe et notre approche build in public. Qualion, ProspectIQ, GovernanceIQ."
-        path="/about"
-      />
+      <SEOHead title={t("about.seoTitle")} description={t("about.seoDescription")} path="/about" />
 
       <section className="grid gap-6 rounded-xl bg-[var(--color-about-dark)] p-6 text-white lg:grid-cols-[1.5fr_1fr] lg:p-8">
         <div>
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-pricing-primary)]">À PROPOS DE MINDORION</div>
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-pricing-primary)]">{t("about.eyebrow")}</div>
           <h1 className="headline-balance mt-5 text-4xl font-extrabold leading-tight sm:text-5xl">
-            Construire les outils que les professionnels B2B <span className="font-medium italic text-[var(--color-pricing-primary-soft)]">méritent vraiment.</span>
+            {t("about.heroTitle1")}<span className="font-medium italic text-[var(--color-pricing-primary-soft)]">{t("about.heroTitle2")}</span>
           </h1>
           <p className="mt-5 max-w-3xl text-sm leading-7 text-[var(--color-about-dark-muted)] sm:text-base">
-            Mindorion est un éditeur de logiciels B2B fondé en Estonie, qui construit une suite d'outils d'intelligence professionnelle pour les équipes qui opèrent à enjeux élevés — consultants, commerciaux, recruteurs et ingénieurs.
+            {t("about.heroText")}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-sm text-white/90">
-            {[
-              "Mindorion OÜ · Estonie",
-              "Fondé en 2024",
-              "B2B SaaS",
-              "Build in public",
-            ].map((tag) => (
+            {tags.map((tag) => (
               <span key={tag} className="rounded-full bg-white/6 px-3 py-1.5 text-sm text-white/85 ring-1 ring-white/8">
                 {tag}
               </span>
@@ -92,12 +57,12 @@ function AboutPage() {
       </section>
 
       <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 text-center sm:px-8">
-        <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">NOTRE MISSION</div>
+        <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("about.missionEyebrow")}</div>
         <h2 className="headline-balance mx-auto mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-          Donner aux professionnels B2B la certitude <span className="italic text-[var(--color-pricing-primary)]">d'opérer au plus haut niveau.</span>
+          {t("about.missionTitle1")}<span className="italic text-[var(--color-pricing-primary)]">{t("about.missionTitle2")}</span>
         </h2>
         <p className="mx-auto mt-5 max-w-md text-sm leading-7 text-muted-foreground">
-          Chaque document envoyé doit être impeccable. Chaque prospect doit être le bon. Chaque processus doit être conforme. Mindorion rend ça possible — sans friction, sans compromis.
+          {t("about.missionText")}
         </p>
       </section>
 
@@ -115,14 +80,14 @@ function AboutPage() {
 
       <section className="flex flex-col gap-5 rounded-[10px] bg-[var(--color-about-dark)] px-6 py-6 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-white">Envie de suivre l'aventure Mindorion ?</h2>
+          <h2 className="text-2xl font-bold text-white">{t("about.ctaTitle")}</h2>
           <p className="mt-2 text-sm leading-7 text-[var(--color-about-dark-muted)]">
-            On partage tout sur LinkedIn — décisions, apprentissages, nouveaux produits.
+            {t("about.ctaText")}
           </p>
         </div>
         <Button asChild className="rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
           <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
-            Suivre sur LinkedIn
+            {t("about.ctaButton")}
             <ArrowRight className="h-4 w-4" />
           </a>
         </Button>
