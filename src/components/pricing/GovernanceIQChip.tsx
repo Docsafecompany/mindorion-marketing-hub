@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { GovernanceIQModal, type GovernancePlan } from "./GovernanceIQModal";
 
@@ -8,6 +9,7 @@ interface GovernanceIQChipProps {
 
 export function GovernanceIQChip({ plan }: GovernanceIQChipProps) {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -18,7 +20,7 @@ export function GovernanceIQChip({ plan }: GovernanceIQChipProps) {
       >
         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-violet-600" />
         GovernanceIQ
-        <span className="text-[10px] text-violet-400">★ voir le détail</span>
+        <span className="text-[10px] text-violet-400">★ {t("governanceiq.seeDetails")}</span>
       </button>
 
       <GovernanceIQModal plan={plan} open={open} onClose={() => setOpen(false)} />
