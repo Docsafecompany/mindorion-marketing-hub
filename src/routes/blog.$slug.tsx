@@ -16,14 +16,15 @@ type BlogSection = {
 
 function BlogArticleError({ error, reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
+  const { t } = useTranslation();
   return (
     <div className="section-shell py-20">
       <Card className="mx-auto max-w-xl rounded-lg p-8 text-center">
-        <h1 className="text-2xl font-bold text-foreground">Article unavailable</h1>
+        <h1 className="text-2xl font-bold text-foreground">{t("blog.page.article.unavailable")}</h1>
         <p className="mt-4 text-muted-foreground">{error.message}</p>
         <div className="mt-6 flex justify-center gap-3">
-          <Button onClick={() => { router.invalidate(); reset(); }}>Retry</Button>
-          <Link to="/blog"><Button variant="outline">Back to blog</Button></Link>
+          <Button onClick={() => { router.invalidate(); reset(); }}>{t("blog.page.article.retry")}</Button>
+          <Link to="/blog"><Button variant="outline">{t("blog.page.article.back")}</Button></Link>
         </div>
       </Card>
     </div>
@@ -31,12 +32,13 @@ function BlogArticleError({ error, reset }: { error: Error; reset: () => void })
 }
 
 function BlogArticleNotFound() {
+  const { t } = useTranslation();
   return (
     <div className="section-shell py-20">
       <Card className="mx-auto max-w-xl rounded-lg p-8 text-center">
-        <h1 className="text-2xl font-bold text-foreground">Article not found</h1>
-        <p className="mt-4 text-muted-foreground">The requested article does not exist.</p>
-        <div className="mt-6 flex justify-center"><Link to="/blog"><Button>Back to blog</Button></Link></div>
+        <h1 className="text-2xl font-bold text-foreground">{t("blog.page.article.notFound")}</h1>
+        <p className="mt-4 text-muted-foreground">{t("blog.page.article.notFoundText")}</p>
+        <div className="mt-6 flex justify-center"><Link to="/blog"><Button>{t("blog.page.article.back")}</Button></Link></div>
       </Card>
     </div>
   );
