@@ -13,7 +13,7 @@ type Founder = {
   locationKey: string;
   linkedinUrl: string;
   quoteKey: string;
-  educationKey: string;
+  educationKey?: string;
 };
 
 const founders: Founder[] = [
@@ -29,12 +29,12 @@ const founders: Founder[] = [
   },
   {
     photo: camilleImg,
+    photoClassName: "scale-125 object-center",
     name: "Romain Ortis",
     roleKey: "founders.romain.role",
     locationKey: "founders.romain.location",
     linkedinUrl: "https://www.linkedin.com/in/romain-ortis-a97423113",
     quoteKey: "founders.romain.quote",
-    educationKey: "founders.romain.education",
   },
 ];
 
