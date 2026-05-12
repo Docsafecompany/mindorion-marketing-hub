@@ -24,6 +24,7 @@ import { Route as ProductsGovernanceiqRouteImport } from './routes/products.gove
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ApiPublicGeoRouteImport } from './routes/api/public/geo'
 
 const UseCasesRoute = UseCasesRouteImport.update({
   id: '/use-cases',
@@ -100,6 +101,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const ApiPublicGeoRoute = ApiPublicGeoRouteImport.update({
+  id: '/api/public/geo',
+  path: '/api/public/geo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -117,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/products/governanceiq': typeof ProductsGovernanceiqRoute
   '/products/prospectiq': typeof ProductsProspectiqRoute
   '/products/qualion': typeof ProductsQualionRoute
+  '/api/public/geo': typeof ApiPublicGeoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -134,6 +141,7 @@ export interface FileRoutesByTo {
   '/products/governanceiq': typeof ProductsGovernanceiqRoute
   '/products/prospectiq': typeof ProductsProspectiqRoute
   '/products/qualion': typeof ProductsQualionRoute
+  '/api/public/geo': typeof ApiPublicGeoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -152,6 +160,7 @@ export interface FileRoutesById {
   '/products/governanceiq': typeof ProductsGovernanceiqRoute
   '/products/prospectiq': typeof ProductsProspectiqRoute
   '/products/qualion': typeof ProductsQualionRoute
+  '/api/public/geo': typeof ApiPublicGeoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -171,6 +180,7 @@ export interface FileRouteTypes {
     | '/products/governanceiq'
     | '/products/prospectiq'
     | '/products/qualion'
+    | '/api/public/geo'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -188,6 +198,7 @@ export interface FileRouteTypes {
     | '/products/governanceiq'
     | '/products/prospectiq'
     | '/products/qualion'
+    | '/api/public/geo'
   id:
     | '__root__'
     | '/'
@@ -205,6 +216,7 @@ export interface FileRouteTypes {
     | '/products/governanceiq'
     | '/products/prospectiq'
     | '/products/qualion'
+    | '/api/public/geo'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -222,6 +234,7 @@ export interface RootRouteChildren {
   ProductsGovernanceiqRoute: typeof ProductsGovernanceiqRoute
   ProductsProspectiqRoute: typeof ProductsProspectiqRoute
   ProductsQualionRoute: typeof ProductsQualionRoute
+  ApiPublicGeoRoute: typeof ApiPublicGeoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -331,6 +344,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/api/public/geo': {
+      id: '/api/public/geo'
+      path: '/api/public/geo'
+      fullPath: '/api/public/geo'
+      preLoaderRoute: typeof ApiPublicGeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -359,6 +379,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProductsGovernanceiqRoute: ProductsGovernanceiqRoute,
   ProductsProspectiqRoute: ProductsProspectiqRoute,
   ProductsQualionRoute: ProductsQualionRoute,
+  ApiPublicGeoRoute: ApiPublicGeoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
