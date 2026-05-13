@@ -52,7 +52,7 @@ export const Route = createFileRoute("/blog/$slug")({
     }
     return { post };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     if (!loaderData) {
       return createStaticMeta({
         title: "Mindorion Blog",
@@ -61,11 +61,30 @@ export const Route = createFileRoute("/blog/$slug")({
       });
     }
 
-    return createStaticMeta({
-      title: loaderData.post.slug.replaceAll("-", " "),
-      description: loaderData.post.description,
-      path: `/blog/${loaderData.post.slug}`,
+    const post = loaderData.post;
+    const base = createStaticMeta({
+      title: `${post.seoTitle} | Mindorion Blog`,
+      description: post.description,
+      path: `/blog/${params.slug}`,
     });
+    return {
+      ...base,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.seoTitle,
+            description: post.description,
+            datePublished: post.date,
+            author: { "@type": "Organization", name: "Mindorion" },
+            publisher: { "@type": "Organization", name: "Mindorion" },
+            mainEntityOfPage: `https://mindorion.com/blog/${params.slug}`,
+          }),
+        },
+      ],
+    };
   },
   component: BlogArticlePage,
   errorComponent: BlogArticleError,
