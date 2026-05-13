@@ -632,12 +632,50 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
 const headCopy = () => pricingCopy[(i18n.language?.slice(0, 2) === "fr" ? "fr" : "en") as "fr" | "en"];
 
 export const Route = createFileRoute("/pricing")({
-  head: () =>
-    createStaticMeta({
+  head: () => {
+    const base = createStaticMeta({
       title: headCopy().seoTitle,
       description: headCopy().seoDescription,
       path: "/pricing",
-    }),
+    });
+    return {
+      ...base,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "OfferCatalog",
+            name: "Mindorion Pricing",
+            url: "https://mindorion.com/pricing",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                name: "Qualion",
+                priceCurrency: "EUR",
+                price: "19",
+                url: "https://mindorion.com/products/qualion",
+              },
+              {
+                "@type": "Offer",
+                name: "ProspectIQ",
+                priceCurrency: "EUR",
+                price: "29",
+                url: "https://mindorion.com/products/prospectiq",
+              },
+              {
+                "@type": "Offer",
+                name: "GovernanceIQ",
+                priceCurrency: "EUR",
+                price: "0",
+                url: "https://mindorion.com/products/governanceiq",
+              },
+            ],
+          }),
+        },
+      ],
+    };
+  },
   component: PricingPage,
 });
 

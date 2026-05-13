@@ -11,12 +11,14 @@ export type BlogPost = {
   titleKey: string;
   excerptKey: string;
   description: string;
+  seoTitle: string;
   sections: BlogSection[];
 };
 
 export const blogPosts: BlogPost[] = [
   {
     slug: "hidden-risks-documents",
+    seoTitle: 'Hidden Risks Lurking in Your Business Documents',
     date: "2026-01-16",
     categoryKey: "blog.categories.compliance",
     titleKey: "blog.posts.hiddenRisks.title",
@@ -30,6 +32,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "consulting-quality-gate",
+    seoTitle: 'Why Consulting Teams Need a Document Quality Gate',
     date: "2026-02-03",
     categoryKey: "blog.categories.consulting",
     titleKey: "blog.posts.consultingQualityGate.title",
@@ -43,6 +46,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "what-gets-cleaned",
+    seoTitle: 'What a Modern Document Cleanup Actually Removes',
     date: "2026-02-19",
     categoryKey: "blog.categories.product",
     titleKey: "blog.posts.whatGetsCleaned.title",
@@ -56,6 +60,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "roi-document-cleanup",
+    seoTitle: 'The ROI of Cleaning Up Your Business Documents',
     date: "2026-03-08",
     categoryKey: "blog.categories.operations",
     titleKey: "blog.posts.roiCleanup.title",
@@ -69,6 +74,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "remove-metadata-word-before-sending",
+    seoTitle: 'How to Remove Metadata From Word Before Sending',
     date: "2026-03-21",
     categoryKey: "blog.categories.compliance",
     titleKey: "blog.posts.removeMetadata.title",
@@ -82,6 +88,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "track-changes-proposals",
+    seoTitle: 'Track Changes in Proposals: A Hidden Sales Risk',
     date: "2026-04-07",
     categoryKey: "blog.categories.sales",
     titleKey: "blog.posts.trackChanges.title",
