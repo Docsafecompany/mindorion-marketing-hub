@@ -45,6 +45,7 @@ export function SEOHead({ title, description, path }: SEOHeadProps) {
       name: "twitter:description",
       content: description,
     });
+    upsertMeta('meta[property="og:url"]', { property: "og:url", content: absoluteUrl(path) });
     upsertCanonical(absoluteUrl(path));
   }, [description, path, title]);
 
