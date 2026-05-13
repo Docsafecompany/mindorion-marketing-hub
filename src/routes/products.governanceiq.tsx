@@ -23,13 +23,39 @@ const featureIcons: [string[], string[]] = [
 ];
 
 export const Route = createFileRoute("/products/governanceiq")({
-  head: () =>
-    createStaticMeta({
+  head: () => {
+    const base = createStaticMeta({
       title: "GovernanceIQ | Conformité documentaire équipe | Mindorion",
       description:
         "GovernanceIQ centralise les politiques documentaires de votre organisation, automatise les audits et garantit que chaque équipe opère selon les mêmes standards.",
       path: "/products/governanceiq",
-    }),
+    });
+    return {
+      ...base,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "GovernanceIQ",
+            description:
+              "Compliance and governance for external communications. Centralize policies, automate audits and align every team.",
+            brand: { "@type": "Brand", name: "Mindorion" },
+            url: "https://mindorion.com/products/governanceiq",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "EUR",
+              lowPrice: "0",
+              highPrice: "499",
+              offerCount: 4,
+              url: "https://mindorion.com/pricing",
+            },
+          }),
+        },
+      ],
+    };
+  },
   component: GovernanceIQPage,
 });
 
