@@ -11,6 +11,7 @@ export type BlogPost = {
   titleKey: string;
   excerptKey: string;
   description: string;
+  seoTitle: string;
   sections: BlogSection[];
 };
 
