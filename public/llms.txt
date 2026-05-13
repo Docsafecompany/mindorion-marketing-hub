@@ -1,0 +1,35 @@
+# Mindorion
+
+> Mindorion helps B2B teams protect their professional reputation by controlling documents, structuring outreach, and managing compliance before every external send.
+
+Mindorion offers three products: Qualion (document quality and metadata control), ProspectIQ (structured B2B outreach), and GovernanceIQ (compliance and governance for external communications).
+
+## Pages
+
+- [Home](/): Overview of Mindorion's professional intelligence platform.
+- [About](/about): Company story, mission, and team.
+- [Pricing](/pricing): Plans and pricing for all products.
+- [Contact](/contact): Request a personalized demo.
+- [Use cases](/use-cases): Real-world scenarios for B2B teams.
+- [Security](/security): Security practices and certifications.
+- [Blog](/blog): Articles on document quality, outreach, and compliance.
+
+## Products
+
+- [Qualion](/products/qualion): Document quality control and metadata cleanup.
+- [ProspectIQ](/products/prospectiq): Structured B2B prospecting and outreach.
+- [GovernanceIQ](/products/governanceiq): Compliance and governance for external sends.
+
+## Blog
+
+- [Hidden risks in documents](/blog/hidden-risks-documents): What sensitive data hides in your files.
+- [Consulting quality gate](/blog/consulting-quality-gate): Quality controls before client delivery.
+- [What gets cleaned](/blog/what-gets-cleaned): Document cleanup explained.
+- [ROI of document cleanup](/blog/roi-document-cleanup): Business value of cleaning files.
+- [Remove metadata in Word before sending](/blog/remove-metadata-word-before-sending): Practical guide.
+- [Track changes in proposals](/blog/track-changes-proposals): Managing revisions safely.
+
+## Optional
+
+- [Privacy policy](/legal/privacy)
+- [Terms of service](/legal/terms)

@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UseCasesRouteImport } from './routes/use-cases'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SecurityRouteImport } from './routes/security'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PricingRouteImport } from './routes/pricing'
@@ -34,6 +35,11 @@ const UseCasesRoute = UseCasesRouteImport.update({
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SecurityRoute = SecurityRouteImport.update({
@@ -115,6 +121,7 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/security': typeof SecurityRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -133,6 +140,7 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/security': typeof SecurityRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -152,6 +160,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/security': typeof SecurityRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -172,6 +181,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/security'
+    | '/sitemap.xml'
     | '/terms'
     | '/use-cases'
     | '/blog/$slug'
@@ -190,6 +200,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/security'
+    | '/sitemap.xml'
     | '/terms'
     | '/use-cases'
     | '/blog/$slug'
@@ -208,6 +219,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/security'
+    | '/sitemap.xml'
     | '/terms'
     | '/use-cases'
     | '/blog/$slug'
@@ -227,6 +239,7 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   SecurityRoute: typeof SecurityRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   UseCasesRoute: typeof UseCasesRoute
   LegalPrivacyRoute: typeof LegalPrivacyRoute
@@ -251,6 +264,13 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/security': {
@@ -372,6 +392,7 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   SecurityRoute: SecurityRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   UseCasesRoute: UseCasesRoute,
   LegalPrivacyRoute: LegalPrivacyRoute,
