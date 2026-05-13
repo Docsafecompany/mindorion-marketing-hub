@@ -23,13 +23,39 @@ const featureIcons: [string[], string[]] = [
 ];
 
 export const Route = createFileRoute("/products/qualion")({
-  head: () =>
-    createStaticMeta({
+  head: () => {
+    const base = createStaticMeta({
       title: "Qualion | Réputation documentaire avant envoi | Mindorion",
       description:
         "Qualion analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
       path: "/products/qualion",
-    }),
+    });
+    return {
+      ...base,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Qualion",
+            description:
+              "Document quality and metadata control for B2B teams. Detect risks before sending — metadata, comments, sensitive data, AI tone.",
+            brand: { "@type": "Brand", name: "Mindorion" },
+            url: "https://mindorion.com/products/qualion",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "EUR",
+              lowPrice: "19",
+              highPrice: "99",
+              offerCount: 3,
+              url: "https://mindorion.com/pricing",
+            },
+          }),
+        },
+      ],
+    };
+  },
   component: QualionPage,
 });
 

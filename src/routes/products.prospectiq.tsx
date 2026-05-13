@@ -22,13 +22,39 @@ const featureIcons: [string[], string[]] = [
 ];
 
 export const Route = createFileRoute("/products/prospectiq")({
-  head: () =>
-    createStaticMeta({
+  head: () => {
+    const base = createStaticMeta({
       title: "ProspectIQ | Outreach B2B intelligent | Mindorion",
       description:
         "ProspectIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
       path: "/products/prospectiq",
-    }),
+    });
+    return {
+      ...base,
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "ProspectIQ",
+            description:
+              "Structured B2B prospecting and outreach. Qualify opportunities with AI and generate personalized sequences.",
+            brand: { "@type": "Brand", name: "Mindorion" },
+            url: "https://mindorion.com/products/prospectiq",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "EUR",
+              lowPrice: "29",
+              highPrice: "149",
+              offerCount: 3,
+              url: "https://mindorion.com/pricing",
+            },
+          }),
+        },
+      ],
+    };
+  },
   component: ProspectIQPage,
 });
 
