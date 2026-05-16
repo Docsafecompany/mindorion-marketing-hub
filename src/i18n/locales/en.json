@@ -84,12 +84,40 @@
     "security": "Security",
     "about": "About",
     "useCases": "Use Cases",
+    "cookiePrefs": "Cookie preferences",
     "solutionItems": [
       "Consultants",
       "Sales Teams",
       "HR & Recruiting",
       "IT Services & Engineering"
     ]
+  },
+  "cookieBanner": {
+    "title": "We respect your privacy",
+    "description": "We use cookies to measure traffic and improve your experience. You can accept all, reject all, or choose per category. Analytics tools (GA4) only load after your consent.",
+    "privacyLink": "Privacy Policy",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "customize": "Customize",
+    "savePreferences": "Save preferences",
+    "modal": {
+      "title": "Cookie preferences",
+      "description": "Choose which categories of cookies you allow. Necessary cookies are always enabled because the site cannot work without them."
+    },
+    "categories": {
+      "necessary": {
+        "title": "Necessary",
+        "description": "Required for core site functions (navigation, security, language). Always enabled."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Helps us understand how visitors use the site (Google Analytics 4, anonymized IP). Off by default."
+      },
+      "preferences": {
+        "title": "Preferences",
+        "description": "Remembers your choices to personalize your next visit. Off by default."
+      }
+    }
   },
   "common": {
     "viewPricing": "View pricing",
