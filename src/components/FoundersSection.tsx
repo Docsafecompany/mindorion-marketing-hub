@@ -75,6 +75,7 @@ function FounderCard({ founder }: { founder: Founder }) {
           href={founder.linkedinUrl}
           target="_blank"
           rel="noreferrer"
+          onClick={() => trackEvent("social_clicked", { platform: "linkedin", context: `founder_${founder.name}` })}
           className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-about-card-border)] px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-[var(--color-pricing-primary-soft)]"
         >
           <Linkedin className="h-4 w-4" />
