@@ -6,6 +6,7 @@ import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { createStaticMeta } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 
 const blogHead = () => {
   const lang = i18n.language?.slice(0, 2) === "fr" ? "fr" : "en";
