@@ -10,6 +10,7 @@ import { ProductLogo } from "@/components/ProductLogo";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { createStaticMeta } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 type PlanId = "starter" | "pro" | "business";
