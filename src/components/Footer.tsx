@@ -48,7 +48,12 @@ export function Footer() {
             <BrandMark className="h-8 w-auto" />
             <p className="max-w-sm text-base leading-8 text-muted-foreground">{t("footer.brandText")}</p>
             <div className="flex flex-wrap gap-3">
-              <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackEvent("social_clicked", { platform: "linkedin", context: "footer" })}
+              >
                 <Button variant="outline" className="h-11 gap-2 rounded-xl border-border/80 bg-background px-4 text-sm font-semibold">
                   <Linkedin className="h-4 w-4" />
                   {t("footer.linkedin")}
