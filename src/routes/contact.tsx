@@ -90,6 +90,10 @@ function ContactPage() {
 
                 setProductError(false);
                 setSubmitted(false);
+                trackEvent("contact_form_submitted", {
+                  products_selected: selectedProducts,
+                  team_size: form.teamSize || "unspecified",
+                });
                 window.location.href = mailtoHref;
               }}
             >
