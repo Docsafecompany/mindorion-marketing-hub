@@ -108,7 +108,12 @@ function BlogPage() {
               {t("blog.page.featured.excerpt")}
             </p>
             <div className="mt-6 text-sm editorial-on-dark-muted">{t("blog.page.featured.meta")}</div>
-            <Link to="/blog/$slug" params={{ slug: featuredArticle.slug }} className="mt-8 inline-flex">
+            <Link
+              to="/blog/$slug"
+              params={{ slug: featuredArticle.slug }}
+              className="mt-8 inline-flex"
+              onClick={() => trackEvent("blog_article_clicked", { slug: featuredArticle.slug, location: "featured" })}
+            >
               <Button className="editorial-purple-bg rounded-lg px-5 text-sm font-semibold text-white hover:opacity-95">{t("blog.page.readArticle")}</Button>
             </Link>
           </div>
