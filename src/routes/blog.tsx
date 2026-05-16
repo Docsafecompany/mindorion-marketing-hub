@@ -142,7 +142,12 @@ function BlogPage() {
                 <h3 className="mt-4 text-xl font-bold leading-7 text-foreground">{article.copy.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{article.copy.excerpt}</p>
                 <div className="mt-5 text-sm text-muted-foreground">{article.copy.meta}</div>
-                <Link to="/blog/$slug" params={{ slug: article.slug }} className="mt-5 text-sm font-semibold editorial-purple-text">
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: article.slug }}
+                  className="mt-5 text-sm font-semibold editorial-purple-text"
+                  onClick={() => trackEvent("blog_article_clicked", { slug: article.slug, location: "list" })}
+                >
                   {t("blog.page.read")}
                 </Link>
               </div>
