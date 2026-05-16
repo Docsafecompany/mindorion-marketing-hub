@@ -84,12 +84,40 @@
     "security": "Sécurité",
     "about": "À propos",
     "useCases": "Use Cases",
+    "cookiePrefs": "Préférences cookies",
     "solutionItems": [
       "Consultants",
       "Équipes Sales",
       "RH & Recrutement",
       "ESN & Ingénierie"
     ]
+  },
+  "cookieBanner": {
+    "title": "Nous respectons votre vie privée",
+    "description": "Nous utilisons des cookies pour mesurer l'audience et améliorer votre expérience. Vous pouvez tout accepter, tout refuser ou choisir par catégorie. Les outils d'analyse (GA4) ne se chargent qu'après votre consentement.",
+    "privacyLink": "Politique de confidentialité",
+    "acceptAll": "Tout accepter",
+    "rejectAll": "Tout refuser",
+    "customize": "Personnaliser",
+    "savePreferences": "Enregistrer mes choix",
+    "modal": {
+      "title": "Préférences cookies",
+      "description": "Choisissez quelles catégories de cookies vous autorisez. Les cookies nécessaires sont toujours actifs car le site ne peut pas fonctionner sans eux."
+    },
+    "categories": {
+      "necessary": {
+        "title": "Nécessaires",
+        "description": "Indispensables au fonctionnement du site (navigation, sécurité, langue). Toujours activés."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Nous aide à comprendre comment les visiteurs utilisent le site (Google Analytics 4, IP anonymisée). Désactivé par défaut."
+      },
+      "preferences": {
+        "title": "Préférences",
+        "description": "Mémorise vos choix pour personnaliser votre prochaine visite. Désactivé par défaut."
+      }
+    }
   },
   "common": {
     "viewPricing": "Voir les tarifs",

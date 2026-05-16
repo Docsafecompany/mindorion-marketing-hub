@@ -1,10 +1,13 @@
-import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { Link, Outlet, createRootRoute, useRouterState } from "@tanstack/react-router";
 
 import "@/i18n";
+import { CookieBanner } from "@/components/CookieBanner";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Button } from "@/components/ui/button";
 import { Toaster } from "@/components/ui/sonner";
+import { trackPageView } from "@/lib/analytics";
 import { DEFAULT_OG_IMAGE, LINKEDIN_URL, SITE_URL } from "@/lib/site";
 function NotFoundComponent() {
   return (
@@ -63,12 +66,19 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  useEffect(() => {
+    trackPageView(pathname);
+  }, [pathname]);
+
   return (
     <>
       <ScrollToTop />
       <SiteLayout>
         <Outlet />
       </SiteLayout>
+      <CookieBanner />
       <Toaster position="top-right" />
     </>
   );

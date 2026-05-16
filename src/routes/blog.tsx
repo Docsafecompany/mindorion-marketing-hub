@@ -6,6 +6,7 @@ import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { createStaticMeta } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 
 const blogHead = () => {
   const lang = i18n.language?.slice(0, 2) === "fr" ? "fr" : "en";
@@ -107,7 +108,12 @@ function BlogPage() {
               {t("blog.page.featured.excerpt")}
             </p>
             <div className="mt-6 text-sm editorial-on-dark-muted">{t("blog.page.featured.meta")}</div>
-            <Link to="/blog/$slug" params={{ slug: featuredArticle.slug }} className="mt-8 inline-flex">
+            <Link
+              to="/blog/$slug"
+              params={{ slug: featuredArticle.slug }}
+              className="mt-8 inline-flex"
+              onClick={() => trackEvent("blog_article_clicked", { slug: featuredArticle.slug, location: "featured" })}
+            >
               <Button className="editorial-purple-bg rounded-lg px-5 text-sm font-semibold text-white hover:opacity-95">{t("blog.page.readArticle")}</Button>
             </Link>
           </div>
@@ -136,7 +142,12 @@ function BlogPage() {
                 <h3 className="mt-4 text-xl font-bold leading-7 text-foreground">{article.copy.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{article.copy.excerpt}</p>
                 <div className="mt-5 text-sm text-muted-foreground">{article.copy.meta}</div>
-                <Link to="/blog/$slug" params={{ slug: article.slug }} className="mt-5 text-sm font-semibold editorial-purple-text">
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: article.slug }}
+                  className="mt-5 text-sm font-semibold editorial-purple-text"
+                  onClick={() => trackEvent("blog_article_clicked", { slug: article.slug, location: "list" })}
+                >
                   {t("blog.page.read")}
                 </Link>
               </div>

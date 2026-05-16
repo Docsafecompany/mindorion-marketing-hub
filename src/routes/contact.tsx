@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { createStaticMeta } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 
 export const Route = createFileRoute("/contact")({
   head: () =>
@@ -89,6 +90,10 @@ function ContactPage() {
 
                 setProductError(false);
                 setSubmitted(false);
+                trackEvent("contact_form_submitted", {
+                  products_selected: selectedProducts,
+                  team_size: form.teamSize || "unspecified",
+                });
                 window.location.href = mailtoHref;
               }}
             >

@@ -10,6 +10,7 @@ import { ProductLogo } from "@/components/ProductLogo";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { createStaticMeta } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 type PlanId = "starter" | "pro" | "business";
@@ -697,14 +698,20 @@ function PricingPage() {
           <div className="inline-flex rounded-xl border border-border bg-card p-1">
             <button
               className={cn("rounded-[10px] px-5 py-2.5 text-sm font-semibold transition-colors", billing === "monthly" ? "bg-[var(--color-pricing-primary)] text-white" : "text-muted-foreground")}
-              onClick={() => setBilling("monthly")}
+              onClick={() => {
+                setBilling("monthly");
+                trackEvent("pricing_toggle", { billing: "monthly" });
+              }}
               type="button"
             >
               {copy.monthly}
             </button>
             <button
               className={cn("rounded-[10px] px-5 py-2.5 text-sm font-semibold transition-colors", billing === "annual" ? "bg-[var(--color-pricing-primary)] text-white" : "text-muted-foreground")}
-              onClick={() => setBilling("annual")}
+              onClick={() => {
+                setBilling("annual");
+                trackEvent("pricing_toggle", { billing: "annual" });
+              }}
               type="button"
             >
               {copy.annual}
@@ -796,14 +803,23 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
 
         <div className="mt-5">
           {isEnterprise ? (
-            <Link to={plan.href}>
+            <Link
+              to={plan.href}
+              onClick={() => trackEvent("pricing_plan_clicked", { plan: "enterprise", product: productKey, billing })}
+            >
               <Button className="w-full rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
                 {plan.cta}
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           ) : paymentHref ? (
-            <a href={paymentHref} target="_blank" rel="noopener noreferrer" className="block">
+            <a
+              href={paymentHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+              onClick={() => trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing })}
+            >
               <Button
                 variant="outline"
                 className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"

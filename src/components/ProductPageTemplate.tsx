@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ProductLogo } from "@/components/ProductLogo";
 import { SIGNUP_URL } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 type Theme = {
@@ -92,7 +93,10 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
             <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--product-dark-muted)]">{data.subtitle}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild className="rounded-xl bg-[var(--product-accent-strong)] text-white shadow-none hover:bg-[var(--product-accent-strong)]/95">
-                <a href={SIGNUP_URL}>
+                <a
+                  href={SIGNUP_URL}
+                  onClick={() => trackEvent("cta_clicked", { cta: `${data.product}_try`, location: "product_hero" })}
+                >
                   {data.primaryCta}
                   <ArrowRight className="h-4 w-4" />
                 </a>
@@ -167,7 +171,10 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
             <p className="mt-2 text-sm leading-7 text-white/78">{data.ctaSubtitle}</p>
           </div>
           <Button asChild className="rounded-xl bg-white text-[var(--product-cta-bg)] shadow-none hover:bg-white/95">
-            <a href={SIGNUP_URL}>
+            <a
+              href={SIGNUP_URL}
+              onClick={() => trackEvent("cta_clicked", { cta: `${data.product}_try`, location: "product_footer" })}
+            >
               {t("productsTemplate.viewPricing")}
               <ArrowRight className="h-4 w-4" />
             </a>

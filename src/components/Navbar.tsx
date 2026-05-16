@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/sheet";
 import { setLanguage, type SiteLanguage } from "@/i18n";
 import { LOGIN_URL } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { BrandMark } from "./BrandMark";
 import { ProductLogo } from "./ProductLogo";
@@ -239,13 +240,19 @@ export function Navbar() {
           >
             {t("nav.login")}
           </a>
-          <Link to="/pricing">
+          <Link to="/pricing" onClick={() => trackEvent("cta_clicked", { cta: "header_get_started" })}>
             <Button className="gap-1 rounded-xl px-5">
               {t("nav.start")}
               <ArrowRight className="h-3.5 w-3.5" />
             </Button>
           </Link>
-          <button className="text-xs font-semibold text-muted-foreground transition-colors hover:text-primary" onClick={() => void setLanguage(nextLanguage)}>
+          <button
+            className="text-xs font-semibold text-muted-foreground transition-colors hover:text-primary"
+            onClick={() => {
+              trackEvent("language_switched", { to: nextLanguage });
+              void setLanguage(nextLanguage);
+            }}
+          >
             {t("site.switchLanguage")}
           </button>
         </div>
@@ -347,14 +354,20 @@ export function Navbar() {
                     {t("nav.login")}
                   </a>
                   <SheetClose asChild>
-                    <Link to="/pricing" className="block px-3 py-1">
+                    <Link to="/pricing" className="block px-3 py-1" onClick={() => trackEvent("cta_clicked", { cta: "header_get_started" })}>
                       <Button className="w-full justify-center rounded-xl gap-1">
                         {t("nav.start")}
                         <ArrowRight className="h-3.5 w-3.5" />
                       </Button>
                     </Link>
                   </SheetClose>
-                  <button className="px-3 pt-2 text-left text-xs font-semibold text-muted-foreground" onClick={() => void setLanguage(nextLanguage)}>
+                  <button
+                    className="px-3 pt-2 text-left text-xs font-semibold text-muted-foreground"
+                    onClick={() => {
+                      trackEvent("language_switched", { to: nextLanguage });
+                      void setLanguage(nextLanguage);
+                    }}
+                  >
                     {t("site.switchLanguage")}
                   </button>
                 </div>

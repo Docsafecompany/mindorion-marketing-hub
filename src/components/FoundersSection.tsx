@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Linkedin, Sparkles, Target, Lock, Zap, type LucideIcon } from "lucide-react";
 
 import { LINKEDIN_URL } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 import camilleImg from "@/assets/founder-camille.jpg";
 import romainImg from "@/assets/founder-romain.png";
 
@@ -74,6 +75,7 @@ function FounderCard({ founder }: { founder: Founder }) {
           href={founder.linkedinUrl}
           target="_blank"
           rel="noreferrer"
+          onClick={() => trackEvent("social_clicked", { platform: "linkedin", context: `founder_${founder.name}` })}
           className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-about-card-border)] px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-[var(--color-pricing-primary-soft)]"
         >
           <Linkedin className="h-4 w-4" />
@@ -133,6 +135,7 @@ export default function FoundersSection() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackEvent("social_clicked", { platform: "linkedin", context: "company_follow" })}
                 className="inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[var(--color-pricing-primary)] transition-colors hover:bg-white/90"
               >
                 <Linkedin className="h-4 w-4" />
@@ -142,6 +145,7 @@ export default function FoundersSection() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackEvent("social_clicked", { platform: "linkedin", context: "company_roadmap" })}
                 className="inline-flex items-center gap-1 rounded-xl border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
               >
                 {t("founders.buildInPublic.ctaRoadmap")} →
