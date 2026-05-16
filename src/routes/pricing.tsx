@@ -698,14 +698,20 @@ function PricingPage() {
           <div className="inline-flex rounded-xl border border-border bg-card p-1">
             <button
               className={cn("rounded-[10px] px-5 py-2.5 text-sm font-semibold transition-colors", billing === "monthly" ? "bg-[var(--color-pricing-primary)] text-white" : "text-muted-foreground")}
-              onClick={() => setBilling("monthly")}
+              onClick={() => {
+                setBilling("monthly");
+                trackEvent("pricing_toggle", { billing: "monthly" });
+              }}
               type="button"
             >
               {copy.monthly}
             </button>
             <button
               className={cn("rounded-[10px] px-5 py-2.5 text-sm font-semibold transition-colors", billing === "annual" ? "bg-[var(--color-pricing-primary)] text-white" : "text-muted-foreground")}
-              onClick={() => setBilling("annual")}
+              onClick={() => {
+                setBilling("annual");
+                trackEvent("pricing_toggle", { billing: "annual" });
+              }}
               type="button"
             >
               {copy.annual}
