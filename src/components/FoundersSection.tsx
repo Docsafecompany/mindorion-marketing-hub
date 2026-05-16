@@ -135,6 +135,7 @@ export default function FoundersSection() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackEvent("social_clicked", { platform: "linkedin", context: "company_follow" })}
                 className="inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[var(--color-pricing-primary)] transition-colors hover:bg-white/90"
               >
                 <Linkedin className="h-4 w-4" />
@@ -144,6 +145,7 @@ export default function FoundersSection() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackEvent("social_clicked", { platform: "linkedin", context: "company_roadmap" })}
                 className="inline-flex items-center gap-1 rounded-xl border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
               >
                 {t("founders.buildInPublic.ctaRoadmap")} →
