@@ -803,14 +803,23 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
 
         <div className="mt-5">
           {isEnterprise ? (
-            <Link to={plan.href}>
+            <Link
+              to={plan.href}
+              onClick={() => trackEvent("pricing_plan_clicked", { plan: "enterprise", product: productKey, billing })}
+            >
               <Button className="w-full rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
                 {plan.cta}
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           ) : paymentHref ? (
-            <a href={paymentHref} target="_blank" rel="noopener noreferrer" className="block">
+            <a
+              href={paymentHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+              onClick={() => trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing })}
+            >
               <Button
                 variant="outline"
                 className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
