@@ -66,12 +66,19 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  useEffect(() => {
+    trackPageView(pathname);
+  }, [pathname]);
+
   return (
     <>
       <ScrollToTop />
       <SiteLayout>
         <Outlet />
       </SiteLayout>
+      <CookieBanner />
       <Toaster position="top-right" />
     </>
   );
