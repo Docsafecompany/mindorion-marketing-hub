@@ -3,7 +3,6 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
 import i18n from "@/i18n";
-import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { createStaticMeta } from "@/lib/site";
@@ -68,7 +67,6 @@ function BlogPage() {
   return (
     <div className="editorial-page font-pricing">
       <div className="section-shell section-space">
-        <SEOHead title={head.title} description={head.description} path="/blog" />
 
         <section className="mx-auto max-w-4xl text-center">
           <div className="text-xs font-bold uppercase tracking-[0.22em] editorial-purple-text">{t("blog.page.eyebrow")}</div>

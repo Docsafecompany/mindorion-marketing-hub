@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
 import { ProductPageTemplate, type ProductPageData } from "@/components/ProductPageTemplate";
-import { SEOHead } from "@/components/SEOHead";
 import { createStaticMeta } from "@/lib/site";
 
 const theme = {
@@ -88,7 +87,6 @@ function GovernanceIQPage() {
 
   return (
     <>
-      <SEOHead title={t("products.governanceiq.seoTitle")} description={t("products.governanceiq.seoDescription")} path="/products/governanceiq" />
       <ProductPageTemplate data={data} />
     </>
   );

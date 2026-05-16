@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
 import { ProductPageTemplate, type ProductPageData } from "@/components/ProductPageTemplate";
-import { SEOHead } from "@/components/SEOHead";
 import { createStaticMeta } from "@/lib/site";
 
 const theme = {
@@ -86,7 +85,6 @@ function ProspectIQPage() {
 
   return (
     <>
-      <SEOHead title={t("products.prospectiq.seoTitle")} description={t("products.prospectiq.seoDescription")} path="/products/prospectiq" />
       <ProductPageTemplate data={data} />
     </>
   );

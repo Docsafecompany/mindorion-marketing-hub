@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
 import { ProductPageTemplate, type ProductPageData } from "@/components/ProductPageTemplate";
-import { SEOHead } from "@/components/SEOHead";
 import { createStaticMeta } from "@/lib/site";
 
 const theme = {
@@ -93,7 +92,6 @@ function QualionPage() {
 
   return (
     <>
-      <SEOHead title={t("products.qualion.seoTitle")} description={t("products.qualion.seoDescription")} path="/products/qualion" />
       <ProductPageTemplate data={data} />
     </>
   );
