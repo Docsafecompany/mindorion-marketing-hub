@@ -354,14 +354,20 @@ export function Navbar() {
                     {t("nav.login")}
                   </a>
                   <SheetClose asChild>
-                    <Link to="/pricing" className="block px-3 py-1">
+                    <Link to="/pricing" className="block px-3 py-1" onClick={() => trackEvent("cta_clicked", { cta: "header_get_started" })}>
                       <Button className="w-full justify-center rounded-xl gap-1">
                         {t("nav.start")}
                         <ArrowRight className="h-3.5 w-3.5" />
                       </Button>
                     </Link>
                   </SheetClose>
-                  <button className="px-3 pt-2 text-left text-xs font-semibold text-muted-foreground" onClick={() => void setLanguage(nextLanguage)}>
+                  <button
+                    className="px-3 pt-2 text-left text-xs font-semibold text-muted-foreground"
+                    onClick={() => {
+                      trackEvent("language_switched", { to: nextLanguage });
+                      void setLanguage(nextLanguage);
+                    }}
+                  >
                     {t("site.switchLanguage")}
                   </button>
                 </div>
