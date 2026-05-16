@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/sheet";
 import { setLanguage, type SiteLanguage } from "@/i18n";
 import { LOGIN_URL } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { BrandMark } from "./BrandMark";
 import { ProductLogo } from "./ProductLogo";
