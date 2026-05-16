@@ -3,7 +3,6 @@ import { Database, Lock, ShieldCheck, TimerOff } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { FadeSection } from "@/components/FadeSection";
-import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
 import { createStaticMeta } from "@/lib/site";
 
@@ -24,7 +23,6 @@ function SecurityPage() {
 
   return (
     <div className="section-shell section-space">
-      <SEOHead title={t("security.seoTitle")} description={t("security.seoDescription")} path="/security" />
       <FadeSection className="mx-auto max-w-4xl text-center">
         <h1 className="text-4xl font-extrabold text-foreground sm:text-5xl">{t("security.title")}</h1>
         <p className="mt-5 text-lg leading-8 text-muted-foreground">{t("security.subtitle")}</p>

@@ -2,7 +2,6 @@ import { Link, createFileRoute, notFound, useRouter } from "@tanstack/react-rout
 import { useTranslation } from "react-i18next";
 
 import { FinalCTA } from "@/components/FinalCTA";
-import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getBlogPost } from "@/lib/site-data";
@@ -97,7 +96,6 @@ function BlogArticlePage() {
 
   return (
     <div className="section-shell section-space">
-      <SEOHead title={t(post.titleKey)} description={post.description} path={`/blog/${post.slug}`} />
       <div className="grid gap-10 lg:grid-cols-[280px_minmax(0,1fr)]">
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <div className="rounded-2xl border border-border bg-card p-6">

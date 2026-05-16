@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
 import { ProductPageTemplate, type ProductPageData } from "@/components/ProductPageTemplate";
-import { SEOHead } from "@/components/SEOHead";
 import { createStaticMeta } from "@/lib/site";
 
 const theme = {
@@ -37,19 +36,17 @@ export const Route = createFileRoute("/products/qualion")({
           type: "application/ld+json",
           children: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "SoftwareApplication",
             name: "Qualion",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
             description:
               "Document quality and metadata control for B2B teams. Detect risks before sending — metadata, comments, sensitive data, AI tone.",
-            brand: { "@type": "Brand", name: "Mindorion" },
             url: "https://mindorion.com/products/qualion",
             offers: {
-              "@type": "AggregateOffer",
+              "@type": "Offer",
+              price: "19",
               priceCurrency: "EUR",
-              lowPrice: "19",
-              highPrice: "99",
-              offerCount: 3,
-              url: "https://mindorion.com/pricing",
             },
           }),
         },
@@ -93,7 +90,6 @@ function QualionPage() {
 
   return (
     <>
-      <SEOHead title={t("products.qualion.seoTitle")} description={t("products.qualion.seoDescription")} path="/products/qualion" />
       <ProductPageTemplate data={data} />
     </>
   );

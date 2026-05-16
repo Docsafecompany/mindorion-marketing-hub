@@ -3,7 +3,6 @@ import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import FoundersSection from "@/components/FoundersSection";
-import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { LINKEDIN_URL, createStaticMeta } from "@/lib/site";
 
@@ -26,7 +25,6 @@ function AboutPage() {
 
   return (
     <div className="section-shell section-space space-y-8">
-      <SEOHead title={t("about.seoTitle")} description={t("about.seoDescription")} path="/about" />
 
       <section className="grid gap-6 rounded-xl bg-[var(--color-about-dark)] p-6 text-white lg:grid-cols-[1.5fr_1fr] lg:p-8">
         <div>

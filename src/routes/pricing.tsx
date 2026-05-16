@@ -7,7 +7,6 @@ import i18n from "@/i18n";
 import { GovernanceIQChip } from "@/components/pricing/GovernanceIQChip";
 import { type GovernancePlan } from "@/components/pricing/GovernanceIQModal";
 import { ProductLogo } from "@/components/ProductLogo";
-import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { createStaticMeta } from "@/lib/site";
@@ -687,7 +686,6 @@ function PricingPage() {
 
   return (
     <div className="pricing-page section-shell section-space">
-      <SEOHead title={copy.seoTitle} description={copy.seoDescription} path="/pricing" />
 
       <section className="mx-auto max-w-6xl text-center">
         <div className="mx-auto max-w-4xl space-y-4">

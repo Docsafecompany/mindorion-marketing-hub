@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import { FadeSection } from "@/components/FadeSection";
 import { ProductLogo } from "@/components/ProductLogo";
-import { SEOHead } from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -54,7 +53,6 @@ function HomePage() {
 
   return (
     <>
-      <SEOHead title={t("home.seoTitle")} description={t("home.seoDescription")} path="/" />
       <div className="hero-grid overflow-hidden">
         <section className="section-shell section-space pb-12 pt-16 sm:pt-20 lg:pt-24">
           <FadeSection className="mx-auto max-w-4xl text-center">

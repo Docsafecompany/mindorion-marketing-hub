@@ -3,7 +3,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { ArrowRight, BriefcaseBusiness, Check, Cog, Shield, TrendingUp, Users } from "lucide-react";
 
-import { SEOHead } from "@/components/SEOHead";
 import { ProductLogo } from "@/components/ProductLogo";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -133,7 +132,6 @@ function UseCasesPage() {
 
   return (
     <div className="use-cases-page section-space">
-      <SEOHead title={pageTitle} description={pageSubtitle} path="/use-cases" />
 
       <div className="section-shell">
         <section className="mx-auto max-w-4xl text-center">

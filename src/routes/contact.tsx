@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
-import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -48,7 +47,6 @@ function ContactPage() {
   return (
     <div className="editorial-page font-pricing">
       <div className="section-shell section-space">
-        <SEOHead title={t("contact.seoTitle")} description={t("contact.seoDescription")} path="/contact" />
 
         <div className="grid gap-10 lg:grid-cols-[0.45fr_0.55fr] lg:items-start">
           <section>

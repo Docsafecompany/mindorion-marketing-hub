@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
 import { ProductPageTemplate, type ProductPageData } from "@/components/ProductPageTemplate";
-import { SEOHead } from "@/components/SEOHead";
 import { createStaticMeta } from "@/lib/site";
 
 const theme = {
@@ -36,19 +35,17 @@ export const Route = createFileRoute("/products/prospectiq")({
           type: "application/ld+json",
           children: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "SoftwareApplication",
             name: "ProspectIQ",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
             description:
               "Structured B2B prospecting and outreach. Qualify opportunities with AI and generate personalized sequences.",
-            brand: { "@type": "Brand", name: "Mindorion" },
             url: "https://mindorion.com/products/prospectiq",
             offers: {
-              "@type": "AggregateOffer",
+              "@type": "Offer",
+              price: "29",
               priceCurrency: "EUR",
-              lowPrice: "29",
-              highPrice: "149",
-              offerCount: 3,
-              url: "https://mindorion.com/pricing",
             },
           }),
         },
@@ -86,7 +83,6 @@ function ProspectIQPage() {
 
   return (
     <>
-      <SEOHead title={t("products.prospectiq.seoTitle")} description={t("products.prospectiq.seoDescription")} path="/products/prospectiq" />
       <ProductPageTemplate data={data} />
     </>
   );

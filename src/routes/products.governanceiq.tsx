@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
 import { ProductPageTemplate, type ProductPageData } from "@/components/ProductPageTemplate";
-import { SEOHead } from "@/components/SEOHead";
 import { createStaticMeta } from "@/lib/site";
 
 const theme = {
@@ -37,19 +36,17 @@ export const Route = createFileRoute("/products/governanceiq")({
           type: "application/ld+json",
           children: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "SoftwareApplication",
             name: "GovernanceIQ",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
             description:
               "Compliance and governance for external communications. Centralize policies, automate audits and align every team.",
-            brand: { "@type": "Brand", name: "Mindorion" },
             url: "https://mindorion.com/products/governanceiq",
             offers: {
-              "@type": "AggregateOffer",
+              "@type": "Offer",
+              price: "0",
               priceCurrency: "EUR",
-              lowPrice: "0",
-              highPrice: "499",
-              offerCount: 4,
-              url: "https://mindorion.com/pricing",
             },
           }),
         },
@@ -88,7 +85,6 @@ function GovernanceIQPage() {
 
   return (
     <>
-      <SEOHead title={t("products.governanceiq.seoTitle")} description={t("products.governanceiq.seoDescription")} path="/products/governanceiq" />
       <ProductPageTemplate data={data} />
     </>
   );
