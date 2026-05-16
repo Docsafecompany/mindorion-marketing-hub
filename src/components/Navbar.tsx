@@ -240,13 +240,19 @@ export function Navbar() {
           >
             {t("nav.login")}
           </a>
-          <Link to="/pricing">
+          <Link to="/pricing" onClick={() => trackEvent("cta_clicked", { cta: "header_get_started" })}>
             <Button className="gap-1 rounded-xl px-5">
               {t("nav.start")}
               <ArrowRight className="h-3.5 w-3.5" />
             </Button>
           </Link>
-          <button className="text-xs font-semibold text-muted-foreground transition-colors hover:text-primary" onClick={() => void setLanguage(nextLanguage)}>
+          <button
+            className="text-xs font-semibold text-muted-foreground transition-colors hover:text-primary"
+            onClick={() => {
+              trackEvent("language_switched", { to: nextLanguage });
+              void setLanguage(nextLanguage);
+            }}
+          >
             {t("site.switchLanguage")}
           </button>
         </div>
