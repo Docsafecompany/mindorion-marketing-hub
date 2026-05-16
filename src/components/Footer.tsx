@@ -104,6 +104,13 @@ export function Footer() {
                   {item.label}
                 </Link>
               ))}
+              <button
+                type="button"
+                onClick={openCookiePreferences}
+                className="block text-left text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {t("footer.cookiePrefs")}
+              </button>
             </div>
           </div>
         </div>
