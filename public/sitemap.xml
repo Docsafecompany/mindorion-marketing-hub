@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mindorion.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mindorion.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mindorion.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mindorion.com/pricing</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mindorion.com/use-cases</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mindorion.com/security</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mindorion.com/products/qualion</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mindorion.com/products/prospectiq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mindorion.com/products/governanceiq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mindorion.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mindorion.com/legal/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://mindorion.com/legal/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://mindorion.com/blog/hidden-risks-documents</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mindorion.com/blog/consulting-quality-gate</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mindorion.com/blog/what-gets-cleaned</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mindorion.com/blog/roi-document-cleanup</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mindorion.com/blog/remove-metadata-word-before-sending</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mindorion.com/blog/track-changes-proposals</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
