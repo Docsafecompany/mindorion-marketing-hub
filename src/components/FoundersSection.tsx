@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Linkedin, Sparkles, Target, Lock, Zap, type LucideIcon } from "lucide-react";
 
 import { LINKEDIN_URL } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 import camilleImg from "@/assets/founder-camille.jpg";
 import romainImg from "@/assets/founder-romain.png";
 
