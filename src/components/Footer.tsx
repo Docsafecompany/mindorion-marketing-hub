@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { setLanguage, type SiteLanguage } from "@/i18n";
 import { LINKEDIN_URL } from "@/lib/site";
+import { openCookiePreferences } from "@/lib/analytics";
 import { BrandMark } from "./BrandMark";
 
 export function Footer() {
