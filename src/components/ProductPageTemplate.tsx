@@ -79,20 +79,20 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
   } as CSSProperties;
 
   return (
-    <div className="bg-[var(--color-product-page)] [font-family:var(--font-pricing)]" style={style}>
-      <div className="section-shell section-space space-y-8">
-        <section className="grid gap-6 rounded-xl bg-[var(--product-hero-bg)] p-6 lg:grid-cols-[1.38fr_1fr] lg:p-8">
-          <div>
-            <div className="mb-6 h-16 w-44">
+    <div className="overflow-x-hidden bg-[var(--color-product-page)] [font-family:var(--font-pricing)]" style={style}>
+      <div className="section-shell section-space space-y-6 sm:space-y-8">
+        <section className="grid gap-6 rounded-xl bg-[var(--product-hero-bg)] p-4 sm:p-6 lg:grid-cols-[1.38fr_1fr] lg:p-8">
+          <div className="min-w-0">
+            <div className="mb-5 h-12 w-32 sm:mb-6 sm:h-16 sm:w-44">
               <ProductLogo product={data.product} className="object-left" />
             </div>
-            <div className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--product-accent-text)]">{data.eyebrow}</div>
-            <h1 className="headline-balance mt-5 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
+            <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--product-accent-text)] sm:text-xs sm:tracking-[0.18em]">{data.eyebrow}</div>
+            <h1 className="headline-balance mt-4 text-3xl font-extrabold leading-tight text-white sm:mt-5 sm:text-4xl lg:text-5xl">
               {data.title}
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--product-dark-muted)]">{data.subtitle}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild className="rounded-xl bg-[var(--product-accent-strong)] text-white shadow-none hover:bg-[var(--product-accent-strong)]/95">
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--product-dark-muted)] sm:mt-5 sm:text-base sm:leading-8">{data.subtitle}</p>
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+              <Button asChild className="w-full rounded-xl bg-[var(--product-accent-strong)] text-white shadow-none hover:bg-[var(--product-accent-strong)]/95 sm:w-auto">
                 <a
                   href={SIGNUP_URL}
                   onClick={() => trackEvent("cta_clicked", { cta: `${data.product}_try`, location: "product_hero" })}
@@ -104,14 +104,14 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
               <Button
                 asChild
                 variant="outline"
-                className="rounded-xl border-white/12 bg-transparent text-white shadow-none hover:bg-white/5 hover:text-white"
+                className="w-full rounded-xl border-white/20 bg-transparent text-white shadow-none hover:bg-white/5 hover:text-white sm:w-auto"
               >
                 <a href="/pricing">{t("productsTemplate.viewPricing")}</a>
               </Button>
             </div>
           </div>
 
-          <div className="rounded-xl bg-[var(--product-hero-card)] p-5 text-white">
+          <div className="min-w-0 rounded-xl bg-[var(--product-hero-card)] p-4 text-white sm:p-5">
             <HeroPanelView panel={data.heroPanel} />
           </div>
         </section>
