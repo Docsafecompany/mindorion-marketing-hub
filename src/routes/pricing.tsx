@@ -42,10 +42,7 @@ async function handleCheckout(priceId: string, isAnnual: boolean) {
           "Content-Type": "application/json",
           Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
         },
-        body: JSON.stringify({
-          priceId,
-          promoCode: isAnnual ? undefined : "LAUNCH1",
-        }),
+        body: JSON.stringify({ priceId }),
       },
     );
     const { url } = await res.json();
