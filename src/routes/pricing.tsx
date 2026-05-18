@@ -20,14 +20,14 @@ type BillingMode = "monthly" | "annual";
 // TODO: remplace les placeholders par tes vrais Stripe Price IDs (format: price_1xxx...)
 const PRICE_IDS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> = {
   qualion: {
-    starter:  { monthly: "price_REPLACE_qualion_starter_monthly",  annual: "price_REPLACE_qualion_starter_annual" },
-    pro:      { monthly: "price_REPLACE_qualion_pro_monthly",      annual: "price_REPLACE_qualion_pro_annual" },
-    business: { monthly: "price_REPLACE_qualion_business_monthly", annual: "price_REPLACE_qualion_business_annual" },
+    starter:  { monthly: "price_1TLPIYPRgRrg8XxA4hWlXxrW",  annual: "price_1TLQkPRgRrg8XxAqxMDeTQu" },
+    pro:      { monthly: "price_1TPA5sPRgRrg8XxAzShRwhNR",  annual: "price_1TPA6IPRgRrg8XxA8mTgEQn5" },
+    business: { monthly: "price_1TLPKSPRgRrg8XxAkb2Uep0s",  annual: "price_1TLPMBPRgRrg8XxAVHmo0QQr" },
   },
   prospectiq: {
-    starter:  { monthly: "price_REPLACE_prospectiq_starter_monthly",  annual: "price_REPLACE_prospectiq_starter_annual" },
-    pro:      { monthly: "price_REPLACE_prospectiq_pro_monthly",      annual: "price_REPLACE_prospectiq_pro_annual" },
-    business: { monthly: "price_REPLACE_prospectiq_business_monthly", annual: "price_REPLACE_prospectiq_business_annual" },
+    starter:  { monthly: "price_1TN0vTPRgRrg8XxAzjRbgLdF",  annual: "price_1TN0wJPRgRrg8XxA6gjahwBt" },
+    pro:      { monthly: "price_1TN0wqPRgRrg8XxAD3bnMQtu",  annual: "price_1TN0xIPRgRrg8XxAYtJAiUbw" },
+    business: { monthly: "price_1TN0xiPRgRrg8XxAG7GLpihz",  annual: "price_1TN0y3PRgRrg8XxAQXuLmtf9" },
   },
 };
 
