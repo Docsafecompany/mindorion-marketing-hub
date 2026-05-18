@@ -1,6 +1,6 @@
 export const APP_URL = "https://app.mindorion.com";
 export const SIGNUP_URL = `${APP_URL}/signup`;
-export const LOGIN_URL = `${APP_URL}/auth`;
+export const LOGIN_URL = `${APP_URL}/login`;
 export const SITE_URL = "https://mindorion.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/mindorion";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
