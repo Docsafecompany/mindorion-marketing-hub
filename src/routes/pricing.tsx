@@ -799,7 +799,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
 
   const planIdMap: Record<string, PlanId> = { Starter: "starter", Pro: "pro", Business: "business" };
   const stripePlanId = planIdMap[plan.name];
-  const paymentHref = stripePlanId ? PAYMENT_LINKS[productKey][stripePlanId][billing] : undefined;
+  const priceId = stripePlanId ? PRICE_IDS[productKey][stripePlanId][billing] : undefined;
 
   return (
     <article
@@ -833,22 +833,18 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-          ) : paymentHref ? (
-            <a
-              href={paymentHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-              onClick={() => trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing })}
+          ) : priceId ? (
+            <Button
+              variant="outline"
+              className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
+              onClick={() => {
+                trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing });
+                void handleCheckout(priceId);
+              }}
             >
-              <Button
-                variant="outline"
-                className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
-              >
-                {plan.cta}
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </a>
+              {plan.cta}
+              <ArrowRight className="h-4 w-4" />
+            </Button>
           ) : null}
           {governancePlan ? <GovernanceIQChip plan={governancePlan} /> : null}
         </div>
