@@ -32,6 +32,7 @@ const PRICE_IDS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> 
 };
 
 async function handleCheckout(priceId: string, isAnnual: boolean) {
+  console.log('handleCheckout called', priceId, isAnnual);
   try {
     const res = await fetch(
       `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/create-checkout`,
@@ -841,6 +842,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
               variant="outline"
               className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
               onClick={() => {
+                console.log('button clicked', priceId);
                 trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing });
                 void handleCheckout(priceId, billing === "annual");
               }}
