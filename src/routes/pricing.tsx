@@ -31,7 +31,7 @@ const PRICE_IDS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> 
   },
 };
 
-async function handleCheckout(priceId: string) {
+async function handleCheckout(priceId: string, isAnnual: boolean) {
   try {
     const res = await fetch(
       `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/create-checkout`,
@@ -41,7 +41,10 @@ async function handleCheckout(priceId: string) {
           "Content-Type": "application/json",
           Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
         },
-        body: JSON.stringify({ priceId, promoCode: "LAUNCH1" }),
+        body: JSON.stringify({
+          priceId,
+          promoCode: isAnnual ? undefined : "LAUNCH1",
+        }),
       },
     );
     const { url } = await res.json();
@@ -839,7 +842,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
               className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
               onClick={() => {
                 trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing });
-                void handleCheckout(priceId);
+                void handleCheckout(priceId, billing === "annual");
               }}
             >
               {plan.cta}
