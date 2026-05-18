@@ -31,25 +31,8 @@ const PRICE_IDS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> 
   },
 };
 
-async function handleCheckout(priceId: string, isAnnual: boolean) {
-  console.log('handleCheckout called', priceId, isAnnual);
-  try {
-    const res = await fetch(
-      `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/create-checkout`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-        },
-        body: JSON.stringify({ priceId }),
-      },
-    );
-    const { url } = await res.json();
-    if (url) window.location.href = url;
-  } catch (err) {
-    console.error("checkout failed", err);
-  }
+function handleCheckout(priceId: string) {
+  window.location.href = `https://app.mindorion.com/auth/signup?priceId=${priceId}`;
 }
 
 type PlanColumn = "starter" | "pro" | "business" | "enterprise";
@@ -841,7 +824,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
               onClick={() => {
                 console.log('button clicked', priceId);
                 trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing });
-                void handleCheckout(priceId, billing === "annual");
+                void handleCheckout(priceId);
               }}
             >
               {plan.cta}
