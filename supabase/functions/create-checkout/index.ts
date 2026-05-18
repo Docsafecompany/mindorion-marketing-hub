@@ -29,7 +29,7 @@ serve(async (req) => {
       line_items: [{ price: priceId, quantity: 1 }],
       payment_method_collection: 'if_required',
       allow_promotion_codes: true,
-      success_url: 'https://app.mindorion.com/dashboard?welcome=1',
+      success_url: 'https://app.mindorion.com/auth/signup?checkout=success',
       cancel_url: 'https://mindorion.com/pricing',
     })
 
