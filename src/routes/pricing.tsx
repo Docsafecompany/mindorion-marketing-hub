@@ -32,7 +32,7 @@ const PRICE_IDS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> 
 };
 
 function handleCheckout(priceId: string) {
-  window.location.href = `https://app.mindorion.com/auth/signup?priceId=${priceId}`;
+  window.location.href = `https://app.mindorion.com/signup?priceId=${priceId}`;
 }
 
 type PlanColumn = "starter" | "pro" | "business" | "enterprise";
