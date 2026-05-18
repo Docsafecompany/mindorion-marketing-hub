@@ -842,7 +842,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
               className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
               onClick={() => {
                 trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing });
-                void handleCheckout(priceId);
+                void handleCheckout(priceId, billing === "annual");
               }}
             >
               {plan.cta}
