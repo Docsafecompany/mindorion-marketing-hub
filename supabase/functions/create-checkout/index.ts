@@ -39,8 +39,8 @@ serve(async (req) => {
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       line_items: [{ price: priceId, quantity: 1 }],
-      payment_method_collection: 'if_required',
       discounts,
+      payment_method_collection: 'if_required',
       success_url: 'https://app.mindorion.com/dashboard?welcome=1',
       cancel_url: 'https://mindorion.com/pricing',
     })
