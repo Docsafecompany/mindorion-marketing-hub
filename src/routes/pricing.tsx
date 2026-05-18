@@ -17,18 +17,39 @@ type PlanId = "starter" | "pro" | "business";
 type ProductId = "qualion" | "prospectiq";
 type BillingMode = "monthly" | "annual";
 
-const PAYMENT_LINKS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> = {
+// TODO: remplace les placeholders par tes vrais Stripe Price IDs (format: price_1xxx...)
+const PRICE_IDS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> = {
   qualion: {
-    starter:  { monthly: "https://buy.stripe.com/3cI4gBc8u29Capw4w7bAs02?prefilled_promo_code=LAUNCH1", annual: "https://buy.stripe.com/dRm8wRegCbKceFM1jVbAs03?prefilled_promo_code=LAUNCH1" },
-    pro:      { monthly: "https://buy.stripe.com/14AeVf5K6cOgcxEaUvbAs00?prefilled_promo_code=LAUNCH1", annual: "https://buy.stripe.com/4gMfZjc8u6pSgNU5AbbAs01?prefilled_promo_code=LAUNCH1" },
-    business: { monthly: "https://buy.stripe.com/eVq28tgoK29C55c1jVbAs04?prefilled_promo_code=LAUNCH1", annual: "https://buy.stripe.com/00w14p4G2g0sdBI6EfbAs05?prefilled_promo_code=LAUNCH1" },
+    starter:  { monthly: "price_REPLACE_qualion_starter_monthly",  annual: "price_REPLACE_qualion_starter_annual" },
+    pro:      { monthly: "price_REPLACE_qualion_pro_monthly",      annual: "price_REPLACE_qualion_pro_annual" },
+    business: { monthly: "price_REPLACE_qualion_business_monthly", annual: "price_REPLACE_qualion_business_annual" },
   },
   prospectiq: {
-    starter:  { monthly: "https://buy.stripe.com/eVqdRb5K629CcxE8MnbAs0a?prefilled_promo_code=LAUNCH1", annual: "https://buy.stripe.com/28E4gB4G25lO69g0fRbAs0b?prefilled_promo_code=LAUNCH1" },
-    pro:      { monthly: "https://buy.stripe.com/cNi6oJegCaG87dk9QrbAs08?prefilled_promo_code=LAUNCH1", annual: "https://buy.stripe.com/7sYcN7dcycOgcxE5AbbAs09?prefilled_promo_code=LAUNCH1" },
-    business: { monthly: "https://buy.stripe.com/fZufZj4G29C455c0fRbAs06?prefilled_promo_code=LAUNCH1", annual: "https://buy.stripe.com/7sYdRb8WiaG8dBI3s3bAs07?prefilled_promo_code=LAUNCH1" },
+    starter:  { monthly: "price_REPLACE_prospectiq_starter_monthly",  annual: "price_REPLACE_prospectiq_starter_annual" },
+    pro:      { monthly: "price_REPLACE_prospectiq_pro_monthly",      annual: "price_REPLACE_prospectiq_pro_annual" },
+    business: { monthly: "price_REPLACE_prospectiq_business_monthly", annual: "price_REPLACE_prospectiq_business_annual" },
   },
 };
+
+async function handleCheckout(priceId: string) {
+  try {
+    const res = await fetch(
+      `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/create-checkout`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+        },
+        body: JSON.stringify({ priceId, promoCode: "LAUNCH1" }),
+      },
+    );
+    const { url } = await res.json();
+    if (url) window.location.href = url;
+  } catch (err) {
+    console.error("checkout failed", err);
+  }
+}
 
 type PlanColumn = "starter" | "pro" | "business" | "enterprise";
 type LocalizedPlan = {
@@ -778,7 +799,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
 
   const planIdMap: Record<string, PlanId> = { Starter: "starter", Pro: "pro", Business: "business" };
   const stripePlanId = planIdMap[plan.name];
-  const paymentHref = stripePlanId ? PAYMENT_LINKS[productKey][stripePlanId][billing] : undefined;
+  const priceId = stripePlanId ? PRICE_IDS[productKey][stripePlanId][billing] : undefined;
 
   return (
     <article
@@ -812,22 +833,18 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-          ) : paymentHref ? (
-            <a
-              href={paymentHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-              onClick={() => trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing })}
+          ) : priceId ? (
+            <Button
+              variant="outline"
+              className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
+              onClick={() => {
+                trackEvent("pricing_plan_clicked", { plan: stripePlanId, product: productKey, billing });
+                void handleCheckout(priceId);
+              }}
             >
-              <Button
-                variant="outline"
-                className="w-full rounded-xl border-border bg-card text-foreground shadow-none hover:bg-muted/40"
-              >
-                {plan.cta}
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </a>
+              {plan.cta}
+              <ArrowRight className="h-4 w-4" />
+            </Button>
           ) : null}
           {governancePlan ? <GovernanceIQChip plan={governancePlan} /> : null}
         </div>
