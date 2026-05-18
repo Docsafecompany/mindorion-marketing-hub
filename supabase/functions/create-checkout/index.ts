@@ -15,7 +15,7 @@ serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS })
 
   try {
-    const { priceId, promoCode } = await req.json()
+    const { priceId } = await req.json()
 
     if (!priceId) {
       return new Response(JSON.stringify({ error: 'priceId is required' }), {
@@ -24,23 +24,11 @@ serve(async (req) => {
       })
     }
 
-    let discounts: { promotion_code: string }[] | undefined = undefined
-    if (promoCode) {
-      const codes = await stripe.promotionCodes.list({
-        code: promoCode,
-        active: true,
-        limit: 1,
-      })
-      if (codes.data.length > 0) {
-        discounts = [{ promotion_code: codes.data[0].id }]
-      }
-    }
-
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       line_items: [{ price: priceId, quantity: 1 }],
-      discounts,
       payment_method_collection: 'if_required',
+      allow_promotion_codes: true,
       success_url: 'https://app.mindorion.com/dashboard?welcome=1',
       cancel_url: 'https://mindorion.com/pricing',
     })
