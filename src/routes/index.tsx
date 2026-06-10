@@ -50,7 +50,7 @@ function HomePage() {
   const testimonials = t("home.testimonials", { returnObjects: true }) as Array<{ role: string; quote: string }>;
   const personas = t("home.personas", { returnObjects: true }) as string[];
   const useCaseIcons = [BriefcaseBusiness, Users, Sparkles, FileText] as const;
-  const heroProductLogos = ["qualion", "prospectiq", "governanceiq"] as const;
+  const heroProductLogos = ["proposaliq", "growthiq", "governanceiq"] as const;
 
   return (
     <>

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     createStaticMeta({
       title: "Demander une démo | Mindorion",
-      description: "Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes — Qualion, ProspectIQ, GovernanceIQ. Sans engagement.",
+      description: "Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes — Proposal IQ, Growth IQ, GovernanceIQ. Sans engagement.",
       path: "/contact",
     }),
   component: ContactPage,

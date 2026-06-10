@@ -24,10 +24,10 @@ const featureIcons: [string[], string[]] = [
 export const Route = createFileRoute("/products/proposaliq")({
   head: () => {
     const base = createStaticMeta({
-      title: "Qualion | Réputation documentaire avant envoi | Mindorion",
+      title: "Proposal IQ | Réputation documentaire avant envoi | Mindorion",
       description:
-        "Qualion analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
-      path: "/products/qualion",
+        "Proposal IQ analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
+      path: "/products/proposaliq",
     });
     return {
       ...base,
@@ -37,12 +37,12 @@ export const Route = createFileRoute("/products/proposaliq")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "Qualion",
+            name: "Proposal IQ",
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web",
             description:
               "Document quality and metadata control for B2B teams. Detect risks before sending — metadata, comments, sensitive data, AI tone.",
-            url: "https://mindorion.com/products/qualion",
+            url: "https://mindorion.com/products/proposaliq",
             offers: {
               "@type": "Offer",
               price: "19",
@@ -53,25 +53,25 @@ export const Route = createFileRoute("/products/proposaliq")({
       ],
     };
   },
-  component: QualionPage,
+  component: ProposalIQPage,
 });
 
-function QualionPage() {
+function ProposalIQPage() {
   const { t } = useTranslation();
-  const heroItems = (t("products.qualion.heroItems", { returnObjects: true }) as string[]).map((text, i) => ({ text, tone: heroItemTones[i] }));
-  const howItWorks = t("products.qualion.howItWorks", { returnObjects: true }) as Array<{ title: string; text: string }>;
-  const cols = t("products.qualion.featureColumns", { returnObjects: true }) as Array<{ title: string; items: Array<{ title: string; text: string }> }>;
-  const scenarios = t("products.qualion.scenarios", { returnObjects: true }) as Array<{ tag: string; title: string; text: string; result: string }>;
+  const heroItems = (t("products.proposaliq.heroItems", { returnObjects: true }) as string[]).map((text, i) => ({ text, tone: heroItemTones[i] }));
+  const howItWorks = t("products.proposaliq.howItWorks", { returnObjects: true }) as Array<{ title: string; text: string }>;
+  const cols = t("products.proposaliq.featureColumns", { returnObjects: true }) as Array<{ title: string; items: Array<{ title: string; text: string }> }>;
+  const scenarios = t("products.proposaliq.scenarios", { returnObjects: true }) as Array<{ tag: string; title: string; text: string; result: string }>;
 
   const data: ProductPageData = {
-    product: "qualion",
-    eyebrow: t("products.qualion.eyebrow"),
-    title: t("products.qualion.title"),
-    subtitle: t("products.qualion.subtitle"),
+    product: "proposaliq",
+    eyebrow: t("products.proposaliq.eyebrow"),
+    title: t("products.proposaliq.title"),
+    subtitle: t("products.proposaliq.subtitle"),
     theme,
     heroPanel: {
       type: "analysis",
-      label: t("products.qualion.heroLabel"),
+      label: t("products.proposaliq.heroLabel"),
       score: "34/100",
       scoreTone: "danger",
       items: heroItems,
@@ -81,11 +81,11 @@ function QualionPage() {
       { title: cols[0].title, items: cols[0].items.map((it, i) => ({ ...it, icon: featureIcons[0][i] })) },
       { title: cols[1].title, items: cols[1].items.map((it, i) => ({ ...it, icon: featureIcons[1][i] })) },
     ],
-    scenarioLabel: t("products.qualion.scenarioLabel"),
+    scenarioLabel: t("products.proposaliq.scenarioLabel"),
     scenarios,
-    ctaTitle: t("products.qualion.ctaTitle"),
-    ctaSubtitle: t("products.qualion.ctaSubtitle"),
-    primaryCta: t("products.qualion.primaryCta"),
+    ctaTitle: t("products.proposaliq.ctaTitle"),
+    ctaSubtitle: t("products.proposaliq.ctaSubtitle"),
+    primaryCta: t("products.proposaliq.primaryCta"),
   };
 
   return (

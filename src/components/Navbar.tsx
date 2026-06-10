@@ -117,14 +117,14 @@ export function Navbar() {
     {
       title: t("nav.productItems.0.title"),
       subtitle: t("nav.productItems.0.subtitle"),
-      to: "/products/qualion",
-      icon: <IconTile className="bg-white p-1.5"><ProductLogo product="qualion" /></IconTile>,
+      to: "/products/proposaliq",
+      icon: <IconTile className="bg-white p-1.5"><ProductLogo product="proposaliq" /></IconTile>,
     },
     {
       title: t("nav.productItems.1.title"),
       subtitle: t("nav.productItems.1.subtitle"),
-      to: "/products/prospectiq",
-      icon: <IconTile className="bg-white p-1.5"><ProductLogo product="prospectiq" /></IconTile>,
+      to: "/products/growthiq",
+      icon: <IconTile className="bg-white p-1.5"><ProductLogo product="growthiq" /></IconTile>,
     },
     {
       title: t("nav.productItems.2.title"),
