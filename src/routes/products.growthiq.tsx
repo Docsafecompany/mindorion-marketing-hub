@@ -20,13 +20,13 @@ const featureIcons: [string[], string[]] = [
   ["✉️", "🔄", "📊", "🔗"],
 ];
 
-export const Route = createFileRoute("/products/prospectiq")({
+export const Route = createFileRoute("/products/growthiq")({
   head: () => {
     const base = createStaticMeta({
-      title: "ProspectIQ | Outreach B2B intelligent | Mindorion",
+      title: "Growth IQ | Outreach B2B intelligent | Mindorion",
       description:
-        "ProspectIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
-      path: "/products/prospectiq",
+        "Growth IQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
+      path: "/products/growthiq",
     });
     return {
       ...base,
@@ -36,12 +36,12 @@ export const Route = createFileRoute("/products/prospectiq")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "ProspectIQ",
+            name: "Growth IQ",
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web",
             description:
               "Structured B2B prospecting and outreach. Qualify opportunities with AI and generate personalized sequences.",
-            url: "https://mindorion.com/products/prospectiq",
+            url: "https://mindorion.com/products/growthiq",
             offers: {
               "@type": "Offer",
               price: "29",
@@ -52,33 +52,33 @@ export const Route = createFileRoute("/products/prospectiq")({
       ],
     };
   },
-  component: ProspectIQPage,
+  component: GrowthIQPage,
 });
 
-function ProspectIQPage() {
+function GrowthIQPage() {
   const { t } = useTranslation();
-  const rows = t("products.prospectiq.heroRows", { returnObjects: true }) as Array<{ initials: string; title: string; city: string; score: string }>;
-  const howItWorks = t("products.prospectiq.howItWorks", { returnObjects: true }) as Array<{ title: string; text: string }>;
-  const cols = t("products.prospectiq.featureColumns", { returnObjects: true }) as Array<{ title: string; items: Array<{ title: string; text: string }> }>;
-  const scenarios = t("products.prospectiq.scenarios", { returnObjects: true }) as Array<{ tag: string; title: string; text: string; result: string }>;
+  const rows = t("products.growthiq.heroRows", { returnObjects: true }) as Array<{ initials: string; title: string; city: string; score: string }>;
+  const howItWorks = t("products.growthiq.howItWorks", { returnObjects: true }) as Array<{ title: string; text: string }>;
+  const cols = t("products.growthiq.featureColumns", { returnObjects: true }) as Array<{ title: string; items: Array<{ title: string; text: string }> }>;
+  const scenarios = t("products.growthiq.scenarios", { returnObjects: true }) as Array<{ tag: string; title: string; text: string; result: string }>;
 
   const data: ProductPageData = {
-    product: "prospectiq",
-    eyebrow: t("products.prospectiq.eyebrow"),
-    title: t("products.prospectiq.title"),
-    subtitle: t("products.prospectiq.subtitle"),
+    product: "growthiq",
+    eyebrow: t("products.growthiq.eyebrow"),
+    title: t("products.growthiq.title"),
+    subtitle: t("products.growthiq.subtitle"),
     theme,
-    heroPanel: { type: "pipeline", label: t("products.prospectiq.heroLabel"), rows },
+    heroPanel: { type: "pipeline", label: t("products.growthiq.heroLabel"), rows },
     howItWorks,
     featureColumns: [
       { title: cols[0].title, items: cols[0].items.map((it, i) => ({ ...it, icon: featureIcons[0][i] })) },
       { title: cols[1].title, items: cols[1].items.map((it, i) => ({ ...it, icon: featureIcons[1][i] })) },
     ],
-    scenarioLabel: t("products.prospectiq.scenarioLabel"),
+    scenarioLabel: t("products.growthiq.scenarioLabel"),
     scenarios,
-    ctaTitle: t("products.prospectiq.ctaTitle"),
-    ctaSubtitle: t("products.prospectiq.ctaSubtitle"),
-    primaryCta: t("products.prospectiq.primaryCta"),
+    ctaTitle: t("products.growthiq.ctaTitle"),
+    ctaSubtitle: t("products.growthiq.ctaSubtitle"),
+    primaryCta: t("products.growthiq.primaryCta"),
   };
 
   return (

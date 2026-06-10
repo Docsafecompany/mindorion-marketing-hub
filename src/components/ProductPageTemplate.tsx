@@ -50,7 +50,7 @@ type FeatureColumn = { title: string; items: Feature[] };
 type Scenario = { tag: string; title: string; text: string; result: string };
 
 export type ProductPageData = {
-  product: "qualion" | "prospectiq" | "governanceiq";
+  product: "proposaliq" | "growthiq" | "governanceiq";
   eyebrow: string;
   title: string;
   subtitle: string;

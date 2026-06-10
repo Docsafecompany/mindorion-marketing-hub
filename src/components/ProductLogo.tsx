@@ -1,13 +1,13 @@
 import governanceiqLogo from "@/assets/governanceiq-logo.jpg";
-import prospectiqLogo from "@/assets/prospectiq-logo.jpg";
-import qualionLogo from "@/assets/qualion-logo.jpg";
+import growthiqLogo from "@/assets/growthiq-logo.jpg";
+import proposaliqLogo from "@/assets/proposaliq-logo.jpg";
 import { cn } from "@/lib/utils";
 
-type ProductName = "qualion" | "prospectiq" | "governanceiq";
+type ProductName = "proposaliq" | "growthiq" | "governanceiq";
 
 const logoMap: Record<ProductName, { src: string; alt: string }> = {
-  qualion: { src: qualionLogo, alt: "Logo Qualion" },
-  prospectiq: { src: prospectiqLogo, alt: "Logo ProspectIQ" },
+  proposaliq: { src: proposaliqLogo, alt: "Logo Proposal IQ" },
+  growthiq: { src: growthiqLogo, alt: "Logo Growth IQ" },
   governanceiq: { src: governanceiqLogo, alt: "Logo GovernanceIQ" },
 };
 

@@ -27,17 +27,17 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
 });
 
-type BlogFilter = "all" | "Qualion" | "ProspectIQ" | "GovernanceIQ" | "Guides";
+type BlogFilter = "all" | "Proposal IQ" | "Growth IQ" | "GovernanceIQ" | "Guides";
 
 const featuredArticle = { slug: "track-changes-proposals" };
 
 const blogCards = [
-  { slug: "remove-metadata-word-before-sending", filter: "Qualion",     icon: "🛡", categoryKey: "blog.page.categories.qualion",    headerClass: "editorial-purple-soft", pillClass: "editorial-purple-soft" },
-  { slug: "hidden-risks-documents",              filter: "ProspectIQ",  icon: "🎯", categoryKey: "blog.page.categories.prospectiq", headerClass: "editorial-green-soft",  pillClass: "editorial-green-soft" },
+  { slug: "remove-metadata-word-before-sending", filter: "Proposal IQ",     icon: "🛡", categoryKey: "blog.page.categories.proposaliq",    headerClass: "editorial-purple-soft", pillClass: "editorial-purple-soft" },
+  { slug: "hidden-risks-documents",              filter: "Growth IQ",  icon: "🎯", categoryKey: "blog.page.categories.growthiq", headerClass: "editorial-green-soft",  pillClass: "editorial-green-soft" },
   { slug: "roi-document-cleanup",                filter: "GovernanceIQ",icon: "📋", categoryKey: "blog.page.categories.governance", headerClass: "editorial-amber-soft",  pillClass: "editorial-amber-soft" },
   { slug: "consulting-quality-gate",             filter: "Guides",      icon: "💼", categoryKey: "blog.page.categories.guide",      headerClass: "editorial-gray-soft",   pillClass: "editorial-gray-soft" },
-  { slug: "what-gets-cleaned",                   filter: "Qualion",     icon: "📄", categoryKey: "blog.page.categories.qualion",    headerClass: "editorial-purple-soft", pillClass: "editorial-purple-soft" },
-  { slug: "track-changes-proposals",             filter: "ProspectIQ",  icon: "🔍", categoryKey: "blog.page.categories.prospectiq", headerClass: "editorial-green-soft",  pillClass: "editorial-green-soft" },
+  { slug: "what-gets-cleaned",                   filter: "Proposal IQ",     icon: "📄", categoryKey: "blog.page.categories.proposaliq",    headerClass: "editorial-purple-soft", pillClass: "editorial-purple-soft" },
+  { slug: "track-changes-proposals",             filter: "Growth IQ",  icon: "🔍", categoryKey: "blog.page.categories.growthiq", headerClass: "editorial-green-soft",  pillClass: "editorial-green-soft" },
 ] as const;
 
 const topErrorTones = ["editorial-danger", "editorial-danger", "editorial-warning", "editorial-warning", "editorial-warning"] as const;
@@ -50,8 +50,8 @@ function BlogPage() {
 
   const filterTags: { label: string; value: BlogFilter }[] = [
     { label: t("blog.page.filterAll"), value: "all" },
-    { label: "🛡 Qualion", value: "Qualion" },
-    { label: "🎯 ProspectIQ", value: "ProspectIQ" },
+    { label: "🛡 Proposal IQ", value: "Proposal IQ" },
+    { label: "🎯 Growth IQ", value: "Growth IQ" },
     { label: "📋 GovernanceIQ", value: "GovernanceIQ" },
     { label: t("blog.page.filterGuides"), value: "Guides" },
   ];
@@ -98,7 +98,7 @@ function BlogPage() {
         <section className="editorial-dark-surface mt-12 grid gap-6 rounded-xl p-6 lg:grid-cols-[1.1fr_0.9fr] lg:p-8">
           <div>
             <div className="flex flex-wrap gap-2">
-              <span className="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] editorial-purple-soft">🛡 {t("blog.page.categories.qualion")}</span>
+              <span className="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] editorial-purple-soft">🛡 {t("blog.page.categories.proposaliq")}</span>
               <span className="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] editorial-dark-soft">{t("blog.page.featured.tagGuide")}</span>
             </div>
             <h2 className="mt-5 text-balance text-3xl font-extrabold leading-tight editorial-on-dark sm:text-4xl">

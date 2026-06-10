@@ -22,11 +22,11 @@
     "demoCta": "Demander une démo",
     "productItems": [
       {
-        "title": "Qualion",
+        "title": "Proposal IQ",
         "subtitle": "Réputation documentaire, avant envoi"
       },
       {
-        "title": "ProspectIQ",
+        "title": "Growth IQ",
         "subtitle": "Outreach B2B intelligent"
       },
       {
@@ -158,15 +158,15 @@
     "heroProducts": [
       {
         "icon": "🛡",
-        "title": "Qualion",
+        "title": "Proposal IQ",
         "text": "Chaque document envoyé est impeccable. Réputation protégée, crédibilité intacte, client rassuré.",
-        "cta": "Essayer Qualion"
+        "cta": "Essayer Proposal IQ"
       },
       {
         "icon": "🎯",
-        "title": "ProspectIQ",
+        "title": "Growth IQ",
         "text": "Chaque prospect est le bon. Pipeline B2B alimenté par l'IA, outreach précis, taux de conversion en hausse.",
-        "cta": "Essayer ProspectIQ"
+        "cta": "Essayer Growth IQ"
       },
       {
         "icon": "📋",
@@ -198,11 +198,11 @@
     "productsSubtitle": "De la qualité documentaire à la gouvernance d'équipe, Mindorion structure les workflows qui engagent votre image.",
     "productCards": [
       {
-        "title": "Qualion",
+        "title": "Proposal IQ",
         "text": "Contrôlez la qualité réelle d'un document avant chaque envoi externe."
       },
       {
-        "title": "ProspectIQ",
+        "title": "Growth IQ",
         "text": "Cadencez un outreach B2B intelligent, piloté par signal et contexte."
       },
       {
@@ -210,16 +210,16 @@
         "text": "Mesurez la conformité documentaire des équipes et déclenchez les bonnes alertes."
       }
     ],
-    "qualionDocTitle": "Qualion Doc",
-    "qualionDocItems": [
+    "proposaliqDocTitle": "Proposal IQ Doc",
+    "proposaliqDocItems": [
       "Métadonnées cachées",
       "Commentaires & annotations",
       "Données personnelles",
       "Orthographe & cohérence",
       "Export client-ready"
     ],
-    "qualionProposalTitle": "Qualion Proposal",
-    "qualionProposalItems": [
+    "proposaliqProposalTitle": "Proposal IQ Proposal",
+    "proposaliqProposalItems": [
       "Risques métier",
       "Risques marge",
       "Tableaux partagés",
@@ -271,7 +271,7 @@
     "testimonials": [
       {
         "role": "Consultant",
-        "quote": "Qualion nous évite les derniers doutes avant l'envoi d'une proposition. La confiance côté client change immédiatement."
+        "quote": "Proposal IQ nous évite les derniers doutes avant l'envoi d'une proposition. La confiance côté client change immédiatement."
       },
       {
         "role": "Sales Manager",
@@ -396,13 +396,13 @@
     "viewPricing": "Voir les tarifs"
   },
   "products": {
-    "qualion": {
-      "seoTitle": "Qualion | Réputation documentaire avant envoi | Mindorion",
-      "seoDescription": "Qualion analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
-      "eyebrow": "🛡 QUALION · RÉPUTATION DOCUMENTAIRE",
+    "proposaliq": {
+      "seoTitle": "Proposal IQ | Réputation documentaire avant envoi | Mindorion",
+      "seoDescription": "Proposal IQ analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
+      "eyebrow": "🛡 PROPOSAL IQ · RÉPUTATION DOCUMENTAIRE",
       "title": "Votre document est-il vraiment prêt à être envoyé ?",
-      "subtitle": "Qualion analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant que votre client ne l'ouvre.",
-      "heroLabel": "RAPPORT D'ANALYSE · QUALION",
+      "subtitle": "Proposal IQ analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant que votre client ne l'ouvre.",
+      "heroLabel": "RAPPORT D'ANALYSE · PROPOSAL IQ",
       "heroItems": [
         "Auteur interne dans les propriétés",
         "3 commentaires de révision cachés",
@@ -410,8 +410,8 @@
         "✓ Document nettoyé — Télécharger"
       ],
       "howItWorks": [
-        { "title": "Uploadez", "text": "Glissez votre document — Word, PDF, PPT ou Excel — directement dans Qualion." },
-        { "title": "Analysez", "text": "Qualion scanne 14 catégories de risques en moins de 30 secondes et génère un rapport complet." },
+        { "title": "Uploadez", "text": "Glissez votre document — Word, PDF, PPT ou Excel — directement dans Proposal IQ." },
+        { "title": "Analysez", "text": "Proposal IQ scanne 14 catégories de risques en moins de 30 secondes et génère un rapport complet." },
         { "title": "Envoyez", "text": "Téléchargez la version nettoyée et envoyez avec confiance. Score qualité garanti." }
       ],
       "featureColumns": [
@@ -438,23 +438,23 @@
           ]
         }
       ],
-      "scenarioLabel": "ILS UTILISENT QUALION",
+      "scenarioLabel": "ILS UTILISENT PROPOSAL IQ",
       "scenarios": [
-        { "tag": "CONSULTANT", "title": "Proposition client avec métadonnées internes", "text": "Qualion détecte l'auteur interne et 3 commentaires de révision avant envoi.", "result": "Réputation protégée" },
-        { "tag": "COMMERCIAL", "title": "Offre RFP avec prix de revient visible", "text": "Le suivi des modifications révélait la marge. Qualion le détecte avant soumission.", "result": "Marge protégée" },
-        { "tag": "RECRUTEUR", "title": "CV candidat avec notes de disqualification", "text": "Les commentaires internes étaient encore visibles. Qualion nettoie avant transmission.", "result": "RGPD conforme" }
+        { "tag": "CONSULTANT", "title": "Proposition client avec métadonnées internes", "text": "Proposal IQ détecte l'auteur interne et 3 commentaires de révision avant envoi.", "result": "Réputation protégée" },
+        { "tag": "COMMERCIAL", "title": "Offre RFP avec prix de revient visible", "text": "Le suivi des modifications révélait la marge. Proposal IQ le détecte avant soumission.", "result": "Marge protégée" },
+        { "tag": "RECRUTEUR", "title": "CV candidat avec notes de disqualification", "text": "Les commentaires internes étaient encore visibles. Proposal IQ nettoie avant transmission.", "result": "RGPD conforme" }
       ],
       "ctaTitle": "Prêt à envoyer avec confiance ?",
       "ctaSubtitle": "Analysez votre prochain document — résultat en 30 secondes.",
-      "primaryCta": "Essayer Qualion"
+      "primaryCta": "Essayer Proposal IQ"
     },
-    "prospectiq": {
-      "seoTitle": "ProspectIQ | Outreach B2B intelligent | Mindorion",
-      "seoDescription": "ProspectIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
-      "eyebrow": "🎯 PROSPECTIQ · OUTREACH B2B INTELLIGENT",
+    "growthiq": {
+      "seoTitle": "Growth IQ | Outreach B2B intelligent | Mindorion",
+      "seoDescription": "Growth IQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
+      "eyebrow": "🎯 GROWTH IQ · OUTREACH B2B INTELLIGENT",
       "title": "Trouvez les bons prospects. Au bon moment.",
-      "subtitle": "ProspectIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
-      "heroLabel": "PIPELINE · PROSPECTIQ",
+      "subtitle": "Growth IQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
+      "heroLabel": "PIPELINE · GROWTH IQ",
       "heroRows": [
         { "initials": "DL", "title": "Dir. Commercial · Pharma", "city": "Lyon", "score": "94%" },
         { "initials": "VP", "title": "VP Achats · Aérospatial", "city": "Toulouse", "score": "88%" },
@@ -463,7 +463,7 @@
       "howItWorks": [
         { "title": "Définissez", "text": "Décrivez votre cible idéale — secteur, taille, fonction, zone géographique." },
         { "title": "Qualifiez", "text": "L'IA identifie et score vos meilleurs prospects. Strategy Hub analyse les opportunités." },
-        { "title": "Contactez", "text": "Lancez des séquences multi-canal personnalisées et laissez ProspectIQ gérer le suivi." }
+        { "title": "Contactez", "text": "Lancez des séquences multi-canal personnalisées et laissez Growth IQ gérer le suivi." }
       ],
       "featureColumns": [
         {
@@ -487,13 +487,13 @@
       ],
       "scenarioLabel": "CAS D'USAGE",
       "scenarios": [
-        { "tag": "CONSULTANT", "title": "Développement portefeuille clients", "text": "ProspectIQ identifie les décideurs dans le secteur cible et génère les séquences d'approche.", "result": "Pipeline alimenté" },
+        { "tag": "CONSULTANT", "title": "Développement portefeuille clients", "text": "Growth IQ identifie les décideurs dans le secteur cible et génère les séquences d'approche.", "result": "Pipeline alimenté" },
         { "tag": "SALES B2B", "title": "Qualification grands comptes", "text": "Strategy Hub analyse les comptes cibles et recommande les meilleurs angles d'approche.", "result": "Bons prospects ciblés" },
-        { "tag": "ESN", "title": "Approche DSI & CTO", "text": "ProspectIQ construit des séquences adaptées aux cycles longs de l'industrie tech.", "result": "Cycle raccourci" }
+        { "tag": "ESN", "title": "Approche DSI & CTO", "text": "Growth IQ construit des séquences adaptées aux cycles longs de l'industrie tech.", "result": "Cycle raccourci" }
       ],
       "ctaTitle": "Prêt à trouver vos prochains clients ?",
       "ctaSubtitle": "Qualifiez vos prospects et lancez vos séquences aujourd'hui.",
-      "primaryCta": "Essayer ProspectIQ"
+      "primaryCta": "Essayer Growth IQ"
     },
     "governanceiq": {
       "seoTitle": "GovernanceIQ | Conformité documentaire équipe | Mindorion",
@@ -634,8 +634,8 @@
         ]
       },
       "categories": {
-        "qualion": "QUALION",
-        "prospectiq": "PROSPECTIQ",
+        "proposaliq": "PROPOSAL IQ",
+        "growthiq": "GROWTH IQ",
         "governance": "GOUVERNANCE",
         "guide": "GUIDE"
       },
@@ -686,7 +686,7 @@
         }
       },
       "consultingQualityGate": {
-        "title": "Qualion : le quality gate du consultant",
+        "title": "Proposal IQ : le quality gate du consultant",
         "excerpt": "Pour un cabinet ou un indépendant, une erreur visible dans un document peut coûter plus que quelques minutes : elle fragilise la confiance.",
         "sections": {
           "trust": {
@@ -704,7 +704,7 @@
         }
       },
       "whatGetsCleaned": {
-        "title": "Ce que Qualion nettoie dans vos fichiers",
+        "title": "Ce que Proposal IQ nettoie dans vos fichiers",
         "excerpt": "Nettoyer un document ne consiste pas seulement à corriger l'orthographe : il s'agit surtout de retirer les signaux invisibles qui vous exposent.",
         "sections": {
           "signal": {
@@ -779,7 +779,7 @@
   },
   "about": {
     "seoTitle": "À propos | Mindorion — Intelligence professionnelle B2B",
-    "seoDescription": "Mindorion est un éditeur SaaS B2B fondé en Estonie. Découvrez notre mission, notre équipe et notre approche build in public. Qualion, ProspectIQ, GovernanceIQ.",
+    "seoDescription": "Mindorion est un éditeur SaaS B2B fondé en Estonie. Découvrez notre mission, notre équipe et notre approche build in public. Proposal IQ, Growth IQ, GovernanceIQ.",
     "eyebrow": "À PROPOS DE MINDORION",
     "heroTitle1": "Construire les outils que les professionnels B2B ",
     "heroTitle2": "méritent vraiment.",
@@ -805,7 +805,7 @@
   },
   "contact": {
     "seoTitle": "Demander une démo | Mindorion",
-    "seoDescription": "Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes — Qualion, ProspectIQ, GovernanceIQ. Sans engagement.",
+    "seoDescription": "Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes — Proposal IQ, Growth IQ, GovernanceIQ. Sans engagement.",
     "eyebrow": "DEMANDER UNE DÉMO",
     "title": "Parlons de votre projet.",
     "subtitle": "Nos experts vous présentent Mindorion en 30 minutes et répondent à toutes vos questions — produits, tarifs, intégrations.",
@@ -832,7 +832,7 @@
       "message": "Votre message (optionnel)",
       "messagePlaceholder": "Décrivez votre besoin..."
     },
-    "productOptions": ["🛡 Qualion", "🎯 ProspectIQ", "📋 GovernanceIQ", "Suite complète"],
+    "productOptions": ["🛡 Proposal IQ", "🎯 Growth IQ", "📋 GovernanceIQ", "Suite complète"],
     "teamSizes": ["1-5 personnes", "6-20 personnes", "21-100 personnes", "100+ personnes"],
     "productError": "Sélectionnez au moins un produit.",
     "submit": "Envoyer ma demande →",
@@ -991,7 +991,7 @@
     "title": "Comment les professionnels B2B utilisent Mindorion",
     "subtitle": "Que vous soyez consultant, commercial, recruteur ou ingénieur — Mindorion détecte ce que vous ne voyez pas, trouve vos prochains clients et garantit votre conformité.",
     "ctaTitle": "Prêt à opérer au plus haut niveau ?",
-    "ctaText": "Commencez avec Qualion. Ajoutez ProspectIQ. Gouvernez avec GovernanceIQ.",
+    "ctaText": "Commencez avec Proposal IQ. Ajoutez Growth IQ. Gouvernez avec GovernanceIQ.",
     "ctaButton": "Voir les tarifs",
     "tabs": {
       "consultants": "Consultants & Indépendants",
@@ -1005,8 +1005,8 @@
         "title": "Votre réputation professionnelle est en jeu à chaque document envoyé.",
         "text": "En tant que consultant, vous n'avez pas de service qualité derrière vous. Une proposition avec des métadonnées internes, un commentaire oublié ou un placeholder non remplacé — et votre crédibilité prend un coup. Mindorion vous couvre à chaque étape.",
         "tools": [
-          { "name": "Qualion", "text": "Vérifie chaque proposition avant envoi client" },
-          { "name": "ProspectIQ", "text": "Identifie vos prochains clients dans votre secteur" }
+          { "name": "Proposal IQ", "text": "Vérifie chaque proposition avant envoi client" },
+          { "name": "Growth IQ", "text": "Identifie vos prochains clients dans votre secteur" }
         ],
         "mocks": [
           {
@@ -1026,21 +1026,21 @@
         ],
         "scenarios": [
           {
-            "tool": "Qualion",
+            "tool": "Proposal IQ",
             "title": "Proposition commerciale avant envoi",
-            "text": "Qualion analyse votre proposition en 30 secondes. Métadonnées, commentaires, données sensibles, ton IA — tout est détecté avant que votre client ouvre le fichier.",
+            "text": "Proposal IQ analyse votre proposition en 30 secondes. Métadonnées, commentaires, données sensibles, ton IA — tout est détecté avant que votre client ouvre le fichier.",
             "result": "Réputation protégée · Crédibilité intacte"
           },
           {
-            "tool": "Qualion",
+            "tool": "Proposal IQ",
             "title": "Livrables et rapports de mission",
             "text": "Chaque livrable envoyé en fin de mission est vérifié. Plus de risque de laisser traîner des commentaires internes ou l'historique de révision visible par le client final.",
             "result": "Livrables professionnels · Client rassuré"
           },
           {
-            "tool": "ProspectIQ",
+            "tool": "Growth IQ",
             "title": "Développement de votre réseau clients",
-            "text": "ProspectIQ identifie les décideurs dans votre secteur cible, qualifie les opportunités et génère des séquences d'outreach personnalisées pour développer votre portefeuille.",
+            "text": "Growth IQ identifie les décideurs dans votre secteur cible, qualifie les opportunités et génère des séquences d'outreach personnalisées pour développer votre portefeuille.",
             "result": "Pipeline alimenté · Moins de prospection manuelle"
           }
         ]
@@ -1050,8 +1050,8 @@
         "title": "Chaque offre envoyée doit être parfaite. Chaque prospect doit être le bon.",
         "text": "En avant-vente, une offre avec un prix de revient visible dans le suivi des modifications peut vous coûter un deal. Un prospect mal qualifié vous coûte des semaines. Mindorion élimine ces deux risques.",
         "tools": [
-          { "name": "Qualion", "text": "Vérifie RFP, offres et proposals avant soumission" },
-          { "name": "ProspectIQ", "text": "Qualifie et contacte les bons décideurs" }
+          { "name": "Proposal IQ", "text": "Vérifie RFP, offres et proposals avant soumission" },
+          { "name": "Growth IQ", "text": "Qualifie et contacte les bons décideurs" }
         ],
         "pipelineLabel": "Prospects qualifiés",
         "leads": [
@@ -1061,21 +1061,21 @@
         ],
         "scenarios": [
           {
-            "tool": "Qualion",
+            "tool": "Proposal IQ",
             "title": "Réponse à appel d'offres (RFP/RFQ)",
-            "text": "Avant de soumettre une réponse à appel d'offres, Qualion vérifie que votre marge n'est pas visible dans le suivi des modifications et qu'aucun commentaire interne ne traîne dans le document.",
+            "text": "Avant de soumettre une réponse à appel d'offres, Proposal IQ vérifie que votre marge n'est pas visible dans le suivi des modifications et qu'aucun commentaire interne ne traîne dans le document.",
             "result": "Marge protégée · Offre professionnelle"
           },
           {
-            "tool": "ProspectIQ",
+            "tool": "Growth IQ",
             "title": "Identification des décideurs clés",
-            "text": "ProspectIQ identifie les bons interlocuteurs dans vos comptes cibles — DAF, DSI, DG, Directeurs achats — et génère des séquences d'approche adaptées à chaque profil.",
+            "text": "Growth IQ identifie les bons interlocuteurs dans vos comptes cibles — DAF, DSI, DG, Directeurs achats — et génère des séquences d'approche adaptées à chaque profil.",
             "result": "Bon contact · Bon moment · Bon message"
           },
           {
-            "tool": "ProspectIQ",
+            "tool": "Growth IQ",
             "title": "Outreach multi-canal automatisé",
-            "text": "Créez des séquences d'outreach personnalisées — email, LinkedIn, appel — et laissez ProspectIQ gérer le suivi automatiquement pour maximiser vos taux de réponse.",
+            "text": "Créez des séquences d'outreach personnalisées — email, LinkedIn, appel — et laissez Growth IQ gérer le suivi automatiquement pour maximiser vos taux de réponse.",
             "result": "Taux de réponse en hausse · Moins de relances manuelles"
           }
         ]
@@ -1083,9 +1083,9 @@
       "rh": {
         "badge": "👥 RH & RECRUTEMENT",
         "title": "Chaque dossier envoyé engage votre responsabilité professionnelle.",
-        "text": "En recrutement, envoyer un CV avec les notes de disqualification d'un candidat précédent, ou un contrat avec des données personnelles non supprimées, peut avoir des conséquences légales. Qualion et GovernanceIQ vous protègent.",
+        "text": "En recrutement, envoyer un CV avec les notes de disqualification d'un candidat précédent, ou un contrat avec des données personnelles non supprimées, peut avoir des conséquences légales. Proposal IQ et GovernanceIQ vous protègent.",
         "tools": [
-          { "name": "Qualion", "text": "Vérifie CVs, contrats et NDAs avant envoi" },
+          { "name": "Proposal IQ", "text": "Vérifie CVs, contrats et NDAs avant envoi" },
           { "name": "GovernanceIQ", "text": "Conformité RGPD des dossiers candidats" }
         ],
         "mocks": [
@@ -1106,15 +1106,15 @@
         ],
         "scenarios": [
           {
-            "tool": "Qualion",
+            "tool": "Proposal IQ",
             "title": "CVs et dossiers candidats",
-            "text": "Qualion détecte les données personnelles résiduelles, les commentaires de traitement et les notes internes avant qu'un CV ou un dossier candidat ne soit transmis à un client ou un manager.",
+            "text": "Proposal IQ détecte les données personnelles résiduelles, les commentaires de traitement et les notes internes avant qu'un CV ou un dossier candidat ne soit transmis à un client ou un manager.",
             "result": "Conformité RGPD · Candidat protégé"
           },
           {
-            "tool": "Qualion",
+            "tool": "Proposal IQ",
             "title": "Contrats et NDAs",
-            "text": "Avant signature, Qualion vérifie que les contrats de travail et NDAs ne contiennent pas de données résiduelles d'un précédent contrat — un risque juridique souvent sous-estimé.",
+            "text": "Avant signature, Proposal IQ vérifie que les contrats de travail et NDAs ne contiennent pas de données résiduelles d'un précédent contrat — un risque juridique souvent sous-estimé.",
             "result": "Risque juridique éliminé · Contrat propre"
           },
           {
@@ -1130,8 +1130,8 @@
         "title": "Des documents techniques à enjeux élevés. Zéro droit à l'erreur.",
         "text": "En ESN, chaque SOW, cahier des charges ou spécification technique engage votre société. Un document distribué à 12 clients avec l'historique interne encore actif peut vous coûter un contrat. Mindorion couvre toute la chaîne.",
         "tools": [
-          { "name": "Qualion", "text": "SOW, specs techniques, dossiers projets" },
-          { "name": "ProspectIQ", "text": "Développement commercial grands comptes" },
+          { "name": "Proposal IQ", "text": "SOW, specs techniques, dossiers projets" },
+          { "name": "Growth IQ", "text": "Développement commercial grands comptes" },
           { "name": "GovernanceIQ", "text": "Conformité documentaire inter-équipes" }
         ],
         "mocks": [
@@ -1152,15 +1152,15 @@
         ],
         "scenarios": [
           {
-            "tool": "Qualion",
+            "tool": "Proposal IQ",
             "title": "Distribution de documents techniques",
-            "text": "Avant de distribuer un SOW ou des specs à plusieurs clients, Qualion supprime l'historique interne, les commentaires et les données tarifaires confidentielles en une passe.",
+            "text": "Avant de distribuer un SOW ou des specs à plusieurs clients, Proposal IQ supprime l'historique interne, les commentaires et les données tarifaires confidentielles en une passe.",
             "result": "Fuite de données évitée · Document propre"
           },
           {
-            "tool": "ProspectIQ",
+            "tool": "Growth IQ",
             "title": "Développement grands comptes",
-            "text": "ProspectIQ identifie les DSI, CTO et directeurs techniques dans vos secteurs cibles (industrie, défense, pharma) et construit des séquences d'approche adaptées aux cycles longs.",
+            "text": "Growth IQ identifie les DSI, CTO et directeurs techniques dans vos secteurs cibles (industrie, défense, pharma) et construit des séquences d'approche adaptées aux cycles longs.",
             "result": "Grands comptes ciblés · Cycle raccourci"
           },
           {

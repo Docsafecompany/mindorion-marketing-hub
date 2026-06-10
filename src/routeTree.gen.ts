@@ -18,8 +18,8 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ProductsQualionRouteImport } from './routes/products.qualion'
-import { Route as ProductsProspectiqRouteImport } from './routes/products.prospectiq'
+import { Route as ProductsProposaliqRouteImport } from './routes/products.proposaliq'
+import { Route as ProductsGrowthiqRouteImport } from './routes/products.growthiq'
 import { Route as ProductsGovernanceiqRouteImport } from './routes/products.governanceiq'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
@@ -71,14 +71,14 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProductsQualionRoute = ProductsQualionRouteImport.update({
-  id: '/products/qualion',
-  path: '/products/qualion',
+const ProductsProposaliqRoute = ProductsProposaliqRouteImport.update({
+  id: '/products/proposaliq',
+  path: '/products/proposaliq',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProductsProspectiqRoute = ProductsProspectiqRouteImport.update({
-  id: '/products/prospectiq',
-  path: '/products/prospectiq',
+const ProductsGrowthiqRoute = ProductsGrowthiqRouteImport.update({
+  id: '/products/growthiq',
+  path: '/products/growthiq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductsGovernanceiqRoute = ProductsGovernanceiqRouteImport.update({
@@ -121,8 +121,8 @@ export interface FileRoutesByFullPath {
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
   '/products/governanceiq': typeof ProductsGovernanceiqRoute
-  '/products/prospectiq': typeof ProductsProspectiqRoute
-  '/products/qualion': typeof ProductsQualionRoute
+  '/products/growthiq': typeof ProductsGrowthiqRoute
+  '/products/proposaliq': typeof ProductsProposaliqRoute
   '/api/public/geo': typeof ApiPublicGeoRoute
 }
 export interface FileRoutesByTo {
@@ -139,8 +139,8 @@ export interface FileRoutesByTo {
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
   '/products/governanceiq': typeof ProductsGovernanceiqRoute
-  '/products/prospectiq': typeof ProductsProspectiqRoute
-  '/products/qualion': typeof ProductsQualionRoute
+  '/products/growthiq': typeof ProductsGrowthiqRoute
+  '/products/proposaliq': typeof ProductsProposaliqRoute
   '/api/public/geo': typeof ApiPublicGeoRoute
 }
 export interface FileRoutesById {
@@ -158,8 +158,8 @@ export interface FileRoutesById {
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
   '/products/governanceiq': typeof ProductsGovernanceiqRoute
-  '/products/prospectiq': typeof ProductsProspectiqRoute
-  '/products/qualion': typeof ProductsQualionRoute
+  '/products/growthiq': typeof ProductsGrowthiqRoute
+  '/products/proposaliq': typeof ProductsProposaliqRoute
   '/api/public/geo': typeof ApiPublicGeoRoute
 }
 export interface FileRouteTypes {
@@ -178,8 +178,8 @@ export interface FileRouteTypes {
     | '/legal/privacy'
     | '/legal/terms'
     | '/products/governanceiq'
-    | '/products/prospectiq'
-    | '/products/qualion'
+    | '/products/growthiq'
+    | '/products/proposaliq'
     | '/api/public/geo'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -196,8 +196,8 @@ export interface FileRouteTypes {
     | '/legal/privacy'
     | '/legal/terms'
     | '/products/governanceiq'
-    | '/products/prospectiq'
-    | '/products/qualion'
+    | '/products/growthiq'
+    | '/products/proposaliq'
     | '/api/public/geo'
   id:
     | '__root__'
@@ -214,8 +214,8 @@ export interface FileRouteTypes {
     | '/legal/privacy'
     | '/legal/terms'
     | '/products/governanceiq'
-    | '/products/prospectiq'
-    | '/products/qualion'
+    | '/products/growthiq'
+    | '/products/proposaliq'
     | '/api/public/geo'
   fileRoutesById: FileRoutesById
 }
@@ -232,8 +232,8 @@ export interface RootRouteChildren {
   LegalPrivacyRoute: typeof LegalPrivacyRoute
   LegalTermsRoute: typeof LegalTermsRoute
   ProductsGovernanceiqRoute: typeof ProductsGovernanceiqRoute
-  ProductsProspectiqRoute: typeof ProductsProspectiqRoute
-  ProductsQualionRoute: typeof ProductsQualionRoute
+  ProductsGrowthiqRoute: typeof ProductsGrowthiqRoute
+  ProductsProposaliqRoute: typeof ProductsProposaliqRoute
   ApiPublicGeoRoute: typeof ApiPublicGeoRoute
 }
 
@@ -302,18 +302,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/products/qualion': {
-      id: '/products/qualion'
-      path: '/products/qualion'
-      fullPath: '/products/qualion'
-      preLoaderRoute: typeof ProductsQualionRouteImport
+    '/products/proposaliq': {
+      id: '/products/proposaliq'
+      path: '/products/proposaliq'
+      fullPath: '/products/proposaliq'
+      preLoaderRoute: typeof ProductsProposaliqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/products/prospectiq': {
-      id: '/products/prospectiq'
-      path: '/products/prospectiq'
-      fullPath: '/products/prospectiq'
-      preLoaderRoute: typeof ProductsProspectiqRouteImport
+    '/products/growthiq': {
+      id: '/products/growthiq'
+      path: '/products/growthiq'
+      fullPath: '/products/growthiq'
+      preLoaderRoute: typeof ProductsGrowthiqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products/governanceiq': {
@@ -377,8 +377,8 @@ const rootRouteChildren: RootRouteChildren = {
   LegalPrivacyRoute: LegalPrivacyRoute,
   LegalTermsRoute: LegalTermsRoute,
   ProductsGovernanceiqRoute: ProductsGovernanceiqRoute,
-  ProductsProspectiqRoute: ProductsProspectiqRoute,
-  ProductsQualionRoute: ProductsQualionRoute,
+  ProductsGrowthiqRoute: ProductsGrowthiqRoute,
+  ProductsProposaliqRoute: ProductsProposaliqRoute,
   ApiPublicGeoRoute: ApiPublicGeoRoute,
 }
 export const routeTree = rootRouteImport

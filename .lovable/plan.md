@@ -16,7 +16,7 @@
 4. Créer toutes les pages marketing demandées avec contenu cohérent et CTA corrects :
 - Home avec hero, stats, cartes produits, use cases, preuves sociales, CTA final
 - Pricing avec 4 plans, toggle mensuel/annuel, tableau comparatif
-- 3 pages produits : Qualion, ProspectIQ, GovernanceIQ
+- 3 pages produits : Proposal IQ, Growth IQ, GovernanceIQ
 - page Solutions / Use Cases avec 4 sections ancrées par métier
 - Blog avec 6 articles fictifs
 - page article dynamique avec sommaire sticky et contenu adapté au slug

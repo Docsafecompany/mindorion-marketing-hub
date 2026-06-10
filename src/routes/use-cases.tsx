@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { createStaticMeta } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-type ToolTone = "qualion" | "prospectiq" | "governance";
+type ToolTone = "proposaliq" | "growthiq" | "governance";
 type RiskTone = "critical" | "warning" | "good";
 type PersonaKey = "consultants" | "sales" | "rh" | "esn";
 
@@ -40,9 +40,9 @@ const personaMeta: Record<PersonaKey, {
 }> = {
   consultants: {
     tabIcon: BriefcaseBusiness,
-    badgeTone: "qualion",
-    toolTones: ["qualion", "prospectiq"],
-    scenarioTones: ["qualion", "qualion", "prospectiq"],
+    badgeTone: "proposaliq",
+    toolTones: ["proposaliq", "growthiq"],
+    scenarioTones: ["proposaliq", "proposaliq", "growthiq"],
     heroVariant: "document",
     mockTones: [
       { badge: "critical", items: ["critical", "critical", "warning"] },
@@ -51,17 +51,17 @@ const personaMeta: Record<PersonaKey, {
   },
   sales: {
     tabIcon: TrendingUp,
-    badgeTone: "prospectiq",
-    toolTones: ["qualion", "prospectiq"],
-    scenarioTones: ["qualion", "prospectiq", "prospectiq"],
+    badgeTone: "growthiq",
+    toolTones: ["proposaliq", "growthiq"],
+    scenarioTones: ["proposaliq", "growthiq", "growthiq"],
     heroVariant: "pipeline",
     mockTones: [],
   },
   rh: {
     tabIcon: Users,
     badgeTone: "governance",
-    toolTones: ["qualion", "governance"],
-    scenarioTones: ["qualion", "qualion", "governance"],
+    toolTones: ["proposaliq", "governance"],
+    scenarioTones: ["proposaliq", "proposaliq", "governance"],
     heroVariant: "document",
     mockTones: [
       { badge: "critical", items: ["critical", "critical", "warning"] },
@@ -71,8 +71,8 @@ const personaMeta: Record<PersonaKey, {
   esn: {
     tabIcon: Cog,
     badgeTone: "neutral",
-    toolTones: ["qualion", "prospectiq", "governance"],
-    scenarioTones: ["qualion", "prospectiq", "governance"],
+    toolTones: ["proposaliq", "growthiq", "governance"],
+    scenarioTones: ["proposaliq", "growthiq", "governance"],
     heroVariant: "document",
     mockTones: [
       { badge: "critical", items: ["critical", "critical", "warning"] },
@@ -88,7 +88,7 @@ export const Route = createFileRoute("/use-cases")({
     createStaticMeta({
       title: "Cas d'usage | Consultants, Sales, RH, ESN | Mindorion",
       description:
-        "Découvrez comment consultants, équipes sales, recruteurs et ESN utilisent Qualion, ProspectIQ et GovernanceIQ pour protéger leur réputation, prospecter et rester conformes.",
+        "Découvrez comment consultants, équipes sales, recruteurs et ESN utilisent Proposal IQ, Growth IQ et GovernanceIQ pour protéger leur réputation, prospecter et rester conformes.",
       path: "/use-cases",
     }),
   component: UseCasesPage,
@@ -177,7 +177,7 @@ function UseCasesPage() {
                     <p className="mt-5 text-base leading-8 text-muted-foreground">{persona.text}</p>
                     <div className="mt-8 grid gap-3 sm:grid-cols-2">
                       {persona.tools.map((tool, i) => (
-                        <ToolCard key={tool.name + i} tool={tool} tone={meta.toolTones[i] ?? "qualion"} />
+                        <ToolCard key={tool.name + i} tool={tool} tone={meta.toolTones[i] ?? "proposaliq"} />
                       ))}
                     </div>
                   </div>
@@ -195,7 +195,7 @@ function UseCasesPage() {
                   {persona.scenarios.map((scenario, i) => (
                     <article key={scenario.title} className="rounded-xl border border-border bg-card p-6">
                       <div className="flex items-center gap-3">
-                        <ToolPill tone={meta.scenarioTones[i] ?? "qualion"} label={scenario.tool} />
+                        <ToolPill tone={meta.scenarioTones[i] ?? "proposaliq"} label={scenario.tool} />
                       </div>
                       <h3 className="mt-5 text-xl font-bold text-foreground">{scenario.title}</h3>
                       <p className="mt-4 text-sm leading-7 text-muted-foreground">{scenario.text}</p>
@@ -232,9 +232,9 @@ function UseCasesPage() {
 
 function Badge({ tone, children }: { tone: ToolTone | "neutral"; children: string }) {
   const className =
-    tone === "qualion"
+    tone === "proposaliq"
       ? "bg-[var(--color-pricing-primary-soft)] text-[var(--color-pricing-primary)]"
-      : tone === "prospectiq"
+      : tone === "growthiq"
         ? "bg-[var(--color-pricing-success-soft)] text-[var(--color-pricing-success)]"
         : tone === "governance"
           ? "bg-[var(--color-usecase-warning-soft)] text-[var(--color-usecase-warning)]"
@@ -268,13 +268,13 @@ function ToolPill({ tone, label }: { tone: ToolTone; label: string }) {
 
 function ToolIcon({ tone, label }: { tone: ToolTone; label: string }) {
   const className =
-    tone === "qualion"
+    tone === "proposaliq"
       ? "bg-[var(--color-pricing-primary-soft)] text-[var(--color-pricing-primary)]"
-      : tone === "prospectiq"
+      : tone === "growthiq"
         ? "bg-[var(--color-pricing-success-soft)] text-[var(--color-pricing-success)]"
         : "bg-[var(--color-usecase-warning-soft)] text-[var(--color-usecase-warning)]";
 
-  const product = label === "Qualion" ? "qualion" : label === "ProspectIQ" ? "prospectiq" : "governanceiq";
+  const product = label === "Proposal IQ" ? "proposaliq" : label === "Growth IQ" ? "growthiq" : "governanceiq";
 
   return (
     <span className={cn("flex h-10 w-10 items-center justify-center rounded-xl overflow-hidden p-1", className)}>
@@ -312,7 +312,7 @@ function PipelineCard({ leads, label }: { leads: Lead[]; label: string }) {
       <div className="rounded-xl border border-border bg-card overflow-hidden">
         <div className="flex items-center gap-3 bg-[var(--color-pricing-success-soft)] px-4 py-3 text-sm font-bold text-[var(--color-pricing-success)]">
           <div className="h-9 w-24 overflow-hidden rounded-md bg-white/80 p-1">
-            <ProductLogo product="prospectiq" />
+            <ProductLogo product="growthiq" />
           </div>
           <span>{label}</span>
         </div>

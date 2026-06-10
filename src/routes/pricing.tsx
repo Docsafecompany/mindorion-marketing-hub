@@ -14,17 +14,17 @@ import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 type PlanId = "starter" | "pro" | "business";
-type ProductId = "qualion" | "prospectiq";
+type ProductId = "proposaliq" | "growthiq";
 type BillingMode = "monthly" | "annual";
 
 // TODO: remplace les placeholders par tes vrais Stripe Price IDs (format: price_1xxx...)
 const PRICE_IDS: Record<ProductId, Record<PlanId, Record<BillingMode, string>>> = {
-  qualion: {
+  proposaliq: {
     starter:  { monthly: "price_1TLPIYPRgRrg8XxA4hWlXxrW",  annual: "price_1TLQkPRgRrg8XxAqxMDeTQu" },
     pro:      { monthly: "price_1TPA5sPRgRrg8XxAzShRwhNR",  annual: "price_1TPA6IPRgRrg8XxA8mTgEQn5" },
     business: { monthly: "price_1TLPKSPRgRrg8XxAkb2Uep0s",  annual: "price_1TLPMBPRgRrg8XxAVHmo0QQr" },
   },
-  prospectiq: {
+  growthiq: {
     starter:  { monthly: "price_1TN0vTPRgRrg8XxAzjRbgLdF",  annual: "price_1TN0wJPRgRrg8XxA6gjahwBt" },
     pro:      { monthly: "price_1TN0wqPRgRrg8XxAD3bnMQtu",  annual: "price_1TN0xIPRgRrg8XxAYtJAiUbw" },
     business: { monthly: "price_1TN0xiPRgRrg8XxAG7GLpihz",  annual: "price_1TN0y3PRgRrg8XxAQXuLmtf9" },
@@ -52,7 +52,7 @@ type LocalizedPlan = {
   sections?: Array<{ title: string; items: Array<{ label: string; included: boolean | "partial"; note?: string }> }>;
 };
 type LocalizedProduct = {
-  key: "qualion" | "prospectiq";
+  key: "proposaliq" | "growthiq";
   title: string;
   subtitle: string;
   plans: LocalizedPlan[];
@@ -75,9 +75,9 @@ type PricingCopy = {
 
 const pricingCopy: Record<"fr" | "en", PricingCopy> = {
   fr: {
-    seoTitle: "Tarifs | Qualion & ProspectIQ | Mindorion",
+    seoTitle: "Tarifs | Proposal IQ & Growth IQ | Mindorion",
     seoDescription:
-      "Découvrez les plans Mindorion — Qualion et ProspectIQ. Starter, Pro, Business et Enterprise. Un prix par utilisateur, zéro frais cachés.",
+      "Découvrez les plans Mindorion — Proposal IQ et Growth IQ. Starter, Pro, Business et Enterprise. Un prix par utilisateur, zéro frais cachés.",
     heroTitle: "Un prix par utilisateur. Zéro frais cachés.",
     heroSubtitle: "Commencez avec un outil. Passez à Enterprise pour la suite complète avec intégrations CRM.",
     monthly: "Mensuel",
@@ -89,8 +89,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     comparisonFeature: "Fonctionnalité",
     products: [
       {
-        key: "qualion",
-        title: "Qualion",
+        key: "proposaliq",
+        title: "Proposal IQ",
         subtitle: "Réputation documentaire",
         plans: [
           {
@@ -177,8 +177,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             enterprise: true,
             fixedNote: "Contrat annuel · Onboarding inclus",
             suiteCards: [
-              { icon: "🛡", title: "Qualion Business", description: "Word, PDF, PPT, Excel · illimité" },
-              { icon: "🎯", title: "ProspectIQ Business", description: "Outreach complet" },
+              { icon: "🛡", title: "Proposal IQ Business", description: "Word, PDF, PPT, Excel · illimité" },
+              { icon: "🎯", title: "Growth IQ Business", description: "Outreach complet" },
               { icon: "📋", title: "GovernanceIQ", description: "Gouvernance & conformité" },
             ],
             sections: [
@@ -224,8 +224,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         ],
       },
       {
-        key: "prospectiq",
-        title: "ProspectIQ",
+        key: "growthiq",
+        title: "Growth IQ",
         subtitle: "Outreach B2B intelligent",
         plans: [
           {
@@ -306,8 +306,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             enterprise: true,
             fixedNote: "Contrat annuel · Onboarding inclus",
             suiteCards: [
-              { icon: "🛡", title: "Qualion Business", description: "Word, PDF, PPT, Excel · illimité" },
-              { icon: "🎯", title: "ProspectIQ Business", description: "Outreach complet" },
+              { icon: "🛡", title: "Proposal IQ Business", description: "Word, PDF, PPT, Excel · illimité" },
+              { icon: "🎯", title: "Growth IQ Business", description: "Outreach complet" },
               { icon: "📋", title: "GovernanceIQ", description: "Gouvernance & conformité" },
             ],
             sections: [
@@ -354,9 +354,9 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     ],
   },
   en: {
-    seoTitle: "Pricing | Qualion & ProspectIQ | Mindorion",
+    seoTitle: "Pricing | Proposal IQ & Growth IQ | Mindorion",
     seoDescription:
-      "Discover Mindorion plans for Qualion and ProspectIQ. Starter, Pro, Business and Enterprise. One price per user, no hidden fees.",
+      "Discover Mindorion plans for Proposal IQ and Growth IQ. Starter, Pro, Business and Enterprise. One price per user, no hidden fees.",
     heroTitle: "One price per user. No hidden fees.",
     heroSubtitle: "Start with one product. Move to Enterprise for the full suite with CRM integrations.",
     monthly: "Monthly",
@@ -368,8 +368,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     comparisonFeature: "Feature",
     products: [
       {
-        key: "qualion",
-        title: "Qualion",
+        key: "proposaliq",
+        title: "Proposal IQ",
         subtitle: "Document reputation",
         plans: [
           {
@@ -456,8 +456,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             enterprise: true,
             fixedNote: "Annual contract · Onboarding included",
             suiteCards: [
-              { icon: "🛡", title: "Qualion Business", description: "Word, PDF, PPT, Excel · unlimited" },
-              { icon: "🎯", title: "ProspectIQ Business", description: "Full outreach" },
+              { icon: "🛡", title: "Proposal IQ Business", description: "Word, PDF, PPT, Excel · unlimited" },
+              { icon: "🎯", title: "Growth IQ Business", description: "Full outreach" },
               { icon: "📋", title: "GovernanceIQ", description: "Governance & compliance" },
             ],
             sections: [
@@ -503,8 +503,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         ],
       },
       {
-        key: "prospectiq",
-        title: "ProspectIQ",
+        key: "growthiq",
+        title: "Growth IQ",
         subtitle: "Intelligent B2B outreach",
         plans: [
           {
@@ -585,8 +585,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             enterprise: true,
             fixedNote: "Annual contract · Onboarding included",
             suiteCards: [
-              { icon: "🛡", title: "Qualion Business", description: "Word, PDF, PPT, Excel · unlimited" },
-              { icon: "🎯", title: "ProspectIQ Business", description: "Full outreach" },
+              { icon: "🛡", title: "Proposal IQ Business", description: "Word, PDF, PPT, Excel · unlimited" },
+              { icon: "🎯", title: "Growth IQ Business", description: "Full outreach" },
               { icon: "📋", title: "GovernanceIQ", description: "Governance & compliance" },
             ],
             sections: [
@@ -656,17 +656,17 @@ export const Route = createFileRoute("/pricing")({
             itemListElement: [
               {
                 "@type": "Offer",
-                name: "Qualion",
+                name: "Proposal IQ",
                 priceCurrency: "EUR",
                 price: "19",
-                url: "https://mindorion.com/products/qualion",
+                url: "https://mindorion.com/products/proposaliq",
               },
               {
                 "@type": "Offer",
-                name: "ProspectIQ",
+                name: "Growth IQ",
                 priceCurrency: "EUR",
                 price: "29",
-                url: "https://mindorion.com/products/prospectiq",
+                url: "https://mindorion.com/products/growthiq",
               },
               {
                 "@type": "Offer",
@@ -726,7 +726,7 @@ function PricingPage() {
         </div>
       </section>
 
-      <Tabs defaultValue="qualion" className="mt-12">
+      <Tabs defaultValue="proposaliq" className="mt-12">
         <TabsList className="mx-auto grid h-auto w-full max-w-3xl grid-cols-1 gap-4 rounded-none bg-transparent p-0 md:grid-cols-2">
           {copy.products.map((product) => (
             <TabsTrigger
