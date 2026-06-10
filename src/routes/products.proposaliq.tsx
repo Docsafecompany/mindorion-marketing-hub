@@ -21,7 +21,7 @@ const featureIcons: [string[], string[]] = [
   ["📄", "📊", "📋", "⚡", "🔒", "📥"],
 ];
 
-export const Route = createFileRoute("/products/qualion")({
+export const Route = createFileRoute("/products/proposaliq")({
   head: () => {
     const base = createStaticMeta({
       title: "Qualion | Réputation documentaire avant envoi | Mindorion",

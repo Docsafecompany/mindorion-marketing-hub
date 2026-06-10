@@ -20,7 +20,7 @@ const featureIcons: [string[], string[]] = [
   ["✉️", "🔄", "📊", "🔗"],
 ];
 
-export const Route = createFileRoute("/products/prospectiq")({
+export const Route = createFileRoute("/products/growthiq")({
   head: () => {
     const base = createStaticMeta({
       title: "ProspectIQ | Outreach B2B intelligent | Mindorion",
