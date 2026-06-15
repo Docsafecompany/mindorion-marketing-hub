@@ -28,7 +28,7 @@ export function Footer() {
   ];
 
   const resourceLinks = [
-    { label: "Blog", to: "/blog" },
+    // { label: "Blog", to: "/blog" }, // hidden — feature flag, do not remove route
     { label: t("footer.useCases"), to: "/use-cases" },
     { label: t("footer.about"), to: "/about" },
   ];
