@@ -8,7 +8,7 @@
   <url><loc>https://mindorion.com/security</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://mindorion.com/products/proposaliq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mindorion.com/products/growthiq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mindorion.com/products/governanceiq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
   <url><loc>https://mindorion.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mindorion.com/legal/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://mindorion.com/legal/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

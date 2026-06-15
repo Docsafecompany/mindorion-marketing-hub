@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
     createStaticMeta({
       title: "À propos | Mindorion — Intelligence professionnelle B2B",
       description:
-        "Mindorion est un éditeur SaaS B2B fondé en Estonie. Découvrez notre mission, notre équipe et notre approche build in public. Proposal IQ, Growth IQ, GovernanceIQ.",
+        "Mindorion est un éditeur SaaS fondé en Estonie pour l'Engineering & IT Services. Découvrez notre mission, notre équipe et notre approche build in public. ProposalIQ, GrowthIQ, Governance Layer.",
       path: "/about",
     }),
   component: AboutPage,

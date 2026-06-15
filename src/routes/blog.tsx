@@ -17,8 +17,8 @@ const blogHead = () => {
     };
   }
   return {
-    title: "Blog | B2B professional tips and guides | Mindorion",
-    description: "Articles, guides and resources for B2B professionals — document reputation, intelligent prospecting and compliance.",
+    title: "Blog | Engineering & IT Services tips and guides | Mindorion",
+    description: "Articles, guides and resources for Engineering & IT Services firms — document reputation, intelligent prospecting and compliance.",
   };
 };
 
@@ -27,17 +27,17 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
 });
 
-type BlogFilter = "all" | "Proposal IQ" | "Growth IQ" | "GovernanceIQ" | "Guides";
+type BlogFilter = "all" | "ProposalIQ" | "GrowthIQ" | "Governance Layer" | "Guides";
 
 const featuredArticle = { slug: "track-changes-proposals" };
 
 const blogCards = [
-  { slug: "remove-metadata-word-before-sending", filter: "Proposal IQ",     icon: "🛡", categoryKey: "blog.page.categories.proposaliq",    headerClass: "editorial-purple-soft", pillClass: "editorial-purple-soft" },
-  { slug: "hidden-risks-documents",              filter: "Growth IQ",  icon: "🎯", categoryKey: "blog.page.categories.growthiq", headerClass: "editorial-green-soft",  pillClass: "editorial-green-soft" },
-  { slug: "roi-document-cleanup",                filter: "GovernanceIQ",icon: "📋", categoryKey: "blog.page.categories.governance", headerClass: "editorial-amber-soft",  pillClass: "editorial-amber-soft" },
+  { slug: "remove-metadata-word-before-sending", filter: "ProposalIQ",     icon: "🛡", categoryKey: "blog.page.categories.proposaliq",    headerClass: "editorial-purple-soft", pillClass: "editorial-purple-soft" },
+  { slug: "hidden-risks-documents",              filter: "GrowthIQ",  icon: "🎯", categoryKey: "blog.page.categories.growthiq", headerClass: "editorial-green-soft",  pillClass: "editorial-green-soft" },
+  { slug: "roi-document-cleanup",                filter: "Governance Layer",icon: "📋", categoryKey: "blog.page.categories.governance", headerClass: "editorial-amber-soft",  pillClass: "editorial-amber-soft" },
   { slug: "consulting-quality-gate",             filter: "Guides",      icon: "💼", categoryKey: "blog.page.categories.guide",      headerClass: "editorial-gray-soft",   pillClass: "editorial-gray-soft" },
-  { slug: "what-gets-cleaned",                   filter: "Proposal IQ",     icon: "📄", categoryKey: "blog.page.categories.proposaliq",    headerClass: "editorial-purple-soft", pillClass: "editorial-purple-soft" },
-  { slug: "track-changes-proposals",             filter: "Growth IQ",  icon: "🔍", categoryKey: "blog.page.categories.growthiq", headerClass: "editorial-green-soft",  pillClass: "editorial-green-soft" },
+  { slug: "what-gets-cleaned",                   filter: "ProposalIQ",     icon: "📄", categoryKey: "blog.page.categories.proposaliq",    headerClass: "editorial-purple-soft", pillClass: "editorial-purple-soft" },
+  { slug: "track-changes-proposals",             filter: "GrowthIQ",  icon: "🔍", categoryKey: "blog.page.categories.growthiq", headerClass: "editorial-green-soft",  pillClass: "editorial-green-soft" },
 ] as const;
 
 const topErrorTones = ["editorial-danger", "editorial-danger", "editorial-warning", "editorial-warning", "editorial-warning"] as const;
@@ -50,9 +50,9 @@ function BlogPage() {
 
   const filterTags: { label: string; value: BlogFilter }[] = [
     { label: t("blog.page.filterAll"), value: "all" },
-    { label: "🛡 Proposal IQ", value: "Proposal IQ" },
-    { label: "🎯 Growth IQ", value: "Growth IQ" },
-    { label: "📋 GovernanceIQ", value: "GovernanceIQ" },
+    { label: "🛡 ProposalIQ", value: "ProposalIQ" },
+    { label: "🎯 GrowthIQ", value: "GrowthIQ" },
+    { label: "📋 Governance Layer", value: "Governance Layer" },
     { label: t("blog.page.filterGuides"), value: "Guides" },
   ];
 

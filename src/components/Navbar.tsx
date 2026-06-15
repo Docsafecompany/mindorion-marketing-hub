@@ -126,12 +126,6 @@ export function Navbar() {
       to: "/products/growthiq",
       icon: <IconTile className="bg-white p-1.5"><ProductLogo product="growthiq" /></IconTile>,
     },
-    {
-      title: t("nav.productItems.2.title"),
-      subtitle: t("nav.productItems.2.subtitle"),
-      to: "/products/governanceiq",
-      icon: <IconTile className="bg-white p-1.5"><ProductLogo product="governanceiq" /></IconTile>,
-    },
   ];
 
   const solutionEntries: MenuEntry[] = [

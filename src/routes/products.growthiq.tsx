@@ -23,9 +23,9 @@ const featureIcons: [string[], string[]] = [
 export const Route = createFileRoute("/products/growthiq")({
   head: () => {
     const base = createStaticMeta({
-      title: "Growth IQ | Outreach B2B intelligent | Mindorion",
+      title: "GrowthIQ | Outreach B2B intelligent | Mindorion",
       description:
-        "Growth IQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
+        "GrowthIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
       path: "/products/growthiq",
     });
     return {
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/products/growthiq")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "Growth IQ",
+            name: "GrowthIQ",
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web",
             description:
