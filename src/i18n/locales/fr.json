@@ -457,7 +457,7 @@
       "heroLabel": "PIPELINE · GROWTH IQ",
       "heroRows": [
         { "initials": "DL", "title": "Dir. Commercial · Engineering", "city": "Lyon", "score": "94%" },
-        { "initials": "VP", "title": "VP Achats · Aérospatial", "city": "Toulouse", "score": "88%" },
+        { "initials": "VP", "title": "VP Achats · IT Services", "city": "Toulouse", "score": "88%" },
         { "initials": "DG", "title": "DG · Cabinet conseil", "city": "Paris", "score": "81%" }
       ],
       "howItWorks": [
@@ -1056,7 +1056,7 @@
         "pipelineLabel": "Prospects qualifiés",
         "leads": [
           { "initials": "DL", "role": "Directeur Commercial · Engineering", "city": "Lyon", "score": "94%" },
-          { "initials": "VP", "role": "VP Achats · Aérospatial", "city": "Toulouse", "score": "88%" },
+          { "initials": "VP", "role": "VP Achats · IT Services", "city": "Toulouse", "score": "88%" },
           { "initials": "DG", "role": "DG · Cabinet conseil", "city": "Paris", "score": "81%" }
         ],
         "scenarios": [
@@ -1083,7 +1083,7 @@
       "rh": {
         "badge": "👥 DELIVERY & BU",
         "title": "Chaque dossier envoyé engage votre responsabilité professionnelle.",
-        "text": "En recrutement, envoyer un CV avec les notes de disqualification d'un candidat précédent, ou un contrat avec des données personnelles non supprimées, peut avoir des conséquences légales. ProposalIQ et Governance Layer vous protègent.",
+        "text": "En delivery, transmettre un livrable contenant des données client résiduelles ou des commentaires internes peut avoir des conséquences contractuelles. ProposalIQ et Governance Layer vous protègent.",
         "tools": [
           { "name": "ProposalIQ", "text": "Vérifie CVs, contrats et NDAs avant envoi" },
           { "name": "Governance Layer", "text": "Conformité RGPD des dossiers candidats" }
