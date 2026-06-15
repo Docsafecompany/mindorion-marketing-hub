@@ -17,7 +17,6 @@ export function Footer() {
   const productLinks = [
     { label: "ProposalIQ", to: "/products/proposaliq" },
     { label: "GrowthIQ", to: "/products/growthiq" },
-    { label: "Governance Layer", to: "/products/governanceiq" },
     { label: t("nav.pricing"), to: "/pricing" },
   ];
 
