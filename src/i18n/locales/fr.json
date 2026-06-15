@@ -136,18 +136,16 @@
     "goHome": "Retour à l'accueil"
   },
   "home": {
-    "seoTitle": "Mindorion — Protégez votre réputation professionnelle",
-    "seoDescription": "Mindorion aide les équipes B2B à contrôler les documents, structurer la prospection et piloter la conformité avant chaque envoi.",
-    "badge": "Utilisé par des équipes consulting, sales et delivery",
+    "seoTitle": "Mindorion — Alignez stratégie, exécution et gouvernance",
+    "seoDescription": "Mindorion unifie les données commerciales, de proposition et opérationnelles fragmentées pour que les cabinets de services d'ingénierie puissent se structurer avec gouvernance et prendre des décisions basées sur l'exécution réelle.",
+    "badge": "Conçu pour les cabinets d'ingénierie et de conseil",
     "heroTitleWords": [
-      "Envoyez.",
-      "Prospectez.",
-      "Gouvernez."
+      "Alignez stratégie, exécution et gouvernance dans votre organisation d'ingénierie."
     ],
-    "title": "Envoyez. Prospectez. Gouvernez.",
-    "subtitle": "Mindorion donne aux professionnels B2B la certitude d'opérer au plus haut niveau. Chaque document impeccable, chaque prospect qualifié, chaque processus conforme.",
-    "primaryCta": "Découvrir",
-    "secondaryCta": "Demander une démo",
+    "title": "Alignez stratégie, exécution et gouvernance dans votre organisation d'ingénierie.",
+    "subtitle": "Mindorion unifie les données commerciales, de proposition et opérationnelles fragmentées pour que les cabinets de services d'ingénierie puissent se structurer avec gouvernance et prendre des décisions basées sur l'exécution réelle.",
+    "primaryCta": "Demander une démo",
+    "secondaryCta": "Voir la plateforme",
     "personas": [
       "Consultants",
       "Équipes Sales",

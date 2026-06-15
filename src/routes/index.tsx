@@ -14,8 +14,8 @@ import { trackEvent } from "@/lib/analytics";
 export const Route = createFileRoute("/")({
   head: () => ({
     ...createStaticMeta({
-      title: "Mindorion — Protect your professional reputation",
-      description: "Mindorion helps B2B teams control documents, structure outreach and manage compliance before every external send.",
+      title: "Mindorion — Align strategy, execution and governance",
+      description: "Mindorion unifies fragmented commercial, proposal and operational data so engineering services firms can scale with governance and make decisions based on real execution.",
       path: "/",
     }),
     scripts: [
@@ -74,13 +74,13 @@ function HomePage() {
               {t("home.subtitle")}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link to="/use-cases" onClick={() => trackEvent("cta_clicked", { cta: "hero_discover" })}>
+              <Link to="/contact" onClick={() => trackEvent("cta_clicked", { cta: "hero_demo" })}>
                 <Button size="lg" className="min-w-44 gap-1">
                   {t("home.primaryCta")}
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
-              <Link to="/contact" onClick={() => trackEvent("cta_clicked", { cta: "hero_demo" })}>
+              <Link to="/use-cases" onClick={() => trackEvent("cta_clicked", { cta: "hero_discover" })}>
                 <Button size="lg" variant="outline" className="min-w-44">
                   {t("home.secondaryCta")}
                 </Button>
