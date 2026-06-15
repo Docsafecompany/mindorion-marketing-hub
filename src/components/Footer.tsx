@@ -15,9 +15,9 @@ export function Footer() {
   const languageLabel = current === "fr" ? "EN / FR" : "FR / EN";
 
   const productLinks = [
-    { label: "Proposal IQ", to: "/products/proposaliq" },
-    { label: "Growth IQ", to: "/products/growthiq" },
-    { label: "GovernanceIQ", to: "/products/governanceiq" },
+    { label: "ProposalIQ", to: "/products/proposaliq" },
+    { label: "GrowthIQ", to: "/products/growthiq" },
+    { label: "Governance Layer", to: "/products/governanceiq" },
     { label: t("nav.pricing"), to: "/pricing" },
   ];
 

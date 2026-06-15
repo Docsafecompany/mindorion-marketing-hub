@@ -58,7 +58,7 @@ export function GovernanceIQModal({ plan, open, onClose }: GovernanceIQModalProp
             📊
           </div>
           <div className="flex-1">
-            <div className="text-lg font-bold text-foreground">GovernanceIQ</div>
+            <div className="text-lg font-bold text-foreground">Governance Layer</div>
             <span className={cn("inline-flex mt-1 text-xs font-semibold px-2 py-1 rounded-md", content.badgeClass)}>
               {content.badge}
             </span>

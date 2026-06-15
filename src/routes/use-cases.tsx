@@ -86,9 +86,9 @@ const personaOrder: PersonaKey[] = ["consultants", "sales", "rh", "esn"];
 export const Route = createFileRoute("/use-cases")({
   head: () =>
     createStaticMeta({
-      title: "Cas d'usage | Consultants, Sales, RH, ESN | Mindorion",
+      title: "Cas d'usage | CEO, COO, VP Sales, BU Directors | Mindorion",
       description:
-        "Découvrez comment consultants, équipes sales, recruteurs et ESN utilisent Proposal IQ, Growth IQ et GovernanceIQ pour protéger leur réputation, prospecter et rester conformes.",
+        "Découvrez comment consultants, équipes sales, directeurs delivery et ESN utilisent ProposalIQ, GrowthIQ et Governance Layer pour protéger leur réputation, prospecter et rester conformes.",
       path: "/use-cases",
     }),
   component: UseCasesPage,
@@ -274,7 +274,7 @@ function ToolIcon({ tone, label }: { tone: ToolTone; label: string }) {
         ? "bg-[var(--color-pricing-success-soft)] text-[var(--color-pricing-success)]"
         : "bg-[var(--color-usecase-warning-soft)] text-[var(--color-usecase-warning)]";
 
-  const product = label === "Proposal IQ" ? "proposaliq" : label === "Growth IQ" ? "growthiq" : "governanceiq";
+  const product = label === "ProposalIQ" ? "proposaliq" : label === "GrowthIQ" ? "growthiq" : "governanceiq";
 
   return (
     <span className={cn("flex h-10 w-10 items-center justify-center rounded-xl overflow-hidden p-1", className)}>

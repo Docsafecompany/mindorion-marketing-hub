@@ -2,7 +2,7 @@
 
 > Mindorion helps B2B teams protect their professional reputation by controlling documents, structuring outreach, and managing compliance before every external send.
 
-Mindorion offers three products: Proposal IQ (document quality and metadata control), Growth IQ (structured B2B outreach), and GovernanceIQ (compliance and governance for external communications).
+Mindorion offers three products: ProposalIQ (document quality and metadata control), GrowthIQ (structured B2B outreach), and Governance Layer (compliance and governance for external communications).
 
 ## Pages
 
@@ -16,9 +16,9 @@ Mindorion offers three products: Proposal IQ (document quality and metadata cont
 
 ## Products
 
-- [Proposal IQ](/products/proposaliq): Document quality control and metadata cleanup.
-- [Growth IQ](/products/growthiq): Structured B2B prospecting and outreach.
-- [GovernanceIQ](/products/governanceiq): Compliance and governance for external sends.
+- [ProposalIQ](/products/proposaliq): Document quality control and metadata cleanup.
+- [GrowthIQ](/products/growthiq): Structured B2B prospecting and outreach.
+- [Governance Layer](/products/governanceiq): Compliance and governance for external sends.
 
 ## Blog
 

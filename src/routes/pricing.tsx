@@ -75,9 +75,9 @@ type PricingCopy = {
 
 const pricingCopy: Record<"fr" | "en", PricingCopy> = {
   fr: {
-    seoTitle: "Tarifs | Proposal IQ & Growth IQ | Mindorion",
+    seoTitle: "Tarifs | ProposalIQ & GrowthIQ | Mindorion",
     seoDescription:
-      "Découvrez les plans Mindorion — Proposal IQ et Growth IQ. Starter, Pro, Business et Enterprise. Un prix par utilisateur, zéro frais cachés.",
+      "Découvrez les plans Mindorion — ProposalIQ et GrowthIQ. Starter, Pro, Business et Enterprise. Un prix par utilisateur, zéro frais cachés.",
     heroTitle: "Un prix par utilisateur. Zéro frais cachés.",
     heroSubtitle: "Commencez avec un outil. Passez à Enterprise pour la suite complète avec intégrations CRM.",
     monthly: "Mensuel",
@@ -90,7 +90,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     products: [
       {
         key: "proposaliq",
-        title: "Proposal IQ",
+        title: "ProposalIQ",
         subtitle: "Réputation documentaire",
         plans: [
           {
@@ -177,9 +177,9 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             enterprise: true,
             fixedNote: "Contrat annuel · Onboarding inclus",
             suiteCards: [
-              { icon: "🛡", title: "Proposal IQ Business", description: "Word, PDF, PPT, Excel · illimité" },
-              { icon: "🎯", title: "Growth IQ Business", description: "Outreach complet" },
-              { icon: "📋", title: "GovernanceIQ", description: "Gouvernance & conformité" },
+              { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · illimité" },
+              { icon: "🎯", title: "GrowthIQ Business", description: "Outreach complet" },
+              { icon: "📋", title: "Governance Layer", description: "Gouvernance & conformité" },
             ],
             sections: [
               {
@@ -218,14 +218,14 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               { feature: "API + webhooks", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
               { feature: "Intégrations CRM", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
               { feature: "SSO & sécurité avancée", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
-              { feature: "GovernanceIQ inclus", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
+              { feature: "Governance Layer inclus", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
             ],
           },
         ],
       },
       {
         key: "growthiq",
-        title: "Growth IQ",
+        title: "GrowthIQ",
         subtitle: "Outreach B2B intelligent",
         plans: [
           {
@@ -306,9 +306,9 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             enterprise: true,
             fixedNote: "Contrat annuel · Onboarding inclus",
             suiteCards: [
-              { icon: "🛡", title: "Proposal IQ Business", description: "Word, PDF, PPT, Excel · illimité" },
-              { icon: "🎯", title: "Growth IQ Business", description: "Outreach complet" },
-              { icon: "📋", title: "GovernanceIQ", description: "Gouvernance & conformité" },
+              { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · illimité" },
+              { icon: "🎯", title: "GrowthIQ Business", description: "Outreach complet" },
+              { icon: "📋", title: "Governance Layer", description: "Gouvernance & conformité" },
             ],
             sections: [
               {
@@ -346,7 +346,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               { feature: "API + webhooks", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
               { feature: "Intégrations CRM", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
               { feature: "SSO & sécurité avancée", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
-              { feature: "GovernanceIQ inclus", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
+              { feature: "Governance Layer inclus", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
             ],
           },
         ],
@@ -354,9 +354,9 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     ],
   },
   en: {
-    seoTitle: "Pricing | Proposal IQ & Growth IQ | Mindorion",
+    seoTitle: "Pricing | ProposalIQ & GrowthIQ | Mindorion",
     seoDescription:
-      "Discover Mindorion plans for Proposal IQ and Growth IQ. Starter, Pro, Business and Enterprise. One price per user, no hidden fees.",
+      "Discover Mindorion plans for ProposalIQ and GrowthIQ. Starter, Pro, Business and Enterprise. One price per user, no hidden fees.",
     heroTitle: "One price per user. No hidden fees.",
     heroSubtitle: "Start with one product. Move to Enterprise for the full suite with CRM integrations.",
     monthly: "Monthly",
@@ -369,7 +369,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     products: [
       {
         key: "proposaliq",
-        title: "Proposal IQ",
+        title: "ProposalIQ",
         subtitle: "Document reputation",
         plans: [
           {
@@ -456,9 +456,9 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             enterprise: true,
             fixedNote: "Annual contract · Onboarding included",
             suiteCards: [
-              { icon: "🛡", title: "Proposal IQ Business", description: "Word, PDF, PPT, Excel · unlimited" },
-              { icon: "🎯", title: "Growth IQ Business", description: "Full outreach" },
-              { icon: "📋", title: "GovernanceIQ", description: "Governance & compliance" },
+              { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · unlimited" },
+              { icon: "🎯", title: "GrowthIQ Business", description: "Full outreach" },
+              { icon: "📋", title: "Governance Layer", description: "Governance & compliance" },
             ],
             sections: [
               {
@@ -497,14 +497,14 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               { feature: "API + webhooks", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
               { feature: "CRM integrations", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
               { feature: "SSO & advanced security", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
-              { feature: "GovernanceIQ included", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
+              { feature: "Governance Layer included", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
             ],
           },
         ],
       },
       {
         key: "growthiq",
-        title: "Growth IQ",
+        title: "GrowthIQ",
         subtitle: "Intelligent B2B outreach",
         plans: [
           {
@@ -585,9 +585,9 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             enterprise: true,
             fixedNote: "Annual contract · Onboarding included",
             suiteCards: [
-              { icon: "🛡", title: "Proposal IQ Business", description: "Word, PDF, PPT, Excel · unlimited" },
-              { icon: "🎯", title: "Growth IQ Business", description: "Full outreach" },
-              { icon: "📋", title: "GovernanceIQ", description: "Governance & compliance" },
+              { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · unlimited" },
+              { icon: "🎯", title: "GrowthIQ Business", description: "Full outreach" },
+              { icon: "📋", title: "Governance Layer", description: "Governance & compliance" },
             ],
             sections: [
               {
@@ -625,7 +625,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               { feature: "API + webhooks", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
               { feature: "CRM integrations", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
               { feature: "SSO & advanced security", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
-              { feature: "GovernanceIQ included", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
+              { feature: "Governance Layer included", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
             ],
           },
         ],
@@ -656,21 +656,21 @@ export const Route = createFileRoute("/pricing")({
             itemListElement: [
               {
                 "@type": "Offer",
-                name: "Proposal IQ",
+                name: "ProposalIQ",
                 priceCurrency: "EUR",
                 price: "19",
                 url: "https://mindorion.com/products/proposaliq",
               },
               {
                 "@type": "Offer",
-                name: "Growth IQ",
+                name: "GrowthIQ",
                 priceCurrency: "EUR",
                 price: "29",
                 url: "https://mindorion.com/products/growthiq",
               },
               {
                 "@type": "Offer",
-                name: "GovernanceIQ",
+                name: "Governance Layer",
                 priceCurrency: "EUR",
                 price: "0",
                 url: "https://mindorion.com/products/governanceiq",

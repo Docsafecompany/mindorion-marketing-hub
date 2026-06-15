@@ -24,9 +24,9 @@ const featureIcons: [string[], string[]] = [
 export const Route = createFileRoute("/products/governanceiq")({
   head: () => {
     const base = createStaticMeta({
-      title: "GovernanceIQ | Conformité documentaire équipe | Mindorion",
+      title: "Governance Layer | Conformité documentaire équipe | Mindorion",
       description:
-        "GovernanceIQ centralise les politiques documentaires de votre organisation, automatise les audits et garantit que chaque équipe opère selon les mêmes standards.",
+        "Governance Layer centralise les politiques documentaires de votre organisation, automatise les audits et garantit que chaque équipe opère selon les mêmes standards.",
       path: "/products/governanceiq",
     });
     return {
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/products/governanceiq")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "GovernanceIQ",
+            name: "Governance Layer",
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web",
             description:

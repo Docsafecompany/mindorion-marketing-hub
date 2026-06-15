@@ -24,9 +24,9 @@ const featureIcons: [string[], string[]] = [
 export const Route = createFileRoute("/products/proposaliq")({
   head: () => {
     const base = createStaticMeta({
-      title: "Proposal IQ | Réputation documentaire avant envoi | Mindorion",
+      title: "ProposalIQ | Réputation documentaire avant envoi | Mindorion",
       description:
-        "Proposal IQ analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
+        "ProposalIQ analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
       path: "/products/proposaliq",
     });
     return {
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/products/proposaliq")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "Proposal IQ",
+            name: "ProposalIQ",
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web",
             description:

@@ -22,15 +22,15 @@
     "demoCta": "Request a demo",
     "productItems": [
       {
-        "title": "Proposal IQ",
+        "title": "ProposalIQ",
         "subtitle": "Document reputation, before send"
       },
       {
-        "title": "Growth IQ",
+        "title": "GrowthIQ",
         "subtitle": "Intelligent B2B outreach"
       },
       {
-        "title": "GovernanceIQ",
+        "title": "Governance Layer",
         "subtitle": "Team document compliance"
       }
     ],
@@ -44,7 +44,7 @@
         "subtitle": "RFQ, RFP, offers and outreach"
       },
       {
-        "title": "HR & Recruiting",
+        "title": "Delivery & Business Units",
         "subtitle": "CVs, contracts, NDAs, candidate files"
       },
       {
@@ -88,7 +88,7 @@
     "solutionItems": [
       "Consultants",
       "Sales Teams",
-      "HR & Recruiting",
+      "Delivery & Business Units",
       "IT Services & Engineering"
     ]
   },
@@ -138,41 +138,41 @@
   "home": {
     "seoTitle": "Mindorion — Protect your professional reputation",
     "seoDescription": "Mindorion helps B2B teams control documents, structure outreach and manage compliance before every external send.",
-    "badge": "Used by consulting, sales and HR teams",
+    "badge": "Used by consulting, sales and delivery teams",
     "heroTitleWords": [
       "Send.",
       "Prospect.",
       "Govern."
     ],
     "title": "Send. Prospect. Govern.",
-    "subtitle": "Mindorion gives B2B professionals the confidence to operate at the highest level. Every document flawless, every prospect qualified, every process compliant.",
+    "subtitle": "Mindorion gives Engineering & IT Services firms the confidence to operate at the highest level. Every document flawless, every prospect qualified, every process compliant.",
     "primaryCta": "Discover",
     "secondaryCta": "Request a demo",
     "personas": [
       "Consultants",
       "Sales teams",
-      "Recruiters",
+      "Delivery leaders",
       "IT services & engineering",
-      "Pharma & aerospace"
+      "Engineering & IT Services"
     ],
     "heroProducts": [
       {
         "icon": "🛡",
-        "title": "Proposal IQ",
+        "title": "ProposalIQ",
         "text": "Every document sent is flawless. Reputation protected, credibility intact, client reassured.",
-        "cta": "Try Proposal IQ"
+        "cta": "Try ProposalIQ"
       },
       {
         "icon": "🎯",
-        "title": "Growth IQ",
+        "title": "GrowthIQ",
         "text": "Every prospect is the right one. AI-powered B2B pipeline, precise outreach, higher conversion rates.",
-        "cta": "Try Growth IQ"
+        "cta": "Try GrowthIQ"
       },
       {
         "icon": "📋",
-        "title": "GovernanceIQ",
+        "title": "Governance Layer",
         "text": "Every process is compliant. Team-scale document governance, without friction.",
-        "cta": "Try GovernanceIQ"
+        "cta": "Try Governance Layer"
       }
     ],
     "stats": [
@@ -198,19 +198,19 @@
     "productsSubtitle": "From document quality to team governance, Mindorion structures the workflows that shape your brand.",
     "productCards": [
       {
-        "title": "Proposal IQ",
+        "title": "ProposalIQ",
         "text": "Check the real quality of a document before every external send."
       },
       {
-        "title": "Growth IQ",
+        "title": "GrowthIQ",
         "text": "Run smarter B2B outreach powered by signal and context."
       },
       {
-        "title": "GovernanceIQ",
+        "title": "Governance Layer",
         "text": "Measure team document compliance and trigger the right alerts."
       }
     ],
-    "proposaliqDocTitle": "Proposal IQ Doc",
+    "proposaliqDocTitle": "ProposalIQ Doc",
     "proposaliqDocItems": [
       "Hidden metadata",
       "Comments & annotations",
@@ -218,7 +218,7 @@
       "Spelling & consistency",
       "Client-ready export"
     ],
-    "proposaliqProposalTitle": "Proposal IQ Proposal",
+    "proposaliqProposalTitle": "ProposalIQ Proposal",
     "proposaliqProposalItems": [
       "Business risks",
       "Margin risks",
@@ -238,7 +238,7 @@
         "text": "Secure offers, responses and attachments before every external share."
       },
       {
-        "title": "HR",
+        "title": "Delivery",
         "text": "Clean CVs, contracts and candidate files before distribution while reducing GDPR risk."
       },
       {
@@ -271,14 +271,14 @@
     "testimonials": [
       {
         "role": "Consultant",
-        "quote": "Proposal IQ removes the final doubts before we send a proposal. Client trust shifts immediately."
+        "quote": "ProposalIQ removes the final doubts before we send a proposal. Client trust shifts immediately."
       },
       {
         "role": "Sales Manager",
         "quote": "We standardized offer quality control without slowing down the commercial cycle."
       },
       {
-        "role": "HR Director",
+        "role": "Delivery Director",
         "quote": "The value is double: lower document risk and a stronger perception of candidate files."
       }
     ],
@@ -323,7 +323,7 @@
         "priceMonthly": "€79 / month",
         "priceAnnual": "€63 / month",
         "cta": "Try Business",
-        "description": "For sales, HR and delivery teams collaborating every day.",
+        "description": "For sales, delivery and BU leaders teams collaborating every day.",
         "features": [
           "20 users",
           "Team workspaces",
@@ -397,11 +397,11 @@
   },
   "products": {
     "proposaliq": {
-      "seoTitle": "Proposal IQ | Document reputation before send | Mindorion",
-      "seoDescription": "Proposal IQ analyzes every document in 30 seconds and detects anything that could harm your professional reputation before sending — metadata, comments, sensitive data, AI tone.",
+      "seoTitle": "ProposalIQ | Document reputation before send | Mindorion",
+      "seoDescription": "ProposalIQ analyzes every document in 30 seconds and detects anything that could harm your professional reputation before sending — metadata, comments, sensitive data, AI tone.",
       "eyebrow": "🛡 PROPOSAL IQ · DOCUMENT REPUTATION",
       "title": "Is your document really ready to send?",
-      "subtitle": "Proposal IQ analyzes every document in 30 seconds and detects anything that could harm your professional reputation before your client opens it.",
+      "subtitle": "ProposalIQ analyzes every document in 30 seconds and detects anything that could harm your professional reputation before your client opens it.",
       "heroLabel": "ANALYSIS REPORT · PROPOSAL IQ",
       "heroItems": [
         "Internal author in properties",
@@ -410,8 +410,8 @@
         "✓ Document cleaned — Download"
       ],
       "howItWorks": [
-        { "title": "Upload", "text": "Drop your document — Word, PDF, PPT or Excel — directly into Proposal IQ." },
-        { "title": "Analyze", "text": "Proposal IQ scans 14 risk categories in under 30 seconds and produces a complete report." },
+        { "title": "Upload", "text": "Drop your document — Word, PDF, PPT or Excel — directly into ProposalIQ." },
+        { "title": "Analyze", "text": "ProposalIQ scans 14 risk categories in under 30 seconds and produces a complete report." },
         { "title": "Send", "text": "Download the cleaned version and send with confidence. Quality score guaranteed." }
       ],
       "featureColumns": [
@@ -440,30 +440,30 @@
       ],
       "scenarioLabel": "THEY USE PROPOSAL IQ",
       "scenarios": [
-        { "tag": "CONSULTANT", "title": "Client proposal with internal metadata", "text": "Proposal IQ catches the internal author and 3 review comments before sending.", "result": "Reputation protected" },
-        { "tag": "SALES", "title": "RFP offer with cost price visible", "text": "Tracked changes were exposing the margin. Proposal IQ catches it before submission.", "result": "Margin protected" },
-        { "tag": "RECRUITER", "title": "Candidate CV with disqualification notes", "text": "Internal comments were still visible. Proposal IQ cleans before forwarding.", "result": "GDPR compliant" }
+        { "tag": "CONSULTANT", "title": "Client proposal with internal metadata", "text": "ProposalIQ catches the internal author and 3 review comments before sending.", "result": "Reputation protected" },
+        { "tag": "SALES", "title": "RFP offer with cost price visible", "text": "Tracked changes were exposing the margin. ProposalIQ catches it before submission.", "result": "Margin protected" },
+        { "tag": "DELIVERY", "title": "Candidate CV with disqualification notes", "text": "Internal comments were still visible. ProposalIQ cleans before forwarding.", "result": "GDPR compliant" }
       ],
       "ctaTitle": "Ready to send with confidence?",
       "ctaSubtitle": "Analyze your next document — result in 30 seconds.",
-      "primaryCta": "Try Proposal IQ"
+      "primaryCta": "Try ProposalIQ"
     },
     "growthiq": {
-      "seoTitle": "Growth IQ | Intelligent B2B outreach | Mindorion",
-      "seoDescription": "Growth IQ identifies your best B2B prospects, qualifies opportunities with AI and generates personalized outreach sequences to maximize reply rates.",
+      "seoTitle": "GrowthIQ | Intelligent B2B outreach | Mindorion",
+      "seoDescription": "GrowthIQ identifies your best B2B prospects, qualifies opportunities with AI and generates personalized outreach sequences to maximize reply rates.",
       "eyebrow": "🎯 GROWTH IQ · INTELLIGENT B2B OUTREACH",
       "title": "Find the right prospects. At the right time.",
-      "subtitle": "Growth IQ identifies your best B2B prospects, qualifies opportunities with AI and generates personalized outreach sequences to maximize reply rates.",
+      "subtitle": "GrowthIQ identifies your best B2B prospects, qualifies opportunities with AI and generates personalized outreach sequences to maximize reply rates.",
       "heroLabel": "PIPELINE · GROWTH IQ",
       "heroRows": [
-        { "initials": "DL", "title": "Sales Director · Pharma", "city": "Lyon", "score": "94%" },
-        { "initials": "VP", "title": "VP Procurement · Aerospace", "city": "Toulouse", "score": "88%" },
+        { "initials": "DL", "title": "Sales Director · Engineering", "city": "Lyon", "score": "94%" },
+        { "initials": "VP", "title": "VP Procurement · IT Services", "city": "Toulouse", "score": "88%" },
         { "initials": "DG", "title": "MD · Consulting firm", "city": "Paris", "score": "81%" }
       ],
       "howItWorks": [
         { "title": "Define", "text": "Describe your ideal target — industry, size, role, geography." },
         { "title": "Qualify", "text": "AI identifies and scores your best prospects. Strategy Hub analyzes opportunities." },
-        { "title": "Reach out", "text": "Launch personalized multi-channel sequences and let Growth IQ handle follow-ups." }
+        { "title": "Reach out", "text": "Launch personalized multi-channel sequences and let GrowthIQ handle follow-ups." }
       ],
       "featureColumns": [
         {
@@ -487,20 +487,20 @@
       ],
       "scenarioLabel": "USE CASES",
       "scenarios": [
-        { "tag": "CONSULTANT", "title": "Client portfolio growth", "text": "Growth IQ identifies decision-makers in the target sector and generates the approach sequences.", "result": "Pipeline filled" },
+        { "tag": "CONSULTANT", "title": "Client portfolio growth", "text": "GrowthIQ identifies decision-makers in the target sector and generates the approach sequences.", "result": "Pipeline filled" },
         { "tag": "B2B SALES", "title": "Key account qualification", "text": "Strategy Hub analyzes target accounts and recommends the best angles of approach.", "result": "Right prospects targeted" },
-        { "tag": "ESN", "title": "CIO & CTO outreach", "text": "Growth IQ builds sequences tailored to the long cycles of the tech industry.", "result": "Cycle shortened" }
+        { "tag": "ESN", "title": "CIO & CTO outreach", "text": "GrowthIQ builds sequences tailored to the long cycles of the tech industry.", "result": "Cycle shortened" }
       ],
       "ctaTitle": "Ready to find your next clients?",
       "ctaSubtitle": "Qualify your prospects and launch your sequences today.",
-      "primaryCta": "Try Growth IQ"
+      "primaryCta": "Try GrowthIQ"
     },
     "governanceiq": {
-      "seoTitle": "GovernanceIQ | Team document compliance | Mindorion",
-      "seoDescription": "GovernanceIQ centralizes your organization's document policies, automates audits and ensures every team operates by the same standards.",
+      "seoTitle": "Governance Layer | Team document compliance | Mindorion",
+      "seoDescription": "Governance Layer centralizes your organization's document policies, automates audits and ensures every team operates by the same standards.",
       "eyebrow": "📋 GOVERNANCEIQ · DOCUMENT COMPLIANCE",
       "title": "Document compliance, without the complexity.",
-      "subtitle": "GovernanceIQ centralizes your organization's document policies, automates audits and ensures every team operates by the same standards — without supervision overhead.",
+      "subtitle": "Governance Layer centralizes your organization's document policies, automates audits and ensures every team operates by the same standards — without supervision overhead.",
       "heroLabel": "DASHBOARD · GOVERNANCEIQ",
       "heroStats": [
         { "value": "97%", "label": "Team compliance" },
@@ -513,7 +513,7 @@
       ],
       "howItWorks": [
         { "title": "Define", "text": "Create your document policies — required standards, GDPR rules, compliance levels by document type." },
-        { "title": "Deploy", "text": "GovernanceIQ automatically applies your policies across all teams — no training, no manual oversight." },
+        { "title": "Deploy", "text": "Governance Layer automatically applies your policies across all teams — no training, no manual oversight." },
         { "title": "Steer", "text": "Track compliance in real time via the dashboard and generate audit reports on demand." }
       ],
       "featureColumns": [
@@ -538,18 +538,18 @@
       ],
       "scenarioLabel": "USE CASES",
       "scenarios": [
-        { "tag": "HR", "title": "GDPR compliance for candidate files", "text": "GovernanceIQ ensures every CV transmitted respects the company's GDPR policies.", "result": "Compliance guaranteed" },
+        { "tag": "Delivery", "title": "GDPR compliance for candidate files", "text": "Governance Layer ensures every CV transmitted respects the company's GDPR policies.", "result": "Compliance guaranteed" },
         { "tag": "ESN", "title": "Cross-team document standards", "text": "Project managers, consultants and developers follow the same document policies.", "result": "Teams aligned" },
         { "tag": "ENTERPRISE", "title": "Simplified internal audit", "text": "Audit reports generated automatically — no more manual evidence collection.", "result": "Audit in 1 click" }
       ],
       "ctaTitle": "Ready to guarantee your team's compliance?",
       "ctaSubtitle": "Centralize your document policies today.",
-      "primaryCta": "Try GovernanceIQ"
+      "primaryCta": "Try Governance Layer"
     }
   },
   "useCases": {
     "seoTitle": "Mindorion Solutions — Use cases by role",
-    "seoDescription": "Discover how Mindorion supports consultants, sales teams, HR and IT services across document and outreach workflows.",
+    "seoDescription": "Discover how Mindorion supports consultants, sales teams, delivery leaders and IT services across document and outreach workflows.",
     "title": "Solutions adapted to your role",
     "subtitle": "Every B2B team faces different friction points. Mindorion brings a simple framework to reduce visible and invisible mistakes.",
     "sections": [
@@ -575,7 +575,7 @@
       },
       {
         "id": "rh",
-        "title": "HR & Recruiting",
+        "title": "Delivery & Business Units",
         "text": "Clean sensitive files before distribution and harmonize document standards.",
         "problems": [
           "Personal data shared by mistake",
@@ -610,11 +610,11 @@
     "toc": "Table of contents",
     "back": "Back to blog",
     "page": {
-      "seoTitle": "Blog | B2B professional tips and guides | Mindorion",
-      "seoDescription": "Articles, guides and resources for B2B professionals — document reputation, intelligent prospecting and compliance.",
+      "seoTitle": "Blog | Engineering & IT Services tips and guides | Mindorion",
+      "seoDescription": "Articles, guides and resources for Engineering & IT Services firms — document reputation, intelligent prospecting and compliance.",
       "eyebrow": "MINDORION BLOG",
       "title": "Tips, guides and professional resources.",
-      "subtitle": "Everything B2B professionals need to know about document reputation, prospecting and compliance.",
+      "subtitle": "Everything Engineering & IT Services firms need to know about document reputation, prospecting and compliance.",
       "filterAll": "All",
       "filterGuides": "Guides",
       "read": "Read →",
@@ -642,14 +642,14 @@
       "cards": [
         { "title": "How to remove metadata from a Word document before sending", "excerpt": "Step-by-step guide to clean Word documents of all their hidden data.", "meta": "Apr 10 · 5 min" },
         { "title": "B2B prospecting: why 80% of your emails go unanswered", "excerpt": "The targeting and personalization mistakes that kill your reply rates.", "meta": "Apr 5 · 7 min" },
-        { "title": "GDPR and HR documents: what your team must check before every send", "excerpt": "GDPR obligations often ignored in everyday HR processes.", "meta": "Apr 1 · 6 min" },
+        { "title": "GDPR and delivery documents: what your team must check before every send", "excerpt": "GDPR obligations often ignored in everyday delivery processes.", "meta": "Apr 1 · 6 min" },
         { "title": "How to respond to an RFP without exposing your internal data", "excerpt": "Best practices to secure your RFPs before submission.", "meta": "Mar 25 · 9 min" },
         { "title": "Why AI tone in your documents hurts your professional credibility", "excerpt": "How to detect and fix overly generic wording before sending.", "meta": "Mar 20 · 5 min" },
         { "title": "The 7 buying signals to watch to prospect at the right time", "excerpt": "Hires, fundraising, new leadership — the signals that flag an opportunity.", "meta": "Mar 15 · 6 min" }
       ],
       "newsletter": {
         "title": "Get our best articles every week.",
-        "subtitle": "Tips, guides and resources for B2B professionals.",
+        "subtitle": "Tips, guides and resources for Engineering & IT Services firms.",
         "placeholder": "you@email.com",
         "submit": "Subscribe →",
         "success": "Your subscription request is ready to send.",
@@ -686,7 +686,7 @@
         }
       },
       "consultingQualityGate": {
-        "title": "Proposal IQ: a quality gate for consultants",
+        "title": "ProposalIQ: a quality gate for consultants",
         "excerpt": "For a consultancy or freelancer, a visible mistake in a document can cost more than a few minutes: it can weaken trust.",
         "sections": {
           "trust": {
@@ -704,7 +704,7 @@
         }
       },
       "whatGetsCleaned": {
-        "title": "What Proposal IQ cleans inside your files",
+        "title": "What ProposalIQ cleans inside your files",
         "excerpt": "Cleaning a document is not just about spelling. It is mainly about removing the invisible signals that expose your team.",
         "sections": {
           "signal": {
@@ -778,12 +778,12 @@
     }
   },
   "about": {
-    "seoTitle": "About | Mindorion — B2B Professional Intelligence",
-    "seoDescription": "Mindorion is a B2B SaaS company founded in Estonia. Discover our mission, team and build-in-public approach. Proposal IQ, Growth IQ, GovernanceIQ.",
+    "seoTitle": "About | Mindorion — Intelligence for Engineering & IT Services",
+    "seoDescription": "Mindorion is a B2B SaaS company founded in Estonia. Discover our mission, team and build-in-public approach. ProposalIQ, GrowthIQ, Governance Layer.",
     "eyebrow": "ABOUT MINDORION",
-    "heroTitle1": "Building the tools B2B professionals ",
+    "heroTitle1": "Building the tools Engineering & IT Services firms ",
     "heroTitle2": "actually deserve.",
-    "heroText": "Mindorion is a B2B software company founded in Estonia, building a suite of professional intelligence tools for teams operating at high stakes — consultants, sales, recruiters and engineers.",
+    "heroText": "Mindorion is a B2B software company founded in Estonia, building a suite of professional intelligence tools for teams operating at high stakes — consultants, sales, delivery leaders and engineers.",
     "tags": ["Mindorion OÜ · Estonia", "Founded in 2024", "B2B SaaS", "Build in public"],
     "stats": [
       { "value": "3", "label": "PRODUCTS IN DEVELOPMENT" },
@@ -791,7 +791,7 @@
       { "value": "0", "label": "DATA STORED · GDPR BY DESIGN" }
     ],
     "missionEyebrow": "OUR MISSION",
-    "missionTitle1": "Give B2B professionals the certainty ",
+    "missionTitle1": "Give Engineering & IT Services firms the certainty ",
     "missionTitle2": "of operating at the highest level.",
     "missionText": "Every document sent must be flawless. Every prospect must be the right one. Every process must be compliant. Mindorion makes that possible — without friction, without compromise.",
     "values": [
@@ -805,7 +805,7 @@
   },
   "contact": {
     "seoTitle": "Request a demo | Mindorion",
-    "seoDescription": "Book a meeting with a Mindorion expert. Personalized 30-minute demo — Proposal IQ, Growth IQ, GovernanceIQ. No commitment.",
+    "seoDescription": "Book a meeting with a Mindorion expert. Personalized 30-minute demo — ProposalIQ, GrowthIQ, Governance Layer. No commitment.",
     "eyebrow": "REQUEST A DEMO",
     "title": "Let's talk about your project.",
     "subtitle": "Our experts walk you through Mindorion in 30 minutes and answer all your questions — products, pricing, integrations.",
@@ -832,7 +832,7 @@
       "message": "Your message (optional)",
       "messagePlaceholder": "Describe your needs..."
     },
-    "productOptions": ["🛡 Proposal IQ", "🎯 Growth IQ", "📋 GovernanceIQ", "Full suite"],
+    "productOptions": ["🛡 ProposalIQ", "🎯 GrowthIQ", "📋 Governance Layer", "Full suite"],
     "teamSizes": ["1-5 people", "6-20 people", "21-100 people", "100+ people"],
     "productError": "Select at least one product.",
     "submit": "Send my request →",
@@ -951,7 +951,7 @@
           { "title": "Quality score + trend", "desc": "6-month chart, trends and detected drift." },
           { "title": "Personalized AI advice", "desc": "Recommendations based on your recurring risk patterns." },
           { "title": "6-month history", "desc": "All your documents with score, date and risk category." },
-          { "title": "PDF report export", "desc": "Personal GovernanceIQ report, downloadable." },
+          { "title": "PDF report export", "desc": "Personal Governance Layer report, downloadable." },
           { "title": "Solo view only", "desc": "No team view or role management." }
         ],
         "upgrade": "Upgrade to Business for team view and role management (up to 5 members)."
@@ -988,15 +988,15 @@
   },
   "usecasesPage": {
     "eyebrow": "USE CASES",
-    "title": "How B2B professionals use Mindorion",
-    "subtitle": "Whether you're a consultant, salesperson, recruiter or engineer — Mindorion catches what you don't see, finds your next clients and ensures your compliance.",
+    "title": "How Engineering & IT Services firms use Mindorion",
+    "subtitle": "Whether you're a consultant, salesperson, delivery lead or engineer — Mindorion catches what you don't see, finds your next clients and ensures your compliance.",
     "ctaTitle": "Ready to operate at the highest level?",
-    "ctaText": "Start with Proposal IQ. Add Growth IQ. Govern with GovernanceIQ.",
+    "ctaText": "Start with ProposalIQ. Add GrowthIQ. Govern with Governance Layer.",
     "ctaButton": "View pricing",
     "tabs": {
       "consultants": "Consultants & Freelancers",
       "sales": "Sales & Pre-sales Teams",
-      "rh": "HR & Recruiting",
+      "rh": "Delivery & Business Units",
       "esn": "IT Services & Engineering"
     },
     "personas": {
@@ -1005,8 +1005,8 @@
         "title": "Your professional reputation is on the line with every document you send.",
         "text": "As a consultant, you don't have a quality team behind you. A proposal with internal metadata, a forgotten comment or an unreplaced placeholder — and your credibility takes a hit. Mindorion has your back at every step.",
         "tools": [
-          { "name": "Proposal IQ", "text": "Checks every proposal before client delivery" },
-          { "name": "Growth IQ", "text": "Identifies your next clients in your industry" }
+          { "name": "ProposalIQ", "text": "Checks every proposal before client delivery" },
+          { "name": "GrowthIQ", "text": "Identifies your next clients in your industry" }
         ],
         "mocks": [
           {
@@ -1026,21 +1026,21 @@
         ],
         "scenarios": [
           {
-            "tool": "Proposal IQ",
+            "tool": "ProposalIQ",
             "title": "Commercial proposal before sending",
-            "text": "Proposal IQ analyzes your proposal in 30 seconds. Metadata, comments, sensitive data, AI tone — everything is detected before your client opens the file.",
+            "text": "ProposalIQ analyzes your proposal in 30 seconds. Metadata, comments, sensitive data, AI tone — everything is detected before your client opens the file.",
             "result": "Reputation protected · Credibility intact"
           },
           {
-            "tool": "Proposal IQ",
+            "tool": "ProposalIQ",
             "title": "Deliverables and project reports",
             "text": "Every deliverable sent at the end of an engagement is checked. No more risk of leaving internal comments or revision history visible to the final client.",
             "result": "Professional deliverables · Reassured client"
           },
           {
-            "tool": "Growth IQ",
+            "tool": "GrowthIQ",
             "title": "Building your client network",
-            "text": "Growth IQ identifies decision-makers in your target industry, qualifies opportunities and generates personalized outreach sequences to grow your portfolio.",
+            "text": "GrowthIQ identifies decision-makers in your target industry, qualifies opportunities and generates personalized outreach sequences to grow your portfolio.",
             "result": "Pipeline fueled · Less manual prospecting"
           }
         ]
@@ -1050,43 +1050,43 @@
         "title": "Every offer sent must be perfect. Every prospect must be the right one.",
         "text": "In pre-sales, an offer with cost price visible in track changes can cost you a deal. A poorly qualified prospect costs you weeks. Mindorion eliminates both risks.",
         "tools": [
-          { "name": "Proposal IQ", "text": "Checks RFPs, offers and proposals before submission" },
-          { "name": "Growth IQ", "text": "Qualifies and contacts the right decision-makers" }
+          { "name": "ProposalIQ", "text": "Checks RFPs, offers and proposals before submission" },
+          { "name": "GrowthIQ", "text": "Qualifies and contacts the right decision-makers" }
         ],
         "pipelineLabel": "Qualified prospects",
         "leads": [
-          { "initials": "DL", "role": "Sales Director · Pharma", "city": "Lyon", "score": "94%" },
-          { "initials": "VP", "role": "VP Procurement · Aerospace", "city": "Toulouse", "score": "88%" },
+          { "initials": "DL", "role": "Sales Director · Engineering", "city": "Lyon", "score": "94%" },
+          { "initials": "VP", "role": "VP Procurement · IT Services", "city": "Toulouse", "score": "88%" },
           { "initials": "DG", "role": "CEO · Consulting firm", "city": "Paris", "score": "81%" }
         ],
         "scenarios": [
           {
-            "tool": "Proposal IQ",
+            "tool": "ProposalIQ",
             "title": "RFP/RFQ response",
-            "text": "Before submitting an RFP response, Proposal IQ verifies that your margin isn't visible in track changes and that no internal comments are left in the document.",
+            "text": "Before submitting an RFP response, ProposalIQ verifies that your margin isn't visible in track changes and that no internal comments are left in the document.",
             "result": "Margin protected · Professional offer"
           },
           {
-            "tool": "Growth IQ",
+            "tool": "GrowthIQ",
             "title": "Identifying key decision-makers",
-            "text": "Growth IQ identifies the right contacts in your target accounts — CFO, CIO, CEO, Procurement Directors — and generates approach sequences tailored to each profile.",
+            "text": "GrowthIQ identifies the right contacts in your target accounts — CFO, CIO, CEO, Procurement Directors — and generates approach sequences tailored to each profile.",
             "result": "Right contact · Right time · Right message"
           },
           {
-            "tool": "Growth IQ",
+            "tool": "GrowthIQ",
             "title": "Automated multi-channel outreach",
-            "text": "Create personalized outreach sequences — email, LinkedIn, calls — and let Growth IQ handle follow-ups automatically to maximize your response rates.",
+            "text": "Create personalized outreach sequences — email, LinkedIn, calls — and let GrowthIQ handle follow-ups automatically to maximize your response rates.",
             "result": "Higher response rates · Less manual follow-up"
           }
         ]
       },
       "rh": {
-        "badge": "👥 HR & RECRUITING",
+        "badge": "👥 DELIVERY & BU",
         "title": "Every file you send engages your professional responsibility.",
-        "text": "In recruiting, sending a CV with a previous candidate's disqualification notes, or a contract with personal data not removed, can have legal consequences. Proposal IQ and GovernanceIQ protect you.",
+        "text": "In delivery, sending a CV with a previous candidate's disqualification notes, or a contract with personal data not removed, can have legal consequences. ProposalIQ and Governance Layer protect you.",
         "tools": [
-          { "name": "Proposal IQ", "text": "Checks CVs, contracts and NDAs before sending" },
-          { "name": "GovernanceIQ", "text": "GDPR compliance for candidate files" }
+          { "name": "ProposalIQ", "text": "Checks CVs, contracts and NDAs before sending" },
+          { "name": "Governance Layer", "text": "GDPR compliance for candidate files" }
         ],
         "mocks": [
           {
@@ -1106,21 +1106,21 @@
         ],
         "scenarios": [
           {
-            "tool": "Proposal IQ",
+            "tool": "ProposalIQ",
             "title": "CVs and candidate files",
-            "text": "Proposal IQ detects residual personal data, processing comments and internal notes before a CV or candidate file is shared with a client or manager.",
+            "text": "ProposalIQ detects residual personal data, processing comments and internal notes before a CV or candidate file is shared with a client or manager.",
             "result": "GDPR compliant · Candidate protected"
           },
           {
-            "tool": "Proposal IQ",
+            "tool": "ProposalIQ",
             "title": "Contracts and NDAs",
-            "text": "Before signing, Proposal IQ verifies that employment contracts and NDAs don't contain residual data from a previous contract — an often underestimated legal risk.",
+            "text": "Before signing, ProposalIQ verifies that employment contracts and NDAs don't contain residual data from a previous contract — an often underestimated legal risk.",
             "result": "Legal risk eliminated · Clean contract"
           },
           {
-            "tool": "GovernanceIQ",
+            "tool": "Governance Layer",
             "title": "GDPR compliance at team scale",
-            "text": "GovernanceIQ ensures that the entire HR team applies the same document policies — data retention, anonymization, audit trail — without supervision effort.",
+            "text": "Governance Layer ensures that the entire delivery team applies the same document policies — data retention, anonymization, audit trail — without supervision effort.",
             "result": "Compliant team · Simplified audit"
           }
         ]
@@ -1130,9 +1130,9 @@
         "title": "High-stakes technical documents. Zero margin for error.",
         "text": "In IT services, every SOW, specification or technical document commits your company. A document distributed to 12 clients with internal history still active can cost you a contract. Mindorion covers the entire chain.",
         "tools": [
-          { "name": "Proposal IQ", "text": "SOWs, technical specs, project files" },
-          { "name": "Growth IQ", "text": "Enterprise account development" },
-          { "name": "GovernanceIQ", "text": "Cross-team document compliance" }
+          { "name": "ProposalIQ", "text": "SOWs, technical specs, project files" },
+          { "name": "GrowthIQ", "text": "Enterprise account development" },
+          { "name": "Governance Layer", "text": "Cross-team document compliance" }
         ],
         "mocks": [
           {
@@ -1152,21 +1152,21 @@
         ],
         "scenarios": [
           {
-            "tool": "Proposal IQ",
+            "tool": "ProposalIQ",
             "title": "Distributing technical documents",
-            "text": "Before distributing a SOW or specs to multiple clients, Proposal IQ removes internal history, comments and confidential pricing data in one pass.",
+            "text": "Before distributing a SOW or specs to multiple clients, ProposalIQ removes internal history, comments and confidential pricing data in one pass.",
             "result": "Data leak avoided · Clean document"
           },
           {
-            "tool": "Growth IQ",
+            "tool": "GrowthIQ",
             "title": "Enterprise account development",
-            "text": "Growth IQ identifies CIOs, CTOs and technical directors in your target sectors (industry, defense, pharma) and builds approach sequences tailored to long cycles.",
+            "text": "GrowthIQ identifies CIOs, CTOs and technical directors in your target sectors (industry, defense, pharma) and builds approach sequences tailored to long cycles.",
             "result": "Enterprise accounts targeted · Shortened cycle"
           },
           {
-            "tool": "GovernanceIQ",
+            "tool": "Governance Layer",
             "title": "Cross-team document compliance",
-            "text": "GovernanceIQ centralizes document policies for all your project teams — project managers, consultants, developers — and ensures uniform standards.",
+            "text": "Governance Layer centralizes document policies for all your project teams — project managers, consultants, developers — and ensures uniform standards.",
             "result": "Aligned teams · Simplified audits"
           }
         ]
