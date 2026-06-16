@@ -14,8 +14,8 @@ import { trackEvent } from "@/lib/analytics";
 export const Route = createFileRoute("/")({
   head: () => ({
     ...createStaticMeta({
-      title: "Mindorion — Align strategy, execution and governance",
-      description: "Mindorion unifies fragmented commercial, proposal and operational data so engineering services firms can scale with governance and make decisions based on real execution.",
+      title: "Mindorion | Enterprise OS for Engineering & IT Services",
+      description: "Mindorion is the enterprise operating system for engineering and IT services firms — unify proposals, commercial execution and governance to align strategy with operations.",
       path: "/",
     }),
     scripts: [
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
           name: "Mindorion",
           url: "https://mindorion.com",
           email: "contact@mindorion.com",
-          description: "Professional intelligence for B2B teams.",
+          description: "Enterprise intelligence for engineering and consulting organizations.",
         }),
       },
     ],
@@ -42,7 +42,8 @@ function HomePage() {
   const useCases = t("home.useCases", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const whyItems = t("home.whyItems", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const testimonials = t("home.testimonials", { returnObjects: true }) as Array<{ role: string; quote: string }>;
-  const personas = t("home.personas", { returnObjects: true }) as string[];
+  const industries = t("home.industries", { returnObjects: true }) as string[];
+  const leaders = t("home.leaders", { returnObjects: true }) as string[];
   const useCaseIcons = [BriefcaseBusiness, Users, Sparkles, FileText] as const;
 
   return (
@@ -156,15 +157,43 @@ function HomePage() {
             </Card>
           </FadeSection>
 
-          <FadeSection className="mt-8 flex flex-wrap items-center justify-center gap-2" delay={0.15}>
-            {personas.map((persona) => (
-              <span key={persona} className="brand-badge rounded-full px-3 py-1 text-sm font-medium text-primary">
-                {persona}
-              </span>
-            ))}
+          <FadeSection className="mt-12 grid gap-8 md:grid-cols-2" delay={0.15}>
+            <div className="text-center md:text-left">
+              <div className="eyebrow mb-3">{t("home.industriesTitle")}</div>
+              <div className="flex flex-wrap items-center justify-center gap-2 md:justify-start">
+                {industries.map((item) => (
+                  <span key={item} className="brand-badge rounded-full px-3 py-1 text-sm font-medium text-primary">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="eyebrow mb-3">{t("home.leadersTitle")}</div>
+              <div className="flex flex-wrap items-center justify-center gap-2 md:justify-start">
+                {leaders.map((item) => (
+                  <span key={item} className="brand-badge rounded-full px-3 py-1 text-sm font-medium text-primary">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           </FadeSection>
         </section>
       </div>
+
+      <section className="section-shell pb-8">
+        <FadeSection className="grid gap-4 md:grid-cols-3">
+          {stats.map((stat) => (
+            <Card key={stat.label} className="bg-card/78">
+              <CardContent className="p-6">
+                <div className="brand-gradient-text text-2xl font-extrabold">{stat.value}</div>
+                <div className="mt-2 text-sm text-muted-foreground">{stat.label}</div>
+              </CardContent>
+            </Card>
+          ))}
+        </FadeSection>
+      </section>
 
       <section className="section-shell pb-8">
         <FadeSection className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
