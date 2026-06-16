@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     ...createStaticMeta({
       title: "Mindorion | Enterprise OS for Engineering & IT Services",
-      description: "Mindorion is the enterprise operating system for engineering and IT services firms — unify proposals, commercial execution and governance to align strategy with operations.",
+      description: "Mindorion helps engineering and IT services firms align strategy, commercial execution and governance through unified operational data and enterprise AI.",
       path: "/",
     }),
     scripts: [
