@@ -74,6 +74,13 @@ type PricingCopy = {
   includedInSuite: string;
   comparisonFeature: string;
   productSelectorHelper: string;
+  maturityPath: string;
+  roiHeadline: string;
+  faqTitle: string;
+  faq: Array<{ question: string; answer: string }>;
+  finalCtaTitle: string;
+  finalCtaPrimary: string;
+  finalCtaSecondary: string;
   products: LocalizedProduct[];
 };
 
