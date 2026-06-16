@@ -7,7 +7,6 @@ import { ProductLogo } from "@/components/ProductLogo";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { SIGNUP_URL } from "@/lib/site";
 import { createStaticMeta } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
 
