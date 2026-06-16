@@ -130,7 +130,7 @@ function WhyMindorionPage() {
           {/* Top — narrowest */}
           <div className="w-[68%] rounded-xl bg-[#1e3a5f] px-5 py-5 text-center text-white sm:px-6 sm:py-6">
             <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-80">Result</div>
-            <div className="mt-1 text-sm font-semibold sm:text-base">Efficient AI adoption — more accurate, cost-efficient and compliant, as a result</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">Efficient AI adoption — more accurate, cost-efficient and governed, as a result</div>
           </div>
         </div>
       </section>
@@ -174,14 +174,14 @@ function WhyMindorionPage() {
             </div>
             <h3 className="mt-5 text-xl font-bold text-foreground">Compliance by design</h3>
             <p className="mt-4 text-sm leading-7 text-muted-foreground">
-              Operational data stays structured, governed and auditable, so AI runs inside a controlled, compliant environment instead of an uncontrolled one.
+              Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one.
             </p>
           </article>
         </div>
 
         <div className="mx-auto mt-10 max-w-3xl text-center">
           <p className="text-sm font-semibold leading-7 text-foreground sm:text-base">
-            AI is not the foundation. Structured data, workflows and governance are — and that's what makes AI scalable, affordable and compliant.
+            AI is not the foundation. Structured data, workflows and governance are — and that's what makes AI scalable, affordable and auditable.
           </p>
         </div>
       </section>

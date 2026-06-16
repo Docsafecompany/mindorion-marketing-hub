@@ -370,10 +370,10 @@
   "products": {
     "proposaliq": {
       "seoTitle": "ProposalIQ | Pre-Sales Operating System for Engineering & IT Services | Mindorion",
-      "seoDescription": "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms create compliant, high-quality proposals faster.",
+      "seoDescription": "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms produce higher-quality, governed proposals faster.",
       "eyebrow": "ProposalIQ — Pre-Sales Intelligence",
       "title": "The Pre-Sales Operating System for Engineering & IT Services.",
-      "subtitle": "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms create compliant, high-quality proposals faster.",
+      "subtitle": "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms produce higher-quality, governed proposals faster.",
       "heroLabel": "PROPOSAL STATUS · PROPOSAL IQ",
       "heroItems": [
         "Unmapped requirements detected",
@@ -631,9 +631,9 @@
       "scenarios": [
         {
           "tag": "Delivery",
-          "title": "GDPR compliance for candidate files",
-          "text": "Governance Layer ensures every CV transmitted respects the company's GDPR policies.",
-          "result": "Compliance guaranteed"
+          "title": "GDPR governance for candidate files",
+          "text": "Governance Layer helps every CV transmitted align with the company's GDPR policies.",
+          "result": "Governed & auditable"
         },
         {
           "tag": "ESN",
@@ -648,7 +648,7 @@
           "result": "Audit in 1 click"
         }
       ],
-      "ctaTitle": "Ready to guarantee your team's compliance?",
+      "ctaTitle": "Ready to bring governance to your team's documents?",
       "ctaSubtitle": "Centralize your document policies today.",
       "primaryCta": "Try Governance Layer"
     }
@@ -937,7 +937,7 @@
     "missionEyebrow": "OUR MISSION",
     "missionTitle1": "Give Engineering & IT Services firms the certainty ",
     "missionTitle2": "of operating at the highest level.",
-    "missionText": "Every document sent must be flawless. Every prospect must be the right one. Every process must be compliant. Mindorion makes that possible — without friction, without compromise.",
+    "missionText": "Every document sent must be flawless. Every prospect must be the right one. Every process must be governed and auditable. Mindorion makes that possible — without friction, without compromise.",
     "values": [
       {
         "icon": "🎯",
@@ -1227,7 +1227,7 @@
   "usecasesPage": {
     "eyebrow": "USE CASES",
     "title": "How Engineering & IT Services firms use Mindorion",
-    "subtitle": "Whether you're a consultant, salesperson, delivery lead or engineer — Mindorion catches what you don't see, finds your next clients and ensures your compliance.",
+    "subtitle": "Whether you're a consultant, salesperson, delivery lead or engineer — Mindorion catches what you don't see, finds your next clients and strengthens your operational governance.",
     "ctaTitle": "Ready to operate at the highest level?",
     "ctaText": "Start with ProposalIQ. Add GrowthIQ. Govern with Governance Layer.",
     "ctaButton": "View pricing",
@@ -1373,7 +1373,7 @@
           },
           {
             "title": "CV_Candidate_Martin_final.docx",
-            "badge": "GDPR Compliant",
+            "badge": "Privacy by design",
             "items": [
               "Document cleaned · Data verified"
             ]
@@ -1384,7 +1384,7 @@
             "tool": "ProposalIQ",
             "title": "CVs and candidate files",
             "text": "ProposalIQ detects residual personal data, processing comments and internal notes before a CV or candidate file is shared with a client or manager.",
-            "result": "GDPR compliant · Candidate protected"
+            "result": "Privacy by design · Candidate protected"
           },
           {
             "tool": "ProposalIQ",
@@ -1396,7 +1396,7 @@
             "tool": "Governance Layer",
             "title": "GDPR compliance at team scale",
             "text": "Governance Layer ensures that the entire delivery team applies the same document policies — data retention, anonymization, audit trail — without supervision effort.",
-            "result": "Compliant team · Simplified audit"
+            "result": "Aligned team · Simplified audit"
           }
         ]
       },

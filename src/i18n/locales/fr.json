@@ -370,10 +370,10 @@
   "products": {
     "proposaliq": {
       "seoTitle": "ProposalIQ | Système d'exploitation pré-vente pour l'ingénierie et les services IT | Mindorion",
-      "seoDescription": "De la réception de la RFQ à la soumission finale, ProposalIQ aide les cabinets d'ingénierie et de services IT à créer des propositions conformes et de haute qualité plus rapidement.",
+      "seoDescription": "De la réception de la RFQ à la soumission finale, ProposalIQ aide les cabinets d'ingénierie et de services IT à produire des propositions mieux gouvernées et de meilleure qualité, plus rapidement.",
       "eyebrow": "ProposalIQ — Intelligence Pré-Vente",
       "title": "Le système d'exploitation pré-vente pour l'ingénierie et les services IT.",
-      "subtitle": "De la réception de la RFQ à la soumission finale, ProposalIQ aide les cabinets d'ingénierie et de services IT à créer des propositions conformes et de haute qualité plus rapidement.",
+      "subtitle": "De la réception de la RFQ à la soumission finale, ProposalIQ aide les cabinets d'ingénierie et de services IT à produire des propositions mieux gouvernées et de meilleure qualité, plus rapidement.",
       "heroLabel": "STATUT PROPOSITION · PROPOSAL IQ",
       "heroItems": [
         "Exigences non mappées détectées",
@@ -631,9 +631,9 @@
       "scenarios": [
         {
           "tag": "Delivery",
-          "title": "Conformité RGPD des dossiers candidats",
-          "text": "Governance Layer garantit que tous les CVs transmis respectent les politiques RGPD de l'entreprise.",
-          "result": "Conformité garantie"
+          "title": "Gouvernance RGPD des dossiers candidats",
+          "text": "Governance Layer aide à ce que chaque CV transmis respecte les politiques RGPD de l'entreprise.",
+          "result": "Gouverné & auditable"
         },
         {
           "tag": "ESN",
@@ -648,7 +648,7 @@
           "result": "Audit en 1 clic"
         }
       ],
-      "ctaTitle": "Prêt à garantir la conformité de votre équipe ?",
+      "ctaTitle": "Prêt à structurer la gouvernance documentaire de votre équipe ?",
       "ctaSubtitle": "Centralisez vos politiques documentaires dès aujourd'hui.",
       "primaryCta": "Essayer Governance Layer"
     }
@@ -937,7 +937,7 @@
     "missionEyebrow": "NOTRE MISSION",
     "missionTitle1": "Donner aux professionnels B2B la certitude ",
     "missionTitle2": "d'opérer au plus haut niveau.",
-    "missionText": "Chaque document envoyé doit être impeccable. Chaque prospect doit être le bon. Chaque processus doit être conforme. Mindorion rend ça possible — sans friction, sans compromis.",
+    "missionText": "Chaque document envoyé doit être impeccable. Chaque prospect doit être le bon. Chaque processus doit être gouverné et auditable. Mindorion rend ça possible — sans friction, sans compromis.",
     "values": [
       {
         "icon": "🎯",
@@ -1227,7 +1227,7 @@
   "usecasesPage": {
     "eyebrow": "CAS D'USAGE",
     "title": "Comment les professionnels B2B utilisent Mindorion",
-    "subtitle": "Que vous soyez consultant, commercial, responsable delivery ou ingénieur — Mindorion détecte ce que vous ne voyez pas, trouve vos prochains clients et garantit votre conformité.",
+    "subtitle": "Que vous soyez consultant, commercial, responsable delivery ou ingénieur — Mindorion détecte ce que vous ne voyez pas, trouve vos prochains clients et renforce votre gouvernance opérationnelle.",
     "ctaTitle": "Prêt à opérer au plus haut niveau ?",
     "ctaText": "Commencez avec ProposalIQ. Ajoutez GrowthIQ. Gouvernez avec Governance Layer.",
     "ctaButton": "Voir les tarifs",
@@ -1373,7 +1373,7 @@
           },
           {
             "title": "CV_Candidat_Martin_final.docx",
-            "badge": "Conforme RGPD",
+            "badge": "RGPD by design",
             "items": [
               "Document nettoyé · Données vérifiées"
             ]
@@ -1384,7 +1384,7 @@
             "tool": "ProposalIQ",
             "title": "CVs et dossiers candidats",
             "text": "ProposalIQ détecte les données personnelles résiduelles, les commentaires de traitement et les notes internes avant qu'un CV ou un dossier candidat ne soit transmis à un client ou un manager.",
-            "result": "Conformité RGPD · Candidat protégé"
+            "result": "RGPD by design · Candidat protégé"
           },
           {
             "tool": "ProposalIQ",
@@ -1396,7 +1396,7 @@
             "tool": "Governance Layer",
             "title": "Conformité RGPD à l'échelle équipe",
             "text": "Governance Layer garantit que toute l'équipe delivery applique les mêmes politiques documentaires — rétention des données, anonymisation, audit trail — sans effort de supervision.",
-            "result": "Équipe conforme · Audit simplifié"
+            "result": "Équipe alignée · Audit simplifié"
           }
         ]
       },
