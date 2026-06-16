@@ -21,7 +21,47 @@ export const Route = createFileRoute("/why-mindorion")({
 
 function WhyMindorionPage() {
   const { t } = useTranslation();
-  const values = t("about.values", { returnObjects: true }) as Array<{ icon: string; title: string; text: string }>;
+
+  const founders = [
+    {
+      photo: romainImg,
+      photoClassName: "object-top",
+      name: "Camille-Aurélien Baltaze",
+      roleKey: "founders.camille.role",
+      locationKey: "founders.camille.location",
+      linkedinUrl: "https://www.linkedin.com/in/camille-aur%C3%A9lien-baltaze",
+      quoteKey: "founders.camille.quote",
+      educationKey: "founders.camille.education" as string | undefined,
+    },
+    {
+      photo: camilleImg,
+      photoClassName: "scale-125 object-center",
+      name: "Romain Ortis",
+      roleKey: "founders.romain.role",
+      locationKey: "founders.romain.location",
+      linkedinUrl: "https://www.linkedin.com/in/romain-ortis-a97423113",
+      quoteKey: "founders.romain.quote",
+      educationKey: undefined as string | undefined,
+    },
+  ];
+
+  const principles = [
+    {
+      icon: Target,
+      title: "Outcomes first",
+      body: "Every workflow must improve proposal quality, commercial execution or governance.",
+    },
+    {
+      icon: Lock,
+      title: "Private by design",
+      body: "Sensitive client and operational data stays controlled.",
+    },
+    {
+      icon: Zap,
+      title: "Radical simplicity",
+      body: "Complex workflows, simple execution.",
+    },
+  ];
 
   return (
     <div className="section-shell section-space space-y-8">
