@@ -259,10 +259,29 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
           </section>
         ) : null}
 
+        {data.capabilities && data.capabilities.length > 0 ? (
+          <section className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+            <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">
+              {data.capabilitiesLabel ?? "Capabilities"}
+            </div>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {data.capabilities.map((cap) => (
+                <article key={cap.title} className="rounded-xl border border-[var(--color-product-card-border)] bg-[var(--product-accent-soft)]/30 p-4 sm:p-5">
+                  {cap.icon ? (
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--product-accent-soft)] text-lg">{cap.icon}</div>
+                  ) : null}
+                  <h3 className="mt-3 text-base font-bold text-foreground sm:text-lg">{cap.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{cap.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         {data.scenarios && data.scenarios.length > 0 ? (
           <section>
             <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">{data.scenarioLabel}</div>
-            <div className="mt-6 grid gap-6 lg:grid-cols-3">
+            <div className={cn("mt-6 grid gap-6 sm:grid-cols-2", data.scenarios.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3")}>
               {data.scenarios.map((scenario) => (
                 <article key={scenario.title} className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6">
                   <div className="inline-flex max-w-full rounded-full bg-[var(--product-accent-soft)] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--product-accent)] sm:text-xs sm:tracking-[0.12em]">
@@ -275,6 +294,26 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
                     <span>{scenario.result}</span>
                   </div>
                 </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        {data.loopSteps && data.loopSteps.length > 0 ? (
+          <section className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+            <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">
+              {data.loopLabel ?? "Connected loop"}
+            </div>
+            <div className="mt-6 flex flex-wrap items-center gap-2 sm:gap-3">
+              {data.loopSteps.map((step, index) => (
+                <div key={step + index} className="flex items-center gap-2 sm:gap-3">
+                  <span className="inline-flex items-center rounded-full bg-[var(--product-accent-soft)] px-3 py-1.5 text-xs font-semibold text-[var(--product-accent)] sm:px-4 sm:py-2 sm:text-sm">
+                    {step}
+                  </span>
+                  {index < data.loopSteps!.length - 1 ? (
+                    <span className="text-sm text-[var(--product-accent)] sm:text-base">→</span>
+                  ) : null}
+                </div>
               ))}
             </div>
           </section>
