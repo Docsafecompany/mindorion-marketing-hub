@@ -39,18 +39,11 @@ function HomePage() {
   const { t } = useTranslation();
   const stats = t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>;
   const heroTitleWords = t("home.heroTitleWords", { returnObjects: true }) as string[];
-  const heroProducts = t("home.heroProducts", { returnObjects: true }) as Array<{
-    icon: string;
-    title: string;
-    text: string;
-    cta: string;
-  }>;
   const useCases = t("home.useCases", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const whyItems = t("home.whyItems", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const testimonials = t("home.testimonials", { returnObjects: true }) as Array<{ role: string; quote: string }>;
   const personas = t("home.personas", { returnObjects: true }) as string[];
   const useCaseIcons = [BriefcaseBusiness, Users, Sparkles, FileText] as const;
-  const heroProductLogos = ["proposaliq", "growthiq", "governanceiq"] as const;
 
   return (
     <>
