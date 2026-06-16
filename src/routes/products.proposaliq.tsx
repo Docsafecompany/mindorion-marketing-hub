@@ -20,7 +20,7 @@ const heroItemTones = ["danger", "danger", "warning", "success"] as const;
 export const Route = createFileRoute("/products/proposaliq")({
   head: () => {
     const base = createStaticMeta({
-      title: "ProposalIQ | Pre-Sales Operating System for Engineering & IT Services | Mindorion",
+      title: "Mindorion ProposalIQ | Pre-Sales & Proposal Intelligence for Engineering Firms",
       description:
         "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms create compliant, high-quality proposals faster.",
       path: "/products/proposaliq",
