@@ -40,6 +40,9 @@ type LocalizedPlan = {
   label: string;
   name: string;
   description: string;
+  outcome: string;
+  upgradeWhen?: string;
+  includes?: string;
   monthlyPrice?: string;
   annualPrice?: string;
   annualNote?: string;
