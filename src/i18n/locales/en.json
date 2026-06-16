@@ -136,8 +136,8 @@
     "goHome": "Go home"
   },
   "home": {
-    "seoTitle": "Mindorion — Align strategy, execution and governance",
-    "seoDescription": "Mindorion unifies fragmented commercial, proposal and operational data so engineering services firms can scale with governance and make decisions based on real execution.",
+    "seoTitle": "Mindorion | Enterprise OS for Engineering & IT Services",
+    "seoDescription": "Mindorion is the enterprise operating system for engineering and IT services firms — unify proposals, commercial execution and governance to align strategy with operations.",
     "badge": "Built for engineering and consulting firms",
     "heroTitleWords": [
       "Align strategy, execution and governance across your engineering organization."
@@ -146,12 +146,20 @@
     "subtitle": "Mindorion unifies fragmented commercial, proposal and operational data so engineering services firms can scale with governance and make decisions based on real execution.",
     "primaryCta": "Request a demo",
     "secondaryCta": "See the platform",
-    "personas": [
-      "Consultants",
-      "Sales teams",
-      "Delivery leaders",
-      "IT services & engineering",
-      "Engineering & IT Services"
+    "industriesTitle": "Industries we serve",
+    "industries": [
+      "Engineering services",
+      "IT services & ESN",
+      "Management consulting",
+      "Technology consulting"
+    ],
+    "leadersTitle": "Leaders we empower",
+    "leaders": [
+      "CEO",
+      "COO",
+      "VP Sales",
+      "Business Unit Directors",
+      "Delivery Leaders"
     ],
     "productsSectionTitle": "Applications inside Mindorion OS",
     "heroProducts": [
@@ -173,114 +181,57 @@
       "cta": "Learn about governance"
     },
     "stats": [
-      {
-        "value": "14",
-        "label": "detected categories"
-      },
-      {
-        "value": "30s",
-        "label": "results in 30 seconds"
-      },
-      {
-        "value": "100%",
-        "label": "GDPR compliant"
-      },
-      {
-        "value": "0",
-        "label": "stored data"
-      }
-    ],
-    "productsIntro": "Flagship products",
-    "productsTitle": "Three building blocks for stronger B2B operations",
-    "productsSubtitle": "From document quality to team governance, Mindorion structures the workflows that shape your brand.",
-    "productCards": [
-      {
-        "title": "ProposalIQ",
-        "text": "Check the real quality of a document before every external send."
-      },
-      {
-        "title": "GrowthIQ",
-        "text": "Run smarter B2B outreach powered by signal and context."
-      },
-      {
-        "title": "Governance Layer",
-        "text": "Measure team document compliance and trigger the right alerts."
-      }
-    ],
-    "proposaliqDocTitle": "ProposalIQ Doc",
-    "proposaliqDocItems": [
-      "Hidden metadata",
-      "Comments & annotations",
-      "Personal data",
-      "Spelling & consistency",
-      "Client-ready export"
-    ],
-    "proposaliqProposalTitle": "ProposalIQ Proposal",
-    "proposaliqProposalItems": [
-      "Business risks",
-      "Margin risks",
-      "Shared dashboards",
-      "Pre-sales compliance",
-      "Team standardization"
+      { "value": "Faster", "label": "Faster proposal cycles" },
+      { "value": "Aligned", "label": "Strategy execution visibility" },
+      { "value": "Unified", "label": "Unified operational intelligence" }
     ],
     "useCasesIntro": "Use cases",
-    "useCasesTitle": "Built for teams sending critical documents",
+    "useCasesTitle": "Built for firms managing complex commercial and operational execution.",
     "useCases": [
       {
-        "title": "Consultant",
-        "text": "Before a proposal or deliverable goes out, remove the signals that weaken credibility."
+        "title": "Executive Leadership",
+        "text": "Get a unified view of strategy, commercial pipeline and operational execution to steer the firm with confidence."
       },
       {
-        "title": "Sales lead",
-        "text": "Secure offers, responses and attachments before every external share."
+        "title": "Sales Leadership",
+        "text": "Align commercial activity with strategy, track effort across teams and turn pipeline into predictable revenue."
       },
       {
-        "title": "Delivery",
-        "text": "Clean CVs, contracts and candidate files before distribution while reducing GDPR risk."
+        "title": "Business Unit Managers",
+        "text": "Run your perimeter end-to-end — from proposals to delivery — with the operational intelligence to hit targets."
       },
       {
-        "title": "Engineer",
-        "text": "Standardize technical documents, SOWs and project files before client review."
+        "title": "Delivery Leadership",
+        "text": "Connect engagements, capacity and margin in one place so delivery decisions reflect real execution data."
       }
     ],
     "whyIntro": "Why Mindorion",
-    "whyTitle": "Designed for demanding B2B teams",
+    "whyTitle": "Built for engineering and consulting leaders",
     "whyItems": [
-      {
-        "title": "Speed",
-        "text": "A ready-to-use control in under 30 seconds without a complex pipeline."
-      },
-      {
-        "title": "Security",
-        "text": "Processing is designed to minimize exposure and avoid unnecessary data retention."
-      },
-      {
-        "title": "Integration",
-        "text": "Fits naturally into existing document, sales and ops routines."
-      },
-      {
-        "title": "Compliance",
-        "text": "Helps teams reinforce GDPR and quality habits before every send."
-      }
+      { "title": "Unified Data", "text": "Bring commercial, proposal and operational data into a single source of truth across the firm." },
+      { "title": "Strategy Execution", "text": "Translate strategy into day-to-day execution and measure progress where the work actually happens." },
+      { "title": "Governance by Design", "text": "Every workflow produces structured, auditable data — governance is built in, not bolted on." },
+      { "title": "Decision Intelligence", "text": "Turn fragmented signals into clear decisions for leadership, BU managers and delivery teams." },
+      { "title": "Enterprise AI", "text": "Secure, enterprise-grade AI applied to your real operating context — not generic copilots." }
     ],
     "proofIntro": "Social proof",
-    "proofTitle": "Impact teams see from the first sends",
+    "proofTitle": "Trusted by engineering and consulting leaders",
     "testimonials": [
       {
-        "role": "Consultant",
-        "quote": "ProposalIQ removes the final doubts before we send a proposal. Client trust shifts immediately."
+        "role": "COO · Engineering services",
+        "quote": "Mindorion gave us one view of proposals, execution and governance. Decisions are faster and grounded in real data."
       },
       {
-        "role": "Sales Manager",
-        "quote": "We standardized offer quality control without slowing down the commercial cycle."
+        "role": "VP Sales · IT services",
+        "quote": "Commercial execution is finally aligned with strategy across BUs — and we can see where to act."
       },
       {
-        "role": "Delivery Director",
-        "quote": "The value is double: lower document risk and a stronger perception of candidate files."
+        "role": "BU Director · Consulting",
+        "quote": "Managing my perimeter end-to-end inside one operating system changed how we hit targets."
       }
     ],
-    "finalTitle": "Ready to protect your reputation?",
-    "finalText": "Centralize document quality, outreach and governance in one B2B platform.",
+    "finalTitle": "Ready to align strategy with execution?",
+    "finalText": "Request a demo and see how Mindorion connects proposals, commercial execution and governance into one operating system.",
     "ctaSecondary": "Request a demo"
   },
   "pricing": {
