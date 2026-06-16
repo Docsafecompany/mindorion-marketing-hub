@@ -1501,9 +1501,9 @@
       "body": "ProposalIQ structure l'avant-vente et l'exécution des propositions. GrowthIQ aligne la stratégie commerciale sur l'activité opérationnelle. Les futurs modules étendront la même fondation au delivery, aux talents et à la gouvernance. Ensemble, ils transforment des opérations fragmentées en intelligence prête pour la décision."
     },
     "founders": {
-      "eyebrow": "Fondateurs",
-      "title": "Construit par des gens qui ont vécu le problème du passage à l'échelle.",
-      "subtitle": "Mindorion a été créé par des opérateurs qui ont vu comment les cabinets d'ingénierie et de services IT perdent en efficacité quand propositions, pipeline, delivery et reporting se fragmentent.",
+      "eyebrow": "Fondateur",
+      "title": "Construit par quelqu'un qui a vécu le problème du passage à l'échelle.",
+      "subtitle": "Mindorion a été créé par un opérateur qui a vu comment les cabinets d'ingénierie et de services IT perdent en efficacité quand propositions, pipeline, delivery et reporting se fragmentent.",
       "builtWithEyebrow": "Construit avec des opérateurs",
       "builtWithTitle": "Conçu avec les équipes qui pilotent l'avant-vente, le pipeline et le delivery au quotidien.",
       "builtWithBody": "Chaque workflow est façonné par des opérateurs au sein de cabinets d'ingénierie et de services IT. La transparence sur la roadmap et les apprentissages fait partie de notre façon de travailler — comme engagement secondaire, pas comme accroche principale."
@@ -1535,12 +1535,6 @@
       "location": "Paris, France",
       "quote": "Manager d'équipes de vente pendant 5 ans dans l'automotive, j'ai vu trop de deals perdus à cause de documents mal préparés ou de prospects mal qualifiés. Mindorion existe pour éliminer ces erreurs évitables.",
       "education": "SKEMA Business School · INSEEC Grande École"
-    },
-    "romain": {
-      "role": "Co-Founder & Executive Chairman",
-      "location": "United States",
-      "quote": "6 ans à structurer des équipes tech-consulting B2B aux États-Unis. J'ai vu ce qui fait la différence entre une équipe qui scale et une qui stagne : les bons outils, les bonnes données, au bon moment. C'est exactement ce qu'on construit chez Mindorion.",
-      "education": "SKEMA Business School · North Carolina State University (GPA 3.9)"
     },
     "pillars": {
       "roadmap": {

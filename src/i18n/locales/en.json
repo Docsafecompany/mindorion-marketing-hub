@@ -1501,9 +1501,9 @@
       "body": "ProposalIQ structures pre-sales and proposal execution. GrowthIQ aligns commercial strategy with operational activity. Future modules extend the same foundation to delivery, talent and governance. Together, they turn fragmented operations into decision-ready intelligence."
     },
     "founders": {
-      "eyebrow": "Founders",
-      "title": "Built by people who lived the scaling problem.",
-      "subtitle": "Mindorion was created by operators who have seen how Engineering & IT Services firms lose efficiency when proposals, pipeline, delivery and reporting become fragmented.",
+      "eyebrow": "Founder",
+      "title": "Built by someone who lived the scaling problem.",
+      "subtitle": "Mindorion was created by an operator who has seen how Engineering & IT Services firms lose efficiency when proposals, pipeline, delivery and reporting become fragmented.",
       "builtWithEyebrow": "Built with operators",
       "builtWithTitle": "Designed with the teams who run pre-sales, pipeline and delivery every day.",
       "builtWithBody": "Every workflow is shaped by operators inside Engineering & IT Services firms. Transparency on roadmap and learnings is part of how we work — as a secondary commitment, not the headline."
@@ -1535,12 +1535,6 @@
       "location": "Paris, France",
       "quote": "After 5 years managing sales teams in the automotive industry, I saw too many deals lost to poorly prepared documents or unqualified prospects. Mindorion exists to eliminate these avoidable mistakes.",
       "education": "SKEMA Business School · INSEEC Grande École"
-    },
-    "romain": {
-      "role": "Co-Founder & Executive Chairman",
-      "location": "United States",
-      "quote": "6 years structuring B2B tech-consulting teams in the United States. I've seen what makes the difference between a team that scales and one that stagnates: the right tools, the right data, at the right moment. That's exactly what we're building at Mindorion.",
-      "education": "SKEMA Business School · North Carolina State University (GPA 3.9)"
     },
     "pillars": {
       "roadmap": {

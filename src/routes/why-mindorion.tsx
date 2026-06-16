@@ -7,7 +7,6 @@ import i18n from "@/i18n";
 import { LINKEDIN_URL, createStaticMeta } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
 import camilleImg from "@/assets/founder-camille.jpg";
-import romainImg from "@/assets/founder-romain.png";
 
 export const Route = createFileRoute("/why-mindorion")({
   head: () =>
@@ -24,7 +23,7 @@ function WhyMindorionPage() {
 
   const founders = [
     {
-      photo: romainImg,
+      photo: camilleImg,
       photoClassName: "object-top",
       name: "Camille-Aurélien Baltaze",
       roleKey: "founders.camille.role",
@@ -32,16 +31,6 @@ function WhyMindorionPage() {
       linkedinUrl: "https://www.linkedin.com/in/camille-aur%C3%A9lien-baltaze",
       quoteKey: "founders.camille.quote",
       educationKey: "founders.camille.education" as string | undefined,
-    },
-    {
-      photo: camilleImg,
-      photoClassName: "scale-125 object-center",
-      name: "Romain Ortis",
-      roleKey: "founders.romain.role",
-      locationKey: "founders.romain.location",
-      linkedinUrl: "https://www.linkedin.com/in/romain-ortis-a97423113",
-      quoteKey: "founders.romain.quote",
-      educationKey: undefined as string | undefined,
     },
   ];
 
@@ -199,7 +188,7 @@ function WhyMindorionPage() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="mx-auto max-w-xl">
           {founders.map((f) => (
             <article key={f.name} className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
               <div className="flex items-start gap-4">
