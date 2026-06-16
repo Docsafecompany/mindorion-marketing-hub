@@ -445,7 +445,9 @@
       ],
       "ctaTitle": "Prêt à trouver vos prochains clients ?",
       "ctaSubtitle": "Qualifiez vos prospects et lancez vos séquences aujourd'hui.",
-      "primaryCta": "Essayer GrowthIQ"
+      "primaryCta": "Demander une démo",
+      "secondaryCta": "Explorer GrowthIQ",
+      "ctaButton": "Explorer GrowthIQ"
     },
     "governanceiq": {
       "seoTitle": "Governance Layer | Conformité documentaire équipe | Mindorion",
