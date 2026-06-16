@@ -181,9 +181,18 @@
       "cta": "Learn about governance"
     },
     "stats": [
-      { "value": "Faster", "label": "Faster proposal cycles" },
-      { "value": "Aligned", "label": "Strategy execution visibility" },
-      { "value": "Unified", "label": "Unified operational intelligence" }
+      {
+        "value": "Faster",
+        "label": "Faster proposal cycles"
+      },
+      {
+        "value": "Aligned",
+        "label": "Strategy execution visibility"
+      },
+      {
+        "value": "Unified",
+        "label": "Unified operational intelligence"
+      }
     ],
     "useCasesIntro": "Use cases",
     "useCasesTitle": "Built for firms managing complex commercial and operational execution.",
@@ -208,11 +217,26 @@
     "whyIntro": "Why Mindorion",
     "whyTitle": "Built for engineering and consulting leaders",
     "whyItems": [
-      { "title": "Unified Data", "text": "Bring commercial, proposal and operational data into a single source of truth across the firm." },
-      { "title": "Strategy Execution", "text": "Translate strategy into day-to-day execution and measure progress where the work actually happens." },
-      { "title": "Governance by Design", "text": "Every workflow produces structured, auditable data — governance is built in, not bolted on." },
-      { "title": "Decision Intelligence", "text": "Turn fragmented signals into clear decisions for leadership, BU managers and delivery teams." },
-      { "title": "Enterprise AI", "text": "Secure, enterprise-grade AI applied to your real operating context — not generic copilots." }
+      {
+        "title": "Unified Data",
+        "text": "Bring commercial, proposal and operational data into a single source of truth across the firm."
+      },
+      {
+        "title": "Strategy Execution",
+        "text": "Translate strategy into day-to-day execution and measure progress where the work actually happens."
+      },
+      {
+        "title": "Governance by Design",
+        "text": "Every workflow produces structured, auditable data — governance is built in, not bolted on."
+      },
+      {
+        "title": "Decision Intelligence",
+        "text": "Turn fragmented signals into clear decisions for leadership, BU managers and delivery teams."
+      },
+      {
+        "title": "Enterprise AI",
+        "text": "Secure, enterprise-grade AI applied to your real operating context — not generic copilots."
+      }
     ],
     "proofIntro": "Social proof",
     "proofTitle": "Trusted by engineering and consulting leaders",
@@ -359,10 +383,22 @@
       ],
       "costsLabel": "WHAT IT COSTS YOU TODAY",
       "costs": [
-        { "title": "Lost bids", "text": "Opportunities slip because proposals are inconsistent or late." },
-        { "title": "Exposed margins", "text": "Internal comments and pricing leak into client-facing documents." },
-        { "title": "Wrong references", "text": "Outdated case studies and mismatched credentials weaken credibility." },
-        { "title": "Missing requirements", "text": "RFP requirements slip through without a structured check." }
+        {
+          "title": "Lost bids",
+          "text": "Opportunities slip because proposals are inconsistent or late."
+        },
+        {
+          "title": "Exposed margins",
+          "text": "Internal comments and pricing leak into client-facing documents."
+        },
+        {
+          "title": "Wrong references",
+          "text": "Outdated case studies and mismatched credentials weaken credibility."
+        },
+        {
+          "title": "Missing requirements",
+          "text": "RFP requirements slip through without a structured check."
+        }
       ],
       "workflowLabel": "THE PRE-SALES WORKFLOW",
       "workflowSteps": [
@@ -408,51 +444,108 @@
       "subtitle": "GrowthIQ helps Engineering & IT Services firms guide business development, capture high-value operational signals and turn commercial activity into decision intelligence.",
       "heroLabel": "EXECUTION DASHBOARD · GROWTHIQ",
       "heroStats": [
-        { "value": "78%", "label": "Execution alignment" },
-        { "value": "84%", "label": "Manager effort score" },
-        { "value": "42", "label": "High-value signals/week" },
-        { "value": "7", "label": "Accounts requiring action" }
+        {
+          "value": "78%",
+          "label": "Execution alignment"
+        },
+        {
+          "value": "84%",
+          "label": "Manager effort score"
+        },
+        {
+          "value": "42",
+          "label": "High-value signals/week"
+        },
+        {
+          "value": "7",
+          "label": "Accounts requiring action"
+        }
       ],
       "heroPolicies": [
         "Strategic focus",
         "Drift alert: Energy under-covered"
       ],
-      "howItWorks": [
-        { "title": "Define", "text": "Set strategic focus areas, manager objectives and coverage expectations for each business unit." },
-        { "title": "Capture", "text": "Collect operational signals from proposals, commercial activity and delivery data in one place." },
-        { "title": "Align", "text": "Detect strategic drift, score execution alignment and surface the accounts requiring action." }
+      "problemLabel": "THE PROBLEM",
+      "problemTitle": "Your CRM tells you what was reported. GrowthIQ shows what's really happening.",
+      "problemBody": "Most commercial data is incomplete, late or scattered across CRM fields, Excel files and manager notes. GrowthIQ standardizes the way teams capture high-value operational signals so leaders decide on reality, not fragmented reporting.",
+      "workflowLabel": "HOW IT WORKS",
+      "workflowSteps": [
+        "Define Strategy",
+        "Guide Execution",
+        "Capture Signals",
+        "Govern Pipeline",
+        "Decide"
       ],
-      "featureColumns": [
+      "capabilitiesLabel": "CAPABILITIES",
+      "capabilities": [
         {
-          "title": "Execution & alignment",
-          "items": [
-            { "title": "Strategic focus mapping", "text": "Define focus areas and track coverage across teams and geographies." },
-            { "title": "Manager effort scoring", "text": "Score commercial effort alignment with strategic priorities." },
-            { "title": "Operational signals", "text": "High-value signals from proposals, delivery and commercial activity." },
-            { "title": "Drift detection", "text": "Alert when execution deviates from strategic intent." }
-          ]
+          "title": "Strategy Alignment",
+          "text": "Translate strategic focus areas into measurable coverage expectations for every team and account."
         },
         {
-          "title": "Intelligence & action",
-          "items": [
-            { "title": "Decision dashboards", "text": "Real-time views for leadership, sales and BU managers." },
-            { "title": "Account prioritization", "text": "Surface the accounts requiring action based on execution signals." },
-            { "title": "Team performance", "text": "Measure execution quality and strategic alignment by team." },
-            { "title": "CRM integrations", "text": "Salesforce, HubSpot (Enterprise)." }
-          ]
+          "title": "Execution Discipline",
+          "text": "Guide managers and sales teams through a consistent commercial cadence with clear next actions."
+        },
+        {
+          "title": "Effort Measurement",
+          "text": "Quantify commercial effort and alignment with priorities, not just outcomes reported in the CRM."
+        },
+        {
+          "title": "Operational Signal Capture",
+          "text": "Standardize the capture of high-value signals from proposals, delivery and account conversations."
+        },
+        {
+          "title": "Governed Pipeline",
+          "text": "Apply quality and qualification rules so the pipeline reflects reality and supports confident decisions."
+        },
+        {
+          "title": "CRM Intelligence Layer",
+          "text": "Sit on top of Salesforce or HubSpot and turn raw CRM activity into decision-grade intelligence."
         }
       ],
-      "scenarioLabel": "USE CASES",
+      "scenarioLabel": "WHO IT'S FOR",
       "scenarios": [
-        { "tag": "EXECUTIVE", "title": "Strategic execution review", "text": "Leadership sees real-time alignment between strategy and commercial execution across all business units.", "result": "Decisions grounded in reality" },
-        { "tag": "SALES LEAD", "title": "Manager coaching", "text": "Sales leadership identifies where managers are off-strategy and coaches them on the right accounts.", "result": "Effort redirected to priority" },
-        { "tag": "BU MANAGER", "title": "Perimeter steering", "text": "Business unit managers detect drift early and adjust focus before quarterly targets slip.", "result": "Proactive course correction" }
+        {
+          "tag": "CEO / MANAGING DIRECTOR",
+          "title": "Strategy-execution alignment",
+          "text": "See in real time how the firm's commercial execution aligns with the strategy across business units and geographies.",
+          "result": "Decisions grounded in reality"
+        },
+        {
+          "tag": "SALES DIRECTOR",
+          "title": "Commercial steering",
+          "text": "Govern the pipeline, focus teams on priority accounts and coach managers where effort is off-strategy.",
+          "result": "Effort redirected to priorities"
+        },
+        {
+          "tag": "BUSINESS UNIT DIRECTOR",
+          "title": "Perimeter performance",
+          "text": "Track coverage, drift and high-value signals across your BU and adjust focus before targets slip.",
+          "result": "Proactive course correction"
+        },
+        {
+          "tag": "BUSINESS MANAGER",
+          "title": "Account execution",
+          "text": "Run accounts with a consistent cadence, capture operational signals and surface what needs action today.",
+          "result": "Disciplined account execution"
+        }
       ],
-      "ctaTitle": "Align strategy with commercial execution.",
+      "loopLabel": "CONNECTED WITH PROPOSALIQ",
+      "loopSteps": [
+        "Strategy",
+        "Account Execution",
+        "Pipeline",
+        "RFQ",
+        "Proposal",
+        "Win/Loss",
+        "Learning",
+        "Better Strategy"
+      ],
+      "ctaTitle": "Ready to align commercial execution with strategy?",
       "ctaSubtitle": "See how GrowthIQ helps engineering and IT services firms turn commercial activity into decision intelligence.",
       "primaryCta": "Request a demo",
       "secondaryCta": "See how it works",
-      "ctaButton": "Explore GrowthIQ"
+      "ctaButton": "Request a demo"
     },
     "governanceiq": {
       "seoTitle": "Governance Layer | Team document compliance | Mindorion",
@@ -462,8 +555,14 @@
       "subtitle": "Governance Layer centralizes your organization's document policies, automates audits and ensures every team operates by the same standards — without supervision overhead.",
       "heroLabel": "DASHBOARD · GOVERNANCEIQ",
       "heroStats": [
-        { "value": "97%", "label": "Team compliance" },
-        { "value": "24", "label": "Docs audited this month" }
+        {
+          "value": "97%",
+          "label": "Team compliance"
+        },
+        {
+          "value": "24",
+          "label": "Docs audited this month"
+        }
       ],
       "heroPolicies": [
         "Metadata — Required before sending",
@@ -471,35 +570,83 @@
         "Contracts — 2 docs awaiting review"
       ],
       "howItWorks": [
-        { "title": "Define", "text": "Create your document policies — required standards, GDPR rules, compliance levels by document type." },
-        { "title": "Deploy", "text": "Governance Layer automatically applies your policies across all teams — no training, no manual oversight." },
-        { "title": "Steer", "text": "Track compliance in real time via the dashboard and generate audit reports on demand." }
+        {
+          "title": "Define",
+          "text": "Create your document policies — required standards, GDPR rules, compliance levels by document type."
+        },
+        {
+          "title": "Deploy",
+          "text": "Governance Layer automatically applies your policies across all teams — no training, no manual oversight."
+        },
+        {
+          "title": "Steer",
+          "text": "Track compliance in real time via the dashboard and generate audit reports on demand."
+        }
       ],
       "featureColumns": [
         {
           "title": "Governance & policies",
           "items": [
-            { "title": "Centralized policies", "text": "Define once, apply across the whole organization automatically." },
-            { "title": "Automated audits", "text": "Every document audited against your policies — report generated automatically." },
-            { "title": "Compliance alerts", "text": "Immediate notification when a document doesn't meet standards." },
-            { "title": "Team dashboard", "text": "Compliance rate per team and per document type, in real time." }
+            {
+              "title": "Centralized policies",
+              "text": "Define once, apply across the whole organization automatically."
+            },
+            {
+              "title": "Automated audits",
+              "text": "Every document audited against your policies — report generated automatically."
+            },
+            {
+              "title": "Compliance alerts",
+              "text": "Immediate notification when a document doesn't meet standards."
+            },
+            {
+              "title": "Team dashboard",
+              "text": "Compliance rate per team and per document type, in real time."
+            }
           ]
         },
         {
           "title": "Compliance & security",
           "items": [
-            { "title": "GDPR by design", "text": "Automatic verification of personal data against current regulations." },
-            { "title": "Full audit trail", "text": "History of every document action — full traceability." },
-            { "title": "Access management", "text": "Roles and permissions per team, department or project." },
-            { "title": "SSO & integrations", "text": "SSO connection, Google Workspace & Microsoft 365." }
+            {
+              "title": "GDPR by design",
+              "text": "Automatic verification of personal data against current regulations."
+            },
+            {
+              "title": "Full audit trail",
+              "text": "History of every document action — full traceability."
+            },
+            {
+              "title": "Access management",
+              "text": "Roles and permissions per team, department or project."
+            },
+            {
+              "title": "SSO & integrations",
+              "text": "SSO connection, Google Workspace & Microsoft 365."
+            }
           ]
         }
       ],
       "scenarioLabel": "USE CASES",
       "scenarios": [
-        { "tag": "Delivery", "title": "GDPR compliance for candidate files", "text": "Governance Layer ensures every CV transmitted respects the company's GDPR policies.", "result": "Compliance guaranteed" },
-        { "tag": "ESN", "title": "Cross-team document standards", "text": "Project managers, consultants and developers follow the same document policies.", "result": "Teams aligned" },
-        { "tag": "ENTERPRISE", "title": "Simplified internal audit", "text": "Audit reports generated automatically — no more manual evidence collection.", "result": "Audit in 1 click" }
+        {
+          "tag": "Delivery",
+          "title": "GDPR compliance for candidate files",
+          "text": "Governance Layer ensures every CV transmitted respects the company's GDPR policies.",
+          "result": "Compliance guaranteed"
+        },
+        {
+          "tag": "ESN",
+          "title": "Cross-team document standards",
+          "text": "Project managers, consultants and developers follow the same document policies.",
+          "result": "Teams aligned"
+        },
+        {
+          "tag": "ENTERPRISE",
+          "title": "Simplified internal audit",
+          "text": "Audit reports generated automatically — no more manual evidence collection.",
+          "result": "Audit in 1 click"
+        }
       ],
       "ctaTitle": "Ready to guarantee your team's compliance?",
       "ctaSubtitle": "Centralize your document policies today.",
@@ -599,12 +746,36 @@
         "guide": "GUIDE"
       },
       "cards": [
-        { "title": "How to remove metadata from a Word document before sending", "excerpt": "Step-by-step guide to clean Word documents of all their hidden data.", "meta": "Apr 10 · 5 min" },
-        { "title": "B2B prospecting: why 80% of your emails go unanswered", "excerpt": "The targeting and personalization mistakes that kill your reply rates.", "meta": "Apr 5 · 7 min" },
-        { "title": "GDPR and delivery documents: what your team must check before every send", "excerpt": "GDPR obligations often ignored in everyday delivery processes.", "meta": "Apr 1 · 6 min" },
-        { "title": "How to respond to an RFP without exposing your internal data", "excerpt": "Best practices to secure your RFPs before submission.", "meta": "Mar 25 · 9 min" },
-        { "title": "Why AI tone in your documents hurts your professional credibility", "excerpt": "How to detect and fix overly generic wording before sending.", "meta": "Mar 20 · 5 min" },
-        { "title": "The 7 buying signals to watch to prospect at the right time", "excerpt": "Hires, fundraising, new leadership — the signals that flag an opportunity.", "meta": "Mar 15 · 6 min" }
+        {
+          "title": "How to remove metadata from a Word document before sending",
+          "excerpt": "Step-by-step guide to clean Word documents of all their hidden data.",
+          "meta": "Apr 10 · 5 min"
+        },
+        {
+          "title": "B2B prospecting: why 80% of your emails go unanswered",
+          "excerpt": "The targeting and personalization mistakes that kill your reply rates.",
+          "meta": "Apr 5 · 7 min"
+        },
+        {
+          "title": "GDPR and delivery documents: what your team must check before every send",
+          "excerpt": "GDPR obligations often ignored in everyday delivery processes.",
+          "meta": "Apr 1 · 6 min"
+        },
+        {
+          "title": "How to respond to an RFP without exposing your internal data",
+          "excerpt": "Best practices to secure your RFPs before submission.",
+          "meta": "Mar 25 · 9 min"
+        },
+        {
+          "title": "Why AI tone in your documents hurts your professional credibility",
+          "excerpt": "How to detect and fix overly generic wording before sending.",
+          "meta": "Mar 20 · 5 min"
+        },
+        {
+          "title": "The 7 buying signals to watch to prospect at the right time",
+          "excerpt": "Hires, fundraising, new leadership — the signals that flag an opportunity.",
+          "meta": "Mar 15 · 6 min"
+        }
       ],
       "newsletter": {
         "title": "Get our best articles every week.",
@@ -743,20 +914,46 @@
     "heroTitle1": "Building the tools Engineering & IT Services firms ",
     "heroTitle2": "actually deserve.",
     "heroText": "Mindorion is a B2B software company founded in Estonia, building a suite of professional intelligence tools for teams operating at high stakes — consultants, sales, delivery leaders and engineers.",
-    "tags": ["Mindorion OÜ · Estonia", "Founded in 2024", "B2B SaaS", "Build in public"],
+    "tags": [
+      "Mindorion OÜ · Estonia",
+      "Founded in 2024",
+      "B2B SaaS",
+      "Build in public"
+    ],
     "stats": [
-      { "value": "3", "label": "PRODUCTS IN DEVELOPMENT" },
-      { "value": "14", "label": "RISK CATEGORIES DETECTED" },
-      { "value": "0", "label": "DATA STORED · GDPR BY DESIGN" }
+      {
+        "value": "3",
+        "label": "PRODUCTS IN DEVELOPMENT"
+      },
+      {
+        "value": "14",
+        "label": "RISK CATEGORIES DETECTED"
+      },
+      {
+        "value": "0",
+        "label": "DATA STORED · GDPR BY DESIGN"
+      }
     ],
     "missionEyebrow": "OUR MISSION",
     "missionTitle1": "Give Engineering & IT Services firms the certainty ",
     "missionTitle2": "of operating at the highest level.",
     "missionText": "Every document sent must be flawless. Every prospect must be the right one. Every process must be compliant. Mindorion makes that possible — without friction, without compromise.",
     "values": [
-      { "icon": "🎯", "title": "Outcomes first", "text": "Every feature we build must solve a real professional problem. No gimmick features — only what creates measurable value." },
-      { "icon": "🔒", "title": "Private by design", "text": "Your documents are never stored. Analysis happens in real time and files are deleted immediately. Privacy isn't an option — it's the architecture." },
-      { "icon": "⚡", "title": "Radical simplicity", "text": "The best professional tools are invisible. You upload, Mindorion analyzes. No 3-hour onboarding, no training required." }
+      {
+        "icon": "🎯",
+        "title": "Outcomes first",
+        "text": "Every feature we build must solve a real professional problem. No gimmick features — only what creates measurable value."
+      },
+      {
+        "icon": "🔒",
+        "title": "Private by design",
+        "text": "Your documents are never stored. Analysis happens in real time and files are deleted immediately. Privacy isn't an option — it's the architecture."
+      },
+      {
+        "icon": "⚡",
+        "title": "Radical simplicity",
+        "text": "The best professional tools are invisible. You upload, Mindorion analyzes. No 3-hour onboarding, no training required."
+      }
     ],
     "ctaTitle": "Want to follow the Mindorion journey?",
     "ctaText": "We share everything on LinkedIn — decisions, learnings, new products.",
@@ -769,9 +966,21 @@
     "title": "Let's talk about your project.",
     "subtitle": "Our experts walk you through Mindorion in 30 minutes and answer all your questions — products, pricing, integrations.",
     "perks": [
-      { "icon": "⏱", "title": "30 minutes", "text": "Personalized demo for your role" },
-      { "icon": "🎯", "title": "No commitment", "text": "No sales pressure" },
-      { "icon": "💬", "title": "Reply within 24h", "text": "We get back to you quickly" }
+      {
+        "icon": "⏱",
+        "title": "30 minutes",
+        "text": "Personalized demo for your role"
+      },
+      {
+        "icon": "🎯",
+        "title": "No commitment",
+        "text": "No sales pressure"
+      },
+      {
+        "icon": "💬",
+        "title": "Reply within 24h",
+        "text": "We get back to you quickly"
+      }
     ],
     "directLabel": "DIRECT CONTACT",
     "directText": "For any question about Enterprise pricing or integrations.",
@@ -791,8 +1000,18 @@
       "message": "Your message (optional)",
       "messagePlaceholder": "Describe your needs..."
     },
-    "productOptions": ["🛡 ProposalIQ", "🎯 GrowthIQ", "📋 Governance Layer", "Full suite"],
-    "teamSizes": ["1-5 people", "6-20 people", "21-100 people", "100+ people"],
+    "productOptions": [
+      "🛡 ProposalIQ",
+      "🎯 GrowthIQ",
+      "📋 Governance Layer",
+      "Full suite"
+    ],
+    "teamSizes": [
+      "1-5 people",
+      "6-20 people",
+      "21-100 people",
+      "100+ people"
+    ],
     "productError": "Select at least one product.",
     "submit": "Send my request →",
     "footer": "We get back to you within 24h · No commitment",
@@ -896,10 +1115,22 @@
         "badge": "Starter · €19/month",
         "subtitle": "Personal view — track your own document quality.",
         "features": [
-          { "title": "Personal quality score", "desc": "Score /100 based on your last 30 analyzed documents." },
-          { "title": "Risk breakdown", "desc": "Metadata, placeholders, sensitive data — visualized by category." },
-          { "title": "30-day history", "desc": "Your last 30 documents with score and date." },
-          { "title": "Solo view only", "desc": "No team view or role management." }
+          {
+            "title": "Personal quality score",
+            "desc": "Score /100 based on your last 30 analyzed documents."
+          },
+          {
+            "title": "Risk breakdown",
+            "desc": "Metadata, placeholders, sensitive data — visualized by category."
+          },
+          {
+            "title": "30-day history",
+            "desc": "Your last 30 documents with score and date."
+          },
+          {
+            "title": "Solo view only",
+            "desc": "No team view or role management."
+          }
         ],
         "upgrade": "Upgrade to Pro for 6-month history and personalized AI advice."
       },
@@ -907,11 +1138,26 @@
         "badge": "Pro · €39/month",
         "subtitle": "Enriched personal view — advanced analytics and AI recommendations.",
         "features": [
-          { "title": "Quality score + trend", "desc": "6-month chart, trends and detected drift." },
-          { "title": "Personalized AI advice", "desc": "Recommendations based on your recurring risk patterns." },
-          { "title": "6-month history", "desc": "All your documents with score, date and risk category." },
-          { "title": "PDF report export", "desc": "Personal Governance Layer report, downloadable." },
-          { "title": "Solo view only", "desc": "No team view or role management." }
+          {
+            "title": "Quality score + trend",
+            "desc": "6-month chart, trends and detected drift."
+          },
+          {
+            "title": "Personalized AI advice",
+            "desc": "Recommendations based on your recurring risk patterns."
+          },
+          {
+            "title": "6-month history",
+            "desc": "All your documents with score, date and risk category."
+          },
+          {
+            "title": "PDF report export",
+            "desc": "Personal Governance Layer report, downloadable."
+          },
+          {
+            "title": "Solo view only",
+            "desc": "No team view or role management."
+          }
         ],
         "upgrade": "Upgrade to Business for team view and role management (up to 5 members)."
       },
@@ -919,11 +1165,26 @@
         "badge": "Business · €59/user/month",
         "subtitle": "Team view — manage document quality across your whole organization.",
         "features": [
-          { "title": "Full team view", "desc": "Aggregated score + individual score per member (up to 5 users)." },
-          { "title": "Role management", "desc": "Admin, Manager, Member. Each role sees its scope." },
-          { "title": "Cross-member alerts", "desc": "Risky docs sent, falling scores, members inactive for 14d." },
-          { "title": "Secure invite link", "desc": "Add members via an invite link (48h token)." },
-          { "title": "Manager dashboard", "desc": "Team dashboard + document quality leaderboard." }
+          {
+            "title": "Full team view",
+            "desc": "Aggregated score + individual score per member (up to 5 users)."
+          },
+          {
+            "title": "Role management",
+            "desc": "Admin, Manager, Member. Each role sees its scope."
+          },
+          {
+            "title": "Cross-member alerts",
+            "desc": "Risky docs sent, falling scores, members inactive for 14d."
+          },
+          {
+            "title": "Secure invite link",
+            "desc": "Add members via an invite link (48h token)."
+          },
+          {
+            "title": "Manager dashboard",
+            "desc": "Team dashboard + document quality leaderboard."
+          }
         ],
         "upgrade": "Upgrade to Enterprise for full hierarchy (CEO → N+2 → Manager) and unlimited members."
       },
@@ -931,12 +1192,30 @@
         "badge": "Enterprise · Custom",
         "subtitle": "Full governance — custom hierarchy, IT configuration, executive reports.",
         "features": [
-          { "title": "Cascading hierarchy", "desc": "CEO → N+2 → N+1 → Manager → Member. Each level sees the aggregate below." },
-          { "title": "IT-managed configuration", "desc": "Roles, scopes and access configured by your internal IT team." },
-          { "title": "SSO / SAML", "desc": "Login via your Identity Provider (Okta, Azure AD, Google Workspace...)." },
-          { "title": "Automated executive reports", "desc": "Weekly / monthly PDF reports for the board and ExCo." },
-          { "title": "Unlimited members", "desc": "No slot limit. Whole organization covered." },
-          { "title": "Dedicated CSM", "desc": "Onboarding support + quarterly reviews included." }
+          {
+            "title": "Cascading hierarchy",
+            "desc": "CEO → N+2 → N+1 → Manager → Member. Each level sees the aggregate below."
+          },
+          {
+            "title": "IT-managed configuration",
+            "desc": "Roles, scopes and access configured by your internal IT team."
+          },
+          {
+            "title": "SSO / SAML",
+            "desc": "Login via your Identity Provider (Okta, Azure AD, Google Workspace...)."
+          },
+          {
+            "title": "Automated executive reports",
+            "desc": "Weekly / monthly PDF reports for the board and ExCo."
+          },
+          {
+            "title": "Unlimited members",
+            "desc": "No slot limit. Whole organization covered."
+          },
+          {
+            "title": "Dedicated CSM",
+            "desc": "Onboarding support + quarterly reviews included."
+          }
         ]
       }
     }
@@ -964,8 +1243,14 @@
         "title": "Your professional reputation is on the line with every document you send.",
         "text": "As a consultant, you don't have a quality team behind you. A proposal with internal metadata, a forgotten comment or an unreplaced placeholder — and your credibility takes a hit. Mindorion has your back at every step.",
         "tools": [
-          { "name": "ProposalIQ", "text": "Checks every proposal before client delivery" },
-          { "name": "GrowthIQ", "text": "Identifies your next clients in your industry" }
+          {
+            "name": "ProposalIQ",
+            "text": "Checks every proposal before client delivery"
+          },
+          {
+            "name": "GrowthIQ",
+            "text": "Identifies your next clients in your industry"
+          }
         ],
         "mocks": [
           {
@@ -980,7 +1265,9 @@
           {
             "title": "Proposal_ClientABC_final.docx",
             "badge": "98/100",
-            "items": ["Document cleaned · Ready to send"]
+            "items": [
+              "Document cleaned · Ready to send"
+            ]
           }
         ],
         "scenarios": [
@@ -1009,14 +1296,35 @@
         "title": "Every offer sent must be perfect. Every prospect must be the right one.",
         "text": "In pre-sales, an offer with cost price visible in track changes can cost you a deal. A poorly qualified prospect costs you weeks. Mindorion eliminates both risks.",
         "tools": [
-          { "name": "ProposalIQ", "text": "Checks RFPs, offers and proposals before submission" },
-          { "name": "GrowthIQ", "text": "Qualifies and contacts the right decision-makers" }
+          {
+            "name": "ProposalIQ",
+            "text": "Checks RFPs, offers and proposals before submission"
+          },
+          {
+            "name": "GrowthIQ",
+            "text": "Qualifies and contacts the right decision-makers"
+          }
         ],
         "pipelineLabel": "Qualified prospects",
         "leads": [
-          { "initials": "DL", "role": "Sales Director · Engineering", "city": "Lyon", "score": "94%" },
-          { "initials": "VP", "role": "VP Procurement · IT Services", "city": "Toulouse", "score": "88%" },
-          { "initials": "DG", "role": "CEO · Consulting firm", "city": "Paris", "score": "81%" }
+          {
+            "initials": "DL",
+            "role": "Sales Director · Engineering",
+            "city": "Lyon",
+            "score": "94%"
+          },
+          {
+            "initials": "VP",
+            "role": "VP Procurement · IT Services",
+            "city": "Toulouse",
+            "score": "88%"
+          },
+          {
+            "initials": "DG",
+            "role": "CEO · Consulting firm",
+            "city": "Paris",
+            "score": "81%"
+          }
         ],
         "scenarios": [
           {
@@ -1044,8 +1352,14 @@
         "title": "Every file you send engages your professional responsibility.",
         "text": "In delivery, sending a CV with a previous candidate's disqualification notes, or a contract with personal data not removed, can have legal consequences. ProposalIQ and Governance Layer protect you.",
         "tools": [
-          { "name": "ProposalIQ", "text": "Checks CVs, contracts and NDAs before sending" },
-          { "name": "Governance Layer", "text": "GDPR compliance for candidate files" }
+          {
+            "name": "ProposalIQ",
+            "text": "Checks CVs, contracts and NDAs before sending"
+          },
+          {
+            "name": "Governance Layer",
+            "text": "GDPR compliance for candidate files"
+          }
         ],
         "mocks": [
           {
@@ -1060,7 +1374,9 @@
           {
             "title": "CV_Candidate_Martin_final.docx",
             "badge": "GDPR Compliant",
-            "items": ["Document cleaned · Data verified"]
+            "items": [
+              "Document cleaned · Data verified"
+            ]
           }
         ],
         "scenarios": [
@@ -1089,9 +1405,18 @@
         "title": "High-stakes technical documents. Zero margin for error.",
         "text": "In IT services, every SOW, specification or technical document commits your company. A document distributed to 12 clients with internal history still active can cost you a contract. Mindorion covers the entire chain.",
         "tools": [
-          { "name": "ProposalIQ", "text": "SOWs, technical specs, project files" },
-          { "name": "GrowthIQ", "text": "Enterprise account development" },
-          { "name": "Governance Layer", "text": "Cross-team document compliance" }
+          {
+            "name": "ProposalIQ",
+            "text": "SOWs, technical specs, project files"
+          },
+          {
+            "name": "GrowthIQ",
+            "text": "Enterprise account development"
+          },
+          {
+            "name": "Governance Layer",
+            "text": "Cross-team document compliance"
+          }
         ],
         "mocks": [
           {
@@ -1106,7 +1431,9 @@
           {
             "title": "SOW_Technical_Project_final.docx",
             "badge": "97/100",
-            "items": ["Ready to distribute to all 12 clients"]
+            "items": [
+              "Ready to distribute to all 12 clients"
+            ]
           }
         ],
         "scenarios": [
