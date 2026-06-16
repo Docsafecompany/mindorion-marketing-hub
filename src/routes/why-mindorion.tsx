@@ -149,7 +149,7 @@ function WhyMindorionPage() {
 
         <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
           <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-purple-soft text-purple-700">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-purple-soft">
               <Rocket className="h-5 w-5" />
             </div>
             <h3 className="mt-5 text-xl font-bold text-foreground">Stay ahead, not overtaken</h3>
@@ -159,7 +159,7 @@ function WhyMindorionPage() {
           </article>
 
           <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-green-soft text-green-700">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-green-soft">
               <Gauge className="h-5 w-5" />
             </div>
             <h3 className="mt-5 text-xl font-bold text-foreground">Control AI cost at scale</h3>
@@ -169,7 +169,7 @@ function WhyMindorionPage() {
           </article>
 
           <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-amber-soft text-amber-700">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-amber-soft">
               <Shield className="h-5 w-5" />
             </div>
             <h3 className="mt-5 text-xl font-bold text-foreground">Compliance by design</h3>
