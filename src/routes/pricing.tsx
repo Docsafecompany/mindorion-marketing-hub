@@ -40,6 +40,9 @@ type LocalizedPlan = {
   label: string;
   name: string;
   description: string;
+  outcome: string;
+  upgradeWhen?: string;
+  includes?: string;
   monthlyPrice?: string;
   annualPrice?: string;
   annualNote?: string;
@@ -96,9 +99,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         subtitle: "Pré-vente et opérations de proposition pour les sociétés Engineering & IT Services.",
         plans: [
           {
-            label: "POINT D'ENTRÉE",
+            label: "Première utilisation équipe",
             name: "Starter",
-            description: "Pour les indépendants qui démarrent.",
+            description: "Pour les petites équipes qui commencent à standardiser un workflow.",
+            outcome: "Démarrer",
+            upgradeWhen: "Plus de 5 utilisateurs, propositions incohérentes, reporting dupliqué ou manque de visibilité.",
             monthlyPrice: "19€/mois",
             annualPrice: "228€/an",
             annualNote: "1 utilisateur · soit 15€/mois · −20%",
@@ -122,9 +127,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "ÉQUIPES SALES",
+            label: "Standardisation équipe",
             name: "Pro",
-            description: "Pour les consultants et équipes actifs.",
+            description: "Pour les équipes Engineering & IT Services en croissance qui ont besoin d'une exécution cohérente.",
+            outcome: "Standardiser",
+            upgradeWhen: "Les managers ont besoin de visibilité et de reporting sur plusieurs équipes, industries ou géographies.",
             monthlyPrice: "39€/mois",
             annualPrice: "468€/an",
             annualNote: "1 utilisateur · soit 31€/mois · −20%",
@@ -147,9 +154,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "AGENCE · CABINET",
+            label: "Gouvernance multi-équipes",
             name: "Business",
-            description: "Pour les équipes structurées.",
+            description: "Pour les organisations structurées qui gèrent plusieurs équipes, marchés ou workflows de proposition.",
+            outcome: "Gouverner",
+            upgradeWhen: "La conformité, l'intégration CRM et la supervision exécutive deviennent critiques.",
             monthlyPrice: "59€/user/mois",
             annualPrice: "708€/user/an",
             annualNote: "Jusqu'à 5 utilisateurs · soit 47€/mois · −20%",
@@ -171,9 +180,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "SUITE COMPLÈTE",
+            label: "Système d'exploitation gouverné",
             name: "Enterprise",
-            description: "Suite complète — CRM, gouvernance et sécurité avancée inclus.",
+            description: "Connectez ProposalIQ, GrowthIQ et la Governance Layer pour faire évoluer les opérations assistées par l'IA avec CRM, sécurité et conformité.",
+            outcome: "Passer à l'échelle",
+            includes: "ProposalIQ + GrowthIQ + Governance Layer, intégration CRM, SSO/sécurité, CSM dédié.",
             cta: "Demander une démo",
             href: "/contact",
             enterprise: true,
@@ -231,9 +242,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         subtitle: "Intelligence d'exécution commerciale pour les sociétés Engineering & IT Services.",
         plans: [
           {
-            label: "POINT D'ENTRÉE",
+            label: "Première utilisation équipe",
             name: "Starter",
-            description: "Pour les commerciaux indépendants.",
+            description: "Pour les petites équipes qui commencent à standardiser un workflow.",
+            outcome: "Démarrer",
+            upgradeWhen: "Plus de 5 utilisateurs, propositions incohérentes, reporting dupliqué ou manque de visibilité.",
             monthlyPrice: "49€/user/mois",
             annualPrice: "588€/user/an",
             annualNote: "soit 39€/mois · −20%",
@@ -255,9 +268,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "ÉQUIPES COMMERCIALES",
+            label: "Standardisation équipe",
             name: "Pro",
-            description: "Pour les équipes commerciales en croissance.",
+            description: "Pour les équipes Engineering & IT Services en croissance qui ont besoin d'une exécution cohérente.",
+            outcome: "Standardiser",
+            upgradeWhen: "Les managers ont besoin de visibilité et de reporting sur plusieurs équipes, industries ou géographies.",
             monthlyPrice: "69€/user/mois",
             annualPrice: "828€/user/an",
             annualNote: "soit 55€/mois · −20%",
@@ -278,9 +293,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "AGENCE · GRAND COMPTE",
+            label: "Gouvernance multi-équipes",
             name: "Business",
-            description: "Pour les équipes revenue structurées.",
+            description: "Pour les organisations structurées qui gèrent plusieurs équipes, marchés ou workflows de proposition.",
+            outcome: "Gouverner",
+            upgradeWhen: "La conformité, l'intégration CRM et la supervision exécutive deviennent critiques.",
             monthlyPrice: "89€/user/mois",
             annualPrice: "1 068€/user/an",
             annualNote: "soit 71€/mois · −20%",
@@ -300,9 +317,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "SUITE COMPLÈTE",
+            label: "Système d'exploitation gouverné",
             name: "Enterprise",
-            description: "Suite complète — CRM, gouvernance et sécurité avancée inclus.",
+            description: "Connectez ProposalIQ, GrowthIQ et la Governance Layer pour faire évoluer les opérations assistées par l'IA avec CRM, sécurité et conformité.",
+            outcome: "Passer à l'échelle",
+            includes: "ProposalIQ + GrowthIQ + Governance Layer, intégration CRM, SSO/sécurité, CSM dédié.",
             cta: "Demander une démo",
             href: "/contact",
             enterprise: true,
@@ -376,9 +395,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         subtitle: "Pre-sales and proposal operations for Engineering & IT Services firms.",
         plans: [
           {
-            label: "ENTRY PLAN",
+            label: "First Team Use",
             name: "Starter",
-            description: "For independent professionals getting started.",
+            description: "For small teams starting to standardize one workflow.",
+            outcome: "Start",
+            upgradeWhen: "More than 5 users, inconsistent proposals, duplicate reporting or lack of visibility.",
             monthlyPrice: "€19/month",
             annualPrice: "€228/year",
             annualNote: "1 user · or €15/month · −20%",
@@ -402,9 +423,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "SALES TEAMS",
+            label: "Team Standardization",
             name: "Pro",
-            description: "For consultants and active teams.",
+            description: "For growing Engineering & IT Services teams that need consistent execution.",
+            outcome: "Standardize",
+            upgradeWhen: "Managers need visibility and reporting across multiple teams, industries or geographies.",
             monthlyPrice: "€39/month",
             annualPrice: "€468/year",
             annualNote: "1 user · or €31/month · −20%",
@@ -427,9 +450,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "AGENCY · FIRM",
+            label: "Multi-Team Governance",
             name: "Business",
-            description: "For structured teams.",
+            description: "For structured organizations managing multiple teams, markets or proposal workflows.",
+            outcome: "Govern",
+            upgradeWhen: "Compliance, CRM integration and executive oversight become critical.",
             monthlyPrice: "€59/user/month",
             annualPrice: "€708/user/year",
             annualNote: "Up to 5 users · or €47/month · −20%",
@@ -451,9 +476,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "FULL SUITE",
+            label: "Governed Operating System",
             name: "Enterprise",
-            description: "Complete suite with CRM, governance and advanced security included.",
+            description: "Connect ProposalIQ, GrowthIQ and the Governance Layer to scale AI-enabled operations with CRM, security and compliance.",
+            outcome: "Scale",
+            includes: "ProposalIQ + GrowthIQ + Governance Layer, CRM integration, SSO/security, dedicated CSM.",
             cta: "Request a demo",
             href: "/contact",
             enterprise: true,
@@ -511,9 +538,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         subtitle: "Commercial execution intelligence for Engineering & IT Services firms.",
         plans: [
           {
-            label: "ENTRY PLAN",
+            label: "First Team Use",
             name: "Starter",
-            description: "For independent sales reps.",
+            description: "For small teams starting to standardize one workflow.",
+            outcome: "Start",
+            upgradeWhen: "More than 5 users, inconsistent proposals, duplicate reporting or lack of visibility.",
             monthlyPrice: "€49/user/month",
             annualPrice: "€588/user/year",
             annualNote: "or €39/month · −20%",
@@ -535,9 +564,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "SALES TEAMS",
+            label: "Team Standardization",
             name: "Pro",
-            description: "For growing commercial teams.",
+            description: "For growing Engineering & IT Services teams that need consistent execution.",
+            outcome: "Standardize",
+            upgradeWhen: "Managers need visibility and reporting across multiple teams, industries or geographies.",
             monthlyPrice: "€69/user/month",
             annualPrice: "€828/user/year",
             annualNote: "or €55/month · −20%",
@@ -558,9 +589,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "AGENCY · ENTERPRISE ACCOUNT",
+            label: "Multi-Team Governance",
             name: "Business",
-            description: "For structured revenue teams.",
+            description: "For structured organizations managing multiple teams, markets or proposal workflows.",
+            outcome: "Govern",
+            upgradeWhen: "Compliance, CRM integration and executive oversight become critical.",
             monthlyPrice: "€89/user/month",
             annualPrice: "€1,068/user/year",
             annualNote: "or €71/month · −20%",
@@ -580,9 +613,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "FULL SUITE",
+            label: "Governed Operating System",
             name: "Enterprise",
-            description: "Complete suite with CRM, governance and advanced security included.",
+            description: "Connect ProposalIQ, GrowthIQ and the Governance Layer to scale AI-enabled operations with CRM, security and compliance.",
+            outcome: "Scale",
+            includes: "ProposalIQ + GrowthIQ + Governance Layer, CRM integration, SSO/security, dedicated CSM.",
             cta: "Request a demo",
             href: "/contact",
             enterprise: true,
@@ -804,9 +839,22 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
       <div className="flex min-h-[20rem] flex-col">
         <div className="flex h-8 items-start">{isFeatured ? <div className="inline-flex rounded-full bg-[var(--color-pricing-primary)] px-3 py-1 text-xs font-semibold text-white">{popularLabel}</div> : null}</div>
 
-        <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-primary)]")}>{plan.label}</div>
+        <div className="flex items-center gap-2">
+          <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-primary)]")}>{plan.label}</div>
+          <span className="inline-flex rounded-full bg-[var(--color-pricing-success-soft)] px-2 py-0.5 text-xs font-semibold text-[var(--color-pricing-success)]">{plan.outcome}</span>
+        </div>
         <div className={cn("mt-3 text-2xl font-extrabold text-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.name}</div>
         <p className={cn("mt-2 min-h-16 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
+        {plan.upgradeWhen ? (
+          <p className="mt-2 text-xs leading-5 text-muted-foreground">
+            <span className="font-semibold text-foreground">Upgrade when:</span> {plan.upgradeWhen}
+          </p>
+        ) : null}
+        {plan.includes ? (
+          <p className="mt-2 text-xs leading-5 text-muted-foreground">
+            <span className="font-semibold text-foreground">Includes:</span> {plan.includes}
+          </p>
+        ) : null}
 
         <div className="mt-5 min-h-[5.5rem]">
           <div className={cn("text-3xl font-extrabold", isEnterprise ? "text-[var(--color-pricing-enterprise)]" : "text-foreground")}>{priceValue}</div>
