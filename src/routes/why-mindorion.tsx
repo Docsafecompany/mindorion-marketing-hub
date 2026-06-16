@@ -181,7 +181,7 @@ function WhyMindorionPage() {
 
         <div className="mx-auto mt-10 max-w-3xl text-center">
           <p className="text-sm font-semibold leading-7 text-foreground sm:text-base">
-            AI is not the foundation. Structured data, workflows and governance are — and that's what makes AI scalable, affordable and compliant.
+            AI is not the foundation. Structured data, workflows and governance are — and that's what makes AI scalable, affordable and auditable.
           </p>
         </div>
       </section>
