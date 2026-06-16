@@ -28,15 +28,6 @@ const founders: Founder[] = [
     quoteKey: "founders.camille.quote",
     educationKey: "founders.camille.education",
   },
-  {
-    photo: camilleImg,
-    photoClassName: "scale-125 object-center",
-    name: "Romain Ortis",
-    roleKey: "founders.romain.role",
-    locationKey: "founders.romain.location",
-    linkedinUrl: "https://www.linkedin.com/in/romain-ortis-a97423113",
-    quoteKey: "founders.romain.quote",
-  },
 ];
 
 type Pillar = { icon: LucideIcon; titleKey: string; bodyKey: string };
@@ -114,7 +105,7 @@ export default function FoundersSection() {
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">{t("founders.subtitle")}</p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="mx-auto grid max-w-xl gap-6">
         {founders.map((f) => (
           <FounderCard key={f.name} founder={f} />
         ))}
