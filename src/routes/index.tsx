@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BriefcaseBusiness, FileText, Sparkles, Users } from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, ChevronRight, FileText, Shield, Sparkles, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { FadeSection } from "@/components/FadeSection";
