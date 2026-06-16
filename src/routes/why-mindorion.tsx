@@ -130,7 +130,7 @@ function WhyMindorionPage() {
           {/* Top — narrowest */}
           <div className="w-[68%] rounded-xl bg-[#1e3a5f] px-5 py-5 text-center text-white sm:px-6 sm:py-6">
             <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-80">Result</div>
-            <div className="mt-1 text-sm font-semibold sm:text-base">Efficient AI adoption — more accurate, cost-efficient and compliant, as a result</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">Efficient AI adoption — more accurate, cost-efficient and governed, as a result</div>
           </div>
         </div>
       </section>
