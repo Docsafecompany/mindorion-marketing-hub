@@ -16,10 +16,7 @@ const theme = {
 };
 
 const policyTones = ["success", "warning"] as const;
-const featureIcons: [string[], string[]] = [
-  ["🎯", "🏢", "🧠", "📅"],
-  ["✉️", "🔄", "📊", "🔗"],
-];
+const capabilityIcons = ["🎯", "🧭", "📊", "📡", "🛡️", "🧠"];
 
 export const Route = createFileRoute("/products/growthiq")({
   head: () => {
@@ -60,9 +57,11 @@ function GrowthIQPage() {
   const { t } = useTranslation();
   const heroStats = t("products.growthiq.heroStats", { returnObjects: true }) as Array<{ value: string; label: string }>;
   const heroPolicies = (t("products.growthiq.heroPolicies", { returnObjects: true }) as string[]).map((text, i) => ({ text, tone: policyTones[i] }));
-  const howItWorks = t("products.growthiq.howItWorks", { returnObjects: true }) as Array<{ title: string; text: string }>;
-  const cols = t("products.growthiq.featureColumns", { returnObjects: true }) as Array<{ title: string; items: Array<{ title: string; text: string }> }>;
+  const workflowSteps = t("products.growthiq.workflowSteps", { returnObjects: true }) as string[];
+  const capabilitiesRaw = t("products.growthiq.capabilities", { returnObjects: true }) as Array<{ title: string; text: string }>;
+  const capabilities = capabilitiesRaw.map((c, i) => ({ ...c, icon: capabilityIcons[i] }));
   const scenarios = t("products.growthiq.scenarios", { returnObjects: true }) as Array<{ tag: string; title: string; text: string; result: string }>;
+  const loopSteps = t("products.growthiq.loopSteps", { returnObjects: true }) as string[];
 
   const data: ProductPageData = {
     product: "growthiq",
@@ -71,13 +70,19 @@ function GrowthIQPage() {
     subtitle: t("products.growthiq.subtitle"),
     theme,
     heroPanel: { type: "dashboard", label: t("products.growthiq.heroLabel"), stats: heroStats, policies: heroPolicies },
-    howItWorks,
-    featureColumns: [
-      { title: cols[0].title, items: cols[0].items.map((it, i) => ({ ...it, icon: featureIcons[0][i] })) },
-      { title: cols[1].title, items: cols[1].items.map((it, i) => ({ ...it, icon: featureIcons[1][i] })) },
-    ],
+    problem: {
+      label: t("products.growthiq.problemLabel"),
+      title: t("products.growthiq.problemTitle"),
+      body: t("products.growthiq.problemBody"),
+    },
+    workflowLabel: t("products.growthiq.workflowLabel"),
+    workflowSteps,
+    capabilitiesLabel: t("products.growthiq.capabilitiesLabel"),
+    capabilities,
     scenarioLabel: t("products.growthiq.scenarioLabel"),
     scenarios,
+    loopLabel: t("products.growthiq.loopLabel"),
+    loopSteps,
     ctaTitle: t("products.growthiq.ctaTitle"),
     ctaSubtitle: t("products.growthiq.ctaSubtitle"),
     primaryCta: t("products.growthiq.primaryCta"),
