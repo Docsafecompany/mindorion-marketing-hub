@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Target, Lock, Zap, Linkedin } from "lucide-react";
+import { ArrowRight, Target, Lock, Zap, Linkedin, Rocket, Gauge, Shield } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
