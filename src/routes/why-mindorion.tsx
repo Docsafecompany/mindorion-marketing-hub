@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Target, Lock, Zap, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import FoundersSection from "@/components/FoundersSection";
 import { Button } from "@/components/ui/button";
 import { LINKEDIN_URL, createStaticMeta } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
+import camilleImg from "@/assets/founder-camille.jpg";
+import romainImg from "@/assets/founder-romain.png";
 
 export const Route = createFileRoute("/why-mindorion")({
   head: () =>
