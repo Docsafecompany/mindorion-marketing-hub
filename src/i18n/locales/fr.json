@@ -631,9 +631,9 @@
       "scenarios": [
         {
           "tag": "Delivery",
-          "title": "Conformité RGPD des dossiers candidats",
-          "text": "Governance Layer garantit que tous les CVs transmis respectent les politiques RGPD de l'entreprise.",
-          "result": "Conformité garantie"
+          "title": "Gouvernance RGPD des dossiers candidats",
+          "text": "Governance Layer aide à ce que chaque CV transmis respecte les politiques RGPD de l'entreprise.",
+          "result": "Gouverné & auditable"
         },
         {
           "tag": "ESN",
@@ -648,7 +648,7 @@
           "result": "Audit en 1 clic"
         }
       ],
-      "ctaTitle": "Prêt à garantir la conformité de votre équipe ?",
+      "ctaTitle": "Prêt à structurer la gouvernance documentaire de votre équipe ?",
       "ctaSubtitle": "Centralisez vos politiques documentaires dès aujourd'hui.",
       "primaryCta": "Essayer Governance Layer"
     }
