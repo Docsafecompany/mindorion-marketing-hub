@@ -70,6 +70,7 @@ type PricingCopy = {
   custom: string;
   includedInSuite: string;
   comparisonFeature: string;
+  productSelectorHelper: string;
   products: LocalizedProduct[];
 };
 
@@ -78,8 +79,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     seoTitle: "Tarifs | ProposalIQ & GrowthIQ | Mindorion",
     seoDescription:
       "Découvrez les plans Mindorion — ProposalIQ et GrowthIQ. Starter, Pro, Business et Enterprise. Un prix par utilisateur, zéro frais cachés.",
-    heroTitle: "Un prix par utilisateur. Zéro frais cachés.",
-    heroSubtitle: "Commencez avec un outil. Passez à Enterprise pour la suite complète avec intégrations CRM.",
+    heroTitle: "Tarifs pour les équipes Engineering & IT Services qui font évoluer leur exécution commerciale.",
+    heroSubtitle: "Choisissez ProposalIQ ou GrowthIQ, commencez avec l'équipe qui en a le plus besoin, puis évoluez vers une gouvernance unifiée couvrant les propositions, le pipeline et l'exécution commerciale.",
     monthly: "Mensuel",
     annual: "Annuel",
     annualBadge: "−20% sur l'annuel",
@@ -87,6 +88,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     custom: "Sur devis",
     includedInSuite: "INCLUS DANS LA SUITE",
     comparisonFeature: "Fonctionnalité",
+    productSelectorHelper: "Chaque produit peut être adopté indépendamment. Enterprise combine les modules et la gouvernance.",
     products: [
       {
         key: "proposaliq",
