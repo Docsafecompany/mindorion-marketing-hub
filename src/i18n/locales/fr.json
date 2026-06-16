@@ -1384,7 +1384,7 @@
             "tool": "ProposalIQ",
             "title": "CVs et dossiers candidats",
             "text": "ProposalIQ détecte les données personnelles résiduelles, les commentaires de traitement et les notes internes avant qu'un CV ou un dossier candidat ne soit transmis à un client ou un manager.",
-            "result": "Conformité RGPD · Candidat protégé"
+            "result": "RGPD by design · Candidat protégé"
           },
           {
             "tool": "ProposalIQ",
