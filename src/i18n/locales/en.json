@@ -631,9 +631,9 @@
       "scenarios": [
         {
           "tag": "Delivery",
-          "title": "GDPR compliance for candidate files",
-          "text": "Governance Layer ensures every CV transmitted respects the company's GDPR policies.",
-          "result": "Compliance guaranteed"
+          "title": "GDPR governance for candidate files",
+          "text": "Governance Layer helps every CV transmitted align with the company's GDPR policies.",
+          "result": "Governed & auditable"
         },
         {
           "tag": "ESN",
@@ -648,7 +648,7 @@
           "result": "Audit in 1 click"
         }
       ],
-      "ctaTitle": "Ready to guarantee your team's compliance?",
+      "ctaTitle": "Ready to bring governance to your team's documents?",
       "ctaSubtitle": "Centralize your document policies today.",
       "primaryCta": "Try Governance Layer"
     }
