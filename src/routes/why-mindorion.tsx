@@ -13,7 +13,7 @@ export const Route = createFileRoute("/why-mindorion")({
     createStaticMeta({
       title: "Why Mindorion | Operational Foundation for Engineering & IT Services",
       description:
-        "Mindorion standardizes workflows, structures enterprise data and aligns execution with strategy so organizations can scale with governance, compliance and efficient AI adoption.",
+        "Mindorion helps Engineering & IT Services firms standardize workflows, structure operational data and build the foundations required to scale with governance and efficient AI adoption.",
       path: "/why-mindorion",
     }),
   component: WhyMindorionPage,
