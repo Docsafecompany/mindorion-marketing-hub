@@ -401,52 +401,57 @@
       "ctaButton": "Explorer ProposalIQ"
     },
     "growthiq": {
-      "seoTitle": "GrowthIQ | Outreach B2B intelligent | Mindorion",
-      "seoDescription": "GrowthIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
-      "eyebrow": "🎯 GROWTHIQ · OUTREACH B2B INTELLIGENT",
-      "title": "Trouvez les bons prospects. Au bon moment.",
-      "subtitle": "GrowthIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
-      "heroLabel": "PIPELINE · GROWTHIQ",
-      "heroRows": [
-        { "initials": "DL", "title": "Dir. Commercial · Engineering", "city": "Lyon", "score": "94%" },
-        { "initials": "VP", "title": "VP Achats · IT Services", "city": "Toulouse", "score": "88%" },
-        { "initials": "DG", "title": "DG · Cabinet conseil", "city": "Paris", "score": "81%" }
+      "seoTitle": "GrowthIQ | Intelligence d'exécution commerciale pour Engineering & IT Services | Mindorion",
+      "seoDescription": "GrowthIQ aide les cabinets d'engineering et services IT à piloter le business development, capturer les signaux opérationnels à haute valeur et transformer l'activité commerciale en intelligence de décision.",
+      "eyebrow": "GrowthIQ — Intelligence d'exécution commerciale",
+      "title": "Alignez la stratégie et l'exécution commerciale.",
+      "subtitle": "GrowthIQ aide les cabinets d'engineering et services IT à piloter le business development, capturer les signaux opérationnels à haute valeur et transformer l'activité commerciale en intelligence de décision.",
+      "heroLabel": "TABLEAU DE BORD · GROWTHIQ",
+      "heroStats": [
+        { "value": "78%", "label": "Alignement exécution" },
+        { "value": "84%", "label": "Score d'effort manager" },
+        { "value": "42", "label": "Signaux haute valeur / sem." },
+        { "value": "7", "label": "Comptes à actionner" }
+      ],
+      "heroPolicies": [
+        "Focus stratégique",
+        "Alerte dérive : Energy sous-couvert"
       ],
       "howItWorks": [
-        { "title": "Définissez", "text": "Décrivez votre cible idéale — secteur, taille, fonction, zone géographique." },
-        { "title": "Qualifiez", "text": "L'IA identifie et score vos meilleurs prospects. Strategy Hub analyse les opportunités." },
-        { "title": "Contactez", "text": "Lancez des séquences multi-canal personnalisées et laissez GrowthIQ gérer le suivi." }
+        { "title": "Définissez", "text": "Définissez les axes stratégiques, les objectifs managers et les attentes de couverture pour chaque business unit." },
+        { "title": "Capturez", "text": "Collectez les signaux opérationnels des propositions, de l'activité commerciale et de la livraison en un seul endroit." },
+        { "title": "Alignez", "text": "Détectez la dérive stratégique, mesurez l'alignement de l'exécution et identifiez les comptes à actionner." }
       ],
       "featureColumns": [
         {
-          "title": "Prospection & qualification",
+          "title": "Exécution & alignement",
           "items": [
-            { "title": "Qualification IA", "text": "Score de pertinence sur chaque prospect." },
-            { "title": "Intelligence Flags", "text": "Signaux d'affaires : croissance, recrutements, levées de fonds, actualités." },
-            { "title": "Strategy Hub", "text": "Analyse approfondie des comptes cibles et recommandations d'approche." },
-            { "title": "Meeting Intelligence", "text": "Préparation automatisée de vos réunions commerciales avec contexte prospect." }
+            { "title": "Mapping du focus stratégique", "text": "Définissez les axes stratégiques et suivez la couverture par équipe et zone géographique." },
+            { "title": "Scoring d'effort manager", "text": "Mesurez l'alignement de l'effort commercial avec les priorités stratégiques." },
+            { "title": "Signaux opérationnels", "text": "Signaux à haute valeur extraits des propositions, de la livraison et de l'activité commerciale." },
+            { "title": "Détection de dérive", "text": "Alerte lorsque l'exécution s'écarte de l'intention stratégique." }
           ]
         },
         {
-          "title": "Outreach & suivi",
+          "title": "Intelligence & action",
           "items": [
-            { "title": "Séquences multi-canal", "text": "Email, LinkedIn, appel — séquences personnalisées par profil et secteur." },
-            { "title": "Suivi automatisé", "text": "Relances intelligentes selon les comportements : ouverture, clic, réponse." },
-            { "title": "Tableaux de bord équipe", "text": "Performances d'outreach, taux de réponse et pipeline en temps réel." },
+            { "title": "Tableaux de bord décisionnels", "text": "Vues temps réel pour le leadership, le commercial et les managers de BU." },
+            { "title": "Priorisation des comptes", "text": "Identifiez les comptes à actionner sur la base des signaux d'exécution." },
+            { "title": "Performance équipe", "text": "Mesurez la qualité d'exécution et l'alignement stratégique par équipe." },
             { "title": "Intégrations CRM", "text": "Salesforce, HubSpot (Enterprise)." }
           ]
         }
       ],
       "scenarioLabel": "CAS D'USAGE",
       "scenarios": [
-        { "tag": "CONSULTANT", "title": "Développement portefeuille clients", "text": "GrowthIQ identifie les décideurs dans le secteur cible et génère les séquences d'approche.", "result": "Pipeline alimenté" },
-        { "tag": "SALES B2B", "title": "Qualification grands comptes", "text": "Strategy Hub analyse les comptes cibles et recommande les meilleurs angles d'approche.", "result": "Bons prospects ciblés" },
-        { "tag": "ESN", "title": "Approche DSI & CTO", "text": "GrowthIQ construit des séquences adaptées aux cycles longs de l'industrie tech.", "result": "Cycle raccourci" }
+        { "tag": "DIRECTION", "title": "Revue d'exécution stratégique", "text": "La direction dispose d'une vision temps réel de l'alignement entre stratégie et exécution commerciale sur l'ensemble des business units.", "result": "Décisions fondées sur la réalité" },
+        { "tag": "SALES LEAD", "title": "Coaching manager", "text": "Le sales leadership identifie les managers hors stratégie et les coach sur les bons comptes.", "result": "Effort redirigé vers les priorités" },
+        { "tag": "MANAGER BU", "title": "Pilotage de périmètre", "text": "Les managers de BU détectent la dérive en amont et ajustent le focus avant que les objectifs trimestriels ne dérapent.", "result": "Correction de trajectoire proactive" }
       ],
-      "ctaTitle": "Prêt à trouver vos prochains clients ?",
-      "ctaSubtitle": "Qualifiez vos prospects et lancez vos séquences aujourd'hui.",
+      "ctaTitle": "Alignez la stratégie et l'exécution commerciale.",
+      "ctaSubtitle": "Découvrez comment GrowthIQ aide les cabinets d'engineering et services IT à transformer l'activité commerciale en intelligence de décision.",
       "primaryCta": "Demander une démo",
-      "secondaryCta": "Explorer GrowthIQ",
+      "secondaryCta": "Voir comment ça marche",
       "ctaButton": "Explorer GrowthIQ"
     },
     "governanceiq": {

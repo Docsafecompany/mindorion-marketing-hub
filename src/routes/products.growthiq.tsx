@@ -15,6 +15,7 @@ const theme = {
   ctaBg: "#0F6E56",
 };
 
+const policyTones = ["success", "warning"] as const;
 const featureIcons: [string[], string[]] = [
   ["🎯", "🏢", "🧠", "📅"],
   ["✉️", "🔄", "📊", "🔗"],
@@ -23,9 +24,9 @@ const featureIcons: [string[], string[]] = [
 export const Route = createFileRoute("/products/growthiq")({
   head: () => {
     const base = createStaticMeta({
-      title: "GrowthIQ | Outreach B2B intelligent | Mindorion",
+      title: "GrowthIQ | Commercial Execution Intelligence for Engineering & IT Services | Mindorion",
       description:
-        "GrowthIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
+        "GrowthIQ helps Engineering & IT Services firms guide business development, capture high-value operational signals and turn commercial activity into decision intelligence.",
       path: "/products/growthiq",
     });
     return {
@@ -40,7 +41,7 @@ export const Route = createFileRoute("/products/growthiq")({
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web",
             description:
-              "Structured B2B prospecting and outreach. Qualify opportunities with AI and generate personalized sequences.",
+              "Commercial execution intelligence for engineering and IT services firms. Align strategy with business development and operational signals.",
             url: "https://mindorion.com/products/growthiq",
             offers: {
               "@type": "Offer",
@@ -57,7 +58,8 @@ export const Route = createFileRoute("/products/growthiq")({
 
 function GrowthIQPage() {
   const { t } = useTranslation();
-  const rows = t("products.growthiq.heroRows", { returnObjects: true }) as Array<{ initials: string; title: string; city: string; score: string }>;
+  const heroStats = t("products.growthiq.heroStats", { returnObjects: true }) as Array<{ value: string; label: string }>;
+  const heroPolicies = (t("products.growthiq.heroPolicies", { returnObjects: true }) as string[]).map((text, i) => ({ text, tone: policyTones[i] }));
   const howItWorks = t("products.growthiq.howItWorks", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const cols = t("products.growthiq.featureColumns", { returnObjects: true }) as Array<{ title: string; items: Array<{ title: string; text: string }> }>;
   const scenarios = t("products.growthiq.scenarios", { returnObjects: true }) as Array<{ tag: string; title: string; text: string; result: string }>;
@@ -68,7 +70,7 @@ function GrowthIQPage() {
     title: t("products.growthiq.title"),
     subtitle: t("products.growthiq.subtitle"),
     theme,
-    heroPanel: { type: "pipeline", label: t("products.growthiq.heroLabel"), rows },
+    heroPanel: { type: "dashboard", label: t("products.growthiq.heroLabel"), stats: heroStats, policies: heroPolicies },
     howItWorks,
     featureColumns: [
       { title: cols[0].title, items: cols[0].items.map((it, i) => ({ ...it, icon: featureIcons[0][i] })) },

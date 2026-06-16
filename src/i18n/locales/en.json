@@ -401,52 +401,57 @@
       "ctaButton": "Explore ProposalIQ"
     },
     "growthiq": {
-      "seoTitle": "GrowthIQ | Intelligent B2B outreach | Mindorion",
-      "seoDescription": "GrowthIQ identifies your best B2B prospects, qualifies opportunities with AI and generates personalized outreach sequences to maximize reply rates.",
-      "eyebrow": "🎯 GROWTHIQ · INTELLIGENT B2B OUTREACH",
-      "title": "Find the right prospects. At the right time.",
-      "subtitle": "GrowthIQ identifies your best B2B prospects, qualifies opportunities with AI and generates personalized outreach sequences to maximize reply rates.",
-      "heroLabel": "PIPELINE · GROWTHIQ",
-      "heroRows": [
-        { "initials": "DL", "title": "Sales Director · Engineering", "city": "Lyon", "score": "94%" },
-        { "initials": "VP", "title": "VP Procurement · IT Services", "city": "Toulouse", "score": "88%" },
-        { "initials": "DG", "title": "MD · Consulting firm", "city": "Paris", "score": "81%" }
+      "seoTitle": "GrowthIQ | Commercial Execution Intelligence for Engineering & IT Services | Mindorion",
+      "seoDescription": "GrowthIQ helps Engineering & IT Services firms guide business development, capture high-value operational signals and turn commercial activity into decision intelligence.",
+      "eyebrow": "GrowthIQ — Commercial Execution Intelligence",
+      "title": "Align strategy with commercial execution.",
+      "subtitle": "GrowthIQ helps Engineering & IT Services firms guide business development, capture high-value operational signals and turn commercial activity into decision intelligence.",
+      "heroLabel": "EXECUTION DASHBOARD · GROWTHIQ",
+      "heroStats": [
+        { "value": "78%", "label": "Execution alignment" },
+        { "value": "84%", "label": "Manager effort score" },
+        { "value": "42", "label": "High-value signals/week" },
+        { "value": "7", "label": "Accounts requiring action" }
+      ],
+      "heroPolicies": [
+        "Strategic focus",
+        "Drift alert: Energy under-covered"
       ],
       "howItWorks": [
-        { "title": "Define", "text": "Describe your ideal target — industry, size, role, geography." },
-        { "title": "Qualify", "text": "AI identifies and scores your best prospects. Strategy Hub analyzes opportunities." },
-        { "title": "Reach out", "text": "Launch personalized multi-channel sequences and let GrowthIQ handle follow-ups." }
+        { "title": "Define", "text": "Set strategic focus areas, manager objectives and coverage expectations for each business unit." },
+        { "title": "Capture", "text": "Collect operational signals from proposals, commercial activity and delivery data in one place." },
+        { "title": "Align", "text": "Detect strategic drift, score execution alignment and surface the accounts requiring action." }
       ],
       "featureColumns": [
         {
-          "title": "Prospecting & qualification",
+          "title": "Execution & alignment",
           "items": [
-            { "title": "AI qualification", "text": "Relevance score on every prospect." },
-            { "title": "Intelligence Flags", "text": "Buying signals: growth, hiring, fundraising, news." },
-            { "title": "Strategy Hub", "text": "In-depth account analysis and approach recommendations." },
-            { "title": "Meeting Intelligence", "text": "Automated prep for your sales meetings with prospect context." }
+            { "title": "Strategic focus mapping", "text": "Define focus areas and track coverage across teams and geographies." },
+            { "title": "Manager effort scoring", "text": "Score commercial effort alignment with strategic priorities." },
+            { "title": "Operational signals", "text": "High-value signals from proposals, delivery and commercial activity." },
+            { "title": "Drift detection", "text": "Alert when execution deviates from strategic intent." }
           ]
         },
         {
-          "title": "Outreach & follow-up",
+          "title": "Intelligence & action",
           "items": [
-            { "title": "Multi-channel sequences", "text": "Email, LinkedIn, call — sequences personalized per profile and industry." },
-            { "title": "Automated follow-up", "text": "Smart follow-ups based on behavior: open, click, reply." },
-            { "title": "Team dashboards", "text": "Outreach performance, reply rates and pipeline in real time." },
+            { "title": "Decision dashboards", "text": "Real-time views for leadership, sales and BU managers." },
+            { "title": "Account prioritization", "text": "Surface the accounts requiring action based on execution signals." },
+            { "title": "Team performance", "text": "Measure execution quality and strategic alignment by team." },
             { "title": "CRM integrations", "text": "Salesforce, HubSpot (Enterprise)." }
           ]
         }
       ],
       "scenarioLabel": "USE CASES",
       "scenarios": [
-        { "tag": "CONSULTANT", "title": "Client portfolio growth", "text": "GrowthIQ identifies decision-makers in the target sector and generates the approach sequences.", "result": "Pipeline filled" },
-        { "tag": "B2B SALES", "title": "Key account qualification", "text": "Strategy Hub analyzes target accounts and recommends the best angles of approach.", "result": "Right prospects targeted" },
-        { "tag": "ESN", "title": "CIO & CTO outreach", "text": "GrowthIQ builds sequences tailored to the long cycles of the tech industry.", "result": "Cycle shortened" }
+        { "tag": "EXECUTIVE", "title": "Strategic execution review", "text": "Leadership sees real-time alignment between strategy and commercial execution across all business units.", "result": "Decisions grounded in reality" },
+        { "tag": "SALES LEAD", "title": "Manager coaching", "text": "Sales leadership identifies where managers are off-strategy and coaches them on the right accounts.", "result": "Effort redirected to priority" },
+        { "tag": "BU MANAGER", "title": "Perimeter steering", "text": "Business unit managers detect drift early and adjust focus before quarterly targets slip.", "result": "Proactive course correction" }
       ],
-      "ctaTitle": "Ready to find your next clients?",
-      "ctaSubtitle": "Qualify your prospects and launch your sequences today.",
+      "ctaTitle": "Align strategy with commercial execution.",
+      "ctaSubtitle": "See how GrowthIQ helps engineering and IT services firms turn commercial activity into decision intelligence.",
       "primaryCta": "Request a demo",
-      "secondaryCta": "Explore GrowthIQ",
+      "secondaryCta": "See how it works",
       "ctaButton": "Explore GrowthIQ"
     },
     "governanceiq": {
