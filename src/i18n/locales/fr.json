@@ -153,26 +153,25 @@
       "ESN & Ingénierie",
       "Engineering & IT Services"
     ],
+    "productsSectionTitle": "Applications au sein de Mindorion OS",
     "heroProducts": [
       {
         "icon": "🛡",
         "title": "ProposalIQ",
-        "text": "Chaque document envoyé est impeccable. Réputation protégée, crédibilité intacte, client rassuré.",
-        "cta": "Essayer ProposalIQ"
+        "text": "De la RFQ à la proposition validée. Générez des modèles de proposition structurés à partir de votre drive client intelligent, validez les exigences clés et routez les approbations via un workflow conçu pour les cabinets de services d'ingénierie.",
+        "cta": "Explorer ProposalIQ"
       },
       {
         "icon": "🎯",
         "title": "GrowthIQ",
-        "text": "Chaque prospect est le bon. Pipeline B2B alimenté par l'IA, outreach précis, taux de conversion en hausse.",
-        "cta": "Essayer GrowthIQ"
-      },
-      {
-        "icon": "📋",
-        "title": "Governance Layer",
-        "text": "Chaque processus est conforme. Gouvernance documentaire à l'échelle de l'équipe, sans effort.",
-        "cta": "Essayer Governance Layer"
+        "text": "Maintenez l'exécution commerciale alignée sur la stratégie. Guidez les managers, suivez l'effort, détectez les dérives stratégiques et connectez l'activité commerciale aux résultats business réels à travers les équipes et les géographies.",
+        "cta": "Explorer GrowthIQ"
       }
     ],
+    "governanceLayer": {
+      "text": "La gouvernance est intégrée à travers la plateforme : chaque workflow crée des données opérationnelles structurées et auditables pour les décisions de direction.",
+      "cta": "En savoir plus sur la gouvernance"
+    },
     "stats": [
       {
         "value": "14",

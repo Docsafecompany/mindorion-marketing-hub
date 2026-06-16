@@ -153,26 +153,25 @@
       "IT services & engineering",
       "Engineering & IT Services"
     ],
+    "productsSectionTitle": "Applications inside Mindorion OS",
     "heroProducts": [
       {
         "icon": "🛡",
         "title": "ProposalIQ",
-        "text": "Every document sent is flawless. Reputation protected, credibility intact, client reassured.",
-        "cta": "Try ProposalIQ"
+        "text": "From RFQ to validated proposal. Generate structured proposal templates from your intelligent client drive, validate key requirements, and route approvals through a workflow built for engineering services firms.",
+        "cta": "Explore ProposalIQ"
       },
       {
         "icon": "🎯",
         "title": "GrowthIQ",
-        "text": "Every prospect is the right one. AI-powered B2B pipeline, precise outreach, higher conversion rates.",
-        "cta": "Try GrowthIQ"
-      },
-      {
-        "icon": "📋",
-        "title": "Governance Layer",
-        "text": "Every process is compliant. Team-scale document governance, without friction.",
-        "cta": "Try Governance Layer"
+        "text": "Keep commercial execution aligned with strategy. Guide managers, track effort, detect strategic drift, and connect sales activity to real business outcomes across teams and geographies.",
+        "cta": "Explore GrowthIQ"
       }
     ],
+    "governanceLayer": {
+      "text": "Governance is embedded across the platform: every workflow creates structured, auditable operational data for leadership decisions.",
+      "cta": "Learn about governance"
+    },
     "stats": [
       {
         "value": "14",
