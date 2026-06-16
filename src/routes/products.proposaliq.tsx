@@ -24,9 +24,9 @@ const featureIcons: [string[], string[]] = [
 export const Route = createFileRoute("/products/proposaliq")({
   head: () => {
     const base = createStaticMeta({
-      title: "ProposalIQ | Réputation documentaire avant envoi | Mindorion",
+      title: "ProposalIQ | Pre-Sales Operating System for Engineering & IT Services | Mindorion",
       description:
-        "ProposalIQ analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
+        "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms create compliant, high-quality proposals faster.",
       path: "/products/proposaliq",
     });
     return {
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/products/proposaliq")({
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web",
             description:
-              "Document quality and metadata control for B2B teams. Detect risks before sending — metadata, comments, sensitive data, AI tone.",
+              "Pre-sales operating system for engineering and IT services firms. From RFQ intake to validated proposal submission.",
             url: "https://mindorion.com/products/proposaliq",
             offers: {
               "@type": "Offer",
@@ -86,6 +86,7 @@ function ProposalIQPage() {
     ctaTitle: t("products.proposaliq.ctaTitle"),
     ctaSubtitle: t("products.proposaliq.ctaSubtitle"),
     primaryCta: t("products.proposaliq.primaryCta"),
+    secondaryCta: { label: t("products.proposaliq.secondaryCta"), href: "#workflow" },
   };
 
   return (

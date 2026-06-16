@@ -345,56 +345,57 @@
   },
   "products": {
     "proposaliq": {
-      "seoTitle": "ProposalIQ | Document reputation before send | Mindorion",
-      "seoDescription": "ProposalIQ analyzes every document in 30 seconds and detects anything that could harm your professional reputation before sending — metadata, comments, sensitive data, AI tone.",
-      "eyebrow": "🛡 PROPOSAL IQ · DOCUMENT REPUTATION",
-      "title": "Is your document really ready to send?",
-      "subtitle": "ProposalIQ analyzes every document in 30 seconds and detects anything that could harm your professional reputation before your client opens it.",
-      "heroLabel": "ANALYSIS REPORT · PROPOSAL IQ",
+      "seoTitle": "ProposalIQ | Pre-Sales Operating System for Engineering & IT Services | Mindorion",
+      "seoDescription": "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms create compliant, high-quality proposals faster.",
+      "eyebrow": "ProposalIQ — Pre-Sales Intelligence",
+      "title": "The Pre-Sales Operating System for Engineering & IT Services.",
+      "subtitle": "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms create compliant, high-quality proposals faster.",
+      "heroLabel": "PROPOSAL STATUS · PROPOSAL IQ",
       "heroItems": [
-        "Internal author in properties",
-        "3 hidden review comments",
-        "Placeholder [CLIENT NAME] not replaced",
-        "✓ Document cleaned — Download"
+        "Unmapped requirements detected",
+        "Pricing assumptions not validated",
+        "Compliance checklist pending",
+        "✓ Proposal validated — Ready for submission"
       ],
       "howItWorks": [
-        { "title": "Upload", "text": "Drop your document — Word, PDF, PPT or Excel — directly into ProposalIQ." },
-        { "title": "Analyze", "text": "ProposalIQ scans 14 risk categories in under 30 seconds and produces a complete report." },
-        { "title": "Send", "text": "Download the cleaned version and send with confidence. Quality score guaranteed." }
+        { "title": "Capture", "text": "Ingest RFQ details, client requirements and historical proposal data into ProposalIQ." },
+        { "title": "Generate", "text": "Build structured proposal templates with validated requirements, pricing and compliance checks." },
+        { "title": "Submit", "text": "Route through approval workflows and submit with confidence — every proposal tracked end-to-end." }
       ],
       "featureColumns": [
         {
-          "title": "14 risk categories detected",
+          "title": "Proposal generation & validation",
           "items": [
-            { "title": "Hidden metadata", "text": "Author, company, revision history, file path." },
-            { "title": "Comments & track changes", "text": "Review comments, tracked changes still active." },
-            { "title": "Personal data", "text": "Names, emails, numbers in properties or content." },
-            { "title": "Forgotten placeholders", "text": "[CLIENT NAME], TODO, INSERT HERE." },
-            { "title": "Detectable AI tone", "text": "Wording that's too generic or typically AI-generated." },
-            { "title": "Spelling errors", "text": "Spelling and grammar correction before sending." }
+            { "title": "RFQ intelligence", "text": "Extract and map client requirements automatically from RFQ documents." },
+            { "title": "Template generation", "text": "Generate structured proposals from your intelligent client drive and past wins." },
+            { "title": "Requirement validation", "text": "Validate key deliverables, compliance clauses and pricing assumptions before submission." },
+            { "title": "Approval routing", "text": "Route proposals through review and sign-off workflows built for engineering services." },
+            { "title": "Version control", "text": "Track every iteration with full audit history from first draft to final submission." },
+            { "title": "Compliance checks", "text": "Built-in validation for industry standards, client-specific terms and internal policies." }
           ]
         },
         {
-          "title": "Supported formats & features",
+          "title": "Capabilities & integrations",
           "items": [
-            { "title": "Word (.docx)", "text": "Full analysis of content, properties, revisions." },
-            { "title": "Excel & PowerPoint", "text": "Metadata, comments, hidden data." },
-            { "title": "PDF (Business+)", "text": "Properties and embedded content in PDFs." },
-            { "title": "Results in 30 seconds", "text": "Full report, no install required." },
-            { "title": "0 data stored", "text": "Files deleted after analysis. GDPR by design." },
-            { "title": "One-click cleanup", "text": "Download the clean version straight from the report." }
+            { "title": "Client drive sync", "text": "Connect your intelligent client drive for instant access to historical proposals and templates." },
+            { "title": "Multi-format output", "text": "Export to Word, PDF and PowerPoint with consistent, client-ready formatting." },
+            { "title": "Real-time collaboration", "text": "Collaborate with subject matter experts, delivery leads and sales in one workspace." },
+            { "title": "Proposal analytics", "text": "Track win rates, cycle times and bottlenecks across your proposal pipeline." },
+            { "title": "Secure by design", "text": "Enterprise-grade access controls and data governance for sensitive client information." },
+            { "title": "CRM integration", "text": "Sync opportunities, contacts and proposal status with your existing CRM." }
           ]
         }
       ],
       "scenarioLabel": "THEY USE PROPOSAL IQ",
       "scenarios": [
-        { "tag": "CONSULTANT", "title": "Client proposal with internal metadata", "text": "ProposalIQ catches the internal author and 3 review comments before sending.", "result": "Reputation protected" },
-        { "tag": "SALES", "title": "RFP offer with cost price visible", "text": "Tracked changes were exposing the margin. ProposalIQ catches it before submission.", "result": "Margin protected" },
-        { "tag": "DELIVERY", "title": "Candidate CV with disqualification notes", "text": "Internal comments were still visible. ProposalIQ cleans before forwarding.", "result": "GDPR compliant" }
+        { "tag": "ENGINEERING", "title": "Complex RFQ with 200+ requirements", "text": "ProposalIQ mapped every requirement to past proposals and generated a compliant response in hours instead of days.", "result": "Won the deal" },
+        { "tag": "IT SERVICES", "title": "Multi-team proposal with conflicting assumptions", "text": "Validation caught pricing mismatches between delivery and sales before the client ever saw the proposal.", "result": "Margin protected" },
+        { "tag": "CONSULTING", "title": "Repeat client with evolving compliance needs", "text": "Compliance checks ensured every new clause was addressed without manually reviewing past submissions.", "result": "Client retained" }
       ],
-      "ctaTitle": "Ready to send with confidence?",
-      "ctaSubtitle": "Analyze your next document — result in 30 seconds.",
-      "primaryCta": "Try ProposalIQ"
+      "ctaTitle": "Ready to accelerate your pre-sales process?",
+      "ctaSubtitle": "See how ProposalIQ turns RFQs into winning proposals faster.",
+      "primaryCta": "Request a demo",
+      "secondaryCta": "See proposal workflow"
     },
     "growthiq": {
       "seoTitle": "GrowthIQ | Intelligent B2B outreach | Mindorion",

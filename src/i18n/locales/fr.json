@@ -345,56 +345,57 @@
   },
   "products": {
     "proposaliq": {
-      "seoTitle": "ProposalIQ | Réputation documentaire avant envoi | Mindorion",
-      "seoDescription": "ProposalIQ analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant envoi — métadonnées, commentaires, données sensibles, ton IA.",
-      "eyebrow": "🛡 PROPOSAL IQ · RÉPUTATION DOCUMENTAIRE",
-      "title": "Votre document est-il vraiment prêt à être envoyé ?",
-      "subtitle": "ProposalIQ analyse chaque document en 30 secondes et détecte tout ce qui peut nuire à votre réputation professionnelle avant que votre client ne l'ouvre.",
-      "heroLabel": "RAPPORT D'ANALYSE · PROPOSAL IQ",
+      "seoTitle": "ProposalIQ | Système d'exploitation pré-vente pour l'ingénierie et les services IT | Mindorion",
+      "seoDescription": "De la réception de la RFQ à la soumission finale, ProposalIQ aide les cabinets d'ingénierie et de services IT à créer des propositions conformes et de haute qualité plus rapidement.",
+      "eyebrow": "ProposalIQ — Intelligence Pré-Vente",
+      "title": "Le système d'exploitation pré-vente pour l'ingénierie et les services IT.",
+      "subtitle": "De la réception de la RFQ à la soumission finale, ProposalIQ aide les cabinets d'ingénierie et de services IT à créer des propositions conformes et de haute qualité plus rapidement.",
+      "heroLabel": "STATUT PROPOSITION · PROPOSAL IQ",
       "heroItems": [
-        "Auteur interne dans les propriétés",
-        "3 commentaires de révision cachés",
-        "Placeholder [NOM CLIENT] non remplacé",
-        "✓ Document nettoyé — Télécharger"
+        "Exigences non mappées détectées",
+        "Hypothèses de prix non validées",
+        "Checklist de conformité en attente",
+        "✓ Proposition validée — Prête pour soumission"
       ],
       "howItWorks": [
-        { "title": "Uploadez", "text": "Glissez votre document — Word, PDF, PPT ou Excel — directement dans ProposalIQ." },
-        { "title": "Analysez", "text": "ProposalIQ scanne 14 catégories de risques en moins de 30 secondes et génère un rapport complet." },
-        { "title": "Envoyez", "text": "Téléchargez la version nettoyée et envoyez avec confiance. Score qualité garanti." }
+        { "title": "Capturer", "text": "Intégrez les détails de la RFQ, les exigences client et les données de proposition historiques dans ProposalIQ." },
+        { "title": "Générer", "text": "Construisez des modèles de proposition structurés avec validation des exigences, du pricing et de la conformité." },
+        { "title": "Soumettre", "text": "Routez via les workflows d'approbation et soumettez en confiance — chaque proposition tracée de bout en bout." }
       ],
       "featureColumns": [
         {
-          "title": "14 catégories de risques détectées",
+          "title": "Génération et validation de propositions",
           "items": [
-            { "title": "Métadonnées cachées", "text": "Auteur, entreprise, historique de révision, chemin de fichier." },
-            { "title": "Commentaires & track changes", "text": "Commentaires de révision, modifications suivies encore actives." },
-            { "title": "Données personnelles", "text": "Noms, emails, numéros dans les propriétés ou le contenu." },
-            { "title": "Placeholders oubliés", "text": "[NOM CLIENT], TODO, INSÉRER ICI." },
-            { "title": "Ton IA détectable", "text": "Formulations trop génériques ou typiquement générées par IA." },
-            { "title": "Fautes d'orthographe", "text": "Correction orthographique et grammaticale avant envoi." }
+            { "title": "Intelligence RFQ", "text": "Extrayez et mappez automatiquement les exigences client depuis les documents RFQ." },
+            { "title": "Génération de modèles", "text": "Générez des propositions structurées à partir de votre drive client intelligent et des propositions gagnantes passées." },
+            { "title": "Validation des exigences", "text": "Validez les livrables clés, les clauses de conformité et les hypothèses de prix avant soumission." },
+            { "title": "Routage d'approbation", "text": "Routez les propositions via des workflows de revue et de validation conçus pour les services d'ingénierie." },
+            { "title": "Contrôle de versions", "text": "Tracez chaque itération avec l'historique d'audit complet du premier brouillon à la soumission finale." },
+            { "title": "Checks de conformité", "text": "Validation intégrée pour les normes sectorielles, les termes spécifiques client et les politiques internes." }
           ]
         },
         {
-          "title": "Formats supportés & fonctionnalités",
+          "title": "Capacités et intégrations",
           "items": [
-            { "title": "Word (.docx)", "text": "Analyse complète contenu, propriétés, révisions." },
-            { "title": "Excel & PowerPoint", "text": "Métadonnées, commentaires, données cachées." },
-            { "title": "PDF (Business+)", "text": "Propriétés et contenu embarqué dans les PDFs." },
-            { "title": "Résultats en 30 secondes", "text": "Rapport complet, sans installation." },
-            { "title": "0 donnée stockée", "text": "Fichiers supprimés après analyse. RGPD by design." },
-            { "title": "Nettoyage en un clic", "text": "Téléchargez la version propre depuis le rapport." }
+            { "title": "Sync drive client", "text": "Connectez votre drive client intelligent pour un accès instantané aux propositions historiques et aux modèles." },
+            { "title": "Multi-format", "text": "Exportez en Word, PDF et PowerPoint avec une mise en forme cohérente et client-ready." },
+            { "title": "Collaboration temps réel", "text": "Collaborez avec les experts métiers, les leads delivery et les commerciaux dans un seul espace." },
+            { "title": "Analytics propositions", "text": "Suivez les taux de gain, les temps de cycle et les goulots d'étranglement sur votre pipeline de propositions." },
+            { "title": "Sécurisé by design", "text": "Contrôles d'accès et gouvernance des données de niveau entreprise pour les informations client sensibles." },
+            { "title": "Intégration CRM", "text": "Synchronisez les opportunités, contacts et statuts de proposition avec votre CRM existant." }
           ]
         }
       ],
       "scenarioLabel": "ILS UTILISENT PROPOSAL IQ",
       "scenarios": [
-        { "tag": "CONSULTANT", "title": "Proposition client avec métadonnées internes", "text": "ProposalIQ détecte l'auteur interne et 3 commentaires de révision avant envoi.", "result": "Réputation protégée" },
-        { "tag": "COMMERCIAL", "title": "Offre RFP avec prix de revient visible", "text": "Le suivi des modifications révélait la marge. ProposalIQ le détecte avant soumission.", "result": "Marge protégée" },
-        { "tag": "DELIVERY", "title": "CV candidat avec notes de disqualification", "text": "Les commentaires internes étaient encore visibles. ProposalIQ nettoie avant transmission.", "result": "RGPD conforme" }
+        { "tag": "INGÉNIERIE", "title": "RFQ complexe avec 200+ exigences", "text": "ProposalIQ a mappé chaque exigence aux propositions passées et généré une réponse conforme en heures au lieu de jours.", "result": "Deal remporté" },
+        { "tag": "SERVICES IT", "title": "Proposition multi-équipe avec hypothèses contradictoires", "text": "La validation a détecté les écarts de pricing entre delivery et sales avant que le client ne voie la proposition.", "result": "Marge protégée" },
+        { "tag": "CONSEIL", "title": "Client récurrent avec besoins de conformité évolutifs", "text": "Les checks de conformité ont garanti que chaque nouvelle clause était adressée sans revue manuelle des soumissions passées.", "result": "Client fidélisé" }
       ],
-      "ctaTitle": "Prêt à envoyer avec confiance ?",
-      "ctaSubtitle": "Analysez votre prochain document — résultat en 30 secondes.",
-      "primaryCta": "Essayer ProposalIQ"
+      "ctaTitle": "Prêt à accélérer votre processus pré-vente ?",
+      "ctaSubtitle": "Découvrez comment ProposalIQ transforme les RFQs en propositions gagnantes plus rapidement.",
+      "primaryCta": "Demander une démo",
+      "secondaryCta": "Voir le workflow de proposition"
     },
     "growthiq": {
       "seoTitle": "GrowthIQ | Outreach B2B intelligent | Mindorion",
