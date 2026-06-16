@@ -1,33 +1,22 @@
 # Mindorion
 
-> Mindorion helps B2B teams protect their professional reputation by controlling documents, structuring outreach, and managing compliance before every external send.
+> Mindorion is the enterprise operating system for Engineering & IT Services firms — unifying proposals, commercial execution and governance so teams align execution with strategy and decide on reality, not scattered reporting.
 
-Mindorion offers three products: ProposalIQ (document quality and metadata control), GrowthIQ (structured B2B outreach), and Governance Layer (compliance and governance for external communications).
+Mindorion provides two applications on one platform: ProposalIQ (pre-sales and proposal operations) and GrowthIQ (commercial execution intelligence). A cross-platform Governance Layer keeps every workflow producing structured, auditable operational data — it is a layer across the platform, not a standalone product.
 
 ## Pages
 
-- [Home](/): Overview of Mindorion's professional intelligence platform.
-- [About](/about): Company story, mission, and team.
-- [Pricing](/pricing): Plans and pricing for all products.
+- [Home](/): The enterprise OS for Engineering & IT Services.
+- [Why Mindorion](/why-mindorion): Our thesis, approach and team.
+- [Pricing](/pricing): Plans for ProposalIQ and GrowthIQ.
 - [Contact](/contact): Request a personalized demo.
-- [Use cases](/use-cases): Real-world scenarios for B2B teams.
-- [Security](/security): Security practices and certifications.
-- [Blog](/blog): Articles on document quality, outreach, and compliance.
+- [Use cases](/use-cases): How Engineering & IT Services firms use Mindorion.
+- [Security](/security): Security and data principles.
 
 ## Products
 
-- [ProposalIQ](/products/proposaliq): Document quality control and metadata cleanup.
-- [GrowthIQ](/products/growthiq): Structured B2B prospecting and outreach.
-- [Governance Layer](/products/governanceiq): Compliance and governance for external sends.
-
-## Blog
-
-- [Hidden risks in documents](/blog/hidden-risks-documents): What sensitive data hides in your files.
-- [Consulting quality gate](/blog/consulting-quality-gate): Quality controls before client delivery.
-- [What gets cleaned](/blog/what-gets-cleaned): Document cleanup explained.
-- [ROI of document cleanup](/blog/roi-document-cleanup): Business value of cleaning files.
-- [Remove metadata in Word before sending](/blog/remove-metadata-word-before-sending): Practical guide.
-- [Track changes in proposals](/blog/track-changes-proposals): Managing revisions safely.
+- [ProposalIQ](/products/proposaliq): Pre-sales and proposal operations — from RFQ intake to validated, governed submission.
+- [GrowthIQ](/products/growthiq): Commercial execution intelligence — align commercial activity with strategy and turn it into decision intelligence.
 
 ## Optional
 

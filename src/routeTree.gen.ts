@@ -21,7 +21,6 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductsProposaliqRouteImport } from './routes/products.proposaliq'
 import { Route as ProductsGrowthiqRouteImport } from './routes/products.growthiq'
-import { Route as ProductsGovernanceiqRouteImport } from './routes/products.governanceiq'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -87,11 +86,6 @@ const ProductsGrowthiqRoute = ProductsGrowthiqRouteImport.update({
   path: '/products/growthiq',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProductsGovernanceiqRoute = ProductsGovernanceiqRouteImport.update({
-  id: '/products/governanceiq',
-  path: '/products/governanceiq',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LegalTermsRoute = LegalTermsRouteImport.update({
   id: '/legal/terms',
   path: '/legal/terms',
@@ -127,7 +121,6 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
-  '/products/governanceiq': typeof ProductsGovernanceiqRoute
   '/products/growthiq': typeof ProductsGrowthiqRoute
   '/products/proposaliq': typeof ProductsProposaliqRoute
   '/api/public/geo': typeof ApiPublicGeoRoute
@@ -146,7 +139,6 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
-  '/products/governanceiq': typeof ProductsGovernanceiqRoute
   '/products/growthiq': typeof ProductsGrowthiqRoute
   '/products/proposaliq': typeof ProductsProposaliqRoute
   '/api/public/geo': typeof ApiPublicGeoRoute
@@ -166,7 +158,6 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
-  '/products/governanceiq': typeof ProductsGovernanceiqRoute
   '/products/growthiq': typeof ProductsGrowthiqRoute
   '/products/proposaliq': typeof ProductsProposaliqRoute
   '/api/public/geo': typeof ApiPublicGeoRoute
@@ -187,7 +178,6 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/legal/privacy'
     | '/legal/terms'
-    | '/products/governanceiq'
     | '/products/growthiq'
     | '/products/proposaliq'
     | '/api/public/geo'
@@ -206,7 +196,6 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/legal/privacy'
     | '/legal/terms'
-    | '/products/governanceiq'
     | '/products/growthiq'
     | '/products/proposaliq'
     | '/api/public/geo'
@@ -225,7 +214,6 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/legal/privacy'
     | '/legal/terms'
-    | '/products/governanceiq'
     | '/products/growthiq'
     | '/products/proposaliq'
     | '/api/public/geo'
@@ -244,7 +232,6 @@ export interface RootRouteChildren {
   WhyMindorionRoute: typeof WhyMindorionRoute
   LegalPrivacyRoute: typeof LegalPrivacyRoute
   LegalTermsRoute: typeof LegalTermsRoute
-  ProductsGovernanceiqRoute: typeof ProductsGovernanceiqRoute
   ProductsGrowthiqRoute: typeof ProductsGrowthiqRoute
   ProductsProposaliqRoute: typeof ProductsProposaliqRoute
   ApiPublicGeoRoute: typeof ApiPublicGeoRoute
@@ -336,13 +323,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsGrowthiqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/products/governanceiq': {
-      id: '/products/governanceiq'
-      path: '/products/governanceiq'
-      fullPath: '/products/governanceiq'
-      preLoaderRoute: typeof ProductsGovernanceiqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/legal/terms': {
       id: '/legal/terms'
       path: '/legal/terms'
@@ -397,7 +377,6 @@ const rootRouteChildren: RootRouteChildren = {
   WhyMindorionRoute: WhyMindorionRoute,
   LegalPrivacyRoute: LegalPrivacyRoute,
   LegalTermsRoute: LegalTermsRoute,
-  ProductsGovernanceiqRoute: ProductsGovernanceiqRoute,
   ProductsGrowthiqRoute: ProductsGrowthiqRoute,
   ProductsProposaliqRoute: ProductsProposaliqRoute,
   ApiPublicGeoRoute: ApiPublicGeoRoute,

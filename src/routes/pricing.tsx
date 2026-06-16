@@ -298,7 +298,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               {
                 title: "INCLUS",
                 items: [
-                  { label: "Prospects qualifiés illimités", included: true },
+                  { label: "Couverture de comptes illimitée", included: true },
                   { label: "Qualification IA", included: true },
                   { label: "Intelligence Flags", included: true },
                   { label: "Séquences simples", included: true },
@@ -389,15 +389,15 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         ],
         comparison: [
           {
-            title: "PROSPECTION",
+            title: "EXÉCUTION COMMERCIALE",
             rows: [
-              { feature: "Prospects qualifiés", values: { starter: "Illimité", pro: "Illimité", business: "Illimité", enterprise: "Illimité" } },
+              { feature: "Couverture des comptes", values: { starter: "Illimité", pro: "Illimité", business: "Illimité", enterprise: "Illimité" } },
               { feature: "Strategy Hub", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Meeting Intelligence", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
             ],
           },
           {
-            title: "OUTREACH",
+            title: "CADENCE D'EXÉCUTION",
             rows: [
               { feature: "Séquences simples", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Séquences multi-canal", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
@@ -622,7 +622,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               {
                 title: "INCLUDED",
                 items: [
-                  { label: "Unlimited qualified prospects", included: true },
+                  { label: "Unlimited account coverage", included: true },
                   { label: "AI qualification", included: true },
                   { label: "Intelligence Flags", included: true },
                   { label: "Basic sequences", included: true },
@@ -713,15 +713,15 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         ],
         comparison: [
           {
-            title: "PROSPECTING",
+            title: "COMMERCIAL EXECUTION",
             rows: [
-              { feature: "Qualified prospects", values: { starter: "Unlimited", pro: "Unlimited", business: "Unlimited", enterprise: "Unlimited" } },
+              { feature: "Account coverage", values: { starter: "Unlimited", pro: "Unlimited", business: "Unlimited", enterprise: "Unlimited" } },
               { feature: "Strategy Hub", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Meeting Intelligence", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
             ],
           },
           {
-            title: "OUTREACH",
+            title: "EXECUTION CADENCE",
             rows: [
               { feature: "Basic sequences", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Multi-channel sequences", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
@@ -775,13 +775,6 @@ export const Route = createFileRoute("/pricing")({
                 priceCurrency: "EUR",
                 price: "29",
                 url: "https://mindorion.com/products/growthiq",
-              },
-              {
-                "@type": "Offer",
-                name: "Governance Layer",
-                priceCurrency: "EUR",
-                price: "0",
-                url: "https://mindorion.com/products/governanceiq",
               },
             ],
           }),
