@@ -1,17 +1,18 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import FoundersSection from "@/components/FoundersSection";
 import { Button } from "@/components/ui/button";
 import { LINKEDIN_URL, createStaticMeta } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 
 export const Route = createFileRoute("/why-mindorion")({
   head: () =>
     createStaticMeta({
-      title: "Pourquoi Mindorion | Intelligence professionnelle B2B",
+      title: "Why Mindorion | Operational Foundation for Engineering & IT Services",
       description:
-        "Mindorion est un éditeur SaaS fondé en Estonie pour l'Engineering & IT Services. Découvrez notre mission, notre équipe et notre approche build in public. ProposalIQ, GrowthIQ, Governance Layer.",
+        "Mindorion standardizes workflows, structures enterprise data and aligns execution with strategy so organizations can scale with governance, compliance and efficient AI adoption.",
       path: "/why-mindorion",
     }),
   component: WhyMindorionPage,
@@ -19,41 +20,81 @@ export const Route = createFileRoute("/why-mindorion")({
 
 function WhyMindorionPage() {
   const { t } = useTranslation();
-  const tags = t("about.tags", { returnObjects: true }) as string[];
-  const stats = t("about.stats", { returnObjects: true }) as Array<{ value: string; label: string }>;
   const values = t("about.values", { returnObjects: true }) as Array<{ icon: string; title: string; text: string }>;
 
   return (
     <div className="section-shell section-space space-y-8">
-
-      <section className="grid gap-6 rounded-xl bg-[var(--color-about-dark)] p-6 text-white lg:grid-cols-[1.5fr_1fr] lg:p-8">
-        <div>
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-pricing-primary)]">{t("about.eyebrow")}</div>
-          <h1 className="headline-balance mt-5 text-4xl font-extrabold leading-tight sm:text-5xl">
-            {t("about.heroTitle1")}<span className="font-medium italic text-[var(--color-pricing-primary-soft)]">{t("about.heroTitle2")}</span>
+      {/* Hero */}
+      <section className="rounded-xl bg-[var(--color-about-dark)] px-6 py-12 text-white lg:px-8 lg:py-16">
+        <div className="mx-auto max-w-4xl text-center">
+          <h1 className="headline-balance text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+            Building the operational foundation for scalable Engineering &amp; IT Services firms.
           </h1>
-          <p className="mt-5 max-w-3xl text-sm leading-7 text-[var(--color-about-dark-muted)] sm:text-base">
-            {t("about.heroText")}
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-[var(--color-about-dark-muted)] sm:text-lg">
+            Mindorion standardizes workflows, structures enterprise data and aligns execution with strategy — so organizations can scale with governance, compliance and efficient AI adoption.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3 text-sm text-white/90">
-            {tags.map((tag) => (
-              <span key={tag} className="rounded-full bg-white/6 px-3 py-1.5 text-sm text-white/85 ring-1 ring-white/8">
-                {tag}
-              </span>
-            ))}
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link to="/contact" onClick={() => trackEvent("cta_clicked", { cta: "why_mindorion_demo" })}>
+              <Button size="lg" className="min-w-44 gap-1 rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
+                Request a demo
+              </Button>
+            </Link>
+            <Link to="/products/proposaliq" onClick={() => trackEvent("cta_clicked", { cta: "why_mindorion_explore" })}>
+              <Button size="lg" variant="outline" className="min-w-44 rounded-xl border-white/20 text-white hover:bg-white/10 hover:text-white">
+                Explore products
+              </Button>
+            </Link>
           </div>
-        </div>
-
-        <div className="space-y-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="rounded-xl border border-white/8 bg-white/4 px-5 py-5">
-              <div className="text-4xl font-extrabold text-white">{stat.value}</div>
-              <div className="mt-2 text-xs font-medium tracking-[0.14em] text-[var(--color-about-dark-muted)]">{stat.label}</div>
-            </div>
-          ))}
         </div>
       </section>
 
+      {/* Problem */}
+      <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 sm:px-8 lg:py-14">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="headline-balance text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
+            Growth creates complexity faster than the organization can absorb it.
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base">
+            As Engineering &amp; IT Services firms grow, execution becomes harder to control. Data lives across CRMs, Excel files, emails, proposals and local drives. Teams develop their own ways of working. Reporting becomes manual. Decisions are made on incomplete information.
+          </p>
+        </div>
+      </section>
+
+      {/* Foundation thesis + pyramid */}
+      <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 sm:px-8 lg:py-14">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-lg font-semibold text-foreground sm:text-xl">
+            AI is not the foundation. AI becomes scalable when data, workflows and governance are already structured.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-10 flex max-w-3xl flex-col-reverse items-center gap-1.5 sm:gap-2">
+          {/* Bottom — widest */}
+          <div className="w-full rounded-xl editorial-purple-bg px-5 py-5 text-center text-white sm:px-6 sm:py-6">
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-80">Base</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">Mindorion Operating System — the workflow layer where operational activity happens</div>
+          </div>
+          <div className="w-[92%] rounded-xl editorial-purple-soft px-5 py-5 text-center sm:px-6 sm:py-6">
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-70">Process</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">Standardized workflows — teams execute processes consistently</div>
+          </div>
+          <div className="w-[84%] rounded-xl editorial-green-soft px-5 py-5 text-center sm:px-6 sm:py-6">
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-70">Data</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">Structured enterprise data — fragmented activity becomes usable decision data</div>
+          </div>
+          <div className="w-[76%] rounded-xl editorial-amber-soft px-5 py-5 text-center sm:px-6 sm:py-6">
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-70">Control</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">Governance &amp; compliance — control, auditability and trust</div>
+          </div>
+          {/* Top — narrowest */}
+          <div className="w-[68%] rounded-xl bg-[#1e3a5f] px-5 py-5 text-center text-white sm:px-6 sm:py-6">
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-80">Result</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">Efficient AI adoption — more accurate, cost-efficient and compliant, as a result</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission */}
       <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 text-center sm:px-8">
         <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("about.missionEyebrow")}</div>
         <h2 className="headline-balance mx-auto mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
@@ -66,6 +107,7 @@ function WhyMindorionPage() {
 
       <FoundersSection />
 
+      {/* Values */}
       <section className="grid gap-6 md:grid-cols-3">
         {values.map((value) => (
           <article key={value.title} className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
@@ -76,6 +118,7 @@ function WhyMindorionPage() {
         ))}
       </section>
 
+      {/* Final CTA */}
       <section className="flex flex-col gap-5 rounded-[10px] bg-[var(--color-about-dark)] px-6 py-6 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <h2 className="text-2xl font-bold text-white">{t("about.ctaTitle")}</h2>
