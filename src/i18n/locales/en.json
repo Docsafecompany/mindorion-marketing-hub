@@ -1,8 +1,8 @@
 {
   "site": {
     "name": "Mindorion",
-    "tagline": "Professional intelligence for B2B teams.",
-    "description": "Documents, outreach and governance, one platform.",
+    "tagline": "The enterprise OS for Engineering & IT Services.",
+    "description": "Proposals, commercial execution and governance on one operating system.",
     "language": "EN",
     "switchLanguage": "FR / EN",
     "copyright": "© 2026 Mindorion OÜ. All rights reserved.",
@@ -72,7 +72,7 @@
     "mobileDescription": "Explore Mindorion products, use cases and resources."
   },
   "footer": {
-    "brandText": "Professional intelligence for B2B teams. Documents, outreach and governance, one platform.",
+    "brandText": "The enterprise OS for Engineering & IT Services. Proposals, commercial execution and governance on one operating system.",
     "linkedin": "LinkedIn",
     "contact": "Contact",
     "products": "PRODUCTS",

@@ -1,8 +1,8 @@
 {
   "site": {
     "name": "Mindorion",
-    "tagline": "Intelligence professionnelle pour les équipes B2B.",
-    "description": "Documents, prospection et gouvernance, une seule plateforme.",
+    "tagline": "L'OS d'entreprise pour l'ingénierie et les services IT.",
+    "description": "Propositions, exécution commerciale et gouvernance sur un seul système opérationnel.",
     "language": "FR",
     "switchLanguage": "FR / EN",
     "copyright": "© 2026 Mindorion OÜ. Tous droits réservés.",
@@ -72,7 +72,7 @@
     "mobileDescription": "Explorez les produits, cas d'usage et ressources Mindorion."
   },
   "footer": {
-    "brandText": "Intelligence professionnelle pour les équipes B2B. Documents, prospection et gouvernance, une seule plateforme.",
+    "brandText": "L'OS d'entreprise pour l'ingénierie et les services IT. Propositions, exécution commerciale et gouvernance sur un seul système opérationnel.",
     "linkedin": "LinkedIn",
     "contact": "Contact",
     "products": "PRODUITS",
@@ -182,15 +182,15 @@
     },
     "stats": [
       {
-        "value": "Faster",
+        "value": "Plus rapide",
         "label": "Cycles de proposition accélérés"
       },
       {
-        "value": "Aligned",
+        "value": "Aligné",
         "label": "Visibilité sur l'exécution de la stratégie"
       },
       {
-        "value": "Unified",
+        "value": "Unifié",
         "label": "Intelligence opérationnelle unifiée"
       }
     ],

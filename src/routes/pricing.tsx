@@ -156,12 +156,12 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               { title: "VOLUME", items: [{ label: "30 analyses / mois", included: true }, { label: "30 téléchargements / mois", included: true }] },
               { title: "DOCUMENTS", items: [{ label: "Word, PPT, Excel", included: true }] },
               {
-                title: "VÉRIFICATIONS PROPOSITION",
+                title: "DÉTECTIONS",
                 items: [
-                  { label: "Données internes & commentaires", included: true },
+                  { label: "Métadonnées & commentaires", included: true },
                   { label: "Placeholders oubliés", included: true },
                   { label: "Données personnelles", included: true },
-                  { label: "Score qualité proposition /100", included: true },
+                  { label: "Score qualité /100", included: true },
                   { label: "Fautes d'orthographe", included: false },
                   { label: "Ton IA", included: false },
                 ],
@@ -260,9 +260,9 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            title: "VÉRIFICATIONS PROPOSITION",
+            title: "DÉTECTIONS",
             rows: [
-              { feature: "Données internes & commentaires", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
+              { feature: "Métadonnées & commentaires", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Fautes d'orthographe", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Ton IA détectable", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
             ],
@@ -480,12 +480,12 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               { title: "VOLUME", items: [{ label: "30 analyses / month", included: true }, { label: "30 downloads / month", included: true }] },
               { title: "DOCUMENTS", items: [{ label: "Word, PPT, Excel", included: true }] },
               {
-                title: "PROPOSAL CHECKS",
+                title: "DETECTION",
                 items: [
-                  { label: "Internal data & comments", included: true },
+                  { label: "Metadata & comments", included: true },
                   { label: "Forgotten placeholders", included: true },
                   { label: "Personal data", included: true },
-                  { label: "Proposal quality score /100", included: true },
+                  { label: "Quality score /100", included: true },
                   { label: "Spelling", included: false },
                   { label: "AI tone", included: false },
                 ],
@@ -584,9 +584,9 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            title: "PROPOSAL CHECKS",
+            title: "DETECTIONS",
             rows: [
-              { feature: "Internal data & comments", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
+              { feature: "Metadata & comments", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Spelling", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Detectable AI tone", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
             ],
@@ -947,6 +947,10 @@ function PricingPage() {
 }
 
 function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteLabel }: { productKey: ProductId; billing: BillingMode; plan: LocalizedPlan; popularLabel: string; customLabel: string; suiteLabel: string }) {
+  const { i18n: planI18n } = useTranslation();
+  const isFr = planI18n.language?.slice(0, 2) === "fr";
+  const upgradeWhenLabel = isFr ? "Évoluer quand :" : "Upgrade when:";
+  const includesLabel = isFr ? "Inclut :" : "Includes:";
   const isEnterprise = Boolean(plan.enterprise);
   const isFeatured = Boolean(plan.featured);
   const isStandardPlan = !isEnterprise;
@@ -989,12 +993,12 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
         <p className={cn("mt-2 min-h-16 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
         {plan.upgradeWhen ? (
           <p className="mt-2 text-xs leading-5 text-muted-foreground">
-            <span className="font-semibold text-foreground">Upgrade when:</span> {plan.upgradeWhen}
+            <span className="font-semibold text-foreground">{upgradeWhenLabel}</span> {plan.upgradeWhen}
           </p>
         ) : null}
         {plan.includes ? (
           <p className="mt-2 text-xs leading-5 text-muted-foreground">
-            <span className="font-semibold text-foreground">Includes:</span> {plan.includes}
+            <span className="font-semibold text-foreground">{includesLabel}</span> {plan.includes}
           </p>
         ) : null}
 
