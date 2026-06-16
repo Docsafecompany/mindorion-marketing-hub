@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhyMindorionRouteImport } from './routes/why-mindorion'
 import { Route as UseCasesRouteImport } from './routes/use-cases'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SecurityRouteImport } from './routes/security'
@@ -26,6 +27,11 @@ import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiPublicGeoRouteImport } from './routes/api/public/geo'
 
+const WhyMindorionRoute = WhyMindorionRouteImport.update({
+  id: '/why-mindorion',
+  path: '/why-mindorion',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UseCasesRoute = UseCasesRouteImport.update({
   id: '/use-cases',
   path: '/use-cases',
@@ -117,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/security': typeof SecurityRoute
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
+  '/why-mindorion': typeof WhyMindorionRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByTo {
   '/security': typeof SecurityRoute
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
+  '/why-mindorion': typeof WhyMindorionRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
@@ -154,6 +162,7 @@ export interface FileRoutesById {
   '/security': typeof SecurityRoute
   '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
+  '/why-mindorion': typeof WhyMindorionRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/legal/privacy': typeof LegalPrivacyRoute
   '/legal/terms': typeof LegalTermsRoute
@@ -174,6 +183,7 @@ export interface FileRouteTypes {
     | '/security'
     | '/terms'
     | '/use-cases'
+    | '/why-mindorion'
     | '/blog/$slug'
     | '/legal/privacy'
     | '/legal/terms'
@@ -192,6 +202,7 @@ export interface FileRouteTypes {
     | '/security'
     | '/terms'
     | '/use-cases'
+    | '/why-mindorion'
     | '/blog/$slug'
     | '/legal/privacy'
     | '/legal/terms'
@@ -210,6 +221,7 @@ export interface FileRouteTypes {
     | '/security'
     | '/terms'
     | '/use-cases'
+    | '/why-mindorion'
     | '/blog/$slug'
     | '/legal/privacy'
     | '/legal/terms'
@@ -229,6 +241,7 @@ export interface RootRouteChildren {
   SecurityRoute: typeof SecurityRoute
   TermsRoute: typeof TermsRoute
   UseCasesRoute: typeof UseCasesRoute
+  WhyMindorionRoute: typeof WhyMindorionRoute
   LegalPrivacyRoute: typeof LegalPrivacyRoute
   LegalTermsRoute: typeof LegalTermsRoute
   ProductsGovernanceiqRoute: typeof ProductsGovernanceiqRoute
@@ -239,6 +252,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/why-mindorion': {
+      id: '/why-mindorion'
+      path: '/why-mindorion'
+      fullPath: '/why-mindorion'
+      preLoaderRoute: typeof WhyMindorionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/use-cases': {
       id: '/use-cases'
       path: '/use-cases'
@@ -374,6 +394,7 @@ const rootRouteChildren: RootRouteChildren = {
   SecurityRoute: SecurityRoute,
   TermsRoute: TermsRoute,
   UseCasesRoute: UseCasesRoute,
+  WhyMindorionRoute: WhyMindorionRoute,
   LegalPrivacyRoute: LegalPrivacyRoute,
   LegalTermsRoute: LegalTermsRoute,
   ProductsGovernanceiqRoute: ProductsGovernanceiqRoute,
