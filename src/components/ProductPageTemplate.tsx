@@ -136,6 +136,22 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
           </div>
         </section>
 
+        {data.problem ? (
+          <section className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+            {data.problem.label ? (
+              <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">
+                {data.problem.label}
+              </div>
+            ) : null}
+            <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground sm:text-3xl">
+              {data.problem.title}
+            </h2>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">
+              {data.problem.body}
+            </p>
+          </section>
+        ) : null}
+
         {data.costs && data.costs.length > 0 ? (
           <section className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
             <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">
