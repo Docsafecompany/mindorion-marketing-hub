@@ -69,6 +69,11 @@ export type ProductPageData = {
   workflowSteps?: string[];
   costsLabel?: string;
   costs?: CostCard[];
+  problem?: { label?: string; title: string; body: string };
+  capabilitiesLabel?: string;
+  capabilities?: Array<{ icon?: string; title: string; text: string }>;
+  loopLabel?: string;
+  loopSteps?: string[];
   availability?: Availability;
   featureColumns?: [FeatureColumn, FeatureColumn];
   scenarioLabel?: string;
