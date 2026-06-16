@@ -138,7 +138,7 @@ export function Navbar() {
             </Link>
 
             <Link
-              to="/about"
+              to="/why-mindorion"
               className="inline-flex h-9 items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted/70 hover:text-primary"
             >
               {whyMindorionLabel}
