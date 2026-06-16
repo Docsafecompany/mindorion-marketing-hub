@@ -3,6 +3,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Minus } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import i18n from "@/i18n";
 import { GovernanceIQChip } from "@/components/pricing/GovernanceIQChip";
 import { type GovernancePlan } from "@/components/pricing/GovernanceIQModal";
@@ -74,6 +81,13 @@ type PricingCopy = {
   includedInSuite: string;
   comparisonFeature: string;
   productSelectorHelper: string;
+  maturityPath: string;
+  roiHeadline: string;
+  faqTitle: string;
+  faq: Array<{ question: string; answer: string }>;
+  finalCtaTitle: string;
+  finalCtaPrimary: string;
+  finalCtaSecondary: string;
   products: LocalizedProduct[];
 };
 
@@ -92,6 +106,34 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     includedInSuite: "INCLUS DANS LA SUITE",
     comparisonFeature: "Fonctionnalité",
     productSelectorHelper: "Chaque produit peut être adopté indépendamment. Enterprise combine les modules et la gouvernance.",
+    maturityPath: "Excel → Starter → Pro → Business → Enterprise. Vous ne payez pas pour des fonctionnalités isolées — vous faites évoluer votre organisation vers un niveau supérieur de maturité opérationnelle.",
+    roiHeadline: "Un requirement RFP manqué, un commentaire interne exposé, ou un mois de données pipeline médiocres peut coûter plus que l'abonnement annuel.",
+    faqTitle: "Questions fréquentes",
+    faq: [
+      {
+        question: "Pouvons-nous commencer avec seulement ProposalIQ ou GrowthIQ ?",
+        answer: "Oui. Mindorion est conçu pour démarrer avec un workflow opérationnel et s'étendre au fur et à mesure que les équipes standardisent les propositions et l'exécution commerciale.",
+      },
+      {
+        question: "Comment fonctionne la tarification Enterprise ?",
+        answer: "La tarification Enterprise dépend du nombre d'utilisateurs, des intégrations CRM, des exigences de sécurité, des besoins de gouvernance et de la portée du déploiement.",
+      },
+      {
+        question: "Intégrez-vous notre CRM ?",
+        answer: "Oui — Enterprise se connecte à votre CRM pour que les données opérationnelles restent synchronisées et que le double reporting soit réduit.",
+      },
+      {
+        question: "Comment Mindorion contrôle-t-il les coûts et la conformité de l'IA ?",
+        answer: "Mindorion ne pousse pas l'IA partout par défaut. Il crée des workflows structurés et des données gouvernées pour que l'IA soit utilisée là où elle crée de la valeur tout en réduisant l'usage non contrôlé et les risques de conformité.",
+      },
+      {
+        question: "Comment ProposalIQ et GrowthIQ fonctionnent-ils ensemble ?",
+        answer: "ProposalIQ structure le workflow RFQ/proposition tandis que GrowthIQ connecte le pipeline, l'exécution commerciale et les résultats de win/loss, créant une boucle d'apprentissage à travers l'organisation.",
+      },
+    ],
+    finalCtaTitle: "Prêt à standardiser les propositions et l'exécution commerciale ?",
+    finalCtaPrimary: "Commencer avec un module",
+    finalCtaSecondary: "Demander une démo Enterprise",
     products: [
       {
         key: "proposaliq",
@@ -388,6 +430,34 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     includedInSuite: "INCLUDED IN THE SUITE",
     comparisonFeature: "Feature",
     productSelectorHelper: "Each product can be adopted independently. Enterprise combines modules and governance.",
+    maturityPath: "Excel → Starter → Pro → Business → Enterprise. You are not paying for isolated features — you are moving your organization to a higher level of operational maturity.",
+    roiHeadline: "One missed RFP requirement, one exposed internal comment, or one month of poor pipeline data can cost more than the annual subscription.",
+    faqTitle: "Frequently asked questions",
+    faq: [
+      {
+        question: "Can we start with only ProposalIQ or GrowthIQ?",
+        answer: "Yes. Mindorion is designed to start with one operational workflow and expand as teams standardize proposal and commercial execution.",
+      },
+      {
+        question: "How does Enterprise pricing work?",
+        answer: "Enterprise pricing depends on users, CRM integrations, security requirements, governance needs and deployment scope.",
+      },
+      {
+        question: "Do you integrate with our CRM?",
+        answer: "Yes — Enterprise connects to your CRM so operational data stays synchronized and double reporting is reduced.",
+      },
+      {
+        question: "How does Mindorion control AI cost and compliance?",
+        answer: "Mindorion does not push AI everywhere by default. It creates structured workflows and governed data so AI is used where it creates value while reducing uncontrolled usage and compliance risk.",
+      },
+      {
+        question: "How do ProposalIQ and GrowthIQ work together?",
+        answer: "ProposalIQ structures the RFQ/proposal workflow while GrowthIQ connects pipeline, commercial execution and win/loss outcomes, creating a learning loop across the organization.",
+      },
+    ],
+    finalCtaTitle: "Ready to standardize proposal and commercial execution?",
+    finalCtaPrimary: "Start with one module",
+    finalCtaSecondary: "Book enterprise demo",
     products: [
       {
         key: "proposaliq",
@@ -800,6 +870,85 @@ function PricingPage() {
           </TabsContent>
         ))}
       </Tabs>
+
+      {/* Maturity path */}
+      <section className="mx-auto max-w-4xl text-center">
+        <p className="text-sm font-medium text-muted-foreground">{copy.maturityPath}</p>
+      </section>
+
+      {/* ROI block */}
+      <section className="mx-auto max-w-3xl">
+        <div className="editorial-amber-soft rounded-2xl p-6 sm:p-8 text-center">
+          <p className="text-base font-semibold leading-7">{copy.roiHeadline}</p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-3xl">
+        <h2 className="text-2xl font-bold text-foreground">{copy.faqTitle}</h2>
+        <Accordion type="single" collapsible className="mt-6">
+          {copy.faq.map((item, i) => (
+            <AccordionItem key={i} value={`faq-${i}`}>
+              <AccordionTrigger className="text-left text-sm font-semibold text-foreground">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground leading-6">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: copy.faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      </section>
+
+      {/* Final CTA */}
+      <section className="hero-wash rounded-2xl py-16 sm:py-20">
+        <div className="mx-auto max-w-2xl px-6 text-center">
+          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{copy.finalCtaTitle}</h2>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              to="/pricing"
+              onClick={() => trackEvent("pricing_cta_clicked", { cta: "start_module" })}
+            >
+              <Button
+                size="lg"
+                className="h-[52px] rounded-xl bg-[var(--color-pricing-primary)] px-8 text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95"
+              >
+                {copy.finalCtaPrimary}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => trackEvent("pricing_cta_clicked", { cta: "book_enterprise_demo" })}
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-[52px] rounded-xl border-border bg-card px-8 text-foreground shadow-none hover:bg-muted/40"
+              >
+                {copy.finalCtaSecondary}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
