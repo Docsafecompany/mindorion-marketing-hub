@@ -174,7 +174,7 @@ function WhyMindorionPage() {
             </div>
             <h3 className="mt-5 text-xl font-bold text-foreground">Compliance by design</h3>
             <p className="mt-4 text-sm leading-7 text-muted-foreground">
-              Operational data stays structured, governed and auditable, so AI runs inside a controlled, compliant environment instead of an uncontrolled one.
+              Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one.
             </p>
           </article>
         </div>
