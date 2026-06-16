@@ -3,6 +3,7 @@ import { ArrowRight, Target, Lock, Zap, Linkedin, Rocket, Gauge, Shield } from "
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
+import i18n from "@/i18n";
 import { LINKEDIN_URL, createStaticMeta } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
 import camilleImg from "@/assets/founder-camille.jpg";
@@ -11,9 +12,8 @@ import romainImg from "@/assets/founder-romain.png";
 export const Route = createFileRoute("/why-mindorion")({
   head: () =>
     createStaticMeta({
-      title: "Why Mindorion | Operational Foundation for Engineering & IT Services",
-      description:
-        "Mindorion helps Engineering & IT Services firms standardize workflows, structure operational data and build the foundations required to scale with governance and efficient AI adoption.",
+      title: i18n.t("whyMindorion.seoTitle"),
+      description: i18n.t("whyMindorion.seoDescription"),
       path: "/why-mindorion",
     }),
   component: WhyMindorionPage,
@@ -45,23 +45,19 @@ function WhyMindorionPage() {
     },
   ];
 
-  const principles = [
-    {
-      icon: Target,
-      title: "Outcomes first",
-      body: "Every workflow must improve proposal quality, commercial execution or governance.",
-    },
-    {
-      icon: Lock,
-      title: "Private by design",
-      body: "Sensitive client and operational data stays controlled.",
-    },
-    {
-      icon: Zap,
-      title: "Radical simplicity",
-      body: "Complex workflows, simple execution.",
-    },
-  ];
+  const principleIcons = [Target, Lock, Zap] as const;
+  const principles = (t("whyMindorion.principles.items", { returnObjects: true }) as Array<{ title: string; body: string }>).map((item, index) => ({
+    ...item,
+    icon: principleIcons[index],
+  }));
+
+  const differenceIcons = [Rocket, Gauge, Shield] as const;
+  const differenceSoft = ["editorial-purple-soft", "editorial-green-soft", "editorial-amber-soft"] as const;
+  const differenceCards = (t("whyMindorion.difference.cards", { returnObjects: true }) as Array<{ title: string; body: string }>).map((card, index) => ({
+    ...card,
+    icon: differenceIcons[index],
+    soft: differenceSoft[index],
+  }));
 
   return (
     <div className="section-shell section-space space-y-8">
@@ -69,20 +65,20 @@ function WhyMindorionPage() {
       <section className="rounded-xl bg-[var(--color-about-dark)] px-6 py-12 text-white lg:px-8 lg:py-16">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="headline-balance text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-            Building the operational foundation for scalable Engineering &amp; IT Services firms.
+            {t("whyMindorion.hero.title")}
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-[var(--color-about-dark-muted)] sm:text-lg">
-            Mindorion standardizes workflows, structures enterprise data and aligns execution with strategy — so organizations can scale with governance, compliance and efficient AI adoption.
+            {t("whyMindorion.hero.subtitle")}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link to="/contact" onClick={() => trackEvent("cta_clicked", { cta: "why_mindorion_demo" })}>
               <Button size="lg" className="min-w-44 gap-1 rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
-                Request a demo
+                {t("whyMindorion.hero.primaryCta")}
               </Button>
             </Link>
             <Link to="/products/proposaliq" onClick={() => trackEvent("cta_clicked", { cta: "why_mindorion_explore" })}>
               <Button size="lg" variant="outline" className="min-w-44 rounded-xl border-white/20 text-white hover:bg-white/10 hover:text-white">
-                Explore products
+                {t("whyMindorion.hero.secondaryCta")}
               </Button>
             </Link>
           </div>
@@ -93,10 +89,10 @@ function WhyMindorionPage() {
       <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 sm:px-8 lg:py-14">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="headline-balance text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-            Growth creates complexity faster than the organization can absorb it.
+            {t("whyMindorion.problem.title")}
           </h2>
           <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base">
-            As Engineering &amp; IT Services firms grow, execution becomes harder to control. Data lives across CRMs, Excel files, emails, proposals and local drives. Teams develop their own ways of working. Reporting becomes manual. Decisions are made on incomplete information.
+            {t("whyMindorion.problem.body")}
           </p>
         </div>
       </section>
@@ -105,32 +101,32 @@ function WhyMindorionPage() {
       <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 sm:px-8 lg:py-14">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-lg font-semibold text-foreground sm:text-xl">
-            AI is not the foundation. AI becomes scalable when data, workflows and governance are already structured.
+            {t("whyMindorion.foundation.thesis")}
           </p>
         </div>
 
         <div className="mx-auto mt-10 flex max-w-3xl flex-col-reverse items-center gap-1.5 sm:gap-2">
           {/* Bottom — widest */}
           <div className="w-full rounded-xl editorial-purple-bg px-5 py-5 text-center text-white sm:px-6 sm:py-6">
-            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-80">Base</div>
-            <div className="mt-1 text-sm font-semibold sm:text-base">Mindorion Operating System — the workflow layer where operational activity happens</div>
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-80">{t("whyMindorion.foundation.base.label")}</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">{t("whyMindorion.foundation.base.text")}</div>
           </div>
           <div className="w-[92%] rounded-xl editorial-purple-soft px-5 py-5 text-center sm:px-6 sm:py-6">
-            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-70">Process</div>
-            <div className="mt-1 text-sm font-semibold sm:text-base">Standardized workflows — teams execute processes consistently</div>
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-70">{t("whyMindorion.foundation.process.label")}</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">{t("whyMindorion.foundation.process.text")}</div>
           </div>
           <div className="w-[84%] rounded-xl editorial-green-soft px-5 py-5 text-center sm:px-6 sm:py-6">
-            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-70">Data</div>
-            <div className="mt-1 text-sm font-semibold sm:text-base">Structured enterprise data — fragmented activity becomes usable decision data</div>
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-70">{t("whyMindorion.foundation.data.label")}</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">{t("whyMindorion.foundation.data.text")}</div>
           </div>
           <div className="w-[76%] rounded-xl editorial-amber-soft px-5 py-5 text-center sm:px-6 sm:py-6">
-            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-70">Control</div>
-            <div className="mt-1 text-sm font-semibold sm:text-base">Governance &amp; compliance — control, auditability and trust</div>
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-70">{t("whyMindorion.foundation.control.label")}</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">{t("whyMindorion.foundation.control.text")}</div>
           </div>
           {/* Top — narrowest */}
           <div className="w-[68%] rounded-xl bg-[#1e3a5f] px-5 py-5 text-center text-white sm:px-6 sm:py-6">
-            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-80">Result</div>
-            <div className="mt-1 text-sm font-semibold sm:text-base">Efficient AI adoption — more accurate, cost-efficient and governed, as a result</div>
+            <div className="text-xs font-bold uppercase tracking-[0.14em] opacity-80">{t("whyMindorion.foundation.result.label")}</div>
+            <div className="mt-1 text-sm font-semibold sm:text-base">{t("whyMindorion.foundation.result.text")}</div>
           </div>
         </div>
       </section>
@@ -138,62 +134,42 @@ function WhyMindorionPage() {
       {/* Where Mindorion makes the difference */}
       <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 sm:px-8 lg:py-14">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">Where Mindorion makes the difference</div>
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("whyMindorion.difference.eyebrow")}</div>
           <h2 className="headline-balance mx-auto mt-4 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-            Scale with AI — without losing control of cost or compliance.
+            {t("whyMindorion.difference.title")}
           </h2>
           <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base">
-            Most firms face the same trap: too little AI and you fall behind; too much, uncontrolled, and token costs explode while compliance risk grows. Mindorion is the controlled middle ground.
+            {t("whyMindorion.difference.body")}
           </p>
         </div>
 
         <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
-          <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-purple-soft">
-              <Rocket className="h-5 w-5" />
-            </div>
-            <h3 className="mt-5 text-xl font-bold text-foreground">Stay ahead, not overtaken</h3>
-            <p className="mt-4 text-sm leading-7 text-muted-foreground">
-              AI is unavoidable. Mindorion helps you adopt it where it creates real value, so you move fast without falling behind faster-moving competitors.
-            </p>
-          </article>
-
-          <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-green-soft">
-              <Gauge className="h-5 w-5" />
-            </div>
-            <h3 className="mt-5 text-xl font-bold text-foreground">Control AI cost at scale</h3>
-            <p className="mt-4 text-sm leading-7 text-muted-foreground">
-              By standardizing your data and workflows first, Mindorion reduces reliance on expensive, error-prone AI agents — so scaling your team doesn't mean runaway token costs.
-            </p>
-          </article>
-
-          <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-amber-soft">
-              <Shield className="h-5 w-5" />
-            </div>
-            <h3 className="mt-5 text-xl font-bold text-foreground">Compliance by design</h3>
-            <p className="mt-4 text-sm leading-7 text-muted-foreground">
-              Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one.
-            </p>
-          </article>
+          {differenceCards.map(({ icon: Icon, title, body, soft }) => (
+            <article key={title} className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
+              <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${soft}`}>
+                <Icon className="h-5 w-5" />
+              </div>
+              <h3 className="mt-5 text-xl font-bold text-foreground">{title}</h3>
+              <p className="mt-4 text-sm leading-7 text-muted-foreground">{body}</p>
+            </article>
+          ))}
         </div>
 
         <div className="mx-auto mt-10 max-w-3xl text-center">
           <p className="text-sm font-semibold leading-7 text-foreground sm:text-base">
-            AI is not the foundation. Structured data, workflows and governance are — and that's what makes AI scalable, affordable and auditable.
+            {t("whyMindorion.difference.footer")}
           </p>
         </div>
       </section>
 
       <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 sm:px-8 lg:py-14">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">Focus</div>
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("whyMindorion.focus.eyebrow")}</div>
           <h2 className="headline-balance mx-auto mt-4 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-            Why Engineering &amp; IT Services first
+            {t("whyMindorion.focus.title")}
           </h2>
           <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base">
-            We start here because these firms combine complex pre-sales, technical delivery, talent allocation, account growth and compliance. We know these workflows deeply. The same foundation can later expand to other complex service industries.
+            {t("whyMindorion.focus.body")}
           </p>
         </div>
       </section>
@@ -201,12 +177,12 @@ function WhyMindorionPage() {
       {/* The Mindorion approach */}
       <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 sm:px-8 lg:py-14">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">Approach</div>
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("whyMindorion.approach.eyebrow")}</div>
           <h2 className="headline-balance mx-auto mt-4 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-            The Mindorion approach
+            {t("whyMindorion.approach.title")}
           </h2>
           <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base">
-            ProposalIQ structures pre-sales and proposal execution. GrowthIQ aligns commercial strategy with operational activity. Future modules extend the same foundation to delivery, talent and governance. Together, they turn fragmented operations into decision-ready intelligence.
+            {t("whyMindorion.approach.body")}
           </p>
         </div>
       </section>
@@ -214,12 +190,12 @@ function WhyMindorionPage() {
       {/* Founders — after the market thesis */}
       <section className="space-y-8">
         <div className="text-center">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-pricing-primary)]">Founders</div>
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-pricing-primary)]">{t("whyMindorion.founders.eyebrow")}</div>
           <h2 className="headline-balance mx-auto mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-            Built by people who lived the scaling problem.
+            {t("whyMindorion.founders.title")}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
-            Mindorion was created by operators who have seen how Engineering &amp; IT Services firms lose efficiency when proposals, pipeline, delivery and reporting become fragmented.
+            {t("whyMindorion.founders.subtitle")}
           </p>
         </div>
 
@@ -270,13 +246,13 @@ function WhyMindorionPage() {
         <article className="rounded-xl bg-[var(--color-pricing-primary)] p-6 text-white sm:p-8">
           <div className="mx-auto max-w-3xl text-center">
             <div className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-pricing-primary-soft)]">
-              Built with operators
+              {t("whyMindorion.founders.builtWithEyebrow")}
             </div>
             <h3 className="mt-4 text-2xl font-extrabold leading-tight sm:text-3xl">
-              Designed with the teams who run pre-sales, pipeline and delivery every day.
+              {t("whyMindorion.founders.builtWithTitle")}
             </h3>
             <p className="mt-4 text-sm leading-7 text-[var(--color-pricing-primary-soft)]">
-              Every workflow is shaped by operators inside Engineering &amp; IT Services firms. Transparency on roadmap and learnings is part of how we work — as a secondary commitment, not the headline.
+              {t("whyMindorion.founders.builtWithBody")}
             </p>
           </div>
         </article>
@@ -285,9 +261,9 @@ function WhyMindorionPage() {
       {/* Principles */}
       <section className="space-y-6">
         <div className="text-center">
-          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">Principles</div>
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("whyMindorion.principles.eyebrow")}</div>
           <h2 className="headline-balance mx-auto mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
-            How we build for Engineering &amp; IT Services teams
+            {t("whyMindorion.principles.title")}
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
@@ -306,23 +282,23 @@ function WhyMindorionPage() {
       {/* Final CTA */}
       <section className="rounded-xl bg-[var(--color-about-dark)] px-6 py-10 text-center sm:px-8 lg:py-14">
         <h2 className="headline-balance mx-auto max-w-3xl text-3xl font-extrabold leading-tight text-white sm:text-4xl">
-          Ready to build the foundation for scalable growth?
+          {t("whyMindorion.finalCta.title")}
         </h2>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link to="/contact" onClick={() => trackEvent("cta_clicked", { cta: "why_mindorion_final_demo" })}>
             <Button size="lg" className="min-w-44 gap-1 rounded-xl bg-[var(--color-pricing-primary)] text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95">
-              Request a demo
+              {t("whyMindorion.finalCta.primaryCta")}
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
           <Link to="/products/proposaliq" onClick={() => trackEvent("cta_clicked", { cta: "why_mindorion_final_explore" })}>
             <Button size="lg" variant="outline" className="min-w-44 rounded-xl border-white/20 text-white hover:bg-white/10 hover:text-white">
-              Explore products
+              {t("whyMindorion.finalCta.secondaryCta")}
             </Button>
           </Link>
         </div>
         <div className="mt-6 text-xs text-[var(--color-about-dark-muted)]">
-          Also on{" "}
+          {t("whyMindorion.finalCta.alsoOn")}{" "}
           <a
             href={LINKEDIN_URL}
             target="_blank"

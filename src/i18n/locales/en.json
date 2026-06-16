@@ -909,15 +909,15 @@
   },
   "about": {
     "seoTitle": "About | Mindorion — Intelligence for Engineering & IT Services",
-    "seoDescription": "Mindorion is a B2B SaaS company founded in Estonia. Discover our mission, team and build-in-public approach. ProposalIQ, GrowthIQ, Governance Layer.",
+    "seoDescription": "Mindorion builds the enterprise operating system for Engineering & IT Services firms. Discover our mission, team and approach. ProposalIQ, GrowthIQ, Governance Layer.",
     "eyebrow": "ABOUT MINDORION",
     "heroTitle1": "Building the tools Engineering & IT Services firms ",
     "heroTitle2": "actually deserve.",
-    "heroText": "Mindorion is a B2B software company founded in Estonia, building a suite of professional intelligence tools for teams operating at high stakes — consultants, sales, delivery leaders and engineers.",
+    "heroText": "Mindorion builds the enterprise operating system for Engineering & IT Services firms — unifying proposals, commercial execution and governance for the teams that run them.",
     "tags": [
       "Mindorion OÜ · Estonia",
       "Founded in 2024",
-      "B2B SaaS",
+      "Enterprise SaaS",
       "Build in public"
     ],
     "stats": [
@@ -1456,6 +1456,72 @@
           }
         ]
       }
+    }
+  },
+  "whyMindorion": {
+    "seoTitle": "Why Mindorion | Operational Foundation for Engineering & IT Services",
+    "seoDescription": "Mindorion helps Engineering & IT Services firms standardize workflows, structure operational data and build the foundations required to scale with governance and efficient AI adoption.",
+    "hero": {
+      "title": "Building the operational foundation for scalable Engineering & IT Services firms.",
+      "subtitle": "Mindorion standardizes workflows, structures enterprise data and aligns execution with strategy — so organizations can scale with governance, compliance and efficient AI adoption.",
+      "primaryCta": "Request a demo",
+      "secondaryCta": "Explore products"
+    },
+    "problem": {
+      "title": "Growth creates complexity faster than the organization can absorb it.",
+      "body": "As Engineering & IT Services firms grow, execution becomes harder to control. Data lives across CRMs, Excel files, emails, proposals and local drives. Teams develop their own ways of working. Reporting becomes manual. Decisions are made on incomplete information."
+    },
+    "foundation": {
+      "thesis": "AI is not the foundation. AI becomes scalable when data, workflows and governance are already structured.",
+      "base": { "label": "Base", "text": "Mindorion Operating System — the workflow layer where operational activity happens" },
+      "process": { "label": "Process", "text": "Standardized workflows — teams execute processes consistently" },
+      "data": { "label": "Data", "text": "Structured enterprise data — fragmented activity becomes usable decision data" },
+      "control": { "label": "Control", "text": "Governance & compliance — control, auditability and trust" },
+      "result": { "label": "Result", "text": "Efficient AI adoption — more accurate, cost-efficient and governed, as a result" }
+    },
+    "difference": {
+      "eyebrow": "Where Mindorion makes the difference",
+      "title": "Scale with AI — without losing control of cost or compliance.",
+      "body": "Most firms face the same trap: too little AI and you fall behind; too much, uncontrolled, and token costs explode while compliance risk grows. Mindorion is the controlled middle ground.",
+      "cards": [
+        { "title": "Stay ahead, not overtaken", "body": "AI is unavoidable. Mindorion helps you adopt it where it creates real value, so you move fast without falling behind faster-moving competitors." },
+        { "title": "Control AI cost at scale", "body": "By standardizing your data and workflows first, Mindorion reduces reliance on expensive, error-prone AI agents — so scaling your team doesn't mean runaway token costs." },
+        { "title": "Compliance by design", "body": "Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one." }
+      ],
+      "footer": "AI is not the foundation. Structured data, workflows and governance are — and that's what makes AI scalable, affordable and auditable."
+    },
+    "focus": {
+      "eyebrow": "Focus",
+      "title": "Why Engineering & IT Services first",
+      "body": "We start here because these firms combine complex pre-sales, technical delivery, talent allocation, account growth and compliance. We know these workflows deeply. The same foundation can later expand to other complex service industries."
+    },
+    "approach": {
+      "eyebrow": "Approach",
+      "title": "The Mindorion approach",
+      "body": "ProposalIQ structures pre-sales and proposal execution. GrowthIQ aligns commercial strategy with operational activity. Future modules extend the same foundation to delivery, talent and governance. Together, they turn fragmented operations into decision-ready intelligence."
+    },
+    "founders": {
+      "eyebrow": "Founders",
+      "title": "Built by people who lived the scaling problem.",
+      "subtitle": "Mindorion was created by operators who have seen how Engineering & IT Services firms lose efficiency when proposals, pipeline, delivery and reporting become fragmented.",
+      "builtWithEyebrow": "Built with operators",
+      "builtWithTitle": "Designed with the teams who run pre-sales, pipeline and delivery every day.",
+      "builtWithBody": "Every workflow is shaped by operators inside Engineering & IT Services firms. Transparency on roadmap and learnings is part of how we work — as a secondary commitment, not the headline."
+    },
+    "principles": {
+      "eyebrow": "Principles",
+      "title": "How we build for Engineering & IT Services teams",
+      "items": [
+        { "title": "Outcomes first", "body": "Every workflow must improve proposal quality, commercial execution or governance." },
+        { "title": "Private by design", "body": "Sensitive client and operational data stays controlled." },
+        { "title": "Radical simplicity", "body": "Complex workflows, simple execution." }
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to build the foundation for scalable growth?",
+      "primaryCta": "Request a demo",
+      "secondaryCta": "Explore products",
+      "alsoOn": "Also on"
     }
   },
   "founders": {

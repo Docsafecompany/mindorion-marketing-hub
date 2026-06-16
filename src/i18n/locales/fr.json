@@ -909,15 +909,15 @@
   },
   "about": {
     "seoTitle": "À propos | Mindorion — Intelligence professionnelle B2B",
-    "seoDescription": "Mindorion est un éditeur SaaS fondé en Estonie pour l'Engineering & IT Services. Découvrez notre mission, notre équipe et notre approche build in public. ProposalIQ, GrowthIQ, Governance Layer.",
+    "seoDescription": "Mindorion construit le système d'exploitation d'entreprise pour les cabinets d'ingénierie et de services IT. Découvrez notre mission, notre équipe et notre approche. ProposalIQ, GrowthIQ, Governance Layer.",
     "eyebrow": "À PROPOS DE MINDORION",
-    "heroTitle1": "Construire les outils que les professionnels B2B ",
+    "heroTitle1": "Construire les outils que les cabinets d'ingénierie et de services IT ",
     "heroTitle2": "méritent vraiment.",
-    "heroText": "Mindorion est un éditeur de éditeur fondé en Estonie pour l'Engineering & IT Services, qui construit une suite d'outils d'intelligence professionnelle pour les équipes qui opèrent à enjeux élevés — consultants, commerciaux, directeurs delivery et ingénieurs.",
+    "heroText": "Mindorion construit le système d'exploitation d'entreprise pour les cabinets d'ingénierie et de services IT — en unifiant propositions, exécution commerciale et gouvernance pour les équipes qui les pilotent.",
     "tags": [
       "Mindorion OÜ · Estonie",
       "Fondé en 2024",
-      "B2B SaaS",
+      "Enterprise SaaS",
       "Build in public"
     ],
     "stats": [
@@ -935,7 +935,7 @@
       }
     ],
     "missionEyebrow": "NOTRE MISSION",
-    "missionTitle1": "Donner aux professionnels B2B la certitude ",
+    "missionTitle1": "Donner aux cabinets d'ingénierie et de services IT la certitude ",
     "missionTitle2": "d'opérer au plus haut niveau.",
     "missionText": "Chaque document envoyé doit être impeccable. Chaque prospect doit être le bon. Chaque processus doit être gouverné et auditable. Mindorion rend ça possible — sans friction, sans compromis.",
     "values": [
@@ -1225,7 +1225,7 @@
   },
   "usecasesPage": {
     "eyebrow": "CAS D'USAGE",
-    "title": "Comment les professionnels B2B utilisent Mindorion",
+    "title": "Comment les cabinets d'ingénierie et de services IT utilisent Mindorion",
     "subtitle": "Que vous pilotiez l'avant-vente, l'exécution commerciale, le delivery ou une business unit — Mindorion structure les propositions, aligne l'exécution commerciale sur la stratégie et garde les opérations gouvernées.",
     "ctaTitle": "Prêt à opérer au plus haut niveau ?",
     "ctaText": "Commencez avec ProposalIQ. Ajoutez GrowthIQ. La gouvernance est intégrée aux deux.",
@@ -1456,6 +1456,72 @@
           }
         ]
       }
+    }
+  },
+  "whyMindorion": {
+    "seoTitle": "Pourquoi Mindorion | La fondation opérationnelle pour l'ingénierie et les services IT",
+    "seoDescription": "Mindorion aide les cabinets d'ingénierie et de services IT à standardiser les workflows, structurer les données opérationnelles et bâtir les fondations nécessaires pour passer à l'échelle avec gouvernance et une adoption efficace de l'IA.",
+    "hero": {
+      "title": "Construire la fondation opérationnelle des cabinets d'ingénierie et de services IT qui passent à l'échelle.",
+      "subtitle": "Mindorion standardise les workflows, structure les données d'entreprise et aligne l'exécution sur la stratégie — pour que les organisations passent à l'échelle avec gouvernance, conformité et adoption efficace de l'IA.",
+      "primaryCta": "Demander une démo",
+      "secondaryCta": "Explorer les produits"
+    },
+    "problem": {
+      "title": "La croissance crée de la complexité plus vite que l'organisation ne peut l'absorber.",
+      "body": "À mesure que les cabinets d'ingénierie et de services IT grandissent, l'exécution devient plus difficile à maîtriser. Les données vivent dans les CRM, les fichiers Excel, les emails, les propositions et les disques locaux. Chaque équipe développe ses propres méthodes. Le reporting devient manuel. Les décisions se prennent sur une information incomplète."
+    },
+    "foundation": {
+      "thesis": "L'IA n'est pas la fondation. L'IA passe à l'échelle quand les données, les workflows et la gouvernance sont déjà structurés.",
+      "base": { "label": "Base", "text": "Mindorion Operating System — la couche workflow où se déroule l'activité opérationnelle" },
+      "process": { "label": "Processus", "text": "Workflows standardisés — les équipes exécutent les processus de façon cohérente" },
+      "data": { "label": "Données", "text": "Données d'entreprise structurées — l'activité fragmentée devient une donnée de décision exploitable" },
+      "control": { "label": "Contrôle", "text": "Gouvernance & conformité — contrôle, auditabilité et confiance" },
+      "result": { "label": "Résultat", "text": "Adoption efficace de l'IA — plus précise, plus économe et gouvernée, en résultat" }
+    },
+    "difference": {
+      "eyebrow": "Là où Mindorion fait la différence",
+      "title": "Passez à l'échelle avec l'IA — sans perdre le contrôle des coûts ni de la conformité.",
+      "body": "La plupart des cabinets tombent dans le même piège : trop peu d'IA et vous décrochez ; trop d'IA non maîtrisée et les coûts de tokens explosent pendant que le risque de conformité grandit. Mindorion est le juste milieu maîtrisé.",
+      "cards": [
+        { "title": "Garder une longueur d'avance", "body": "L'IA est incontournable. Mindorion vous aide à l'adopter là où elle crée de la vraie valeur, pour avancer vite sans vous laisser distancer par des concurrents plus rapides." },
+        { "title": "Maîtriser le coût de l'IA à l'échelle", "body": "En standardisant d'abord vos données et vos workflows, Mindorion réduit la dépendance à des agents IA coûteux et faillibles — pour que faire grandir votre équipe ne rime pas avec des coûts de tokens incontrôlés." },
+        { "title": "Conformité by design", "body": "Les données opérationnelles restent structurées, gouvernées et auditables, pour que l'IA s'exécute dans un environnement maîtrisé et gouverné plutôt qu'incontrôlé." }
+      ],
+      "footer": "L'IA n'est pas la fondation. Les données structurées, les workflows et la gouvernance le sont — et c'est ce qui rend l'IA scalable, abordable et auditable."
+    },
+    "focus": {
+      "eyebrow": "Focus",
+      "title": "Pourquoi l'ingénierie et les services IT d'abord",
+      "body": "Nous commençons ici parce que ces cabinets combinent avant-vente complexe, delivery technique, allocation des talents, croissance des comptes et conformité. Nous connaissons ces workflows en profondeur. La même fondation pourra ensuite s'étendre à d'autres industries de services complexes."
+    },
+    "approach": {
+      "eyebrow": "Approche",
+      "title": "L'approche Mindorion",
+      "body": "ProposalIQ structure l'avant-vente et l'exécution des propositions. GrowthIQ aligne la stratégie commerciale sur l'activité opérationnelle. Les futurs modules étendront la même fondation au delivery, aux talents et à la gouvernance. Ensemble, ils transforment des opérations fragmentées en intelligence prête pour la décision."
+    },
+    "founders": {
+      "eyebrow": "Fondateurs",
+      "title": "Construit par des gens qui ont vécu le problème du passage à l'échelle.",
+      "subtitle": "Mindorion a été créé par des opérateurs qui ont vu comment les cabinets d'ingénierie et de services IT perdent en efficacité quand propositions, pipeline, delivery et reporting se fragmentent.",
+      "builtWithEyebrow": "Construit avec des opérateurs",
+      "builtWithTitle": "Conçu avec les équipes qui pilotent l'avant-vente, le pipeline et le delivery au quotidien.",
+      "builtWithBody": "Chaque workflow est façonné par des opérateurs au sein de cabinets d'ingénierie et de services IT. La transparence sur la roadmap et les apprentissages fait partie de notre façon de travailler — comme engagement secondaire, pas comme accroche principale."
+    },
+    "principles": {
+      "eyebrow": "Principes",
+      "title": "Comment nous construisons pour les équipes d'ingénierie et de services IT",
+      "items": [
+        { "title": "Résultats avant tout", "body": "Chaque workflow doit améliorer la qualité des propositions, l'exécution commerciale ou la gouvernance." },
+        { "title": "Privé par conception", "body": "Les données client et opérationnelles sensibles restent maîtrisées." },
+        { "title": "Simplicité radicale", "body": "Workflows complexes, exécution simple." }
+      ]
+    },
+    "finalCta": {
+      "title": "Prêt à construire la fondation d'une croissance scalable ?",
+      "primaryCta": "Demander une démo",
+      "secondaryCta": "Explorer les produits",
+      "alsoOn": "Également sur"
     }
   },
   "founders": {
