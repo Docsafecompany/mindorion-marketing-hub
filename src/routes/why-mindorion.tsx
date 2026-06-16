@@ -135,7 +135,57 @@ function WhyMindorionPage() {
         </div>
       </section>
 
-      {/* Why Engineering & IT Services first */}
+      {/* Where Mindorion makes the difference */}
+      <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 sm:px-8 lg:py-14">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">Where Mindorion makes the difference</div>
+          <h2 className="headline-balance mx-auto mt-4 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
+            Scale with AI — without losing control of cost or compliance.
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base">
+            Most firms face the same trap: too little AI and you fall behind; too much, uncontrolled, and token costs explode while compliance risk grows. Mindorion is the controlled middle ground.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
+          <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-purple-soft text-purple-700">
+              <Rocket className="h-5 w-5" />
+            </div>
+            <h3 className="mt-5 text-xl font-bold text-foreground">Stay ahead, not overtaken</h3>
+            <p className="mt-4 text-sm leading-7 text-muted-foreground">
+              AI is unavoidable. Mindorion helps you adopt it where it creates real value, so you move fast without falling behind faster-moving competitors.
+            </p>
+          </article>
+
+          <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-green-soft text-green-700">
+              <Gauge className="h-5 w-5" />
+            </div>
+            <h3 className="mt-5 text-xl font-bold text-foreground">Control AI cost at scale</h3>
+            <p className="mt-4 text-sm leading-7 text-muted-foreground">
+              By standardizing your data and workflows first, Mindorion reduces reliance on expensive, error-prone AI agents — so scaling your team doesn't mean runaway token costs.
+            </p>
+          </article>
+
+          <article className="rounded-xl border border-[var(--color-about-card-border)] bg-card p-6">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg editorial-amber-soft text-amber-700">
+              <Shield className="h-5 w-5" />
+            </div>
+            <h3 className="mt-5 text-xl font-bold text-foreground">Compliance by design</h3>
+            <p className="mt-4 text-sm leading-7 text-muted-foreground">
+              Operational data stays structured, governed and auditable, so AI runs inside a controlled, compliant environment instead of an uncontrolled one.
+            </p>
+          </article>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-3xl text-center">
+          <p className="text-sm font-semibold leading-7 text-foreground sm:text-base">
+            AI is not the foundation. Structured data, workflows and governance are — and that's what makes AI scalable, affordable and compliant.
+          </p>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-[var(--color-about-card-border)] bg-card px-6 py-10 sm:px-8 lg:py-14">
         <div className="mx-auto max-w-3xl text-center">
           <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">Focus</div>
