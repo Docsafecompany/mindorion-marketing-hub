@@ -86,9 +86,9 @@ const personaOrder: PersonaKey[] = ["consultants", "sales", "rh", "esn"];
 export const Route = createFileRoute("/use-cases")({
   head: () =>
     createStaticMeta({
-      title: "Cas d'usage | CEO, COO, VP Sales, BU Directors | Mindorion",
+      title: "Who We Serve | Mindorion for Engineering Services & IT Consulting Firms",
       description:
-        "Découvrez comment consultants, équipes sales, directeurs delivery et ESN utilisent ProposalIQ, GrowthIQ et Governance Layer pour protéger leur réputation, prospecter et rester conformes.",
+        "Built for engineering services, ESNs and IT consulting firms with complex RFQ cycles and fragmented operational data. See how Mindorion fits your organization.",
       path: "/use-cases",
     }),
   component: UseCasesPage,

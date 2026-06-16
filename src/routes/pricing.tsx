@@ -93,9 +93,9 @@ type PricingCopy = {
 
 const pricingCopy: Record<"fr" | "en", PricingCopy> = {
   fr: {
-    seoTitle: "Tarifs | ProposalIQ & GrowthIQ | Mindorion",
+    seoTitle: "Mindorion Pricing | Proposal & Commercial Execution Software for Engineering & IT Services",
     seoDescription:
-      "Découvrez les plans Mindorion — ProposalIQ et GrowthIQ. Starter, Pro, Business et Enterprise. Un prix par utilisateur, zéro frais cachés.",
+      "Explore Mindorion pricing for Engineering & IT Services firms. Start with ProposalIQ or GrowthIQ and scale toward governed proposal, pipeline and commercial execution workflows.",
     heroTitle: "Tarifs pour les équipes Engineering & IT Services qui font évoluer leur exécution commerciale.",
     heroSubtitle: "Choisissez ProposalIQ ou GrowthIQ, commencez avec l'équipe qui en a le plus besoin, puis évoluez vers une gouvernance unifiée couvrant les propositions, le pipeline et l'exécution commerciale.",
     monthly: "Mensuel",
@@ -417,9 +417,9 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     ],
   },
   en: {
-    seoTitle: "Pricing | ProposalIQ & GrowthIQ | Mindorion",
+    seoTitle: "Mindorion Pricing | Proposal & Commercial Execution Software for Engineering & IT Services",
     seoDescription:
-      "Discover Mindorion plans for ProposalIQ and GrowthIQ. Starter, Pro, Business and Enterprise. One price per user, no hidden fees.",
+      "Explore Mindorion pricing for Engineering & IT Services firms. Start with ProposalIQ or GrowthIQ and scale toward governed proposal, pipeline and commercial execution workflows.",
     heroTitle: "Pricing for Engineering & IT Services teams scaling commercial execution.",
     heroSubtitle: "Choose ProposalIQ or GrowthIQ, start with the team that needs it most, then scale toward unified governance across proposals, pipeline and commercial execution.",
     monthly: "Monthly",
