@@ -63,6 +63,7 @@ export type ProductPageData = {
   ctaTitle: string;
   ctaSubtitle: string;
   primaryCta: string;
+  secondaryCta?: { label: string; href: string };
 };
 
 export function ProductPageTemplate({ data }: { data: ProductPageData }) {
@@ -106,7 +107,7 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
                 variant="outline"
                 className="w-full rounded-xl border-white/20 bg-transparent text-white shadow-none hover:bg-white/5 hover:text-white sm:w-auto"
               >
-                <a href="/pricing">{t("productsTemplate.viewPricing")}</a>
+                <a href={data.secondaryCta?.href ?? "/pricing"}>{data.secondaryCta?.label ?? t("productsTemplate.viewPricing")}</a>
               </Button>
             </div>
           </div>
@@ -116,7 +117,7 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
           </div>
         </section>
 
-        <section className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+        <section id="workflow" className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
           <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">{t("productsTemplate.howItWorks")}</div>
           <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-center">
             {data.howItWorks.map((step, index) => (
