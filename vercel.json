@@ -10,6 +10,11 @@
       ],
       "destination": "https://mindorion.com/$1",
       "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/why-mindorion",
+      "permanent": true
     }
   ],
   "rewrites": [
