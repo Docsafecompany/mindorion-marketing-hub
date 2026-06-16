@@ -216,7 +216,7 @@ export function Navbar() {
                     <Link to="/pricing" className="block rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted/60">{t("nav.pricing")}</Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to="/about" className="block rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted/60">{whyMindorionLabel}</Link>
+                    <Link to="/why-mindorion" className="block rounded-lg px-3 py-3 text-sm font-semibold hover:bg-muted/60">{whyMindorionLabel}</Link>
                   </SheetClose>
                   <a
                     href={LOGIN_URL}
