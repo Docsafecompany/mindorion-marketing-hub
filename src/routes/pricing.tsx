@@ -750,6 +750,10 @@ function PricingPage() {
           ))}
         </TabsList>
 
+        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-muted-foreground">
+          {copy.productSelectorHelper}
+        </p>
+
         {copy.products.map((product) => (
           <TabsContent key={product.key} value={product.key} className="mt-8 space-y-10">
             <div className="grid gap-4 lg:grid-cols-4 xl:gap-6">
