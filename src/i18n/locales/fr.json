@@ -357,45 +357,48 @@
         "Checklist de conformité en attente",
         "✓ Proposition validée — Prête pour soumission"
       ],
-      "howItWorks": [
-        { "title": "Capturer", "text": "Intégrez les détails de la RFQ, les exigences client et les données de proposition historiques dans ProposalIQ." },
-        { "title": "Générer", "text": "Construisez des modèles de proposition structurés avec validation des exigences, du pricing et de la conformité." },
-        { "title": "Soumettre", "text": "Routez via les workflows d'approbation et soumettez en confiance — chaque proposition tracée de bout en bout." }
+      "costsLabel": "CE QUE ÇA VOUS COÛTE AUJOURD'HUI",
+      "costs": [
+        { "title": "Affaires perdues", "text": "Des opportunités s'échappent parce que les propositions sont incohérentes ou en retard." },
+        { "title": "Marges exposées", "text": "Commentaires internes et pricing fuitent dans les documents adressés aux clients." },
+        { "title": "Mauvaises références", "text": "Études de cas obsolètes et CV mal ciblés affaiblissent la crédibilité." },
+        { "title": "Exigences oubliées", "text": "Des exigences RFP passent à travers les mailles sans contrôle structuré." }
       ],
-      "featureColumns": [
-        {
-          "title": "Génération et validation de propositions",
-          "items": [
-            { "title": "Intelligence RFQ", "text": "Extrayez et mappez automatiquement les exigences client depuis les documents RFQ." },
-            { "title": "Génération de modèles", "text": "Générez des propositions structurées à partir de votre drive client intelligent et des propositions gagnantes passées." },
-            { "title": "Validation des exigences", "text": "Validez les livrables clés, les clauses de conformité et les hypothèses de prix avant soumission." },
-            { "title": "Routage d'approbation", "text": "Routez les propositions via des workflows de revue et de validation conçus pour les services d'ingénierie." },
-            { "title": "Contrôle de versions", "text": "Tracez chaque itération avec l'historique d'audit complet du premier brouillon à la soumission finale." },
-            { "title": "Checks de conformité", "text": "Validation intégrée pour les normes sectorielles, les termes spécifiques client et les politiques internes." }
-          ]
-        },
-        {
-          "title": "Capacités et intégrations",
-          "items": [
-            { "title": "Sync drive client", "text": "Connectez votre drive client intelligent pour un accès instantané aux propositions historiques et aux modèles." },
-            { "title": "Multi-format", "text": "Exportez en Word, PDF et PowerPoint avec une mise en forme cohérente et client-ready." },
-            { "title": "Collaboration temps réel", "text": "Collaborez avec les experts métiers, les leads delivery et les commerciaux dans un seul espace." },
-            { "title": "Analytics propositions", "text": "Suivez les taux de gain, les temps de cycle et les goulots d'étranglement sur votre pipeline de propositions." },
-            { "title": "Sécurisé by design", "text": "Contrôles d'accès et gouvernance des données de niveau entreprise pour les informations client sensibles." },
-            { "title": "Intégration CRM", "text": "Synchronisez les opportunités, contacts et statuts de proposition avec votre CRM existant." }
-          ]
-        }
+      "workflowLabel": "LE WORKFLOW PRÉ-VENTE",
+      "workflowSteps": [
+        "Réception RFQ",
+        "Analyse des exigences",
+        "Recherche de connaissances",
+        "Génération du brouillon",
+        "Collaboration",
+        "Revue",
+        "Go/No-Go",
+        "Approbation",
+        "Nettoyage",
+        "Soumission",
+        "Apprentissage Win/Loss"
       ],
-      "scenarioLabel": "ILS UTILISENT PROPOSAL IQ",
-      "scenarios": [
-        { "tag": "INGÉNIERIE", "title": "RFQ complexe avec 200+ exigences", "text": "ProposalIQ a mappé chaque exigence aux propositions passées et généré une réponse conforme en heures au lieu de jours.", "result": "Deal remporté" },
-        { "tag": "SERVICES IT", "title": "Proposition multi-équipe avec hypothèses contradictoires", "text": "La validation a détecté les écarts de pricing entre delivery et sales avant que le client ne voie la proposition.", "result": "Marge protégée" },
-        { "tag": "CONSEIL", "title": "Client récurrent avec besoins de conformité évolutifs", "text": "Les checks de conformité ont garanti que chaque nouvelle clause était adressée sans revue manuelle des soumissions passées.", "result": "Client fidélisé" }
-      ],
-      "ctaTitle": "Prêt à accélérer votre processus pré-vente ?",
-      "ctaSubtitle": "Découvrez comment ProposalIQ transforme les RFQs en propositions gagnantes plus rapidement.",
+      "availability": {
+        "availableTitle": "Ce qui est disponible aujourd'hui dans ProposalIQ",
+        "comingTitle": "Sur la roadmap ProposalIQ",
+        "available": [
+          "Drive client intelligent (RFQs, MSAs, NDAs, propositions passées, références)",
+          "Analyse des exigences et contrôles de complétude",
+          "Modèles de proposition structurés depuis la connaissance de l'entreprise",
+          "Workflow Revue → Validation → Go/No-Go → Approbation finale",
+          "Hygiène documentaire avant soumission"
+        ],
+        "coming": [
+          "Génération automatique de brouillon depuis le drive client",
+          "Capture des raisons de win/loss et optimisation des modèles",
+          "Scoring de connaissance réutilisable entre propositions"
+        ]
+      },
+      "ctaTitle": "Transformez vos RFQs en propositions gagnantes.",
+      "ctaSubtitle": "Découvrez comment ProposalIQ aide les cabinets d'ingénierie et de services IT à gagner plus, plus vite, avec moins de risque.",
       "primaryCta": "Demander une démo",
-      "secondaryCta": "Voir le workflow de proposition"
+      "secondaryCta": "Voir le workflow de proposition",
+      "ctaButton": "Explorer ProposalIQ"
     },
     "growthiq": {
       "seoTitle": "GrowthIQ | Outreach B2B intelligent | Mindorion",

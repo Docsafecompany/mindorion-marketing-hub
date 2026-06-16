@@ -16,10 +16,6 @@ const theme = {
 };
 
 const heroItemTones = ["danger", "danger", "warning", "success"] as const;
-const featureIcons: [string[], string[]] = [
-  ["🔴", "🔴", "🔴", "🟡", "🟡", "🟡"],
-  ["📄", "📊", "📋", "⚡", "🔒", "📥"],
-];
 
 export const Route = createFileRoute("/products/proposaliq")({
   head: () => {
@@ -59,9 +55,14 @@ export const Route = createFileRoute("/products/proposaliq")({
 function ProposalIQPage() {
   const { t } = useTranslation();
   const heroItems = (t("products.proposaliq.heroItems", { returnObjects: true }) as string[]).map((text, i) => ({ text, tone: heroItemTones[i] }));
-  const howItWorks = t("products.proposaliq.howItWorks", { returnObjects: true }) as Array<{ title: string; text: string }>;
-  const cols = t("products.proposaliq.featureColumns", { returnObjects: true }) as Array<{ title: string; items: Array<{ title: string; text: string }> }>;
-  const scenarios = t("products.proposaliq.scenarios", { returnObjects: true }) as Array<{ tag: string; title: string; text: string; result: string }>;
+  const costs = t("products.proposaliq.costs", { returnObjects: true }) as Array<{ title: string; text: string }>;
+  const workflowSteps = t("products.proposaliq.workflowSteps", { returnObjects: true }) as string[];
+  const availability = t("products.proposaliq.availability", { returnObjects: true }) as {
+    availableTitle: string;
+    comingTitle: string;
+    available: string[];
+    coming: string[];
+  };
 
   const data: ProductPageData = {
     product: "proposaliq",
@@ -76,17 +77,16 @@ function ProposalIQPage() {
       scoreTone: "danger",
       items: heroItems,
     },
-    howItWorks,
-    featureColumns: [
-      { title: cols[0].title, items: cols[0].items.map((it, i) => ({ ...it, icon: featureIcons[0][i] })) },
-      { title: cols[1].title, items: cols[1].items.map((it, i) => ({ ...it, icon: featureIcons[1][i] })) },
-    ],
-    scenarioLabel: t("products.proposaliq.scenarioLabel"),
-    scenarios,
+    costsLabel: t("products.proposaliq.costsLabel"),
+    costs,
+    workflowLabel: t("products.proposaliq.workflowLabel"),
+    workflowSteps,
+    availability,
     ctaTitle: t("products.proposaliq.ctaTitle"),
     ctaSubtitle: t("products.proposaliq.ctaSubtitle"),
     primaryCta: t("products.proposaliq.primaryCta"),
     secondaryCta: { label: t("products.proposaliq.secondaryCta"), href: "#workflow" },
+    ctaButton: { label: t("products.proposaliq.ctaButton"), href: "/pricing" },
   };
 
   return (
