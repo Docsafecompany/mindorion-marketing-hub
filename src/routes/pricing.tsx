@@ -228,7 +228,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "growthiq",
         title: "GrowthIQ",
-        subtitle: "Outreach B2B intelligent",
+        subtitle: "Intelligence d'exécution commerciale pour les sociétés Engineering & IT Services.",
         plans: [
           {
             label: "POINT D'ENTRÉE",
@@ -359,8 +359,8 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     seoTitle: "Pricing | ProposalIQ & GrowthIQ | Mindorion",
     seoDescription:
       "Discover Mindorion plans for ProposalIQ and GrowthIQ. Starter, Pro, Business and Enterprise. One price per user, no hidden fees.",
-    heroTitle: "One price per user. No hidden fees.",
-    heroSubtitle: "Start with one product. Move to Enterprise for the full suite with CRM integrations.",
+    heroTitle: "Pricing for Engineering & IT Services teams scaling commercial execution.",
+    heroSubtitle: "Choose ProposalIQ or GrowthIQ, start with the team that needs it most, then scale toward unified governance across proposals, pipeline and commercial execution.",
     monthly: "Monthly",
     annual: "Annual",
     annualBadge: "−20% yearly",
@@ -368,11 +368,12 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     custom: "Custom",
     includedInSuite: "INCLUDED IN THE SUITE",
     comparisonFeature: "Feature",
+    productSelectorHelper: "Each product can be adopted independently. Enterprise combines modules and governance.",
     products: [
       {
         key: "proposaliq",
         title: "ProposalIQ",
-        subtitle: "Document reputation",
+        subtitle: "Pre-sales and proposal operations for Engineering & IT Services firms.",
         plans: [
           {
             label: "ENTRY PLAN",
@@ -507,7 +508,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "growthiq",
         title: "GrowthIQ",
-        subtitle: "Intelligent B2B outreach",
+        subtitle: "Commercial execution intelligence for Engineering & IT Services firms.",
         plans: [
           {
             label: "ENTRY PLAN",
