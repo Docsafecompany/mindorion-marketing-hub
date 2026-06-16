@@ -3,6 +3,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Minus } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import i18n from "@/i18n";
 import { GovernanceIQChip } from "@/components/pricing/GovernanceIQChip";
 import { type GovernancePlan } from "@/components/pricing/GovernanceIQModal";
@@ -863,6 +870,85 @@ function PricingPage() {
           </TabsContent>
         ))}
       </Tabs>
+
+      {/* Maturity path */}
+      <section className="mx-auto max-w-4xl text-center">
+        <p className="text-sm font-medium text-muted-foreground">{copy.maturityPath}</p>
+      </section>
+
+      {/* ROI block */}
+      <section className="mx-auto max-w-3xl">
+        <div className="editorial-amber-soft rounded-2xl p-6 sm:p-8 text-center">
+          <p className="text-base font-semibold leading-7">{copy.roiHeadline}</p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-3xl">
+        <h2 className="text-2xl font-bold text-foreground">{copy.faqTitle}</h2>
+        <Accordion type="single" collapsible className="mt-6">
+          {copy.faq.map((item, i) => (
+            <AccordionItem key={i} value={`faq-${i}`}>
+              <AccordionTrigger className="text-left text-sm font-semibold text-foreground">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground leading-6">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: copy.faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      </section>
+
+      {/* Final CTA */}
+      <section className="hero-wash rounded-2xl py-16 sm:py-20">
+        <div className="mx-auto max-w-2xl px-6 text-center">
+          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{copy.finalCtaTitle}</h2>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              to="/pricing"
+              onClick={() => trackEvent("pricing_cta_clicked", { cta: "start_module" })}
+            >
+              <Button
+                size="lg"
+                className="h-[52px] rounded-xl bg-[var(--color-pricing-primary)] px-8 text-white shadow-none hover:bg-[var(--color-pricing-primary)]/95"
+              >
+                {copy.finalCtaPrimary}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => trackEvent("pricing_cta_clicked", { cta: "book_enterprise_demo" })}
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-[52px] rounded-xl border-border bg-card px-8 text-foreground shadow-none hover:bg-muted/40"
+              >
+                {copy.finalCtaSecondary}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
