@@ -79,6 +79,8 @@ function GrowthIQPage() {
     ctaTitle: t("products.growthiq.ctaTitle"),
     ctaSubtitle: t("products.growthiq.ctaSubtitle"),
     primaryCta: t("products.growthiq.primaryCta"),
+    secondaryCta: { label: t("products.growthiq.secondaryCta"), href: "/products/growthiq#workflow" },
+    ctaButton: { label: t("products.growthiq.ctaButton"), href: "/pricing" },
   };
 
   return (
