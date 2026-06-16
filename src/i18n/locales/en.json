@@ -1384,7 +1384,7 @@
             "tool": "ProposalIQ",
             "title": "CVs and candidate files",
             "text": "ProposalIQ detects residual personal data, processing comments and internal notes before a CV or candidate file is shared with a client or manager.",
-            "result": "GDPR compliant · Candidate protected"
+            "result": "Privacy by design · Candidate protected"
           },
           {
             "tool": "ProposalIQ",
