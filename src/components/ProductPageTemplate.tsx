@@ -48,6 +48,14 @@ type Step = { title: string; text: string };
 type Feature = { icon: string; title: string; text: string };
 type FeatureColumn = { title: string; items: Feature[] };
 type Scenario = { tag: string; title: string; text: string; result: string };
+type CostCard = { title: string; text: string };
+type Availability = {
+  label?: string;
+  availableTitle: string;
+  comingTitle: string;
+  available: string[];
+  coming: string[];
+};
 
 export type ProductPageData = {
   product: "proposaliq" | "growthiq" | "governanceiq";
@@ -56,14 +64,20 @@ export type ProductPageData = {
   subtitle: string;
   theme: Theme;
   heroPanel: HeroPanel;
-  howItWorks: Step[];
-  featureColumns: [FeatureColumn, FeatureColumn];
-  scenarioLabel: string;
-  scenarios: Scenario[];
+  howItWorks?: Step[];
+  workflowLabel?: string;
+  workflowSteps?: string[];
+  costsLabel?: string;
+  costs?: CostCard[];
+  availability?: Availability;
+  featureColumns?: [FeatureColumn, FeatureColumn];
+  scenarioLabel?: string;
+  scenarios?: Scenario[];
   ctaTitle: string;
   ctaSubtitle: string;
   primaryCta: string;
   secondaryCta?: { label: string; href: string };
+  ctaButton?: { label: string; href: string };
 };
 
 export function ProductPageTemplate({ data }: { data: ProductPageData }) {
