@@ -93,7 +93,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "proposaliq",
         title: "ProposalIQ",
-        subtitle: "Réputation documentaire",
+        subtitle: "Pré-vente et opérations de proposition pour les sociétés Engineering & IT Services.",
         plans: [
           {
             label: "POINT D'ENTRÉE",
