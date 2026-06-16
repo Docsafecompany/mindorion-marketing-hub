@@ -23,15 +23,15 @@
     "productItems": [
       {
         "title": "ProposalIQ",
-        "subtitle": "Document reputation, before send"
+        "subtitle": "Pre-sales & proposal operations"
       },
       {
         "title": "GrowthIQ",
-        "subtitle": "Intelligent B2B outreach"
+        "subtitle": "Commercial execution intelligence"
       },
       {
         "title": "Governance Layer",
-        "subtitle": "Team document compliance"
+        "subtitle": "Cross-platform governance layer"
       }
     ],
     "solutionItems": [
@@ -374,7 +374,7 @@
       "eyebrow": "ProposalIQ — Pre-Sales Intelligence",
       "title": "The Pre-Sales Operating System for Engineering & IT Services.",
       "subtitle": "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms produce higher-quality, governed proposals faster.",
-      "heroLabel": "PROPOSAL STATUS · PROPOSAL IQ",
+      "heroLabel": "PROPOSAL STATUS · PROPOSALIQ",
       "heroItems": [
         "Unmapped requirements detected",
         "Pricing assumptions not validated",
@@ -410,7 +410,7 @@
         "Review",
         "Go/No-Go",
         "Approval",
-        "Cleaning",
+        "Finalization",
         "Submission",
         "Win/Loss Learning"
       ],
@@ -422,7 +422,7 @@
           "Requirement analysis and completeness checks",
           "Structured proposal templates from company knowledge",
           "Review → Validation → Go/No-Go → Final approval workflow",
-          "Document hygiene before submission"
+          "Pre-submission validation pass"
         ],
         "coming": [
           "Automated draft generation from the client drive",
@@ -740,7 +740,7 @@
         ]
       },
       "categories": {
-        "proposaliq": "PROPOSAL IQ",
+        "proposaliq": "PROPOSALIQ",
         "growthiq": "GROWTHIQ",
         "governance": "GOVERNANCE",
         "guide": "GUIDE"
@@ -1087,7 +1087,7 @@
     "seoTitle": "Security & Compliance — Mindorion",
     "seoDescription": "Mindorion commitments on EU hosting, encryption, GDPR and zero unnecessary data retention.",
     "title": "Security & Compliance",
-    "subtitle": "Clear principles to limit exposure, raise standards and protect B2B document flows.",
+    "subtitle": "Clear principles to limit exposure, raise standards and protect the operational data of Engineering & IT Services firms.",
     "cards": [
       {
         "title": "EU hosting",

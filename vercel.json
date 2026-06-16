@@ -15,6 +15,16 @@
       "source": "/about",
       "destination": "/why-mindorion",
       "permanent": true
+    },
+    {
+      "source": "/qualion",
+      "destination": "/products/proposaliq",
+      "permanent": true
+    },
+    {
+      "source": "/prospectiq",
+      "destination": "/products/growthiq",
+      "permanent": true
     }
   ],
   "rewrites": [

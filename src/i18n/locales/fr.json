@@ -23,15 +23,15 @@
     "productItems": [
       {
         "title": "ProposalIQ",
-        "subtitle": "Réputation documentaire, avant envoi"
+        "subtitle": "Pré-vente & opérations de proposition"
       },
       {
         "title": "GrowthIQ",
-        "subtitle": "Outreach B2B intelligent"
+        "subtitle": "Intelligence d'exécution commerciale"
       },
       {
         "title": "Governance Layer",
-        "subtitle": "Conformité documentaire équipe"
+        "subtitle": "Couche de gouvernance transverse"
       }
     ],
     "solutionItems": [
@@ -374,7 +374,7 @@
       "eyebrow": "ProposalIQ — Intelligence Pré-Vente",
       "title": "Le système d'exploitation pré-vente pour l'ingénierie et les services IT.",
       "subtitle": "De la réception de la RFQ à la soumission finale, ProposalIQ aide les cabinets d'ingénierie et de services IT à produire des propositions mieux gouvernées et de meilleure qualité, plus rapidement.",
-      "heroLabel": "STATUT PROPOSITION · PROPOSAL IQ",
+      "heroLabel": "STATUT PROPOSITION · PROPOSALIQ",
       "heroItems": [
         "Exigences non mappées détectées",
         "Hypothèses de prix non validées",
@@ -410,7 +410,7 @@
         "Revue",
         "Go/No-Go",
         "Approbation",
-        "Nettoyage",
+        "Finalisation",
         "Soumission",
         "Apprentissage Win/Loss"
       ],
@@ -422,7 +422,7 @@
           "Analyse des exigences et contrôles de complétude",
           "Modèles de proposition structurés depuis la connaissance de l'entreprise",
           "Workflow Revue → Validation → Go/No-Go → Approbation finale",
-          "Hygiène documentaire avant soumission"
+          "Validation avant soumission"
         ],
         "coming": [
           "Génération automatique de brouillon depuis le drive client",
@@ -740,7 +740,7 @@
         ]
       },
       "categories": {
-        "proposaliq": "PROPOSAL IQ",
+        "proposaliq": "PROPOSALIQ",
         "growthiq": "GROWTHIQ",
         "governance": "GOUVERNANCE",
         "guide": "GUIDE"
@@ -1087,7 +1087,7 @@
     "seoTitle": "Sécurité & Conformité — Mindorion",
     "seoDescription": "Les engagements de Mindorion en matière d'hébergement EU, chiffrement, RGPD et non-rétention des données.",
     "title": "Sécurité & Conformité",
-    "subtitle": "Des principes clairs pour limiter l'exposition, renforcer les standards et protéger les flux documentaires B2B.",
+    "subtitle": "Des principes clairs pour limiter l'exposition, renforcer les standards et protéger les données opérationnelles des cabinets d'ingénierie et de services IT.",
     "cards": [
       {
         "title": "Hébergement EU",
