@@ -195,18 +195,6 @@ function HomePage() {
         </FadeSection>
       </section>
 
-      <section className="section-shell pb-8">
-        <FadeSection className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {stats.map((stat) => (
-            <Card key={stat.label} className="bg-card/78">
-              <CardContent className="p-6">
-                <div className="brand-gradient-text text-3xl font-extrabold">{stat.value}</div>
-                <div className="mt-2 text-sm text-muted-foreground">{stat.label}</div>
-              </CardContent>
-            </Card>
-          ))}
-        </FadeSection>
-      </section>
 
       <section className="section-shell section-space pt-0">
         <FadeSection>
@@ -236,7 +224,7 @@ function HomePage() {
           <div className="eyebrow">{t("home.whyIntro")}</div>
           <h2 className="mt-3 text-[32px] font-bold text-foreground md:text-[38px]">{t("home.whyTitle").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === 0 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("home.whyTitle").split(" ").length - 1 ? " " : ""}</span>)}</h2>
         </FadeSection>
-        <FadeSection className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4" delay={0.1}>
+        <FadeSection className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" delay={0.1}>
           {whyItems.map((item) => (
             <Card key={item.title}>
               <CardContent className="p-6">
@@ -269,12 +257,12 @@ function HomePage() {
         <FadeSection className="section-shell mx-auto max-w-[600px] px-6 text-center">
           <h2 className="text-[32px] font-bold text-foreground">{t("home.finalTitle").split(" ").map((word, index) => <span key={`${word}-${index}`}>{index === t("home.finalTitle").split(" ").length - 1 ? <span className="brand-gradient-text">{word}</span> : word}{index < t("home.finalTitle").split(" ").length - 1 ? " " : ""}</span>)}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">{t("home.finalText")}</p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a href={SIGNUP_URL} target="_blank" rel="noreferrer">
-              <Button size="lg" className="h-[52px] px-8">{t("common.startFree")}</Button>
-            </a>
-            <Link to="/contact">
-              <Button variant="outline" size="lg">{t("home.ctaSecondary")}</Button>
+          <div className="mt-8 flex items-center justify-center">
+            <Link to="/contact" onClick={() => trackEvent("cta_clicked", { cta: "final_demo" })}>
+              <Button size="lg" className="h-[52px] px-8 gap-1">
+                {t("home.ctaSecondary")}
+                <ArrowRight className="h-4 w-4" />
+              </Button>
             </Link>
           </div>
         </FadeSection>
