@@ -136,8 +136,8 @@
     "goHome": "Retour à l'accueil"
   },
   "home": {
-    "seoTitle": "Mindorion — Alignez stratégie, exécution et gouvernance",
-    "seoDescription": "Mindorion unifie les données commerciales, de proposition et opérationnelles fragmentées pour que les cabinets de services d'ingénierie puissent se structurer avec gouvernance et prendre des décisions basées sur l'exécution réelle.",
+    "seoTitle": "Mindorion | OS d'entreprise pour l'ingénierie et l'IT",
+    "seoDescription": "Mindorion est le système d'exploitation d'entreprise pour les cabinets d'ingénierie et de services IT — unifiez propositions, exécution commerciale et gouvernance pour aligner la stratégie sur les opérations.",
     "badge": "Conçu pour les cabinets d'ingénierie et de conseil",
     "heroTitleWords": [
       "Alignez stratégie, exécution et gouvernance dans votre organisation d'ingénierie."
@@ -146,12 +146,20 @@
     "subtitle": "Mindorion unifie les données commerciales, de proposition et opérationnelles fragmentées pour que les cabinets de services d'ingénierie puissent se structurer avec gouvernance et prendre des décisions basées sur l'exécution réelle.",
     "primaryCta": "Demander une démo",
     "secondaryCta": "Voir la plateforme",
-    "personas": [
-      "Consultants",
-      "Équipes Sales",
-      "Directeurs delivery",
-      "ESN & Ingénierie",
-      "Engineering & IT Services"
+    "industriesTitle": "Secteurs servis",
+    "industries": [
+      "Services d'ingénierie",
+      "ESN & services IT",
+      "Conseil en management",
+      "Conseil technologique"
+    ],
+    "leadersTitle": "Dirigeants accompagnés",
+    "leaders": [
+      "CEO",
+      "COO",
+      "VP Sales",
+      "Directeurs de BU",
+      "Directeurs Delivery"
     ],
     "productsSectionTitle": "Applications au sein de Mindorion OS",
     "heroProducts": [
@@ -173,114 +181,57 @@
       "cta": "En savoir plus sur la gouvernance"
     },
     "stats": [
-      {
-        "value": "14",
-        "label": "catégories détectées"
-      },
-      {
-        "value": "30s",
-        "label": "résultats en 30 secondes"
-      },
-      {
-        "value": "100%",
-        "label": "RGPD Compliant"
-      },
-      {
-        "value": "0",
-        "label": "données stockées"
-      }
-    ],
-    "productsIntro": "Produits phares",
-    "productsTitle": "Trois briques pour fiabiliser les opérations B2B",
-    "productsSubtitle": "De la qualité documentaire à la gouvernance d'équipe, Mindorion structure les workflows qui engagent votre image.",
-    "productCards": [
-      {
-        "title": "ProposalIQ",
-        "text": "Contrôlez la qualité réelle d'un document avant chaque envoi externe."
-      },
-      {
-        "title": "GrowthIQ",
-        "text": "Cadencez un outreach B2B intelligent, piloté par signal et contexte."
-      },
-      {
-        "title": "Governance Layer",
-        "text": "Mesurez la conformité documentaire des équipes et déclenchez les bonnes alertes."
-      }
-    ],
-    "proposaliqDocTitle": "ProposalIQ Doc",
-    "proposaliqDocItems": [
-      "Métadonnées cachées",
-      "Commentaires & annotations",
-      "Données personnelles",
-      "Orthographe & cohérence",
-      "Export client-ready"
-    ],
-    "proposaliqProposalTitle": "ProposalIQ Proposal",
-    "proposaliqProposalItems": [
-      "Risques métier",
-      "Risques marge",
-      "Tableaux partagés",
-      "Conformité avant-vente",
-      "Standardisation équipe"
+      { "value": "Faster", "label": "Cycles de proposition accélérés" },
+      { "value": "Aligned", "label": "Visibilité sur l'exécution de la stratégie" },
+      { "value": "Unified", "label": "Intelligence opérationnelle unifiée" }
     ],
     "useCasesIntro": "Cas d'usage",
-    "useCasesTitle": "Pensé pour les métiers qui envoient des documents critiques",
+    "useCasesTitle": "Conçu pour les cabinets qui pilotent une exécution commerciale et opérationnelle complexe.",
     "useCases": [
       {
-        "title": "Consultant",
-        "text": "Avant une proposition ou un livrable, supprimez les signaux parasites qui fragilisent la crédibilité."
+        "title": "Direction Générale",
+        "text": "Une vision unifiée de la stratégie, du pipeline commercial et de l'exécution opérationnelle pour piloter le cabinet avec confiance."
       },
       {
-        "title": "Chargé d'affaires",
-        "text": "Sécurisez les réponses commerciales, les offres et les pièces avant chaque partage externe."
+        "title": "Direction Commerciale",
+        "text": "Alignez l'activité commerciale sur la stratégie, suivez l'effort des équipes et transformez le pipeline en revenu prévisible."
       },
       {
-        "title": "Delivery",
-        "text": "Nettoyez CV, contrats et dossiers candidats avant diffusion, tout en réduisant le risque RGPD."
+        "title": "Directeurs de BU",
+        "text": "Pilotez votre périmètre de bout en bout — des propositions au delivery — avec l'intelligence opérationnelle pour atteindre vos objectifs."
       },
       {
-        "title": "Ingénieur",
-        "text": "Uniformisez les documents techniques, SOW et dossiers projet avant revue client."
+        "title": "Direction Delivery",
+        "text": "Connectez missions, capacité et marge en un seul endroit pour des décisions delivery basées sur l'exécution réelle."
       }
     ],
     "whyIntro": "Pourquoi Mindorion",
-    "whyTitle": "Une expérience conçue pour les équipes B2B exigeantes",
+    "whyTitle": "Conçu pour les dirigeants de l'ingénierie et du conseil",
     "whyItems": [
-      {
-        "title": "Rapidité",
-        "text": "Un contrôle prêt à l'emploi en moins de 30 secondes, sans pipeline complexe."
-      },
-      {
-        "title": "Sécurité",
-        "text": "Traitement conçu pour limiter l'exposition et éviter toute rétention inutile des données."
-      },
-      {
-        "title": "Intégration",
-        "text": "S'insère naturellement dans les routines documentaires, sales et ops existantes."
-      },
-      {
-        "title": "Conformité",
-        "text": "Aide les équipes à renforcer les bons réflexes RGPD et qualité avant envoi."
-      }
+      { "title": "Données unifiées", "text": "Réunissez les données commerciales, de proposition et opérationnelles dans une source unique de vérité." },
+      { "title": "Exécution de la stratégie", "text": "Traduisez la stratégie en exécution quotidienne et mesurez la progression là où le travail se fait." },
+      { "title": "Gouvernance by Design", "text": "Chaque workflow produit des données structurées et auditables — la gouvernance est intégrée." },
+      { "title": "Decision Intelligence", "text": "Transformez les signaux fragmentés en décisions claires pour les dirigeants, BU et delivery." },
+      { "title": "IA d'entreprise", "text": "Une IA sécurisée et de niveau entreprise, appliquée à votre contexte opérationnel réel." }
     ],
-    "proofIntro": "Preuves sociales",
-    "proofTitle": "Des bénéfices visibles dès les premiers envois",
+    "proofIntro": "Preuves",
+    "proofTitle": "La confiance des dirigeants de l'ingénierie et du conseil",
     "testimonials": [
       {
-        "role": "Consultant",
-        "quote": "ProposalIQ nous évite les derniers doutes avant l'envoi d'une proposition. La confiance côté client change immédiatement."
+        "role": "COO · Services d'ingénierie",
+        "quote": "Mindorion nous a donné une vision unique des propositions, de l'exécution et de la gouvernance. Les décisions sont plus rapides et fondées sur les données."
       },
       {
-        "role": "Sales Manager",
-        "quote": "Nous avons standardisé le contrôle qualité de nos offres sans alourdir le cycle commercial."
+        "role": "VP Sales · Services IT",
+        "quote": "L'exécution commerciale est enfin alignée avec la stratégie à travers les BU — et nous voyons où agir."
       },
       {
-        "role": "DRH",
-        "quote": "Le gain est double : réduction du risque documentaire et meilleure qualité perçue des dossiers candidats."
+        "role": "Directeur de BU · Conseil",
+        "quote": "Piloter mon périmètre de bout en bout dans un seul OS a changé notre manière d'atteindre les objectifs."
       }
     ],
-    "finalTitle": "Prêt à protéger votre réputation ?",
-    "finalText": "Centralisez la qualité documentaire, la prospection et la gouvernance avec une seule plateforme B2B.",
+    "finalTitle": "Prêt à aligner stratégie et exécution ?",
+    "finalText": "Demandez une démo et découvrez comment Mindorion connecte propositions, exécution commerciale et gouvernance dans un seul système opérationnel.",
     "ctaSecondary": "Demander une démo"
   },
   "pricing": {
