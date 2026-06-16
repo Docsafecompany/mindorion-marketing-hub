@@ -131,54 +131,133 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
           </div>
         </section>
 
-        <section id="workflow" className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
-          <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">{t("productsTemplate.howItWorks")}</div>
-          <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-center">
-            {data.howItWorks.map((step, index) => (
-              <StepCard key={step.title} accent={index + 1} step={step} showArrow={index < data.howItWorks.length - 1} />
-            ))}
-          </div>
-        </section>
+        {data.costs && data.costs.length > 0 ? (
+          <section className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+            <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">
+              {data.costsLabel ?? "What it costs you today"}
+            </div>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {data.costs.map((card) => (
+                <article
+                  key={card.title}
+                  className="rounded-xl border border-[var(--color-usecase-critical)]/20 bg-[var(--color-usecase-critical-soft)]/40 p-4 sm:p-5"
+                >
+                  <div className="text-base font-bold text-[var(--color-usecase-critical)] sm:text-lg">{card.title}</div>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{card.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
-        <section className="grid gap-6 lg:grid-cols-2">
-          {data.featureColumns.map((column) => (
-            <article key={column.title} className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
-              <h2 className="text-xl font-extrabold text-foreground sm:text-2xl">{column.title}</h2>
-              <div className="mt-6 space-y-4">
-                {column.items.map((item) => (
-                  <div key={item.title} className="flex items-start gap-3 rounded-xl bg-[var(--product-accent-soft)]/35 px-3 py-3 sm:gap-4 sm:px-4 sm:py-4">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--product-accent-soft)] text-lg">
-                      {item.icon}
+        {data.workflowSteps && data.workflowSteps.length > 0 ? (
+          <section id="workflow" className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+            <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">
+              {data.workflowLabel ?? t("productsTemplate.howItWorks")}
+            </div>
+            <div className="mt-6 flex flex-wrap items-center gap-2 sm:gap-3">
+              {data.workflowSteps.map((step, index) => (
+                <div key={step} className="flex items-center gap-2 sm:gap-3">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[var(--product-accent-soft)] px-3 py-1.5 text-xs font-semibold text-[var(--product-accent)] sm:px-4 sm:py-2 sm:text-sm">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--product-accent)] text-[10px] font-bold text-white sm:h-6 sm:w-6 sm:text-xs">
+                      {index + 1}
                     </span>
-                    <div className="min-w-0">
-                      <div className="font-semibold text-foreground">{item.title}</div>
-                      <div className="mt-1 text-sm leading-6 text-muted-foreground">{item.text}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </article>
-          ))}
-        </section>
-
-        <section>
-          <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">{data.scenarioLabel}</div>
-          <div className="mt-6 grid gap-6 lg:grid-cols-3">
-            {data.scenarios.map((scenario) => (
-              <article key={scenario.title} className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6">
-                <div className="inline-flex max-w-full rounded-full bg-[var(--product-accent-soft)] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--product-accent)] sm:text-xs sm:tracking-[0.12em]">
-                  <span className="truncate">{scenario.tag}</span>
+                    {step}
+                  </span>
+                  {index < data.workflowSteps!.length - 1 ? (
+                    <span className="text-sm text-[var(--product-accent)] sm:text-base">→</span>
+                  ) : null}
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-foreground sm:text-xl">{scenario.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-muted-foreground">{scenario.text}</p>
-                <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--color-usecase-good-soft)] px-3 py-2 text-sm font-medium text-[var(--color-usecase-good)]">
-                  <Check className="h-4 w-4 shrink-0" />
-                  <span>{scenario.result}</span>
+              ))}
+            </div>
+          </section>
+        ) : data.howItWorks && data.howItWorks.length > 0 ? (
+          <section id="workflow" className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+            <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">{t("productsTemplate.howItWorks")}</div>
+            <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-center">
+              {data.howItWorks.map((step, index) => (
+                <StepCard key={step.title} accent={index + 1} step={step} showArrow={index < data.howItWorks!.length - 1} />
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        {data.availability ? (
+          <section className="grid gap-6 lg:grid-cols-2">
+            <article className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+              <div className="inline-flex rounded-full bg-[var(--color-usecase-good-soft)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--color-usecase-good)] sm:text-xs">
+                Available today
+              </div>
+              <h2 className="mt-4 text-xl font-extrabold text-foreground sm:text-2xl">{data.availability.availableTitle}</h2>
+              <ul className="mt-5 space-y-3">
+                {data.availability.available.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-usecase-good)]" />
+                    <span className="text-sm leading-6 text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+            <article className="rounded-xl border border-dashed border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+              <div className="inline-flex rounded-full bg-[var(--product-accent-soft)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--product-accent)] sm:text-xs">
+                Coming soon
+              </div>
+              <h2 className="mt-4 text-xl font-extrabold text-foreground sm:text-2xl">{data.availability.comingTitle}</h2>
+              <ul className="mt-5 space-y-3">
+                {data.availability.coming.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[var(--product-accent)]" />
+                    <span className="text-sm leading-6 text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </section>
+        ) : null}
+
+        {data.featureColumns ? (
+          <section className="grid gap-6 lg:grid-cols-2">
+            {data.featureColumns.map((column) => (
+              <article key={column.title} className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6 lg:p-8">
+                <h2 className="text-xl font-extrabold text-foreground sm:text-2xl">{column.title}</h2>
+                <div className="mt-6 space-y-4">
+                  {column.items.map((item) => (
+                    <div key={item.title} className="flex items-start gap-3 rounded-xl bg-[var(--product-accent-soft)]/35 px-3 py-3 sm:gap-4 sm:px-4 sm:py-4">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--product-accent-soft)] text-lg">
+                        {item.icon}
+                      </span>
+                      <div className="min-w-0">
+                        <div className="font-semibold text-foreground">{item.title}</div>
+                        <div className="mt-1 text-sm leading-6 text-muted-foreground">{item.text}</div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </article>
             ))}
-          </div>
-        </section>
+          </section>
+        ) : null}
+
+        {data.scenarios && data.scenarios.length > 0 ? (
+          <section>
+            <div className="break-words text-[10px] font-bold uppercase tracking-[0.14em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">{data.scenarioLabel}</div>
+            <div className="mt-6 grid gap-6 lg:grid-cols-3">
+              {data.scenarios.map((scenario) => (
+                <article key={scenario.title} className="rounded-xl border border-[var(--color-product-card-border)] bg-card p-5 sm:p-6">
+                  <div className="inline-flex max-w-full rounded-full bg-[var(--product-accent-soft)] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--product-accent)] sm:text-xs sm:tracking-[0.12em]">
+                    <span className="truncate">{scenario.tag}</span>
+                  </div>
+                  <h3 className="mt-5 text-lg font-bold text-foreground sm:text-xl">{scenario.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-muted-foreground">{scenario.text}</p>
+                  <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--color-usecase-good-soft)] px-3 py-2 text-sm font-medium text-[var(--color-usecase-good)]">
+                    <Check className="h-4 w-4 shrink-0" />
+                    <span>{scenario.result}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="flex flex-col gap-5 rounded-xl bg-[var(--product-cta-bg)] p-5 sm:px-6 sm:py-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0">
@@ -187,10 +266,10 @@ export function ProductPageTemplate({ data }: { data: ProductPageData }) {
           </div>
           <Button asChild className="w-full rounded-xl bg-white text-[var(--product-cta-bg)] shadow-none hover:bg-white/95 lg:w-auto">
             <a
-              href={SIGNUP_URL}
+              href={data.ctaButton?.href ?? SIGNUP_URL}
               onClick={() => trackEvent("cta_clicked", { cta: `${data.product}_try`, location: "product_footer" })}
             >
-              {t("productsTemplate.viewPricing")}
+              {data.ctaButton?.label ?? t("productsTemplate.viewPricing")}
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
