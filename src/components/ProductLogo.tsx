@@ -1,6 +1,6 @@
-import governanceiqLogo from "@/assets/governanceiq-logo.jpg";
+import governanceiqLogo from "@/assets/governanceiq-logo.png";
 import growthiqLogo from "@/assets/growthiq-logo.png.asset.json";
-import proposaliqLogo from "@/assets/proposaliq-logo.jpg";
+import proposaliqLogo from "@/assets/proposaliq-logo.png";
 import { cn } from "@/lib/utils";
 
 type ProductName = "proposaliq" | "growthiq" | "governanceiq";
