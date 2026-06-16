@@ -423,6 +423,34 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     includedInSuite: "INCLUDED IN THE SUITE",
     comparisonFeature: "Feature",
     productSelectorHelper: "Each product can be adopted independently. Enterprise combines modules and governance.",
+    maturityPath: "Excel → Starter → Pro → Business → Enterprise. You are not paying for isolated features — you are moving your organization to a higher level of operational maturity.",
+    roiHeadline: "One missed RFP requirement, one exposed internal comment, or one month of poor pipeline data can cost more than the annual subscription.",
+    faqTitle: "Frequently asked questions",
+    faq: [
+      {
+        question: "Can we start with only ProposalIQ or GrowthIQ?",
+        answer: "Yes. Mindorion is designed to start with one operational workflow and expand as teams standardize proposal and commercial execution.",
+      },
+      {
+        question: "How does Enterprise pricing work?",
+        answer: "Enterprise pricing depends on users, CRM integrations, security requirements, governance needs and deployment scope.",
+      },
+      {
+        question: "Do you integrate with our CRM?",
+        answer: "Yes — Enterprise connects to your CRM so operational data stays synchronized and double reporting is reduced.",
+      },
+      {
+        question: "How does Mindorion control AI cost and compliance?",
+        answer: "Mindorion does not push AI everywhere by default. It creates structured workflows and governed data so AI is used where it creates value while reducing uncontrolled usage and compliance risk.",
+      },
+      {
+        question: "How do ProposalIQ and GrowthIQ work together?",
+        answer: "ProposalIQ structures the RFQ/proposal workflow while GrowthIQ connects pipeline, commercial execution and win/loss outcomes, creating a learning loop across the organization.",
+      },
+    ],
+    finalCtaTitle: "Ready to standardize proposal and commercial execution?",
+    finalCtaPrimary: "Start with one module",
+    finalCtaSecondary: "Book enterprise demo",
     products: [
       {
         key: "proposaliq",
