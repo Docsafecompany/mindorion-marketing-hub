@@ -403,10 +403,10 @@
     "growthiq": {
       "seoTitle": "GrowthIQ | Outreach B2B intelligent | Mindorion",
       "seoDescription": "GrowthIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
-      "eyebrow": "🎯 GROWTH IQ · OUTREACH B2B INTELLIGENT",
+      "eyebrow": "🎯 GROWTHIQ · OUTREACH B2B INTELLIGENT",
       "title": "Trouvez les bons prospects. Au bon moment.",
       "subtitle": "GrowthIQ identifie vos meilleurs prospects B2B, qualifie les opportunités par IA et génère des séquences d'outreach personnalisées pour maximiser vos taux de réponse.",
-      "heroLabel": "PIPELINE · GROWTH IQ",
+      "heroLabel": "PIPELINE · GROWTHIQ",
       "heroRows": [
         { "initials": "DL", "title": "Dir. Commercial · Engineering", "city": "Lyon", "score": "94%" },
         { "initials": "VP", "title": "VP Achats · IT Services", "city": "Toulouse", "score": "88%" },
@@ -587,7 +587,7 @@
       },
       "categories": {
         "proposaliq": "PROPOSAL IQ",
-        "growthiq": "GROWTH IQ",
+        "growthiq": "GROWTHIQ",
         "governance": "GOUVERNANCE",
         "guide": "GUIDE"
       },
