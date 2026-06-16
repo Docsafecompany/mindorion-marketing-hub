@@ -22,7 +22,7 @@ export const Route = createFileRoute("/products/proposaliq")({
     const base = createStaticMeta({
       title: "Mindorion ProposalIQ | Pre-Sales & Proposal Intelligence for Engineering Firms",
       description:
-        "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms create compliant, high-quality proposals faster.",
+        "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms produce higher-quality, governed proposals faster.",
       path: "/products/proposaliq",
     });
     return {
