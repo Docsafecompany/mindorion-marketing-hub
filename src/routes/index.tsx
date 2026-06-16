@@ -1,5 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BriefcaseBusiness, FileText, Sparkles, Users } from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, ChevronRight, FileText, Shield, Sparkles, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { FadeSection } from "@/components/FadeSection";
@@ -39,18 +39,11 @@ function HomePage() {
   const { t } = useTranslation();
   const stats = t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>;
   const heroTitleWords = t("home.heroTitleWords", { returnObjects: true }) as string[];
-  const heroProducts = t("home.heroProducts", { returnObjects: true }) as Array<{
-    icon: string;
-    title: string;
-    text: string;
-    cta: string;
-  }>;
   const useCases = t("home.useCases", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const whyItems = t("home.whyItems", { returnObjects: true }) as Array<{ title: string; text: string }>;
   const testimonials = t("home.testimonials", { returnObjects: true }) as Array<{ role: string; quote: string }>;
   const personas = t("home.personas", { returnObjects: true }) as string[];
   const useCaseIcons = [BriefcaseBusiness, Users, Sparkles, FileText] as const;
-  const heroProductLogos = ["proposaliq", "growthiq", "governanceiq"] as const;
 
   return (
     <>
@@ -88,27 +81,79 @@ function HomePage() {
             </div>
           </FadeSection>
 
-          <FadeSection className="mt-14 grid gap-5 lg:grid-cols-3" delay={0.1}>
-            {heroProducts.map((card, index) => {
-              return (
-                <Card key={card.title} className="h-full">
-                  <CardHeader>
-                    <div className="mb-2 flex h-16 w-40 items-center justify-start rounded-xl">
-                      <ProductLogo product={heroProductLogos[index]} className="object-left" />
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{card.text}</p>
-                    <div className="mt-6">
-                      <a href={SIGNUP_URL} className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80">
-                        {card.cta}
-                        <ArrowRight className="h-4 w-4" />
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <FadeSection className="mt-14" delay={0.1}>
+            <div className="eyebrow text-center">{t("home.productsSectionTitle")}</div>
+
+            {/* Connecting flow strip */}
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-medium">
+              <span className="rounded-full editorial-gray-soft px-3 py-1">Strategy</span>
+              <ChevronRight className="h-3.5 w-3.5 text-muted-foreground/50" />
+              <span className="rounded-full editorial-purple-soft px-3 py-1">ProposalIQ</span>
+              <ChevronRight className="h-3.5 w-3.5 text-muted-foreground/50" />
+              <span className="rounded-full editorial-green-soft px-3 py-1">GrowthIQ</span>
+              <ChevronRight className="h-3.5 w-3.5 text-muted-foreground/50" />
+              <span className="rounded-full editorial-amber-soft px-3 py-1">Governance</span>
+              <ChevronRight className="h-3.5 w-3.5 text-muted-foreground/50" />
+              <span className="rounded-full editorial-gray-soft px-3 py-1">Decision Intelligence</span>
+            </div>
+
+            {/* Primary product cards */}
+            <div className="mt-8 grid gap-5 lg:grid-cols-2">
+              {/* ProposalIQ */}
+              <Card className="h-full">
+                <CardHeader>
+                  <div className="mb-2 flex h-16 w-40 items-center justify-start rounded-xl">
+                    <ProductLogo product="proposaliq" className="object-left" />
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{t("home.heroProducts.0.text")}</p>
+                  <div className="mt-6">
+                    <Link to="/products/proposaliq" onClick={() => trackEvent("cta_clicked", { cta: "hero_explore_proposaliq" })} className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80">
+                      {t("home.heroProducts.0.cta")}
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* GrowthIQ */}
+              <Card className="h-full">
+                <CardHeader>
+                  <div className="mb-2 flex h-16 w-40 items-center justify-start rounded-xl">
+                    <ProductLogo product="growthiq" className="object-left" />
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{t("home.heroProducts.1.text")}</p>
+                  <div className="mt-6">
+                    <Link to="/products/growthiq" onClick={() => trackEvent("cta_clicked", { cta: "hero_explore_growthiq" })} className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80">
+                      {t("home.heroProducts.1.cta")}
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Governance Layer - subordinate band */}
+            <Card className="mt-5">
+              <CardContent className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg editorial-amber-soft">
+                    <Shield className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-foreground">Governance Layer</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{t("home.governanceLayer.text")}</p>
+                  </div>
+                </div>
+                <Link to="/products/governanceiq" onClick={() => trackEvent("cta_clicked", { cta: "hero_learn_governance" })} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80">
+                  {t("home.governanceLayer.cta")}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </CardContent>
+            </Card>
           </FadeSection>
 
           <FadeSection className="mt-8 flex flex-wrap items-center justify-center gap-2" delay={0.15}>
