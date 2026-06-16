@@ -357,45 +357,48 @@
         "Compliance checklist pending",
         "✓ Proposal validated — Ready for submission"
       ],
-      "howItWorks": [
-        { "title": "Capture", "text": "Ingest RFQ details, client requirements and historical proposal data into ProposalIQ." },
-        { "title": "Generate", "text": "Build structured proposal templates with validated requirements, pricing and compliance checks." },
-        { "title": "Submit", "text": "Route through approval workflows and submit with confidence — every proposal tracked end-to-end." }
+      "costsLabel": "WHAT IT COSTS YOU TODAY",
+      "costs": [
+        { "title": "Lost bids", "text": "Opportunities slip because proposals are inconsistent or late." },
+        { "title": "Exposed margins", "text": "Internal comments and pricing leak into client-facing documents." },
+        { "title": "Wrong references", "text": "Outdated case studies and mismatched credentials weaken credibility." },
+        { "title": "Missing requirements", "text": "RFP requirements slip through without a structured check." }
       ],
-      "featureColumns": [
-        {
-          "title": "Proposal generation & validation",
-          "items": [
-            { "title": "RFQ intelligence", "text": "Extract and map client requirements automatically from RFQ documents." },
-            { "title": "Template generation", "text": "Generate structured proposals from your intelligent client drive and past wins." },
-            { "title": "Requirement validation", "text": "Validate key deliverables, compliance clauses and pricing assumptions before submission." },
-            { "title": "Approval routing", "text": "Route proposals through review and sign-off workflows built for engineering services." },
-            { "title": "Version control", "text": "Track every iteration with full audit history from first draft to final submission." },
-            { "title": "Compliance checks", "text": "Built-in validation for industry standards, client-specific terms and internal policies." }
-          ]
-        },
-        {
-          "title": "Capabilities & integrations",
-          "items": [
-            { "title": "Client drive sync", "text": "Connect your intelligent client drive for instant access to historical proposals and templates." },
-            { "title": "Multi-format output", "text": "Export to Word, PDF and PowerPoint with consistent, client-ready formatting." },
-            { "title": "Real-time collaboration", "text": "Collaborate with subject matter experts, delivery leads and sales in one workspace." },
-            { "title": "Proposal analytics", "text": "Track win rates, cycle times and bottlenecks across your proposal pipeline." },
-            { "title": "Secure by design", "text": "Enterprise-grade access controls and data governance for sensitive client information." },
-            { "title": "CRM integration", "text": "Sync opportunities, contacts and proposal status with your existing CRM." }
-          ]
-        }
+      "workflowLabel": "THE PRE-SALES WORKFLOW",
+      "workflowSteps": [
+        "RFQ Intake",
+        "Requirement Analysis",
+        "Knowledge Retrieval",
+        "Draft Generation",
+        "Collaboration",
+        "Review",
+        "Go/No-Go",
+        "Approval",
+        "Cleaning",
+        "Submission",
+        "Win/Loss Learning"
       ],
-      "scenarioLabel": "THEY USE PROPOSAL IQ",
-      "scenarios": [
-        { "tag": "ENGINEERING", "title": "Complex RFQ with 200+ requirements", "text": "ProposalIQ mapped every requirement to past proposals and generated a compliant response in hours instead of days.", "result": "Won the deal" },
-        { "tag": "IT SERVICES", "title": "Multi-team proposal with conflicting assumptions", "text": "Validation caught pricing mismatches between delivery and sales before the client ever saw the proposal.", "result": "Margin protected" },
-        { "tag": "CONSULTING", "title": "Repeat client with evolving compliance needs", "text": "Compliance checks ensured every new clause was addressed without manually reviewing past submissions.", "result": "Client retained" }
-      ],
-      "ctaTitle": "Ready to accelerate your pre-sales process?",
-      "ctaSubtitle": "See how ProposalIQ turns RFQs into winning proposals faster.",
+      "availability": {
+        "availableTitle": "What's live in ProposalIQ today",
+        "comingTitle": "On the ProposalIQ roadmap",
+        "available": [
+          "Intelligent client drive (RFQs, MSAs, NDAs, past proposals, references)",
+          "Requirement analysis and completeness checks",
+          "Structured proposal templates from company knowledge",
+          "Review → Validation → Go/No-Go → Final approval workflow",
+          "Document hygiene before submission"
+        ],
+        "coming": [
+          "Automated draft generation from the client drive",
+          "Win/loss reason capture and template optimization",
+          "Cross-proposal reusable knowledge scoring"
+        ]
+      },
+      "ctaTitle": "Turn RFQs into winning proposals.",
+      "ctaSubtitle": "See how ProposalIQ helps engineering and IT services firms win more, faster, with less risk.",
       "primaryCta": "Request a demo",
-      "secondaryCta": "See proposal workflow"
+      "secondaryCta": "See proposal workflow",
+      "ctaButton": "Explore ProposalIQ"
     },
     "growthiq": {
       "seoTitle": "GrowthIQ | Intelligent B2B outreach | Mindorion",
