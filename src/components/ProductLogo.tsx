@@ -1,14 +1,14 @@
 import governanceiqLogo from "@/assets/governanceiq-logo.jpg";
-import growthiqLogo from "@/assets/growthiq-logo.jpg";
+import growthiqLogo from "@/assets/growthiq-logo.png.asset.json";
 import proposaliqLogo from "@/assets/proposaliq-logo.jpg";
 import { cn } from "@/lib/utils";
 
 type ProductName = "proposaliq" | "growthiq" | "governanceiq";
 
 const logoMap: Record<ProductName, { src: string; alt: string }> = {
-  proposaliq: { src: proposaliqLogo, alt: "Logo ProposalIQ" },
-  growthiq: { src: growthiqLogo, alt: "Logo GrowthIQ" },
-  governanceiq: { src: governanceiqLogo, alt: "Logo Governance Layer" },
+  proposaliq: { src: proposaliqLogo, alt: "ProposalIQ logo" },
+  growthiq: { src: growthiqLogo.url, alt: "GrowthIQ logo" },
+  governanceiq: { src: governanceiqLogo, alt: "Governance Layer logo" },
 };
 
 export function ProductLogo({ product, className }: { product: ProductName; className?: string }) {
