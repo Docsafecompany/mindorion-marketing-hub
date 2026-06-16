@@ -21,9 +21,9 @@ const capabilityIcons = ["🎯", "🧭", "📊", "📡", "🛡️", "🧠"];
 export const Route = createFileRoute("/products/growthiq")({
   head: () => {
     const base = createStaticMeta({
-      title: "GrowthIQ | Commercial Execution Intelligence for Engineering & IT Services | Mindorion",
+      title: "Mindorion GrowthIQ | Commercial Execution Intelligence for Engineering & IT Services",
       description:
-        "GrowthIQ helps Engineering & IT Services firms guide business development, capture high-value operational signals and turn commercial activity into decision intelligence.",
+        "GrowthIQ helps Engineering & IT Services firms align commercial strategy with execution, capture high-value operational data and turn business development activity into decision intelligence.",
       path: "/products/growthiq",
     });
     return {
