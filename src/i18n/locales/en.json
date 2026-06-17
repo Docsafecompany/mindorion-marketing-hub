@@ -1,8 +1,8 @@
 {
   "site": {
     "name": "Mindorion",
-    "tagline": "Professional intelligence for B2B teams.",
-    "description": "Documents, outreach and governance, one platform.",
+    "tagline": "The enterprise OS for Engineering & IT Services.",
+    "description": "Proposals, commercial execution and governance on one operating system.",
     "language": "EN",
     "switchLanguage": "FR / EN",
     "copyright": "© 2026 Mindorion OÜ. All rights reserved.",
@@ -23,15 +23,15 @@
     "productItems": [
       {
         "title": "ProposalIQ",
-        "subtitle": "Document reputation, before send"
+        "subtitle": "Pre-sales & proposal operations"
       },
       {
         "title": "GrowthIQ",
-        "subtitle": "Intelligent B2B outreach"
+        "subtitle": "Commercial execution intelligence"
       },
       {
         "title": "Governance Layer",
-        "subtitle": "Team document compliance"
+        "subtitle": "Cross-platform governance layer"
       }
     ],
     "solutionItems": [
@@ -72,7 +72,7 @@
     "mobileDescription": "Explore Mindorion products, use cases and resources."
   },
   "footer": {
-    "brandText": "Professional intelligence for B2B teams. Documents, outreach and governance, one platform.",
+    "brandText": "The enterprise OS for Engineering & IT Services. Proposals, commercial execution and governance on one operating system.",
     "linkedin": "LinkedIn",
     "contact": "Contact",
     "products": "PRODUCTS",
@@ -374,7 +374,7 @@
       "eyebrow": "ProposalIQ — Pre-Sales Intelligence",
       "title": "The Pre-Sales Operating System for Engineering & IT Services.",
       "subtitle": "From RFQ intake to final submission, ProposalIQ helps engineering and IT services firms produce higher-quality, governed proposals faster.",
-      "heroLabel": "PROPOSAL STATUS · PROPOSAL IQ",
+      "heroLabel": "PROPOSAL STATUS · PROPOSALIQ",
       "heroItems": [
         "Unmapped requirements detected",
         "Pricing assumptions not validated",
@@ -410,7 +410,7 @@
         "Review",
         "Go/No-Go",
         "Approval",
-        "Cleaning",
+        "Finalization",
         "Submission",
         "Win/Loss Learning"
       ],
@@ -422,7 +422,7 @@
           "Requirement analysis and completeness checks",
           "Structured proposal templates from company knowledge",
           "Review → Validation → Go/No-Go → Final approval workflow",
-          "Document hygiene before submission"
+          "Pre-submission validation pass"
         ],
         "coming": [
           "Automated draft generation from the client drive",
@@ -740,7 +740,7 @@
         ]
       },
       "categories": {
-        "proposaliq": "PROPOSAL IQ",
+        "proposaliq": "PROPOSALIQ",
         "growthiq": "GROWTHIQ",
         "governance": "GOVERNANCE",
         "guide": "GUIDE"
@@ -909,15 +909,15 @@
   },
   "about": {
     "seoTitle": "About | Mindorion — Intelligence for Engineering & IT Services",
-    "seoDescription": "Mindorion is a B2B SaaS company founded in Estonia. Discover our mission, team and build-in-public approach. ProposalIQ, GrowthIQ, Governance Layer.",
+    "seoDescription": "Mindorion builds the enterprise operating system for Engineering & IT Services firms. Discover our mission, team and approach. ProposalIQ, GrowthIQ, Governance Layer.",
     "eyebrow": "ABOUT MINDORION",
     "heroTitle1": "Building the tools Engineering & IT Services firms ",
     "heroTitle2": "actually deserve.",
-    "heroText": "Mindorion is a B2B software company founded in Estonia, building a suite of professional intelligence tools for teams operating at high stakes — consultants, sales, delivery leaders and engineers.",
+    "heroText": "Mindorion builds the enterprise operating system for Engineering & IT Services firms — unifying proposals, commercial execution and governance for the teams that run them.",
     "tags": [
       "Mindorion OÜ · Estonia",
       "Founded in 2024",
-      "B2B SaaS",
+      "Enterprise SaaS",
       "Build in public"
     ],
     "stats": [
@@ -1003,7 +1003,6 @@
     "productOptions": [
       "🛡 ProposalIQ",
       "🎯 GrowthIQ",
-      "📋 Governance Layer",
       "Full suite"
     ],
     "teamSizes": [
@@ -1088,7 +1087,7 @@
     "seoTitle": "Security & Compliance — Mindorion",
     "seoDescription": "Mindorion commitments on EU hosting, encryption, GDPR and zero unnecessary data retention.",
     "title": "Security & Compliance",
-    "subtitle": "Clear principles to limit exposure, raise standards and protect B2B document flows.",
+    "subtitle": "Clear principles to limit exposure, raise standards and protect the operational data of Engineering & IT Services firms.",
     "cards": [
       {
         "title": "EU hosting",
@@ -1112,7 +1111,7 @@
     "seeDetails": "view details",
     "plans": {
       "starter": {
-        "badge": "Starter · €19/month",
+        "badge": "Included with Starter",
         "subtitle": "Personal view — track your own document quality.",
         "features": [
           {
@@ -1135,7 +1134,7 @@
         "upgrade": "Upgrade to Pro for 6-month history and personalized AI advice."
       },
       "pro": {
-        "badge": "Pro · €39/month",
+        "badge": "Included with Pro",
         "subtitle": "Enriched personal view — advanced analytics and AI recommendations.",
         "features": [
           {
@@ -1162,7 +1161,7 @@
         "upgrade": "Upgrade to Business for team view and role management (up to 5 members)."
       },
       "business": {
-        "badge": "Business · €59/user/month",
+        "badge": "Included with Business",
         "subtitle": "Team view — manage document quality across your whole organization.",
         "features": [
           {
@@ -1189,7 +1188,7 @@
         "upgrade": "Upgrade to Enterprise for full hierarchy (CEO → N+2 → Manager) and unlimited members."
       },
       "enterprise": {
-        "badge": "Enterprise · Custom",
+        "badge": "Included with Enterprise",
         "subtitle": "Full governance — custom hierarchy, IT configuration, executive reports.",
         "features": [
           {
@@ -1227,9 +1226,9 @@
   "usecasesPage": {
     "eyebrow": "USE CASES",
     "title": "How Engineering & IT Services firms use Mindorion",
-    "subtitle": "Whether you're a consultant, salesperson, delivery lead or engineer — Mindorion catches what you don't see, finds your next clients and strengthens your operational governance.",
+    "subtitle": "Whether you lead pre-sales, commercial execution, delivery or a business unit — Mindorion structures proposals, aligns commercial execution with strategy and keeps operations governed.",
     "ctaTitle": "Ready to operate at the highest level?",
-    "ctaText": "Start with ProposalIQ. Add GrowthIQ. Govern with Governance Layer.",
+    "ctaText": "Start with ProposalIQ. Add GrowthIQ. Governance is built into both.",
     "ctaButton": "View pricing",
     "tabs": {
       "consultants": "Consultants & Freelancers",
@@ -1239,17 +1238,17 @@
     },
     "personas": {
       "consultants": {
-        "badge": "💼 CONSULTANT & FREELANCER",
-        "title": "Your professional reputation is on the line with every document you send.",
-        "text": "As a consultant, you don't have a quality team behind you. A proposal with internal metadata, a forgotten comment or an unreplaced placeholder — and your credibility takes a hit. Mindorion has your back at every step.",
+        "badge": "💼 CONSULTANTS & INDEPENDENTS",
+        "title": "Win more engagements with proposals that are consistent, complete and on time.",
+        "text": "As a consultant you don't have a pre-sales team behind you. Mindorion structures every proposal from RFQ to submission and keeps your commercial effort focused on the opportunities most likely to convert.",
         "tools": [
           {
             "name": "ProposalIQ",
-            "text": "Checks every proposal before client delivery"
+            "text": "Structures every proposal from RFQ to submission"
           },
           {
             "name": "GrowthIQ",
-            "text": "Identifies your next clients in your industry"
+            "text": "Keeps commercial effort aligned with your priorities"
           }
         ],
         "mocks": [
@@ -1257,44 +1256,44 @@
             "title": "Proposal_ClientABC_v3.docx",
             "badge": "34/100",
             "items": [
-              "Internal author visible in properties",
-              "3 hidden review comments",
-              "Placeholder [CLIENT NAME] not replaced"
+              "Two RFP requirements unmapped",
+              "Pricing assumptions not validated",
+              "Win themes missing from the summary"
             ]
           },
           {
             "title": "Proposal_ClientABC_final.docx",
             "badge": "98/100",
             "items": [
-              "Document cleaned · Ready to send"
+              "Requirements mapped · Ready for submission"
             ]
           }
         ],
         "scenarios": [
           {
             "tool": "ProposalIQ",
-            "title": "Commercial proposal before sending",
-            "text": "ProposalIQ analyzes your proposal in 30 seconds. Metadata, comments, sensitive data, AI tone — everything is detected before your client opens the file.",
-            "result": "Reputation protected · Credibility intact"
+            "title": "Proposal readiness before submission",
+            "text": "ProposalIQ checks that every requirement is mapped, pricing is validated and approvals are complete before the proposal goes out.",
+            "result": "Higher win rate · Fewer rushed bids"
           },
           {
             "tool": "ProposalIQ",
-            "title": "Deliverables and project reports",
-            "text": "Every deliverable sent at the end of an engagement is checked. No more risk of leaving internal comments or revision history visible to the final client.",
-            "result": "Professional deliverables · Reassured client"
+            "title": "Reuse what already won",
+            "text": "Build new proposals from your structured client drive — past proposals, references and credentials — instead of starting from a blank page.",
+            "result": "Faster turnaround · Consistent quality"
           },
           {
             "tool": "GrowthIQ",
-            "title": "Building your client network",
-            "text": "GrowthIQ identifies decision-makers in your target industry, qualifies opportunities and generates personalized outreach sequences to grow your portfolio.",
-            "result": "Pipeline fueled · Less manual prospecting"
+            "title": "Focus effort on the right opportunities",
+            "text": "GrowthIQ shows which accounts and opportunities deserve commercial effort, so you spend time where it converts.",
+            "result": "Effort on priorities · Predictable pipeline"
           }
         ]
       },
       "sales": {
         "badge": "📈 SALES & PRE-SALES TEAMS",
-        "title": "Every offer sent must be perfect. Every prospect must be the right one.",
-        "text": "In pre-sales, an offer with cost price visible in track changes can cost you a deal. A poorly qualified prospect costs you weeks. Mindorion eliminates both risks.",
+        "title": "Align every offer and every commercial move with your strategy.",
+        "text": "In pre-sales, an offer with cost price visible in tracked changes can cost you a deal, and commercial effort that drifts from strategy costs you quarters. Mindorion keeps both under control.",
         "tools": [
           {
             "name": "ProposalIQ",
@@ -1302,26 +1301,26 @@
           },
           {
             "name": "GrowthIQ",
-            "text": "Qualifies and contacts the right decision-makers"
+            "text": "Aligns commercial execution with strategy"
           }
         ],
-        "pipelineLabel": "Qualified prospects",
+        "pipelineLabel": "Priority accounts",
         "leads": [
           {
-            "initials": "DL",
-            "role": "Sales Director · Engineering",
+            "initials": "EN",
+            "role": "Strategic account · Energy",
             "city": "Lyon",
             "score": "94%"
           },
           {
-            "initials": "VP",
-            "role": "VP Procurement · IT Services",
+            "initials": "AU",
+            "role": "Key account · Automotive",
             "city": "Toulouse",
             "score": "88%"
           },
           {
-            "initials": "DG",
-            "role": "CEO · Consulting firm",
+            "initials": "PS",
+            "role": "Growth account · Public sector",
             "city": "Paris",
             "score": "81%"
           }
@@ -1330,92 +1329,92 @@
           {
             "tool": "ProposalIQ",
             "title": "RFP/RFQ response",
-            "text": "Before submitting an RFP response, ProposalIQ verifies that your margin isn't visible in track changes and that no internal comments are left in the document.",
+            "text": "Before submitting an RFP response, ProposalIQ verifies that your margin isn't visible in tracked changes and that no internal comments are left in the document.",
             "result": "Margin protected · Professional offer"
           },
           {
             "tool": "GrowthIQ",
-            "title": "Identifying key decision-makers",
-            "text": "GrowthIQ identifies the right contacts in your target accounts — CFO, CIO, CEO, Procurement Directors — and generates approach sequences tailored to each profile.",
-            "result": "Right contact · Right time · Right message"
+            "title": "Steering commercial effort",
+            "text": "GrowthIQ shows where commercial effort is aligned with strategy and where accounts are under-covered, so managers can redirect focus before targets slip.",
+            "result": "Effort aligned to strategy"
           },
           {
             "tool": "GrowthIQ",
-            "title": "Automated multi-channel outreach",
-            "text": "Create personalized outreach sequences — email, LinkedIn, calls — and let GrowthIQ handle follow-ups automatically to maximize your response rates.",
-            "result": "Higher response rates · Less manual follow-up"
+            "title": "Turning activity into decision intelligence",
+            "text": "Standardize how teams capture high-value commercial signals so leaders decide on reality, not on what the CRM happened to record.",
+            "result": "Decisions grounded in reality"
           }
         ]
       },
       "rh": {
         "badge": "👥 DELIVERY & BU",
-        "title": "Every file you send engages your professional responsibility.",
-        "text": "In delivery, sending a CV with a previous candidate's disqualification notes, or a contract with personal data not removed, can have legal consequences. ProposalIQ and Governance Layer protect you.",
+        "title": "Run your perimeter end to end — from proposal to delivery — on reliable data.",
+        "text": "Business unit and delivery leaders need proposals, delivery commitments and margin connected in one place. Mindorion structures that activity and the Governance Layer keeps it auditable.",
         "tools": [
           {
             "name": "ProposalIQ",
-            "text": "Checks CVs, contracts and NDAs before sending"
+            "text": "Structures proposals and statements of work"
           },
           {
             "name": "Governance Layer",
-            "text": "GDPR compliance for candidate files"
+            "text": "Keeps operational data structured and auditable"
           }
         ],
         "mocks": [
           {
-            "title": "CV_Candidate_Martin.docx",
-            "badge": "GDPR Risk",
+            "title": "SOW_ProjectDelta_v2.docx",
+            "badge": "Needs review",
             "items": [
-              "Disqualification notes visible",
-              "Previous candidate's personal data",
-              "Active modification history"
+              "Scope assumptions not validated",
+              "Margin data exposed in tracked changes",
+              "Approval trail incomplete"
             ]
           },
           {
-            "title": "CV_Candidate_Martin_final.docx",
-            "badge": "Privacy by design",
+            "title": "SOW_ProjectDelta_final.docx",
+            "badge": "Governed",
             "items": [
-              "Document cleaned · Data verified"
+              "Validated & auditable · Ready to share"
             ]
           }
         ],
         "scenarios": [
           {
             "tool": "ProposalIQ",
-            "title": "CVs and candidate files",
-            "text": "ProposalIQ detects residual personal data, processing comments and internal notes before a CV or candidate file is shared with a client or manager.",
-            "result": "Privacy by design · Candidate protected"
+            "title": "Clean handoff from pre-sales to delivery",
+            "text": "Every statement of work is validated before delivery starts, so commitments and assumptions are explicit and traceable.",
+            "result": "Aligned handoff · Fewer surprises"
           },
           {
             "tool": "ProposalIQ",
-            "title": "Contracts and NDAs",
-            "text": "Before signing, ProposalIQ verifies that employment contracts and NDAs don't contain residual data from a previous contract — an often underestimated legal risk.",
-            "result": "Legal risk eliminated · Clean contract"
+            "title": "Protecting margin in client documents",
+            "text": "Before a document leaves the BU, internal pricing and comments are flagged so margin assumptions never reach the client.",
+            "result": "Margin protected · Clean document"
           },
           {
             "tool": "Governance Layer",
-            "title": "GDPR compliance at team scale",
-            "text": "Governance Layer ensures that the entire delivery team applies the same document policies — data retention, anonymization, audit trail — without supervision effort.",
-            "result": "Aligned team · Simplified audit"
+            "title": "Auditable operations across the BU",
+            "text": "The Governance Layer keeps every workflow producing structured, auditable data, so the whole business unit operates by the same standards.",
+            "result": "Aligned BU · Audit-ready"
           }
         ]
       },
       "esn": {
         "badge": "⚙️ IT SERVICES & ENGINEERING",
-        "title": "High-stakes technical documents. Zero margin for error.",
-        "text": "In IT services, every SOW, specification or technical document commits your company. A document distributed to 12 clients with internal history still active can cost you a contract. Mindorion covers the entire chain.",
+        "title": "High-stakes technical proposals and SOWs, governed end to end.",
+        "text": "In IT services, every SOW, specification or technical proposal commits your company. Mindorion structures these documents, aligns account growth with strategy and keeps standards uniform across teams.",
         "tools": [
           {
             "name": "ProposalIQ",
-            "text": "SOWs, technical specs, project files"
+            "text": "SOWs, technical specs, proposal files"
           },
           {
             "name": "GrowthIQ",
-            "text": "Enterprise account development"
+            "text": "Strategic account growth"
           },
           {
             "name": "Governance Layer",
-            "text": "Cross-team document compliance"
+            "text": "Cross-team operational standards"
           }
         ],
         "mocks": [
@@ -1423,16 +1422,16 @@
             "title": "SOW_Technical_Project_v2.docx",
             "badge": "41/100",
             "items": [
-              "History: 9 versions with internal feedback",
-              "Pricing data in track changes",
-              "Author from previous company"
+              "9 versions with unresolved internal feedback",
+              "Pricing data exposed in tracked changes",
+              "Requirements not fully mapped"
             ]
           },
           {
             "title": "SOW_Technical_Project_final.docx",
             "badge": "97/100",
             "items": [
-              "Ready to distribute to all 12 clients"
+              "Validated & governed · Ready to distribute"
             ]
           }
         ],
@@ -1440,23 +1439,89 @@
           {
             "tool": "ProposalIQ",
             "title": "Distributing technical documents",
-            "text": "Before distributing a SOW or specs to multiple clients, ProposalIQ removes internal history, comments and confidential pricing data in one pass.",
-            "result": "Data leak avoided · Clean document"
+            "text": "Before distributing a SOW or specs to multiple clients, ProposalIQ validates requirements and flags internal pricing, comments and history in one pass.",
+            "result": "Risk avoided · Governed document"
           },
           {
             "tool": "GrowthIQ",
-            "title": "Enterprise account development",
-            "text": "GrowthIQ identifies CIOs, CTOs and technical directors in your target sectors (industry, defense, pharma) and builds approach sequences tailored to long cycles.",
-            "result": "Enterprise accounts targeted · Shortened cycle"
+            "title": "Strategic account growth",
+            "text": "GrowthIQ aligns account growth with strategy across your target sectors, focusing commercial effort on the accounts that matter for long cycles.",
+            "result": "Accounts aligned · Effort focused"
           },
           {
             "tool": "Governance Layer",
-            "title": "Cross-team document compliance",
-            "text": "Governance Layer centralizes document policies for all your project teams — project managers, consultants, developers — and ensures uniform standards.",
-            "result": "Aligned teams · Simplified audits"
+            "title": "Uniform standards across project teams",
+            "text": "The Governance Layer keeps project managers, consultants and engineers operating by the same document and data standards.",
+            "result": "Teams aligned · Audit-ready"
           }
         ]
       }
+    }
+  },
+  "whyMindorion": {
+    "seoTitle": "Why Mindorion | Operational Foundation for Engineering & IT Services",
+    "seoDescription": "Mindorion helps Engineering & IT Services firms standardize workflows, structure operational data and build the foundations required to scale with governance and efficient AI adoption.",
+    "hero": {
+      "title": "Building the operational foundation for scalable Engineering & IT Services firms.",
+      "subtitle": "Mindorion standardizes workflows, structures enterprise data and aligns execution with strategy — so organizations can scale with governance, compliance and efficient AI adoption.",
+      "primaryCta": "Request a demo",
+      "secondaryCta": "Explore products"
+    },
+    "problem": {
+      "title": "Growth creates complexity faster than the organization can absorb it.",
+      "body": "As Engineering & IT Services firms grow, execution becomes harder to control. Data lives across CRMs, Excel files, emails, proposals and local drives. Teams develop their own ways of working. Reporting becomes manual. Decisions are made on incomplete information."
+    },
+    "foundation": {
+      "thesis": "AI is not the foundation. AI becomes scalable when data, workflows and governance are already structured.",
+      "base": { "label": "Base", "text": "Mindorion Operating System — the workflow layer where operational activity happens" },
+      "process": { "label": "Process", "text": "Standardized workflows — teams execute processes consistently" },
+      "data": { "label": "Data", "text": "Structured enterprise data — fragmented activity becomes usable decision data" },
+      "control": { "label": "Control", "text": "Governance & compliance — control, auditability and trust" },
+      "result": { "label": "Result", "text": "Efficient AI adoption — more accurate, cost-efficient and governed, as a result" }
+    },
+    "difference": {
+      "eyebrow": "Where Mindorion makes the difference",
+      "title": "Scale with AI — without losing control of cost or compliance.",
+      "body": "Most firms face the same trap: too little AI and you fall behind; too much, uncontrolled, and token costs explode while compliance risk grows. Mindorion is the controlled middle ground.",
+      "cards": [
+        { "title": "Stay ahead, not overtaken", "body": "AI is unavoidable. Mindorion helps you adopt it where it creates real value, so you move fast without falling behind faster-moving competitors." },
+        { "title": "Control AI cost at scale", "body": "By standardizing your data and workflows first, Mindorion reduces reliance on expensive, error-prone AI agents — so scaling your team doesn't mean runaway token costs." },
+        { "title": "Compliance by design", "body": "Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one." }
+      ],
+      "footer": "AI is not the foundation. Structured data, workflows and governance are — and that's what makes AI scalable, affordable and auditable."
+    },
+    "focus": {
+      "eyebrow": "Focus",
+      "title": "Why Engineering & IT Services first",
+      "body": "We start here because these firms combine complex pre-sales, technical delivery, talent allocation, account growth and compliance. We know these workflows deeply. The same foundation can later expand to other complex service industries."
+    },
+    "approach": {
+      "eyebrow": "Approach",
+      "title": "The Mindorion approach",
+      "body": "ProposalIQ structures pre-sales and proposal execution. GrowthIQ aligns commercial strategy with operational activity. Future modules extend the same foundation to delivery, talent and governance. Together, they turn fragmented operations into decision-ready intelligence."
+    },
+    "founders": {
+      "eyebrow": "Founder",
+      "title": "Built by someone who lived the scaling problem.",
+      "subtitle": "Mindorion was created by an operator who has seen how Engineering & IT Services firms lose efficiency when proposals, pipeline, delivery and reporting become fragmented.",
+      "builtWithEyebrow": "Built with operators",
+      "builtWithTitle": "Designed with the teams who run pre-sales, pipeline and delivery every day.",
+      "builtWithBody": "Every workflow is shaped by operators inside Engineering & IT Services firms. Transparency on roadmap and learnings is part of how we work — as a secondary commitment, not the headline."
+    },
+    "principles": {
+      "eyebrow": "Principles",
+      "title": "How we build for Engineering & IT Services teams",
+      "items": [
+        { "title": "Outcomes first", "body": "Every workflow must improve proposal quality, commercial execution or governance." },
+        { "title": "Private by design", "body": "Sensitive client and operational data stays controlled." },
+        { "title": "Radical simplicity", "body": "Complex workflows, simple execution." }
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to build the foundation for scalable growth?",
+      "primaryCta": "Request a demo",
+      "secondaryCta": "Explore products",
+      "alsoOn": "Also on"
     }
   },
   "founders": {
@@ -1470,12 +1535,6 @@
       "location": "Paris, France",
       "quote": "After 5 years managing sales teams in the automotive industry, I saw too many deals lost to poorly prepared documents or unqualified prospects. Mindorion exists to eliminate these avoidable mistakes.",
       "education": "SKEMA Business School · INSEEC Grande École"
-    },
-    "romain": {
-      "role": "Co-Founder & Executive Chairman",
-      "location": "United States",
-      "quote": "6 years structuring B2B tech-consulting teams in the United States. I've seen what makes the difference between a team that scales and one that stagnates: the right tools, the right data, at the right moment. That's exactly what we're building at Mindorion.",
-      "education": "SKEMA Business School · North Carolina State University (GPA 3.9)"
     },
     "pillars": {
       "roadmap": {

@@ -148,7 +148,7 @@ function HomePage() {
                     <p className="mt-1 text-sm text-muted-foreground">{t("home.governanceLayer.text")}</p>
                   </div>
                 </div>
-                <Link to="/products/governanceiq" onClick={() => trackEvent("cta_clicked", { cta: "hero_learn_governance" })} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80">
+                <Link to="/why-mindorion" onClick={() => trackEvent("cta_clicked", { cta: "hero_learn_governance" })} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary/80">
                   {t("home.governanceLayer.cta")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>

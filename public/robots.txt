@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /blog
+Disallow: /products/governanceiq
 
 Sitemap: https://mindorion.com/sitemap.xml

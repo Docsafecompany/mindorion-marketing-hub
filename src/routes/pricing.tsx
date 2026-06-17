@@ -233,7 +233,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             fixedNote: "Contrat annuel · Onboarding inclus",
             suiteCards: [
               { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · illimité" },
-              { icon: "🎯", title: "GrowthIQ Business", description: "Outreach complet" },
+              { icon: "🎯", title: "GrowthIQ Business", description: "Exécution commerciale complète" },
               { icon: "📋", title: "Governance Layer", description: "Gouvernance & conformité" },
             ],
             sections: [
@@ -298,10 +298,10 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               {
                 title: "INCLUS",
                 items: [
-                  { label: "Prospects qualifiés illimités", included: true },
+                  { label: "Couverture de comptes illimitée", included: true },
                   { label: "Qualification IA", included: true },
                   { label: "Intelligence Flags", included: true },
-                  { label: "Séquences simples", included: true },
+                  { label: "Cadences guidées", included: true },
                   { label: "Strategy Hub", included: false },
                   { label: "Meeting Intelligence", included: false },
                   { label: "Intégrations CRM", included: false },
@@ -327,7 +327,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
                 items: [
                   { label: "Strategy Hub", included: true },
                   { label: "Meeting Intelligence", included: true },
-                  { label: "Séquences multi-canal", included: true },
+                  { label: "Cadences multi-étapes", included: true },
                   { label: "Tableaux de bord équipe", included: true },
                   { label: "Rapports de performance", included: true },
                 ],
@@ -370,7 +370,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             fixedNote: "Contrat annuel · Onboarding inclus",
             suiteCards: [
               { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · illimité" },
-              { icon: "🎯", title: "GrowthIQ Business", description: "Outreach complet" },
+              { icon: "🎯", title: "GrowthIQ Business", description: "Exécution commerciale complète" },
               { icon: "📋", title: "Governance Layer", description: "Gouvernance & conformité" },
             ],
             sections: [
@@ -389,18 +389,18 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         ],
         comparison: [
           {
-            title: "PROSPECTION",
+            title: "EXÉCUTION COMMERCIALE",
             rows: [
-              { feature: "Prospects qualifiés", values: { starter: "Illimité", pro: "Illimité", business: "Illimité", enterprise: "Illimité" } },
+              { feature: "Couverture des comptes", values: { starter: "Illimité", pro: "Illimité", business: "Illimité", enterprise: "Illimité" } },
               { feature: "Strategy Hub", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Meeting Intelligence", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
             ],
           },
           {
-            title: "OUTREACH",
+            title: "CADENCE D'EXÉCUTION",
             rows: [
-              { feature: "Séquences simples", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
-              { feature: "Séquences multi-canal", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
+              { feature: "Cadences guidées", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
+              { feature: "Cadences multi-étapes", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
             ],
           },
           {
@@ -557,7 +557,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             fixedNote: "Annual contract · Onboarding included",
             suiteCards: [
               { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · unlimited" },
-              { icon: "🎯", title: "GrowthIQ Business", description: "Full outreach" },
+              { icon: "🎯", title: "GrowthIQ Business", description: "Full commercial execution" },
               { icon: "📋", title: "Governance Layer", description: "Governance & compliance" },
             ],
             sections: [
@@ -622,10 +622,10 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
               {
                 title: "INCLUDED",
                 items: [
-                  { label: "Unlimited qualified prospects", included: true },
+                  { label: "Unlimited account coverage", included: true },
                   { label: "AI qualification", included: true },
                   { label: "Intelligence Flags", included: true },
-                  { label: "Basic sequences", included: true },
+                  { label: "Guided cadences", included: true },
                   { label: "Strategy Hub", included: false },
                   { label: "Meeting Intelligence", included: false },
                   { label: "CRM integrations", included: false },
@@ -651,7 +651,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
                 items: [
                   { label: "Strategy Hub", included: true },
                   { label: "Meeting Intelligence", included: true },
-                  { label: "Multi-channel sequences", included: true },
+                  { label: "Multi-step cadences", included: true },
                   { label: "Team dashboards", included: true },
                   { label: "Performance reports", included: true },
                 ],
@@ -694,7 +694,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             fixedNote: "Annual contract · Onboarding included",
             suiteCards: [
               { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · unlimited" },
-              { icon: "🎯", title: "GrowthIQ Business", description: "Full outreach" },
+              { icon: "🎯", title: "GrowthIQ Business", description: "Full commercial execution" },
               { icon: "📋", title: "Governance Layer", description: "Governance & compliance" },
             ],
             sections: [
@@ -713,18 +713,18 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         ],
         comparison: [
           {
-            title: "PROSPECTING",
+            title: "COMMERCIAL EXECUTION",
             rows: [
-              { feature: "Qualified prospects", values: { starter: "Unlimited", pro: "Unlimited", business: "Unlimited", enterprise: "Unlimited" } },
+              { feature: "Account coverage", values: { starter: "Unlimited", pro: "Unlimited", business: "Unlimited", enterprise: "Unlimited" } },
               { feature: "Strategy Hub", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
               { feature: "Meeting Intelligence", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
             ],
           },
           {
-            title: "OUTREACH",
+            title: "EXECUTION CADENCE",
             rows: [
-              { feature: "Basic sequences", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
-              { feature: "Multi-channel sequences", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
+              { feature: "Guided cadences", values: { starter: "✓", pro: "✓", business: "✓", enterprise: "✓" } },
+              { feature: "Multi-step cadences", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
             ],
           },
           {
@@ -775,13 +775,6 @@ export const Route = createFileRoute("/pricing")({
                 priceCurrency: "EUR",
                 price: "29",
                 url: "https://mindorion.com/products/growthiq",
-              },
-              {
-                "@type": "Offer",
-                name: "Governance Layer",
-                priceCurrency: "EUR",
-                price: "0",
-                url: "https://mindorion.com/products/governanceiq",
               },
             ],
           }),
@@ -954,6 +947,10 @@ function PricingPage() {
 }
 
 function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteLabel }: { productKey: ProductId; billing: BillingMode; plan: LocalizedPlan; popularLabel: string; customLabel: string; suiteLabel: string }) {
+  const { i18n: planI18n } = useTranslation();
+  const isFr = planI18n.language?.slice(0, 2) === "fr";
+  const upgradeWhenLabel = isFr ? "Évoluer quand :" : "Upgrade when:";
+  const includesLabel = isFr ? "Inclut :" : "Includes:";
   const isEnterprise = Boolean(plan.enterprise);
   const isFeatured = Boolean(plan.featured);
   const isStandardPlan = !isEnterprise;
@@ -996,12 +993,12 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
         <p className={cn("mt-2 min-h-16 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
         {plan.upgradeWhen ? (
           <p className="mt-2 text-xs leading-5 text-muted-foreground">
-            <span className="font-semibold text-foreground">Upgrade when:</span> {plan.upgradeWhen}
+            <span className="font-semibold text-foreground">{upgradeWhenLabel}</span> {plan.upgradeWhen}
           </p>
         ) : null}
         {plan.includes ? (
           <p className="mt-2 text-xs leading-5 text-muted-foreground">
-            <span className="font-semibold text-foreground">Includes:</span> {plan.includes}
+            <span className="font-semibold text-foreground">{includesLabel}</span> {plan.includes}
           </p>
         ) : null}
 

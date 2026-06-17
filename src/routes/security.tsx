@@ -24,8 +24,8 @@ function SecurityPage() {
   return (
     <div className="section-shell section-space">
       <FadeSection className="mx-auto max-w-4xl text-center">
-        <h1 className="text-4xl font-extrabold text-foreground sm:text-5xl">{t("security.title")}</h1>
-        <p className="mt-5 text-lg leading-8 text-muted-foreground">{t("security.subtitle")}</p>
+        <h1 className="headline-balance text-4xl font-extrabold text-foreground sm:text-5xl">{t("security.title")}</h1>
+        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-foreground/80">{t("security.subtitle")}</p>
       </FadeSection>
       <FadeSection className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4" delay={0.1}>
         {cards.map((card, index) => {

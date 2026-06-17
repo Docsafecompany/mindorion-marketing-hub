@@ -55,7 +55,7 @@ export const Route = createRootRoute({
           url: SITE_URL,
           logo: `${SITE_URL}/favicon.ico`,
           description:
-            "B2B intelligence suite that protects your documents, qualifies your pipeline, and governs your operations. From NDAs to proposals, from cold outreach to closed deals.",
+            "Mindorion is the enterprise operating system for Engineering & IT Services firms — unifying proposals, commercial execution and governance to align strategy with operations.",
           sameAs: [LINKEDIN_URL],
         }),
       },
