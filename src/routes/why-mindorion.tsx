@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import i18n from "@/i18n";
 import { LINKEDIN_URL, createStaticMeta } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
-import camilleImg from "@/assets/founder-camille.jpg";
+import camilleImg from "@/assets/founder-camille.jpg.asset.json";
 
 export const Route = createFileRoute("/why-mindorion")({
   head: () =>
@@ -23,7 +23,7 @@ function WhyMindorionPage() {
 
   const founders = [
     {
-      photo: camilleImg,
+      photo: camilleImg.url,
       photoClassName: "object-top",
       name: "Camille-Aurélien Baltaze",
       roleKey: "founders.camille.role",
