@@ -1,5 +1,5 @@
 import governanceiqLogo from "@/assets/governanceiq-logo.png";
-import growthiqLogo from "@/assets/growthiq-logo.png.asset.json";
+import growthiqLogo from "@/assets/growthiq-logo.png";
 import proposaliqLogo from "@/assets/proposaliq-logo.png";
 import { cn } from "@/lib/utils";
 
