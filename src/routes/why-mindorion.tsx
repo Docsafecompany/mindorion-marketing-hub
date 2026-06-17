@@ -23,7 +23,7 @@ function WhyMindorionPage() {
 
   const founders = [
     {
-      photo: camilleImg.url,
+      photo: camilleImg,
       photoClassName: "object-top",
       name: "Camille-Aurélien Baltaze",
       roleKey: "founders.camille.role",
