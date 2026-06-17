@@ -66,7 +66,7 @@ function WhyMindorionPage() {
               </Button>
             </Link>
             <Link to="/products/proposaliq" onClick={() => trackEvent("cta_clicked", { cta: "why_mindorion_explore" })}>
-              <Button size="lg" variant="outline" className="min-w-44 rounded-xl border-white/20 text-white hover:bg-white/10 hover:text-white">
+              <Button size="lg" variant="outlineOnDark" className="min-w-44 rounded-xl">
                 {t("whyMindorion.hero.secondaryCta")}
               </Button>
             </Link>
@@ -281,7 +281,7 @@ function WhyMindorionPage() {
             </Button>
           </Link>
           <Link to="/products/proposaliq" onClick={() => trackEvent("cta_clicked", { cta: "why_mindorion_final_explore" })}>
-            <Button size="lg" variant="outline" className="min-w-44 rounded-xl border-white/20 text-white hover:bg-white/10 hover:text-white">
+            <Button size="lg" variant="outlineOnDark" className="min-w-44 rounded-xl">
               {t("whyMindorion.finalCta.secondaryCta")}
             </Button>
           </Link>
