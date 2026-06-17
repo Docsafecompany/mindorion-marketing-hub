@@ -7,7 +7,7 @@ type ProductName = "proposaliq" | "growthiq" | "governanceiq";
 
 const logoMap: Record<ProductName, { src: string; alt: string }> = {
   proposaliq: { src: proposaliqLogo, alt: "ProposalIQ logo" },
-  growthiq: { src: growthiqLogo.url, alt: "GrowthIQ logo" },
+  growthiq: { src: growthiqLogo, alt: "GrowthIQ logo" },
   governanceiq: { src: governanceiqLogo, alt: "Governance Layer logo" },
 };
 
