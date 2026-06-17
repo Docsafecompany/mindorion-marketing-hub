@@ -3,8 +3,9 @@ import { Linkedin, Sparkles, Target, Lock, Zap, type LucideIcon } from "lucide-r
 
 import { LINKEDIN_URL } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
-import camilleImg from "@/assets/founder-camille.jpg";
-import romainImg from "@/assets/founder-romain.png";
+import camilleAsset from "@/assets/founder-camille.jpg.asset.json";
+
+const camilleImg = camilleAsset.url;
 
 type Founder = {
   photo: string;
@@ -19,7 +20,7 @@ type Founder = {
 
 const founders: Founder[] = [
   {
-    photo: romainImg,
+    photo: camilleImg,
     photoClassName: "object-top",
     name: "Camille-Aurélien Baltaze",
     roleKey: "founders.camille.role",
