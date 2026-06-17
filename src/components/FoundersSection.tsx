@@ -20,7 +20,7 @@ type Founder = {
 
 const founders: Founder[] = [
   {
-    photo: romainImg,
+    photo: camilleImg,
     photoClassName: "object-top",
     name: "Camille-Aurélien Baltaze",
     roleKey: "founders.camille.role",
