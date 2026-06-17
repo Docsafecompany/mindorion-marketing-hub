@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import i18n from "@/i18n";
 import { LINKEDIN_URL, createStaticMeta } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
-import camilleImg from "@/assets/founder-camille.jpg.asset.json";
+import camilleImg from "@/assets/founder-camille.jpg";
 
 export const Route = createFileRoute("/why-mindorion")({
   head: () =>
