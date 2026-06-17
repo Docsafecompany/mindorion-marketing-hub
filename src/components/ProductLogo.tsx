@@ -1,5 +1,5 @@
 import governanceiqLogo from "@/assets/governanceiq-logo.png";
-import growthiqLogo from "@/assets/growthiq-logo.png.asset.json";
+import growthiqLogo from "@/assets/growthiq-logo.png";
 import proposaliqLogo from "@/assets/proposaliq-logo.png";
 import { cn } from "@/lib/utils";
 
@@ -7,7 +7,7 @@ type ProductName = "proposaliq" | "growthiq" | "governanceiq";
 
 const logoMap: Record<ProductName, { src: string; alt: string }> = {
   proposaliq: { src: proposaliqLogo, alt: "ProposalIQ logo" },
-  growthiq: { src: growthiqLogo.url, alt: "GrowthIQ logo" },
+  growthiq: { src: growthiqLogo, alt: "GrowthIQ logo" },
   governanceiq: { src: governanceiqLogo, alt: "Governance Layer logo" },
 };
 

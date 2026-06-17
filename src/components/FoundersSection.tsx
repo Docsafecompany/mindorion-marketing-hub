@@ -3,9 +3,7 @@ import { Linkedin, Sparkles, Target, Lock, Zap, type LucideIcon } from "lucide-r
 
 import { LINKEDIN_URL } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
-import camilleAsset from "@/assets/founder-camille.jpg.asset.json";
-
-const camilleImg = camilleAsset.url;
+import camilleImg from "@/assets/founder-camille.jpg";
 
 type Founder = {
   photo: string;
