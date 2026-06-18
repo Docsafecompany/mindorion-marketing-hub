@@ -1014,7 +1014,7 @@
     "productError": "Sélectionnez au moins un produit.",
     "submit": "Envoyer ma demande →",
     "footer": "Nous vous recontactons sous 24h · Aucun engagement",
-    "subjectPrefix": "Demande de démo Mindorion —",
+    "subjectPrefix": "Demande de démo Mindorion:",
     "subjectFallback": "Nouvelle entreprise",
     "mailLabels": {
       "firstName": "Prénom",
