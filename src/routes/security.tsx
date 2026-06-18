@@ -9,7 +9,7 @@ import { createStaticMeta } from "@/lib/site";
 export const Route = createFileRoute("/security")({
   head: () =>
     createStaticMeta({
-      title: "Security & Compliance | Mindorion",
+      title: "Security & Compliance — Mindorion",
       description: "Mindorion commitments on EU hosting, encryption, GDPR and zero unnecessary data retention.",
       path: "/security",
     }),

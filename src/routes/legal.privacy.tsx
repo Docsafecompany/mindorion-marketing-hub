@@ -6,7 +6,7 @@ import { createStaticMeta } from "@/lib/site";
 export const Route = createFileRoute("/legal/privacy")({
   head: () =>
     createStaticMeta({
-      title: "Privacy | Mindorion",
+      title: "Privacy — Mindorion",
       description: "Read the Mindorion privacy policy: collected data, usage, retention and GDPR rights.",
       path: "/legal/privacy",
     }),
