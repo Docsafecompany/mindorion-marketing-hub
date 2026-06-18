@@ -609,8 +609,8 @@
           "title": "Compliance & security",
           "items": [
             {
-              "title": "GDPR by design",
-              "text": "Automatic verification of personal data against current regulations."
+              "title": "GDPR-aligned controls",
+              "text": "Helps verify personal data handling against your organization's GDPR policies."
             },
             {
               "title": "Full audit trail",
