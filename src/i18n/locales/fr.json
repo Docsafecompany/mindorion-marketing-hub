@@ -1486,7 +1486,7 @@
       "cards": [
         { "title": "Garder une longueur d'avance", "body": "L'IA est incontournable. Mindorion vous aide à l'adopter là où elle crée de la vraie valeur, pour avancer vite sans vous laisser distancer par des concurrents plus rapides." },
         { "title": "Maîtriser le coût de l'IA à l'échelle", "body": "En standardisant d'abord vos données et vos workflows, Mindorion réduit la dépendance à des agents IA coûteux et faillibles, pour que faire grandir votre équipe ne rime pas avec des coûts de tokens incontrôlés." },
-        { "title": "Conformité by design", "body": "Les données opérationnelles restent structurées, gouvernées et auditables, pour que l'IA s'exécute dans un environnement maîtrisé et gouverné plutôt qu'incontrôlé." }
+        { "title": "Pensé pour le contrôle des données", "body": "Les données opérationnelles restent structurées, gouvernées et auditables, pour que l'IA s'exécute dans un environnement maîtrisé et gouverné plutôt qu'incontrôlé." }
       ],
       "footer": "L'IA n'est pas la fondation. Les données structurées, les workflows et la gouvernance le sont, et c'est ce qui rend l'IA scalable, abordable et auditable."
     },
