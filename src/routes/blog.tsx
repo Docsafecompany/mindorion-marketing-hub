@@ -27,7 +27,7 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
 });
 
-type BlogFilter = "all", "ProposalIQ", "GrowthIQ", "Governance Layer", "Guides";
+type BlogFilter = "all" | "ProposalIQ" | "GrowthIQ" | "Governance Layer" | "Guides";
 
 const featuredArticle = { slug: "track-changes-proposals" };
 
