@@ -55,7 +55,7 @@ export const Route = createRootRoute({
           url: SITE_URL,
           logo: `${SITE_URL}/favicon.ico`,
           description:
-            "Mindorion is the enterprise operating system for Engineering & IT Services firms — unifying proposals, commercial execution and governance to align strategy with operations.",
+            "Mindorion is the enterprise operating system for Engineering & IT Services firms, unifying proposals, commercial execution and governance to align strategy with operations.",
           sameAs: [LINKEDIN_URL],
         }),
       },

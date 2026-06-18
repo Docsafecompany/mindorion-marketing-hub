@@ -136,8 +136,8 @@
     "goHome": "Retour à l'accueil"
   },
   "home": {
-    "seoTitle": "Mindorion — OS d'entreprise pour l'ingénierie et l'IT",
-    "seoDescription": "Mindorion est le système d'exploitation d'entreprise pour les cabinets d'ingénierie et de services IT — unifiez propositions, exécution commerciale et gouvernance pour aligner la stratégie sur les opérations.",
+    "seoTitle": "Mindorion, OS d'entreprise pour l'ingénierie et l'IT",
+    "seoDescription": "Mindorion est le système d'exploitation d'entreprise pour les cabinets d'ingénierie et de services IT, unifiez propositions, exécution commerciale et gouvernance pour aligner la stratégie sur les opérations.",
     "badge": "Conçu pour les cabinets d'ingénierie et de conseil",
     "heroTitleWords": [
       "Faites tourner votre cabinet d'ingénierie sur un seul système d'exploitation."
@@ -207,7 +207,7 @@
       },
       {
         "title": "Directeurs de BU",
-        "text": "Pilotez votre périmètre de bout en bout — des propositions au delivery — avec l'intelligence opérationnelle pour atteindre vos objectifs."
+        "text": "Pilotez votre périmètre de bout en bout, des propositions au delivery, avec l'intelligence opérationnelle pour atteindre vos objectifs."
       },
       {
         "title": "Direction Delivery",
@@ -227,7 +227,7 @@
       },
       {
         "title": "Gouvernance by Design",
-        "text": "Chaque workflow produit des données structurées et auditables — la gouvernance est intégrée."
+        "text": "Chaque workflow produit des données structurées et auditables, la gouvernance est intégrée."
       },
       {
         "title": "Decision Intelligence",
@@ -247,7 +247,7 @@
       },
       {
         "role": "VP Sales · Services IT",
-        "quote": "L'exécution commerciale est enfin alignée avec la stratégie à travers les BU — et nous voyons où agir."
+        "quote": "L'exécution commerciale est enfin alignée avec la stratégie à travers les BU, et nous voyons où agir."
       },
       {
         "role": "Directeur de BU · Conseil",
@@ -259,7 +259,7 @@
     "ctaSecondary": "Demander une démo"
   },
   "pricing": {
-    "seoTitle": "Tarifs Mindorion — Plans simples et transparents",
+    "seoTitle": "Tarifs Mindorion, Plans simples et transparents",
     "seoDescription": "Comparez les plans Starter, Pro, Business et Enterprise de Mindorion pour vos besoins documentaires, sales et conformité.",
     "title": "Des tarifs simples et transparents",
     "subtitle": "Choisissez le niveau d'accompagnement adapté à votre maturité opérationnelle.",
@@ -369,9 +369,9 @@
   },
   "products": {
     "proposaliq": {
-      "seoTitle": "ProposalIQ — Système d'exploitation pré-vente pour l'ingénierie et les services IT — Mindorion",
+      "seoTitle": "ProposalIQ, Système d'exploitation pré-vente pour l'ingénierie et les services IT, Mindorion",
       "seoDescription": "De la réception de la RFQ à la soumission finale, ProposalIQ aide les cabinets d'ingénierie et de services IT à produire des propositions mieux gouvernées et de meilleure qualité, plus rapidement.",
-      "eyebrow": "ProposalIQ — Intelligence Pré-Vente",
+      "eyebrow": "ProposalIQ, Intelligence Pré-Vente",
       "title": "Le système d'exploitation pré-vente pour l'ingénierie et les services IT.",
       "subtitle": "De la réception de la RFQ à la soumission finale, ProposalIQ aide les cabinets d'ingénierie et de services IT à produire des propositions mieux gouvernées et de meilleure qualité, plus rapidement.",
       "heroLabel": "STATUT PROPOSITION · PROPOSALIQ",
@@ -379,7 +379,7 @@
         "Exigences non mappées détectées",
         "Hypothèses de prix non validées",
         "Checklist de conformité en attente",
-        "✓ Proposition validée — Prête pour soumission"
+        "✓ Proposition validée, Prête pour soumission"
       ],
       "costsLabel": "CE QUE ÇA VOUS COÛTE AUJOURD'HUI",
       "costs": [
@@ -437,9 +437,9 @@
       "ctaButton": "Explorer ProposalIQ"
     },
     "growthiq": {
-      "seoTitle": "GrowthIQ — Intelligence d'exécution commerciale pour Engineering & IT Services — Mindorion",
+      "seoTitle": "GrowthIQ, Intelligence d'exécution commerciale pour Engineering & IT Services, Mindorion",
       "seoDescription": "GrowthIQ aide les cabinets d'engineering et services IT à piloter le business development, capturer les signaux opérationnels à haute valeur et transformer l'activité commerciale en intelligence de décision.",
-      "eyebrow": "GrowthIQ — Intelligence d'exécution commerciale",
+      "eyebrow": "GrowthIQ, Intelligence d'exécution commerciale",
       "title": "Alignez la stratégie et l'exécution commerciale.",
       "subtitle": "GrowthIQ aide les cabinets d'engineering et services IT à piloter le business development, capturer les signaux opérationnels à haute valeur et transformer l'activité commerciale en intelligence de décision.",
       "heroLabel": "TABLEAU DE BORD · GROWTHIQ",
@@ -548,11 +548,11 @@
       "ctaButton": "Demander une démo"
     },
     "governanceiq": {
-      "seoTitle": "Governance Layer — Conformité documentaire équipe — Mindorion",
+      "seoTitle": "Governance Layer, Conformité documentaire équipe, Mindorion",
       "seoDescription": "Governance Layer centralise les politiques documentaires de votre organisation, automatise les audits et garantit que chaque équipe opère selon les mêmes standards.",
       "eyebrow": "📋 GOVERNANCEIQ · CONFORMITÉ DOCUMENTAIRE",
       "title": "La conformité documentaire sans la complexité.",
-      "subtitle": "Governance Layer centralise les politiques documentaires de votre organisation, automatise les audits et garantit que chaque équipe opère selon les mêmes standards — sans effort de supervision.",
+      "subtitle": "Governance Layer centralise les politiques documentaires de votre organisation, automatise les audits et garantit que chaque équipe opère selon les mêmes standards, sans effort de supervision.",
       "heroLabel": "TABLEAU DE BORD · GOVERNANCEIQ",
       "heroStats": [
         {
@@ -565,18 +565,18 @@
         }
       ],
       "heroPolicies": [
-        "Métadonnées — Obligatoire avant envoi",
-        "RGPD — Données personnelles vérifiées",
-        "Contrats — 2 docs en attente de révision"
+        "Métadonnées, Obligatoire avant envoi",
+        "RGPD, Données personnelles vérifiées",
+        "Contrats, 2 docs en attente de révision"
       ],
       "howItWorks": [
         {
           "title": "Définissez",
-          "text": "Créez vos politiques documentaires — standards requis, règles RGPD, niveaux de conformité par type de document."
+          "text": "Créez vos politiques documentaires, standards requis, règles RGPD, niveaux de conformité par type de document."
         },
         {
           "title": "Déployez",
-          "text": "Governance Layer applique automatiquement vos politiques à toutes les équipes — sans formation ni supervision manuelle."
+          "text": "Governance Layer applique automatiquement vos politiques à toutes les équipes, sans formation ni supervision manuelle."
         },
         {
           "title": "Pilotez",
@@ -593,7 +593,7 @@
             },
             {
               "title": "Audits automatisés",
-              "text": "Chaque document audité selon vos politiques — rapport généré automatiquement."
+              "text": "Chaque document audité selon vos politiques, rapport généré automatiquement."
             },
             {
               "title": "Alertes de conformité",
@@ -614,7 +614,7 @@
             },
             {
               "title": "Audit trail complet",
-              "text": "Historique de toutes les actions documentaires — traçabilité totale."
+              "text": "Historique de toutes les actions documentaires, traçabilité totale."
             },
             {
               "title": "Gestion des accès",
@@ -644,7 +644,7 @@
         {
           "tag": "ENTERPRISE",
           "title": "Audit interne simplifié",
-          "text": "Rapports d'audit générés automatiquement — plus de collecte manuelle de preuves.",
+          "text": "Rapports d'audit générés automatiquement, plus de collecte manuelle de preuves.",
           "result": "Audit en 1 clic"
         }
       ],
@@ -654,7 +654,7 @@
     }
   },
   "useCases": {
-    "seoTitle": "Solutions Mindorion — Cas d'usage par métier",
+    "seoTitle": "Solutions Mindorion, Cas d'usage par métier",
     "seoDescription": "Découvrez comment Mindorion accompagne CEOs, COOs, VP Sales et Directeurs de BU dans leurs workflows documentaires et commerciaux.",
     "title": "Des solutions adaptées à votre métier",
     "subtitle": "Chaque équipe B2B a ses points de friction. Mindorion apporte un cadre simple pour réduire les erreurs visibles et invisibles.",
@@ -702,7 +702,7 @@
     ]
   },
   "blog": {
-    "seoTitle": "Blog Mindorion — Guides et conseils professionnels",
+    "seoTitle": "Blog Mindorion, Guides et conseils professionnels",
     "seoDescription": "Articles Mindorion sur la qualité documentaire, la conformité, la prospection B2B et les bonnes pratiques opérationnelles.",
     "title": "Blog",
     "subtitle": "Des articles courts et utiles pour renforcer la qualité opérationnelle avant chaque interaction externe.",
@@ -716,8 +716,8 @@
     "toc": "Sommaire",
     "back": "Retour au blog",
     "page": {
-      "seoTitle": "Blog — Conseils et guides professionnels B2B — Mindorion",
-      "seoDescription": "Articles, guides et ressources pour les professionnels B2B — réputation documentaire, prospection intelligente et conformité.",
+      "seoTitle": "Blog, Conseils et guides professionnels B2B, Mindorion",
+      "seoDescription": "Articles, guides et ressources pour les professionnels B2B, réputation documentaire, prospection intelligente et conformité.",
       "eyebrow": "BLOG MINDORION",
       "title": "Conseils, guides et ressources professionnelles.",
       "subtitle": "Tout ce que les professionnels B2B doivent savoir sur la réputation documentaire, la prospection et la conformité.",
@@ -728,7 +728,7 @@
       "featured": {
         "tagGuide": "GUIDE",
         "title": "5 erreurs documentaires qui coûtent des deals aux consultants",
-        "excerpt": "Les métadonnées révélatrices, les commentaires oubliés, les placeholders non remplacés — voici les 5 erreurs les plus courantes et comment les éviter avant d'envoyer votre prochain document.",
+        "excerpt": "Les métadonnées révélatrices, les commentaires oubliés, les placeholders non remplacés, voici les 5 erreurs les plus courantes et comment les éviter avant d'envoyer votre prochain document.",
         "meta": "15 avril 2026 · 8 min de lecture",
         "topErrorsTitle": "TOP 5 ERREURS",
         "topErrors": [
@@ -773,7 +773,7 @@
         },
         {
           "title": "Les 7 signaux d'affaires à surveiller pour prospecter au bon moment",
-          "excerpt": "Recrutements, levées de fonds, nouvelles directions — les signaux qui indiquent une opportunité.",
+          "excerpt": "Recrutements, levées de fonds, nouvelles directions, les signaux qui indiquent une opportunité.",
           "meta": "15 mars · 6 min"
         }
       ],
@@ -908,12 +908,12 @@
     }
   },
   "about": {
-    "seoTitle": "À propos — Mindorion — Intelligence professionnelle B2B",
+    "seoTitle": "À propos, Mindorion, Intelligence professionnelle B2B",
     "seoDescription": "Mindorion construit le système d'exploitation d'entreprise pour les cabinets d'ingénierie et de services IT. Découvrez notre mission, notre équipe et notre approche. ProposalIQ, GrowthIQ, Governance Layer.",
     "eyebrow": "À PROPOS DE MINDORION",
     "heroTitle1": "Construire les outils que les cabinets d'ingénierie et de services IT ",
     "heroTitle2": "méritent vraiment.",
-    "heroText": "Mindorion construit le système d'exploitation d'entreprise pour les cabinets d'ingénierie et de services IT — en unifiant propositions, exécution commerciale et gouvernance pour les équipes qui les pilotent.",
+    "heroText": "Mindorion construit le système d'exploitation d'entreprise pour les cabinets d'ingénierie et de services IT, en unifiant propositions, exécution commerciale et gouvernance pour les équipes qui les pilotent.",
     "tags": [
       "Mindorion OÜ · Estonie",
       "Fondé en 2024",
@@ -937,17 +937,17 @@
     "missionEyebrow": "NOTRE MISSION",
     "missionTitle1": "Donner aux cabinets d'ingénierie et de services IT la certitude ",
     "missionTitle2": "d'opérer au plus haut niveau.",
-    "missionText": "Chaque document envoyé doit être impeccable. Chaque prospect doit être le bon. Chaque processus doit être gouverné et auditable. Mindorion rend ça possible — sans friction, sans compromis.",
+    "missionText": "Chaque document envoyé doit être impeccable. Chaque prospect doit être le bon. Chaque processus doit être gouverné et auditable. Mindorion rend ça possible, sans friction, sans compromis.",
     "values": [
       {
         "icon": "🎯",
         "title": "Résultats avant tout",
-        "text": "Chaque fonctionnalité que nous construisons doit résoudre un vrai problème professionnel. Pas de features gadgets — uniquement ce qui crée de la valeur mesurable."
+        "text": "Chaque fonctionnalité que nous construisons doit résoudre un vrai problème professionnel. Pas de features gadgets, uniquement ce qui crée de la valeur mesurable."
       },
       {
         "icon": "🔒",
         "title": "Privé par conception",
-        "text": "Vos documents ne sont jamais stockés. L'analyse se fait en temps réel et les fichiers sont supprimés immédiatement. La confidentialité n'est pas une option — c'est l'architecture."
+        "text": "Vos documents ne sont jamais stockés. L'analyse se fait en temps réel et les fichiers sont supprimés immédiatement. La confidentialité n'est pas une option, c'est l'architecture."
       },
       {
         "icon": "⚡",
@@ -956,15 +956,15 @@
       }
     ],
     "ctaTitle": "Envie de suivre l'aventure Mindorion ?",
-    "ctaText": "On partage tout sur LinkedIn — décisions, apprentissages, nouveaux produits.",
+    "ctaText": "On partage tout sur LinkedIn, décisions, apprentissages, nouveaux produits.",
     "ctaButton": "Suivre sur LinkedIn"
   },
   "contact": {
-    "seoTitle": "Demander une démo — Mindorion",
-    "seoDescription": "Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes — ProposalIQ, GrowthIQ, Governance Layer. Sans engagement.",
+    "seoTitle": "Demander une démo, Mindorion",
+    "seoDescription": "Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes, ProposalIQ, GrowthIQ, Governance Layer. Sans engagement.",
     "eyebrow": "DEMANDER UNE DÉMO",
     "title": "Parlons de votre projet.",
-    "subtitle": "Nos experts vous présentent Mindorion en 30 minutes et répondent à toutes vos questions — produits, tarifs, intégrations.",
+    "subtitle": "Nos experts vous présentent Mindorion en 30 minutes et répondent à toutes vos questions, produits, tarifs, intégrations.",
     "perks": [
       {
         "icon": "⏱",
@@ -1030,7 +1030,7 @@
     "successText": "Merci ! Nous vous recontactons sous 24 heures."
   },
   "privacy": {
-    "seoTitle": "Confidentialité — Mindorion",
+    "seoTitle": "Confidentialité, Mindorion",
     "seoDescription": "Consultez la politique de confidentialité Mindorion : données collectées, usage, conservation et droits RGPD.",
     "title": "Confidentialité",
     "sections": [
@@ -1057,7 +1057,7 @@
     ]
   },
   "terms": {
-    "seoTitle": "CGU — Mindorion",
+    "seoTitle": "CGU, Mindorion",
     "seoDescription": "Consultez les conditions générales d'utilisation du site marketing Mindorion.",
     "title": "Conditions générales d'utilisation",
     "sections": [
@@ -1084,7 +1084,7 @@
     ]
   },
   "security": {
-    "seoTitle": "Sécurité & Conformité — Mindorion",
+    "seoTitle": "Sécurité & Conformité, Mindorion",
     "seoDescription": "Les engagements de Mindorion en matière d'hébergement EU, chiffrement, RGPD et non-rétention des données.",
     "title": "Sécurité & Conformité",
     "subtitle": "Des principes clairs pour limiter l'exposition, renforcer les standards et protéger les données opérationnelles des cabinets d'ingénierie et de services IT.",
@@ -1112,7 +1112,7 @@
     "plans": {
       "starter": {
         "badge": "Inclus avec Starter",
-        "subtitle": "Vue personnelle — suivez votre propre qualité documentaire.",
+        "subtitle": "Vue personnelle, suivez votre propre qualité documentaire.",
         "features": [
           {
             "title": "Score qualité personnel",
@@ -1120,7 +1120,7 @@
           },
           {
             "title": "Répartition des risques",
-            "desc": "Métadonnées, placeholders, données sensibles — visualisés par catégorie."
+            "desc": "Métadonnées, placeholders, données sensibles, visualisés par catégorie."
           },
           {
             "title": "Historique 30 jours",
@@ -1135,7 +1135,7 @@
       },
       "pro": {
         "badge": "Inclus avec Pro",
-        "subtitle": "Vue personnelle enrichie — analytics avancés et recommandations IA.",
+        "subtitle": "Vue personnelle enrichie, analytics avancés et recommandations IA.",
         "features": [
           {
             "title": "Score qualité + évolution",
@@ -1162,7 +1162,7 @@
       },
       "business": {
         "badge": "Inclus avec Business",
-        "subtitle": "Vue équipe — pilotez la qualité documentaire de toute votre structure.",
+        "subtitle": "Vue équipe, pilotez la qualité documentaire de toute votre structure.",
         "features": [
           {
             "title": "Vue équipe complète",
@@ -1189,7 +1189,7 @@
       },
       "enterprise": {
         "badge": "Inclus avec Enterprise",
-        "subtitle": "Gouvernance complète — hiérarchie sur-mesure, configuration IT, rapports dirigeants.",
+        "subtitle": "Gouvernance complète, hiérarchie sur-mesure, configuration IT, rapports dirigeants.",
         "features": [
           {
             "title": "Hiérarchie en cascade",
@@ -1226,7 +1226,7 @@
   "usecasesPage": {
     "eyebrow": "CAS D'USAGE",
     "title": "Comment les cabinets d'ingénierie et de services IT utilisent Mindorion",
-    "subtitle": "Que vous pilotiez l'avant-vente, l'exécution commerciale, le delivery ou une business unit — Mindorion structure les propositions, aligne l'exécution commerciale sur la stratégie et garde les opérations gouvernées.",
+    "subtitle": "Que vous pilotiez l'avant-vente, l'exécution commerciale, le delivery ou une business unit, Mindorion structure les propositions, aligne l'exécution commerciale sur la stratégie et garde les opérations gouvernées.",
     "ctaTitle": "Prêt à opérer au plus haut niveau ?",
     "ctaText": "Commencez avec ProposalIQ. Ajoutez GrowthIQ. La gouvernance est intégrée aux deux.",
     "ctaButton": "Voir les tarifs",
@@ -1279,7 +1279,7 @@
           {
             "tool": "ProposalIQ",
             "title": "Réutiliser ce qui a déjà gagné",
-            "text": "Construisez de nouvelles propositions à partir de votre drive client structuré — propositions passées, références et accréditations — au lieu de partir d'une page blanche.",
+            "text": "Construisez de nouvelles propositions à partir de votre drive client structuré, propositions passées, références et accréditations, au lieu de partir d'une page blanche.",
             "result": "Délai raccourci · Qualité cohérente"
           },
           {
@@ -1348,7 +1348,7 @@
       },
       "rh": {
         "badge": "👥 DELIVERY & BU",
-        "title": "Pilotez votre périmètre de bout en bout — de la proposition au delivery — sur des données fiables.",
+        "title": "Pilotez votre périmètre de bout en bout, de la proposition au delivery, sur des données fiables.",
         "text": "Les directeurs de BU et de delivery ont besoin de connecter propositions, engagements de delivery et marge au même endroit. Mindorion structure cette activité et la Governance Layer la garde auditable.",
         "tools": [
           {
@@ -1459,11 +1459,11 @@
     }
   },
   "whyMindorion": {
-    "seoTitle": "Pourquoi Mindorion — La fondation opérationnelle pour l'ingénierie et les services IT",
+    "seoTitle": "Pourquoi Mindorion, La fondation opérationnelle pour l'ingénierie et les services IT",
     "seoDescription": "Mindorion aide les cabinets d'ingénierie et de services IT à standardiser les workflows, structurer les données opérationnelles et bâtir les fondations nécessaires pour passer à l'échelle avec gouvernance et une adoption efficace de l'IA.",
     "hero": {
       "title": "Construire la fondation opérationnelle des cabinets d'ingénierie et de services IT qui passent à l'échelle.",
-      "subtitle": "Mindorion standardise les workflows, structure les données d'entreprise et aligne l'exécution sur la stratégie — pour que les organisations passent à l'échelle avec gouvernance, conformité et adoption efficace de l'IA.",
+      "subtitle": "Mindorion standardise les workflows, structure les données d'entreprise et aligne l'exécution sur la stratégie, pour que les organisations passent à l'échelle avec gouvernance, conformité et adoption efficace de l'IA.",
       "primaryCta": "Demander une démo",
       "secondaryCta": "Explorer les produits"
     },
@@ -1473,22 +1473,22 @@
     },
     "foundation": {
       "thesis": "L'IA n'est pas la fondation. L'IA passe à l'échelle quand les données, les workflows et la gouvernance sont déjà structurés.",
-      "base": { "label": "Base", "text": "Mindorion Operating System — la couche workflow où se déroule l'activité opérationnelle" },
-      "process": { "label": "Processus", "text": "Workflows standardisés — les équipes exécutent les processus de façon cohérente" },
-      "data": { "label": "Données", "text": "Données d'entreprise structurées — l'activité fragmentée devient une donnée de décision exploitable" },
-      "control": { "label": "Contrôle", "text": "Gouvernance & conformité — contrôle, auditabilité et confiance" },
-      "result": { "label": "Résultat", "text": "Adoption efficace de l'IA — plus précise, plus économe et gouvernée, en résultat" }
+      "base": { "label": "Base", "text": "Mindorion Operating System, la couche workflow où se déroule l'activité opérationnelle" },
+      "process": { "label": "Processus", "text": "Workflows standardisés, les équipes exécutent les processus de façon cohérente" },
+      "data": { "label": "Données", "text": "Données d'entreprise structurées, l'activité fragmentée devient une donnée de décision exploitable" },
+      "control": { "label": "Contrôle", "text": "Gouvernance & conformité, contrôle, auditabilité et confiance" },
+      "result": { "label": "Résultat", "text": "Adoption efficace de l'IA, plus précise, plus économe et gouvernée, en résultat" }
     },
     "difference": {
       "eyebrow": "Là où Mindorion fait la différence",
-      "title": "Passez à l'échelle avec l'IA — sans perdre le contrôle des coûts ni de la conformité.",
+      "title": "Passez à l'échelle avec l'IA, sans perdre le contrôle des coûts ni de la conformité.",
       "body": "La plupart des cabinets tombent dans le même piège : trop peu d'IA et vous décrochez ; trop d'IA non maîtrisée et les coûts de tokens explosent pendant que le risque de conformité grandit. Mindorion est le juste milieu maîtrisé.",
       "cards": [
         { "title": "Garder une longueur d'avance", "body": "L'IA est incontournable. Mindorion vous aide à l'adopter là où elle crée de la vraie valeur, pour avancer vite sans vous laisser distancer par des concurrents plus rapides." },
-        { "title": "Maîtriser le coût de l'IA à l'échelle", "body": "En standardisant d'abord vos données et vos workflows, Mindorion réduit la dépendance à des agents IA coûteux et faillibles — pour que faire grandir votre équipe ne rime pas avec des coûts de tokens incontrôlés." },
+        { "title": "Maîtriser le coût de l'IA à l'échelle", "body": "En standardisant d'abord vos données et vos workflows, Mindorion réduit la dépendance à des agents IA coûteux et faillibles, pour que faire grandir votre équipe ne rime pas avec des coûts de tokens incontrôlés." },
         { "title": "Conformité by design", "body": "Les données opérationnelles restent structurées, gouvernées et auditables, pour que l'IA s'exécute dans un environnement maîtrisé et gouverné plutôt qu'incontrôlé." }
       ],
-      "footer": "L'IA n'est pas la fondation. Les données structurées, les workflows et la gouvernance le sont — et c'est ce qui rend l'IA scalable, abordable et auditable."
+      "footer": "L'IA n'est pas la fondation. Les données structurées, les workflows et la gouvernance le sont, et c'est ce qui rend l'IA scalable, abordable et auditable."
     },
     "focus": {
       "eyebrow": "Focus",
@@ -1506,7 +1506,7 @@
       "subtitle": "Mindorion a été créé par un opérateur qui a vu comment les cabinets d'ingénierie et de services IT perdent en efficacité quand propositions, pipeline, delivery et reporting se fragmentent.",
       "builtWithEyebrow": "Construit avec des opérateurs",
       "builtWithTitle": "Conçu avec les équipes qui pilotent l'avant-vente, le pipeline et le delivery au quotidien.",
-      "builtWithBody": "Chaque workflow est façonné par des opérateurs au sein de cabinets d'ingénierie et de services IT. La transparence sur la roadmap et les apprentissages fait partie de notre façon de travailler — comme engagement secondaire, pas comme accroche principale."
+      "builtWithBody": "Chaque workflow est façonné par des opérateurs au sein de cabinets d'ingénierie et de services IT. La transparence sur la roadmap et les apprentissages fait partie de notre façon de travailler, comme engagement secondaire, pas comme accroche principale."
     },
     "principles": {
       "eyebrow": "Principes",
@@ -1553,7 +1553,7 @@
     "buildInPublic": {
       "badge": "Build in Public",
       "title": "On construit Mindorion en transparence, avec vous.",
-      "body": "Chaque décision produit, chaque apprentissage, chaque étape — partagés publiquement sur LinkedIn. Parce que les meilleurs outils se construisent avec ceux qui les utilisent.",
+      "body": "Chaque décision produit, chaque apprentissage, chaque étape, partagés publiquement sur LinkedIn. Parce que les meilleurs outils se construisent avec ceux qui les utilisent.",
       "ctaFollow": "Suivre Mindorion",
       "ctaRoadmap": "Voir la roadmap"
     }

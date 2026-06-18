@@ -12,13 +12,13 @@ const blogHead = () => {
   const lang = i18n.language?.slice(0, 2) === "fr" ? "fr" : "en";
   if (lang === "fr") {
     return {
-      title: "Blog — Conseils et guides professionnels B2B — Mindorion",
-      description: "Articles, guides et ressources pour les professionnels B2B — réputation documentaire, prospection intelligente et conformité.",
+      title: "Blog, Conseils et guides professionnels B2B, Mindorion",
+      description: "Articles, guides et ressources pour les professionnels B2B, réputation documentaire, prospection intelligente et conformité.",
     };
   }
   return {
-    title: "Blog — Engineering & IT Services tips and guides — Mindorion",
-    description: "Articles, guides and resources for Engineering & IT Services firms — document reputation, intelligent prospecting and compliance.",
+    title: "Blog, Engineering & IT Services tips and guides, Mindorion",
+    description: "Articles, guides and resources for Engineering & IT Services firms, document reputation, intelligent prospecting and compliance.",
   };
 };
 
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/blog")({
   component: BlogPage,
 });
 
-type BlogFilter = "all" — "ProposalIQ" — "GrowthIQ" — "Governance Layer" — "Guides";
+type BlogFilter = "all", "ProposalIQ", "GrowthIQ", "Governance Layer", "Guides";
 
 const featuredArticle = { slug: "track-changes-proposals" };
 

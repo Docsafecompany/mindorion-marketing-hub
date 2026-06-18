@@ -106,7 +106,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     includedInSuite: "INCLUS DANS LA SUITE",
     comparisonFeature: "Fonctionnalité",
     productSelectorHelper: "Chaque produit peut être adopté indépendamment. Enterprise combine les modules et la gouvernance.",
-    maturityPath: "Excel → Starter → Pro → Business → Enterprise. Vous ne payez pas pour des fonctionnalités isolées — vous faites évoluer votre organisation vers un niveau supérieur de maturité opérationnelle.",
+    maturityPath: "Excel → Starter → Pro → Business → Enterprise. Vous ne payez pas pour des fonctionnalités isolées, vous faites évoluer votre organisation vers un niveau supérieur de maturité opérationnelle.",
     roiHeadline: "Un requirement RFP manqué, un commentaire interne exposé, ou un mois de données pipeline médiocres peut coûter plus que l'abonnement annuel.",
     faqTitle: "Questions fréquentes",
     faq: [
@@ -120,7 +120,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       },
       {
         question: "Intégrez-vous notre CRM ?",
-        answer: "Oui — Enterprise se connecte à votre CRM pour que les données opérationnelles restent synchronisées et que le double reporting soit réduit.",
+        answer: "Oui, Enterprise se connecte à votre CRM pour que les données opérationnelles restent synchronisées et que le double reporting soit réduit.",
       },
       {
         question: "Comment Mindorion contrôle-t-il les coûts et la conformité de l'IA ?",
@@ -430,7 +430,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     includedInSuite: "INCLUDED IN THE SUITE",
     comparisonFeature: "Feature",
     productSelectorHelper: "Each product can be adopted independently. Enterprise combines modules and governance.",
-    maturityPath: "Excel → Starter → Pro → Business → Enterprise. You are not paying for isolated features — you are moving your organization to a higher level of operational maturity.",
+    maturityPath: "Excel → Starter → Pro → Business → Enterprise. You are not paying for isolated features, you are moving your organization to a higher level of operational maturity.",
     roiHeadline: "One missed RFP requirement, one exposed internal comment, or one month of poor pipeline data can cost more than the annual subscription.",
     faqTitle: "Frequently asked questions",
     faq: [
@@ -444,7 +444,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       },
       {
         question: "Do you integrate with our CRM?",
-        answer: "Yes — Enterprise connects to your CRM so operational data stays synchronized and double reporting is reduced.",
+        answer: "Yes, Enterprise connects to your CRM so operational data stays synchronized and double reporting is reduced.",
       },
       {
         question: "How does Mindorion control AI cost and compliance?",

@@ -11,8 +11,8 @@ import { trackEvent } from "@/lib/analytics";
 export const Route = createFileRoute("/contact")({
   head: () =>
     createStaticMeta({
-      title: "Demander une démo — Mindorion",
-      description: "Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes — ProposalIQ, GrowthIQ, Governance Layer. Sans engagement.",
+      title: "Demander une démo, Mindorion",
+      description: "Prenez rendez-vous avec un expert Mindorion. Démo personnalisée de 30 minutes, ProposalIQ, GrowthIQ, Governance Layer. Sans engagement.",
       path: "/contact",
     }),
   component: ContactPage,
