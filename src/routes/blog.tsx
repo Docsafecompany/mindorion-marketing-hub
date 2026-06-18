@@ -13,12 +13,12 @@ const blogHead = () => {
   if (lang === "fr") {
     return {
       title: "Blog | Conseils et guides professionnels B2B | Mindorion",
-      description: "Articles, guides et ressources pour les professionnels B2B — réputation documentaire, prospection intelligente et conformité.",
+      description: "Articles, guides et ressources pour les professionnels B2B | réputation documentaire, prospection intelligente et conformité.",
     };
   }
   return {
     title: "Blog | Engineering & IT Services tips and guides | Mindorion",
-    description: "Articles, guides and resources for Engineering & IT Services firms — document reputation, intelligent prospecting and compliance.",
+    description: "Articles, guides and resources for Engineering & IT Services firms | document reputation, intelligent prospecting and compliance.",
   };
 };
 
