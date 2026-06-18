@@ -1014,7 +1014,7 @@
     "productError": "Select at least one product.",
     "submit": "Send my request →",
     "footer": "We get back to you within 24h · No commitment",
-    "subjectPrefix": "Mindorion demo request —",
+    "subjectPrefix": "Mindorion demo request:",
     "subjectFallback": "New company",
     "mailLabels": {
       "firstName": "First name",
