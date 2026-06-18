@@ -1486,7 +1486,7 @@
       "cards": [
         { "title": "Stay ahead, not overtaken", "body": "AI is unavoidable. Mindorion helps you adopt it where it creates real value, so you move fast without falling behind faster-moving competitors." },
         { "title": "Control AI cost at scale", "body": "By standardizing your data and workflows first, Mindorion reduces reliance on expensive, error-prone AI agents, so scaling your team doesn't mean runaway token costs." },
-        { "title": "Compliance by design", "body": "Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one." }
+        { "title": "Built for data control", "body": "Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one." }
       ],
       "footer": "AI is not the foundation. Structured data, workflows and governance are, and that's what makes AI scalable, affordable and auditable."
     },
