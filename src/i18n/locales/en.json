@@ -1084,10 +1084,10 @@
     ]
   },
   "security": {
-    "seoTitle": "Security & Compliance, Mindorion",
-    "seoDescription": "Mindorion commitments on EU hosting, encryption, GDPR and zero unnecessary data retention.",
-    "title": "Security & Compliance",
-    "subtitle": "Clear principles to limit exposure, raise standards and protect the operational data of Engineering & IT Services firms.",
+    "seoTitle": "Security & Data Governance, Mindorion",
+    "seoDescription": "How Mindorion approaches EU hosting, encryption, data access control and zero unnecessary retention.",
+    "title": "Security & Data Governance",
+    "subtitle": "Clear principles to limit exposure, raise standards and keep the operational data of Engineering & IT Services firms in a controlled environment.",
     "cards": [
       {
         "title": "EU hosting",
