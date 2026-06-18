@@ -609,8 +609,8 @@
           "title": "Compliance & security",
           "items": [
             {
-              "title": "GDPR by design",
-              "text": "Automatic verification of personal data against current regulations."
+              "title": "GDPR-aligned controls",
+              "text": "Helps verify personal data handling against your organization's GDPR policies."
             },
             {
               "title": "Full audit trail",
@@ -931,7 +931,7 @@
       },
       {
         "value": "0",
-        "label": "DATA STORED · GDPR BY DESIGN"
+        "label": "DATA STORED · GOVERNED ACCESS"
       }
     ],
     "missionEyebrow": "OUR MISSION",
@@ -1084,10 +1084,10 @@
     ]
   },
   "security": {
-    "seoTitle": "Security & Compliance, Mindorion",
-    "seoDescription": "Mindorion commitments on EU hosting, encryption, GDPR and zero unnecessary data retention.",
-    "title": "Security & Compliance",
-    "subtitle": "Clear principles to limit exposure, raise standards and protect the operational data of Engineering & IT Services firms.",
+    "seoTitle": "Security & Data Governance, Mindorion",
+    "seoDescription": "How Mindorion approaches EU hosting, encryption, data access control and zero unnecessary retention.",
+    "title": "Security & Data Governance",
+    "subtitle": "Clear principles to limit exposure, raise standards and keep the operational data of Engineering & IT Services firms in a controlled environment.",
     "cards": [
       {
         "title": "EU hosting",
@@ -1098,8 +1098,8 @@
         "text": "Exchanges and processing are protected with security mechanisms suited to professional workflows."
       },
       {
-        "title": "GDPR",
-        "text": "The product encourages data minimization and stronger operational habits around sensitive documents."
+        "title": "Data governance",
+        "text": "Your data stays in a governed, access-controlled environment. The product encourages data minimization and stronger operational habits around sensitive documents."
       },
       {
         "title": "No retention",
@@ -1486,7 +1486,7 @@
       "cards": [
         { "title": "Stay ahead, not overtaken", "body": "AI is unavoidable. Mindorion helps you adopt it where it creates real value, so you move fast without falling behind faster-moving competitors." },
         { "title": "Control AI cost at scale", "body": "By standardizing your data and workflows first, Mindorion reduces reliance on expensive, error-prone AI agents, so scaling your team doesn't mean runaway token costs." },
-        { "title": "Compliance by design", "body": "Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one." }
+        { "title": "Built for data control", "body": "Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one." }
       ],
       "footer": "AI is not the foundation. Structured data, workflows and governance are, and that's what makes AI scalable, affordable and auditable."
     },

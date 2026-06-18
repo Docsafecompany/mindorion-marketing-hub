@@ -609,8 +609,8 @@
           "title": "Conformité & sécurité",
           "items": [
             {
-              "title": "RGPD by design",
-              "text": "Vérification automatique des données personnelles selon les réglementations en vigueur."
+              "title": "Contrôles alignés RGPD",
+              "text": "Aide à vérifier le traitement des données personnelles selon les politiques RGPD de votre organisation."
             },
             {
               "title": "Audit trail complet",
@@ -931,7 +931,7 @@
       },
       {
         "value": "0",
-        "label": "DONNÉE STOCKÉE · RGPD BY DESIGN"
+        "label": "DONNÉE STOCKÉE · ACCÈS GOUVERNÉ"
       }
     ],
     "missionEyebrow": "NOTRE MISSION",
@@ -1084,10 +1084,10 @@
     ]
   },
   "security": {
-    "seoTitle": "Sécurité & Conformité, Mindorion",
-    "seoDescription": "Les engagements de Mindorion en matière d'hébergement EU, chiffrement, RGPD et non-rétention des données.",
-    "title": "Sécurité & Conformité",
-    "subtitle": "Des principes clairs pour limiter l'exposition, renforcer les standards et protéger les données opérationnelles des cabinets d'ingénierie et de services IT.",
+    "seoTitle": "Sécurité & Gouvernance des données, Mindorion",
+    "seoDescription": "L'approche Mindorion en matière d'hébergement EU, chiffrement, contrôle d'accès aux données et non-rétention inutile.",
+    "title": "Sécurité & Gouvernance des données",
+    "subtitle": "Des principes clairs pour limiter l'exposition, renforcer les standards et garder les données opérationnelles des cabinets d'ingénierie et de services IT dans un environnement maîtrisé.",
     "cards": [
       {
         "title": "Hébergement EU",
@@ -1098,8 +1098,8 @@
         "text": "Les échanges et les traitements sont protégés avec des mécanismes de sécurité adaptés aux usages professionnels."
       },
       {
-        "title": "RGPD",
-        "text": "Le produit encourage la minimisation des données et de meilleurs réflexes opérationnels autour des documents sensibles."
+        "title": "Gouvernance des données",
+        "text": "Vos données restent dans un environnement gouverné et à accès contrôlé. Le produit encourage la minimisation des données et de meilleurs réflexes opérationnels autour des documents sensibles."
       },
       {
         "title": "Aucune rétention",
@@ -1486,7 +1486,7 @@
       "cards": [
         { "title": "Garder une longueur d'avance", "body": "L'IA est incontournable. Mindorion vous aide à l'adopter là où elle crée de la vraie valeur, pour avancer vite sans vous laisser distancer par des concurrents plus rapides." },
         { "title": "Maîtriser le coût de l'IA à l'échelle", "body": "En standardisant d'abord vos données et vos workflows, Mindorion réduit la dépendance à des agents IA coûteux et faillibles, pour que faire grandir votre équipe ne rime pas avec des coûts de tokens incontrôlés." },
-        { "title": "Conformité by design", "body": "Les données opérationnelles restent structurées, gouvernées et auditables, pour que l'IA s'exécute dans un environnement maîtrisé et gouverné plutôt qu'incontrôlé." }
+        { "title": "Pensé pour le contrôle des données", "body": "Les données opérationnelles restent structurées, gouvernées et auditables, pour que l'IA s'exécute dans un environnement maîtrisé et gouverné plutôt qu'incontrôlé." }
       ],
       "footer": "L'IA n'est pas la fondation. Les données structurées, les workflows et la gouvernance le sont, et c'est ce qui rend l'IA scalable, abordable et auditable."
     },
