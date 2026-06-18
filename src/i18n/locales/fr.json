@@ -609,8 +609,8 @@
           "title": "Conformité & sécurité",
           "items": [
             {
-              "title": "RGPD by design",
-              "text": "Vérification automatique des données personnelles selon les réglementations en vigueur."
+              "title": "Contrôles alignés RGPD",
+              "text": "Aide à vérifier le traitement des données personnelles selon les politiques RGPD de votre organisation."
             },
             {
               "title": "Audit trail complet",
