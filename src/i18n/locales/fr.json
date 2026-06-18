@@ -1084,10 +1084,10 @@
     ]
   },
   "security": {
-    "seoTitle": "Sécurité & Conformité, Mindorion",
-    "seoDescription": "Les engagements de Mindorion en matière d'hébergement EU, chiffrement, RGPD et non-rétention des données.",
-    "title": "Sécurité & Conformité",
-    "subtitle": "Des principes clairs pour limiter l'exposition, renforcer les standards et protéger les données opérationnelles des cabinets d'ingénierie et de services IT.",
+    "seoTitle": "Sécurité & Gouvernance des données, Mindorion",
+    "seoDescription": "L'approche Mindorion en matière d'hébergement EU, chiffrement, contrôle d'accès aux données et non-rétention inutile.",
+    "title": "Sécurité & Gouvernance des données",
+    "subtitle": "Des principes clairs pour limiter l'exposition, renforcer les standards et garder les données opérationnelles des cabinets d'ingénierie et de services IT dans un environnement maîtrisé.",
     "cards": [
       {
         "title": "Hébergement EU",
