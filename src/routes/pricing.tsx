@@ -224,15 +224,16 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "Système d'exploitation gouverné",
+            label: "OS de gouvernance",
             name: "Enterprise",
-            description: "Connectez ProposalIQ, GrowthIQ et la Governance Layer pour faire évoluer les opérations assistées par l'IA avec CRM, sécurité et conformité.",
+            description: "Pour les grands groupes ESN (ALTEN, Capgemini, Akkodis) avec CRM, SSO et gouvernance IA by design.",
             outcome: "Passer à l'échelle",
             includes: "ProposalIQ + GrowthIQ + Governance Layer, intégration CRM, SSO/sécurité, CSM dédié.",
             cta: "Demander une démo",
             href: "/contact",
             enterprise: true,
-            fixedNote: "Contrat annuel · Onboarding inclus",
+            fixedNote: "Contrat annuel · Onboarding dédié inclus",
+
             suiteCards: [
               { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · illimité" },
               { icon: "🎯", title: "GrowthIQ Business", description: "Exécution commerciale complète" },
