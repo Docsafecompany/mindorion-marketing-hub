@@ -844,7 +844,7 @@ function PricingPage() {
                 </div>
                 <div>
                   <div className="text-base font-bold text-foreground">{product.title}</div>
-                  <div className="text-sm text-muted-foreground">{product.subtitle}</div>
+                  <div className="text-sm text-muted-foreground line-clamp-2">{product.subtitle}</div>
                 </div>
               </div>
             </TabsTrigger>
