@@ -105,7 +105,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     custom: "Sur devis",
     includedInSuite: "INCLUS DANS LA SUITE",
     comparisonFeature: "Fonctionnalité",
-    productSelectorHelper: "Chaque produit peut être adopté indépendamment. Enterprise combine les modules et la gouvernance.",
+    productSelectorHelper: "Commencez par le workflow où votre équipe souffre le plus aujourd'hui. Enterprise combine les deux modules et la Governance Layer.",
     maturityPath: "Excel → Starter → Pro → Business → Enterprise. Vous ne payez pas pour des fonctionnalités, vous faites évoluer votre organisation vers un niveau supérieur de maturité opérationnelle.",
     roiHeadline: "Un requirement RFQ manqué, un commentaire interne exposé, ou un mois de données pipeline médiocres peut coûter plus que l'abonnement annuel.",
     faqTitle: "Questions fréquentes",
