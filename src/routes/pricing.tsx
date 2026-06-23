@@ -139,7 +139,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "proposaliq",
         title: "ProposalIQ",
-        subtitle: "Pré-vente et opérations de proposition pour les sociétés Engineering & IT Services.",
+        subtitle: "Opérations pré-vente et propositions commerciales pour les ESNs. Standardisez les réponses RFQ, la qualité des propositions et les workflows de validation.",
         plans: [
           {
             label: "Première utilisation équipe",
