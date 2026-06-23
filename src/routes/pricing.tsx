@@ -919,7 +919,7 @@ function PricingPage() {
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{copy.finalCtaTitle}</h2>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
-              to="/pricing"
+              to="/contact"
               onClick={() => trackEvent("pricing_cta_clicked", { cta: "start_module" })}
             >
               <Button
@@ -932,8 +932,10 @@ function PricingPage() {
             </Link>
             <Link
               to="/contact"
+              search={{ demo: "enterprise" }}
               onClick={() => trackEvent("pricing_cta_clicked", { cta: "book_enterprise_demo" })}
             >
+
               <Button
                 size="lg"
                 variant="outline"
