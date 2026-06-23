@@ -862,7 +862,9 @@ function PricingPage() {
                 <PlanCard key={`${product.key}-${plan.name}`} productKey={product.key} billing={billing} plan={plan} popularLabel={copy.popular} customLabel={copy.custom} suiteLabel={copy.includedInSuite} />
               ))}
             </div>
+            <OutcomesMatrix locale={locale} />
             <ComparisonTable product={product} featureLabel={copy.comparisonFeature} />
+
           </TabsContent>
         ))}
       </Tabs>
