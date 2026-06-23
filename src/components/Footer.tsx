@@ -45,7 +45,7 @@ export function Footer() {
         <div className="grid gap-10 border-b border-border/80 pb-10 md:grid-cols-2 xl:grid-cols-[1.15fr_0.9fr_0.9fr_1fr] xl:gap-16">
           <div className="space-y-6">
             <BrandMark className="h-8 w-auto" />
-            <p className="max-w-sm text-base leading-8 text-muted-foreground">Enterprise intelligence for engineering and consulting organizations.</p>
+            <p className="max-w-sm text-base leading-8 text-muted-foreground">Intelligence opérationnelle pour les sociétés Engineering & IT Services.</p>
             <div className="flex flex-wrap gap-3">
               <a
                 href={LINKEDIN_URL}

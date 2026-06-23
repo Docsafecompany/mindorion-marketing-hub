@@ -105,51 +105,52 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     custom: "Sur devis",
     includedInSuite: "INCLUS DANS LA SUITE",
     comparisonFeature: "Fonctionnalité",
-    productSelectorHelper: "Chaque produit peut être adopté indépendamment. Enterprise combine les modules et la gouvernance.",
-    maturityPath: "Excel → Starter → Pro → Business → Enterprise. Vous ne payez pas pour des fonctionnalités isolées, vous faites évoluer votre organisation vers un niveau supérieur de maturité opérationnelle.",
-    roiHeadline: "Un requirement RFP manqué, un commentaire interne exposé, ou un mois de données pipeline médiocres peut coûter plus que l'abonnement annuel.",
+    productSelectorHelper: "Commencez par le workflow où votre équipe souffre le plus aujourd'hui. Enterprise combine les deux modules et la Governance Layer.",
+    maturityPath: "Excel → Starter → Pro → Business → Enterprise. Vous ne payez pas pour des fonctionnalités, vous faites évoluer votre organisation vers un niveau supérieur de maturité opérationnelle.",
+    roiHeadline: "Un requirement RFQ manqué, un commentaire interne exposé, ou un mois de données pipeline médiocres peut coûter plus que l'abonnement annuel.",
     faqTitle: "Questions fréquentes",
     faq: [
       {
         question: "Pouvons-nous commencer avec seulement ProposalIQ ou GrowthIQ ?",
-        answer: "Oui. Mindorion est conçu pour démarrer avec un workflow opérationnel et s'étendre au fur et à mesure que les équipes standardisent les propositions et l'exécution commerciale.",
+        answer: "Oui. Mindorion est conçu pour démarrer avec un workflow opérationnel et s'étendre au fur et à mesure que les équipes se standardisent. ProposalIQ et GrowthIQ peuvent être adoptés indépendamment.",
       },
       {
         question: "Comment fonctionne la tarification Enterprise ?",
-        answer: "La tarification Enterprise dépend du nombre d'utilisateurs, des intégrations CRM, des exigences de sécurité, des besoins de gouvernance et de la portée du déploiement.",
+        answer: "La tarification Enterprise dépend du nombre d'utilisateurs, des intégrations CRM, des besoins de sécurité, de gouvernance IA et du scope de déploiement. Contactez-nous pour un devis personnalisé.",
       },
       {
         question: "Intégrez-vous notre CRM ?",
-        answer: "Oui, Enterprise se connecte à votre CRM pour que les données opérationnelles restent synchronisées et que le double reporting soit réduit.",
+        answer: "Oui, à partir du plan Business. Mindorion s'intègre aux CRMs principaux pour réduire la double saisie et maintenir la cohérence des données pipeline et proposals.",
       },
       {
         question: "Comment Mindorion contrôle-t-il les coûts et la conformité de l'IA ?",
-        answer: "Mindorion ne pousse pas l'IA partout par défaut. Il crée des workflows structurés et des données gouvernées pour que l'IA soit utilisée là où elle crée de la valeur tout en réduisant l'usage non contrôlé et les risques de conformité.",
+        answer: "Mindorion ne pousse pas l'IA partout par défaut. Il crée des workflows structurés et des données gouvernées pour que l'IA intervienne là où elle crée de la valeur, réduisant l'usage non contrôlé et le risque compliance.",
       },
       {
         question: "Comment ProposalIQ et GrowthIQ fonctionnent-ils ensemble ?",
-        answer: "ProposalIQ structure le workflow RFQ/proposition tandis que GrowthIQ connecte le pipeline, l'exécution commerciale et les résultats de win/loss, créant une boucle d'apprentissage à travers l'organisation.",
+        answer: "ProposalIQ structure le workflow RFQ et propositions. GrowthIQ connecte pipeline, exécution commerciale et outcomes win/loss. Ensemble, ils créent une boucle d'apprentissage à l'échelle de l'organisation.",
       },
     ],
-    finalCtaTitle: "Prêt à standardiser les propositions et l'exécution commerciale ?",
-    finalCtaPrimary: "Commencer avec un module",
-    finalCtaSecondary: "Demander une démo Enterprise",
+    finalCtaTitle: "Prêt à standardiser vos propositions et votre exécution commerciale ?",
+    finalCtaPrimary: "Démarrer avec un module",
+    finalCtaSecondary: "Planifier une démo Enterprise",
+
     products: [
       {
         key: "proposaliq",
         title: "ProposalIQ",
-        subtitle: "Pré-vente et opérations de proposition pour les sociétés Engineering & IT Services.",
+        subtitle: "Opérations pré-vente et propositions commerciales pour les ESNs. Standardisez les réponses RFQ, la qualité des propositions et les workflows de validation.",
         plans: [
           {
-            label: "Première utilisation équipe",
+            label: "Premier workflow",
             name: "Starter",
-            description: "Pour les petites équipes qui commencent à standardiser un workflow.",
+            description: "Pour les petites équipes qui démarrent avec un premier workflow proposal.",
             outcome: "Démarrer",
-            upgradeWhen: "Plus de 5 utilisateurs, propositions incohérentes, reporting dupliqué ou manque de visibilité.",
+            upgradeWhen: "Propositions incohérentes, besoin de scoring ou de validation managériale, ou équipe > 5 utilisateurs.",
             monthlyPrice: "19€/mois",
             annualPrice: "228€/an",
-            annualNote: "1 utilisateur · soit 15€/mois · −20%",
-            fixedNote: "1 utilisateur · facturation mensuelle",
+            annualNote: "soit 15,20€/mois · −20%",
+            fixedNote: "par organisation · facturation mensuelle",
             cta: "Choisir Starter",
             href: "/pricing",
             sections: [
@@ -162,22 +163,22 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
                   { label: "Placeholders oubliés", included: true },
                   { label: "Données personnelles", included: true },
                   { label: "Score qualité /100", included: true },
-                  { label: "Fautes d'orthographe", included: false },
-                  { label: "Ton IA", included: false },
                 ],
               },
             ],
           },
+
           {
             label: "Standardisation équipe",
             name: "Pro",
-            description: "Pour les équipes Engineering & IT Services en croissance qui ont besoin d'une exécution cohérente.",
+            description: "Pour les équipes ESN en croissance qui ont besoin d'exécution cohérente et de visibilité manager.",
             outcome: "Standardiser",
-            upgradeWhen: "Les managers ont besoin de visibilité et de reporting sur plusieurs équipes, industries ou géographies.",
+            upgradeWhen: "Plusieurs équipes, marchés ou géographies émergent, ou les managers ont besoin de reporting consolidé.",
             monthlyPrice: "39€/mois",
             annualPrice: "468€/an",
-            annualNote: "1 utilisateur · soit 31€/mois · −20%",
-            fixedNote: "1 utilisateur · facturation mensuelle",
+            annualNote: "soit 31,20€/mois · −20%",
+            fixedNote: "par organisation · facturation mensuelle",
+
             cta: "Choisir Pro",
             href: "/pricing",
             featured: true,
@@ -198,13 +199,14 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Gouvernance multi-équipes",
             name: "Business",
-            description: "Pour les organisations structurées qui gèrent plusieurs équipes, marchés ou workflows de proposition.",
+            description: "Pour les ESNs structurés gérant plusieurs équipes, BUs ou marchés.",
             outcome: "Gouverner",
-            upgradeWhen: "La conformité, l'intégration CRM et la supervision exécutive deviennent critiques.",
+            upgradeWhen: "Déploiement org-wide, intégration CRM, SSO ou gouvernance IA obligatoires.",
             monthlyPrice: "59€/user/mois",
             annualPrice: "708€/user/an",
-            annualNote: "Jusqu'à 5 utilisateurs · soit 47€/mois · −20%",
-            fixedNote: "Jusqu'à 5 utilisateurs · facturation mensuelle",
+            annualNote: "soit 47,20€/user/mois · −20%",
+            fixedNote: "par utilisateur · facturation mensuelle",
+
             cta: "Choisir Business",
             href: "/pricing",
             sections: [
@@ -222,15 +224,16 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
             ],
           },
           {
-            label: "Système d'exploitation gouverné",
+            label: "OS de gouvernance",
             name: "Enterprise",
-            description: "Connectez ProposalIQ, GrowthIQ et la Governance Layer pour faire évoluer les opérations assistées par l'IA avec CRM, sécurité et conformité.",
+            description: "Pour les grands groupes ESN (ALTEN, Capgemini, Akkodis) avec CRM, SSO et gouvernance IA by design.",
             outcome: "Passer à l'échelle",
             includes: "ProposalIQ + GrowthIQ + Governance Layer, intégration CRM, SSO/sécurité, CSM dédié.",
             cta: "Demander une démo",
             href: "/contact",
             enterprise: true,
-            fixedNote: "Contrat annuel · Onboarding inclus",
+            fixedNote: "Contrat annuel · Onboarding dédié inclus",
+
             suiteCards: [
               { icon: "🛡", title: "ProposalIQ Business", description: "Word, PDF, PPT, Excel · illimité" },
               { icon: "🎯", title: "GrowthIQ Business", description: "Exécution commerciale complète" },
@@ -281,7 +284,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "growthiq",
         title: "GrowthIQ",
-        subtitle: "Intelligence d'exécution commerciale pour les sociétés Engineering & IT Services.",
+        subtitle: "Intelligence d'exécution commerciale pour les ESNs. Alignez stratégie, effort commercial, pipeline et visibilité management.",
         plans: [
           {
             label: "Première utilisation équipe",
@@ -841,7 +844,7 @@ function PricingPage() {
                 </div>
                 <div>
                   <div className="text-base font-bold text-foreground">{product.title}</div>
-                  <div className="text-sm text-muted-foreground">{product.subtitle}</div>
+                  <div className="text-sm text-muted-foreground line-clamp-2">{product.subtitle}</div>
                 </div>
               </div>
             </TabsTrigger>
@@ -859,7 +862,9 @@ function PricingPage() {
                 <PlanCard key={`${product.key}-${plan.name}`} productKey={product.key} billing={billing} plan={plan} popularLabel={copy.popular} customLabel={copy.custom} suiteLabel={copy.includedInSuite} />
               ))}
             </div>
+            <OutcomesMatrix locale={locale} />
             <ComparisonTable product={product} featureLabel={copy.comparisonFeature} />
+
           </TabsContent>
         ))}
       </Tabs>
@@ -916,7 +921,7 @@ function PricingPage() {
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{copy.finalCtaTitle}</h2>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
-              to="/pricing"
+              to="/contact"
               onClick={() => trackEvent("pricing_cta_clicked", { cta: "start_module" })}
             >
               <Button
@@ -931,6 +936,8 @@ function PricingPage() {
               to="/contact"
               onClick={() => trackEvent("pricing_cta_clicked", { cta: "book_enterprise_demo" })}
             >
+
+
               <Button
                 size="lg"
                 variant="outline"
@@ -989,7 +996,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
           <div className={cn("text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground", isEnterprise && "text-[var(--color-pricing-primary)]")}>{plan.label}</div>
           <span className="inline-flex rounded-full bg-[var(--color-pricing-success-soft)] px-2 py-0.5 text-xs font-semibold text-[var(--color-pricing-success)]">{plan.outcome}</span>
         </div>
-        <div className={cn("mt-3 text-2xl font-extrabold text-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.name}</div>
+        <h3 className={cn("mt-3 text-2xl font-extrabold text-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.name}</h3>
         <p className={cn("mt-2 min-h-16 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
         {plan.upgradeWhen ? (
           <p className="mt-2 text-xs leading-5 text-muted-foreground">
@@ -1170,4 +1177,79 @@ function ComparisonValue({ enterprise, value }: { enterprise?: boolean; value: s
   }
 
   return <span className={cn("font-medium text-foreground", enterprise && "text-[var(--color-pricing-enterprise)]")}>{value}</span>;
+}
+
+type OutcomeCol = PlanColumn;
+type OutcomeRow = { outcome: string; values: Record<OutcomeCol, string> };
+const OUTCOMES_COPY: Record<"fr" | "en", { title: string; subtitle: string; headers: Record<OutcomeCol, string>; featureLabel: string; rows: OutcomeRow[] }> = {
+  fr: {
+    title: "Ce que chaque plan débloque pour votre organisation",
+    subtitle: "Les outcomes d'abord, les fonctionnalités sont détaillées plus bas.",
+    featureLabel: "Outcome",
+    headers: { starter: "Starter", pro: "Pro", business: "Business", enterprise: "Enterprise" },
+    rows: [
+      { outcome: "Workflow proposals standardisé", values: { starter: "Individuel", pro: "Équipe", business: "✓", enterprise: "✓" } },
+      { outcome: "Discipline exécution commerciale", values: { starter: "Individuel", pro: "✓", business: "✓", enterprise: "✓" } },
+      { outcome: "Visibilité management", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
+      { outcome: "Gouvernance multi-équipe", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+      { outcome: "Sync CRM / données", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+      { outcome: "Contrôle coût & compliance IA", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
+      { outcome: "Boucle win/loss learning", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+    ],
+  },
+  en: {
+    title: "What each plan unlocks for your organization",
+    subtitle: "Outcomes first, features are detailed below.",
+    featureLabel: "Outcome",
+    headers: { starter: "Starter", pro: "Pro", business: "Business", enterprise: "Enterprise" },
+    rows: [
+      { outcome: "Standardized proposal workflow", values: { starter: "Individual", pro: "Team", business: "✓", enterprise: "✓" } },
+      { outcome: "Commercial execution discipline", values: { starter: "Individual", pro: "✓", business: "✓", enterprise: "✓" } },
+      { outcome: "Management visibility", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
+      { outcome: "Multi-team governance", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+      { outcome: "CRM / data sync", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+      { outcome: "AI cost & compliance control", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
+      { outcome: "Win/loss learning loop", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+    ],
+  },
+};
+
+function OutcomesMatrix({ locale }: { locale: "fr" | "en" }) {
+  const data = OUTCOMES_COPY[locale];
+  const cols: OutcomeCol[] = ["starter", "pro", "business", "enterprise"];
+  const renderCell = (v: string) => {
+    if (v === "✓") return <span className="font-semibold text-[#1D9E75]">✓</span>;
+    if (v === "—") return <span className="text-muted-foreground">—</span>;
+    return <span className="text-sm text-muted-foreground">{v}</span>;
+  };
+  return (
+    <section className="rounded-2xl bg-[var(--color-background-secondary,theme(colors.muted.DEFAULT))] p-6 sm:p-8">
+      <div className="mx-auto max-w-4xl text-center">
+        <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{data.title}</h2>
+        <p className="mt-2 text-sm text-muted-foreground">{data.subtitle}</p>
+      </div>
+      <div className="mt-6 overflow-x-auto">
+        <table className="min-w-full border-separate border-spacing-0 text-left text-sm">
+          <thead>
+            <tr>
+              <th className="border-b border-border px-4 py-3 font-semibold text-foreground">{data.featureLabel}</th>
+              {cols.map((c) => (
+                <th key={c} className="border-b border-border px-4 py-3 text-center font-semibold text-foreground">{data.headers[c]}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {data.rows.map((row) => (
+              <tr key={row.outcome}>
+                <td className="border-b border-border/60 px-4 py-3 text-foreground">{row.outcome}</td>
+                {cols.map((c) => (
+                  <td key={c} className="border-b border-border/60 px-4 py-3 text-center">{renderCell(row.values[c])}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
 }
