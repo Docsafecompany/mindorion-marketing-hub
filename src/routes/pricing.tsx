@@ -199,13 +199,14 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Gouvernance multi-équipes",
             name: "Business",
-            description: "Pour les organisations structurées qui gèrent plusieurs équipes, marchés ou workflows de proposition.",
+            description: "Pour les ESNs structurés gérant plusieurs équipes, BUs ou marchés.",
             outcome: "Gouverner",
-            upgradeWhen: "La conformité, l'intégration CRM et la supervision exécutive deviennent critiques.",
+            upgradeWhen: "Déploiement org-wide, intégration CRM, SSO ou gouvernance IA obligatoires.",
             monthlyPrice: "59€/user/mois",
             annualPrice: "708€/user/an",
-            annualNote: "Jusqu'à 5 utilisateurs · soit 47€/mois · −20%",
-            fixedNote: "Jusqu'à 5 utilisateurs · facturation mensuelle",
+            annualNote: "soit 47,20€/user/mois · −20%",
+            fixedNote: "par utilisateur · facturation mensuelle",
+
             cta: "Choisir Business",
             href: "/pricing",
             sections: [
