@@ -142,15 +142,15 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
         subtitle: "Opérations pré-vente et propositions commerciales pour les ESNs. Standardisez les réponses RFQ, la qualité des propositions et les workflows de validation.",
         plans: [
           {
-            label: "Première utilisation équipe",
+            label: "Premier workflow",
             name: "Starter",
-            description: "Pour les petites équipes qui commencent à standardiser un workflow.",
+            description: "Pour les petites équipes qui démarrent avec un premier workflow proposal.",
             outcome: "Démarrer",
-            upgradeWhen: "Plus de 5 utilisateurs, propositions incohérentes, reporting dupliqué ou manque de visibilité.",
+            upgradeWhen: "Propositions incohérentes, besoin de scoring ou de validation managériale, ou équipe > 5 utilisateurs.",
             monthlyPrice: "19€/mois",
             annualPrice: "228€/an",
-            annualNote: "1 utilisateur · soit 15€/mois · −20%",
-            fixedNote: "1 utilisateur · facturation mensuelle",
+            annualNote: "soit 15,20€/mois · −20%",
+            fixedNote: "par organisation · facturation mensuelle",
             cta: "Choisir Starter",
             href: "/pricing",
             sections: [
@@ -163,12 +163,11 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
                   { label: "Placeholders oubliés", included: true },
                   { label: "Données personnelles", included: true },
                   { label: "Score qualité /100", included: true },
-                  { label: "Fautes d'orthographe", included: false },
-                  { label: "Ton IA", included: false },
                 ],
               },
             ],
           },
+
           {
             label: "Standardisation équipe",
             name: "Pro",
