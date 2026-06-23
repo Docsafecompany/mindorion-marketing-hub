@@ -284,7 +284,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "growthiq",
         title: "GrowthIQ",
-        subtitle: "Intelligence d'exécution commerciale pour les sociétés Engineering & IT Services.",
+        subtitle: "Intelligence d'exécution commerciale pour les ESNs. Alignez stratégie, effort commercial, pipeline et visibilité management.",
         plans: [
           {
             label: "Première utilisation équipe",
