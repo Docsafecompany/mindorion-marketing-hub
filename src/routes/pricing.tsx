@@ -1178,3 +1178,78 @@ function ComparisonValue({ enterprise, value }: { enterprise?: boolean; value: s
 
   return <span className={cn("font-medium text-foreground", enterprise && "text-[var(--color-pricing-enterprise)]")}>{value}</span>;
 }
+
+type OutcomeCol = PlanColumn;
+type OutcomeRow = { outcome: string; values: Record<OutcomeCol, string> };
+const OUTCOMES_COPY: Record<"fr" | "en", { title: string; subtitle: string; headers: Record<OutcomeCol, string>; featureLabel: string; rows: OutcomeRow[] }> = {
+  fr: {
+    title: "Ce que chaque plan débloque pour votre organisation",
+    subtitle: "Les outcomes d'abord, les fonctionnalités sont détaillées plus bas.",
+    featureLabel: "Outcome",
+    headers: { starter: "Starter", pro: "Pro", business: "Business", enterprise: "Enterprise" },
+    rows: [
+      { outcome: "Workflow proposals standardisé", values: { starter: "Individuel", pro: "Équipe", business: "✓", enterprise: "✓" } },
+      { outcome: "Discipline exécution commerciale", values: { starter: "Individuel", pro: "✓", business: "✓", enterprise: "✓" } },
+      { outcome: "Visibilité management", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
+      { outcome: "Gouvernance multi-équipe", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+      { outcome: "Sync CRM / données", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+      { outcome: "Contrôle coût & compliance IA", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
+      { outcome: "Boucle win/loss learning", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+    ],
+  },
+  en: {
+    title: "What each plan unlocks for your organization",
+    subtitle: "Outcomes first, features are detailed below.",
+    featureLabel: "Outcome",
+    headers: { starter: "Starter", pro: "Pro", business: "Business", enterprise: "Enterprise" },
+    rows: [
+      { outcome: "Standardized proposal workflow", values: { starter: "Individual", pro: "Team", business: "✓", enterprise: "✓" } },
+      { outcome: "Commercial execution discipline", values: { starter: "Individual", pro: "✓", business: "✓", enterprise: "✓" } },
+      { outcome: "Management visibility", values: { starter: "—", pro: "✓", business: "✓", enterprise: "✓" } },
+      { outcome: "Multi-team governance", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+      { outcome: "CRM / data sync", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+      { outcome: "AI cost & compliance control", values: { starter: "—", pro: "—", business: "—", enterprise: "✓" } },
+      { outcome: "Win/loss learning loop", values: { starter: "—", pro: "—", business: "✓", enterprise: "✓" } },
+    ],
+  },
+};
+
+function OutcomesMatrix({ locale }: { locale: "fr" | "en" }) {
+  const data = OUTCOMES_COPY[locale];
+  const cols: OutcomeCol[] = ["starter", "pro", "business", "enterprise"];
+  const renderCell = (v: string) => {
+    if (v === "✓") return <span className="font-semibold text-[#1D9E75]">✓</span>;
+    if (v === "—") return <span className="text-muted-foreground">—</span>;
+    return <span className="text-sm text-muted-foreground">{v}</span>;
+  };
+  return (
+    <section className="rounded-2xl bg-[var(--color-background-secondary,theme(colors.muted.DEFAULT))] p-6 sm:p-8">
+      <div className="mx-auto max-w-4xl text-center">
+        <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{data.title}</h2>
+        <p className="mt-2 text-sm text-muted-foreground">{data.subtitle}</p>
+      </div>
+      <div className="mt-6 overflow-x-auto">
+        <table className="min-w-full border-separate border-spacing-0 text-left text-sm">
+          <thead>
+            <tr>
+              <th className="border-b border-border px-4 py-3 font-semibold text-foreground">{data.featureLabel}</th>
+              {cols.map((c) => (
+                <th key={c} className="border-b border-border px-4 py-3 text-center font-semibold text-foreground">{data.headers[c]}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {data.rows.map((row) => (
+              <tr key={row.outcome}>
+                <td className="border-b border-border/60 px-4 py-3 text-foreground">{row.outcome}</td>
+                {cols.map((c) => (
+                  <td key={c} className="border-b border-border/60 px-4 py-3 text-center">{renderCell(row.values[c])}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
