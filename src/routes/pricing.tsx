@@ -932,9 +932,9 @@ function PricingPage() {
             </Link>
             <Link
               to="/contact"
-              search={{ demo: "enterprise" }}
               onClick={() => trackEvent("pricing_cta_clicked", { cta: "book_enterprise_demo" })}
             >
+
 
               <Button
                 size="lg"
