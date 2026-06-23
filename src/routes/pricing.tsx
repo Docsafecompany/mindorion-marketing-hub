@@ -106,34 +106,35 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
     includedInSuite: "INCLUS DANS LA SUITE",
     comparisonFeature: "Fonctionnalité",
     productSelectorHelper: "Chaque produit peut être adopté indépendamment. Enterprise combine les modules et la gouvernance.",
-    maturityPath: "Excel → Starter → Pro → Business → Enterprise. Vous ne payez pas pour des fonctionnalités isolées, vous faites évoluer votre organisation vers un niveau supérieur de maturité opérationnelle.",
-    roiHeadline: "Un requirement RFP manqué, un commentaire interne exposé, ou un mois de données pipeline médiocres peut coûter plus que l'abonnement annuel.",
+    maturityPath: "Excel → Starter → Pro → Business → Enterprise. Vous ne payez pas pour des fonctionnalités, vous faites évoluer votre organisation vers un niveau supérieur de maturité opérationnelle.",
+    roiHeadline: "Un requirement RFQ manqué, un commentaire interne exposé, ou un mois de données pipeline médiocres peut coûter plus que l'abonnement annuel.",
     faqTitle: "Questions fréquentes",
     faq: [
       {
         question: "Pouvons-nous commencer avec seulement ProposalIQ ou GrowthIQ ?",
-        answer: "Oui. Mindorion est conçu pour démarrer avec un workflow opérationnel et s'étendre au fur et à mesure que les équipes standardisent les propositions et l'exécution commerciale.",
+        answer: "Oui. Mindorion est conçu pour démarrer avec un workflow opérationnel et s'étendre au fur et à mesure que les équipes se standardisent. ProposalIQ et GrowthIQ peuvent être adoptés indépendamment.",
       },
       {
         question: "Comment fonctionne la tarification Enterprise ?",
-        answer: "La tarification Enterprise dépend du nombre d'utilisateurs, des intégrations CRM, des exigences de sécurité, des besoins de gouvernance et de la portée du déploiement.",
+        answer: "La tarification Enterprise dépend du nombre d'utilisateurs, des intégrations CRM, des besoins de sécurité, de gouvernance IA et du scope de déploiement. Contactez-nous pour un devis personnalisé.",
       },
       {
         question: "Intégrez-vous notre CRM ?",
-        answer: "Oui, Enterprise se connecte à votre CRM pour que les données opérationnelles restent synchronisées et que le double reporting soit réduit.",
+        answer: "Oui, à partir du plan Business. Mindorion s'intègre aux CRMs principaux pour réduire la double saisie et maintenir la cohérence des données pipeline et proposals.",
       },
       {
         question: "Comment Mindorion contrôle-t-il les coûts et la conformité de l'IA ?",
-        answer: "Mindorion ne pousse pas l'IA partout par défaut. Il crée des workflows structurés et des données gouvernées pour que l'IA soit utilisée là où elle crée de la valeur tout en réduisant l'usage non contrôlé et les risques de conformité.",
+        answer: "Mindorion ne pousse pas l'IA partout par défaut. Il crée des workflows structurés et des données gouvernées pour que l'IA intervienne là où elle crée de la valeur, réduisant l'usage non contrôlé et le risque compliance.",
       },
       {
         question: "Comment ProposalIQ et GrowthIQ fonctionnent-ils ensemble ?",
-        answer: "ProposalIQ structure le workflow RFQ/proposition tandis que GrowthIQ connecte le pipeline, l'exécution commerciale et les résultats de win/loss, créant une boucle d'apprentissage à travers l'organisation.",
+        answer: "ProposalIQ structure le workflow RFQ et propositions. GrowthIQ connecte pipeline, exécution commerciale et outcomes win/loss. Ensemble, ils créent une boucle d'apprentissage à l'échelle de l'organisation.",
       },
     ],
-    finalCtaTitle: "Prêt à standardiser les propositions et l'exécution commerciale ?",
-    finalCtaPrimary: "Commencer avec un module",
-    finalCtaSecondary: "Demander une démo Enterprise",
+    finalCtaTitle: "Prêt à standardiser vos propositions et votre exécution commerciale ?",
+    finalCtaPrimary: "Démarrer avec un module",
+    finalCtaSecondary: "Planifier une démo Enterprise",
+
     products: [
       {
         key: "proposaliq",
