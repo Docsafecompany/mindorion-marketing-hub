@@ -171,13 +171,14 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Standardisation équipe",
             name: "Pro",
-            description: "Pour les équipes Engineering & IT Services en croissance qui ont besoin d'une exécution cohérente.",
+            description: "Pour les équipes ESN en croissance qui ont besoin d'exécution cohérente et de visibilité manager.",
             outcome: "Standardiser",
-            upgradeWhen: "Les managers ont besoin de visibilité et de reporting sur plusieurs équipes, industries ou géographies.",
+            upgradeWhen: "Plusieurs équipes, marchés ou géographies émergent, ou les managers ont besoin de reporting consolidé.",
             monthlyPrice: "39€/mois",
             annualPrice: "468€/an",
-            annualNote: "1 utilisateur · soit 31€/mois · −20%",
-            fixedNote: "1 utilisateur · facturation mensuelle",
+            annualNote: "soit 31,20€/mois · −20%",
+            fixedNote: "par organisation · facturation mensuelle",
+
             cta: "Choisir Pro",
             href: "/pricing",
             featured: true,
