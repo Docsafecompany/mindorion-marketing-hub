@@ -144,7 +144,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Premier workflow",
             name: "Starter",
-            description: "Pour les petites équipes qui démarrent avec un premier workflow proposal.",
+            description: "Pour les petites équipes qui démarrent un premier workflow proposal.",
             outcome: "Démarrer",
             upgradeWhen: "Propositions incohérentes, besoin de scoring ou de validation managériale, ou équipe > 5 utilisateurs.",
             monthlyPrice: "19€/mois",
@@ -171,7 +171,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Standardisation équipe",
             name: "Pro",
-            description: "Pour les équipes ESN en croissance qui ont besoin d'exécution cohérente et de visibilité manager.",
+            description: "Pour les équipes ESN en croissance qui veulent standardiser leur exécution.",
             outcome: "Standardiser",
             upgradeWhen: "Plusieurs équipes, marchés ou géographies émergent, ou les managers ont besoin de reporting consolidé.",
             monthlyPrice: "39€/mois",
@@ -199,7 +199,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Gouvernance multi-équipes",
             name: "Business",
-            description: "Pour les ESNs structurés gérant plusieurs équipes, BUs ou marchés.",
+            description: "Pour les ESNs multi-équipes, BUs ou marchés.",
             outcome: "Gouverner",
             upgradeWhen: "Déploiement org-wide, intégration CRM, SSO ou gouvernance IA obligatoires.",
             monthlyPrice: "59€/user/mois",
@@ -226,7 +226,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "OS de gouvernance",
             name: "Enterprise",
-            description: "Pour les grands groupes ESN (ALTEN, Capgemini, Akkodis) avec CRM, SSO et gouvernance IA by design.",
+            description: "Pour les grands groupes ESN avec CRM, SSO et gouvernance IA by design.",
             outcome: "Passer à l'échelle",
             includes: "ProposalIQ + GrowthIQ + Governance Layer, intégration CRM, SSO/sécurité, CSM dédié.",
             cta: "Demander une démo",
@@ -289,7 +289,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Première utilisation équipe",
             name: "Starter",
-            description: "Pour les petites équipes qui commencent à standardiser un workflow.",
+            description: "Pour les petites équipes qui standardisent un premier workflow.",
             outcome: "Démarrer",
             upgradeWhen: "Plus de 5 utilisateurs, propositions incohérentes, reporting dupliqué ou manque de visibilité.",
             monthlyPrice: "49€/user/mois",
@@ -315,7 +315,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Standardisation équipe",
             name: "Pro",
-            description: "Pour les équipes Engineering & IT Services en croissance qui ont besoin d'une exécution cohérente.",
+            description: "Pour les équipes Engineering & IT Services en croissance.",
             outcome: "Standardiser",
             upgradeWhen: "Les managers ont besoin de visibilité et de reporting sur plusieurs équipes, industries ou géographies.",
             monthlyPrice: "69€/user/mois",
@@ -340,7 +340,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Gouvernance multi-équipes",
             name: "Business",
-            description: "Pour les organisations structurées qui gèrent plusieurs équipes, marchés ou workflows de proposition.",
+            description: "Pour les organisations multi-équipes, marchés ou workflows.",
             outcome: "Gouverner",
             upgradeWhen: "La conformité, l'intégration CRM et la supervision exécutive deviennent critiques.",
             monthlyPrice: "89€/user/mois",
@@ -364,7 +364,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Système d'exploitation gouverné",
             name: "Enterprise",
-            description: "Connectez ProposalIQ, GrowthIQ et la Governance Layer pour faire évoluer les opérations assistées par l'IA avec CRM, sécurité et conformité.",
+            description: "Suite complète avec CRM, sécurité et conformité by design.",
             outcome: "Passer à l'échelle",
             includes: "ProposalIQ + GrowthIQ + Governance Layer, intégration CRM, SSO/sécurité, CSM dédié.",
             cta: "Demander une démo",
@@ -470,7 +470,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "First Team Use",
             name: "Starter",
-            description: "For small teams starting to standardize one workflow.",
+            description: "For small teams starting their first workflow.",
             outcome: "Start",
             upgradeWhen: "More than 5 users, inconsistent proposals, duplicate reporting or lack of visibility.",
             monthlyPrice: "€19/month",
@@ -498,7 +498,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Team Standardization",
             name: "Pro",
-            description: "For growing Engineering & IT Services teams that need consistent execution.",
+            description: "For growing Engineering & IT Services teams standardizing execution.",
             outcome: "Standardize",
             upgradeWhen: "Managers need visibility and reporting across multiple teams, industries or geographies.",
             monthlyPrice: "€39/month",
@@ -525,7 +525,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Multi-Team Governance",
             name: "Business",
-            description: "For structured organizations managing multiple teams, markets or proposal workflows.",
+            description: "For organizations running multiple teams, markets or workflows.",
             outcome: "Govern",
             upgradeWhen: "Compliance, CRM integration and executive oversight become critical.",
             monthlyPrice: "€59/user/month",
@@ -551,7 +551,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Governed Operating System",
             name: "Enterprise",
-            description: "Connect ProposalIQ, GrowthIQ and the Governance Layer to scale AI-enabled operations with CRM, security and compliance.",
+            description: "Full suite with CRM, security and compliance by design.",
             outcome: "Scale",
             includes: "ProposalIQ + GrowthIQ + Governance Layer, CRM integration, SSO/security, dedicated CSM.",
             cta: "Request a demo",
@@ -613,7 +613,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "First Team Use",
             name: "Starter",
-            description: "For small teams starting to standardize one workflow.",
+            description: "For small teams starting their first workflow.",
             outcome: "Start",
             upgradeWhen: "More than 5 users, inconsistent proposals, duplicate reporting or lack of visibility.",
             monthlyPrice: "€49/user/month",
@@ -639,7 +639,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Team Standardization",
             name: "Pro",
-            description: "For growing Engineering & IT Services teams that need consistent execution.",
+            description: "For growing Engineering & IT Services teams standardizing execution.",
             outcome: "Standardize",
             upgradeWhen: "Managers need visibility and reporting across multiple teams, industries or geographies.",
             monthlyPrice: "€69/user/month",
@@ -664,7 +664,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Multi-Team Governance",
             name: "Business",
-            description: "For structured organizations managing multiple teams, markets or proposal workflows.",
+            description: "For organizations running multiple teams, markets or workflows.",
             outcome: "Govern",
             upgradeWhen: "Compliance, CRM integration and executive oversight become critical.",
             monthlyPrice: "€89/user/month",
@@ -688,7 +688,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
           {
             label: "Governed Operating System",
             name: "Enterprise",
-            description: "Connect ProposalIQ, GrowthIQ and the Governance Layer to scale AI-enabled operations with CRM, security and compliance.",
+            description: "Full suite with CRM, security and compliance by design.",
             outcome: "Scale",
             includes: "ProposalIQ + GrowthIQ + Governance Layer, CRM integration, SSO/security, dedicated CSM.",
             cta: "Request a demo",
@@ -997,12 +997,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
           <span className="inline-flex rounded-full bg-[var(--color-pricing-success-soft)] px-2 py-0.5 text-xs font-semibold text-[var(--color-pricing-success)]">{plan.outcome}</span>
         </div>
         <h3 className={cn("mt-3 text-2xl font-extrabold text-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.name}</h3>
-        <p className={cn("mt-2 min-h-16 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
-        {plan.upgradeWhen ? (
-          <p className="mt-2 text-xs leading-5 text-muted-foreground">
-            <span className="font-semibold text-foreground">{upgradeWhenLabel}</span> {plan.upgradeWhen}
-          </p>
-        ) : null}
+        <p className={cn("mt-2 min-h-12 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
         {plan.includes ? (
           <p className="mt-2 text-xs leading-5 text-muted-foreground">
             <span className="font-semibold text-foreground">{includesLabel}</span> {plan.includes}
