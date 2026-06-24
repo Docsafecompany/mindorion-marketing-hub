@@ -997,12 +997,7 @@ function PlanCard({ productKey, billing, plan, popularLabel, customLabel, suiteL
           <span className="inline-flex rounded-full bg-[var(--color-pricing-success-soft)] px-2 py-0.5 text-xs font-semibold text-[var(--color-pricing-success)]">{plan.outcome}</span>
         </div>
         <h3 className={cn("mt-3 text-2xl font-extrabold text-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.name}</h3>
-        <p className={cn("mt-2 min-h-16 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
-        {plan.upgradeWhen ? (
-          <p className="mt-2 text-xs leading-5 text-muted-foreground">
-            <span className="font-semibold text-foreground">{upgradeWhenLabel}</span> {plan.upgradeWhen}
-          </p>
-        ) : null}
+        <p className={cn("mt-2 min-h-12 text-sm leading-6 text-muted-foreground", isEnterprise && "text-[var(--color-pricing-enterprise)]")}>{plan.description}</p>
         {plan.includes ? (
           <p className="mt-2 text-xs leading-5 text-muted-foreground">
             <span className="font-semibold text-foreground">{includesLabel}</span> {plan.includes}
