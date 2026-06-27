@@ -1,94 +1,64 @@
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, BriefcaseBusiness, Check, Cog, Shield, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
-import { ProductLogo } from "@/components/ProductLogo";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { createStaticMeta } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-type ToolTone = "proposaliq" | "growthiq" | "governance";
-type RiskTone = "critical" | "warning" | "good";
-type PersonaKey = "consultants" | "sales" | "rh" | "esn";
+type ModuleTone = "proposaliq" | "growthiq" | "ecosystem";
+type RiskTone = "good" | "warning" | "critical";
+type PersonaKey = "ceo" | "businessManager" | "headOfDelivery";
 
-type ToolRow = { name: string; text: string };
-type MockItem = string;
-type MockCard = { title: string; badge: string; items: MockItem[] };
-type Lead = { initials: string; role: string; city: string; score: string };
-type Scenario = { tool: string; title: string; text: string; result: string };
+type ModuleRow = { name: string; tone: ModuleTone; text: string };
+type RowItem = { tone: RiskTone; text: string };
+type KpiItem = { value: string; label: string };
+type QualityRow = { title: string; score: string; tone: RiskTone; items: RowItem[] };
+type AccountRow = { dot: "green" | "amber" | "red"; name: string; badge: string; tone: RiskTone };
+
+type CeoPanel = {
+  kpiTitle: string;
+  kpis: KpiItem[];
+  listTitle: string;
+  rows: QualityRow[];
+};
+type BMPanel = {
+  accountsTitle: string;
+  accounts: AccountRow[];
+  alignmentTitle: string;
+  alertTitle: string;
+  alertText: string;
+};
+type HoDPanel = {
+  validationTitle: string;
+  validationCardTitle: string;
+  validationBadge: string;
+  validationItems: string[];
+  flagsTitle: string;
+  flagsCardTitle: string;
+  flagsBadge: string;
+  flagsItems: RowItem[];
+};
 
 type PersonaContent = {
   badge: string;
   title: string;
-  text: string;
-  tools: ToolRow[];
-  mocks?: MockCard[];
-  leads?: Lead[];
-  pipelineLabel?: string;
-  scenarios: Scenario[];
+  quote: string;
+  bullets: string[];
+  modules: ModuleRow[];
+  footnote: string;
+  panel: CeoPanel | BMPanel | HoDPanel;
 };
 
-const personaMeta: Record<PersonaKey, {
-  tabIcon: typeof Shield;
-  badgeTone: ToolTone | "neutral";
-  toolTones: ToolTone[];
-  scenarioTones: ToolTone[];
-  heroVariant: "document" | "pipeline";
-  mockTones: { badge: RiskTone; items: RiskTone[] }[];
-}> = {
-  consultants: {
-    tabIcon: BriefcaseBusiness,
-    badgeTone: "proposaliq",
-    toolTones: ["proposaliq", "growthiq"],
-    scenarioTones: ["proposaliq", "proposaliq", "growthiq"],
-    heroVariant: "document",
-    mockTones: [
-      { badge: "critical", items: ["critical", "critical", "warning"] },
-      { badge: "good", items: ["good"] },
-    ],
-  },
-  sales: {
-    tabIcon: TrendingUp,
-    badgeTone: "growthiq",
-    toolTones: ["proposaliq", "growthiq"],
-    scenarioTones: ["proposaliq", "growthiq", "growthiq"],
-    heroVariant: "pipeline",
-    mockTones: [],
-  },
-  rh: {
-    tabIcon: Users,
-    badgeTone: "governance",
-    toolTones: ["proposaliq", "governance"],
-    scenarioTones: ["proposaliq", "proposaliq", "governance"],
-    heroVariant: "document",
-    mockTones: [
-      { badge: "critical", items: ["critical", "critical", "warning"] },
-      { badge: "good", items: ["good"] },
-    ],
-  },
-  esn: {
-    tabIcon: Cog,
-    badgeTone: "neutral",
-    toolTones: ["proposaliq", "growthiq", "governance"],
-    scenarioTones: ["proposaliq", "growthiq", "governance"],
-    heroVariant: "document",
-    mockTones: [
-      { badge: "critical", items: ["critical", "critical", "warning"] },
-      { badge: "good", items: ["good"] },
-    ],
-  },
-};
-
-const personaOrder: PersonaKey[] = ["consultants", "sales", "rh", "esn"];
+const personaOrder: PersonaKey[] = ["ceo", "businessManager", "headOfDelivery"];
 
 export const Route = createFileRoute("/use-cases")({
   head: () =>
     createStaticMeta({
       title: "Who We Serve | Mindorion for Engineering Services & IT Consulting Firms",
       description:
-        "Built for engineering services, ESNs and IT consulting firms with complex RFQ cycles and fragmented operational data. See how Mindorion fits your organization.",
+        "Built for engineering services, ESNs and IT consulting firms. See exactly what ProposalIQ, GrowthIQ and the Mindorion ecosystem bring to CEOs, Business Managers and Heads of Delivery.",
       path: "/use-cases",
     }),
   component: UseCasesPage,
@@ -96,238 +66,186 @@ export const Route = createFileRoute("/use-cases")({
 
 function UseCasesPage() {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState<PersonaKey>("consultants");
+  const [activeTab, setActiveTab] = useState<PersonaKey>("ceo");
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
-    const hashToTab: Record<string, PersonaKey> = {
-      "#consultants": "consultants",
-      "#sales": "sales",
-      "#rh": "rh",
-      "#esn": "esn",
+    const hashMap: Record<string, PersonaKey> = {
+      "#ceo": "ceo",
+      "#business-manager": "businessManager",
+      "#head-of-delivery": "headOfDelivery",
     };
-
-    const applyHash = () => {
-      const nextTab = hashToTab[window.location.hash] ?? "consultants";
-      setActiveTab(nextTab);
-
-      if (hashToTab[window.location.hash]) {
-        window.requestAnimationFrame(() => {
-          document.querySelector(".persona-tabs")?.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-      }
+    const apply = () => {
+      const next = hashMap[window.location.hash];
+      if (next) setActiveTab(next);
     };
-
-    applyHash();
-    window.addEventListener("hashchange", applyHash);
-
-    return () => {
-      window.removeEventListener("hashchange", applyHash);
-    };
+    apply();
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
   }, []);
 
-  const pageTitle = t("usecasesPage.title");
-  const pageSubtitle = t("usecasesPage.subtitle");
+  const persona = t(`usecasesPage.personas.${activeTab}`, { returnObjects: true }) as PersonaContent;
 
   return (
     <div className="use-cases-page section-space">
-
       <div className="section-shell">
+        {/* Hero */}
         <section className="mx-auto max-w-4xl text-center">
           <div className="eyebrow">{t("usecasesPage.eyebrow")}</div>
           <h1 className="headline-balance mt-4 text-4xl font-extrabold text-foreground sm:text-5xl">
-            {pageTitle}
+            {t("usecasesPage.title")}
           </h1>
           <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-muted-foreground">
-            {pageSubtitle}
+            {t("usecasesPage.subtitle")}
           </p>
         </section>
 
-        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as PersonaKey)} className="mt-12">
-          <TabsList className="persona-tabs mx-auto grid h-auto w-full max-w-5xl grid-cols-1 gap-3 rounded-none bg-transparent p-0 md:grid-cols-2 xl:grid-cols-4">
-            {personaOrder.map((key) => {
-              const Icon = personaMeta[key].tabIcon;
-              return (
-                <TabsTrigger
-                  key={key}
-                  value={key}
-                  className="persona-tab h-auto rounded-xl border border-border bg-card px-5 py-4 text-left data-[state=active]:border-[var(--color-pricing-primary)] data-[state=active]:border-2 data-[state=active]:bg-[var(--color-pricing-primary-soft)] data-[state=active]:text-foreground data-[state=active]:shadow-none"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-muted text-foreground">
-                      <Icon className="h-4.5 w-4.5" />
-                    </div>
-                    <div className="text-sm font-semibold leading-5">{t(`usecasesPage.tabs.${key}`)}</div>
-                  </div>
-                </TabsTrigger>
-              );
-            })}
-          </TabsList>
-
+        {/* Persona switcher — pill style */}
+        <div className="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-3">
           {personaOrder.map((key) => {
-            const meta = personaMeta[key];
-            const persona = t(`usecasesPage.personas.${key}`, { returnObjects: true }) as PersonaContent;
+            const active = activeTab === key;
             return (
-              <TabsContent key={key} value={key} className="persona-panel mt-8 space-y-8">
-                <section className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
-                  <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
-                    <Badge tone={meta.badgeTone}>{persona.badge}</Badge>
-                    <h2 className="mt-5 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">{persona.title}</h2>
-                    <p className="mt-5 text-base leading-8 text-muted-foreground">{persona.text}</p>
-                    <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                      {persona.tools.map((tool, i) => (
-                        <ToolCard key={tool.name + i} tool={tool} tone={meta.toolTones[i] ?? "proposaliq"} />
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="rounded-xl border border-border bg-card p-5 sm:p-6">
-                    {meta.heroVariant === "pipeline" && persona.leads ? (
-                      <PipelineCard leads={persona.leads} label={persona.pipelineLabel ?? ""} />
-                    ) : (
-                      <DocumentMock cards={persona.mocks ?? []} tones={meta.mockTones} />
-                    )}
-                  </div>
-                </section>
-
-                <section className="grid gap-6 xl:grid-cols-3">
-                  {persona.scenarios.map((scenario, i) => (
-                    <article key={scenario.title} className="rounded-xl border border-border bg-card p-6">
-                      <div className="flex items-center gap-3">
-                        <ToolPill tone={meta.scenarioTones[i] ?? "proposaliq"} label={scenario.tool} />
-                      </div>
-                      <h3 className="mt-5 text-xl font-bold text-foreground">{scenario.title}</h3>
-                      <p className="mt-4 text-sm leading-7 text-muted-foreground">{scenario.text}</p>
-                      <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--color-usecase-page)] px-3 py-2 text-sm font-medium text-foreground">
-                        <Check className="h-4 w-4 text-[var(--color-usecase-good)]" />
-                        <span>{scenario.result}</span>
-                      </div>
-                    </article>
-                  ))}
-                </section>
-              </TabsContent>
+              <button
+                key={key}
+                type="button"
+                onClick={() => setActiveTab(key)}
+                className={cn(
+                  "rounded-full border px-5 py-2.5 text-sm font-semibold transition",
+                  active
+                    ? "border-[var(--color-pricing-primary)] bg-[var(--color-pricing-primary)] text-white shadow-sm"
+                    : "border-border bg-card text-foreground hover:bg-muted"
+                )}
+                aria-pressed={active}
+              >
+                {t(`usecasesPage.tabs.${key}`)}
+              </button>
             );
           })}
-        </Tabs>
+        </div>
 
-        <section className="mt-12 flex flex-col gap-6 rounded-[10px] bg-[var(--color-pricing-primary)] px-6 py-6 sm:px-8 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <h2 className="text-2xl font-extrabold text-white">{t("usecasesPage.ctaTitle")}</h2>
-            <p className="mt-2 max-w-2xl text-base text-[var(--color-pricing-primary-soft)]">
-              {t("usecasesPage.ctaText")}
-            </p>
+        {/* Persona body */}
+        <section className="mt-10 grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
+          {/* Left — copy */}
+          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+            <span className="inline-flex rounded-full bg-[var(--color-pricing-primary-soft)] px-3 py-1 text-xs font-bold tracking-wide text-[var(--color-pricing-primary)]">
+              {persona.badge}
+            </span>
+            <h2 className="mt-5 text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
+              {persona.title}
+            </h2>
+            <blockquote className="mt-5 border-l-2 border-border pl-4 text-sm italic leading-7 text-muted-foreground">
+              "{persona.quote}"
+            </blockquote>
+
+            <ul className="mt-6 space-y-3">
+              {persona.bullets.map((b) => (
+                <li key={b} className="flex gap-3 text-sm leading-7 text-foreground">
+                  <span className="mt-2 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[var(--color-pricing-success)]" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8">
+              <div className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                {t("usecasesPage.modulesLabel")}
+              </div>
+              <div className="mt-3 space-y-2.5">
+                {persona.modules.map((m) => (
+                  <ModuleCard key={m.name} module={m} />
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 rounded-xl border-l-4 border-[var(--color-pricing-primary)] bg-[var(--color-usecase-page)] px-5 py-4 text-sm leading-6 text-foreground">
+              {persona.footnote}
+            </div>
           </div>
-          <Button asChild className="rounded-xl bg-white text-[var(--color-pricing-primary)] shadow-none hover:bg-white/95">
-            <Link to="/pricing">
-              {t("usecasesPage.ctaButton")}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+
+          {/* Right — panel */}
+          <div className="rounded-2xl border border-border bg-[var(--color-pricing-dash-soft)] p-5 sm:p-6">
+            {activeTab === "ceo" && <CeoPanelView panel={persona.panel as CeoPanel} />}
+            {activeTab === "businessManager" && <BMPanelView panel={persona.panel as BMPanel} />}
+            {activeTab === "headOfDelivery" && <HoDPanelView panel={persona.panel as HoDPanel} />}
+          </div>
+        </section>
+
+        {/* Start with cards */}
+        <section className="mt-12 grid gap-4 sm:grid-cols-2">
+          <StartCard
+            title={t("usecasesPage.startWith.proposaliq.title")}
+            text={t("usecasesPage.startWith.proposaliq.text")}
+            cta={t("usecasesPage.startWith.proposaliq.cta")}
+            to="/products/proposaliq"
+          />
+          <StartCard
+            title={t("usecasesPage.startWith.growthiq.title")}
+            text={t("usecasesPage.startWith.growthiq.text")}
+            cta={t("usecasesPage.startWith.growthiq.cta")}
+            to="/products/growthiq"
+          />
         </section>
       </div>
     </div>
   );
 }
 
-function Badge({ tone, children }: { tone: ToolTone | "neutral"; children: string }) {
-  const className =
-    tone === "proposaliq"
-      ? "bg-[var(--color-pricing-primary-soft)] text-[var(--color-pricing-primary)]"
-      : tone === "growthiq"
-        ? "bg-[var(--color-pricing-success-soft)] text-[var(--color-pricing-success)]"
-        : tone === "governance"
-          ? "bg-[var(--color-usecase-warning-soft)] text-[var(--color-usecase-warning)]"
-          : "bg-[var(--color-pricing-dash-soft)] text-foreground";
+const moduleToneClasses: Record<ModuleTone, string> = {
+  proposaliq: "border-[var(--color-pricing-success)]/30 bg-[var(--color-pricing-success-soft)] text-[var(--color-pricing-success)]",
+  growthiq: "border-[var(--color-pricing-primary)]/30 bg-[var(--color-pricing-primary-soft)] text-[var(--color-pricing-primary)]",
+  ecosystem: "border-[var(--color-usecase-warning)]/30 bg-[var(--color-usecase-warning-soft)] text-[var(--color-usecase-warning)]",
+};
 
-  return <div className={cn("inline-flex rounded-full px-3 py-1.5 text-sm font-semibold", className)}>{children}</div>;
+function ModuleCard({ module }: { module: ModuleRow }) {
+  return (
+    <div className={cn("rounded-xl border px-4 py-3", moduleToneClasses[module.tone])}>
+      <div className="text-sm font-bold">{module.name}</div>
+      <div className="mt-0.5 text-sm leading-6 opacity-90">{module.text}</div>
+    </div>
+  );
 }
 
-function ToolCard({ tool, tone }: { tool: ToolRow; tone: ToolTone }) {
+const riskToneClasses: Record<RiskTone, string> = {
+  good: "bg-[var(--color-pricing-success-soft)] text-[var(--color-usecase-good)]",
+  warning: "bg-[var(--color-usecase-warning-soft)] text-[var(--color-usecase-warning)]",
+  critical: "bg-[var(--color-usecase-critical-soft)] text-[var(--color-usecase-critical)]",
+};
+
+function PanelHeader({ children }: { children: string }) {
+  return <div className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{children}</div>;
+}
+
+function CeoPanelView({ panel }: { panel: CeoPanel }) {
   return (
-    <div className="rounded-xl bg-[var(--color-pricing-dash-soft)] px-4 py-4">
-      <div className="flex items-start gap-3">
-        <ToolIcon tone={tone} label={tool.name} />
-        <div>
-          <div className="text-sm font-bold text-foreground">{tool.name}</div>
-          <div className="mt-1 text-sm leading-6 text-muted-foreground">{tool.text}</div>
+    <div className="space-y-5">
+      <div>
+        <PanelHeader>{panel.kpiTitle}</PanelHeader>
+        <div className="mt-3 grid grid-cols-2 gap-3">
+          {panel.kpis.map((k) => (
+            <div key={k.label} className="rounded-xl border border-border bg-card px-4 py-3">
+              <div className="text-2xl font-extrabold text-foreground">{k.value}</div>
+              <div className="mt-1 text-xs text-muted-foreground">{k.label}</div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
-  );
-}
-
-function ToolPill({ tone, label }: { tone: ToolTone; label: string }) {
-  return (
-    <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-usecase-page)] px-3 py-2 text-sm font-semibold text-foreground">
-      <ToolIcon tone={tone} label={label} />
-      <span>{label}</span>
-    </div>
-  );
-}
-
-function ToolIcon({ tone, label }: { tone: ToolTone; label: string }) {
-  const className =
-    tone === "proposaliq"
-      ? "bg-[var(--color-pricing-primary-soft)] text-[var(--color-pricing-primary)]"
-      : tone === "growthiq"
-        ? "bg-[var(--color-pricing-success-soft)] text-[var(--color-pricing-success)]"
-        : "bg-[var(--color-usecase-warning-soft)] text-[var(--color-usecase-warning)]";
-
-  const product = label === "ProposalIQ" ? "proposaliq" : label === "GrowthIQ" ? "growthiq" : "governanceiq";
-
-  return (
-    <span className={cn("flex h-10 w-10 items-center justify-center rounded-xl overflow-hidden p-1", className)}>
-      <ProductLogo product={product} />
-    </span>
-  );
-}
-
-function DocumentMock({ cards, tones }: { cards: MockCard[]; tones: { badge: RiskTone; items: RiskTone[] }[] }) {
-  return (
-    <div className="space-y-4 rounded-xl bg-[var(--color-pricing-dash-soft)] p-4">
-      {cards.map((card, ci) => {
-        const cardTones = tones[ci] ?? { badge: "good" as RiskTone, items: [] };
-        return (
-          <div key={card.title} className="rounded-xl border border-border bg-card p-4">
-            <div className="flex items-center justify-between gap-3">
-              <div className="text-sm font-bold text-foreground">{card.title}</div>
-              <RiskBadge tone={cardTones.badge}>{card.badge}</RiskBadge>
-            </div>
-            <div className="mt-4 space-y-2.5">
-              {card.items.map((item, i) => (
-                <RiskItem key={item} text={item} tone={cardTones.items[i] ?? "good"} />
-              ))}
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
-function PipelineCard({ leads, label }: { leads: Lead[]; label: string }) {
-  return (
-    <div className="rounded-xl bg-[var(--color-pricing-dash-soft)] p-4">
-      <div className="rounded-xl border border-border bg-card overflow-hidden">
-        <div className="flex items-center gap-3 bg-[var(--color-pricing-success-soft)] px-4 py-3 text-sm font-bold text-[var(--color-pricing-success)]">
-          <div className="h-9 w-24 overflow-hidden rounded-md bg-white/80 p-1">
-            <ProductLogo product="growthiq" />
-          </div>
-          <span>{label}</span>
-        </div>
-        <div className="space-y-3 p-4">
-          {leads.map((lead) => (
-            <div key={lead.initials + lead.role} className="flex items-center gap-3 rounded-xl border border-border bg-card px-3 py-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-pricing-success-soft)] text-sm font-bold text-[var(--color-pricing-success)]">
-                {lead.initials}
+      <div>
+        <PanelHeader>{panel.listTitle}</PanelHeader>
+        <div className="mt-3 space-y-3">
+          {panel.rows.map((row) => (
+            <div key={row.title} className="rounded-xl border border-border bg-card p-4">
+              <div className="flex items-center justify-between gap-3">
+                <div className="text-sm font-semibold text-foreground">{row.title}</div>
+                <span className={cn("rounded-full px-2.5 py-1 text-xs font-bold", riskToneClasses[row.tone])}>
+                  {row.score}
+                </span>
               </div>
-              <div className="min-w-0 flex-1">
-                <div className="truncate text-sm font-semibold text-foreground">{lead.role}</div>
-                <div className="text-sm text-muted-foreground">{lead.city}</div>
-              </div>
-              <div className="rounded-full bg-[var(--color-pricing-success-soft)] px-2.5 py-1 text-sm font-bold text-[var(--color-pricing-success)]">
-                {lead.score}
+              <div className="mt-3 space-y-2">
+                {row.items.map((it) => (
+                  <div key={it.text} className={cn("rounded-lg px-3 py-2 text-xs font-medium", riskToneClasses[it.tone])}>
+                    {it.text}
+                  </div>
+                ))}
               </div>
             </div>
           ))}
@@ -337,16 +255,101 @@ function PipelineCard({ leads, label }: { leads: Lead[]; label: string }) {
   );
 }
 
-function RiskBadge({ tone, children }: { tone: RiskTone; children: string }) {
-  return <span className={cn("rounded-full px-2.5 py-1 text-xs font-bold", riskToneClasses[tone])}>{children}</span>;
-}
-
-function RiskItem({ text, tone }: { text: string; tone: RiskTone }) {
-  return <div className={cn("rounded-lg px-3 py-2 text-sm font-medium", riskToneClasses[tone])}>{text}</div>;
-}
-
-const riskToneClasses: Record<RiskTone, string> = {
-  critical: "bg-[var(--color-usecase-critical-soft)] text-[var(--color-usecase-critical)]",
-  warning: "bg-[var(--color-usecase-warning-soft)] text-[var(--color-usecase-warning)]",
-  good: "bg-[var(--color-pricing-success-soft)] text-[var(--color-usecase-good)]",
+const dotClasses = {
+  green: "bg-[var(--color-pricing-success)]",
+  amber: "bg-[var(--color-usecase-warning)]",
+  red: "bg-[var(--color-usecase-critical)]",
 };
+
+function BMPanelView({ panel }: { panel: BMPanel }) {
+  return (
+    <div className="space-y-5">
+      <div>
+        <PanelHeader>{panel.accountsTitle}</PanelHeader>
+        <div className="mt-3 rounded-xl border border-border bg-card divide-y divide-border">
+          {panel.accounts.map((a) => (
+            <div key={a.name} className="flex items-center justify-between gap-3 px-4 py-3">
+              <div className="flex items-center gap-3">
+                <span className={cn("h-2.5 w-2.5 rounded-full", dotClasses[a.dot])} />
+                <span className="text-sm font-medium text-foreground">{a.name}</span>
+              </div>
+              <span className={cn("text-xs font-semibold", a.tone === "good" ? "text-foreground" : a.tone === "warning" ? "text-[var(--color-usecase-warning)]" : "text-[var(--color-usecase-critical)]")}>
+                {a.badge}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div>
+        <PanelHeader>{panel.alignmentTitle}</PanelHeader>
+        <div className="mt-3 rounded-xl border border-border bg-card p-4">
+          <div className="border-l-2 border-[var(--color-pricing-primary)] pl-3">
+            <div className="text-sm font-semibold text-foreground">{panel.alertTitle}</div>
+            <div className="mt-2 rounded-lg bg-[var(--color-usecase-warning-soft)] px-3 py-2 text-xs font-medium text-[var(--color-usecase-warning)]">
+              {panel.alertText}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HoDPanelView({ panel }: { panel: HoDPanel }) {
+  return (
+    <div className="space-y-5">
+      <div>
+        <PanelHeader>{panel.validationTitle}</PanelHeader>
+        <div className="mt-3 rounded-xl border border-border bg-card p-4">
+          <div className="flex items-center justify-between gap-3">
+            <div className="text-sm font-semibold text-foreground">{panel.validationCardTitle}</div>
+            <span className={cn("rounded-full px-2.5 py-1 text-xs font-bold", riskToneClasses.good)}>{panel.validationBadge}</span>
+          </div>
+          <div className="mt-3 space-y-2">
+            {panel.validationItems.map((it) => (
+              <div key={it} className={cn("rounded-lg px-3 py-2 text-xs font-medium", riskToneClasses.good)}>
+                {it}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div>
+        <PanelHeader>{panel.flagsTitle}</PanelHeader>
+        <div className="mt-3 rounded-xl border border-border bg-card p-4">
+          <div className="flex items-center justify-between gap-3">
+            <div className="text-sm font-semibold text-foreground">{panel.flagsCardTitle}</div>
+            <span className={cn("rounded-full px-2.5 py-1 text-xs font-bold", riskToneClasses.warning)}>{panel.flagsBadge}</span>
+          </div>
+          <div className="mt-3 space-y-2">
+            {panel.flagsItems.map((it) => (
+              <div key={it.text} className={cn("rounded-lg px-3 py-2 text-xs font-medium", riskToneClasses[it.tone])}>
+                {it.text}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function StartCard({ title, text, cta, to }: { title: string; text: string; cta: string; to: string }) {
+  return (
+    <Link
+      to={to}
+      className="group rounded-2xl border border-border bg-card p-6 transition hover:border-[var(--color-pricing-primary)] hover:shadow-sm"
+    >
+      <div className="text-lg font-bold text-foreground">{title}</div>
+      <div className="mt-2 text-sm text-muted-foreground">{text}</div>
+      <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-pricing-primary)]">
+        <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+        {cta}
+      </div>
+    </Link>
+  );
+}
+
+// keep Check import used (badge tick fallback)
+void Check;
+void Button;
