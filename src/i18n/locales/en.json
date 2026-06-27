@@ -1225,236 +1225,134 @@
   },
   "usecasesPage": {
     "eyebrow": "USE CASES",
-    "title": "How Engineering & IT Services firms use Mindorion",
-    "subtitle": "Whether you lead pre-sales, commercial execution, delivery or a business unit, Mindorion structures proposals, aligns commercial execution with strategy and keeps operations governed.",
-    "ctaTitle": "Ready to operate at the highest level?",
-    "ctaText": "Start with ProposalIQ. Add GrowthIQ. Governance is built into both.",
-    "ctaButton": "View pricing",
+    "title": "Built for the people who run Engineering & IT Services firms.",
+    "subtitle": "Select your role — see exactly what ProposalIQ, GrowthIQ and the full ecosystem bring to your day-to-day.",
+    "modulesLabel": "What each module brings to this role",
+    "startWith": {
+      "proposaliq": {
+        "title": "Start with ProposalIQ",
+        "text": "Standardize RFQ and proposal execution first.",
+        "cta": "Explore ProposalIQ"
+      },
+      "growthiq": {
+        "title": "Start with GrowthIQ",
+        "text": "Structure commercial execution and pipeline first.",
+        "cta": "Explore GrowthIQ"
+      }
+    },
     "tabs": {
-      "consultants": "Consultants & Freelancers",
-      "sales": "Sales & Pre-sales Teams",
-      "rh": "Delivery & Business Units",
-      "esn": "IT Services & Engineering"
+      "ceo": "CEO / Managing Director",
+      "businessManager": "Business Manager",
+      "headOfDelivery": "Head of Delivery"
     },
     "personas": {
-      "consultants": {
-        "badge": "💼 CONSULTANTS & INDEPENDENTS",
-        "title": "Win more engagements with proposals that are consistent, complete and on time.",
-        "text": "As a consultant you don't have a pre-sales team behind you. Mindorion structures every proposal from RFQ to submission and keeps your commercial effort focused on the opportunities most likely to convert.",
-        "tools": [
-          {
-            "name": "ProposalIQ",
-            "text": "Structures every proposal from RFQ to submission"
-          },
-          {
-            "name": "GrowthIQ",
-            "text": "Keeps commercial effort aligned with your priorities"
-          }
+      "ceo": {
+        "badge": "CEO / MANAGING DIRECTOR",
+        "title": "Govern your firm's commercial and delivery performance — from one place.",
+        "quote": "Your teams execute individually. No single source of truth on pipeline, proposals or performance — you make decisions without reliable data.",
+        "bullets": [
+          "Unified visibility across commercial, proposal and governance workflows — one place, not five spreadsheets.",
+          "Real-time alignment between strategy and execution — what BMs do matches your last leadership decision.",
+          "Foundation to scale AI adoption org-wide without losing control of cost or compliance.",
+          "Governance Layer connects it all: proposals, pipeline and operations in one operating system."
         ],
-        "mocks": [
-          {
-            "title": "Proposal_ClientABC_v3.docx",
-            "badge": "34/100",
-            "items": [
-              "Two RFP requirements unmapped",
-              "Pricing assumptions not validated",
-              "Win themes missing from the summary"
-            ]
-          },
-          {
-            "title": "Proposal_ClientABC_final.docx",
-            "badge": "98/100",
-            "items": [
-              "Requirements mapped · Ready for submission"
-            ]
-          }
+        "modules": [
+          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Proposal quality & win rate" },
+          { "name": "GrowthIQ", "tone": "growthiq", "text": "Commercial execution & pipeline" },
+          { "name": "Ecosystem", "tone": "ecosystem", "text": "Unified governance across both" }
         ],
-        "scenarios": [
-          {
-            "tool": "ProposalIQ",
-            "title": "Proposal readiness before submission",
-            "text": "ProposalIQ checks that every requirement is mapped, pricing is validated and approvals are complete before the proposal goes out.",
-            "result": "Higher win rate · Fewer rushed bids"
-          },
-          {
-            "tool": "ProposalIQ",
-            "title": "Reuse what already won",
-            "text": "Build new proposals from your structured client drive, past proposals, references and credentials, instead of starting from a blank page.",
-            "result": "Faster turnaround · Consistent quality"
-          },
-          {
-            "tool": "GrowthIQ",
-            "title": "Focus effort on the right opportunities",
-            "text": "GrowthIQ shows which accounts and opportunities deserve commercial effort, so you spend time where it converts.",
-            "result": "Effort on priorities · Predictable pipeline"
-          }
-        ]
+        "footnote": "Mindorion gives CEOs of ESNs the operational data foundation they need to lead with confidence.",
+        "panel": {
+          "kpiTitle": "PIPELINE & PROPOSAL OVERVIEW",
+          "kpis": [
+            { "value": "€4.2M", "label": "Active pipeline" },
+            { "value": "67%", "label": "Strategy alignment" }
+          ],
+          "listTitle": "PROPOSAL QUALITY THIS WEEK",
+          "rows": [
+            {
+              "title": "Client A — RFP v3",
+              "score": "92/100",
+              "tone": "good",
+              "items": [
+                { "tone": "good", "text": "All requirements mapped ✓" },
+                { "tone": "good", "text": "No internal comments exposed ✓" }
+              ]
+            },
+            {
+              "title": "Client B — Framework",
+              "score": "61/100",
+              "tone": "warning",
+              "items": [
+                { "tone": "warning", "text": "Pricing assumptions not validated" },
+                { "tone": "critical", "text": "2 RFP requirements unmapped" }
+              ]
+            }
+          ]
+        }
       },
-      "sales": {
-        "badge": "📈 SALES & PRE-SALES TEAMS",
-        "title": "Align every offer and every commercial move with your strategy.",
-        "text": "In pre-sales, an offer with cost price visible in tracked changes can cost you a deal, and commercial effort that drifts from strategy costs you quarters. Mindorion keeps both under control.",
-        "tools": [
-          {
-            "name": "ProposalIQ",
-            "text": "Checks RFPs, offers and proposals before submission"
-          },
-          {
-            "name": "GrowthIQ",
-            "text": "Aligns commercial execution with strategy"
-          }
+      "businessManager": {
+        "badge": "BUSINESS MANAGER",
+        "title": "Remove your blind spots. Make your effort visible — and your results undeniable.",
+        "quote": "You're managing 20+ accounts. You're not always sure who to call next, which level to reach in the hierarchy, or whether you're still aligned with the strategy your director set last month.",
+        "bullets": [
+          "Know who your VIPs are — accounts with highest conversion potential, flagged and ranked automatically.",
+          "No more follow-up blind spots: see exactly when to re-engage, who responded, who went cold.",
+          "Navigate client hierarchies — right contacts, right levels, no time wasted on the wrong person.",
+          "Your activity is visible to your manager by design — effort is recognized, not invisible.",
+          "Drift alerts: know immediately when your prospecting diverges from the agreed commercial strategy."
         ],
-        "pipelineLabel": "Priority accounts",
-        "leads": [
-          {
-            "initials": "EN",
-            "role": "Strategic account · Energy",
-            "city": "Lyon",
-            "score": "94%"
-          },
-          {
-            "initials": "AU",
-            "role": "Key account · Automotive",
-            "city": "Toulouse",
-            "score": "88%"
-          },
-          {
-            "initials": "PS",
-            "role": "Growth account · Public sector",
-            "city": "Paris",
-            "score": "81%"
-          }
+        "modules": [
+          { "name": "GrowthIQ", "tone": "growthiq", "text": "Pipeline, VIPs, alignment, follow-up" },
+          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Proposal quality before you send" },
+          { "name": "Ecosystem", "tone": "ecosystem", "text": "Your effort feeds collective performance" }
         ],
-        "scenarios": [
-          {
-            "tool": "ProposalIQ",
-            "title": "RFP/RFQ response",
-            "text": "Before submitting an RFP response, ProposalIQ verifies that your margin isn't visible in tracked changes and that no internal comments are left in the document.",
-            "result": "Margin protected · Professional offer"
-          },
-          {
-            "tool": "GrowthIQ",
-            "title": "Steering commercial effort",
-            "text": "GrowthIQ shows where commercial effort is aligned with strategy and where accounts are under-covered, so managers can redirect focus before targets slip.",
-            "result": "Effort aligned to strategy"
-          },
-          {
-            "tool": "GrowthIQ",
-            "title": "Turning activity into decision intelligence",
-            "text": "Standardize how teams capture high-value commercial signals so leaders decide on reality, not on what the CRM happened to record.",
-            "result": "Decisions grounded in reality"
-          }
-        ]
+        "footnote": "Mindorion turns your individual commercial effort into recognized, collective company performance.",
+        "panel": {
+          "accountsTitle": "MY PRIORITY ACCOUNTS",
+          "accounts": [
+            { "dot": "green", "name": "Client A — Aerospace", "badge": "VIP ★", "tone": "good" },
+            { "dot": "amber", "name": "Client B — Energy", "badge": "Follow up due", "tone": "warning" },
+            { "dot": "red", "name": "Client C — Pharma", "badge": "Gone cold — 18 days", "tone": "critical" }
+          ],
+          "alignmentTitle": "STRATEGY ALIGNMENT",
+          "alertTitle": "Drift detected — 3 accounts",
+          "alertText": "Outside agreed target sectors — review needed"
+        }
       },
-      "rh": {
-        "badge": "👥 DELIVERY & BU",
-        "title": "Run your perimeter end to end, from proposal to delivery, on reliable data.",
-        "text": "Business unit and delivery leaders need proposals, delivery commitments and margin connected in one place. Mindorion structures that activity and the Governance Layer keeps it auditable.",
-        "tools": [
-          {
-            "name": "ProposalIQ",
-            "text": "Structures proposals and statements of work"
-          },
-          {
-            "name": "Governance Layer",
-            "text": "Keeps operational data structured and auditable"
-          }
+      "headOfDelivery": {
+        "badge": "HEAD OF DELIVERY",
+        "title": "Win the right deals. Frame the right contracts. Avoid delivery drift from day one.",
+        "quote": "By the time a project lands on your desk, the proposal has already set the scope, the commitments and the risks. If it wasn't framed right, you'll pay for it throughout delivery.",
+        "bullets": [
+          "Auto-generate the technical and commercial framing of your offer — no more hunting for references or past proposals.",
+          "Validate the proposal before it leaves: no exposed internal comment, no wrong client name, no sensitive data in metadata.",
+          "Identify contractual risks at RFP stage — scope gaps, ambiguous terms, missing MSA coverage at entity level.",
+          "Frame the contract to prevent drift: technical terms, scope boundaries and acceptance criteria defined from the start.",
+          "Access the full proposal context before kick-off — aligned with what was sold, not what someone remembers."
         ],
-        "mocks": [
-          {
-            "title": "SOW_ProjectDelta_v2.docx",
-            "badge": "Needs review",
-            "items": [
-              "Scope assumptions not validated",
-              "Margin data exposed in tracked changes",
-              "Approval trail incomplete"
-            ]
-          },
-          {
-            "title": "SOW_ProjectDelta_final.docx",
-            "badge": "Governed",
-            "items": [
-              "Validated & auditable · Ready to share"
-            ]
-          }
+        "modules": [
+          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Offer generation, validation & risk framing" },
+          { "name": "Ecosystem", "tone": "ecosystem", "text": "Proposal linked to delivery context" }
         ],
-        "scenarios": [
-          {
-            "tool": "ProposalIQ",
-            "title": "Clean handoff from pre-sales to delivery",
-            "text": "Every statement of work is validated before delivery starts, so commitments and assumptions are explicit and traceable.",
-            "result": "Aligned handoff · Fewer surprises"
-          },
-          {
-            "tool": "ProposalIQ",
-            "title": "Protecting margin in client documents",
-            "text": "Before a document leaves the BU, internal pricing and comments are flagged so margin assumptions never reach the client.",
-            "result": "Margin protected · Clean document"
-          },
-          {
-            "tool": "Governance Layer",
-            "title": "Auditable operations across the BU",
-            "text": "The Governance Layer keeps every workflow producing structured, auditable data, so the whole business unit operates by the same standards.",
-            "result": "Aligned BU · Audit-ready"
-          }
-        ]
-      },
-      "esn": {
-        "badge": "⚙️ IT SERVICES & ENGINEERING",
-        "title": "High-stakes technical proposals and SOWs, governed end to end.",
-        "text": "In IT services, every SOW, specification or technical proposal commits your company. Mindorion structures these documents, aligns account growth with strategy and keeps standards uniform across teams.",
-        "tools": [
-          {
-            "name": "ProposalIQ",
-            "text": "SOWs, technical specs, proposal files"
-          },
-          {
-            "name": "GrowthIQ",
-            "text": "Strategic account growth"
-          },
-          {
-            "name": "Governance Layer",
-            "text": "Cross-team operational standards"
-          }
-        ],
-        "mocks": [
-          {
-            "title": "SOW_Technical_Project_v2.docx",
-            "badge": "41/100",
-            "items": [
-              "9 versions with unresolved internal feedback",
-              "Pricing data exposed in tracked changes",
-              "Requirements not fully mapped"
-            ]
-          },
-          {
-            "title": "SOW_Technical_Project_final.docx",
-            "badge": "97/100",
-            "items": [
-              "Validated & governed · Ready to distribute"
-            ]
-          }
-        ],
-        "scenarios": [
-          {
-            "tool": "ProposalIQ",
-            "title": "Distributing technical documents",
-            "text": "Before distributing a SOW or specs to multiple clients, ProposalIQ validates requirements and flags internal pricing, comments and history in one pass.",
-            "result": "Risk avoided · Governed document"
-          },
-          {
-            "tool": "GrowthIQ",
-            "title": "Strategic account growth",
-            "text": "GrowthIQ aligns account growth with strategy across your target sectors, focusing commercial effort on the accounts that matter for long cycles.",
-            "result": "Accounts aligned · Effort focused"
-          },
-          {
-            "tool": "Governance Layer",
-            "title": "Uniform standards across project teams",
-            "text": "The Governance Layer keeps project managers, consultants and engineers operating by the same document and data standards.",
-            "result": "Teams aligned · Audit-ready"
-          }
-        ]
+        "footnote": "Mindorion gives Heads of Delivery the contractual and operational context they need — before problems appear.",
+        "panel": {
+          "validationTitle": "PROPOSAL RISK CHECK — CLIENT A RFP",
+          "validationCardTitle": "Pre-send validation",
+          "validationBadge": "Cleared",
+          "validationItems": [
+            "No internal comments exposed ✓",
+            "Client name correct across all pages ✓",
+            "Metadata clean ✓"
+          ],
+          "flagsTitle": "CONTRACTUAL RISK FLAGS",
+          "flagsCardTitle": "Scope & terms review",
+          "flagsBadge": "2 flags",
+          "flagsItems": [
+            { "tone": "warning", "text": "Acceptance criteria — ambiguous on timeline" },
+            { "tone": "critical", "text": "No MSA at subsidiary level (entity 1.2)" }
+          ]
+        }
       }
     }
   },

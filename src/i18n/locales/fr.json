@@ -1225,236 +1225,134 @@
   },
   "usecasesPage": {
     "eyebrow": "CAS D'USAGE",
-    "title": "Comment les cabinets d'ingénierie et de services IT utilisent Mindorion",
-    "subtitle": "Que vous pilotiez l'avant-vente, l'exécution commerciale, le delivery ou une business unit, Mindorion structure les propositions, aligne l'exécution commerciale sur la stratégie et garde les opérations gouvernées.",
-    "ctaTitle": "Prêt à opérer au plus haut niveau ?",
-    "ctaText": "Commencez avec ProposalIQ. Ajoutez GrowthIQ. La gouvernance est intégrée aux deux.",
-    "ctaButton": "Voir les tarifs",
+    "title": "Conçu pour celles et ceux qui pilotent les sociétés Engineering & IT Services.",
+    "subtitle": "Sélectionnez votre rôle — voyez exactement ce que ProposalIQ, GrowthIQ et l'écosystème complet apportent à votre quotidien.",
+    "modulesLabel": "Ce que chaque module apporte à ce rôle",
+    "startWith": {
+      "proposaliq": {
+        "title": "Démarrer avec ProposalIQ",
+        "text": "Standardisez d'abord l'exécution RFQ et proposals.",
+        "cta": "Découvrir ProposalIQ"
+      },
+      "growthiq": {
+        "title": "Démarrer avec GrowthIQ",
+        "text": "Structurez d'abord l'exécution commerciale et le pipeline.",
+        "cta": "Découvrir GrowthIQ"
+      }
+    },
     "tabs": {
-      "consultants": "Consultants & Indépendants",
-      "sales": "Équipes Sales & Avant-vente",
-      "rh": "Delivery & BU",
-      "esn": "ESN & Ingénierie"
+      "ceo": "CEO / Managing Director",
+      "businessManager": "Business Manager",
+      "headOfDelivery": "Head of Delivery"
     },
     "personas": {
-      "consultants": {
-        "badge": "💼 CONSULTANTS & INDÉPENDANTS",
-        "title": "Gagnez plus de missions avec des propositions cohérentes, complètes et dans les temps.",
-        "text": "En tant que consultant, vous n'avez pas d'équipe avant-vente derrière vous. Mindorion structure chaque proposition de la RFQ à la soumission et garde votre effort commercial concentré sur les opportunités les plus susceptibles de se concrétiser.",
-        "tools": [
-          {
-            "name": "ProposalIQ",
-            "text": "Structure chaque proposition de la RFQ à la soumission"
-          },
-          {
-            "name": "GrowthIQ",
-            "text": "Garde l'effort commercial aligné sur vos priorités"
-          }
+      "ceo": {
+        "badge": "CEO / MANAGING DIRECTOR",
+        "title": "Gouvernez la performance commerciale et delivery de votre cabinet — depuis un seul endroit.",
+        "quote": "Vos équipes exécutent chacune dans leur coin. Aucune source unique de vérité sur le pipeline, les propositions ou la performance — vous décidez sans données fiables.",
+        "bullets": [
+          "Visibilité unifiée sur les workflows commerciaux, proposals et gouvernance — un seul endroit, pas cinq tableurs.",
+          "Alignement temps réel entre stratégie et exécution — ce que font les BMs correspond à votre dernière décision.",
+          "Fondation pour scaler l'adoption IA à l'échelle de l'organisation sans perdre le contrôle des coûts ni de la conformité.",
+          "Le Governance Layer connecte le tout : proposals, pipeline et opérations dans un seul système opérationnel."
         ],
-        "mocks": [
-          {
-            "title": "Proposal_ClientABC_v3.docx",
-            "badge": "34/100",
-            "items": [
-              "Deux exigences RFP non mappées",
-              "Hypothèses de prix non validées",
-              "Win themes absents du résumé"
-            ]
-          },
-          {
-            "title": "Proposal_ClientABC_final.docx",
-            "badge": "98/100",
-            "items": [
-              "Exigences mappées · Prête pour soumission"
-            ]
-          }
+        "modules": [
+          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Qualité des proposals & win rate" },
+          { "name": "GrowthIQ", "tone": "growthiq", "text": "Exécution commerciale & pipeline" },
+          { "name": "Ecosystem", "tone": "ecosystem", "text": "Gouvernance unifiée sur les deux" }
         ],
-        "scenarios": [
-          {
-            "tool": "ProposalIQ",
-            "title": "Préparation de la proposition avant soumission",
-            "text": "ProposalIQ vérifie que chaque exigence est mappée, que le pricing est validé et que les approbations sont complètes avant l'envoi de la proposition.",
-            "result": "Meilleur taux de win · Moins de bids dans l'urgence"
-          },
-          {
-            "tool": "ProposalIQ",
-            "title": "Réutiliser ce qui a déjà gagné",
-            "text": "Construisez de nouvelles propositions à partir de votre drive client structuré, propositions passées, références et accréditations, au lieu de partir d'une page blanche.",
-            "result": "Délai raccourci · Qualité cohérente"
-          },
-          {
-            "tool": "GrowthIQ",
-            "title": "Concentrer l'effort sur les bonnes opportunités",
-            "text": "GrowthIQ montre quels comptes et opportunités méritent l'effort commercial, pour investir votre temps là où il convertit.",
-            "result": "Effort sur les priorités · Pipeline prévisible"
-          }
-        ]
+        "footnote": "Mindorion donne aux CEOs d'ESN la fondation de données opérationnelles dont ils ont besoin pour décider avec confiance.",
+        "panel": {
+          "kpiTitle": "PIPELINE & PROPOSAL OVERVIEW",
+          "kpis": [
+            { "value": "4,2 M€", "label": "Pipeline actif" },
+            { "value": "67 %", "label": "Alignement stratégie" }
+          ],
+          "listTitle": "QUALITÉ DES PROPOSALS CETTE SEMAINE",
+          "rows": [
+            {
+              "title": "Client A — RFP v3",
+              "score": "92/100",
+              "tone": "good",
+              "items": [
+                { "tone": "good", "text": "Toutes les exigences mappées ✓" },
+                { "tone": "good", "text": "Aucun commentaire interne exposé ✓" }
+              ]
+            },
+            {
+              "title": "Client B — Framework",
+              "score": "61/100",
+              "tone": "warning",
+              "items": [
+                { "tone": "warning", "text": "Hypothèses tarifaires non validées" },
+                { "tone": "critical", "text": "2 exigences RFP non mappées" }
+              ]
+            }
+          ]
+        }
       },
-      "sales": {
-        "badge": "📈 ÉQUIPES SALES & AVANT-VENTE",
-        "title": "Alignez chaque offre et chaque action commerciale sur votre stratégie.",
-        "text": "En avant-vente, une offre laissant apparaître le prix de revient dans le suivi des modifications peut vous coûter un deal, et un effort commercial qui s'écarte de la stratégie vous coûte des trimestres. Mindorion garde les deux sous contrôle.",
-        "tools": [
-          {
-            "name": "ProposalIQ",
-            "text": "Vérifie RFP, offres et proposals avant soumission"
-          },
-          {
-            "name": "GrowthIQ",
-            "text": "Aligne l'exécution commerciale sur la stratégie"
-          }
+      "businessManager": {
+        "badge": "BUSINESS MANAGER",
+        "title": "Supprimez vos angles morts. Rendez votre effort visible — et vos résultats indéniables.",
+        "quote": "Vous gérez 20+ comptes. Vous ne savez pas toujours qui appeler ensuite, quel niveau atteindre dans la hiérarchie, ni si vous êtes encore aligné avec la stratégie posée par votre directeur le mois dernier.",
+        "bullets": [
+          "Identifiez vos VIPs — comptes à plus fort potentiel de conversion, flaggés et priorisés automatiquement.",
+          "Plus d'angles morts sur les relances : sachez exactement quand re-engager, qui a répondu, qui est devenu froid.",
+          "Naviguez les hiérarchies clients — bons contacts, bons niveaux, pas de temps perdu sur la mauvaise personne.",
+          "Votre activité est visible par votre manager by design — l'effort est reconnu, pas invisible.",
+          "Alertes de dérive : sachez immédiatement quand votre prospection s'éloigne de la stratégie commerciale convenue."
         ],
-        "pipelineLabel": "Comptes prioritaires",
-        "leads": [
-          {
-            "initials": "EN",
-            "role": "Compte stratégique · Energy",
-            "city": "Lyon",
-            "score": "94%"
-          },
-          {
-            "initials": "AU",
-            "role": "Compte clé · Automotive",
-            "city": "Toulouse",
-            "score": "88%"
-          },
-          {
-            "initials": "PS",
-            "role": "Compte croissance · Secteur public",
-            "city": "Paris",
-            "score": "81%"
-          }
+        "modules": [
+          { "name": "GrowthIQ", "tone": "growthiq", "text": "Pipeline, VIPs, alignement, follow-up" },
+          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Qualité de la proposal avant envoi" },
+          { "name": "Ecosystem", "tone": "ecosystem", "text": "Votre effort nourrit la performance collective" }
         ],
-        "scenarios": [
-          {
-            "tool": "ProposalIQ",
-            "title": "Réponse à appel d'offres (RFP/RFQ)",
-            "text": "Avant de soumettre une réponse à appel d'offres, ProposalIQ vérifie que votre marge n'est pas visible dans le suivi des modifications et qu'aucun commentaire interne ne traîne dans le document.",
-            "result": "Marge protégée · Offre professionnelle"
-          },
-          {
-            "tool": "GrowthIQ",
-            "title": "Piloter l'effort commercial",
-            "text": "GrowthIQ montre où l'effort commercial est aligné sur la stratégie et où les comptes sont sous-couverts, pour que les managers réorientent le focus avant que les objectifs ne dérapent.",
-            "result": "Effort aligné sur la stratégie"
-          },
-          {
-            "tool": "GrowthIQ",
-            "title": "Transformer l'activité en intelligence de décision",
-            "text": "Standardisez la façon dont les équipes capturent les signaux commerciaux à haute valeur pour que les dirigeants décident sur la réalité, et non sur ce que le CRM a enregistré.",
-            "result": "Décisions fondées sur la réalité"
-          }
-        ]
+        "footnote": "Mindorion transforme votre effort commercial individuel en performance collective reconnue.",
+        "panel": {
+          "accountsTitle": "MES COMPTES PRIORITAIRES",
+          "accounts": [
+            { "dot": "green", "name": "Client A — Aéronautique", "badge": "VIP ★", "tone": "good" },
+            { "dot": "amber", "name": "Client B — Énergie", "badge": "Relance due", "tone": "warning" },
+            { "dot": "red", "name": "Client C — Pharma", "badge": "Froid — 18 jours", "tone": "critical" }
+          ],
+          "alignmentTitle": "ALIGNEMENT STRATÉGIQUE",
+          "alertTitle": "Dérive détectée — 3 comptes",
+          "alertText": "Hors secteurs cibles convenus — revue nécessaire"
+        }
       },
-      "rh": {
-        "badge": "👥 DELIVERY & BU",
-        "title": "Pilotez votre périmètre de bout en bout, de la proposition au delivery, sur des données fiables.",
-        "text": "Les directeurs de BU et de delivery ont besoin de connecter propositions, engagements de delivery et marge au même endroit. Mindorion structure cette activité et la Governance Layer la garde auditable.",
-        "tools": [
-          {
-            "name": "ProposalIQ",
-            "text": "Structure les propositions et les SOW"
-          },
-          {
-            "name": "Governance Layer",
-            "text": "Garde les données opérationnelles structurées et auditables"
-          }
+      "headOfDelivery": {
+        "badge": "HEAD OF DELIVERY",
+        "title": "Gagnez les bons deals. Cadrez les bons contrats. Évitez la dérive du delivery dès le jour 1.",
+        "quote": "Au moment où un projet atterrit sur votre bureau, la proposal a déjà fixé le scope, les engagements et les risques. Si ce n'est pas bien cadré, vous le paierez tout au long du delivery.",
+        "bullets": [
+          "Génération automatique du cadrage technique et commercial de votre offre — fini la chasse aux références ou aux anciennes proposals.",
+          "Validez la proposal avant qu'elle parte : aucun commentaire interne exposé, aucun mauvais nom de client, aucune donnée sensible dans les métadonnées.",
+          "Identifiez les risques contractuels dès le RFP — trous de scope, termes ambigus, absence de MSA au niveau entité.",
+          "Cadrez le contrat pour prévenir la dérive : termes techniques, frontières de scope et critères d'acceptation définis dès le départ.",
+          "Accédez au contexte complet de la proposal avant le kick-off — aligné sur ce qui a été vendu, pas sur ce dont quelqu'un se souvient."
         ],
-        "mocks": [
-          {
-            "title": "SOW_ProjetDelta_v2.docx",
-            "badge": "À revoir",
-            "items": [
-              "Hypothèses de périmètre non validées",
-              "Données de marge exposées dans le suivi des modifications",
-              "Piste d'approbation incomplète"
-            ]
-          },
-          {
-            "title": "SOW_ProjetDelta_final.docx",
-            "badge": "Gouverné",
-            "items": [
-              "Validé & auditable · Prêt à partager"
-            ]
-          }
+        "modules": [
+          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Génération d'offre, validation & cadrage des risques" },
+          { "name": "Ecosystem", "tone": "ecosystem", "text": "Proposal reliée au contexte delivery" }
         ],
-        "scenarios": [
-          {
-            "tool": "ProposalIQ",
-            "title": "Passation propre de l'avant-vente au delivery",
-            "text": "Chaque SOW est validé avant le démarrage du delivery, pour que les engagements et les hypothèses soient explicites et traçables.",
-            "result": "Passation alignée · Moins de surprises"
-          },
-          {
-            "tool": "ProposalIQ",
-            "title": "Protéger la marge dans les documents client",
-            "text": "Avant qu'un document ne quitte la BU, le pricing interne et les commentaires sont signalés pour que les hypothèses de marge n'atteignent jamais le client.",
-            "result": "Marge protégée · Document propre"
-          },
-          {
-            "tool": "Governance Layer",
-            "title": "Des opérations auditables à l'échelle de la BU",
-            "text": "La Governance Layer garde chaque workflow producteur de données structurées et auditables, pour que toute la business unit opère selon les mêmes standards.",
-            "result": "BU alignée · Prête pour l'audit"
-          }
-        ]
-      },
-      "esn": {
-        "badge": "⚙️ ESN & INGÉNIERIE",
-        "title": "Des propositions techniques et SOW à enjeux élevés, gouvernés de bout en bout.",
-        "text": "En ESN, chaque SOW, cahier des charges ou proposition technique engage votre société. Mindorion structure ces documents, aligne la croissance des comptes sur la stratégie et garde des standards uniformes entre les équipes.",
-        "tools": [
-          {
-            "name": "ProposalIQ",
-            "text": "SOW, specs techniques, dossiers de proposition"
-          },
-          {
-            "name": "GrowthIQ",
-            "text": "Croissance stratégique des comptes"
-          },
-          {
-            "name": "Governance Layer",
-            "text": "Standards opérationnels inter-équipes"
-          }
-        ],
-        "mocks": [
-          {
-            "title": "SOW_Projet_Technique_v2.docx",
-            "badge": "41/100",
-            "items": [
-              "9 versions avec feedback interne non résolu",
-              "Données tarifaires exposées dans le suivi des modifications",
-              "Exigences non entièrement mappées"
-            ]
-          },
-          {
-            "title": "SOW_Projet_Technique_final.docx",
-            "badge": "97/100",
-            "items": [
-              "Validé & gouverné · Prêt à distribuer"
-            ]
-          }
-        ],
-        "scenarios": [
-          {
-            "tool": "ProposalIQ",
-            "title": "Distribution de documents techniques",
-            "text": "Avant de distribuer un SOW ou des specs à plusieurs clients, ProposalIQ valide les exigences et signale le pricing interne, les commentaires et l'historique en une passe.",
-            "result": "Risque évité · Document gouverné"
-          },
-          {
-            "tool": "GrowthIQ",
-            "title": "Croissance stratégique des comptes",
-            "text": "GrowthIQ aligne la croissance des comptes sur la stratégie dans vos secteurs cibles, en concentrant l'effort commercial sur les comptes qui comptent pour les cycles longs.",
-            "result": "Comptes alignés · Effort concentré"
-          },
-          {
-            "tool": "Governance Layer",
-            "title": "Standards uniformes entre les équipes projet",
-            "text": "La Governance Layer garde chefs de projet, consultants et ingénieurs opérant selon les mêmes standards de documents et de données.",
-            "result": "Équipes alignées · Prêtes pour l'audit"
-          }
-        ]
+        "footnote": "Mindorion donne aux Heads of Delivery le contexte contractuel et opérationnel dont ils ont besoin — avant que les problèmes n'apparaissent.",
+        "panel": {
+          "validationTitle": "PROPOSAL RISK CHECK — RFP CLIENT A",
+          "validationCardTitle": "Validation avant envoi",
+          "validationBadge": "Validé",
+          "validationItems": [
+            "Aucun commentaire interne exposé ✓",
+            "Nom du client correct sur toutes les pages ✓",
+            "Métadonnées nettoyées ✓"
+          ],
+          "flagsTitle": "RISQUES CONTRACTUELS",
+          "flagsCardTitle": "Revue scope & termes",
+          "flagsBadge": "2 alertes",
+          "flagsItems": [
+            { "tone": "warning", "text": "Critères d'acceptation — timeline ambiguë" },
+            { "tone": "critical", "text": "Pas de MSA au niveau filiale (entité 1.2)" }
+          ]
+        }
       }
     }
   },
