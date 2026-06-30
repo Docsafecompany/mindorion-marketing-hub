@@ -1226,7 +1226,7 @@
   "usecasesPage": {
     "eyebrow": "CAS D'USAGE",
     "title": "Conçu pour celles et ceux qui pilotent les sociétés Engineering & IT Services.",
-    "subtitle": "Sélectionnez votre rôle — voyez exactement ce que ProposalIQ, GrowthIQ et l'écosystème complet apportent à votre quotidien.",
+    "subtitle": "Sélectionnez votre rôle, voyez exactement ce que ProposalIQ, GrowthIQ et l'écosystème complet apportent à votre quotidien.",
     "modulesLabel": "Ce que chaque module apporte à ce rôle",
     "startWith": {
       "proposaliq": {
@@ -1248,11 +1248,11 @@
     "personas": {
       "ceo": {
         "badge": "CEO / MANAGING DIRECTOR",
-        "title": "Gouvernez la performance commerciale et delivery de votre cabinet — depuis un seul endroit.",
-        "quote": "Vos équipes exécutent chacune dans leur coin. Aucune source unique de vérité sur le pipeline, les propositions ou la performance — vous décidez sans données fiables.",
+        "title": "Gouvernez la performance commerciale et delivery de votre cabinet, depuis un seul endroit.",
+        "quote": "Vos équipes exécutent chacune dans leur coin. Aucune source unique de vérité sur le pipeline, les propositions ou la performance, vous décidez sans données fiables.",
         "bullets": [
-          "Visibilité unifiée sur les workflows commerciaux, proposals et gouvernance — un seul endroit, pas cinq tableurs.",
-          "Alignement temps réel entre stratégie et exécution — ce que font les BMs correspond à votre dernière décision.",
+          "Visibilité unifiée sur les workflows commerciaux, proposals et gouvernance, un seul endroit, pas cinq tableurs.",
+          "Alignement temps réel entre stratégie et exécution, ce que font les BMs correspond à votre dernière décision.",
           "Fondation pour scaler l'adoption IA à l'échelle de l'organisation sans perdre le contrôle des coûts ni de la conformité.",
           "Le Governance Layer connecte le tout : proposals, pipeline et opérations dans un seul système opérationnel."
         ],
@@ -1271,7 +1271,7 @@
           "listTitle": "QUALITÉ DES PROPOSALS CETTE SEMAINE",
           "rows": [
             {
-              "title": "Client A — RFP v3",
+              "title": "Client A, RFP v3",
               "score": "92/100",
               "tone": "good",
               "items": [
@@ -1280,7 +1280,7 @@
               ]
             },
             {
-              "title": "Client B — Framework",
+              "title": "Client B, Framework",
               "score": "61/100",
               "tone": "warning",
               "items": [
@@ -1293,13 +1293,13 @@
       },
       "businessManager": {
         "badge": "BUSINESS MANAGER",
-        "title": "Supprimez vos angles morts. Rendez votre effort visible — et vos résultats indéniables.",
+        "title": "Supprimez vos angles morts. Rendez votre effort visible, et vos résultats indéniables.",
         "quote": "Vous gérez 20+ comptes. Vous ne savez pas toujours qui appeler ensuite, quel niveau atteindre dans la hiérarchie, ni si vous êtes encore aligné avec la stratégie posée par votre directeur le mois dernier.",
         "bullets": [
-          "Identifiez vos VIPs — comptes à plus fort potentiel de conversion, flaggés et priorisés automatiquement.",
+          "Identifiez vos VIPs, comptes à plus fort potentiel de conversion, flaggés et priorisés automatiquement.",
           "Plus d'angles morts sur les relances : sachez exactement quand re-engager, qui a répondu, qui est devenu froid.",
-          "Naviguez les hiérarchies clients — bons contacts, bons niveaux, pas de temps perdu sur la mauvaise personne.",
-          "Votre activité est visible par votre manager by design — l'effort est reconnu, pas invisible.",
+          "Naviguez les hiérarchies clients, bons contacts, bons niveaux, pas de temps perdu sur la mauvaise personne.",
+          "Votre activité est visible par votre manager by design, l'effort est reconnu, pas invisible.",
           "Alertes de dérive : sachez immédiatement quand votre prospection s'éloigne de la stratégie commerciale convenue."
         ],
         "modules": [
@@ -1311,13 +1311,13 @@
         "panel": {
           "accountsTitle": "MES COMPTES PRIORITAIRES",
           "accounts": [
-            { "dot": "green", "name": "Client A — Aéronautique", "badge": "VIP ★", "tone": "good" },
-            { "dot": "amber", "name": "Client B — Énergie", "badge": "Relance due", "tone": "warning" },
-            { "dot": "red", "name": "Client C — Pharma", "badge": "Froid — 18 jours", "tone": "critical" }
+            { "dot": "green", "name": "Client A, Aéronautique", "badge": "VIP ★", "tone": "good" },
+            { "dot": "amber", "name": "Client B, Énergie", "badge": "Relance due", "tone": "warning" },
+            { "dot": "red", "name": "Client C, Pharma", "badge": "Froid, 18 jours", "tone": "critical" }
           ],
           "alignmentTitle": "ALIGNEMENT STRATÉGIQUE",
-          "alertTitle": "Dérive détectée — 3 comptes",
-          "alertText": "Hors secteurs cibles convenus — revue nécessaire"
+          "alertTitle": "Dérive détectée, 3 comptes",
+          "alertText": "Hors secteurs cibles convenus, revue nécessaire"
         }
       },
       "headOfDelivery": {
@@ -1325,19 +1325,19 @@
         "title": "Gagnez les bons deals. Cadrez les bons contrats. Évitez la dérive du delivery dès le jour 1.",
         "quote": "Au moment où un projet atterrit sur votre bureau, la proposal a déjà fixé le scope, les engagements et les risques. Si ce n'est pas bien cadré, vous le paierez tout au long du delivery.",
         "bullets": [
-          "Génération automatique du cadrage technique et commercial de votre offre — fini la chasse aux références ou aux anciennes proposals.",
+          "Génération automatique du cadrage technique et commercial de votre offre, fini la chasse aux références ou aux anciennes proposals.",
           "Validez la proposal avant qu'elle parte : aucun commentaire interne exposé, aucun mauvais nom de client, aucune donnée sensible dans les métadonnées.",
-          "Identifiez les risques contractuels dès le RFP — trous de scope, termes ambigus, absence de MSA au niveau entité.",
+          "Identifiez les risques contractuels dès le RFP, trous de scope, termes ambigus, absence de MSA au niveau entité.",
           "Cadrez le contrat pour prévenir la dérive : termes techniques, frontières de scope et critères d'acceptation définis dès le départ.",
-          "Accédez au contexte complet de la proposal avant le kick-off — aligné sur ce qui a été vendu, pas sur ce dont quelqu'un se souvient."
+          "Accédez au contexte complet de la proposal avant le kick-off, aligné sur ce qui a été vendu, pas sur ce dont quelqu'un se souvient."
         ],
         "modules": [
           { "name": "ProposalIQ", "tone": "proposaliq", "text": "Génération d'offre, validation & cadrage des risques" },
           { "name": "Ecosystem", "tone": "ecosystem", "text": "Proposal reliée au contexte delivery" }
         ],
-        "footnote": "Mindorion donne aux Heads of Delivery le contexte contractuel et opérationnel dont ils ont besoin — avant que les problèmes n'apparaissent.",
+        "footnote": "Mindorion donne aux Heads of Delivery le contexte contractuel et opérationnel dont ils ont besoin, avant que les problèmes n'apparaissent.",
         "panel": {
-          "validationTitle": "PROPOSAL RISK CHECK — RFP CLIENT A",
+          "validationTitle": "PROPOSAL RISK CHECK, RFP CLIENT A",
           "validationCardTitle": "Validation avant envoi",
           "validationBadge": "Validé",
           "validationItems": [
@@ -1349,7 +1349,7 @@
           "flagsCardTitle": "Revue scope & termes",
           "flagsBadge": "2 alertes",
           "flagsItems": [
-            { "tone": "warning", "text": "Critères d'acceptation — timeline ambiguë" },
+            { "tone": "warning", "text": "Critères d'acceptation, timeline ambiguë" },
             { "tone": "critical", "text": "Pas de MSA au niveau filiale (entité 1.2)" }
           ]
         }

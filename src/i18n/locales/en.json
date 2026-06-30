@@ -1226,7 +1226,7 @@
   "usecasesPage": {
     "eyebrow": "USE CASES",
     "title": "Built for the people who run Engineering & IT Services firms.",
-    "subtitle": "Select your role — see exactly what ProposalIQ, GrowthIQ and the full ecosystem bring to your day-to-day.",
+    "subtitle": "Select your role, see exactly what ProposalIQ, GrowthIQ and the full ecosystem bring to your day-to-day.",
     "modulesLabel": "What each module brings to this role",
     "startWith": {
       "proposaliq": {
@@ -1248,11 +1248,11 @@
     "personas": {
       "ceo": {
         "badge": "CEO / MANAGING DIRECTOR",
-        "title": "Govern your firm's commercial and delivery performance — from one place.",
-        "quote": "Your teams execute individually. No single source of truth on pipeline, proposals or performance — you make decisions without reliable data.",
+        "title": "Govern your firm's commercial and delivery performance, from one place.",
+        "quote": "Your teams execute individually. No single source of truth on pipeline, proposals or performance, you make decisions without reliable data.",
         "bullets": [
-          "Unified visibility across commercial, proposal and governance workflows — one place, not five spreadsheets.",
-          "Real-time alignment between strategy and execution — what BMs do matches your last leadership decision.",
+          "Unified visibility across commercial, proposal and governance workflows, one place, not five spreadsheets.",
+          "Real-time alignment between strategy and execution, what BMs do matches your last leadership decision.",
           "Foundation to scale AI adoption org-wide without losing control of cost or compliance.",
           "Governance Layer connects it all: proposals, pipeline and operations in one operating system."
         ],
@@ -1271,7 +1271,7 @@
           "listTitle": "PROPOSAL QUALITY THIS WEEK",
           "rows": [
             {
-              "title": "Client A — RFP v3",
+              "title": "Client A, RFP v3",
               "score": "92/100",
               "tone": "good",
               "items": [
@@ -1280,7 +1280,7 @@
               ]
             },
             {
-              "title": "Client B — Framework",
+              "title": "Client B, Framework",
               "score": "61/100",
               "tone": "warning",
               "items": [
@@ -1293,13 +1293,13 @@
       },
       "businessManager": {
         "badge": "BUSINESS MANAGER",
-        "title": "Remove your blind spots. Make your effort visible — and your results undeniable.",
+        "title": "Remove your blind spots. Make your effort visible, and your results undeniable.",
         "quote": "You're managing 20+ accounts. You're not always sure who to call next, which level to reach in the hierarchy, or whether you're still aligned with the strategy your director set last month.",
         "bullets": [
-          "Know who your VIPs are — accounts with highest conversion potential, flagged and ranked automatically.",
+          "Know who your VIPs are, accounts with highest conversion potential, flagged and ranked automatically.",
           "No more follow-up blind spots: see exactly when to re-engage, who responded, who went cold.",
-          "Navigate client hierarchies — right contacts, right levels, no time wasted on the wrong person.",
-          "Your activity is visible to your manager by design — effort is recognized, not invisible.",
+          "Navigate client hierarchies, right contacts, right levels, no time wasted on the wrong person.",
+          "Your activity is visible to your manager by design, effort is recognized, not invisible.",
           "Drift alerts: know immediately when your prospecting diverges from the agreed commercial strategy."
         ],
         "modules": [
@@ -1311,13 +1311,13 @@
         "panel": {
           "accountsTitle": "MY PRIORITY ACCOUNTS",
           "accounts": [
-            { "dot": "green", "name": "Client A — Aerospace", "badge": "VIP ★", "tone": "good" },
-            { "dot": "amber", "name": "Client B — Energy", "badge": "Follow up due", "tone": "warning" },
-            { "dot": "red", "name": "Client C — Pharma", "badge": "Gone cold — 18 days", "tone": "critical" }
+            { "dot": "green", "name": "Client A, Aerospace", "badge": "VIP ★", "tone": "good" },
+            { "dot": "amber", "name": "Client B, Energy", "badge": "Follow up due", "tone": "warning" },
+            { "dot": "red", "name": "Client C, Pharma", "badge": "Gone cold, 18 days", "tone": "critical" }
           ],
           "alignmentTitle": "STRATEGY ALIGNMENT",
-          "alertTitle": "Drift detected — 3 accounts",
-          "alertText": "Outside agreed target sectors — review needed"
+          "alertTitle": "Drift detected, 3 accounts",
+          "alertText": "Outside agreed target sectors, review needed"
         }
       },
       "headOfDelivery": {
@@ -1325,19 +1325,19 @@
         "title": "Win the right deals. Frame the right contracts. Avoid delivery drift from day one.",
         "quote": "By the time a project lands on your desk, the proposal has already set the scope, the commitments and the risks. If it wasn't framed right, you'll pay for it throughout delivery.",
         "bullets": [
-          "Auto-generate the technical and commercial framing of your offer — no more hunting for references or past proposals.",
+          "Auto-generate the technical and commercial framing of your offer, no more hunting for references or past proposals.",
           "Validate the proposal before it leaves: no exposed internal comment, no wrong client name, no sensitive data in metadata.",
-          "Identify contractual risks at RFP stage — scope gaps, ambiguous terms, missing MSA coverage at entity level.",
+          "Identify contractual risks at RFP stage, scope gaps, ambiguous terms, missing MSA coverage at entity level.",
           "Frame the contract to prevent drift: technical terms, scope boundaries and acceptance criteria defined from the start.",
-          "Access the full proposal context before kick-off — aligned with what was sold, not what someone remembers."
+          "Access the full proposal context before kick-off, aligned with what was sold, not what someone remembers."
         ],
         "modules": [
           { "name": "ProposalIQ", "tone": "proposaliq", "text": "Offer generation, validation & risk framing" },
           { "name": "Ecosystem", "tone": "ecosystem", "text": "Proposal linked to delivery context" }
         ],
-        "footnote": "Mindorion gives Heads of Delivery the contractual and operational context they need — before problems appear.",
+        "footnote": "Mindorion gives Heads of Delivery the contractual and operational context they need, before problems appear.",
         "panel": {
-          "validationTitle": "PROPOSAL RISK CHECK — CLIENT A RFP",
+          "validationTitle": "PROPOSAL RISK CHECK, CLIENT A RFP",
           "validationCardTitle": "Pre-send validation",
           "validationBadge": "Cleared",
           "validationItems": [
@@ -1349,7 +1349,7 @@
           "flagsCardTitle": "Scope & terms review",
           "flagsBadge": "2 flags",
           "flagsItems": [
-            { "tone": "warning", "text": "Acceptance criteria — ambiguous on timeline" },
+            { "tone": "warning", "text": "Acceptance criteria, ambiguous on timeline" },
             { "tone": "critical", "text": "No MSA at subsidiary level (entity 1.2)" }
           ]
         }
