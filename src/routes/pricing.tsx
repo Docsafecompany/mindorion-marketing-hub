@@ -139,7 +139,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "proposaliq",
         title: "ProposalIQ",
-        subtitle: "Opérations pré-vente et propositions commerciales pour les ESNs. Standardisez les réponses RFQ, la qualité des propositions et les workflows de validation.",
+        subtitle: "Pré-vente & propositions",
         plans: [
           {
             label: "Premier workflow",
@@ -284,7 +284,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "growthiq",
         title: "GrowthIQ",
-        subtitle: "Intelligence d'exécution commerciale pour les ESNs. Alignez stratégie, effort commercial, pipeline et visibilité management.",
+        subtitle: "Exécution commerciale & pipeline",
         plans: [
           {
             label: "Première utilisation équipe",
@@ -465,7 +465,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "proposaliq",
         title: "ProposalIQ",
-        subtitle: "Pre-sales and proposal operations for Engineering & IT Services firms.",
+        subtitle: "Pre-sales & proposals",
         plans: [
           {
             label: "First Team Use",
@@ -608,7 +608,7 @@ const pricingCopy: Record<"fr" | "en", PricingCopy> = {
       {
         key: "growthiq",
         title: "GrowthIQ",
-        subtitle: "Commercial execution intelligence for Engineering & IT Services firms.",
+        subtitle: "Commercial execution & pipeline",
         plans: [
           {
             label: "First Team Use",
@@ -831,29 +831,25 @@ function PricingPage() {
       </section>
 
       <Tabs defaultValue="proposaliq" className="mt-12">
-        <TabsList className="mx-auto grid h-auto w-full max-w-3xl grid-cols-1 gap-4 rounded-none bg-transparent p-0 md:grid-cols-2">
+        <TabsList className="mx-auto grid h-auto w-full max-w-2xl grid-cols-2 gap-3 rounded-none bg-transparent p-0">
           {copy.products.map((product) => (
             <TabsTrigger
               key={product.key}
               value={product.key}
-              className="h-auto rounded-xl border border-border bg-card px-5 py-4 text-left data-[state=active]:border-[var(--color-pricing-primary)] data-[state=active]:border-2 data-[state=active]:bg-card data-[state=active]:shadow-none"
+              className="group h-auto rounded-xl border border-border bg-card px-4 py-3 text-left transition-all hover:border-[var(--color-pricing-primary)]/40 data-[state=active]:border-[var(--color-pricing-primary)] data-[state=active]:ring-2 data-[state=active]:ring-[var(--color-pricing-primary)]/15 data-[state=active]:bg-card data-[state=active]:shadow-none"
             >
-              <div className="flex w-full items-center gap-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white p-1.5">
+              <div className="flex w-full items-center gap-3">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white p-1">
                   <ProductLogo product={product.key} />
                 </div>
-                <div>
-                  <div className="text-base font-bold text-foreground">{product.title}</div>
-                  <div className="text-sm text-muted-foreground line-clamp-2">{product.subtitle}</div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-sm font-bold text-foreground">{product.title}</div>
+                  <div className="truncate text-xs text-muted-foreground">{product.subtitle}</div>
                 </div>
               </div>
             </TabsTrigger>
           ))}
         </TabsList>
-
-        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-muted-foreground">
-          {copy.productSelectorHelper}
-        </p>
 
         {copy.products.map((product) => (
           <TabsContent key={product.key} value={product.key} className="mt-8 space-y-10">
