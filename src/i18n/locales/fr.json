@@ -437,115 +437,109 @@
       "ctaButton": "Explorer ProposalIQ"
     },
     "growthiq": {
-      "seoTitle": "GrowthIQ, Intelligence d'exécution commerciale pour Engineering & IT Services, Mindorion",
-      "seoDescription": "GrowthIQ aide les cabinets d'engineering et services IT à piloter le business development, capturer les signaux opérationnels à haute valeur et transformer l'activité commerciale en intelligence de décision.",
-      "eyebrow": "GrowthIQ, Intelligence d'exécution commerciale",
-      "title": "Alignez la stratégie et l'exécution commerciale.",
-      "subtitle": "GrowthIQ aide les cabinets d'engineering et services IT à piloter le business development, capturer les signaux opérationnels à haute valeur et transformer l'activité commerciale en intelligence de décision.",
-      "heroLabel": "TABLEAU DE BORD · GROWTHIQ",
+      "seoTitle": "GrowthIQ · L'exécution commerciale enfin visible pour les ESN — Mindorion",
+      "seoDescription": "GrowthIQ rend le pilotage commercial des ESN, bureaux d'études et intégrateurs enfin visible : chaque signal capté dans le workflow, des recommandations en temps réel et une source de vérité durable.",
+      "eyebrow": "GrowthIQ · Intelligence d'exécution commerciale",
+      "title": "L'exécution commerciale. Enfin visible.",
+      "subtitle": "Le pilotage commercial des sociétés de conseil en ingénierie et IT — ESN, bureaux d'études et intégrateurs.",
+      "heroLabel": "GrowthIQ · Résumé de performance",
       "heroStats": [
         {
-          "value": "78%",
-          "label": "Alignement exécution"
+          "value": "68/100",
+          "label": "Score global · cette semaine"
         },
         {
-          "value": "84%",
-          "label": "Score d'effort manager"
+          "value": "74/100",
+          "label": "Discipline"
         },
         {
-          "value": "42",
-          "label": "Signaux haute valeur / sem."
+          "value": "71/100",
+          "label": "Exécution"
         },
         {
-          "value": "7",
-          "label": "Comptes à actionner"
+          "value": "58/100",
+          "label": "Résultat"
         }
       ],
       "heroPolicies": [
-        "Focus stratégique",
-        "Alerte dérive : Energy sous-couvert"
+        "Relances bien tenues · 81 %",
+        "3 comptes cibles sans contact depuis 12 jours"
       ],
-      "problemLabel": "LE PROBLÈME",
-      "problemTitle": "Votre CRM raconte ce qui a été déclaré. GrowthIQ montre ce qui se passe vraiment.",
-      "problemBody": "La plupart des données commerciales sont incomplètes, tardives ou éparpillées entre champs CRM, fichiers Excel et notes de managers. GrowthIQ standardise la façon dont les équipes capturent les signaux opérationnels à haute valeur pour que les dirigeants décident sur la réalité, et non sur un reporting fragmenté.",
-      "workflowLabel": "COMMENT ÇA MARCHE",
+      "problemLabel": "AUJOURD'HUI",
+      "problemTitle": "Fini le pilotage commercial à l'aveugle.",
+      "problemBody": "Reporting manuel et chronophage, données dispersées dans plusieurs outils, connaissances enfermées dans les silos individuels, coaching basé sur le ressenti : dans la plupart des ESN, les problèmes n'apparaissent que lorsque les résultats sont déjà impactés. GrowthIQ capture l'activité directement dans le workflow, pour que Business Managers, managers et dirigeants pilotent l'exécution avant les résultats — pas après.",
+      "workflowLabel": "DEMAIN, AVEC GROWTHIQ",
       "workflowSteps": [
-        "Définir la stratégie",
-        "Guider l'exécution",
-        "Capturer les signaux",
-        "Gouverner le pipeline",
-        "Décider"
+        "Capturer l'activité",
+        "Enrichir l'intelligence collective",
+        "Recommander la prochaine action",
+        "Coacher sur des faits",
+        "Piloter avant les résultats"
       ],
-      "capabilitiesLabel": "CAPACITÉS",
+      "capabilitiesLabel": "CE QUI CHANGE AVEC GROWTHIQ",
       "capabilities": [
         {
-          "title": "Alignement stratégique",
-          "text": "Traduisez les axes stratégiques en attentes de couverture mesurables pour chaque équipe et chaque compte."
+          "title": "1 source de vérité",
+          "text": "Des données commerciales fiables, partagées et toujours à jour, pour toute l'ESN."
         },
         {
-          "title": "Discipline d'exécution",
-          "text": "Guidez les managers et les équipes commerciales dans une cadence cohérente avec des prochaines actions claires."
+          "title": "Signaux faibles exploitables",
+          "text": "Chaque interaction anticipe un risque ou une opportunité, avant que le résultat ne tombe."
         },
         {
-          "title": "Mesure de l'effort",
-          "text": "Quantifiez l'effort commercial et son alignement avec les priorités, au-delà des seuls résultats déclarés dans le CRM."
+          "title": "0 perte de connaissance",
+          "text": "Le savoir commercial reste dans l'entreprise, plus dans les individus."
         },
         {
-          "title": "Capture des signaux opérationnels",
-          "text": "Standardisez la capture des signaux à haute valeur issus des propositions, de la livraison et des comptes."
+          "title": "Recommandations en temps réel",
+          "text": "Le bon signal, au bon moment, pour la bonne action sur chaque compte."
         },
         {
-          "title": "Pipeline gouverné",
-          "text": "Appliquez des règles de qualité et de qualification pour que le pipeline reflète la réalité et fonde des décisions fiables."
+          "title": "Coaching sur des faits",
+          "text": "Les managers coachent sur des faits et des signaux faibles, plus sur du ressenti."
         },
         {
-          "title": "Couche d'intelligence CRM",
-          "text": "Posez-vous sur Salesforce ou HubSpot et transformez l'activité CRM en intelligence de décision."
+          "title": "Organisation scalable",
+          "text": "Une intelligence collective qui s'enrichit à chaque interaction et rend l'ESN moins dépendante des individus."
         }
       ],
       "scenarioLabel": "POUR QUI",
       "scenarios": [
         {
-          "tag": "CEO / DG",
-          "title": "Alignement stratégie-exécution",
-          "text": "Visualisez en temps réel l'alignement entre la stratégie et l'exécution commerciale sur l'ensemble des BU et géographies.",
-          "result": "Décisions fondées sur la réalité"
+          "tag": "Business Manager · Ingénieur d'affaires",
+          "title": "Fini la prospection à l'aveugle.",
+          "text": "Chaque compte, chaque relance et chaque signal captés dans votre workflow. Vous savez quoi faire, sur quel compte, aujourd'hui — rien ne passe à la trappe.",
+          "result": "0 relance oubliée"
         },
         {
-          "tag": "DIRECTEUR COMMERCIAL",
-          "title": "Pilotage commercial",
-          "text": "Gouvernez le pipeline, concentrez les équipes sur les comptes prioritaires et coachez les managers hors stratégie.",
-          "result": "Effort redirigé vers les priorités"
+          "tag": "Manager · Directeur de BU",
+          "title": "Coachez avec des faits, pas au ressenti.",
+          "text": "100 % des signaux remontent avant que le résultat ne tombe. Vous coachez sur des faits, repérez les dérives et corrigez la trajectoire à temps.",
+          "result": "100 % des signaux remontés"
         },
         {
-          "tag": "DIRECTEUR DE BU",
-          "title": "Performance du périmètre",
-          "text": "Suivez la couverture, la dérive et les signaux à haute valeur sur votre BU et ajustez le focus avant que les objectifs ne dérapent.",
-          "result": "Correction de trajectoire proactive"
-        },
-        {
-          "tag": "BUSINESS MANAGER",
-          "title": "Exécution des comptes",
-          "text": "Pilotez les comptes avec une cadence cohérente, capturez les signaux opérationnels et faites remonter ce qui doit être traité aujourd'hui.",
-          "result": "Exécution disciplinée des comptes"
+          "tag": "CEO · Direction",
+          "title": "Pilotez l'exécution, pas seulement les résultats.",
+          "text": "Une source de vérité durable sur l'exécution commerciale de toute l'ESN. Vous décidez sur la réalité, pas sur un reporting fragmenté.",
+          "result": "≈ 210 k€ de temps commercial récupéré / an"
         }
       ],
-      "loopLabel": "CONNECTÉ À PROPOSALIQ",
+      "loopLabel": "CHAQUE INTERACTION ENRICHIT VOTRE ESN",
       "loopSteps": [
-        "Stratégie",
-        "Exécution des comptes",
-        "Pipeline",
-        "RFQ",
-        "Proposition",
-        "Win/Loss",
+        "Interaction",
+        "Signal capté",
+        "Intelligence collective",
+        "Recommandation",
+        "Action",
+        "Résultat",
         "Apprentissage",
-        "Stratégie améliorée"
+        "ESN plus forte"
       ],
-      "ctaTitle": "Prêt à aligner l'exécution commerciale sur la stratégie ?",
-      "ctaSubtitle": "Découvrez comment GrowthIQ aide les cabinets d'engineering et services IT à transformer l'activité commerciale en intelligence de décision.",
-      "primaryCta": "Demander une démo",
+      "ctaTitle": "Testez GrowthIQ gratuitement. Décidez ensuite.",
+      "ctaSubtitle": "1 mois d'accès complet, sans carte bancaire. On vous montre l'outil en 20 à 30 minutes sur votre activité commerciale réelle.",
+      "primaryCta": "Tester gratuitement 1 mois",
       "secondaryCta": "Voir comment ça marche",
-      "ctaButton": "Demander une démo"
+      "ctaButton": "Voir les tarifs"
     },
     "governanceiq": {
       "seoTitle": "Governance Layer, Conformité documentaire équipe, Mindorion",
