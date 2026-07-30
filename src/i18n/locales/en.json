@@ -437,115 +437,109 @@
       "ctaButton": "Explore ProposalIQ"
     },
     "growthiq": {
-      "seoTitle": "GrowthIQ, Commercial Execution Intelligence for Engineering & IT Services, Mindorion",
-      "seoDescription": "GrowthIQ helps Engineering & IT Services firms guide business development, capture high-value operational signals and turn commercial activity into decision intelligence.",
-      "eyebrow": "GrowthIQ, Commercial Execution Intelligence",
-      "title": "Align strategy with commercial execution.",
-      "subtitle": "GrowthIQ helps Engineering & IT Services firms guide business development, capture high-value operational signals and turn commercial activity into decision intelligence.",
-      "heroLabel": "EXECUTION DASHBOARD · GROWTHIQ",
+      "seoTitle": "GrowthIQ · Commercial execution finally visible for engineering & IT services firms — Mindorion",
+      "seoDescription": "GrowthIQ makes commercial steering of engineering & IT services firms finally visible: every signal captured in the workflow, real-time recommendations and a durable single source of truth.",
+      "eyebrow": "GrowthIQ · Commercial Execution Intelligence",
+      "title": "Commercial execution. Finally visible.",
+      "subtitle": "Commercial steering for engineering and IT services firms — consultancies, design offices and integrators.",
+      "heroLabel": "GrowthIQ · Performance summary",
       "heroStats": [
         {
-          "value": "78%",
-          "label": "Execution alignment"
+          "value": "68/100",
+          "label": "Overall score · this week"
         },
         {
-          "value": "84%",
-          "label": "Manager effort score"
+          "value": "74/100",
+          "label": "Discipline"
         },
         {
-          "value": "42",
-          "label": "High-value signals/week"
+          "value": "71/100",
+          "label": "Execution"
         },
         {
-          "value": "7",
-          "label": "Accounts requiring action"
+          "value": "58/100",
+          "label": "Outcome"
         }
       ],
       "heroPolicies": [
-        "Strategic focus",
-        "Drift alert: Energy under-covered"
+        "Follow-ups well kept · 81%",
+        "3 target accounts with no contact for 12 days"
       ],
-      "problemLabel": "THE PROBLEM",
-      "problemTitle": "Your CRM tells you what was reported. GrowthIQ shows what's really happening.",
-      "problemBody": "Most commercial data is incomplete, late or scattered across CRM fields, Excel files and manager notes. GrowthIQ standardizes the way teams capture high-value operational signals so leaders decide on reality, not fragmented reporting.",
-      "workflowLabel": "HOW IT WORKS",
+      "problemLabel": "TODAY",
+      "problemTitle": "No more flying blind on commercial execution.",
+      "problemBody": "Manual, time-consuming reporting, data scattered across tools, knowledge locked in individual silos, coaching based on gut feel: in most services firms, problems only surface once results are already hit. GrowthIQ captures activity directly in the workflow, so business managers, managers and leaders steer execution before the results — not after.",
+      "workflowLabel": "TOMORROW, WITH GROWTHIQ",
       "workflowSteps": [
-        "Define Strategy",
-        "Guide Execution",
-        "Capture Signals",
-        "Govern Pipeline",
-        "Decide"
+        "Capture activity",
+        "Enrich collective intelligence",
+        "Recommend the next action",
+        "Coach on facts",
+        "Steer before results"
       ],
-      "capabilitiesLabel": "CAPABILITIES",
+      "capabilitiesLabel": "WHAT CHANGES WITH GROWTHIQ",
       "capabilities": [
         {
-          "title": "Strategy Alignment",
-          "text": "Translate strategic focus areas into measurable coverage expectations for every team and account."
+          "title": "One source of truth",
+          "text": "Reliable, shared commercial data, always up to date, for the whole firm."
         },
         {
-          "title": "Execution Discipline",
-          "text": "Guide managers and sales teams through a consistent commercial cadence with clear next actions."
+          "title": "Actionable weak signals",
+          "text": "Every interaction anticipates a risk or an opportunity, before the result lands."
         },
         {
-          "title": "Effort Measurement",
-          "text": "Quantify commercial effort and alignment with priorities, not just outcomes reported in the CRM."
+          "title": "Zero knowledge loss",
+          "text": "Commercial know-how stays in the company, not in individuals."
         },
         {
-          "title": "Operational Signal Capture",
-          "text": "Standardize the capture of high-value signals from proposals, delivery and account conversations."
+          "title": "Real-time recommendations",
+          "text": "The right signal, at the right moment, for the right action on every account."
         },
         {
-          "title": "Governed Pipeline",
-          "text": "Apply quality and qualification rules so the pipeline reflects reality and supports confident decisions."
+          "title": "Coaching on facts",
+          "text": "Managers coach on facts and weak signals, no longer on gut feel."
         },
         {
-          "title": "CRM Intelligence Layer",
-          "text": "Sit on top of Salesforce or HubSpot and turn raw CRM activity into decision-grade intelligence."
+          "title": "A firm that scales",
+          "text": "Collective intelligence that grows with every interaction and makes the firm less dependent on individuals."
         }
       ],
       "scenarioLabel": "WHO IT'S FOR",
       "scenarios": [
         {
-          "tag": "CEO / MANAGING DIRECTOR",
-          "title": "Strategy-execution alignment",
-          "text": "See in real time how the firm's commercial execution aligns with the strategy across business units and geographies.",
-          "result": "Decisions grounded in reality"
+          "tag": "Business Manager · Account Engineer",
+          "title": "No more flying blind on prospecting.",
+          "text": "Every account, every follow-up and every signal captured in your workflow. You know what to do, on which account, today — nothing slips through.",
+          "result": "0 forgotten follow-ups"
         },
         {
-          "tag": "SALES DIRECTOR",
-          "title": "Commercial steering",
-          "text": "Govern the pipeline, focus teams on priority accounts and coach managers where effort is off-strategy.",
-          "result": "Effort redirected to priorities"
+          "tag": "Manager · Business Unit Director",
+          "title": "Coach with facts, not gut feel.",
+          "text": "100% of signals surface before the result lands. You coach on facts, spot drift and correct course in time.",
+          "result": "100% of signals surfaced"
         },
         {
-          "tag": "BUSINESS UNIT DIRECTOR",
-          "title": "Perimeter performance",
-          "text": "Track coverage, drift and high-value signals across your BU and adjust focus before targets slip.",
-          "result": "Proactive course correction"
-        },
-        {
-          "tag": "BUSINESS MANAGER",
-          "title": "Account execution",
-          "text": "Run accounts with a consistent cadence, capture operational signals and surface what needs action today.",
-          "result": "Disciplined account execution"
+          "tag": "CEO · Leadership",
+          "title": "Steer execution, not just results.",
+          "text": "A durable source of truth on the commercial execution of the whole firm. You decide on reality, not on fragmented reporting.",
+          "result": "≈ €210k of commercial time recovered / year"
         }
       ],
-      "loopLabel": "CONNECTED WITH PROPOSALIQ",
+      "loopLabel": "EVERY INTERACTION ENRICHES YOUR FIRM",
       "loopSteps": [
-        "Strategy",
-        "Account Execution",
-        "Pipeline",
-        "RFQ",
-        "Proposal",
-        "Win/Loss",
+        "Interaction",
+        "Signal captured",
+        "Collective intelligence",
+        "Recommendation",
+        "Action",
+        "Result",
         "Learning",
-        "Better Strategy"
+        "A stronger firm"
       ],
-      "ctaTitle": "Ready to align commercial execution with strategy?",
-      "ctaSubtitle": "See how GrowthIQ helps engineering and IT services firms turn commercial activity into decision intelligence.",
-      "primaryCta": "Request a demo",
+      "ctaTitle": "Try GrowthIQ for free. Decide afterwards.",
+      "ctaSubtitle": "One month of full access, no credit card. We'll walk you through the tool in 20–30 minutes on your real commercial activity.",
+      "primaryCta": "Try free for 1 month",
       "secondaryCta": "See how it works",
-      "ctaButton": "Request a demo"
+      "ctaButton": "See pricing"
     },
     "governanceiq": {
       "seoTitle": "Governance Layer, Team document compliance, Mindorion",
