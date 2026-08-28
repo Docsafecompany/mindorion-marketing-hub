@@ -1008,20 +1008,11 @@
     "productError": "Sélectionnez au moins un produit.",
     "submit": "Envoyer ma demande →",
     "footer": "Nous vous recontactons sous 24h · Aucun engagement",
-    "subjectPrefix": "Demande de démo Mindorion:",
-    "subjectFallback": "Nouvelle entreprise",
-    "mailLabels": {
-      "firstName": "Prénom",
-      "lastName": "Nom",
-      "email": "Email professionnel",
-      "company": "Entreprise",
-      "products": "Produits",
-      "teamSize": "Taille de l'équipe",
-      "teamSizeFallback": "Non précisée",
-      "message": "Message",
-      "messageFallback": "Aucun message"
-    },
-    "successText": "Merci ! Nous vous recontactons sous 24 heures."
+    "sending": "Envoi...",
+    "fallbackTitle": "EMAIL DIRECT",
+    "fallbackMessage": "L'envoi côté serveur n'est pas encore connecté. Envoyez votre demande directement à l'adresse ci-dessous en mentionnant les produits sélectionnés.",
+    "copyEmail": "Copier l'adresse",
+    "copied": "Copié"
   },
   "privacy": {
     "seoTitle": "Confidentialité, Mindorion",
