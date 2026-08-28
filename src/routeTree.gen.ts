@@ -11,13 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WhyMindorionRouteImport } from './routes/why-mindorion'
 import { Route as UseCasesRouteImport } from './routes/use-cases'
-import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SecurityRouteImport } from './routes/security'
-import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductsProposaliqRouteImport } from './routes/products.proposaliq'
 import { Route as ProductsGrowthiqRouteImport } from './routes/products.growthiq'
@@ -36,19 +33,9 @@ const UseCasesRoute = UseCasesRouteImport.update({
   path: '/use-cases',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SecurityRoute = SecurityRouteImport.update({
   id: '/security',
   path: '/security',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -64,11 +51,6 @@ const ContactRoute = ContactRouteImport.update({
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -109,13 +91,10 @@ const ApiPublicGeoRoute = ApiPublicGeoRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
-  '/privacy': typeof PrivacyRoute
   '/security': typeof SecurityRoute
-  '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
   '/why-mindorion': typeof WhyMindorionRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -127,13 +106,10 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
-  '/privacy': typeof PrivacyRoute
   '/security': typeof SecurityRoute
-  '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
   '/why-mindorion': typeof WhyMindorionRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -146,13 +122,10 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/pricing': typeof PricingRoute
-  '/privacy': typeof PrivacyRoute
   '/security': typeof SecurityRoute
-  '/terms': typeof TermsRoute
   '/use-cases': typeof UseCasesRoute
   '/why-mindorion': typeof WhyMindorionRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -166,13 +139,10 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
     | '/blog'
     | '/contact'
     | '/pricing'
-    | '/privacy'
     | '/security'
-    | '/terms'
     | '/use-cases'
     | '/why-mindorion'
     | '/blog/$slug'
@@ -184,13 +154,10 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
     | '/blog'
     | '/contact'
     | '/pricing'
-    | '/privacy'
     | '/security'
-    | '/terms'
     | '/use-cases'
     | '/why-mindorion'
     | '/blog/$slug'
@@ -202,13 +169,10 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/about'
     | '/blog'
     | '/contact'
     | '/pricing'
-    | '/privacy'
     | '/security'
-    | '/terms'
     | '/use-cases'
     | '/why-mindorion'
     | '/blog/$slug'
@@ -221,13 +185,10 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   PricingRoute: typeof PricingRoute
-  PrivacyRoute: typeof PrivacyRoute
   SecurityRoute: typeof SecurityRoute
-  TermsRoute: typeof TermsRoute
   UseCasesRoute: typeof UseCasesRoute
   WhyMindorionRoute: typeof WhyMindorionRoute
   LegalPrivacyRoute: typeof LegalPrivacyRoute
@@ -253,25 +214,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UseCasesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/security': {
       id: '/security'
       path: '/security'
       fullPath: '/security'
       preLoaderRoute: typeof SecurityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -293,13 +240,6 @@ declare module '@tanstack/react-router' {
       path: '/blog'
       fullPath: '/blog'
       preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -366,13 +306,10 @@ const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   PricingRoute: PricingRoute,
-  PrivacyRoute: PrivacyRoute,
   SecurityRoute: SecurityRoute,
-  TermsRoute: TermsRoute,
   UseCasesRoute: UseCasesRoute,
   WhyMindorionRoute: WhyMindorionRoute,
   LegalPrivacyRoute: LegalPrivacyRoute,
