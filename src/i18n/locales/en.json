@@ -1008,20 +1008,11 @@
     "productError": "Select at least one product.",
     "submit": "Send my request →",
     "footer": "We get back to you within 24h · No commitment",
-    "subjectPrefix": "Mindorion demo request:",
-    "subjectFallback": "New company",
-    "mailLabels": {
-      "firstName": "First name",
-      "lastName": "Last name",
-      "email": "Work email",
-      "company": "Company",
-      "products": "Products",
-      "teamSize": "Team size",
-      "teamSizeFallback": "Not specified",
-      "message": "Message",
-      "messageFallback": "No message"
-    },
-    "successText": "Thanks! We'll get back to you within 24 hours."
+    "sending": "Sending...",
+    "fallbackTitle": "DIRECT EMAIL",
+    "fallbackMessage": "Our server-side sending is not connected yet. Please send your request directly to the address below and mention the products you selected.",
+    "copyEmail": "Copy address",
+    "copied": "Copied"
   },
   "privacy": {
     "seoTitle": "Privacy, Mindorion",

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
@@ -24,26 +24,13 @@ function ContactPage() {
   const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [productError, setProductError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const productOptions = t("contact.productOptions", { returnObjects: true }) as string[];
   const teamSizes = t("contact.teamSizes", { returnObjects: true }) as string[];
   const perks = t("contact.perks", { returnObjects: true }) as Array<{ icon: string; title: string; text: string }>;
-  const ml = t("contact.mailLabels", { returnObjects: true }) as Record<string, string>;
-
-  const mailtoHref = useMemo(() => {
-    const subject = `${t("contact.subjectPrefix")} ${form.company || t("contact.subjectFallback")}`;
-    const body = [
-      `${ml.firstName}: ${form.firstName}`,
-      `${ml.lastName}: ${form.lastName}`,
-      `${ml.email}: ${form.email}`,
-      `${ml.company}: ${form.company}`,
-      `${ml.products}: ${selectedProducts.join(", ")}`,
-      `${ml.teamSize}: ${form.teamSize || ml.teamSizeFallback}`,
-      `${ml.message}: ${form.message || ml.messageFallback}`,
-    ].join("\n");
-
-    return `mailto:contact@mindorion.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }, [form, selectedProducts, ml, t]);
+  const contactEmail = t("site.contactEmail");
 
   return (
     <div className="editorial-page font-pricing">
@@ -83,18 +70,22 @@ function ContactPage() {
               className="mt-6 space-y-5"
               onSubmit={(event) => {
                 event.preventDefault();
+                if (isSubmitting) return;
                 if (selectedProducts.length === 0) {
                   setProductError(true);
                   return;
                 }
 
                 setProductError(false);
-                setSubmitted(false);
+                setIsSubmitting(true);
                 trackEvent("contact_form_submitted", {
                   products_selected: selectedProducts,
                   team_size: form.teamSize || "unspecified",
                 });
-                window.location.href = mailtoHref;
+                // Server-side send is not wired yet. Show a fallback instead of
+                // triggering mailto: or pretending the message was delivered.
+                setSubmitted(true);
+                setIsSubmitting(false);
               }}
             >
               <div className="grid gap-4 sm:grid-cols-2">
@@ -192,12 +183,36 @@ function ContactPage() {
                 />
               </label>
 
-              <Button type="submit" className="editorial-purple-bg h-11 w-full rounded-lg text-sm font-semibold text-white hover:opacity-95">
-                {t("contact.submit")}
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="editorial-purple-bg h-11 w-full rounded-lg text-sm font-semibold text-white hover:opacity-95 disabled:opacity-60"
+              >
+                {isSubmitting ? t("contact.sending") : t("contact.submit")}
               </Button>
 
               <p className="text-center text-sm text-muted-foreground">{t("contact.footer")}</p>
-              {submitted ? <p className="text-center text-sm editorial-success">{t("contact.successText")}</p> : null}
+
+              {submitted ? (
+                <div className="editorial-gray-soft rounded-[10px] p-5 text-sm">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("contact.fallbackTitle")}</div>
+                  <p className="mt-3 leading-6 text-muted-foreground">{t("contact.fallbackMessage")}</p>
+                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <div className="text-lg font-semibold editorial-purple-text">{contactEmail}</div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        void navigator.clipboard.writeText(contactEmail);
+                        setCopied(true);
+                        window.setTimeout(() => setCopied(false), 2000);
+                      }}
+                      className="rounded-md bg-white px-3 py-1.5 text-xs font-semibold text-foreground shadow-sm hover:bg-white/80"
+                    >
+                      {copied ? t("contact.copied") : t("contact.copyEmail")}
+                    </button>
+                  </div>
+                </div>
+              ) : null}
             </form>
           </section>
         </div>
