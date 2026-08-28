@@ -10,8 +10,7 @@ import { pathToFileURL } from "node:url";
 const dist = path.resolve("dist");
 const ssrEntry = path.resolve("dist-ssr/entry-server.js");
 
-const { render } = await import(pathToFileURL(ssrEntry).href);
-const { ROUTE_SEO, SEO_OG_IMAGE, SEO_SITE_URL } = await import(pathToFileURL(path.resolve("dist-ssr/seo-routes.js")).href);
+const { render, ROUTE_SEO, SEO_OG_IMAGE, SEO_SITE_URL } = await import(pathToFileURL(ssrEntry).href);
 
 const template = fs.readFileSync(path.join(dist, "index.html"), "utf8");
 

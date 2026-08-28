@@ -4,6 +4,8 @@ import { RouterProvider, createMemoryHistory } from "@tanstack/react-router";
 
 import { getRouter } from "./router";
 
+export { ROUTE_SEO, SEO_OG_IMAGE, SEO_SITE_URL } from "./lib/seo-routes";
+
 export async function render(url: string) {
   const router = getRouter();
   router.update({
