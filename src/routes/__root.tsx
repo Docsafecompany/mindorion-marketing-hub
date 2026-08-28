@@ -3,6 +3,7 @@ import { Link, Outlet, createRootRoute, useRouterState } from "@tanstack/react-r
 
 import "@/i18n";
 import { CookieBanner } from "@/components/CookieBanner";
+import { RouteHead } from "@/components/RouteHead";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Button } from "@/components/ui/button";
@@ -74,6 +75,7 @@ function RootComponent() {
 
   return (
     <>
+      <RouteHead />
       <ScrollToTop />
       <SiteLayout>
         <Outlet />
