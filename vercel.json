@@ -25,6 +25,16 @@
       "source": "/prospectiq",
       "destination": "/products/growthiq",
       "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/legal/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/legal/terms",
+      "permanent": true
     }
   ],
   "headers": [
