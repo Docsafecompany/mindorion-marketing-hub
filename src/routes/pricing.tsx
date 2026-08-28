@@ -852,7 +852,12 @@ function PricingPage() {
         </TabsList>
 
         {copy.products.map((product) => (
-          <TabsContent key={product.key} value={product.key} className="mt-8 space-y-10">
+          <TabsContent
+            key={product.key}
+            value={product.key}
+            forceMount
+            className="mt-8 space-y-10 data-[state=inactive]:hidden"
+          >
             <div className="grid gap-4 lg:grid-cols-4 xl:gap-6">
               {product.plans.map((plan) => (
                 <PlanCard key={`${product.key}-${plan.name}`} productKey={product.key} billing={billing} plan={plan} popularLabel={copy.popular} customLabel={copy.custom} suiteLabel={copy.includedInSuite} />

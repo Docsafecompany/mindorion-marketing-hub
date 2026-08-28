@@ -1,6 +1,8 @@
 // Single source of truth for per-route SEO metadata.
 // Used by (1) the build-time prerenderer and (2) the runtime head sync component.
 
+import { blogPosts } from "./site-data";
+
 export const SEO_SITE_URL = "https://mindorion.com";
 export const SEO_OG_IMAGE = `${SEO_SITE_URL}/og-default.jpg`;
 
@@ -9,7 +11,7 @@ export type RouteSeo = {
   description: string;
 };
 
-export const ROUTE_SEO: Record<string, RouteSeo> = {
+const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
   "/": {
     title: "Mindorion | Enterprise OS for Engineering & IT Services",
     description:
@@ -59,6 +61,27 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     title: "Terms of Use | Mindorion",
     description: "The terms of use governing access to the Mindorion marketing website and its content.",
   },
+};
+
+// Blog index + one entry per article, derived from the article data source
+// so a new post is prerendered with its own head without manual edits here.
+const BLOG_ROUTE_SEO: Record<string, RouteSeo> = {
+  "/blog": {
+    title: "Blog | Engineering and IT Services Insights | Mindorion",
+    description:
+      "Articles, guides and resources for engineering and IT services firms: document quality, commercial execution and operational governance.",
+  },
+  ...Object.fromEntries(
+    blogPosts.map((post) => [
+      `/blog/${post.slug}`,
+      { title: `${post.seoTitle} | Mindorion Blog`, description: post.description },
+    ]),
+  ),
+};
+
+export const ROUTE_SEO: Record<string, RouteSeo> = {
+  ...STATIC_ROUTE_SEO,
+  ...BLOG_ROUTE_SEO,
 };
 
 export const SEO_ROUTES = Object.keys(ROUTE_SEO);
