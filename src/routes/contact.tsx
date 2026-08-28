@@ -183,12 +183,36 @@ function ContactPage() {
                 />
               </label>
 
-              <Button type="submit" className="editorial-purple-bg h-11 w-full rounded-lg text-sm font-semibold text-white hover:opacity-95">
-                {t("contact.submit")}
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="editorial-purple-bg h-11 w-full rounded-lg text-sm font-semibold text-white hover:opacity-95 disabled:opacity-60"
+              >
+                {isSubmitting ? t("contact.sending") : t("contact.submit")}
               </Button>
 
               <p className="text-center text-sm text-muted-foreground">{t("contact.footer")}</p>
-              {submitted ? <p className="text-center text-sm editorial-success">{t("contact.successText")}</p> : null}
+
+              {submitted ? (
+                <div className="editorial-gray-soft rounded-[10px] p-5 text-sm">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("contact.fallbackTitle")}</div>
+                  <p className="mt-3 leading-6 text-muted-foreground">{t("contact.fallbackMessage")}</p>
+                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <div className="text-lg font-semibold editorial-purple-text">{contactEmail}</div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        void navigator.clipboard.writeText(contactEmail);
+                        setCopied(true);
+                        window.setTimeout(() => setCopied(false), 2000);
+                      }}
+                      className="rounded-md bg-white px-3 py-1.5 text-xs font-semibold text-foreground shadow-sm hover:bg-white/80"
+                    >
+                      {copied ? t("contact.copied") : t("contact.copyEmail")}
+                    </button>
+                  </div>
+                </div>
+              ) : null}
             </form>
           </section>
         </div>
