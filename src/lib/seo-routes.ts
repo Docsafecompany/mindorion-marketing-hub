@@ -63,6 +63,27 @@ const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
   },
 };
 
+// Blog index + one entry per article, derived from the article data source
+// so a new post is prerendered with its own head without manual edits here.
+const BLOG_ROUTE_SEO: Record<string, RouteSeo> = {
+  "/blog": {
+    title: "Blog | Engineering and IT Services Insights | Mindorion",
+    description:
+      "Articles, guides and resources for engineering and IT services firms: document quality, commercial execution and operational governance.",
+  },
+  ...Object.fromEntries(
+    blogPosts.map((post) => [
+      `/blog/${post.slug}`,
+      { title: `${post.seoTitle} | Mindorion Blog`, description: post.description },
+    ]),
+  ),
+};
+
+export const ROUTE_SEO: Record<string, RouteSeo> = {
+  ...STATIC_ROUTE_SEO,
+  ...BLOG_ROUTE_SEO,
+};
+
 export const SEO_ROUTES = Object.keys(ROUTE_SEO);
 
 export function getRouteSeo(pathname: string): RouteSeo | null {
