@@ -1,6 +1,8 @@
 // Single source of truth for per-route SEO metadata.
 // Used by (1) the build-time prerenderer and (2) the runtime head sync component.
 
+import { blogPosts } from "./site-data";
+
 export const SEO_SITE_URL = "https://mindorion.com";
 export const SEO_OG_IMAGE = `${SEO_SITE_URL}/og-default.jpg`;
 
@@ -9,7 +11,7 @@ export type RouteSeo = {
   description: string;
 };
 
-export const ROUTE_SEO: Record<string, RouteSeo> = {
+const STATIC_ROUTE_SEO: Record<string, RouteSeo> = {
   "/": {
     title: "Mindorion | Enterprise OS for Engineering & IT Services",
     description:
