@@ -70,18 +70,22 @@ function ContactPage() {
               className="mt-6 space-y-5"
               onSubmit={(event) => {
                 event.preventDefault();
+                if (isSubmitting) return;
                 if (selectedProducts.length === 0) {
                   setProductError(true);
                   return;
                 }
 
                 setProductError(false);
-                setSubmitted(false);
+                setIsSubmitting(true);
                 trackEvent("contact_form_submitted", {
                   products_selected: selectedProducts,
                   team_size: form.teamSize || "unspecified",
                 });
-                window.location.href = mailtoHref;
+                // Server-side send is not wired yet. Show a fallback instead of
+                // triggering mailto: or pretending the message was delivered.
+                setSubmitted(true);
+                setIsSubmitting(false);
               }}
             >
               <div className="grid gap-4 sm:grid-cols-2">
