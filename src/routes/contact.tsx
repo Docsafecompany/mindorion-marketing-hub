@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 
@@ -24,26 +24,13 @@ function ContactPage() {
   const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [productError, setProductError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const productOptions = t("contact.productOptions", { returnObjects: true }) as string[];
   const teamSizes = t("contact.teamSizes", { returnObjects: true }) as string[];
   const perks = t("contact.perks", { returnObjects: true }) as Array<{ icon: string; title: string; text: string }>;
-  const ml = t("contact.mailLabels", { returnObjects: true }) as Record<string, string>;
-
-  const mailtoHref = useMemo(() => {
-    const subject = `${t("contact.subjectPrefix")} ${form.company || t("contact.subjectFallback")}`;
-    const body = [
-      `${ml.firstName}: ${form.firstName}`,
-      `${ml.lastName}: ${form.lastName}`,
-      `${ml.email}: ${form.email}`,
-      `${ml.company}: ${form.company}`,
-      `${ml.products}: ${selectedProducts.join(", ")}`,
-      `${ml.teamSize}: ${form.teamSize || ml.teamSizeFallback}`,
-      `${ml.message}: ${form.message || ml.messageFallback}`,
-    ].join("\n");
-
-    return `mailto:contact@mindorion.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }, [form, selectedProducts, ml, t]);
+  const contactEmail = t("site.contactEmail");
 
   return (
     <div className="editorial-page font-pricing">
