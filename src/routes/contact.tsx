@@ -72,7 +72,7 @@ function ContactPage() {
 
             <form
               className="mt-6 space-y-5"
-              onSubmit={(event) => {
+              onSubmit={async (event) => {
                 event.preventDefault();
                 if (isSubmitting) return;
                 if (selectedProducts.length === 0) {
@@ -82,15 +82,44 @@ function ContactPage() {
 
                 setProductError(false);
                 setIsSubmitting(true);
+                setStatus("idle");
                 trackEvent("contact_form_submitted", {
                   products_selected: selectedProducts,
                   team_size: form.teamSize || "unspecified",
                 });
-                // Server-side send is not wired yet. Show a fallback instead of
-                // triggering mailto: or pretending the message was delivered.
-                setSubmitted(true);
-                setIsSubmitting(false);
+
+                try {
+                  const { data, error } = await supabase.functions.invoke("send-contact-email", {
+                    body: {
+                      firstName: form.firstName.trim(),
+                      lastName: form.lastName.trim(),
+                      email: form.email.trim(),
+                      company: form.company.trim(),
+                      products: selectedProducts,
+                      teamSize: form.teamSize,
+                      message: form.message.trim(),
+                      locale: i18n.language,
+                      website,
+                    },
+                  });
+
+                  // Only a truthy `ok` from the server means the email really left.
+                  if (error || !data || (data as { ok?: boolean }).ok !== true) {
+                    console.error("contact send failed", error, data);
+                    setStatus("error");
+                  } else {
+                    setStatus("success");
+                    setForm({ firstName: "", lastName: "", email: "", company: "", teamSize: "", message: "" });
+                    setSelectedProducts([]);
+                  }
+                } catch (sendError) {
+                  console.error("contact send threw", sendError);
+                  setStatus("error");
+                } finally {
+                  setIsSubmitting(false);
+                }
               }}
+
             >
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="block text-sm font-medium text-foreground">
