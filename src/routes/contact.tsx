@@ -216,6 +216,19 @@ function ContactPage() {
                 />
               </label>
 
+              <div className="hidden" aria-hidden="true">
+                <label>
+                  Website
+                  <input
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={website}
+                    onChange={(event) => setWebsite(event.target.value)}
+                  />
+                </label>
+              </div>
+
               <Button
                 type="submit"
                 disabled={isSubmitting}
@@ -226,10 +239,17 @@ function ContactPage() {
 
               <p className="text-center text-sm text-muted-foreground">{t("contact.footer")}</p>
 
-              {submitted ? (
-                <div className="editorial-gray-soft rounded-[10px] p-5 text-sm">
-                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("contact.fallbackTitle")}</div>
-                  <p className="mt-3 leading-6 text-muted-foreground">{t("contact.fallbackMessage")}</p>
+              {status === "success" ? (
+                <div className="editorial-gray-soft rounded-[10px] p-5 text-sm" role="status">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] editorial-purple-text">{t("contact.successTitle")}</div>
+                  <p className="mt-3 leading-6 text-muted-foreground">{t("contact.successMessage")}</p>
+                </div>
+              ) : null}
+
+              {status === "error" ? (
+                <div className="editorial-gray-soft rounded-[10px] p-5 text-sm" role="alert">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] editorial-danger">{t("contact.errorTitle")}</div>
+                  <p className="mt-3 leading-6 text-muted-foreground">{t("contact.errorMessage")}</p>
                   <div className="mt-4 flex flex-wrap items-center gap-3">
                     <div className="text-lg font-semibold editorial-purple-text">{contactEmail}</div>
                     <button
@@ -246,6 +266,7 @@ function ContactPage() {
                   </div>
                 </div>
               ) : null}
+
             </form>
           </section>
         </div>
