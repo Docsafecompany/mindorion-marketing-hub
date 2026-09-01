@@ -1009,10 +1009,12 @@
     "submit": "Send my request →",
     "footer": "We get back to you within 24h · No commitment",
     "sending": "Sending...",
-    "fallbackTitle": "DIRECT EMAIL",
-    "fallbackMessage": "Our server-side sending is not connected yet. Please send your request directly to the address below and mention the products you selected.",
     "copyEmail": "Copy address",
-    "copied": "Copied"
+    "copied": "Copied",
+    "successTitle": "REQUEST SENT",
+    "successMessage": "Thanks, your request has been sent to our team. We get back to you within 24h.",
+    "errorTitle": "SENDING FAILED",
+    "errorMessage": "Your request could not be sent. Please write to us directly at the address below and mention the products you selected."
   },
   "privacy": {
     "seoTitle": "Privacy, Mindorion",
@@ -1242,16 +1244,34 @@
           "Governance Layer connects it all: proposals, pipeline and operations in one operating system."
         ],
         "modules": [
-          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Proposal quality & win rate" },
-          { "name": "GrowthIQ", "tone": "growthiq", "text": "Commercial execution & pipeline" },
-          { "name": "Ecosystem", "tone": "ecosystem", "text": "Unified governance across both" }
+          {
+            "name": "ProposalIQ",
+            "tone": "proposaliq",
+            "text": "Proposal quality & win rate"
+          },
+          {
+            "name": "GrowthIQ",
+            "tone": "growthiq",
+            "text": "Commercial execution & pipeline"
+          },
+          {
+            "name": "Ecosystem",
+            "tone": "ecosystem",
+            "text": "Unified governance across both"
+          }
         ],
         "footnote": "Mindorion gives CEOs of ESNs the operational data foundation they need to lead with confidence.",
         "panel": {
           "kpiTitle": "PIPELINE & PROPOSAL OVERVIEW",
           "kpis": [
-            { "value": "€4.2M", "label": "Active pipeline" },
-            { "value": "67%", "label": "Strategy alignment" }
+            {
+              "value": "€4.2M",
+              "label": "Active pipeline"
+            },
+            {
+              "value": "67%",
+              "label": "Strategy alignment"
+            }
           ],
           "listTitle": "PROPOSAL QUALITY THIS WEEK",
           "rows": [
@@ -1260,8 +1280,14 @@
               "score": "92/100",
               "tone": "good",
               "items": [
-                { "tone": "good", "text": "All requirements mapped ✓" },
-                { "tone": "good", "text": "No internal comments exposed ✓" }
+                {
+                  "tone": "good",
+                  "text": "All requirements mapped ✓"
+                },
+                {
+                  "tone": "good",
+                  "text": "No internal comments exposed ✓"
+                }
               ]
             },
             {
@@ -1269,8 +1295,14 @@
               "score": "61/100",
               "tone": "warning",
               "items": [
-                { "tone": "warning", "text": "Pricing assumptions not validated" },
-                { "tone": "critical", "text": "2 RFP requirements unmapped" }
+                {
+                  "tone": "warning",
+                  "text": "Pricing assumptions not validated"
+                },
+                {
+                  "tone": "critical",
+                  "text": "2 RFP requirements unmapped"
+                }
               ]
             }
           ]
@@ -1288,17 +1320,44 @@
           "Drift alerts: know immediately when your prospecting diverges from the agreed commercial strategy."
         ],
         "modules": [
-          { "name": "GrowthIQ", "tone": "growthiq", "text": "Pipeline, VIPs, alignment, follow-up" },
-          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Proposal quality before you send" },
-          { "name": "Ecosystem", "tone": "ecosystem", "text": "Your effort feeds collective performance" }
+          {
+            "name": "GrowthIQ",
+            "tone": "growthiq",
+            "text": "Pipeline, VIPs, alignment, follow-up"
+          },
+          {
+            "name": "ProposalIQ",
+            "tone": "proposaliq",
+            "text": "Proposal quality before you send"
+          },
+          {
+            "name": "Ecosystem",
+            "tone": "ecosystem",
+            "text": "Your effort feeds collective performance"
+          }
         ],
         "footnote": "Mindorion turns your individual commercial effort into recognized, collective company performance.",
         "panel": {
           "accountsTitle": "MY PRIORITY ACCOUNTS",
           "accounts": [
-            { "dot": "green", "name": "Client A, Aerospace", "badge": "VIP ★", "tone": "good" },
-            { "dot": "amber", "name": "Client B, Energy", "badge": "Follow up due", "tone": "warning" },
-            { "dot": "red", "name": "Client C, Pharma", "badge": "Gone cold, 18 days", "tone": "critical" }
+            {
+              "dot": "green",
+              "name": "Client A, Aerospace",
+              "badge": "VIP ★",
+              "tone": "good"
+            },
+            {
+              "dot": "amber",
+              "name": "Client B, Energy",
+              "badge": "Follow up due",
+              "tone": "warning"
+            },
+            {
+              "dot": "red",
+              "name": "Client C, Pharma",
+              "badge": "Gone cold, 18 days",
+              "tone": "critical"
+            }
           ],
           "alignmentTitle": "STRATEGY ALIGNMENT",
           "alertTitle": "Drift detected, 3 accounts",
@@ -1317,8 +1376,16 @@
           "Access the full proposal context before kick-off, aligned with what was sold, not what someone remembers."
         ],
         "modules": [
-          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Offer generation, validation & risk framing" },
-          { "name": "Ecosystem", "tone": "ecosystem", "text": "Proposal linked to delivery context" }
+          {
+            "name": "ProposalIQ",
+            "tone": "proposaliq",
+            "text": "Offer generation, validation & risk framing"
+          },
+          {
+            "name": "Ecosystem",
+            "tone": "ecosystem",
+            "text": "Proposal linked to delivery context"
+          }
         ],
         "footnote": "Mindorion gives Heads of Delivery the contractual and operational context they need, before problems appear.",
         "panel": {
@@ -1334,8 +1401,14 @@
           "flagsCardTitle": "Scope & terms review",
           "flagsBadge": "2 flags",
           "flagsItems": [
-            { "tone": "warning", "text": "Acceptance criteria, ambiguous on timeline" },
-            { "tone": "critical", "text": "No MSA at subsidiary level (entity 1.2)" }
+            {
+              "tone": "warning",
+              "text": "Acceptance criteria, ambiguous on timeline"
+            },
+            {
+              "tone": "critical",
+              "text": "No MSA at subsidiary level (entity 1.2)"
+            }
           ]
         }
       }
@@ -1356,20 +1429,44 @@
     },
     "foundation": {
       "thesis": "AI is not the foundation. AI becomes scalable when data, workflows and governance are already structured.",
-      "base": { "label": "Base", "text": "Mindorion Operating System, the workflow layer where operational activity happens" },
-      "process": { "label": "Process", "text": "Standardized workflows, teams execute processes consistently" },
-      "data": { "label": "Data", "text": "Structured enterprise data, fragmented activity becomes usable decision data" },
-      "control": { "label": "Control", "text": "Governance & compliance, control, auditability and trust" },
-      "result": { "label": "Result", "text": "Efficient AI adoption, more accurate, cost-efficient and governed, as a result" }
+      "base": {
+        "label": "Base",
+        "text": "Mindorion Operating System, the workflow layer where operational activity happens"
+      },
+      "process": {
+        "label": "Process",
+        "text": "Standardized workflows, teams execute processes consistently"
+      },
+      "data": {
+        "label": "Data",
+        "text": "Structured enterprise data, fragmented activity becomes usable decision data"
+      },
+      "control": {
+        "label": "Control",
+        "text": "Governance & compliance, control, auditability and trust"
+      },
+      "result": {
+        "label": "Result",
+        "text": "Efficient AI adoption, more accurate, cost-efficient and governed, as a result"
+      }
     },
     "difference": {
       "eyebrow": "Where Mindorion makes the difference",
       "title": "Scale with AI, without losing control of cost or compliance.",
       "body": "Most firms face the same trap: too little AI and you fall behind; too much, uncontrolled, and token costs explode while compliance risk grows. Mindorion is the controlled middle ground.",
       "cards": [
-        { "title": "Stay ahead, not overtaken", "body": "AI is unavoidable. Mindorion helps you adopt it where it creates real value, so you move fast without falling behind faster-moving competitors." },
-        { "title": "Control AI cost at scale", "body": "By standardizing your data and workflows first, Mindorion reduces reliance on expensive, error-prone AI agents, so scaling your team doesn't mean runaway token costs." },
-        { "title": "Built for data control", "body": "Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one." }
+        {
+          "title": "Stay ahead, not overtaken",
+          "body": "AI is unavoidable. Mindorion helps you adopt it where it creates real value, so you move fast without falling behind faster-moving competitors."
+        },
+        {
+          "title": "Control AI cost at scale",
+          "body": "By standardizing your data and workflows first, Mindorion reduces reliance on expensive, error-prone AI agents, so scaling your team doesn't mean runaway token costs."
+        },
+        {
+          "title": "Built for data control",
+          "body": "Operational data stays structured, governed and auditable, so AI runs inside a controlled, governed environment instead of an uncontrolled one."
+        }
       ],
       "footer": "AI is not the foundation. Structured data, workflows and governance are, and that's what makes AI scalable, affordable and auditable."
     },
@@ -1395,9 +1492,18 @@
       "eyebrow": "Principles",
       "title": "How we build for Engineering & IT Services teams",
       "items": [
-        { "title": "Outcomes first", "body": "Every workflow must improve proposal quality, commercial execution or governance." },
-        { "title": "Private by design", "body": "Sensitive client and operational data stays controlled." },
-        { "title": "Radical simplicity", "body": "Complex workflows, simple execution." }
+        {
+          "title": "Outcomes first",
+          "body": "Every workflow must improve proposal quality, commercial execution or governance."
+        },
+        {
+          "title": "Private by design",
+          "body": "Sensitive client and operational data stays controlled."
+        },
+        {
+          "title": "Radical simplicity",
+          "body": "Complex workflows, simple execution."
+        }
       ]
     },
     "finalCta": {

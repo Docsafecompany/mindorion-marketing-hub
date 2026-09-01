@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { createStaticMeta } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
+import { supabase } from "@/integrations/supabase/client";
+
 
 export const Route = createFileRoute("/contact")({
   head: () =>
@@ -19,13 +21,15 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", company: "", teamSize: "", message: "" });
   const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [productError, setProductError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [website, setWebsite] = useState("");
+
 
   const productOptions = t("contact.productOptions", { returnObjects: true }) as string[];
   const teamSizes = t("contact.teamSizes", { returnObjects: true }) as string[];
@@ -68,7 +72,7 @@ function ContactPage() {
 
             <form
               className="mt-6 space-y-5"
-              onSubmit={(event) => {
+              onSubmit={async (event) => {
                 event.preventDefault();
                 if (isSubmitting) return;
                 if (selectedProducts.length === 0) {
@@ -78,15 +82,44 @@ function ContactPage() {
 
                 setProductError(false);
                 setIsSubmitting(true);
+                setStatus("idle");
                 trackEvent("contact_form_submitted", {
                   products_selected: selectedProducts,
                   team_size: form.teamSize || "unspecified",
                 });
-                // Server-side send is not wired yet. Show a fallback instead of
-                // triggering mailto: or pretending the message was delivered.
-                setSubmitted(true);
-                setIsSubmitting(false);
+
+                try {
+                  const { data, error } = await supabase.functions.invoke("send-contact-email", {
+                    body: {
+                      firstName: form.firstName.trim(),
+                      lastName: form.lastName.trim(),
+                      email: form.email.trim(),
+                      company: form.company.trim(),
+                      products: selectedProducts,
+                      teamSize: form.teamSize,
+                      message: form.message.trim(),
+                      locale: i18n.language,
+                      website,
+                    },
+                  });
+
+                  // Only a truthy `ok` from the server means the email really left.
+                  if (error || !data || (data as { ok?: boolean }).ok !== true) {
+                    console.error("contact send failed", error, data);
+                    setStatus("error");
+                  } else {
+                    setStatus("success");
+                    setForm({ firstName: "", lastName: "", email: "", company: "", teamSize: "", message: "" });
+                    setSelectedProducts([]);
+                  }
+                } catch (sendError) {
+                  console.error("contact send threw", sendError);
+                  setStatus("error");
+                } finally {
+                  setIsSubmitting(false);
+                }
               }}
+
             >
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="block text-sm font-medium text-foreground">
@@ -183,6 +216,19 @@ function ContactPage() {
                 />
               </label>
 
+              <div className="hidden" aria-hidden="true">
+                <label>
+                  Website
+                  <input
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={website}
+                    onChange={(event) => setWebsite(event.target.value)}
+                  />
+                </label>
+              </div>
+
               <Button
                 type="submit"
                 disabled={isSubmitting}
@@ -193,10 +239,17 @@ function ContactPage() {
 
               <p className="text-center text-sm text-muted-foreground">{t("contact.footer")}</p>
 
-              {submitted ? (
-                <div className="editorial-gray-soft rounded-[10px] p-5 text-sm">
-                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">{t("contact.fallbackTitle")}</div>
-                  <p className="mt-3 leading-6 text-muted-foreground">{t("contact.fallbackMessage")}</p>
+              {status === "success" ? (
+                <div className="editorial-gray-soft rounded-[10px] p-5 text-sm" role="status">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] editorial-purple-text">{t("contact.successTitle")}</div>
+                  <p className="mt-3 leading-6 text-muted-foreground">{t("contact.successMessage")}</p>
+                </div>
+              ) : null}
+
+              {status === "error" ? (
+                <div className="editorial-gray-soft rounded-[10px] p-5 text-sm" role="alert">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] editorial-danger">{t("contact.errorTitle")}</div>
+                  <p className="mt-3 leading-6 text-muted-foreground">{t("contact.errorMessage")}</p>
                   <div className="mt-4 flex flex-wrap items-center gap-3">
                     <div className="text-lg font-semibold editorial-purple-text">{contactEmail}</div>
                     <button
@@ -213,6 +266,7 @@ function ContactPage() {
                   </div>
                 </div>
               ) : null}
+
             </form>
           </section>
         </div>
