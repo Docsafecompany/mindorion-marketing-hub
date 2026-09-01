@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { createStaticMeta } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
+import { supabase } from "@/integrations/supabase/client";
+
 
 export const Route = createFileRoute("/contact")({
   head: () =>
@@ -19,13 +21,15 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", company: "", teamSize: "", message: "" });
   const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [productError, setProductError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [website, setWebsite] = useState("");
+
 
   const productOptions = t("contact.productOptions", { returnObjects: true }) as string[];
   const teamSizes = t("contact.teamSizes", { returnObjects: true }) as string[];
