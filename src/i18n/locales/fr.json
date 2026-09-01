@@ -1009,10 +1009,12 @@
     "submit": "Envoyer ma demande →",
     "footer": "Nous vous recontactons sous 24h · Aucun engagement",
     "sending": "Envoi...",
-    "fallbackTitle": "EMAIL DIRECT",
-    "fallbackMessage": "L'envoi côté serveur n'est pas encore connecté. Envoyez votre demande directement à l'adresse ci-dessous en mentionnant les produits sélectionnés.",
     "copyEmail": "Copier l'adresse",
-    "copied": "Copié"
+    "copied": "Copié",
+    "successTitle": "DEMANDE ENVOYÉE",
+    "successMessage": "Merci, votre demande a bien été transmise à notre équipe. Nous vous recontactons sous 24h.",
+    "errorTitle": "ÉCHEC DE L'ENVOI",
+    "errorMessage": "Votre demande n'a pas pu être envoyée. Écrivez-nous directement à l'adresse ci-dessous en mentionnant les produits sélectionnés."
   },
   "privacy": {
     "seoTitle": "Confidentialité, Mindorion",
@@ -1242,16 +1244,34 @@
           "Le Governance Layer connecte le tout : proposals, pipeline et opérations dans un seul système opérationnel."
         ],
         "modules": [
-          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Qualité des proposals & win rate" },
-          { "name": "GrowthIQ", "tone": "growthiq", "text": "Exécution commerciale & pipeline" },
-          { "name": "Ecosystem", "tone": "ecosystem", "text": "Gouvernance unifiée sur les deux" }
+          {
+            "name": "ProposalIQ",
+            "tone": "proposaliq",
+            "text": "Qualité des proposals & win rate"
+          },
+          {
+            "name": "GrowthIQ",
+            "tone": "growthiq",
+            "text": "Exécution commerciale & pipeline"
+          },
+          {
+            "name": "Ecosystem",
+            "tone": "ecosystem",
+            "text": "Gouvernance unifiée sur les deux"
+          }
         ],
         "footnote": "Mindorion donne aux CEOs d'ESN la fondation de données opérationnelles dont ils ont besoin pour décider avec confiance.",
         "panel": {
           "kpiTitle": "PIPELINE & PROPOSAL OVERVIEW",
           "kpis": [
-            { "value": "4,2 M€", "label": "Pipeline actif" },
-            { "value": "67 %", "label": "Alignement stratégie" }
+            {
+              "value": "4,2 M€",
+              "label": "Pipeline actif"
+            },
+            {
+              "value": "67 %",
+              "label": "Alignement stratégie"
+            }
           ],
           "listTitle": "QUALITÉ DES PROPOSALS CETTE SEMAINE",
           "rows": [
@@ -1260,8 +1280,14 @@
               "score": "92/100",
               "tone": "good",
               "items": [
-                { "tone": "good", "text": "Toutes les exigences mappées ✓" },
-                { "tone": "good", "text": "Aucun commentaire interne exposé ✓" }
+                {
+                  "tone": "good",
+                  "text": "Toutes les exigences mappées ✓"
+                },
+                {
+                  "tone": "good",
+                  "text": "Aucun commentaire interne exposé ✓"
+                }
               ]
             },
             {
@@ -1269,8 +1295,14 @@
               "score": "61/100",
               "tone": "warning",
               "items": [
-                { "tone": "warning", "text": "Hypothèses tarifaires non validées" },
-                { "tone": "critical", "text": "2 exigences RFP non mappées" }
+                {
+                  "tone": "warning",
+                  "text": "Hypothèses tarifaires non validées"
+                },
+                {
+                  "tone": "critical",
+                  "text": "2 exigences RFP non mappées"
+                }
               ]
             }
           ]
@@ -1288,17 +1320,44 @@
           "Alertes de dérive : sachez immédiatement quand votre prospection s'éloigne de la stratégie commerciale convenue."
         ],
         "modules": [
-          { "name": "GrowthIQ", "tone": "growthiq", "text": "Pipeline, VIPs, alignement, follow-up" },
-          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Qualité de la proposal avant envoi" },
-          { "name": "Ecosystem", "tone": "ecosystem", "text": "Votre effort nourrit la performance collective" }
+          {
+            "name": "GrowthIQ",
+            "tone": "growthiq",
+            "text": "Pipeline, VIPs, alignement, follow-up"
+          },
+          {
+            "name": "ProposalIQ",
+            "tone": "proposaliq",
+            "text": "Qualité de la proposal avant envoi"
+          },
+          {
+            "name": "Ecosystem",
+            "tone": "ecosystem",
+            "text": "Votre effort nourrit la performance collective"
+          }
         ],
         "footnote": "Mindorion transforme votre effort commercial individuel en performance collective reconnue.",
         "panel": {
           "accountsTitle": "MES COMPTES PRIORITAIRES",
           "accounts": [
-            { "dot": "green", "name": "Client A, Aéronautique", "badge": "VIP ★", "tone": "good" },
-            { "dot": "amber", "name": "Client B, Énergie", "badge": "Relance due", "tone": "warning" },
-            { "dot": "red", "name": "Client C, Pharma", "badge": "Froid, 18 jours", "tone": "critical" }
+            {
+              "dot": "green",
+              "name": "Client A, Aéronautique",
+              "badge": "VIP ★",
+              "tone": "good"
+            },
+            {
+              "dot": "amber",
+              "name": "Client B, Énergie",
+              "badge": "Relance due",
+              "tone": "warning"
+            },
+            {
+              "dot": "red",
+              "name": "Client C, Pharma",
+              "badge": "Froid, 18 jours",
+              "tone": "critical"
+            }
           ],
           "alignmentTitle": "ALIGNEMENT STRATÉGIQUE",
           "alertTitle": "Dérive détectée, 3 comptes",
@@ -1317,8 +1376,16 @@
           "Accédez au contexte complet de la proposal avant le kick-off, aligné sur ce qui a été vendu, pas sur ce dont quelqu'un se souvient."
         ],
         "modules": [
-          { "name": "ProposalIQ", "tone": "proposaliq", "text": "Génération d'offre, validation & cadrage des risques" },
-          { "name": "Ecosystem", "tone": "ecosystem", "text": "Proposal reliée au contexte delivery" }
+          {
+            "name": "ProposalIQ",
+            "tone": "proposaliq",
+            "text": "Génération d'offre, validation & cadrage des risques"
+          },
+          {
+            "name": "Ecosystem",
+            "tone": "ecosystem",
+            "text": "Proposal reliée au contexte delivery"
+          }
         ],
         "footnote": "Mindorion donne aux Heads of Delivery le contexte contractuel et opérationnel dont ils ont besoin, avant que les problèmes n'apparaissent.",
         "panel": {
@@ -1334,8 +1401,14 @@
           "flagsCardTitle": "Revue scope & termes",
           "flagsBadge": "2 alertes",
           "flagsItems": [
-            { "tone": "warning", "text": "Critères d'acceptation, timeline ambiguë" },
-            { "tone": "critical", "text": "Pas de MSA au niveau filiale (entité 1.2)" }
+            {
+              "tone": "warning",
+              "text": "Critères d'acceptation, timeline ambiguë"
+            },
+            {
+              "tone": "critical",
+              "text": "Pas de MSA au niveau filiale (entité 1.2)"
+            }
           ]
         }
       }
@@ -1356,20 +1429,44 @@
     },
     "foundation": {
       "thesis": "L'IA n'est pas la fondation. L'IA passe à l'échelle quand les données, les workflows et la gouvernance sont déjà structurés.",
-      "base": { "label": "Base", "text": "Mindorion Operating System, la couche workflow où se déroule l'activité opérationnelle" },
-      "process": { "label": "Processus", "text": "Workflows standardisés, les équipes exécutent les processus de façon cohérente" },
-      "data": { "label": "Données", "text": "Données d'entreprise structurées, l'activité fragmentée devient une donnée de décision exploitable" },
-      "control": { "label": "Contrôle", "text": "Gouvernance & conformité, contrôle, auditabilité et confiance" },
-      "result": { "label": "Résultat", "text": "Adoption efficace de l'IA, plus précise, plus économe et gouvernée, en résultat" }
+      "base": {
+        "label": "Base",
+        "text": "Mindorion Operating System, la couche workflow où se déroule l'activité opérationnelle"
+      },
+      "process": {
+        "label": "Processus",
+        "text": "Workflows standardisés, les équipes exécutent les processus de façon cohérente"
+      },
+      "data": {
+        "label": "Données",
+        "text": "Données d'entreprise structurées, l'activité fragmentée devient une donnée de décision exploitable"
+      },
+      "control": {
+        "label": "Contrôle",
+        "text": "Gouvernance & conformité, contrôle, auditabilité et confiance"
+      },
+      "result": {
+        "label": "Résultat",
+        "text": "Adoption efficace de l'IA, plus précise, plus économe et gouvernée, en résultat"
+      }
     },
     "difference": {
       "eyebrow": "Là où Mindorion fait la différence",
       "title": "Passez à l'échelle avec l'IA, sans perdre le contrôle des coûts ni de la conformité.",
       "body": "La plupart des cabinets tombent dans le même piège : trop peu d'IA et vous décrochez ; trop d'IA non maîtrisée et les coûts de tokens explosent pendant que le risque de conformité grandit. Mindorion est le juste milieu maîtrisé.",
       "cards": [
-        { "title": "Garder une longueur d'avance", "body": "L'IA est incontournable. Mindorion vous aide à l'adopter là où elle crée de la vraie valeur, pour avancer vite sans vous laisser distancer par des concurrents plus rapides." },
-        { "title": "Maîtriser le coût de l'IA à l'échelle", "body": "En standardisant d'abord vos données et vos workflows, Mindorion réduit la dépendance à des agents IA coûteux et faillibles, pour que faire grandir votre équipe ne rime pas avec des coûts de tokens incontrôlés." },
-        { "title": "Pensé pour le contrôle des données", "body": "Les données opérationnelles restent structurées, gouvernées et auditables, pour que l'IA s'exécute dans un environnement maîtrisé et gouverné plutôt qu'incontrôlé." }
+        {
+          "title": "Garder une longueur d'avance",
+          "body": "L'IA est incontournable. Mindorion vous aide à l'adopter là où elle crée de la vraie valeur, pour avancer vite sans vous laisser distancer par des concurrents plus rapides."
+        },
+        {
+          "title": "Maîtriser le coût de l'IA à l'échelle",
+          "body": "En standardisant d'abord vos données et vos workflows, Mindorion réduit la dépendance à des agents IA coûteux et faillibles, pour que faire grandir votre équipe ne rime pas avec des coûts de tokens incontrôlés."
+        },
+        {
+          "title": "Pensé pour le contrôle des données",
+          "body": "Les données opérationnelles restent structurées, gouvernées et auditables, pour que l'IA s'exécute dans un environnement maîtrisé et gouverné plutôt qu'incontrôlé."
+        }
       ],
       "footer": "L'IA n'est pas la fondation. Les données structurées, les workflows et la gouvernance le sont, et c'est ce qui rend l'IA scalable, abordable et auditable."
     },
@@ -1395,9 +1492,18 @@
       "eyebrow": "Principes",
       "title": "Comment nous construisons pour les équipes d'ingénierie et de services IT",
       "items": [
-        { "title": "Résultats avant tout", "body": "Chaque workflow doit améliorer la qualité des propositions, l'exécution commerciale ou la gouvernance." },
-        { "title": "Privé par conception", "body": "Les données client et opérationnelles sensibles restent maîtrisées." },
-        { "title": "Simplicité radicale", "body": "Workflows complexes, exécution simple." }
+        {
+          "title": "Résultats avant tout",
+          "body": "Chaque workflow doit améliorer la qualité des propositions, l'exécution commerciale ou la gouvernance."
+        },
+        {
+          "title": "Privé par conception",
+          "body": "Les données client et opérationnelles sensibles restent maîtrisées."
+        },
+        {
+          "title": "Simplicité radicale",
+          "body": "Workflows complexes, exécution simple."
+        }
       ]
     },
     "finalCta": {
