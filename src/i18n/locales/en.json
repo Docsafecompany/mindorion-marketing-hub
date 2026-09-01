@@ -1014,7 +1014,7 @@
     "successTitle": "REQUEST SENT",
     "successMessage": "Thanks, your request has been sent to our team. We get back to you within 24h.",
     "errorTitle": "SENDING FAILED",
-    "errorMessage": "Your request could not be sent. Please write to us directly at the address below and mention the products you selected."
+    "errorMessage": "Your request could not be sent. Your information is kept below so you can try again, or write to us directly at the address below and mention the products you selected."
   },
   "privacy": {
     "seoTitle": "Privacy, Mindorion",

@@ -1014,7 +1014,7 @@
     "successTitle": "DEMANDE ENVOYÉE",
     "successMessage": "Merci, votre demande a bien été transmise à notre équipe. Nous vous recontactons sous 24h.",
     "errorTitle": "ÉCHEC DE L'ENVOI",
-    "errorMessage": "Votre demande n'a pas pu être envoyée. Écrivez-nous directement à l'adresse ci-dessous en mentionnant les produits sélectionnés."
+    "errorMessage": "Votre demande n'a pas pu être envoyée. Vos informations sont conservées ci-dessous pour que vous puissiez réessayer, ou écrivez-nous directement à l'adresse ci-dessous en mentionnant les produits sélectionnés."
   },
   "privacy": {
     "seoTitle": "Confidentialité, Mindorion",
